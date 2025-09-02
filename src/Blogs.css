@@ -1,0 +1,22 @@
+.imageblog img{
+    height: auto;
+    width: 300px;
+    border-radius: 20px;
+    border: 2px solid yellow;
+}
+.imageblog1{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+}
+h4{
+  color: red;
+  font-size: 40px;
+}
+.time{
+  color: black;
+  font-size: 15px;
+}

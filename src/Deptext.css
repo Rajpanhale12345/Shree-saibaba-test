@@ -1,0 +1,36 @@
+.imagedep {
+  height: 300px;
+  width: 300px;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  border-radius: 50px;
+  border: 2px solid rgb(255, 221, 0);
+}
+
+
+
+.bullet {
+  color: red;
+  font-size: 20px;
+}
+
+.choose {
+  color: blue;
+  font-size: 40px;
+}
+
+.list {
+  font-size: 25px;
+  font-weight: 500;
+  /* list-style-type:georgian;  */
+  margin-left: 20px;      /* ✅ Indent for visibility */
+  text-align:center;
+}
+.border1{
+    border-left: 2px solid blue;
+    border-right: 2px solid blue;
+    border-bottom:8px solid blue ;
+    border-radius: 30px;
+}
+

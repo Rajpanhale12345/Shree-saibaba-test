@@ -1,0 +1,158 @@
+/* ============ OUR SPECIALITIES (revised only) ============ */
+
+/* Row container */
+.specialty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;               /* spacing between tiles */
+  flex-wrap: nowrap;
+  margin: auto;
+}
+
+/* Vertical divider between items */
+.specialty > hr {
+  margin: 0;
+  border: 0;
+  width: 1px;
+  background: #e5e7eb;
+  align-self: center;
+  height: 200px;           /* matches the circle height */
+}
+
+/* ----- Tile structure: [ item -> figure(circle) + caption ] ----- */
+.specialty-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;                /* space between circle and caption */
+  width: 200px;            /* overall tile width */
+  flex: 0 0 auto;          /* keep fixed size per tile in row */
+}
+
+/* Circular image wrapper (circle lives here) */
+.specialty-figure {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  border-radius: 50%;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Image inside the circle */
+.specialty-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1);
+  transition: transform 350ms ease;
+  border-radius: 50%;
+}
+
+/* ---------- SHUTTER EFFECT (unchanged) ---------- */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  transform: translateY(100%);      /* hidden below the circle */
+  transition: transform 420ms ease; /* shutter slide duration */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.overlay-text {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.06rem;
+  letter-spacing: 0.2px;
+  text-transform: capitalize;
+  opacity: 0;
+  transform: translateY(12px);
+  transition:
+    opacity 240ms ease 220ms,
+    transform 240ms ease 220ms;
+  text-align: center;
+  padding: 0 12px;
+}
+
+/* Hover states (scoped to the figure to avoid side effects) */
+.specialty-figure:hover .overlay {
+  transform: translateY(0);
+}
+.specialty-figure:hover .overlay-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+.specialty-figure:hover .specialty-img {
+  transform: scale(1.04);
+}
+
+/* Always-visible, larger label below each image */
+.specialty-caption {
+  font-size: 1.25rem; /* larger text */
+  font-weight: 700;   /* bold */
+  line-height: 1.2;
+  text-align: center;
+}
+
+/* Keep legacy per-specialty classes from forcing sizes */
+.cardiology,
+.neurology,
+.neurosurgery,
+.orthopaedic,
+.radiology,
+.radiology1,
+.thoracic,
+.urology {
+  width: 100%;
+  height: 100%;
+}
+
+/* ============ Responsive (only specialties) ============ */
+@media (max-width: 1024px) {
+  .specialty {
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  .specialty > hr {
+    display: none; /* hide vertical dividers on wrap */
+  }
+  .specialty-item { width: 180px; }
+  .specialty-figure { width: 180px; height: 180px; }
+}
+
+@media (max-width: 768px) {
+  .specialty {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+  .specialty-item { width: 220px; }
+  .specialty-figure { width: 220px; height: 220px; }
+}
+
+@media (max-width: 480px) {
+  .specialty-item { width: 200px; }
+  .specialty-figure { width: 200px; height: 200px; }
+  .specialty-caption { font-size: 1.1rem; }
+}
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  margin-top: -60px; 
+}
+
+.video-container video {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+    /* maintains aspect ratio, fills width */
+}

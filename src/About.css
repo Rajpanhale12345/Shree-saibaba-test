@@ -1,0 +1,250 @@
+/* ===== About page (scoped to classes used in About.jsx) ===== */
+
+/* Top block with doctors */
+.main1 {
+  padding: 0 16px;
+}
+
+.title {
+  color: black;
+  font-size: 40px;
+  margin-top: -120px;
+}
+
+/* “Our Medical Specialists” row */
+.founders {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+
+.founder,
+.founder1 {
+  text-align: center;
+  max-width: 520px;
+}
+
+.founder img,
+.founder1 img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 30%;
+}
+
+/* Vision & Mission blocks */
+.misvis,
+.misvis2 {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 24px;
+  align-items: center;
+  padding: 16px;
+}
+
+.misvis2 {
+  grid-template-columns: 1fr 1.2fr; /* image first, then text */
+}
+
+.misvis p,
+.misvis2 p {
+  color: black;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.55;
+  text-align: left;
+}
+
+.misvis img,
+.misvis2 img {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  border-radius: 20px;
+  border: 2px solid #000;
+}
+
+/* Services + Working Time */
+.service {
+  padding: 0 16px;
+}
+
+.service p {
+  color: blue;
+  font-size: 30px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.service-sec {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+/* Individual service tiles */
+.service-section,
+.service-section1,
+.service-section2,
+.service-section3 {
+  position: relative;
+  padding: 20px 16px;
+  border-radius: 16px;
+  background: linear-gradient(180deg, #ffffff, #e8ecff);
+  border: 1px solid #e5e7eb;
+  box-shadow:
+    0 1px 2px rgba(0,0,0,0.04),
+    0 6px 20px rgba(0,0,0,0.06);
+}
+
+/* thin divider inside tiles */
+.service-section hr,
+.service-section1 hr,
+.service-section2 hr,
+.service-section3 hr {
+  border: 0;
+  height: 1px;
+  background: #e5e7eb;
+  margin: 10px 0 0;
+}
+
+/* Your custom tags (render inline by default) */
+gen {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: .2px;
+}
+
+nm {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .service-sec {
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .misvis,
+  .misvis2 {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .misvis p,
+  .misvis2 p {
+    text-align: justify;
+    font-size: 18px;
+  }
+
+  .service-sec {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .title { font-size: 32px; }
+
+  .service p { font-size: 24px; }
+
+  gen { font-size: 18px; }
+  nm  { font-size: 14px; }
+}
+/* ===== Service sections with background images ===== */
+.service-section,
+.service-section1,
+.service-section2,
+.service-section3 {
+  position: relative;
+  padding: 20px 16px;
+  border-radius: 16px;
+  color: white;                     /* text stays white on dark overlay */
+  min-height: 260px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+/* Set individual background images */
+.service-section  { background-image: url('./Images/surgery.jpg'); }
+.service-section1 { background-image: url('./Images/ambulance.jpg'); }
+.service-section2 { background-image: url('./Images/emergency.jpg'); }
+.service-section3 { background-image: url('./Images/consultation.jpg'); }
+
+/* Dark overlay so text is visible */
+.service-section::before,
+.service-section1::before,
+.service-section2::before,
+.service-section3::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);   /* adjust darkness here */
+  z-index: 1;
+  
+}
+
+.service-section > *,
+.service-section1 > *,
+.service-section2 > *,
+.service-section3 > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Your custom tags inside */
+gen {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 700;
+  color: red;
+}
+
+nm {
+  display: inline-block;
+  font-size: 16px;
+  color: #fff;
+}
+/* ============ Founders (uniform images) ============ */
+.founders {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 98px;
+  flex-wrap: wrap;
+}
+
+.founder,
+.founder1 {
+  text-align: center;
+  max-width: 400px;
+  gap: 90px;
+}
+
+.founder img,
+.founder1 img {
+  width: 100%;
+  max-width: 450px;   /* control how wide */
+  height: 400px;      /* fixed uniform height */
+  object-fit: cover;  /* crops to fill without distortion */
+  border-radius: 30%; /* keeps your rounded look */
+  display: block;
+  margin: 0 auto;
+}
+
+.founder p,
+.founder1 p {
+  font-size: 22px;
+ 
+  font-weight: 500;
+}

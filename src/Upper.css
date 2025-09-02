@@ -1,0 +1,81 @@
+.upper-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  overflow: hidden;
+}
+
+.upper-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.upper-overlay {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+  margin-top:-30px
+}
+
+.upper-overlay h1 {
+  font-size: 45px;
+  font-weight: 500;
+}
+
+/* Down arrow styling */
+.down-arrow {
+  position: absolute;
+  bottom: 20%; /* in the last 20% of the image */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  font-size: 18px;
+  color: #0ea5e9; /* theme color */
+  transition: transform 0.3s ease-in-out;
+}
+
+.down-arrow:hover {
+  transform: translateX(-50%) scale(1.1);
+}
+
+/* Optional bounce animation */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  40% {
+    transform: translateX(-50%) translateY(-8px);
+  }
+  60% {
+    transform: translateX(-50%) translateY(-4px);
+  }
+}
+
+.down-arrow {
+  animation: bounce 2s infinite;
+}
+ 
+@media (min-width:768px) {
+  .upper-overlay {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.5);
+  margin-top:-30px
+}
+  
+}

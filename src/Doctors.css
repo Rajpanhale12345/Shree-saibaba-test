@@ -1,0 +1,36 @@
+.doctors-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+@media (max-width: 1024px) {
+  .doctors-container {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .doctors-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .doctor-card {
+    font-size: 14px;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .doctors-container {
+    padding: 5px;
+    gap: 10px;
+  }
+
+  .doctor-card {
+    font-size: 13px;
+    padding: 10px;
+  }
+}

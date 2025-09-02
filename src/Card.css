@@ -1,0 +1,10 @@
+.card2{
+    width: 300px;
+    flex-wrap: wrap;
+     
+}
+.image{
+    object-fit: contain;
+    height: 405px;
+
+}

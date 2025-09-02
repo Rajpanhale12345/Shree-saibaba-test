@@ -1,0 +1,55 @@
+.doctor-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  overflow: hidden;
+  transition: transform 0.2s ease;
+  border: 2px solid rgb(191, 188, 188);
+}
+
+.doctor-card:hover {
+  transform: translateY(-3px);
+}
+
+.doctor-card-header {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  color: white;
+  font-weight: bold;
+}
+
+.doctor-card-header h3 {
+  margin: 0 0 0 10px;
+}
+
+.doctor-icon {
+  font-size: 20px;
+}
+
+.doctor-list {
+  padding: 12px 16px;
+}
+
+.doctor-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.doctor-item p {
+  margin: 0;
+  font-size: 14px;
+}

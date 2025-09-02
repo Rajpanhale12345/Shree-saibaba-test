@@ -1,0 +1,53 @@
+.opd-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.opd-title {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #005f73;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.opd-department {
+  margin-bottom: 40px;
+}
+
+.department-name {
+  background-color: #0a9396;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.opd-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.opd-table th,
+.opd-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.opd-table th {
+  background-color: #94d2bd;
+  color: #000;
+}
+
+.opd-table tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.opd-table tr:hover {
+  background-color: #e0f7fa;
+}

@@ -1,0 +1,40 @@
+.kidney-container img{
+    width: 70%;
+    height: auto;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    border: 2px solid yellow;
+    border-radius: 50px;
+}
+*{
+    color: black;
+}
+.down{
+    font-size: 40px;
+    color: blue;
+}
+li{
+    font-style: inherit;
+}
+.time{
+    font-size: 25px;
+    color: blue;
+    font-style: italic;
+    text-align: right;
+   
+}
+.time1{
+    display: flex;
+    gap: 26rem;
+    margin-left: 18%;
+}
+.time2{
+    font-size: 25px;
+}
+.CTA{
+    font-style: italic;
+     font-size: 20px;
+     color: rgb(85, 85, 169);
+  
+}

@@ -1,0 +1,47 @@
+# --- Dependencies ---
+node_modules/
+
+# --- Builds / Outputs (apps usually don't commit these) ---
+dist/
+build/
+.next/
+out/
+storybook-static/
+
+# --- Caches ---
+.cache/
+.parcel-cache/
+.vite/
+.eslintcache
+.stylelintcache
+.npm/
+.pnp.*        # Yarn PnP
+.nyc_output/
+coverage/
+
+# --- Tests / E2E ---
+cypress/videos/
+cypress/screenshots/
+playwright-report/
+test-results/
+
+# --- Env / Secrets ---
+.env
+.env.*.local
+*.pem
+*.key
+
+# --- OS / Editors ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- TypeScript ---
+*.tsbuildinfo
+
+# --- Temporary stuff ---
+tmp/
+temp/

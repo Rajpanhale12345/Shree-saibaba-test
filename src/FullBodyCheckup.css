@@ -1,0 +1,310 @@
+/* ========== FullBodyCheckup.css ==========
+   Single-file, responsive, print-ready (A4), no external deps
+   System fonts, high contrast (light palette only), centered layout
+   ------------------------------------------ */
+
+/* Root tokens (light, no dark colors) */
+:root {
+  --fbc-bg: #ffffff;                 /* white background */
+  --fbc-surface: #ffffff;            /* surfaces also white for clean look */
+  --fbc-text: #475569;               /* slate-600 (softer than near-black) */
+  --fbc-text-muted: #64748b;         /* slate-500-ish */
+  --fbc-border: #e2e8f0;             /* slate-200 */
+  --fbc-accent: #10b6b7;             /* soft teal */
+  --fbc-accent-ink: #0b6f70;         /* slightly deeper teal for legibility */
+  --fbc-hero-grad-a: #e6fffa;        /* very light aqua */
+  --fbc-hero-grad-b: #f0f9ff;        /* very light blue */
+  --fbc-focus: #60a5fa;              /* light blue focus ring */
+  --fbc-shadow-sm: 0 1px 2px rgba(0,0,0,.06);
+  --fbc-shadow-md: 0 6px 18px rgba(2, 8, 23, .08);
+  --fbc-radius: 14px;
+  --fbc-radius-pill: 999px;
+}
+
+/* Force the same light palette even if user prefers dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fbc-bg: #ffffff;
+    --fbc-surface: #ffffff;
+    --fbc-text: #475569;
+    --fbc-text-muted: #64748b;
+    --fbc-border: #e2e8f0;
+    --fbc-hero-grad-a: #e6fffa;
+    --fbc-hero-grad-b: #f0f9ff;
+    --fbc-shadow-sm: 0 1px 2px rgba(0,0,0,.06);
+    --fbc-shadow-md: 0 6px 18px rgba(2, 8, 23, .08);
+  }
+}
+
+/* Global reset-ish (scoped) */
+.fbc-page * { box-sizing: border-box; }
+.fbc-page {
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  color: var(--fbc-text);
+  background: var(--fbc-bg);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  padding: 24px;
+  text-align: center;                /* center all text by default */
+}
+
+/* Layout container sizes for screen; print uses @page below */
+.fbc-page {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* ---------- Hero ---------- */
+.fbc-hero {
+  background: radial-gradient(1200px 600px at 10% -10%, var(--fbc-hero-grad-a), transparent 70%),
+              radial-gradient(1000px 500px at 100% 10%, var(--fbc-hero-grad-b), transparent 60%),
+              var(--fbc-surface);
+  border: 1px solid var(--fbc-border);
+  border-radius: 20px;
+  padding: 28px 24px;
+  box-shadow: var(--fbc-shadow-md);
+  margin-bottom: 20px;
+}
+
+.fbc-hero__badge {
+  display: inline-block;
+  font-weight: 600;
+  letter-spacing: .2px;
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: var(--fbc-radius-pill);
+  background: rgba(16,182,183,.14);
+  color: var(--fbc-accent-ink);
+  border: 1px solid rgba(16,182,183,.35);
+}
+
+.fbc-hero__title {
+  margin: 10px 0 6px;
+  font-size: clamp(24px, 3.2vw, 36px);
+  line-height: 1.2;
+}
+
+.fbc-hero__subtitle {
+  margin: 0 0 14px;
+  color: var(--fbc-text-muted);
+  font-size: clamp(14px, 2.2vw, 16px);
+}
+
+/* Center the meta pills nicely */
+.fbc-hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0 14px;
+  justify-content: center;           /* center pills row */
+}
+
+.fbc-hero__pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: var(--fbc-radius-pill);
+  border: 1px solid var(--fbc-border);
+  background: var(--fbc-surface);
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.fbc-hero__pill--accent {
+  background: linear-gradient(180deg, rgba(16,182,183,.12), rgba(16,182,183,.06));
+  border-color: rgba(16,182,183,.35);
+  color: var(--fbc-accent-ink);
+}
+
+/* ---------- Buttons ---------- */
+.fbc-actions { 
+  display: flex; 
+  gap: 10px; 
+  margin-top: 8px; 
+  justify-content: center;           /* center buttons row */
+}
+.fbc-btn {
+  appearance: none;
+  border: 1px solid var(--fbc-border);
+  background: var(--fbc-surface);
+  color: var(--fbc-text);
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: var(--fbc-shadow-sm);
+  transition: transform .05s ease, box-shadow .2s ease, background .2s ease, border-color .2s ease;
+}
+.fbc-btn:focus-visible {
+  outline: 2px solid var(--fbc-focus);
+  outline-offset: 2px;
+}
+.fbc-btn:hover { transform: translateY(-1px); box-shadow: var(--fbc-shadow-md); }
+.fbc-btn:active { transform: translateY(0); box-shadow: var(--fbc-shadow-sm); }
+
+.fbc-btn--primary {
+  background: linear-gradient(180deg, rgba(16,182,183,.9), rgba(16,182,183,.8));
+  color: #ffffff;
+  border-color: rgba(16,182,183,.9);
+}
+.fbc-btn--ghost {
+  background: transparent;
+}
+
+/* ---------- Cards ---------- */
+.fbc-card {
+  background: var(--fbc-surface);
+  border: 1px solid var(--fbc-border);
+  border-radius: var(--fbc-radius);
+  padding: 18px;
+  margin: 14px 0;
+  box-shadow: var(--fbc-shadow-sm);
+  text-align: center;                /* ensure card content centered */
+}
+
+.fbc-card__title {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+/* ---------- Included list ---------- */
+.fbc-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  justify-items: center;             /* center each grid cell's content */
+  text-align: center;                /* center text inside items */
+}
+@media (min-width: 640px) {
+  .fbc-list { grid-template-columns: 1fr 1fr; }
+}
+@media (min-width: 960px) {
+  .fbc-list { grid-template-columns: 1fr 1fr; }
+}
+
+.fbc-list__item {
+  display: flex;
+  align-items: center;               /* center icon + text vertically */
+  justify-content: center;           /* center horizontally */
+  gap: 10px;
+  padding: 10px 12px;
+  border: 1px dashed var(--fbc-border);
+  border-radius: 12px;
+  max-width: 100%;
+  background: linear-gradient(180deg, rgba(249, 249, 249, 0.4), rgba(255, 255, 255, 0));
+}
+.fbc-list__icon {
+  margin-top: 0;
+  color: var(--fbc-accent);
+  flex: 0 0 auto;
+}
+
+/* ---------- Bullet lists ---------- */
+.fbc-bullets {
+  margin: 0;
+  padding-left: 0;                   /* remove default indent */
+  list-style-position: inside;       /* markers inside for centered layout */
+}
+.fbc-bullets li {
+  margin: 8px 0;
+  color: var(--fbc-text);
+  text-align: center;                /* center list lines */
+}
+.fbc-bullets li::marker {
+  color: var(--fbc-accent);
+  font-weight: 700;
+}
+
+/* ---------- Two-column grid ---------- */
+.fbc-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  justify-items: center;             /* center items in the grid */
+  align-items: start;
+}
+@media (min-width: 768px) {
+  .fbc-grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* Ensure child cards inside grid don't stretch oddly when centered */
+.fbc-grid > * {
+  width: 100%;
+}
+
+/* ---------- Footer ---------- */
+.fbc-footer {
+  margin-top: 10px;
+  padding: 10px 4px 0;
+  color: var(--fbc-text-muted);
+  text-align: center;                /* center footer text */
+}
+.fbc-note {
+  margin: 0 0 8px;
+  font-size: 13px;
+}
+.fbc-contact {
+  display: inline-flex;              /* shrink to content and center */
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  font-style: normal;                /* keep <address> upright */
+  font-size: 14px;
+  justify-content: center;
+}
+
+/* ---------- Accessibility helpers ---------- */
+.fbc-page a,
+.fbc-page button {
+  -webkit-tap-highlight-color: transparent;
+}
+.fbc-page [aria-label] {
+  letter-spacing: 0;
+}
+
+/* ---------- Print styles (A4) ---------- */
+@media print {
+  /* Hide interactive-only bits */
+  .no-print { display: none !important; }
+
+  /* Page setup */
+  @page {
+    size: A4 portrait;
+    margin: 14mm;
+  }
+
+  .fbc-page {
+    background: #ffffff !important;  /* keep print bg white */
+    color: #475569 !important;        /* readable soft slate on white */
+    padding: 0;
+    max-width: unset;
+    box-shadow: none;
+    text-align: center;               /* preserve centering */
+  }
+
+  .fbc-hero {
+    box-shadow: none;
+    background: #ffffff;
+    border-color: #dddddd;
+  }
+  .fbc-card { box-shadow: none; border-color: #dddddd; }
+
+  /* Avoid awkward breaks */
+  .fbc-hero,
+  .fbc-card,
+  .fbc-grid,
+  .fbc-list,
+  .fbc-footer { break-inside: avoid; }
+
+  /* Ensure colors print crisply */
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .fbc-btn { transition: none; }
+}

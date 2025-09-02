@@ -1,0 +1,33 @@
+.card12 {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 7rem;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
+.titlemed1 {
+    color: blue;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.card123 {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 7rem;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+
+}
+
+.checkup-container {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    gap: 4rem;
+}
