@@ -5,6 +5,13 @@ import Internal from './Images/InternalMedicine.png'
  function InternalMedicine() {
   return (
     <>
+
+        
+    <helmet>
+      <title>Internal Medicine | Saibaba Hospital</title>
+    </helmet>
+
+
     <div>
       <Deptext 
       image={Internal}

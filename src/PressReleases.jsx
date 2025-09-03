@@ -45,6 +45,13 @@ function PressReleases() {
 
     return (
         <>
+
+        
+    <helmet>
+      <title>Press Releases | Saibaba Multispeciality Hospital</title>
+    </helmet>
+
+
             <Upper text="Press Releases" classname="upper" />
             <br /><br />
             <h2 className='pioneer'><i style={{color : 'blue'}}>Pioneering change, setting the pace.⚡</i></h2><br /><br />

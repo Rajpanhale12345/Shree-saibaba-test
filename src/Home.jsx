@@ -77,6 +77,14 @@ function Home() {
   );
 
   return (
+
+    <>
+        
+    <helmet>
+      <title>Best Multispeciality Hospital | Shree Saibaba</title>
+    </helmet>
+
+
     <div>
       <br />
       <div className="video-container">
@@ -125,6 +133,8 @@ function Home() {
       <Test/>
       <OPD />
     </div>
+
+    </>
   );
 }
 

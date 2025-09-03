@@ -5,6 +5,12 @@ import img from './Images/urologydep.png'
  function Urology() {
   return (
     <>
+
+    <helmet>
+      <title>Urology | Saibaba Multispeciality Hospital</title>
+    </helmet>
+
+
     <div>
       <Deptext 
       image={img}

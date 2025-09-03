@@ -23,6 +23,11 @@ function Contact() {
 
   return (
     <>
+
+    
+    <helmet>
+      <title>Contact | Saibaba Multispeciality Hospital</title>
+    </helmet>
      
 <br />
 <h1  className= "reach" style={{color : "blue"}}>Reach us out</h1><br /><br />

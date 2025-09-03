@@ -170,6 +170,13 @@ const specialties = [
 const Doctors = () => {
   return (
     <>
+
+    <helmet>
+      <title>Our Doctors | Saibaba Multispeciality Hospital</title>
+    </helmet>
+
+
+
     <Upper
       text="Our Doctors"
     />

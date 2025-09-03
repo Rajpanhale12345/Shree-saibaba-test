@@ -5,6 +5,13 @@ import Ortho1 from './Images/Orthopedicdep.png'
  function Ortho() {
   return (
     <>
+
+    
+    <helmet>
+      <title>Orthopedic | Saibaba Multispeciality Hospital</title>
+    </helmet>
+
+
     <div>
       <Deptext 
       image={Ortho1}

@@ -7,6 +7,12 @@ import Button from '@mui/material/Button';
 export default function Spine() {
     return (
         <>
+        
+    <helmet>
+      <title>Spine | Saibaba Multispeciality Hospital</title>
+    </helmet>
+
+
             <div className='kidney-container'>
                 <img src={spinemain} alt="" /></div>
             <div className='time1'>

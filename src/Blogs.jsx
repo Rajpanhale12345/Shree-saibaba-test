@@ -12,6 +12,13 @@ import { Link } from 'react-router-dom';
 function Blogs() {
   return (
     <>
+
+    
+    <helmet>
+      <title>Blogs | Saibaba Multispeciality Hospital</title>
+    </helmet>
+
+
     <Upper 
     text="Blogs"/>
         <br /><br />

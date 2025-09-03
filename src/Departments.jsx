@@ -40,6 +40,13 @@ function Departments() {
 
   return (
     <>
+
+    <helmet>
+      <title>Department Image | Shree Saibaba Hospital</title>
+    </helmet>
+
+
+    
       <Upper text="Departments" />
 
       <div className="departments-wrap">

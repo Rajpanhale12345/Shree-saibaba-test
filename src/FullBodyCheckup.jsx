@@ -20,6 +20,14 @@ const tests = [
 
 function CheckIcon({ className }) {
   return (
+
+    <>
+
+    <helmet>
+      <title>Full Body Checkup | Saibaba Multispeciality Hospital</title>
+    </helmet>
+
+
     <svg
       className={className}
       width="18"
@@ -33,6 +41,8 @@ function CheckIcon({ className }) {
         d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2zm-1.1 14.2-4.2-4.2 1.4-1.4 2.8 2.8 5.8-5.8 1.4 1.4-7.2 7.2z"
       />
     </svg>
+
+    </>
   );
 }
 
@@ -134,5 +144,7 @@ export default function FullBodyCheckup({
         </address>
       </footer>
     </main>
+
+    
   );
 }

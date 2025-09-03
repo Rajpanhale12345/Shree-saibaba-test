@@ -35,6 +35,13 @@ import ortho from './Images/ortho.jpg';
 function Medical() {
   return (
     <>
+
+        
+    <helmet>
+      <title>Speciality | Saibaba Multispeciality Hospital</title>
+    </helmet>
+
+
     <Upper 
     text="Preventive Health Packages"/><br/>
 <div className='checkup-container'>

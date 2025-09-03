@@ -5,6 +5,13 @@ import img from './Images/Interventionaldep.png'
  function InterventionalRadiology() {
   return (
     <>
+
+        
+    <helmet>
+      <title>Interventional Radiology | Saibaba Hospital</title>
+    </helmet>
+
+
     <div>
       <Deptext 
       image={img}

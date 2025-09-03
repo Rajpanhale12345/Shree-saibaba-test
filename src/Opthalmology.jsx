@@ -5,6 +5,14 @@ import Opthamology from './Images/Optha.png'
  function Ophthalmology() {
   return (
     <>
+
+    
+    <helmet>
+      <title>Opthalmology | Saibaba Multispeciality Hospital</title>
+    </helmet>
+
+
+
     <div>
       <Deptext 
       image={Opthamology}

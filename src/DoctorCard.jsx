@@ -4,6 +4,12 @@ import { Link } from "react-router-dom";
 
 const DoctorCard = ({ name, color, icon, doctors }) => {
   return (
+
+    <>
+        <helmet>
+          <title>Our Doctors | Saibaba Multispeciality Hospital</title>
+        </helmet>
+    
     <div className="doctor-card">
       
       <div
@@ -38,6 +44,8 @@ const DoctorCard = ({ name, color, icon, doctors }) => {
         ))}
       </div>
     </div>
+
+    </>
   );
 };
 
