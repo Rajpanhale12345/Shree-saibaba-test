@@ -29,12 +29,12 @@ function Contact() {
 <div className="address">📍 Shree Saibaba Heart Institute & Multispeciality Hospital,
 Opp. Wani House, Mumbai Naka, Mirajkar Nagar,
 Nashik, Maharashtra 422001 <br /><br />
-🚑 <span ><i style={{color : 'blue'}}>Cardiac Ambulance</i></span> : 9158887554
+🚑 <span ><i style={{color : 'blue'}}>Cardiac Ambulance</i></span> : <a href="tel:9158887554">9158887554</a>
 <br /><br />
-🚨 <span ><i style={{color : 'blue'}}>Emergency Care</i></span> : 9158880987 / 8767021810
+🚨 <span ><i style={{color : 'blue'}}>Emergency Care</i></span> : <a href="tel:9158880987">9158880987</a> / <a href="tel:8767021810">8767021810</a>
 <br /><br />
-☎️ <span ><i style={{color : 'blue'}}>Landline No</i></span> : 0253 250 7001 <br /><br /><span ><i style={{color : 'blue'}}>📞 Mob. No</i></span>: +91 9158887554 <br /><br />
-<span ><i style={{color : 'blue'}}>📩 Email </i></span>: saibabaheartinstitute@yahoo.com
+☎️ <span ><i style={{color : 'blue'}}>Landline No</i></span> :  <a href="tel:02532507001">0253 250 7001</a> <br /><br /><span ><i style={{color : 'blue'}}>📞 Mob. No</i></span>: <a href="tel:+919158887554">+91 9158887554</a> <br /><br />
+<span ><i style={{color : 'blue'}}>📩 Email </i></span>: <a href="mailto:saibabaheartinstitute@yahoo.com">saibabaheartinstitute@yahoo.com</a>
 
  </div>
 
