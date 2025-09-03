@@ -23,8 +23,13 @@ export default function SitemapKimsTwoRows() {
   const Link = ({ children, href }) => {
     const [hover, setHover] = React.useState(false);
     return (
+
 <>
-    
+
+
+    <helmet>
+      <title>Sitemap | Saibaba Multispeciality Hospital</title>
+    </helmet>    
     
 
       <li style={styles.li}>
@@ -47,10 +52,8 @@ export default function SitemapKimsTwoRows() {
   };
 
   return (
-    <>
-      <Upper
-      text="Site-Map"
-      />
+    <> 
+    <Upper text="Site-Map"/>
 
     <div style={styles.page}>
       <h1 style={styles.title}>SITEMAP</h1>

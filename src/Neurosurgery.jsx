@@ -5,6 +5,13 @@ import img from './Images/Neurosurgerydep.png'
  function Neurosurgery() {
   return (
     <>
+
+        
+    <helmet>
+      <title>Neurosurgery | Saibaba Multispeciality Hospital</title>
+    </helmet>
+
+
     <div>
       <Deptext 
       image={img}

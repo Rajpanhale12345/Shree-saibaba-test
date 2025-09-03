@@ -6,8 +6,16 @@ import { Link } from 'react-router-dom';
 
 function Deptext({image,title,subtitle,description,description1,description2,description3,bullet,bullet1,bullet2,bullet3,bullet4,bullet5,bullet6,bullet7,bullet8,choose}) {
   return (
+
+    <>
+
+    <helmet>
+      <title>Departments Text | Shree Saibaba Hospital</title>
+    </helmet>
+
+
     <div>
-      <>
+    
       <img src={image} alt="" className='imagedep'/>
       <ul>
         <br />   <br />
@@ -54,8 +62,10 @@ function Deptext({image,title,subtitle,description,description1,description2,des
 <p style={{color : 'black'}}>{choose}</p><br />
  <Link to='/contact'><Button variant="contained" color='primary'>Reach us out</Button></Link>
  <br /><br />
-      </>
+   
     </div>
+
+    </>
   )
 }
 export default Deptext;

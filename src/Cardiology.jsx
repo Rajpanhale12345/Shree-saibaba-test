@@ -5,6 +5,13 @@ import cardio from './Images/cardiodep.png'
  function Cardiology() {
   return (
     <>
+
+    
+    <helmet>
+      <title>Cardiology | Saibaba Multispeciality Hospital</title>
+    </helmet>
+
+
     <div>
       <Deptext 
       image={cardio}

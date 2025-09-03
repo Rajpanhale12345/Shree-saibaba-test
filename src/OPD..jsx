@@ -119,6 +119,9 @@ const opdData = [
 
 const OPD = () => {
   return (
+
+    <>
+
     <div className="opd-container">
       <h1 className="opd-title" style={{color:"blue"}}>OPD Doctors & Timings</h1><br />
       {opdData.map((dept, index) => (
@@ -145,6 +148,8 @@ const OPD = () => {
         </div>
       ))}
     </div>
+
+</>
   );
 };
 

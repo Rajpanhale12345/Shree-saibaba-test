@@ -5,6 +5,13 @@ import nephrology from './Images/nephrology.png'
  function Nephrology() {
   return (
     <>
+
+        
+    <helmet>
+      <title>Nephrology | Saibaba Multispeciality Hospital</title>
+    </helmet>
+
+
     <div>
       <Deptext 
       image={nephrology}

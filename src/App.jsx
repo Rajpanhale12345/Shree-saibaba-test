@@ -22,7 +22,7 @@ import Neurosurgery from './Neurosurgery';
 import Testimonials from './Testimonials';
 import Kidney from './Kidney';
 import Spine from './Spine';
-import Sitemap from './sitemap';
+import Sitemap from './Sitemap';
 import ScrollToTop from './ScrollToTop';
 import GTranslate from "./GTranslate";
 import InternalMedicine from './InternalMedicine';

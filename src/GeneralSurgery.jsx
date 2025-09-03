@@ -5,6 +5,12 @@ import general from './Images/GeneralSurgery.png'
  function GeneralSurgery() {
   return (
     <>
+
+            
+    <helmet>
+      <title>General Surgery | Saibaba Multispeciality Hospital</title>
+    </helmet>
+    
     <div>
       <Deptext 
       image={general}

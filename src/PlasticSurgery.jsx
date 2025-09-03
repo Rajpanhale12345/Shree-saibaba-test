@@ -5,6 +5,13 @@ import Ortho1 from './Images/plastic.png'
  function PlasticSurgery() {
   return (
     <>
+
+    
+    <helmet>
+      <title>Plastic Surgery | Saibaba Multispeciality Hospital</title>
+    </helmet>
+
+
     <div>
       <Deptext 
       image={Ortho1}

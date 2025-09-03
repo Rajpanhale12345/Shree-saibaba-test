@@ -5,6 +5,13 @@ import gastro from './Images/gastro.png'
  function Gastroenterology() {
   return (
     <>
+
+            
+    <helmet>
+      <title>Gastroenterology | Saibaba Multispeciality Hospital</title>
+    </helmet>
+
+
     <div>
       <Deptext 
       image={gastro}

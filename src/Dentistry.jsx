@@ -5,6 +5,13 @@ import dentistry from './Images/Dentistry.png'
  function Dentistry() {
   return (
     <>
+
+    
+    <helmet>
+      <title>Dentistry | Saibaba Multispeciality Hospital</title>
+    </helmet>
+
+
     <div>
       <Deptext 
       image={dentistry}

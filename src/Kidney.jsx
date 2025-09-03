@@ -9,6 +9,13 @@ import Button from '@mui/material/Button';
 function Kidney() {
     return (
         <>
+
+            
+    <helmet>
+      <title>Kidney | Saibaba Multispeciality Hospital</title>
+    </helmet>
+
+
             <div className='kidney-container'>
                 <img src={kidneymid} alt="" /></div>
             <div className='time1'>
