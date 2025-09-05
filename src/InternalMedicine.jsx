@@ -1,6 +1,7 @@
-import React from 'react'
-import Deptext from './Deptext'
-import Internal from './Images/InternalMedicine.png'
+import React from 'react';
+import Deptext from './Deptext';
+import Internal from './Images/InternalMedicine.png';
+import { Helmet } from 'react-helmet';
 
  function InternalMedicine() {
   return (

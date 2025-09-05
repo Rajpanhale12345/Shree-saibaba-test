@@ -1,6 +1,7 @@
-import React from 'react'
-import Deptext from './Deptext'
-import gastro from './Images/gastro.png'
+import React from 'react';
+import Deptext from './Deptext';
+import gastro from './Images/gastro.png';
+import { Helmet } from 'react-helmet';
 
  function Gastroenterology() {
   return (

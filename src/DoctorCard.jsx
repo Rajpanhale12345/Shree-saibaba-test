@@ -1,6 +1,7 @@
 import React from "react";
 import "./DoctorCard.css";
 import { Link } from "react-router-dom";
+import { Helmet } from 'react-helmet';
 
 const DoctorCard = ({ name, color, icon, doctors }) => {
   return (

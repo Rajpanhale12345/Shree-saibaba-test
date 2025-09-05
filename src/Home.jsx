@@ -27,6 +27,7 @@ import spe14 from './Images/spe15.webp';
 
 import OPD from './OPD.'; 
 import Test from './Test';
+import { Helmet } from 'react-helmet';
 
 function Home() {
   // Random/placeholder specialty labels for hover overlays

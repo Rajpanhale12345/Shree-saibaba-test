@@ -18,6 +18,7 @@ import plastic from './Images/plastic.png';
 import optha from './Images/optha.png';
 import gastro from './Images/gastro.png';
 import nephrology from './Images/nephrology.png';
+import { Helmet } from 'react-helmet';
 
 function Departments() {
   const departments = [

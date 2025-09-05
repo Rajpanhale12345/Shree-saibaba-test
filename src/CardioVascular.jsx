@@ -1,6 +1,8 @@
-import React from 'react'
-import Deptext from './Deptext'
-import Vascular from './Images/thoracicdep.png'
+import React from 'react';
+import Deptext from './Deptext';
+import Vascular from './Images/thoracicdep.png';
+import { Helmet } from 'react-helmet';
+
 
  function CardioVascular() {
   return (

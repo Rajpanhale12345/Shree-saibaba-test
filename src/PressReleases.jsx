@@ -29,6 +29,7 @@ import article27 from './Images/golden_framed_article27.png'
 import article28 from './Images/golden_framed_article28.png'
 import article29 from './Images/golden_framed_article29.png'
 import article30 from './Images/golden_framed_article30.png'
+import { Helmet } from 'react-helmet';
 
 
 

@@ -4,7 +4,10 @@ import Upper from './Upper';
 import mission from './Images/mission.jpg';
 import vision from './Images/vision.jpg';
 import founder1 from './Images/dr.pallavi.png';
-import founder2 from './Images/dr.aniruddha.png';
+import founder2 from './Images/dr.aniruddha.png'; 
+import { Helmet } from 'react-helmet';
+
+
  function About() {
   return (
     <>

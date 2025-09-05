@@ -34,6 +34,9 @@ import Gastroenterology from './Gastroenterology';
 import Nephrology from './Nephrology';
 import OPD from './OPD.';
 import FullBodyCheckup from './FullBodyCheckup';
+import Cardio from './Cardio_blog'; 
+import { Helmet } from 'react-helmet';
+
 
 
 function App() {
@@ -74,6 +77,7 @@ function App() {
             <Route path="/spine" element={<Spine />} />
           <Route path="/sitemap" element ={<Sitemap/>}/>
           <Route path="/fullbodycheckup" element={<FullBodyCheckup />} />
+          <Route path="/Cardiology_blog" element={<Cardio/>} />
           </Routes>
          
           <ScrollToTop />

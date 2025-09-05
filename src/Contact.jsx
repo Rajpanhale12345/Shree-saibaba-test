@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Upper from "./Upper";
 import "./Contact.css";
+import { Helmet } from 'react-helmet';
 
 function Contact() {
   const [formData, setFormData] = useState({

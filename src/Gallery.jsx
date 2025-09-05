@@ -1,5 +1,6 @@
 import React from 'react'
 import Upper from './Upper';
+import { Helmet } from 'react-helmet';
 
 function Doctors() {
   return (

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Upper from "./Upper";
+import { Helmet } from 'react-helmet';
 
 export default function SitemapKimsTwoRows() {
   const styles = {

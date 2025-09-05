@@ -1,6 +1,7 @@
-import React from 'react'
-import Deptext from './Deptext'
-import dentistry from './Images/Dentistry.png'
+import React from 'react';
+import Deptext from './Deptext';
+import dentistry from './Images/Dentistry.png';
+import { Helmet } from 'react-helmet';
 
  function Dentistry() {
   return (

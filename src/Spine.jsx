@@ -3,6 +3,7 @@ import spinemain from './Images/spinemain.jpg';
 import './Kidney.css';
 import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
+import { Helmet } from 'react-helmet';
 
 export default function Spine() {
     return (

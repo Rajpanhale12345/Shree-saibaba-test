@@ -29,6 +29,7 @@ import mammography from './Images/mammography.jpg';
 import pulmonary from './Images/pulmonary.jpg';
 import liver from './Images/liver.jpg';
 import ortho from './Images/ortho.jpg';
+import { Helmet } from 'react-helmet';
 
 
 

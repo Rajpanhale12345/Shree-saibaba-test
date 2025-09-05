@@ -10,6 +10,7 @@ import {
 import "./Doctors.css";
 import Upper from "./Upper";
 import OPD from "./OPD.";
+import { Helmet } from 'react-helmet';
 
 const specialties = [
   {

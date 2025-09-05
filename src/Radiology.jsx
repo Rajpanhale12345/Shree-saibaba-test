@@ -1,6 +1,7 @@
 import React from 'react'
 import Deptext from './Deptext'
 import img from './Images/Radiologydep.png'
+import { Helmet } from 'react-helmet';
 
  function Radiology() {
   return (

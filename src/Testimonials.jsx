@@ -3,6 +3,7 @@ import Test from './Test'
 import Upper from './Upper'
 import './Testimonials.css'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet';
 
 const Testimonials = () => {
   return (

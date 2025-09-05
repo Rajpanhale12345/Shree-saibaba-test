@@ -1,6 +1,8 @@
 import React from "react";
 import "./FullBodyCheckup.css";
 import { Link } from "react-router-dom";
+import { Helmet } from 'react-helmet';
+
 const tests = [
   "2D Echocardiography (Screening)",
   "ECG",
