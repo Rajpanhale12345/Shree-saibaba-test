@@ -102,7 +102,7 @@ html, body, #root {
   .navbar__links {
     position: absolute;
     top: 70px;
-    right: 0;
+    right: -0;
     background: white;
     flex-direction: column;
     width: 200px;
