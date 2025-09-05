@@ -8,7 +8,7 @@ import { Helmet } from 'react-helmet';
 
 
 function Cardio_blog() {
-    return ( 
+    return (
         <>
 
 
@@ -21,122 +21,91 @@ function Cardio_blog() {
                 <img src={Cardio} alt="" /></div>
             <div className='time1'>
                 <Link to='/cardio_blog'> <h5 className='time'>🏥Cardiology</h5></Link>
-                <h5 className='time2'> 🕗 03 September 2025</h5>
+                <h5 className='time2'> 🕗 05 September 2025</h5>
             </div>
 
             <br /><br />
             <h4>Pacemaker Care: Surgery, Recovery & Lifestyle Changes Explained</h4>
             <span className='down'>⮟</span><br />
             <ul>
-                It can be stressful to live with heart disease, but medical innovations such as pacemakers have provided patients with hope of living healthier, more confident, and independent lives. Pacemakers are tiny but strong devices that assist in normalizing erratic heartbeats, making sure that the heart pumps regularly.
+                Having a heart condition can sometimes feel overwhelming, but improvements in medicine, including pacemakers, have enabled patients to have a safer, more confident, and independent life. Pacemakers are small, yet powerful, devices used to help keep abnormal heart rhythms under control and help the heart beat with a steady rhythm.
             </ul>
-            <h4>
-                What causes Kidney Stones?
-            </h4>   <span className='down'>⮟</span><br /><br />
-            <ul>
-                Kidney stones happen when you have a high concentration of waste (like calcium, oxalate, or uric acid) in your urine and insufficient water to pass it. There are some of the most common reasons for this include:
-
-
-                Not consuming enough water
-
-                Consuming excessive salt, protein, or sugar
-
-                High-fat or high-cholesterol diet
-
-                Certain diseases, such as diabetes or gastrointestinal illness
-
-            </ul><br />
-            <h4>
-                How Large Are Kidney Stones?
-            </h4>
+            <h4>What Is a Pacemaker?</h4>  
             <span className='down'>⮟</span><br /><br />
+            <p>A pacemaker is a small electronic device that is implanted under the skin to help regulate an abnormal heart rhythm. It releases mild electrical pulses to maintain the heart's steady beat.</p>
+            <p>It is usually prescribed for patients with:</p>
             <ul>
-
-
-                4 mm: Generally clear on their own
-
-
-                4–6 mm: 60% risk of spontaneous passage
-
-
-                6 mm: Usually requires medical care
-
-                <br /><br />
-                <h4>Will They Come Back?</h4>
-                <span className='down'>⮟</span><br />
-                Yes, indeed, they can. There's a:
-
-                7% yearly risk of recurrence
-
-                35% probability in 5 years
-
-                50% risk in 10 years
-
-                That is why prevention is all about hydration & nutrition
-            </ul><br /><br />
-            <h4>Types of Kidney Stones</h4>
-            <span className='down'>⮟</span><br />
-            <ul>
-                1. Calcium Oxalate Stones (≈80% of all stones)
-                Dehydration caused by
-
-                Risk grows with excessive protein, salt, and oxalate-containing foods
-
-                Medical conditions such as hyperparathyroidism also lead to them
-
+                <li>Slow heart rate (bradycardia)</li>
+                <li>Irregular rhythms (arrhythmias)</li>
+                <li>Specific forms of heart block</li>
             </ul>
-            2. Uric Acid Stones (around 15% of all stones)
+            <p>Current pacemakers are extremely reliable, inserted with minimally invasive surgery, and enable patients to lead active, normal lives.</p>
+            <br />
+            <h4>Pacemaker surgery and recovery: What to expect</h4>
+            <span className='down'>⮟</span><br /><br />
+            <p>Generally, most patients will be sent home within 24 to 48 hours following the implantation. Mild site pain, swelling, or bruising is also normal; these will likely improve after a few days. </p>
+            <p>Post-surgery precautions include:</p>
             <ul>
-
-                Due to excess uric acid
-
-                Lack of sufficient potassium or magnesium.
-
-                More prevalent in individuals with diabetes or obesity
-
-                Dietary Recommendations to Avoid Kidney Stones
-
-
-            </ul><br /><br />
-            <h4>What To Do:</h4>
-            <span className='down'>⮟</span><br />
-            <ul>
-                Drink sufficient fluids – minimum 3 litres/day
-
-                Take calcium foods (dairy products, cheese, yoghurt)
-
-                Use lemon juice – it has citrate, which stops stones
-
-                Choose low-sodium foods – avoid processed and salty foods.
-
-                Use salt substitutes – herbs, spices, lemon juice
-
+                <li>Avoid lifting heavy weights for 3 to 4 weeks</li>
+                <li>Avoid raising the arm on the side of the implant over your head in the immediate period after surgery</li>
+                <li>Carefully follow wound care and your physician's instructions</li>
             </ul>
             <br /><br />
-            <h4>What To Avoid:</h4>   <span className='down'>⮟</span><br />
+            <h4>Daily Life with a Pacemaker</h4>
+            <span className='down'>⮟</span><br />
+            <h5><strong>1. Physical Activity</strong></h5>
             <ul>
-                Vitamin C & D supplements may raise the risk of stones
-
-                High-oxalate foods:
-
-                Spinach, beetroot, rhubarb, sweet potato
-
-
-                Black tea, nuts, orange juice, and chocolate.
-
-
-                Sweet drinks and juices
-                Salty and processed foods – chips, pickles, canned soups, ketchup
-
-
-            </ul><br /><br />
-            <h4>Daily Diet Plan Example</h4>   <span className='down'>⮟</span><br />
-            <ul>
-                Breakfast: Blueberry porridge and a glass of milk.
-                Lunch: Whole wheat bread, salad, and a yogurt.
-                Dinner: grilled salmon, steamed asparagus, Wild rice, and yogurt dill sauce.
+                <li>Yoga, walking, and light stretches are safe</li>
+                <li>Do not play contact sports or engage in activities that could harm the chest</li>
+                <li>Speak to your cardiologist before going back to gym exercises</li>
             </ul>
+
+            <h5><strong>2. Diet</strong></h5>
+            <ul>
+                <li>Consume a healthy diet with fresh vegetables, fruits, whole grains, nuts, and lean proteins</li>
+                <li>Avoid salt, alcohol, fried foods, and processed snacks</li>
+                <li>Stop smoking to safeguard your heart and enhance pacemaker function</li>
+            </ul>
+
+            <h5><strong>3. Electronics and Appliances</strong></h5>
+            <ul>
+                <li>Microwaves, refrigerators, smartphones, TVs, and laptops are safe to use</li>
+                <li>Maintain mobile phones at a minimum of six inches from the device</li>
+                <li>Stay away from intense magnetic fields or excessive time near heavy industrial machinery</li>
+                <li>At the airport, notify security personnel. Walk-through units are okay, but hand-held units should not be held directly over the pacemaker</li>
+            </ul>            
             <br /><br />
+
+
+            <h4>Follow-up Visits and Home Monitoring</h4>
+            <span className='down'>⮟</span><br />
+            <p>Periodic cardiology follow-ups are important for battery life tracking and monitoring of device function. Remote monitoring, if available on many newer pacemakers, enables physicians to monitor your heart rhythms without multiple trips to the hospital.</p>
+            <br /><br />
+
+            <h4>Pacemaker Life Expectancy</h4>   
+            <span className='down'>⮟</span><br />
+            <p>Pacemaker batteries typically last from eight to twelve years, depending on usage. When the battery is depleted, only the generator is replaced, while leads tend to remain intact. With routine care and follow-up, patients with pacemakers can lead long, active, and productive lives.</p>
+            <br /><br />
+
+
+            <h4>Daily Diet Plan Example</h4>   
+            <span className='down'>⮟</span><br />
+            <p><b>Myth:</b> You cannot use household appliances</p>
+            <p><b>Fact:</b> Most household appliances are totally safe to use with a pacemaker</p> <br />
+            <p><b>Myth:</b> Pacemaker surgery is a major operation</p>
+            <p><b>Fact:</b> It is a minimally invasive procedure and is normally done under local anaesthesia</p> <br />
+            <p><b>Myth:</b> Pacemakers are reserved for old patients</p>
+            <p><b>Fact:</b> Patients of any age could need pacemakers based on their condition</p>
+            <br /><br />
+
+
+            
+            <h4>Conclusion</h4>   
+            <span className='down'>⮟</span><br />
+            <p>A pacemaker is never a limitation, but a lifesaver that resynchronizes regular heart rhythm and enables patients to lead healthier, more active lives. With follow-ups, maintenance, and a healthy lifestyle, pacemaker patients can lead long, independent lives.</p>
+            <p>At Shree Saibaba Heart Institute, Nashik, our expert cardiologists and electrophysiologists specialize in advanced pacemaker therapies, including leadless pacemakers and cardiac resynchronisation therapy (CRT). We are committed to providing each patient with compassionate, world-class cardiac care.</p>  <br /><br />
+
+
             <h5 className='CTA'>At Shree Saibaba Multispeciality Hospital, Nashik, our urology specialists provide advanced diagnosis, painless treatment options, and prevention guidance to keep stones from coming back.</h5><br />
             <h5 className='CTA'>📞 Call us or visit us for a consultation. Your kidneys deserve the best care...</h5><br /><br />
             <Link to="/contact"><Button variant="contained" >Reach us out</Button></Link> <br /><br />
