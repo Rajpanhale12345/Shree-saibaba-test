@@ -74,22 +74,22 @@ import { Helmet } from 'react-helmet';
 <div className='service-section'>
         <span><gen style={{color : 'red' }}>General OPD</gen> <br />
     <nm style={{color:'white'}}>Mon-Sat : 10:00AM - 08:00PM <br />
-    Call on: 9158887554</nm> <br /><br />
+    <a href='tel:9158887554'>Call on: 9158887554</a></nm> <br /><br />
     </span><br /></div>
     <div className='service-section1'>
       <span><gen style={{color : 'red'}}>Ambulance</gen><br />
      <nm style={{color:'white'}}>Mon-Sat : 10:00AM - 08:00PM <br />
-    Call on: 9158887554</nm> <br /><br />
+    <a href='tel:9158887554'>Call on: 9158887554</a></nm> <br /><br />
     </span> <br /></div>
     <div className='service-section2'>
       <span><gen style={{color : 'red', }}>Emergency Care</gen><br />
     <nm style={{color:'white'}}>Mon-Sat : 10:00AM - 08:00PM <br />
-    Call on: 9158887554</nm> <br />
+    <a href='tel:9158887554'>Call on: 9158887554</a></nm> <br />
     </span> <br /></div>
     <div className='service-section3'>
 <span><gen style={{color : 'red', }}>Consultation No.</gen> <br />
      <nm style={{color:'white'}}>Mon-Sat : 10:00AM - 08:00PM <br />
-    Call on: 9158887554</nm><br /><br />
+    <a href='tel:9158887554'>Call on: 9158887554</a></nm><br /><br />
     </span> </div>
   </div>
 </div><br /><br />
