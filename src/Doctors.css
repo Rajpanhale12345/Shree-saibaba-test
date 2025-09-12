@@ -1,36 +1,185 @@
-.doctors-container {
+/* container + head */
+.doctors-head {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  padding: 20px;
+  grid-template-columns: auto 1fr;
+  gap: 12px;
+  align-items: center;
+  margin: 24px auto 8px;
+  max-width: 1200px;
+  padding: 0 16px;
 }
-@media (max-width: 1024px) {
-  .doctors-container {
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  }
+.doctors-tabs {
+  display: inline-flex;
+  background: #f3f5f7;
+  border-radius: 10px;
+  padding: 4px;
+  gap: 4px;
+}
+.doctors-tabs button {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.doctors-tabs button.active {
+  background: white;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+}
+.doctors-search {
+
+  padding: 10px 12px;
+  border: 1px solid #e4e7eb;
+  border-radius: 10px;
+  font-size: 14px;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  display: none;
 }
 
-@media (max-width: 768px) {
-  .doctors-container {
-    grid-template-columns: 1fr;
-    gap: 15px;
-    padding: 10px;
-  }
-
-  .doctor-card {
-    font-size: 14px;
-    padding: 12px;
-  }
+/* specialty grid view */
+.specialty-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 16px;
+  max-width: 1200px;
+  margin: 8px auto 24px;
+  padding: 0 16px;
+}
+.specialty-card {
+  grid-column: span 6; /* 2-up on desktop */
+  background: #fff;
+  border: 1px solid #eef1f4;
+  border-radius: 14px;
+  overflow: hidden;
+}
+@media (min-width: 1100px) {
+  .specialty-card { grid-column: span 4; } /* 3-up on wide */
+}
+@media (max-width: 720px) {
+  .specialty-card { grid-column: span 12; } /* 1-up mobile */
 }
 
-@media (max-width: 480px) {
-  .doctors-container {
-    padding: 5px;
-    gap: 10px;
-  }
-
-  .doctor-card {
-    font-size: 13px;
-    padding: 10px;
-  }
+.specialty-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border-bottom: 1px solid currentColor;
+  border-width: 0 0 2px 0;
 }
+.specialty-head h3 {
+  margin: 0;
+  font-size: 16px;
+  letter-spacing: .2px;
+}
+.specialty-head .count {
+  background: #0a93961a;
+  color: #0a9396;
+  border: 1px solid #0a939633;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.doctor-list {
+  list-style: none;
+  margin: 0;
+  padding: 8px 12px 12px;
+  display: grid;
+  gap: 8px;
+}
+.doctor-pill {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 10px;
+  align-items: center;
+  padding: 8px 10px;
+  border: 1px solid #eef1f4;
+  border-radius: 10px;
+}
+.avatar {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  display: grid; place-items: center;
+  font-weight: 700;
+  background: #f1f8f8;
+  color: #0a9396;
+  border: 1px solid #dbe8e8;
+}
+.meta .name { font-weight: 700; font-size: 14px; }
+.meta .degree { font-size: 12px; color: #566; }
+
+/* directory view */
+.directory-wrap {
+  position: relative;
+  max-width: 1200px;
+  margin: 8px auto 24px;
+  padding: 0 16px;
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  gap: 12px;
+}
+.alpha-rail {
+  position: sticky;
+  top: 90px;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.rail-link {
+  text-decoration: none;
+  font-size: 11px;
+  color: #6a7;
+  padding: 2px;
+  border-radius: 4px;
+}
+.rail-link:hover { background: #eef6f6; }
+
+.directory-list {
+  background: #fff;
+  border: 1px solid #eef1f4;
+  border-radius: 14px;
+  padding: 8px 6px;
+}
+.dir-group { padding: 8px 8px 2px; }
+.dir-letter {
+  position: sticky;
+  top: 64px;
+  background: #fff;
+  padding: 6px 8px;
+  font-weight: 800;
+  color: #0a9396;
+  border-left: 3px solid #0a9396;
+  margin-bottom: 4px;
+}
+.dir-items { list-style: none; margin: 0; padding: 0 6px 8px; display: grid; gap: 8px; }
+.dir-item {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  gap: 10px;
+  padding: 8px;
+  border: 1px solid #eef1f4;
+  border-radius: 10px;
+}
+.avatar.sm { width: 30px; height: 30px; font-size: 12px; }
+.dir-meta .name { font-weight: 700; font-size: 14px; }
+.dir-meta .dim { font-size: 12px; color: #566; }
+.chip {
+  background: #f1f8f8; color: #0a9396;
+  border: 1px solid #dbe8e8;
+  padding: 1px 6px; border-radius: 999px;
+}
+
+.empty {
+  padding: 24px;
+  text-align: center;
+  color: #556;
+}
+
+/* keep your existing .doctors-sep if you like */

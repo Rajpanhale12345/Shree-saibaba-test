@@ -1,108 +1,143 @@
 import React, { useState } from "react";
-import Upper from "./Upper";
 import "./Contact.css";
 import { Helmet } from 'react-helmet';
 
 function Contact() {
   const [formData, setFormData] = useState({
     name: "",
-    email: "",
-    service:"",
+    mobile: "", // Changed from 'email' to 'mobile' to match the form input
+    service: "",
     message: "",
-
   });
 
   const handleChange = (e) => {
+    // Correctly updates the state for any input by its 'name' attribute
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
-    // Add your backend/API call here
+    fetch("https://sheetdb.io/api/v1/b2b8jtgt9q8gf", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ data: formData }),
+    })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log("Success:", data);
+      alert("Your message has been sent successfully!"); // User feedback
+      setFormData({ // Reset form after successful submission
+        name: "",
+        mobile: "",
+        service: "",
+        message: "",
+      });
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+      alert("Failed to send message. Please try again."); // User feedback
+    });
   };
 
   return (
     <>
+      <Helmet>
+        <title>Contact | Saibaba Multispeciality Hospital</title>
+      </Helmet>
+      
+      <br />
+      <h1 className="reach" style={{ color: "blue" }}>Reach us out</h1><br /><br />
+      
+      <div className="address">
+        📍 Shree Saibaba Heart Institute & Multispeciality Hospital,
+        Opp. Wani House, Mumbai Naka, Mirajkar Nagar,
+        Nashik, Maharashtra 422001 <br /><br />
+        
+        🚑 <span style={{ color: 'blue' }}>Cardiac Ambulance</span> : <a href="tel:9158887554">9158887554</a>
+        <br /><br />
+        
+        🚨 <span style={{ color: 'blue' }}>Emergency Care</span> : <a href="tel:9158880987">9158880987</a> / <a href="tel:8767021810">8767021810</a>
+        <br /><br />
+        
+        ☎️ <span style={{ color: 'blue' }}>Landline No</span> : <a href="tel:02532507001">0253 250 7001</a> <br /><br />
+        
+        📞 <span style={{ color: 'blue' }}>Mob. No</span>: <a href="tel:+919158887554">+91 9158887554</a> <br /><br />
+        
+        📩 <span style={{ color: 'blue' }}>Email</span>: <a href="mailto:saibabaheartinstitute@yahoo.com">saibabaheartinstitute@yahoo.com</a>
+      </div>
 
-    
-    <helmet>
-      <title>Contact | Saibaba Multispeciality Hospital</title>
-    </helmet>
-     
-<br />
-<h1  className= "reach" style={{color : "blue"}}>Reach us out</h1><br /><br />
-<div className="address">📍 Shree Saibaba Heart Institute & Multispeciality Hospital,
-Opp. Wani House, Mumbai Naka, Mirajkar Nagar,
-Nashik, Maharashtra 422001 <br /><br />
-🚑 <span ><i style={{color : 'blue'}}>Cardiac Ambulance</i></span> : <a href="tel:9158887554">9158887554</a>
-<br /><br />
-🚨 <span ><i style={{color : 'blue'}}>Emergency Care</i></span> : <a href="tel:9158880987">9158880987</a> / <a href="tel:8767021810">8767021810</a>
-<br /><br />
-☎️ <span ><i style={{color : 'blue'}}>Landline No</i></span> :  <a href="tel:02532507001">0253 250 7001</a> <br /><br /><span ><i style={{color : 'blue'}}>📞 Mob. No</i></span>: <a href="tel:+919158887554">+91 9158887554</a> <br /><br />
-<span ><i style={{color : 'blue'}}>📩 Email </i></span>: <a href="mailto:saibabaheartinstitute@yahoo.com">saibabaheartinstitute@yahoo.com</a>
-
- </div>
-
-
-
+      <br />
+      
       <form onSubmit={handleSubmit} className="contact-form">
         <input
           type="text"
           name="name"
-          placeholder="Name"
+          placeholder="Your Name"
           value={formData.name}
           onChange={handleChange}
+          required // Added validation
         />
         <input
           type="number"
           name="mobile"
-          placeholder="mobile"
+          placeholder="Your Mobile Number"
           value={formData.mobile}
           onChange={handleChange}
+          required // Added validation
         />
-       <select
-  name="service"
-  value={formData.service}
-  onChange={handleChange}
-  className="service-select"
->
-  <option value="">Services</option>
-  <option value="Cardiology">Cardiology</option>
-  <option value="Neurology">Neurology</option>
-  <option value="Orthopedics">Orthopedics</option>
-  <option value="Pediatrics">Pediatrics</option>
-  <option value="ENT">ENT</option>
-  <option value="Gynecology">Gynecology</option>
-  <option value="Dermatology">Dermatology</option>
-  <option value="General Surgery">General Surgery</option>
-  <option value="Psychiatry">Psychiatry</option>
-</select>
-
-        <input
-          type="text"
-          name="message"
-          placeholder="Message"
-          value={formData.message}
+        <select
+          name="service"
+          value={formData.service}
           onChange={handleChange}
-        />
+          className="service-select"
+           // Added validation
+            >
+              <option value="">Services</option>
+              <option>Cardiology</option>
+              <option>Cardiovascular Thoracic surgery</option>
+              <option>urology</option>
+              <option>neurology</option>
+              <option>radiology</option>
+              <option>orthopedic</option>
+              <option>Interventional Radiology</option>
+              <option>Neurosurgery and Spine Surgery</option>
+              <option>Internal Medicine</option>
+              <option>Dentistry</option>
+              <option>General Surgery</option>
+              <option>Plastic Surgery</option>
+              <option>ophthalmology</option>
+              <option>gastroenterology</option>
+              <option>Nephrology</option>
+            </select>
+            <textarea
+              style={{ backgroundColor: "white", borderRadius:"5px" }}
+              name="message"
+              placeholder="Your Message"
+              value={formData.message}
+              onChange={handleChange}
+              required // Added validation
+        ></textarea>
         <button type="submit">Send</button>
       </form>
+      
       <hr />
-      <br />
-       <div className="map">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2856.0053737370768!2d73.78895077376413!3d19.990777322621646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bddeb07ede2c1c3%3A0x5ad06fdbb92738a5!2sShree%20Saibaba%20Heart%20Institute%20And%20Research%20Centre!5e1!3m2!1sen!2sin!4v1754135060237!5m2!1sen!2sin"
-        width="100%"
-        height="100%"
-        style={{ border: 0 }}
-        allowFullScreen=""
-        loading="lazy"
-        referrerPolicy="no-referrer-when-downgrade"
-        title="Shree Saibaba Hospital Location"
-      ></iframe>
-    </div>
-        </>
+      
+      <div className="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15003.876725838495!2d73.816404!3d19.988015!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bddec4df65a507f%3A0x6d9f52f36f6d5257!2sShree%20Saibaba%20Heart%20Institute%20%26%20Multispeciality%20Hospital!5e0!3m2!1sen!2sin!4v1701357602410!5m2!1sen!2sin"
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          allowFullScreen=""
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          title="Shree Saibaba Hospital Location"
+        ></iframe>
+      </div>
+    </>
   );
 }
 

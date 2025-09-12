@@ -1,36 +1,120 @@
-.imagedep {
-  height: 300px;
-  width: 300px;
-  align-items: center;
-  justify-content: center;
-  justify-items: center;
-  border-radius: 50px;
-  border: 2px solid rgb(255, 221, 0);
+/* ----- Base reset & sensible defaults ----- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
+:root{
+  /* Responsive type scale */
+  --fs-choose: clamp(1.5rem, 4.5vw, 2.5rem);
+  --fs-bullet: clamp(0.9rem, 3.2vw, 1.25rem);
+  --fs-list: clamp(0.95rem, 3.4vw, 1.2rem);
 
+  /* Spacing & radii */
+  --radius-large: clamp(16px, 8vw, 50px);
+  --space-1: clamp(6px, 1.6vw, 12px);
+  --space-2: clamp(10px, 2.4vw, 18px);
 
-.bullet {
+  /* Colors */
+  --brand-blue: #0b5fff;
+  --brand-yellow: rgb(255,221,0);
+  --text-color: #111;
+}
+
+/* Improves text rendering on mobile */
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; color: var(--text-color); }
+
+/* ----- Image / avatar container ----- */
+.imagedep{
+  /* Remove fixed px box; make it fluid and square */
+  width: min(300px, 80vw);
+  aspect-ratio: 1 / 1;            /* stays square on all screens */
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius-large);
+  border: 2px solid var(--brand-yellow);
+  overflow: hidden;               /* prevents child img overflow */
+  margin-inline: auto;            /* center in its container */
+}
+
+/* If you place an <img> inside .imagedep, make it cover nicely */
+.imagedep > img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ----- Typography ----- */
+.bullet{
   color: red;
-  font-size: 20px;
+  font-size: var(--fs-bullet);
+  line-height: 1.25;
 }
 
-.choose {
+.choose{
   color: blue;
-  font-size: 40px;
+  font-size: var(--fs-choose);
+  line-height: 1.1;
+  word-break: break-word;         /* avoids overflow on tiny screens */
 }
 
-.list {
-  font-size: 25px;
+/* ----- Lists ----- */
+.list{
+  font-size: var(--fs-list);
   font-weight: 500;
-  /* list-style-type:georgian;  */
-  margin-left: 20px;      /* ✅ Indent for visibility */
-  text-align:center;
-}
-.border1{
-    border-left: 2px solid blue;
-    border-right: 2px solid blue;
-    border-bottom:8px solid blue ;
-    border-radius: 30px;
+  /* Allow proper list markers and indentation */
+  list-style: disc inside;
+  margin: 0;
+  padding: 0 var(--space-2);
+  text-align: left;               /* center text can cause wrap issues */
+  line-height: 1.5;
 }
 
+/* If you really need centered list content, wrap it in a container and center that instead */
+.list.centered{
+  text-align: center;
+}
+
+/* ----- Framed container ----- */
+.border1{
+  border: 2px solid var(--brand-blue);
+  border-bottom-width: 8px;       /* keeps your accent base */
+  border-radius: 30px;            /* will be adjusted on small screens below */
+  padding: var(--space-2);
+  margin: var(--space-2) auto;
+  max-width: 100%;
+}
+
+/* ----- Small screens: tighten spacing and borders if needed ----- */
+@media (max-width: 480px){
+  .border1{
+    border-width: 1px;
+    border-bottom-width: 6px;
+    border-radius: 20px;
+    padding: var(--space-1);
+  }
+
+  /* Let the image breathe on very narrow viewports */
+  .imagedep{
+    width: min(260px, 92vw);
+    border-width: 1.5px;
+  }
+}
+
+/* ----- Larger screens: scale gracefully ----- */
+@media (min-width: 768px){
+  .border1{
+    max-width: 720px;             /* prevents ultra-wide stretch */
+  }
+  .list{
+    padding-inline: calc(var(--space-2) * 1.5);
+  }
+}
+
+/* ----- Optional: prefers-reduced-motion accessibility ----- */
+@media (prefers-reduced-motion: reduce){
+  * { scroll-behavior: auto; }
+}

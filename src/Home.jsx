@@ -21,9 +21,8 @@ import spe8 from './Images/spe9.webp';
 import spe9 from './Images/spe10.webp';
 import spe10 from './Images/spe11.webp';
 import spe11 from './Images/spe12.webp';
-import spe12 from './Images/spe13.webp';
-import spe13 from './Images/spe14.webp';
-import spe14 from './Images/spe15.webp';
+
+
 
 import OPD from './OPD.'; 
 import Test from './Test';
@@ -32,20 +31,17 @@ import { Helmet } from 'react-helmet';
 function Home() {
   // Random/placeholder specialty labels for hover overlays
   const specialties = [
-    { src: spe13, className: 'cardiology',   label: 'Pulmonology' },
-    { src: spe14, className: 'neurology',    label: 'Cardiology' },
-    { src: spe15, className: 'neurosurgery', label: 'Gastroenterology' },
-    { src: spe12, className: 'orthopaedic',  label: 'Neurology' },
-    { src: spe1,  className: 'cardiology',   label: 'Pulse Dynamics' },
-    { src: spe2,  className: 'neurology',    label: 'Spine Care' },
-    { src: spe3,  className: 'neurosurgery', label: 'General Surgery' },
-    { src: spe4,  className: 'orthopaedic',  label: 'Orthopaedic' },
-    { src: spe5,  className: 'radiology',    label: 'Dentistry' },
-    { src: spe6,  className: 'radiology1',   label: 'Gynaecology' },
-    { src: spe8,  className: 'urology',      label: 'Ophthalmology' },
-    { src: spe9,  className: 'cardiology',   label: 'Plastic Surgery' },
-    { src: spe10, className: 'neurology',    label: 'Nephrology' },
-    { src: spe11, className: 'neurosurgery', label: 'Urology' },
+ 
+    { src: spe1,  className: 'cardiology',  },
+    { src: spe2,  className: 'neurology',     },
+    { src: spe3,  className: 'neurosurgery',  },
+    { src: spe4,  className: 'orthopaedic',   },
+    { src: spe5,  className: 'radiology',    },
+    { src: spe6,  className: 'radiology1',   },
+    { src: spe8,  className: 'urology',      },
+    { src: spe9,  className: 'cardiology',  },
+    { src: spe10, className: 'neurology',   },
+    { src: spe11, className: 'neurosurgery', },
   ];
 
   // Helper to render rows with overlay hover effect

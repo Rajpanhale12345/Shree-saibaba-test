@@ -1,6 +1,6 @@
 import React from 'react';
 import Deptext from './Deptext';
-import img from './Images/Neurosurgerydep.png';
+import img from './Images/Neurosurgerydep.jpg';
 import { Helmet } from 'react-helmet';
 
  function Neurosurgery() {

@@ -11,9 +11,10 @@
 }
 
 .header-text {
-  margin-left: 77%;
+  margin-left: 67%;
   font-size: 15px;
 color: rgb(254, 3, 3);
+
 }
 
 .social-icons a {
@@ -35,10 +36,11 @@ color: rgb(254, 3, 3);
 
   .header-text {
     margin-left: 0;
-    margin-bottom: 10px;
+    margin-top: -7px;
   }
 
   .social-icons {
     margin-top: 10px;
+    display: none;
   } 
 }

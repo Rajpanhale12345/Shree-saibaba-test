@@ -1,6 +1,6 @@
 import React from 'react';
 import Deptext from './Deptext';
-import img from './Images/urologydep.png';
+import img from './Images/urologydep.jpg';
 import { Helmet } from 'react-helmet';
 
  function Urology() {

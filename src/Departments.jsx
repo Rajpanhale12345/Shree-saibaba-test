@@ -3,21 +3,21 @@ import { Link } from 'react-router-dom';
 import Upper from './Upper';
 import './Departments.css';
 
-import cardio from './Images/cardiodep.png';
-import thoracic from './Images/thoracicdep.png';
-import Urology from './Images/Urologydep.png';
-import Neurology from './Images/Neurologydep.png';
-import Radiology from './Images/Radiologydep.png';
-import Neurosurgery from './Images/Neurosurgerydep.png';
-import Interventional from './Images/Interventionaldep.png';
-import Orthopedic from './Images/Orthopedicdep.png';
-import Internal from './Images/InternalMedicine.png';
-import Dentistry from './Images/Dentistry.png';
-import General from './Images/GeneralSurgery.png';
-import plastic from './Images/plastic.png';
-import optha from './Images/optha.png';
-import gastro from './Images/gastro.png';
-import nephrology from './Images/nephrology.png';
+import cardio from './Images/cardiodep.jpg'
+import thoracic from './Images/thoracicdep.jpg';
+import Urology from './Images/Urologydep.jpg';
+import Neurology from './Images/Neurologydep.jpg';
+import Radiology from './Images/Radiologydep.jpg';
+import Neurosurgery from './Images/Neurosurgerydep.jpg';
+import Interventional from './Images/Interventionaldep.jpg';
+import Orthopedic from './Images/Orthopedicdep.jpg';
+import Internal from './Images/InternalMedicine.jpg';
+import Dentistry from './Images/Dentistry.jpg';
+import General from './Images/GeneralSurgery.jpg';
+import plastic from './Images/plastic.jpg';
+import optha from './Images/optha.jpg';
+import gastro from './Images/gastro.jpg';
+import nephrology from './Images/nephrology.jpg';
 import { Helmet } from 'react-helmet';
 
 function Departments() {

@@ -33,12 +33,12 @@ function Blogs() {
 
         <Link to='/spine'><div className="imageblog"><img src={spine} alt="" /><br />
           <br />
-          <h2><i style={{ color: 'blue', }}>Spine Health</i></h2></div>
+          <h2><i style={{ color: 'red', }}>Spine Health</i></h2></div>
         </Link>
 
         <Link to='/Cardio'><div className="imageblog"><img src={cardio} alt="" /><br />
           <br />
-          <h2><i style={{ color: 'Black', }}>Pacemaker Care</i></h2></div>
+          <h2><i style={{ color: 'red', }}>Pacemaker Care</i></h2></div>
         </Link>
 
 

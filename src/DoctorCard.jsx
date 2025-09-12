@@ -1,52 +1,32 @@
 import React from "react";
-import "./DoctorCard.css";
-import { Link } from "react-router-dom";
-import { Helmet } from 'react-helmet';
 
-const DoctorCard = ({ name, color, icon, doctors }) => {
+const DoctorCard = ({ name, color = "#0a9396", Icon, doctors = [] }) => {
   return (
+    <article className="doc-card" style={{ "--accent": color }}>
+      <header className="doc-card__head">
+        <div className="doc-card__icon">
+          {Icon ? <Icon aria-hidden="true" /> : null}
+        </div>
+        <div className="doc-card__titles">
+          <h3 className="doc-card__title">{name}</h3>
+          <p className="doc-card__meta">
+            <span className="dot" /> {doctors.length} Doctor
+            {doctors.length !== 1 ? "s" : ""}
+          </p>
+        </div>
+      </header>
 
-    <>
-        <helmet>
-          <title>Our Doctors | Saibaba Multispeciality Hospital</title>
-        </helmet>
-    
-    <div className="doctor-card">
-      
-      <div
-        className="doctor-card-header"
-        style={{ backgroundColor: color }}
-      >  
-        <span className="doctor-icon">{icon}</span>
-        <h3>{name}</h3>
-      
-      </div>
-      <div className="doctor-list">
-        {doctors.map((doc, idx) => (
-          <div className="doctor-item" key={idx}>
-            <div
-              className="avatar"
-              style={{ backgroundColor: color }}
-            >
-              
-              {doc.name
-                .split(" ")
-                .filter((w) => w[0].toUpperCase() === w[0]) // take capital letters
-                .map((w) => w[0])
-                .join("")
-                .substring(0, 2)
-                .toUpperCase()}
+      <ul className="doc-card__list">
+        {doctors.map((d, i) => (
+          <li key={i} className="doc-card__row">
+            <div className="doc-card__name">{d.name}</div>
+            <div className="doc-card__degree" title={d.degree}>
+              {d.degree}
             </div>
-            <p>
-              <strong>{doc.name}</strong>
-              <br /> {doc.degree} <br />
-            </p>
-          </div>
+          </li>
         ))}
-      </div>
-    </div>
-
-    </>
+      </ul>
+    </article>
   );
 };
 

@@ -53,7 +53,7 @@ function PressReleases() {
     </helmet>
 
 
-            <Upper text="Press Releases" classname="upper" />
+            <Upper text="Media" classname="upper" />
             <br /><br />
             <h2 className='pioneer'><i style={{color : 'blue'}}>Pioneering change, setting the pace.⚡</i></h2><br /><br />
             <h3 className='description'><i>In this press release, we reveal the next evolution of our journey. A step designed to meet the demands of tomorrow while delivering value today. It’s not just progress, it’s intentional, focused, and bold.</i></h3>

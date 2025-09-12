@@ -48,13 +48,13 @@ const Footer = () => {
           <h3>Discover</h3>
           <ul>
             <li><Link to="/departments">Departments</Link></li>
-            <li><Link to="/pr">Press Release</Link></li>
+            <li><Link to="/pr">Media</Link></li>
           </ul>
         </div>
       </div>
 
       <div className="footer-bottom">
-        <p>© {new Date().getFullYear()} Shree Saibaba Hospital. All Rights Reserved.</p>
+        <p>© {new Date().getFullYear()} <Link to='https://brandbanao.ai'>BrandBanao.Ai</Link>. All Rights Reserved.</p>
       </div>
     </footer>
     </>

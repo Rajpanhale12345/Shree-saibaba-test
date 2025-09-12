@@ -189,7 +189,7 @@ nm {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.8);   /* adjust darkness here */
+  background: rgba(0, 0, 0, 0.7);   /* adjust darkness here */
   z-index: 1;
   
 }

@@ -33,10 +33,10 @@
 /* Circular image wrapper (circle lives here) */
 .specialty-figure {
   position: relative;
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   border: 1px solid black;
-  border-radius: 50%;
+border-radius: 20px;
   overflow: hidden;
   isolation: isolate;
 }
@@ -49,7 +49,7 @@
   object-fit: cover;
   transform: scale(1);
   transition: transform 350ms ease;
-  border-radius: 50%;
+  
 }
 
 /* ---------- SHUTTER EFFECT (unchanged) ---------- */
@@ -62,13 +62,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
+  
 }
 
 .overlay-text {
   color: #fff;
   font-weight: 700;
-  font-size: 1.06rem;
+  font-size: 1rem;
   letter-spacing: 0.2px;
   text-transform: capitalize;
   opacity: 0;
@@ -94,7 +94,7 @@
 
 /* Always-visible, larger label below each image */
 .specialty-caption {
-  font-size: 1.25rem; /* larger text */
+  font-size: 1.5rem; /* larger text */
   font-weight: 700;   /* bold */
   line-height: 1.2;
   text-align: center;

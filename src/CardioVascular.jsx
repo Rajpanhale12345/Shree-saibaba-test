@@ -1,6 +1,6 @@
 import React from 'react';
 import Deptext from './Deptext';
-import Vascular from './Images/thoracicdep.png';
+import Vascular from './Images/thoracicdep.jpg';
 import { Helmet } from 'react-helmet';
 
 
