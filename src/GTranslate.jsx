@@ -23,9 +23,9 @@ export default function GTranslate() {
   return (
     <>
 
-      <helmet>
+      {/* <helmet>
         <title>Language Translate | Shree Saibaba</title>
-      </helmet>
+      </helmet> */}
 
 
       {/* Internal CSS to hide flags */}
