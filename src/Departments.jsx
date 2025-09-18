@@ -10,7 +10,7 @@ import Neurology from './Images/Neurologydep.jpg';
 import Radiology from './Images/Radiologydep.jpg';
 import Neurosurgery from './Images/Neurosurgerydep.jpg';
 import Interventional from './Images/Interventionaldep.jpg';
-import Orthopedic from './Images/Orthopedicdep.jpg';
+import Orthopedic from './Images/Orthodep.webp';
 import Internal from './Images/InternalMedicine.jpg';
 import Dentistry from './Images/Dentistry.jpg';
 import General from './Images/GeneralSurgery.jpg';
@@ -19,35 +19,41 @@ import optha from './Images/optha.jpg';
 import gastro from './Images/gastro.jpg';
 import nephrology from './Images/nephrology.jpg';
 import { Helmet } from 'react-helmet';
+import generalmedicine from './Images/generalmedicinedep.webp'
+import spinecare from './Images/spinecaredep.jpg';
+import gynacology from './Images/gynacdep.webp'
+import pulmonology from './Images/pulmonologydep.webp'
 
 function Departments() {
   const departments = [
     { to: '/Cardiology', label: 'Cardiology', src: cardio },
     { to: '/CardioVascular', label: 'Cardio Thoracic', src: thoracic },
-    { to: '/urology', label: 'Urology', src: Urology },
     { to: '/neurology', label: 'Neurology', src: Neurology },
-    { to: '/radiology', label: 'Radiology', src: Radiology },
+    { to: '/SpineCare', label: 'Spine Care', src: spinecare },
     { to: '/Ortho', label: 'Orthopaedic', src: Orthopedic },
+    { to: '/nephrology', label: 'Nephrology', src: nephrology },
+    { to: '/urology', label: 'Urology', src: Urology },
+    { to: '/generalmedicine', label: 'General Medicine', src: generalmedicine },
+    { to: '/GeneralSurgery', label: 'General Surgery', src: General },
+    { to: '/Gastroenterology', label: 'Gastroenterology', src: gastro },
+    { to: '/PlasticSurgery', label: 'Plastic Surgery', src: plastic },
+    { to: '/Gynaecology', label: 'Gynacology', src: gynacology },
+    { to: '/radiology', label: 'Radiology', src: Radiology },
     { to: '/interventionalradiology', label: 'Interventional Radiology', src: Interventional },
     { to: '/neurosurgery', label: 'Neurosurgery', src: Neurosurgery },
-    { to: '/InternalMedicine', label: 'Internal Medicine', src: Internal },
+    { to: '/pulmonology', label: 'Pulmonology', src: pulmonology },
     { to: '/Dentistry', label: 'Dentistry', src: Dentistry },
-    { to: '/GeneralSurgery', label: 'General Surgery', src: General },
-    { to: '/PlasticSurgery', label: 'Plastic Surgery', src: plastic },
-    { to: '/Opthalmology', label: 'Ophthalmology', src: optha },
-    { to: '/Gastroenterology', label: 'Gastroenterology', src: gastro },
-    { to: '/nephrology', label: 'Nephrology', src: nephrology },
   ];
 
   return (
     <>
 
-    <helmet>
-      <title>Department Image | Shree Saibaba Hospital</title>
-    </helmet>
+      <helmet>
+        <title>Department | Shree Saibaba Hospital</title>
+      </helmet>
 
 
-    
+
       <Upper text="Departments" />
 
       <div className="departments-wrap">

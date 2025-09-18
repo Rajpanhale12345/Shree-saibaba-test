@@ -29,7 +29,7 @@ const specialties = [
     color: "#0a9396",
     doctors: [
       { name: "DR. GAURAV GUJRATHI", degree: "MBBS, MCh" },
-      { name: "DR. SUMIT HIRE", degree: "MBBS, MCh" },
+      { name: "DR. SUMIT HEERE", degree: "MBBS, MCh" },
       { name: "DR. GAURAV KULSHRESTHA", degree: "MBBS, MS" }
     ]
   },

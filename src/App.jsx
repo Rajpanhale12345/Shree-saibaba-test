@@ -37,6 +37,15 @@ import FullBodyCheckup from './FullBodyCheckup';
 import cardio from './Cardio_blog'
 import { Helmet } from 'react-helmet';
 import Cardio_blog from './Cardio_blog';
+import PrivacyPolicy from './PrivacyPolicy';
+import TermsAndConditions from './TermsAndConditions';
+import SpineCare from './SpineCare';
+import GeneralMedicine from './GeneralMedicine';
+import Gynecology from './Gynecology';
+import Pulmonology from './Pulmonology'
+
+
+
 
 function App() {
   return (
@@ -51,9 +60,9 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/departments" element={<Departments />} />
-            <Route path="/doctors" element={<Doctors />} /> 
+            <Route path="/doctors" element={<Doctors />} />
             <Route path="/medical" element={<Medical />} />
-            <Route path="/blogs" element={<Blogs />} /> 
+            <Route path="/blogs" element={<Blogs />} />
             <Route path="/pr" element={<PressReleases />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/cardiology" element={<Cardiology />} />
@@ -74,11 +83,18 @@ function App() {
             <Route path="/testimonials" element={<Testimonials />} />
             <Route path="/kidney" element={<Kidney />} />
             <Route path="/spine" element={<Spine />} />
-          <Route path="/sitemap" element ={<Sitemap/>}/>
-          <Route path="/fullbodycheckup" element={<FullBodyCheckup />} />
-          <Route path="/cardio" element={<Cardio_blog />} />
+            <Route path="/sitemap" element={<Sitemap />} />
+            <Route path="/fullbodycheckup" element={<FullBodyCheckup />} />
+            <Route path="/cardio" element={<Cardio_blog />} />
+            <Route path="/privacypolicy" element={<PrivacyPolicy />} />
+            <Route path="/termsandconditions" element={<TermsAndConditions />} />
+            <Route path="/spinecare" element={<SpineCare />} />
+            <Route path="/gynaecology" element={<Gynecology />} />
+            <Route path="/generalmedicine" element={<GeneralMedicine />} />
+            <Route path="/pulmonology" element={<Pulmonology />} />
+
           </Routes>
-         
+
           <ScrollToTop />
           <Footer />
         </main>
