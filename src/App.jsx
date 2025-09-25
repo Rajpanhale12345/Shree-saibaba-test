@@ -43,6 +43,8 @@ import SpineCare from './SpineCare';
 import GeneralMedicine from './GeneralMedicine';
 import Gynecology from './Gynecology';
 import Pulmonology from './Pulmonology'
+import Facilities from './Facilities'
+import TieUps from './TieUps';
 
 
 
@@ -92,6 +94,8 @@ function App() {
             <Route path="/gynaecology" element={<Gynecology />} />
             <Route path="/generalmedicine" element={<GeneralMedicine />} />
             <Route path="/pulmonology" element={<Pulmonology />} />
+            <Route path="/facilities" element={<Facilities />} />
+            <Route path="/tieups" element={<TieUps />} />
 
           </Routes>
 

@@ -161,7 +161,7 @@ function Cardio_blog() {
                 </Link>
               ))}
             </div>
-            <Link to="/blog" className="sidebar-all-link">View all posts →</Link>
+            <Link to="/blogs" className="sidebar-all-link">View all posts →</Link>
           </div>
         </aside>
       </div>

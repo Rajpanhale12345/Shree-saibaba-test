@@ -64,7 +64,7 @@ function CheckIcon({ className }) {
  */
 export default function FullBodyCheckup({
   clinicName = "Shree Saibaba Heart Institute and Research Center",
-  packageName = "Full Body Health Checkup",
+  packageName = "Cardiac Checkup",
   subtitle = "A comprehensive preventive package for early detection & peace of mind.",
   price,
   note = "",

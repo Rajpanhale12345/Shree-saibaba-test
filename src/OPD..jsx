@@ -17,7 +17,7 @@ const opdData = [
     doctors: [
       { name: "DR. KISHOR DEORE", timing: "Only Monday" },
       { name: "DR. KIRAN KURKURE", timing: "5.00 pm to 6.00 pm" },
-      { name: "DR. KALE NIRAJ", timing: "5.00 pm to 6.00 pm" },
+      { name: "DR. THAKARE NITIN", timing: "5.00 pm to 6.00 pm" },
     ],
   },
   {
@@ -46,8 +46,8 @@ const opdData = [
   {
     department: "NEURO SURGEON",
     doctors: [
-      { name: "DR. SUMIT HIRE", timing: "3.00 pm to 5.00 pm" },
-      { name: "DR. SHIVPRASAD TARLE", timing: "1.00 pm to 3.00 pm" },
+      { name: "DR. SUMIT HEERE", timing: "3.00 pm to 5.00 pm" },
+      { name: "DR. ANIL JADHAV", timing: "On Call" },
     ],
   },
   {
@@ -61,7 +61,7 @@ const opdData = [
   {
     department: "GASTROENTROLOGY",
     doctors: [
-      { name: "DR. SUDARSHAN PATIL", timing: "On Call" },
+      { name: "DR. MAHESH PATIL", timing: "On Call" },
       { name: "DR. MAHESH PATIL", timing: "3.00 pm to 5.00 pm" },
     ],
   },
@@ -98,19 +98,18 @@ const opdData = [
   },
   {
     department: "CHEST PHYSICIAN",
-    doctors: [{ name: "DR. SAURABH BORGAONKAR", timing: "4.00 to 6.00" }],
+    doctors: [{ name: "DR. SAURABH BORGAONKAR", timing: "4.00 to 6.00" },
+      { name: "DR. PRASHANT SHINDE", timing: "On Call" }
+    ],
   },
-  {
-    department: "PULMONOLOGIST",
-    doctors: [{ name: "DR. PRASHANT SHINDE", timing: "On Call" }],
-  },
+  
   {
     department: "ONCOLOGIST",
     doctors: [{ name: "DR. AMBARISH CHATARJEE", timing: "On Call" }],
   },
   {
     department: "ENT",
-    doctors: [{ name: "DR. DIVYA BANGAR (KALAL)", timing: "On Call" }],
+    doctors: [{ name: "DR. DIVYA BANGIRA (KALAL)", timing: "On Call" }],
   },
   {
     department: "GYNACOLOGIST",

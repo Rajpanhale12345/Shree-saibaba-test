@@ -4,7 +4,7 @@ import Card1 from './Card1';
 import './Medical.css';
 import dd from './Images/2d.png'
 import BMI from './Images/BMI.png'
-import  BSL from './Images/BSL.png'
+import BSL from './Images/BSL.png'
 import CBC from './Images/CBC.png'
 import creatinine from './Images/creatinine.png'
 import ECG from './Images/ECG.png'
@@ -37,23 +37,24 @@ function Medical() {
   return (
     <>
 
-        
-    <helmet>
-      <title>Speciality | Saibaba Multispeciality Hospital</title>
-    </helmet>
+
+      <helmet>
+        <title>Speciality | Saibaba Multispeciality Hospital</title>
+      </helmet>
 
 
-    <Upper 
-    text="Preventive Health Packages"/><br/>
-<div className='checkup-container'>
-  <Checkup
-    image={fullbody}
-    title='Full Body Check-up'
-    text='A full body check-up is a comprehensive health assessment that includes various tests and screenings to evaluate your overall health and detect potential issues early.'
-    share='Book an appointment'
-    learn={<Link to='/fullbodycheckup'>Learn More</Link>}
-  /> 
-  <Checkup
+      <Upper
+        text="Preventive Health Packages" /><br />
+      <div className='checkup-container'>
+        <Checkup
+          image={fullbody}
+          title='Cardiac Check up'
+          text='A cardiac check-up is a focused but comprehensive evaluation of your heart and blood-vessel health.
+It goes beyond a routine full-body assessment by concentrating on risk factors, early signs of heart disease, and the efficiency of your cardiovascular system.'
+          share='Book an appointment'
+          learn={<Link to='/fullbodycheckup'>Learn More</Link>}
+        />
+        {/* <Checkup
     image={stress}
     title='Stress Check-up'
     text='A Gynac check-up is a comprehensive health assessment for women that includes various tests and screenings to evaluate reproductive health and detect potential issues early.'
@@ -94,10 +95,10 @@ function Medical() {
     text='A pulmonary function test is a group of tests that measure how well your lungs work. These tests can help diagnose lung diseases and monitor your lung health.'
     share='Book an appointment'
   
-  /> 
-</div>
-<br /><br />
-    {/* <h1 className='titlemed1'>Optional Tests :</h1><br /><br />
+  />  */}
+      </div>
+      <br /><br />
+      {/* <h1 className='titlemed1'>Optional Tests :</h1><br /><br />
        <div className='card123'>
      <Card1
     image={stress}

@@ -53,10 +53,16 @@ const specialties = [
     name: "Neurosurgery & Spine Surgery",
     color: "#0a9396",
     doctors: [
-      { name: "DR. SUMIT HIRE", degree: "MBBS, MCh" },
+      { name: "DR. SUMIT HEERE", degree: "MBBS, MCh" },
       { name: "DR. ANIL JADHAV", degree: "MBBS, MCh" }
     ]
   },
+    { name: "Chest Physician", color: "#0a9396", doctors:
+       [{ name: "DR. SAURABH BORGAONKAR", degree: "MBBS, DNB" },
+        { name: "DR. PRASHANT SHINDE", degree: "MBBS, DNB" }
+       ]
+       },
+
   { name: "Urology", color: "#0a9396", doctors: [{ name: "DR. AMEY PATIL", degree: "MBBS, MS, MCh" }] },
   { name: "Orthopaedic", color: "#0a9396", doctors: [{ name: "DR. SATYEN JOSHI", degree: "MBBS, MD, MCh" }] },
   { name: "Interventional Radiology", color: "#0a9396", doctors: [{ name: "DR. AJIT PATIL", degree: "MBBS, MD, FVIR" }] },
@@ -65,7 +71,6 @@ const specialties = [
   { name: "General Surgery", color: "#0a9396", doctors: [{ name: "DR. AMIT KELE", degree: "MBBS, DNB" }] },
   { name: "Dentist", color: "#0a9396", doctors: [{ name: "DR. AMIT BORSE", degree: "BDS" }] },
   { name: "Ophthalmologist", color: "#0a9396", doctors: [{ name: "DR. MANJIRI LELE", degree: "MBBS, MS" }] },
-  { name: "Chest Physician", color: "#0a9396", doctors: [{ name: "DR. ANIRBAN BANDOPADHYAY", degree: "MBBS, DNB" }] },
   { name: "Gynecologist", color: "#0a9396", doctors: [{ name: "DR. FORAM PARIKH", degree: "MBBS, MD" }] },
   { name: "Neurologist", color: "#0a9396", doctors: [{ name: "DR. RAHUL NAIK", degree: "MBBS, DM" }] },
   { name: "Cardiovascular Thoracic Surgery", color: "#0a9396", doctors: [{ name: "DR. KISHOR DEORE", degree: "MBBS, MS, MCh" }] }
@@ -189,8 +194,8 @@ const Doctors = () => {
               <ul className="doctor-list">
                 {s.doctors.map((d, i) => (
                   <li key={i} className="doctor-pill">
-                    <div className="avatar" aria-hidden="true">
-                      {getInitials(d.name)}
+                    <div aria-hidden="true">
+                     
                     </div>
                     <div className="meta">
                       <div className="name">{d.name}</div>

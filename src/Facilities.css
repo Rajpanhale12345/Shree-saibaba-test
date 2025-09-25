@@ -1,0 +1,10 @@
+:root { --header-h: 80px; } /* match your header height */
+
+.page-content {
+  padding-top: var(--header-h);
+  box-sizing: border-box;
+}
+
+/* reset default heading margins so they don't collapse upward */
+.page-content h1,
+.page-content p { margin-top: 0; }

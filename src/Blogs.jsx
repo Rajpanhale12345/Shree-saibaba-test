@@ -25,7 +25,10 @@ function Blogs() {
         text="Blogs" />
       <br /><br />
       <div className="imageblog1">
-
+  <Link to='/Cardio'><div className="imageblog"><img src={cardio} alt="" /><br />
+          <br />
+          <h2><i style={{ color: 'red', }}>Pacemaker Care</i></h2></div>
+        </Link>
         <Link to='/kidney'><div className="imageblog">
           <img src={kidney} alt="" />   <br />  <br />
           <h2><i style={{ color: 'red' }}>Kidney Stone</i> </h2></div>
@@ -36,10 +39,7 @@ function Blogs() {
           <h2><i style={{ color: 'red', }}>Spine Health</i></h2></div>
         </Link>
 
-        <Link to='/Cardio'><div className="imageblog"><img src={cardio} alt="" /><br />
-          <br />
-          <h2><i style={{ color: 'red', }}>Pacemaker Care</i></h2></div>
-        </Link>
+      
 
 
       </div><br /><br />

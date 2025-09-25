@@ -41,3 +41,17 @@
 .read-the-docs {
   color: #ffffff;
 }
+/* app shell */
+html, body, #root { height: 100%; }
+
+.app {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main, .page-content {   /* wrapper around each route’s content */
+  flex: 1 0 auto;       /* take remaining space without spacing tricks */
+}
+
+/* never use justify-content: space-between on the column shell */

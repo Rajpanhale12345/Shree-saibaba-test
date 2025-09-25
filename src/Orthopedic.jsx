@@ -22,15 +22,15 @@ import { Helmet } from 'react-helmet';
       description1='Shree Saibaba Multispeciality Hospital is one of the best orthopedic hospitals in Nashik, equipped with modern infrastructure and a dedicated team of orthopedic surgeons who specialize in advanced surgical and non-surgical treatments. With a strong emphasis on precision, safety, and patient rehabilitation, the hospital delivers comprehensive orthopedic care under one roof.'
       description2='The orthopedic department is led by a team of highly experienced specialists trained in managing everything from simple fractures to complex joint replacements and spinal surgeries. Using minimally invasive techniques, robotic assistance, and advanced imaging, our experts ensure faster recovery, reduced pain, and improved outcomes for patients of all age groups.'
       description3='Our facilities include state-of-the-art operation theaters, a fully equipped physiotherapy and rehabilitation center, and in-house diagnostic services to ensure accurate evaluation and efficient treatment planning. The hospital caters to trauma cases, sports injuries, degenerative joint diseases, congenital deformities, and chronic orthopedic conditions. Below are some of the key services offered:'
-      bullet=''
-      bullet1='Total Knee Replacement (TKR)'
-      bullet2='Total Hip Replacement (THR)'
-      bullet3='Fracture and Trauma Care'
-      bullet4='Arthroscopy and Sports Injury Treatment'
-      bullet5='Spine Surgery and Deformity Correction'
-      bullet6='Joint Preservation Procedures'
-      bullet7='Shoulder and Elbow Surgeries'
-      bullet8='Pediatric Orthopedic Surgery'
+      bullet='OPDs'
+      bullet1='1) CONSULTATION'
+      bullet2='2) RADIOGRAPHY'
+      bullet3='3) MRI'
+      bullet4='4) CT SCAN'
+               ipd="IPDs"
+      detail1='1) FRACTURE'
+      detail2='2) ARTHOSCOPY SURGERY'
+      detail3="3) SPINE SURGERY"
       choose='Shree Saibaba Multispeciality Hospital is a trusted destination for orthopedic care in Nashik, known for delivering precise, patient-focused, and technology-driven treatment. Our expert team of orthopedic surgeons and physiotherapists works collaboratively to ensure each patient receives a personalized treatment plan aimed at restoring movement and enhancing life quality. With advanced surgical techniques, post-operative rehab support, and round-the-clock trauma services, we are committed to achieving the best possible outcomes. Patients choose us for our clinical expertise, compassionate care, and a proven track record in treating both common and complex orthopedic conditions with excellence.'
       />
     </div>

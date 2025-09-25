@@ -25,16 +25,11 @@ description2 = 'Shree Saibaba Multispeciality Hospital stands as the leading pul
 
 description3 = 'This top pulmonology hospital in Nashik is fully equipped with advanced diagnostic and therapeutic facilities, including in-house imaging, pulmonary function labs, and critical care units. Below are some of the advanced pulmonology services offered:'
 
-bullet = ''
-bullet1 = 'Comprehensive Asthma and Allergy Management'
-bullet2 = 'COPD and Chronic Bronchitis Treatment'
-bullet3 = 'Sleep Apnea Evaluation and Therapy'
-bullet4 = 'Interstitial Lung Disease (ILD) Management'
-bullet5 = 'Pulmonary Hypertension Treatment'
-bullet6 = 'Bronchoscopy and Lung Biopsy Procedures'
-bullet7 = 'Treatment for Pneumonia, Tuberculosis, and Other Respiratory Infections'
-bullet8 = 'Advanced Respiratory and Critical Care Support'
+bullet = 'OPDs'
+bullet1 = '1) CONSULTATION'
 
+ipd="IPDs"
+detail1="1) TREATMENT OF ALL RESIRATORY DISORDER"
 choose = 'Shree Saibaba Multispeciality Hospital is widely recognized as a premier destination for respiratory and lung care in Nashik, offering a seamless blend of advanced technology, experienced pulmonologists, and patient-centered treatment. Our expert team provides everything from preventive care and early disease detection to advanced therapies and critical care management. With fully integrated diagnostic and treatment facilities, including 24/7 emergency and intensive care support, we ensure rapid, precise, and effective management of all respiratory conditions. Patients trust us for our clinical excellence, ethical medical practices, and unwavering commitment to helping them breathe easier and live healthier lives.'
 
 

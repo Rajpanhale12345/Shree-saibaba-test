@@ -69,3 +69,15 @@ html, body, #root { width: 100%; min-height: 100%; }
 @media (prefers-reduced-motion: reduce){
   .navbar__links--mobile, .bar { transition: none !important; }
 }
+/* Normal links */
+.navbar__links a {
+  text-decoration: none;
+  color: black;   /* default color */
+  transition: color 0.3s ease;
+}
+
+/* Active link */
+.navbar__links a.active {
+  color: #2e3191;    /* highlight current page */
+  font-weight: bold; /* optional */
+}

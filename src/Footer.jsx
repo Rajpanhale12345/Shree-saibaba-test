@@ -12,7 +12,7 @@ const Footer = () => {
 
         {/* Logo + Address */}
         <div className="footer-logo">
-          <img src={logo} alt="Shree Saibaba Logo" />
+        <Link to="/">  <img src={logo} alt="Shree Saibaba Logo" /></Link>
           <p>
             Shree Saibaba Heart Institute & Multispeciality Hospital, <br />
             Opp. Wani House, Mumbai Naka, Mirajkar Nagar, <br />

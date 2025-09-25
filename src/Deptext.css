@@ -79,16 +79,9 @@ body { margin: 0; color: var(--text-color); }
 }
 
 /* ----- Framed container ----- */
-.border1{
-  border: 2px solid var(--brand-blue);
-  border-bottom-width: 8px;       /* keeps your accent base */
-  border-radius: 30px;            /* will be adjusted on small screens below */
-  padding: var(--space-2);
-  margin: var(--space-2) auto;
-  max-width: 100%;
-}
 
-/* ----- Small screens: tighten spacing and borders if needed ----- */
+
+
 @media (max-width: 480px){
   .border1{
     border-width: 1px;
@@ -96,7 +89,13 @@ body { margin: 0; color: var(--text-color); }
     border-radius: 20px;
     padding: var(--space-1);
   }
-
+.border2{
+   border-width: 1px;
+    border-bottom-width: 6px;
+    border-radius: 20px;
+    padding: var(--space-1);
+    max-width: 100%;
+}
   /* Let the image breathe on very narrow viewports */
   .imagedep{
     width: min(260px, 92vw);
