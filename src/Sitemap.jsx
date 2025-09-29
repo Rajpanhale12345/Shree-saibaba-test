@@ -75,7 +75,7 @@ export default function SitemapKimsTwoRows() {
           </ul>
         </section>
 
-        <section style={styles.col}>
+        {/* <section style={styles.col}>
           <h2 style={styles.h2}>Doctors</h2>
           <ul style={styles.ul}>
             <Link></Link>
@@ -83,7 +83,7 @@ export default function SitemapKimsTwoRows() {
             <Link></Link>
             <Link></Link>            
           </ul>
-        </section>
+        </section> */}
 
         <section style={styles.col}>
           <h2 style={styles.h2}>Departments</h2>
@@ -99,18 +99,11 @@ export default function SitemapKimsTwoRows() {
         </section>
 
         <section style={styles.col}>
-          <h2 style={styles.h2}>Medical Check Up</h2>
+          <h2 style={styles.h2}>Packages</h2>
           <ul style={styles.ul}>
-            <Link to="">Cardiology</Link>
-            <Link to="">Urology</Link>
-            <Link to="">Neurology</Link>
-            <Link to="">Radiology</Link>
-            <Link to="">Orthopedic</Link>
-            <Link to="">Interventional Radiology</Link>
-            <Link to="">Neurosurgery Spine Surgery</Link>            
+            <Link to="">Cardiac Check up</Link>   
           </ul>
         </section>
-
         <section style={styles.col}>
           <h2 style={styles.h2}>Testimonials</h2>
           <ul style={styles.ul}>
@@ -121,7 +114,9 @@ export default function SitemapKimsTwoRows() {
         <section style={styles.col}>
           <h2 style={styles.h2}>Blogs</h2>
           <ul style={styles.ul}>
-            
+              <Link to="/Cardio">Pacemaker Care</Link>
+            <Link to="/kidney">Kidney Stone</Link>
+            <Link to="/spine">Spine Health</Link>
           </ul>
         </section>
 

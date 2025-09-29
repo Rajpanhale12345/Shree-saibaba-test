@@ -52,7 +52,7 @@ function Medical() {
           text='A cardiac check-up is a focused but comprehensive evaluation of your heart and blood-vessel health.
 It goes beyond a routine full-body assessment by concentrating on risk factors, early signs of heart disease, and the efficiency of your cardiovascular system.'
           share='Book an appointment'
-          learn={<Link to='/fullbodycheckup'>Learn More</Link>}
+          // learn={<Link to='/fullbodycheckup' style={{cursor : "not-allowed"}}>Learn More</Link>}
         />
         {/* <Checkup
     image={stress}

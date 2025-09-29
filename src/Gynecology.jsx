@@ -26,15 +26,15 @@ description2 = 'Shree Saibaba Multispeciality Hospital stands as the leading Gyn
 
 description3 = 'This top Gynaecology hospital in Nashik is fully equipped with modern in-house diagnostic and imaging facilities, ensuring accurate evaluation and timely treatment. Below are some of the key gynecological services offered:'
 
-bullet = ''
-bullet1 = 'Comprehensive Prenatal and Antenatal Care'
-bullet2 = 'Normal and High-Risk Pregnancy Management'
-bullet3 = 'Laparoscopic and Minimally Invasive Gynecological Surgery'
-bullet4 = 'Infertility Evaluation and Treatment'
-bullet5 = 'Menstrual Disorder and PCOS Management'
-bullet6 = 'Menopause and Hormonal Health Care'
-bullet7 = 'Uterine Fibroid and Ovarian Cyst Treatment'
-bullet8 = 'Preventive Women’s Health Screenings (Pap Smear, Cancer Screening)'
+bullet='Common precautions of Gynaecology'
+bullet1='1) Take prescribed medicines on time.'
+bullet2='2) Attend all scheduled checkups and scans.'
+bullet3='3) Maintain hygiene, especially after procedures.'
+bullet4='4) Avoid heavy lifting or strenuous activity if advised.'
+bullet5='5) Follow dietary and lifestyle recommendations.'
+bullet6='6) Report unusual bleeding, pain, or discharge immediately.'
+bullet7='7) Limit alcohol, smoking, and unhealthy habits.'
+
 
 choose = 'Shree Saibaba Multispeciality Hospital is widely recognized as a premier destination for women’s health and Gynaecology in Nashik, offering a perfect blend of advanced technology, highly skilled specialists, and patient-centered care. Our expert team provides complete care—from routine gynecological check-ups and safe deliveries to complex fertility treatments and advanced minimally invasive surgeries. With fully integrated diagnostic, maternity, and surgical services under one roof, along with 24/7 emergency care, we ensure a safe, comfortable, and holistic experience for every woman. Patients trust us for our clinical excellence, ethical practices, and unwavering dedication to women’s health and well-being.'
 
