@@ -68,3 +68,15 @@ h1{
   font-size: 35px;
   font-weight: 500;
 }
+
+
+.contact-form textarea {
+  padding: 8px 14px;
+  font-size: 14px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  outline: none;
+  transition: 0.3s ease;
+  background: white;
+  color: black;
+}

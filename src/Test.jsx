@@ -206,7 +206,7 @@ export default function Test({ testimonials }) {
       @media (min-width: 640px) {
         .arrow-desktop { display: inline-flex !important; }
       }
-    `;
+    `;  
     document.head.appendChild(style);
     return () => document.head.removeChild(style);
   }, []);
@@ -318,24 +318,7 @@ export default function Test({ testimonials }) {
 
         {/* Mobile controls */}
         <div style={{ display: "flex", gap: 8, padding: 8 }}>
-          <button
-            type="button"
-            aria-label="Scroll testimonials left"
-            onClick={() => scrollByCards(-1)}
-            style={mobileBtnStyle}
-            disabled={!canScrollLeft}
-          >
-            ‹
-          </button>
-          <button
-            type="button"
-            aria-label="Scroll testimonials right"
-            onClick={() => scrollByCards(1)}
-            style={mobileBtnStyle}
-            disabled={!canScrollRight}
-          >
-            ›
-          </button>
+         <br /><br />
         </div>
       </div>
     </section>

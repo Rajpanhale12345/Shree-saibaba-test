@@ -6,6 +6,7 @@ import { Helmet } from 'react-helmet';
 const tests = [
   "2D Echocardiography (Screening)",
   "ECG",
+  "Stress Test",
   "X-Ray Chest (Screening)",
   "USG Abdomen (Screening)",
   "Lipid Profile",
@@ -17,7 +18,9 @@ const tests = [
   "Physician Check-up",
   "Body Mass Index (BMI)",
   "Thyroid Function Test (T3, T4, TSH)",
-  "HbA1c (3-month Average Blood Sugar)",
+  "Eye-Check up",
+  "Dental Check up",
+
 ];
 
 function CheckIcon({ className }) {
@@ -64,7 +67,7 @@ function CheckIcon({ className }) {
  */
 export default function FullBodyCheckup({
   clinicName = "Shree Saibaba Heart Institute and Research Center",
-  packageName = "Cardiac Checkup",
+  packageName = "Full body Checkup",
   subtitle = "A comprehensive preventive package for early detection & peace of mind.",
   price,
   note = "",

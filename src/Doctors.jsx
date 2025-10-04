@@ -33,6 +33,14 @@ const specialties = [
       { name: "DR. GAURAV KULSHRESTHA", degree: "MBBS, MS" }
     ]
   },
+   {
+    name: "CVTS",
+    color: "#0a9396",
+    doctors: [
+      { name: "DR. Kishor Deore", degree: "MBBS, MS, MCh" },
+    
+    ]
+  },
   {
     name: "Radiology",
     color: "#0a9396",
@@ -71,9 +79,7 @@ const specialties = [
   { name: "General Surgery", color: "#0a9396", doctors: [{ name: "DR. AMIT KELE", degree: "MBBS, DNB" }] },
   { name: "Dentist", color: "#0a9396", doctors: [{ name: "DR. AMIT BORSE", degree: "BDS" }] },
   { name: "Ophthalmologist", color: "#0a9396", doctors: [{ name: "DR. MANJIRI LELE", degree: "MBBS, MS" }] },
-  { name: "Gynecologist", color: "#0a9396", doctors: [{ name: "DR. FORAM PARIKH", degree: "MBBS, MD" }] },
   { name: "Neurologist", color: "#0a9396", doctors: [{ name: "DR. RAHUL NAIK", degree: "MBBS, DM" }] },
-  { name: "Cardiovascular Thoracic Surgery", color: "#0a9396", doctors: [{ name: "DR. KISHOR DEORE", degree: "MBBS, MS, MCh" }] }
 ];
 
 // ——— helpers ———
@@ -152,6 +158,7 @@ const Doctors = () => {
             className={view === "specialty" ? "active" : ""}
             onClick={() => setView("specialty")}
             aria-pressed={view === "specialty"}
+            style={{color : "black"}}
           >
             By Specialty
           </button>
@@ -159,6 +166,7 @@ const Doctors = () => {
             className={view === "directory" ? "active" : ""}
             onClick={() => setView("directory")}
             aria-pressed={view === "directory"}
+            style={{color : "black"}}
           >
             A–Z Directory
           </button>

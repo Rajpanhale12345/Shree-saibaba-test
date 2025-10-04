@@ -59,7 +59,7 @@ function Contact() {
         🚑 <span style={{ color: 'blue' }}>Cardiac Ambulance</span> : <a href="tel:9158887554">9158887554</a>
         <br /><br />
         
-        🚨 <span style={{ color: 'blue' }}>Emergency Care</span> : <a href="tel:9158880987">9158880987</a> / <a href="tel:8767021810">8767021810</a>
+        🚨 <span style={{ color: 'blue' }}>Emergency Care</span> : <a href="tel:7041704114">7041704114</a> / <a href="tel:9158887554">9158887554</a>
         <br /><br />
         
         ☎️ <span style={{ color: 'blue' }}>Landline No</span> : <a href="tel:02532507001">0253 250 7001</a> <br /><br />

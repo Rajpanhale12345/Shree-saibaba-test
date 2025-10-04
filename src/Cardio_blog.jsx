@@ -1,6 +1,6 @@
 import React from 'react';
 import Cardio from './Images/Cardio_blog.jpg';
-import './Kidney.css'; // reuse the same stylesheet
+import './cardio_blog.css'; // reuse the same stylesheet
 import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import { Helmet } from 'react-helmet';

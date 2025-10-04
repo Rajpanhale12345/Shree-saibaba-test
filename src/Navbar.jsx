@@ -53,8 +53,8 @@ const Navbar = () => {
         <li><NavLink to="/medical">Packages</NavLink></li>
         <li><NavLink to="/testimonials">Testimonials</NavLink></li>
         <li><NavLink to="/blogs">Blogs</NavLink></li>
-         <li><NavLink to="/blogs">Facilities</NavLink></li>
-          <li><NavLink to="/blogs">Tie-ups</NavLink></li>
+         {/* <li><NavLink to="/blogs">Facilities</NavLink></li> */}
+          <li><NavLink to="/tieups">Tie-ups</NavLink></li>
         <li><NavLink to="/contact">Contact</NavLink></li>
       </ul>
     </nav>

@@ -52,7 +52,7 @@ const opdData = [
   },
   {
     department: "UROSURGEON",
-    doctors: [{ name: "DR. AMEY PATIL", timing: "2.00 pm to 4.00 pm" }],
+    doctors: [{ name: "DR. AMEY PATIL", timing: "12.30 pm to 1.30 pm" }],
   },
   {
     department: "NEPHROLOGIST",
@@ -61,8 +61,8 @@ const opdData = [
   {
     department: "GASTROENTROLOGY",
     doctors: [
-      { name: "DR. MAHESH PATIL", timing: "On Call" },
-      { name: "DR. MAHESH PATIL", timing: "3.00 pm to 5.00 pm" },
+      { name: "Dr. Sumit Heere", timing: "On Call" },
+      
     ],
   },
   {
@@ -109,12 +109,13 @@ const opdData = [
   },
   {
     department: "ENT",
-    doctors: [{ name: "DR. DIVYA BANGIRA (KALAL)", timing: "On Call" }],
+    doctors: [{ name: "DR. DIVYA BANGERA", timing: "On Call" }],
   },
-  {
-    department: "GYNACOLOGIST",
-    doctors: [{ name: "DR. FORAM PARIKH", timing: "11.00 TO 1.00" }],
+    {
+    department: "Anesthetic",
+    doctors: [{ name: "DR. SUMAN KESHAV", timing: "On Call" }],
   },
+  
 ];
 
 const OPD = () => {

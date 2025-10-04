@@ -30,7 +30,7 @@ import pulmonary from './Images/pulmonary.jpg';
 import liver from './Images/liver.jpg';
 import ortho from './Images/ortho.jpg';
 import { Helmet } from 'react-helmet';
-
+import cardiology from "./Images/cardiology.jpg"
 
 
 function Medical() {
@@ -52,7 +52,15 @@ function Medical() {
           text='A cardiac check-up is a focused but comprehensive evaluation of your heart and blood-vessel health.
 It goes beyond a routine full-body assessment by concentrating on risk factors, early signs of heart disease, and the efficiency of your cardiovascular system.'
           share='Book an appointment'
-          // learn={<Link to='/fullbodycheckup' style={{cursor : "not-allowed"}}>Learn More</Link>}
+          
+        />
+         <Checkup
+          image={fullbody} 
+          title='Full body Check up'
+          text='A full-body check-up is a complete health screening that evaluates all major body systems. It helps detect hidden conditions, establishes your overall health baseline, and guides preventive care, ensuring you stay ahead of potential risks.
+'
+          share='Book an appointment'
+          learn={<Link to='/fullbodycheckup' style={{}}>Learn More</Link>}
         />
         {/* <Checkup
     image={stress}
