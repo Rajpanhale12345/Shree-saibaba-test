@@ -1,6 +1,6 @@
 import React from 'react';
 import Deptext from './Deptext';
-import Ortho1 from './Images/Orthopedicdep.jpg';
+import Ortho1 from './Images/orthopedicdep.jpg';
 import { Helmet } from 'react-helmet';
 
  function Ortho() {

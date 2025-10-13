@@ -1,36 +1,36 @@
 import React from 'react'
 import Upper from './Upper';
-import Card1 from './Card1';
+// import Card1 from './Card1';
 import './Medical.css';
-import dd from './Images/2d.png'
-import BMI from './Images/BMI.png'
-import BSL from './Images/BSL.png'
-import CBC from './Images/CBC.png'
-import creatinine from './Images/creatinine.png'
-import ECG from './Images/ECG.png'
-import lipid from './Images/lipid.png'
-import physician from './Images/physician.png'
-import uric from './Images/uric.png'
-import urine from './Images/urine.png'
-import usg from './Images/usg.png'
-import xray from './Images/Xray.png'
-import thyroid from './Images/Thyroid.png'
-import hb from './Images/hb.png'
-import Stack from '@mui/material/Stack';
-import Button from '@mui/material/Button';
+// import dd from './Images/2d.png'
+// import BMI from './Images/BMI.png'
+// import BSL from './Images/BSL.png'
+// import CBC from './Images/CBC.png'
+// import creatinine from './Images/creatinine.png'
+// import ECG from './Images/ECG.png'
+// import lipid from './Images/lipid.png'
+// import physician from './Images/physician.png'
+// import uric from './Images/uric.png'
+// import urine from './Images/urine.png'
+// import usg from './Images/usg.png'
+// import xray from './Images/Xray.png'
+// import thyroid from './Images/Thyroid.png'
+// import hb from './Images/hb.png'
+// import Stack from '@mui/material/Stack';
+// import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
 import orthomed from './Images/orthomed.png'
 import Checkup from './CheckCard';
-import fullbody from './images/fullbody.jpg'
+import fullbody from './Images/fullbody.jpg'
 import { alignItems, justifyContent, justifyItems } from '@mui/system';
-import stress from './Images/stress.jpg';
-import gynac from './Images/gynac.jpg';
-import mammography from './Images/mammography.jpg';
-import pulmonary from './Images/pulmonary.jpg';
-import liver from './Images/liver.jpg';
-import ortho from './Images/ortho.jpg';
-import { Helmet } from 'react-helmet';
-import cardiology from "./Images/cardiology.jpg"
+// import stress from './Images/stress.jpg';
+// import gynac from './Images/gynac.jpg';
+// import mammography from './Images/mammography.jpg';
+// import pulmonary from './Images/pulmonary.jpg';
+// import liver from './Images/liver.jpg';
+// import ortho from './Images/ortho.jpg';
+// import { Helmet } from 'react-helmet';
+// import cardiology from "./Images/cardiology.jpg"
 
 
 function Medical() {

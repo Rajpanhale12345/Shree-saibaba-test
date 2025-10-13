@@ -1,6 +1,6 @@
 import React from 'react';
 import Deptext from './Deptext';
-import Opthamology from './Images/Optha.jpg';
+import Opthamology from './Images/optha.jpg';
 import { Helmet } from 'react-helmet';
 
  function Ophthalmology() {

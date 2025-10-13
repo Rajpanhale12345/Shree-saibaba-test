@@ -5,14 +5,14 @@ import './Departments.css';
 
 import cardio from './Images/cardiodep.jpg'
 import thoracic from './Images/thoracicdep.jpg';
-import Urology from './Images/Urologydep.jpg';
+import Urology from './Images/urologydep.jpg';
 import Neurology from './Images/Neurologydep.jpg';
 import Radiology from './Images/Radiologydep.jpg';
 import Neurosurgery from './Images/Neurosurgerydep.jpg';
-import Interventional from './Images/Interventionaldep.jpg';
-import Orthopedic from './Images/Orthodep.webp';
+import Interventional from './Images/interventionaldep.jpg';
+import Orthopedic from './Images/orthodep.webp';
 import Internal from './Images/InternalMedicine.jpg';
-import Dentistry from './Images/dentistry.jpg';
+import Dentistry from './Images/Dentistry.jpg';
 import General from './Images/GeneralSurgery.jpg';
 import plastic from './Images/plastic.jpg';
 import optha from './Images/optha.jpg';
