@@ -1,8 +1,8 @@
 import React from 'react'
 import Upper from './Upper';
-import dd from './Images/2d.png';
+
 import './Blogs.css'
-import alchohol from './Images/alchohol.png';
+
 import kidney from './Images/kidney.png';
 import spine from './Images/spine.png';
 import cardio from './Images/Cardio_blog.jpg';

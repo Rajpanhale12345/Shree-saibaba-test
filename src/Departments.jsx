@@ -15,7 +15,7 @@ import Internal from './Images/InternalMedicine.jpg';
 import Dentistry from './Images/Dentistry.jpg';
 import General from './Images/GeneralSurgery.jpg';
 import plastic from './Images/plastic.jpg';
-import optha from './Images/optha.jpg';
+
 import gastro from './Images/gastro.jpg';
 import nephrology from './Images/nephrology.jpg';
 import { Helmet } from 'react-helmet';

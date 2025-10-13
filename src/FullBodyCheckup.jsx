@@ -71,16 +71,16 @@ export default function FullBodyCheckup({
   subtitle = "A comprehensive preventive package for early detection & peace of mind.",
   price,
   note = "",
-  onBook,
+
   contact = {
     
   },
 }) {
   const handlePrint = () => window.print();
-  const handleBook = () => {
-    if (onBook) onBook();
-    else alert("Thank you! Our team will contact you shortly.");
-  };
+  // const handleBook = () => {
+  //   if (onBook) onBook();
+  //   else alert("Thank you! Our team will contact you shortly.");
+  // };
 
   return (
     <main className="fbc-page" aria-label="Full Body Health Checkup">

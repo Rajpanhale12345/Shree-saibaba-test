@@ -10,7 +10,7 @@ import spe3 from './Images/spe4.webp';
 import spe4 from './Images/spe5.webp';
 import spe5 from './Images/spe6.webp';
 import spe6 from './Images/spe7.webp';
-import spe7 from './Images/spe8.webp';
+
 import spe8 from './Images/spe9.webp';
 import spe9 from './Images/spe10.webp';
 import spe10 from './Images/spe11.webp';

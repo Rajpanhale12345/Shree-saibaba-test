@@ -34,7 +34,7 @@ import Gastroenterology from './Gastroenterology';
 import Nephrology from './Nephrology';
 import OPD from './OPD.';
 import FullBodyCheckup from './FullBodyCheckup';
-import cardio from './Cardio_blog'
+
 import { Helmet } from 'react-helmet';
 import Cardio_blog from './Cardio_blog';
 import PrivacyPolicy from './PrivacyPolicy';
@@ -45,6 +45,7 @@ import Gynecology from './Gynecology';
 import Pulmonology from './Pulmonology'
 import Facilities from './Facilities'
 import TieUps from './TieUps';
+
 
 
 
