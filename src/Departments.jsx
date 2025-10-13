@@ -12,7 +12,7 @@ import Neurosurgery from './Images/Neurosurgerydep.jpg';
 import Interventional from './Images/Interventionaldep.jpg';
 import Orthopedic from './Images/Orthodep.webp';
 import Internal from './Images/InternalMedicine.jpg';
-import Dentistry from './Images/Dentistry.jpg';
+import Dentistry from './Images/dentistry.jpg';
 import General from './Images/GeneralSurgery.jpg';
 import plastic from './Images/plastic.jpg';
 import optha from './Images/optha.jpg';

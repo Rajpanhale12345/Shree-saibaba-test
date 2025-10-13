@@ -1,6 +1,6 @@
 import React from 'react';
 import Deptext from './Deptext';
-import img from './Images/Interventionaldep.jpg';
+import img from './Images/interventionaldep.jpg';
 import { Helmet } from 'react-helmet';
 
  function InterventionalRadiology() {
