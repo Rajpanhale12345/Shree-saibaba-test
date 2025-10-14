@@ -1,7 +1,7 @@
 import React from 'react';
 import Deptext from './Deptext';
 import dentistry from './Images/Dentistry.jpg';
-import { Helmet } from 'react-helmet';
+import { Helmet } from "react-helmet-async";
 
  function Dentistry() {
   return (
@@ -9,7 +9,7 @@ import { Helmet } from 'react-helmet';
 
     
     <helmet>
-      <title>Dentistry | Saibaba Multispeciality Hospital</title>
+      <title>Dentistry | Shree Saibaba Hospital</title>
     </helmet>
 
 

@@ -1,17 +1,15 @@
 import React from 'react';
 import Deptext from './Deptext';
 import spinecare from './Images/spinecaredep.jpg';
-import { Helmet } from 'react-helmet';
+import { Helmet } from "react-helmet-async";
 
  function SpineCare() {
   return (
     <>
 
-    
-    <helmet>
-      <title>Spine Care | Saibaba Multispeciality Hospital</title>
-    </helmet>
-
+    <Helmet>
+      Spine Care | Shree Saibaba Hospital
+    </Helmet>
 
     <div>
       <Deptext 

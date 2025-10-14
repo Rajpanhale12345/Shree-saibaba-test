@@ -1,16 +1,14 @@
 import React from 'react';
 import Deptext from './Deptext';
 import nephrology from './Images/nephrology.jpg';
-import { Helmet } from 'react-helmet';
+import { Helmet } from "react-helmet-async";
 
  function Nephrology() {
   return (
     <>
-
-        
-    <helmet>
-      <title>Nephrology | Saibaba Multispeciality Hospital</title>
-    </helmet>
+    <Helmet>
+      <title>Nephrology | Shree Saibaba Hospital</title>
+    </Helmet>
 
 
     <div>

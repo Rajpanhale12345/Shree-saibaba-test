@@ -7,7 +7,7 @@ import kidney from './Images/kidney.png';
 import spine from './Images/spine.png';
 import cardio from './Images/Cardio_blog.jpg';
 import { Link } from 'react-router-dom'; 
-import { Helmet } from 'react-helmet';
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -15,11 +15,9 @@ function Blogs() {
   return (
     <>
 
-
-      <helmet>
-        <title>Blogs | Saibaba Multispeciality Hospital</title>
-      </helmet>
-
+    <Helmet>
+      <title>Blogs | Shree Saibaba Hospital</title>
+    </Helmet>
 
       <Upper
         text="Blogs" />

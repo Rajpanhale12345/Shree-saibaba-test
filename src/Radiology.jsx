@@ -1,17 +1,15 @@
 import React from 'react'
 import Deptext from './Deptext'
 import img from './Images/Radiologydep.jpg'
-import { Helmet } from 'react-helmet';
+import { Helmet } from "react-helmet-async";
 
  function Radiology() {
   return (
     <>
 
-    
-    <helmet>
-      <title>Radiology | Saibaba Multispeciality Hospital</title>
-    </helmet>
-
+    <Helmet>
+      <title>Radiology | Shree Saibaba Hospital</title>
+    </Helmet>
 
 
     <div>

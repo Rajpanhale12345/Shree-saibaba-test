@@ -1,7 +1,7 @@
 import React from "react";
 import "./FullBodyCheckup.css";
 import { Link } from "react-router-dom";
-import { Helmet } from 'react-helmet';
+import { Helmet } from "react-helmet-async";
 
 const tests = [
   "2D Echocardiography (Screening)",
@@ -28,9 +28,9 @@ function CheckIcon({ className }) {
 
     <>
 
-    <helmet>
-      <title>Full Body Checkup | Saibaba Multispeciality Hospital</title>
-    </helmet>
+    <Helmet>
+      Full Body Checkup | Shree Saibaba Hospital
+    </Helmet>
 
 
     <svg

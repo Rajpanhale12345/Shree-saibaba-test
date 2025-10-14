@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Contact.css";
-import { Helmet } from 'react-helmet';
+import { Helmet } from "react-helmet-async";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -45,7 +45,7 @@ function Contact() {
   return (
     <>
       <Helmet>
-        <title>Contact | Saibaba Multispeciality Hospital</title>
+        <title>Contact | Shree Saibaba Hospital</title>
       </Helmet>
       
       <br />

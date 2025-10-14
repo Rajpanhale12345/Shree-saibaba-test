@@ -1,71 +1,76 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Upper from './Upper';
-import './Departments.css';
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
+import Upper from "./Upper";
+import "./Departments.css";
 
-import cardio from './Images/cardiodep.jpg'
-import thoracic from './Images/thoracicdep.jpg';
-import Urology from './Images/urologydep.jpg';
-import Neurology from './Images/Neurologydep.jpg';
-import Radiology from './Images/Radiologydep.jpg';
-import Neurosurgery from './Images/Neurosurgerydep.jpg';
-import Interventional from './Images/interventionaldep.jpg';
-import Orthopedic from './Images/orthodep.webp';
-import Internal from './Images/InternalMedicine.jpg';
-import Dentistry from './Images/Dentistry.jpg';
-import General from './Images/GeneralSurgery.jpg';
-import plastic from './Images/plastic.jpg';
-import optha from './Images/optha.jpg';
-import gastro from './Images/gastro.jpg';
-import nephrology from './Images/nephrology.jpg';
-import { Helmet } from 'react-helmet';
-import generalmedicine from './Images/generalmedicinedep.webp'
-import spinecare from './Images/spinecaredep.jpg';
-import gynacology from './Images/gynacdep.webp'
-import pulmonology from './Images/pulmonologydep.webp'
+import cardio from "./Images/cardiodep.jpg";
+import thoracic from "./Images/thoracicdep.jpg";
+import urologyImg from "./Images/urologydep.jpg";
+import neurologyImg from "./Images/Neurologydep.jpg";
+import radiologyImg from "./Images/Radiologydep.jpg";
+import neurosurgeryImg from "./Images/Neurosurgerydep.jpg";
+import interventionalImg from "./Images/interventionaldep.jpg";
+import orthopedicImg from "./Images/orthodep.webp";
+import internalImg from "./Images/InternalMedicine.jpg";
+import dentistryImg from "./Images/Dentistry.jpg";
+import generalSurgeryImg from "./Images/GeneralSurgery.jpg";
+import plasticImg from "./Images/plastic.jpg";
+import optha from "./Images/optha.jpg";
+import gastroImg from "./Images/gastro.jpg";
+import nephrologyImg from "./Images/nephrology.jpg";
+import generalmedicine from "./Images/generalmedicinedep.webp";
+import spinecareImg from "./Images/spinecaredep.jpg";
+import gynacologyImg from "./Images/gynacdep.webp";
+import pulmonologyImg from "./Images/pulmonologydep.webp";
+
+import { Helmet } from "react-helmet-async";
 
 function Departments() {
+  const { pathname } = useLocation();
+  const canonical = `https://www.your-domain.com${pathname}`;
+
   const departments = [
-    { to: '/Cardiology', label: 'Cardiology', src: cardio },
-    { to: '/CardioVascular', label: 'Cardio Thoracic', src: thoracic },
-    { to: '/neurology', label: 'Neurology', src: Neurology },
-    { to: '/SpineCare', label: 'Spine Care', src: spinecare },
-    { to: '/Ortho', label: 'Orthopaedic', src: Orthopedic },
-    { to: '/nephrology', label: 'Nephrology', src: nephrology },
-    { to: '/urology', label: 'Urology', src: Urology },
-    { to: '/generalmedicine', label: 'General Medicine', src: generalmedicine },
-    { to: '/GeneralSurgery', label: 'General Surgery', src: General },
-    { to: '/Gastroenterology', label: 'Gastroenterology', src: gastro },
-    { to: '/PlasticSurgery', label: 'Plastic Surgery', src: plastic },
-    { to: '/Gynaecology', label: 'Gynacology', src: gynacology },
-    { to: '/radiology', label: 'Radiology', src: Radiology },
-    { to: '/interventionalradiology', label: 'Interventional Radiology', src: Interventional },
-    { to: '/neurosurgery', label: 'Neurosurgery', src: Neurosurgery },
-    { to: '/pulmonology', label: 'Pulmonology', src: pulmonology },
-    { to: '/Dentistry', label: 'Dentistry', src: Dentistry },
+    { to: "/cardiology", label: "Cardiology", src: cardio },
+    { to: "/cardiovascular", label: "Cardio Thoracic", src: thoracic },
+    { to: "/neurology", label: "Neurology", src: neurologyImg },
+    { to: "/spinecare", label: "Spine Care", src: spinecareImg },
+    { to: "/ortho", label: "Orthopaedic", src: orthopedicImg },
+    { to: "/nephrology", label: "Nephrology", src: nephrologyImg },
+    { to: "/urology", label: "Urology", src: urologyImg },
+    { to: "/generalmedicine", label: "General Medicine", src: generalmedicine },
+    { to: "/generalsurgery", label: "General Surgery", src: generalSurgeryImg },
+    { to: "/gastroenterology", label: "Gastroenterology", src: gastroImg },
+    { to: "/plasticsurgery", label: "Plastic Surgery", src: plasticImg },
+    { to: "/gynaecology", label: "Gynaecology", src: gynacologyImg },
+    { to: "/radiology", label: "Radiology", src: radiologyImg },
+    { to: "/interventionalradiology", label: "Interventional Radiology", src: interventionalImg },
+    { to: "/neurosurgery", label: "Neurosurgery", src: neurosurgeryImg },
+    { to: "/pulmonology", label: "Pulmonology", src: pulmonologyImg },
+    { to: "/dentistry", label: "Dentistry", src: dentistryImg },
   ];
 
   return (
     <>
-
-      <helmet>
-        <title>Department | Shree Saibaba Hospital</title>
-      </helmet>
-
-
+      <Helmet>
+        <title>Departments | Shree Saibaba Multispeciality Hospital, Nashik</title>
+        <meta
+          name="description"
+          content="Explore departments: Cardiology, Neurology, Cardiothoracic Surgery, Nephrology, Radiology, Spine Care, General Medicine, Dentistry and more."
+        />
+        <link rel="canonical" href={canonical} />
+        <meta property="og:title" content="Departments | Shree Saibaba Hospital" />
+        <meta property="og:description" content="Explore our specialties and expert teams." />
+        <meta property="og:url" content={canonical} />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
 
       <Upper text="Departments" />
 
       <div className="departments-wrap">
         <div className="departments-grid">
           {departments.map((d, i) => (
-            <Link
-              to={d.to}
-              className="dep-card"
-              key={`${d.label}-${i}`}
-              aria-label={`${d.label} — read more`}
-            >
-              <img src={d.src} alt={d.label} loading="lazy" />
+            <Link to={d.to} className="dep-card" key={`${d.label}-${i}`} aria-label={`${d.label} — read more`}>
+              <img src={d.src} alt={`${d.label} department`} loading="lazy" />
               <div className="dep-overlay" aria-hidden="true">
                 <span className="dep-overlay-text">Read more</span>
               </div>

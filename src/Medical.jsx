@@ -29,7 +29,7 @@ import { alignItems, justifyContent, justifyItems } from '@mui/system';
 // import pulmonary from './Images/pulmonary.jpg';
 // import liver from './Images/liver.jpg';
 // import ortho from './Images/ortho.jpg';
-// import { Helmet } from 'react-helmet';
+import { Helmet } from "react-helmet-async";
 // import cardiology from "./Images/cardiology.jpg"
 
 
@@ -37,11 +37,9 @@ function Medical() {
   return (
     <>
 
-
-      <helmet>
-        <title>Speciality | Saibaba Multispeciality Hospital</title>
-      </helmet>
-
+    <Helmet>
+      <title>Packeges | Shree Saibaba Hospital</title>
+    </Helmet>
 
       <Upper
         text="Preventive Health Packages" /><br />

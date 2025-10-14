@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Upper from './Upper';
 import './PressReleases.css';
-import './ImageModal.css'; 
+import './ImageModal.css';
 import article1 from './Images/golden_framed_article01.png'
 import article2 from './Images/golden_framed_article02.png'
 import article6 from './Images/golden_framed_article6.png'
@@ -29,7 +29,7 @@ import article27 from './Images/golden_framed_article27.png'
 import article28 from './Images/golden_framed_article28.png'
 import article29 from './Images/golden_framed_article29.png'
 import article30 from './Images/golden_framed_article30.png'
-import { Helmet } from 'react-helmet';
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -47,15 +47,14 @@ function PressReleases() {
     return (
         <>
 
-        
-    <helmet>
-      <title>Press Releases | Saibaba Multispeciality Hospital</title>
-    </helmet>
+            <Helmet>
+                <title>Press Releases | Shree Saibaba Hospital</title>
+            </Helmet>
 
 
             <Upper text="Media" classname="upper" />
             <br /><br />
-            <h2 className='pioneer'><i style={{color : 'blue'}}>Pioneering change, setting the pace.⚡</i></h2><br /><br />
+            <h2 className='pioneer'><i style={{ color: 'blue' }}>Pioneering change, setting the pace.⚡</i></h2><br /><br />
             <h3 className='description'><i>In this press release, we reveal the next evolution of our journey. A step designed to meet the demands of tomorrow while delivering value today. It’s not just progress, it’s intentional, focused, and bold.</i></h3>
             <br /><br /><br /><br />
 

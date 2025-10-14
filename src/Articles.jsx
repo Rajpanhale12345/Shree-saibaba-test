@@ -1,13 +1,13 @@
 import React from 'react' 
-import { Helmet } from 'react-helmet';
+import { Helmet } from "react-helmet-async";
 
  function Articles() {
   return (
     <>
 
-    <helmet>
-      <title>Article | Saibaba Multispeciality Hospital</title>
-    </helmet>
+    <Helmet>
+      <title>Article | Shree Saibaba Hospital</title>
+    </Helmet>
 
 
     <div>

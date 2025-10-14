@@ -3,7 +3,7 @@ import spinemain from './Images/spinemain.jpg';
 import './spine.css';
 import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
-import { Helmet } from 'react-helmet';
+import { Helmet } from "react-helmet-async";
 
 export default function Spine() {
    const otherBlogs = [
@@ -24,7 +24,7 @@ export default function Spine() {
   return (
     <>
       <Helmet>
-        <title>Spine Health Blog | Saibaba Multispeciality Hospital</title>
+        <title>Spine Health Blog | Shree Saibaba Hospital</title>
         <meta
           name="description"
           content="Learn how sitting affects your spine and practical steps to protect your back at work and home. Tips from Saibaba Multispeciality Hospital."

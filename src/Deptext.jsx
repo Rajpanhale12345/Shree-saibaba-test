@@ -3,7 +3,7 @@ import './Deptext.css';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet';
+import { Helmet } from "react-helmet-async";
 
 function Deptext({ image, title, subtitle, description, description1, description2, description3, bullet, bullet1, bullet2, bullet3, bullet4, bullet5, bullet6, bullet7, bullet8, choose, ipd, detail1, detail2, detail3, detail4, detail5, detail6, detail7 }) {
   return (

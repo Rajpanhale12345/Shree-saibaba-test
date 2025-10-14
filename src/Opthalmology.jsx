@@ -1,18 +1,15 @@
 import React from 'react';
 import Deptext from './Deptext';
 import Opthamology from './Images/optha.jpg';
-import { Helmet } from 'react-helmet';
+import { Helmet } from "react-helmet-async";
 
  function Ophthalmology() {
   return (
     <>
 
-    
-    <helmet>
-      <title>Opthalmology | Saibaba Multispeciality Hospital</title>
-    </helmet>
-
-
+    <Helmet>
+      <title>Opthalmology | Shree Saibaba Hospital</title>
+    </Helmet>
 
     <div>
       <Deptext 

@@ -1,11 +1,15 @@
 import React from 'react'
+import { Helmet } from "react-helmet-async";
 
 const TermsAndConditions = () => {
 return (
     <>  
-     <helmet>
-      <title>Terms and Conditions | Saibaba Multispeciality Hospital</title>
-    </helmet>
+
+    <Helmet>
+        Terms & Conditions | Shree Saibaba Hospital
+    </Helmet>
+
+    
       <div style={{ maxWidth: 800, margin: "40px auto", padding: "32px", background: "#fff", borderRadius: 12, boxShadow: "0 2px 16px rgba(0,0,0,0.08)" }}>
         <h1 style={{ fontSize: "2rem", fontWeight: 700, marginBottom: 8, color: "blue" }}>
             Terms and Conditions
