@@ -5,7 +5,7 @@ import './Departments.css';
 
 import cardio from './Images/cardiodep.jpg'
 import thoracic from './Images/thoracicdep.jpg';
-import Urology from './Images/Urologydep.jpg';
+import Urology from './Images/urologydep.jpg';
 import Neurology from './Images/Neurologydep.jpg';
 import Radiology from './Images/Radiologydep.jpg';
 import Neurosurgery from './Images/Neurosurgerydep.jpg';
