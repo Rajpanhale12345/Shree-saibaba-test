@@ -28,7 +28,7 @@ description3 = 'This top pulmonology hospital in Nashik is fully equipped with a
 bullet = 'OPDs'
 bullet1 = '1) CONSULTATION'
 
-ipd="IPDs"
+ipd="IPD"
 detail1="1) TREATMENT OF ALL RESIRATORY DISORDER"
 choose = 'Shree Saibaba Multispeciality Hospital is widely recognized as a premier destination for respiratory and lung care in Nashik, offering a seamless blend of advanced technology, experienced pulmonologists, and patient-centered treatment. Our expert team provides everything from preventive care and early disease detection to advanced therapies and critical care management. With fully integrated diagnostic and treatment facilities, including 24/7 emergency and intensive care support, we ensure rapid, precise, and effective management of all respiratory conditions. Patients trust us for our clinical excellence, ethical medical practices, and unwavering commitment to helping them breathe easier and live healthier lives.'
 
