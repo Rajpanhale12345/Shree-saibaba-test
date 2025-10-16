@@ -3,7 +3,7 @@ import Cardio from './Images/Cardio_blog.jpg';
 import './cardio_blog.css'; // reuse the same stylesheet
 import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
-import { Helmet } from 'react-helmet';
+import { Helmet } from "react-helmet-async";
 
 function Cardio_blog() {
   const otherBlogs = [
@@ -27,7 +27,7 @@ function Cardio_blog() {
   return (
     <>
       <Helmet>
-        <title>Cardiology Blog | Pacemaker Care</title>
+        <title>Cardiology Blog |  Shree Saibaba Hospital</title>
         <meta
           name="description"
           content="Pacemaker care: what it is, surgery and recovery, daily life, follow-ups, longevity, and common myths—by Saibaba Heart Institute."

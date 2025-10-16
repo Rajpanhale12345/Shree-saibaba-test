@@ -1,16 +1,16 @@
 import React from 'react';
 import Deptext from './Deptext';
 import Neuro1 from './Images/Neurologydep.jpg';
-import { Helmet } from 'react-helmet';
+import { Helmet } from "react-helmet-async";
 
  function Neurology() {
   return (
     <>
-    <helmet>
-      <title>Neurology | Saibaba Multispeciality Hospital</title>
-    </helmet>
 
-
+    <Helmet>
+      <title>Neurology | Shree Saibaba Hospital</title>
+    </Helmet>
+  
     <div>
       <Deptext 
       image={Neuro1}

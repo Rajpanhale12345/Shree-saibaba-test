@@ -1,7 +1,7 @@
 import React from 'react';
 import Deptext from './Deptext';
 import Vascular from './Images/thoracicdep.jpg';
-import { Helmet } from 'react-helmet';
+import { Helmet } from "react-helmet-async";
 
 
  function CardioVascular() {
@@ -10,7 +10,7 @@ import { Helmet } from 'react-helmet';
 
     
     <helmet>
-      <title>Cardio Vascular | Saibaba Multispeciality Hospital</title>
+      <title>Cardio Vascular | Shree Saibaba Hospital</title>
     </helmet>
 
 

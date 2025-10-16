@@ -1,11 +1,14 @@
-import React from "react";                  // ✅ make sure this is here
+import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
-import { Helmet } from 'react-helmet';
-import '@fortawesome/fontawesome-free/css/all.min.css'
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import { HelmetProvider } from "react-helmet-async";
+
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>   {/* requires React */}
-    <App />
-  </React.StrictMode>
+  <HelmetProvider>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </HelmetProvider>
 );

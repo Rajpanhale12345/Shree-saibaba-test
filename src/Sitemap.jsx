@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Upper from "./Upper";
-import { Helmet } from 'react-helmet';
+import { Helmet } from "react-helmet-async";
 
 export default function SitemapKimsTwoRows() {
   const styles = {
@@ -27,10 +27,9 @@ export default function SitemapKimsTwoRows() {
 
 <>
 
-
-    <helmet>
-      <title>Sitemap | Saibaba Multispeciality Hospital</title>
-    </helmet>    
+<Helmet>
+  Sitemap | Shree Saibaba Hospital
+</Helmet>
     
 
       <li style={styles.li}>

@@ -3,7 +3,7 @@ import kidneymid from './Images/kidneymid.png';
 import './Kidney.css';
 import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
-import { Helmet } from 'react-helmet';
+import { Helmet } from "react-helmet-async";
 
 function Kidney() {
   const otherBlogs = [
@@ -26,7 +26,7 @@ function Kidney() {
   return (
     <>
       <Helmet>
-        <title>Kidney | Saibaba Multispeciality Hospital</title>
+        <title>Kidney | Shree Saibaba Hospital</title>
         <meta
           name="description"
           content="Understand kidney stones: causes, size, recurrence, types, prevention, and a sample diet plan. From Saibaba Multispeciality Hospital."

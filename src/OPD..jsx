@@ -1,6 +1,5 @@
 import React from "react";
 import "./OPD.css";
-import { Helmet } from 'react-helmet';
 
 const opdData = [
   {

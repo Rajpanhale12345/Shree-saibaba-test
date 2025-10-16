@@ -1,14 +1,14 @@
 import React from 'react';
 import Deptext from './Deptext';
 import pulmonology from './Images/pulmonologydep.webp';
-import { Helmet } from 'react-helmet';
+import { Helmet } from "react-helmet-async";
 
  function Pulmonology() {
   return (
     <>
 
     <Helmet>
-      <title>Pulmonology | Saibaba Multispeciality Hospital</title>
+      <title>Pulmonology | Shree Saibaba Hospital</title>
     </Helmet>
 
 
