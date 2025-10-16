@@ -16,7 +16,7 @@ const Navbar = () => {
 
       {/* Desktop links */}
       <ul className="navbar__links navbar__links--desktop">
-        <li><NavLink to="/" end>Homes</NavLink></li>
+        <li><NavLink to="/" end>Home</NavLink></li>
         <li><NavLink to="/about">About</NavLink></li>
         <li><NavLink to="/doctors">Doctors</NavLink></li>
         <li><NavLink to="/departments">Departments</NavLink></li>

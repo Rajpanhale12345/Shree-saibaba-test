@@ -27,26 +27,26 @@ import { Helmet } from "react-helmet-async";
 
 function Home() {
   const { pathname } = useLocation();
-  const canonical = `https://www.your-domain.com${pathname}`;
+  const canonical = `https://shreesaibabamultispecialityhospital.com/${pathname}`;
 
   const specialties = [
-    { src: spe2,  label: "Cardiology",               className: "cardiology",        path: "/cardiology" },
-    { src: spe13, label: "Cardio Thoracic",          className: "cvts",              path: "/cardiovascular" },
-    { src: spe4,  label: "Neurology",                className: "neurology",         path: "/neurology" },
-    { src: spe5,  label: "Spine Care",               className: "spine-care",        path: "/spinecare" },
-    { src: spe14, label: "Orthopaedic",              className: "orthopaedic",       path: "/ortho" },
-    { src: spe9,  label: "Nephrology",               className: "nephrology",        path: "/nephrology" },
-    { src: spe10, label: "Urology",                  className: "urology",           path: "/urology" },
-    { src: spe16, label: "General Medicine",         className: "general-medicine",  path: "/generalmedicine" },
-    { src: spe6,  label: "General Surgery",          className: "general-surgery",   path: "/generalsurgery" },
-    { src: spe3,  label: "Gastroenterology",         className: "gastro",            path: "/gastroenterology" },
-    { src: spe8,  label: "Plastic Surgery",          className: "plastic-surgery",   path: "/plasticsurgery" },
-    { src: spe11, label: "Gynaecology",              className: "gynaecology",       path: "/gynaecology" },
-    { src: spe18, label: "Interventional Radiology", className: "ir",                path: "/interventionalradiology" },
-    { src: spe19, label: "Radiology",                className: "radiology",         path: "/radiology" },
-    { src: spe17, label: "Neurosurgery",             className: "neurosurgery",      path: "/neurosurgery" },
-    { src: spe15, label: "Full Body Checkup",        className: "checkup",           path: "/fullbodycheckup" },
-    { src: spe1,  label: "Facilities",               className: "facilities",        path: "/facilities" },
+    { src: spe2,                className: "cardiology",        path: "/cardiology" },
+    { src: spe13,           className: "cvts",              path: "/cardiovascular" },
+    { src: spe4,                  className: "neurology",         path: "/neurology" },
+    { src: spe5,                 className: "spine-care",        path: "/spinecare" },
+    { src: spe14,               className: "orthopaedic",       path: "/ortho" },
+    { src: spe9,                 className: "nephrology",        path: "/nephrology" },
+    { src: spe10,                   className: "urology",           path: "/urology" },
+    { src: spe16,         className: "general-medicine",  path: "/generalmedicine" },
+    { src: spe6,            className: "general-surgery",   path: "/generalsurgery" },
+    { src: spe3,          className: "gastro",            path: "/gastroenterology" },
+    { src: spe8,            className: "plastic-surgery",   path: "/plasticsurgery" },
+    { src: spe11,               className: "gynaecology",       path: "/gynaecology" },
+    { src: spe18,  className: "ir",                path: "/interventionalradiology" },
+    { src: spe19,                 className: "radiology",         path: "/radiology" },
+    { src: spe17,              className: "neurosurgery",      path: "/neurosurgery" },
+    { src: spe15,         className: "checkup",           path: "/fullbodycheckup" },
+    { src: spe1,                 className: "facilities",        path: "/facilities" },
   ];
 
   const renderRow = (items) => (
@@ -99,35 +99,34 @@ function Home() {
             Your browser does not support the video tag.
           </video>
         </div>
-
+<br /><br />
         <p className="our" style={{ color: "blue", fontSize: "25px", fontWeight: 500 }}>
           Our Specialities
-        </p>
-
-        {renderRow(specialties.slice(0, 4))}
-        {renderRow(specialties.slice(4, 8))}
-        {renderRow(specialties.slice(8, 12))}
-        {renderRow(specialties.slice(12, 16))}
-
+        </p> <br /><br />
+        {renderRow(specialties.slice(0, 4))} <br />
+        {renderRow(specialties.slice(4, 8))} <br />
+        {renderRow(specialties.slice(8, 12))} <br />
+        {renderRow(specialties.slice(12, 16))} <br />
+<br />
         <Link to="/departments">
           <Button variant="contained">View all Specialities</Button>
         </Link>
-
-        <hr />
+<br /><br /><br />
+        <hr /><br />
         <h2 className="titlemed" style={{ color: "blue", fontSize: "25px", fontWeight: 500 }}>
           Take Charge of Your Health Today!
-        </h2>
+        </h2><br />
         <p className="desc">
           Book your complete health screening package now — 2D Echo, ECG, X-Ray, Ultrasound, Lipid Profile, Thyroid &amp; Diabetes tests and more.
-        </p>
+        </p><br />
 
         <Link to="/medical">
           <Button variant="contained" style={{ fontFamily: "poppins" }}>
             Book an Appointment
           </Button>
         </Link>
-
-        <hr />
+<br /><br />
+        <hr /><br /><br />
         <Test />
         <OPD />
       </div>
