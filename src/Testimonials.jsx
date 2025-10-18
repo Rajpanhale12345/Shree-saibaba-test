@@ -12,16 +12,13 @@ const Testimonials = () => {
   return (
     <>
       <Helmet>
-        <title>Testimonials | Shree Saibaba Hospital Nashik</title>
-        <meta
-          name="description"
-          content="Real patient stories and reviews about cardiology, neurology, nephrology, orthopaedics and more at Shree Saibaba Multispeciality Hospital, Nashik."
-        />
+        <title>Tearms & Condition | Shree Saibaba Multispeciality Hospital</title>
+        <meta name='description" content="Real patient stories and reviews about cardiology, neurology, nephrology, orthopaedics and more at Shree Saibaba Multispeciality Hospital, Nashik.' />
         <link rel="canonical" href={canonical} />
-        <meta property="og:title" content="Patient Testimonials | Shree Saibaba Hospital" />
-        <meta property="og:description" content="Read inspiring recovery stories from our patients." />
-        <meta property="og:url" content={canonical} />
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta property='og:title' content='Patient Testimonials | Shree Saibaba Hospital' />
+        <meta property='og:description' content='Read inspiring recovery stories from our patients.' />
+        <meta property='og:url' content={canonical} />
+        <meta name='twitter:card' content='summary_large_image' />
       </Helmet>
 
       <div>

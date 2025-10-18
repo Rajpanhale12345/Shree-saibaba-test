@@ -7,9 +7,13 @@ import { Helmet } from "react-helmet-async";
   return (
     <>
 
-    <Helmet>
-      <title>Gynaecology | Shree Saibaba Hospital</title>
-    </Helmet>
+    
+      <Helmet>
+        <title>Gynecology | Shree Saibaba Multispeciality Hospital</title>
+        <meta name='description' content='' />
+        <meta name='keywords' content='' />
+        <meta name='og:description' content='' />
+      </Helmet>
 
     
     <div>

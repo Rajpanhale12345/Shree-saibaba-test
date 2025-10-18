@@ -16,7 +16,10 @@ function About() {
     <>
 
       <Helmet>
-        <title>About | Shree Saibaba Hospital</title>
+        <title>About | Shree Saibaba Multispeciality Hospital</title>
+        <meta name='description' content=''/>
+        <meta name='keywords' content=''/>
+        <meta name='og:description' content=''/>
       </Helmet>
 
       <Upper text="About Us" />

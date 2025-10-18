@@ -3,16 +3,11 @@ import './Deptext.css';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
-import { Helmet } from "react-helmet-async";
 
 function Deptext({ image, title, subtitle, description, description1, description2, description3, bullet, bullet1, bullet2, bullet3, bullet4, bullet5, bullet6, bullet7, bullet8, choose, ipd, detail1, detail2, detail3, detail4, detail5, detail6, detail7 }) {
   return (
 
     <>
-
-      <helmet>
-        <title>Departments Text | Shree Saibaba Hospital</title>
-      </helmet>
 
 
       <div>
@@ -42,7 +37,7 @@ function Deptext({ image, title, subtitle, description, description1, descriptio
           {description3}
           <br />   <br />
           <br />
-          <h1 style={{textAlign : "left"}}>{bullet} </h1><br />
+          <h1 style={{ textAlign: "left" }}>{bullet} </h1><br />
           <i>
             <ul className='border1' style={{ textAlign: 'left' }}>
               <lil style={{ color: 'red' }} className='list'>{bullet1}</lil><br />
@@ -58,7 +53,7 @@ function Deptext({ image, title, subtitle, description, description1, descriptio
 
         </ul><br /><i>
 
-          <h1 style={{textAlign : "left"}}>{ipd} </h1><br />
+          <h1 style={{ textAlign: "left" }}>{ipd} </h1><br />
           <i>
             <ul className='border2' style={{ textAlign: 'left' }}>
               <lil style={{ color: 'red' }} className='list'>{detail1}</lil><br />

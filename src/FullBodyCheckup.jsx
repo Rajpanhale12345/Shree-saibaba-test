@@ -28,9 +28,13 @@ function CheckIcon({ className }) {
 
     <>
 
-    <Helmet>
-      Full Body Checkup | Shree Saibaba Hospital
-    </Helmet>
+    
+      <Helmet>
+        <title>Full Body Check-up | Shree Saibaba Multispeciality Hospital</title>
+        <meta name='description' content='' />
+        <meta name='keywords' content='' />
+        <meta name='og:description' content='' />
+      </Helmet>
 
 
     <svg

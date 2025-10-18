@@ -67,7 +67,10 @@ const PrivacyPolicy = () => {
 
 
       <Helmet>
-        <title>Privacy Policy | Shree Saibaba Hospital</title>
+        <title>Privacy Policy | Shree Saibaba Multispeciality Hospital</title>
+        <meta name='description' content='' />
+        <meta name='keywords' content='' />
+        <meta name='og:description' content='' />
       </Helmet>
 
 

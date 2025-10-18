@@ -8,9 +8,13 @@ import "./GeneralMedicine.css"
   return (
     <>
 
-    <Helmet>
-      <title>General Medicine | Shree Saibaba Hospital</title>
-    </Helmet>
+    
+      <Helmet>
+        <title>General Medicine | Shree Saibaba Multispeciality Hospital</title>
+        <meta name='description' content='' />
+        <meta name='keywords' content='' />
+        <meta name='og:description' content='' />
+      </Helmet>
 
     <div>
       <Deptext 

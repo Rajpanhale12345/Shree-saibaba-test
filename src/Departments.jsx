@@ -51,18 +51,18 @@ function Departments() {
 
   return (
     <>
+
       <Helmet>
-        <title>Departments | Shree Saibaba Multispeciality Hospital, Nashik</title>
-        <meta
-          name="description"
-          content="Explore departments: Cardiology, Neurology, Cardiothoracic Surgery, Nephrology, Radiology, Spine Care, General Medicine, Dentistry and more."
-        />
+        <title>Departments | Shree Saibaba Multispeciality Hospital</title>
+        <meta name="description" content="Explore departments: Cardiology, Neurology, Cardiothoracic Surgery, Nephrology, Radiology, Spine Care, General Medicine, Dentistry and more."/>
+        <meta name='keywords' content='' />
         <link rel="canonical" href={canonical} />
         <meta property="og:title" content="Departments | Shree Saibaba Hospital" />
         <meta property="og:description" content="Explore our specialties and expert teams." />
         <meta property="og:url" content={canonical} />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
+
 
       <Upper text="Departments" />
 
