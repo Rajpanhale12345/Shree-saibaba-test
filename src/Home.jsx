@@ -80,7 +80,7 @@ function Home() {
   return (
     <>
       <Helmet>
-        <title>Shree Saibaba | Best Multispecialty Hospital in Nashik</title>
+        <title>Best Multispecialty Hospital in Nashik | Shree Saibaba</title>
         <meta
           name="description"
           content="Trusted multispeciality hospital in Nashik for cardiology, neurology, nephrology, orthopaedics, radiology, spine care, general medicine and more. Book an appointment online."
