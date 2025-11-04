@@ -56,7 +56,7 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-        <p>© {new Date().getFullYear()} <Link to='https://brandbanao.ai'>BrandBanao.Ai</Link>. All Rights Reserved.</p>
+        <p>© {new Date().getFullYear()} <Link to='https://brandbanao.ai/'>BrandBanao.Ai</Link>. All Rights Reserved.</p>
       </div>
     </footer>
     </>
