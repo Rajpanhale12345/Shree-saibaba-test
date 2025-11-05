@@ -226,7 +226,7 @@ export default function Test({ testimonials }) {
           }}
         >
           <div style={{ margin: "0 auto", textAlign: "center" }}>
-            <h2 style={{ fontSize: 25, fontWeight: 600, margin: 0, color: "blue" }}>
+            <h2 style={{ fontSize: 25, fontWeight: 500, margin: 0, color: "blue" }}>
               What people are saying
             </h2>
             <p style={{ margin: "8px 0 0", color: "#6b7280" }}></p>

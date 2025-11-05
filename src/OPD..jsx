@@ -124,7 +124,7 @@ const OPD = () => {
     <>
 
     <div className="opd-container">
-      <h1 className="opd-title" style={{color:"blue"}}>OPD Doctors & Timings</h1><br />
+      <h2 className="opd-title" style={{color:"blue", fontWeight : "500", fontSize : 25}}>OPD Doctors & Timings</h2><br />
       {opdData.map((dept, index) => (
         <div key={index} className="opd-department">
           <h2 className="department-name">{dept.department}</h2>

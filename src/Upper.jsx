@@ -16,7 +16,7 @@ const Upper = ({ text }) => {
     
 
       {/* Overlay text */}
-      <div className="upper-overlay">
+      <div className="upper">
         <h1>{text}</h1>
       </div>
 <br /><br /><br /><br /><br /><br /><br />

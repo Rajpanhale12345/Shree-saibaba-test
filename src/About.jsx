@@ -52,7 +52,7 @@ function About() {
       <br /><br />
       <div className='misvis'>
         <p>
-          <span style={{ color: 'blue', fontSize: '40px' }}> <i style={{ color: 'blue' }}>Vision </i> </span> <br />
+          <span style={{ color: 'blue', fontSize: '40px' }}> <i style={{ color: 'blue' }}>Vision </i> </span> <br /><br />
           To be a Center of excellence in healthcare delivering ethical and advanced medical services to improve community.        </p>
         <img src={vision} alt="vision" />
         <h3>

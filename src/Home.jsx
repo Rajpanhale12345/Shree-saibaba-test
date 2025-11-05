@@ -115,7 +115,8 @@ function Home() {
 
         <Link to="/departments"><Button variant="contained">View all Specialities</Button></Link>
 
-        <br /><br /><hr /><br /><br /><br />
+        <br /><br /><hr />
+        <div className='book'><br /><br /><br />
 
         <h2 className="titlemed" style={{ color: 'blue', fontSize: '25px', fontWeight: 500 }}>Take Charge of Your Health Today!</h2><br />
         <p className="desc">
@@ -127,8 +128,11 @@ function Home() {
 
         <Link to="/medical"><Button variant="contained" style={{ fontFamily: 'poppins' }}>Book an Appointment</Button></Link>
 
-        <br /><br /><br /><hr /><br /><br />
-        <Test />
+        <br /><br /><br /></div><hr />  <div className='testimonials-container'><br /><br />
+      
+              <Test/>
+                  </div>
+        
         <OPD />
       </div>
     </>
