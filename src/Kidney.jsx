@@ -3,13 +3,13 @@ import kidneymid from './Images/kidneymid.png';
 import './Kidney.css';
 import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
-import { Helmet } from 'react-helmet';
+import { Helmet } from "react-helmet-async";
 
 function Kidney() {
   const otherBlogs = [
     { to: '/spine', title: 'Spine Health and Sitting', date: '11 Aug 2025', category: '🏥 Neurosurgery' },
     { to: '/Cardio', title: 'Pacemaker Care', date: '5 Sep 2025', category: '🏥Cardiology' },
-   
+
   ];
 
   const toc = [
@@ -25,13 +25,14 @@ function Kidney() {
 
   return (
     <>
+
       <Helmet>
-        <title>Kidney | Saibaba Multispeciality Hospital</title>
-        <meta
-          name="description"
-          content="Understand kidney stones: causes, size, recurrence, types, prevention, and a sample diet plan. From Saibaba Multispeciality Hospital."
-        />
+        <title>Kidney | Shree Saibaba Multispeciality Hospital</title>
+        <meta name='description' content='Understand kidney stones: causes, size, recurrence, types, prevention, and a sample diet plan. From Saibaba Multispeciality Hospital.' />
+        <meta name='keywords' content='' />
+        <meta name='og:description' content='' />
       </Helmet>
+
 
       <div className="kidney-page">
         {/* LEFT: Main article (normal page scroll) */}
@@ -40,7 +41,7 @@ function Kidney() {
 
             {/* Hero */}
             <header className="kidney-header">
-              <img src={kidneymid} alt="Kidney health illustration" className="kidney-image" />
+              <img style={{objectFit : "contain"}} src={kidneymid} alt="Kidney health illustration" className="kidney-image" />
               <div className="kidney-meta">
                 <Link to="/urology" className="kidney-category">🏥 Urology</Link>
                 <span className="kidney-date">🕗 11 August 2025</span>

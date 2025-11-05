@@ -1,16 +1,19 @@
 import React from 'react';
 import Deptext from './Deptext';
 import gastro from './Images/gastro.jpg';
-import { Helmet } from 'react-helmet';
+import { Helmet } from "react-helmet-async";
 
  function Gastroenterology() {
   return (
     <>
 
-            
-    <helmet>
-      <title>Gastroenterology | Saibaba Multispeciality Hospital</title>
-    </helmet>
+    
+      <Helmet>
+        <title>Gastroenterology | Shree Saibaba Multispeciality Hospital</title>
+        <meta name='description' content='' />
+        <meta name='keywords' content='' />
+        <meta name='og:description' content='' />
+      </Helmet>
 
 
     <div>

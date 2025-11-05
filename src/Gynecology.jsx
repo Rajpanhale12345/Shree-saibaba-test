@@ -1,18 +1,21 @@
 import React from 'react';
 import Deptext from './Deptext';
 import gynecology from './Images/gynacdep.webp';
-import { Helmet } from 'react-helmet';
+import { Helmet } from "react-helmet-async";
 
  function Gynecology() {
   return (
     <>
 
     
-    <helmet>
-      <title>Gynaecology | Saibaba Multispeciality Hospital</title>
-    </helmet>
+      <Helmet>
+        <title>Gynecology | Shree Saibaba Multispeciality Hospital</title>
+        <meta name='description' content='' />
+        <meta name='keywords' content='' />
+        <meta name='og:description' content='' />
+      </Helmet>
 
-
+    
     <div>
       <Deptext 
       image={gynecology}

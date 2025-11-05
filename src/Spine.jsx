@@ -3,11 +3,11 @@ import spinemain from './Images/spinemain.jpg';
 import './spine.css';
 import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
-import { Helmet } from 'react-helmet';
+import { Helmet } from "react-helmet-async";
 
 export default function Spine() {
-   const otherBlogs = [
- 
+  const otherBlogs = [
+
     { to: '/Cardio', title: 'Pacemaker care', date: '11 Aug 2025', category: '🏥 Cardiology' },
     { to: '/kidney', title: 'Kidney Stones', date: '11 Aug 2025', category: '🏥 Urology' },
 
@@ -23,13 +23,14 @@ export default function Spine() {
 
   return (
     <>
+
       <Helmet>
-        <title>Spine Health Blog | Saibaba Multispeciality Hospital</title>
-        <meta
-          name="description"
-          content="Learn how sitting affects your spine and practical steps to protect your back at work and home. Tips from Saibaba Multispeciality Hospital."
-        />
+        <title>Spine Blog | Shree Saibaba Multispeciality Hospital</title>
+        <meta name='description' content='Learn how sitting affects your spine and practical steps to protect your back at work and home. Tips from Saibaba Multispeciality Hospital.' />
+        <meta name='keywords' content='' />
+        <meta name='og:description' content='' />
       </Helmet>
+
 
       {/* Normal page scroll; only sidebar has its own scroll */}
       <div className="blog-page">

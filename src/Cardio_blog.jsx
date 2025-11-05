@@ -3,14 +3,14 @@ import Cardio from './Images/Cardio_blog.jpg';
 import './cardio_blog.css'; // reuse the same stylesheet
 import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
-import { Helmet } from 'react-helmet';
+import { Helmet } from "react-helmet-async";
 
 function Cardio_blog() {
   const otherBlogs = [
- 
+
     { to: '/spine', title: 'Spine Health and Sitting', date: '11 Aug 2025', category: '🏥 Neurosurgery' },
     { to: '/kidney', title: 'Kidney Stones', date: '11 Aug 2025', category: '🏥Urology' },
-   
+
   ];
 
 
@@ -26,12 +26,12 @@ function Cardio_blog() {
 
   return (
     <>
+
       <Helmet>
-        <title>Cardiology Blog | Pacemaker Care</title>
-        <meta
-          name="description"
-          content="Pacemaker care: what it is, surgery and recovery, daily life, follow-ups, longevity, and common myths—by Saibaba Heart Institute."
-        />
+        <title>Cardiology Blog | Shree Saibaba Multispeciality Hospital</title>
+        <meta name='description' content='' />
+        <meta name='keywords' content='' />
+        <meta name='og:description' content='' />
       </Helmet>
 
       <div className="kidney-page">{/* same grid as kidney page */}

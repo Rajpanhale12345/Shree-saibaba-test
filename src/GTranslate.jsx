@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { Helmet } from 'react-helmet';
+import { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 
 export default function GTranslate() {
   useEffect(() => {
@@ -23,11 +23,7 @@ export default function GTranslate() {
   return (
     <>
 
-      {/* <helmet>
-        <title>Language Translate | Shree Saibaba</title>
-      </helmet> */}
-
-
+      
       {/* Internal CSS to hide flags */}
       <style>{`
         .gtranslate_wrapper img {

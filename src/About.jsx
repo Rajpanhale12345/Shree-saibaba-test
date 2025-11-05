@@ -5,7 +5,7 @@ import mission from './Images/mission.jpg';
 import vision from "./Images/Vision.jpg";
 import founder1 from './Images/dr.pallavi.png';
 import founder2 from './Images/dr.aniruddha.png';
-import { Helmet } from 'react-helmet';
+import { Helmet } from "react-helmet-async";
 import quality from './Images/qualitypolicy.webp'
 
 
@@ -15,11 +15,12 @@ function About() {
   return (
     <>
 
-      <helmet>
-
-        <title>About | Shree Saibaba Hospital</title>
-
-      </helmet>
+      <Helmet>
+        <title>About | Shree Saibaba Multispeciality Hospital</title>
+        <meta name='description' content=''/>
+        <meta name='keywords' content=''/>
+        <meta name='og:description' content=''/>
+      </Helmet>
 
       <Upper text="About Us" />
 
