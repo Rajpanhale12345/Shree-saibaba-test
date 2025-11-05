@@ -41,7 +41,7 @@ function Kidney() {
 
             {/* Hero */}
             <header className="kidney-header">
-              <img src={kidneymid} alt="Kidney health illustration" className="kidney-image" />
+              <img style={{objectFit : "contain"}} src={kidneymid} alt="Kidney health illustration" className="kidney-image" />
               <div className="kidney-meta">
                 <Link to="/urology" className="kidney-category">🏥 Urology</Link>
                 <span className="kidney-date">🕗 11 August 2025</span>

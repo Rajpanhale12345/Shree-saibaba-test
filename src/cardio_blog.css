@@ -79,6 +79,7 @@ body {
   padding-bottom: 8px;
   border-bottom: var(--border);
   background: var(--bg);
+  object-fit: contain;
 }
 
 .kidney-image{
@@ -147,6 +148,8 @@ body {
   padding-top: 8px;
   font-size: 1.02rem;
   line-height: 1.7;
+  text-align: left;
+  padding-left: 10px;
 }
 .kidney-content h2{
   margin-top: 22px;

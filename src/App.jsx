@@ -44,6 +44,7 @@ import Gynecology from "./Gynecology";
 import Pulmonology from "./Pulmonology";
 import Facilities from "./Facilities";
 import TieUps from "./TieUps";
+import Nutrition_Sleep from "./Nutrition_blog"
 
 function App() {
   return (
@@ -95,6 +96,7 @@ function App() {
           <Route path="/pulmonology" element={<Pulmonology />} />
           <Route path="/facilities" element={<Facilities />} />
           <Route path="/tieups" element={<TieUps />} />
+          <Route path="/nutrition" element={< Nutrition_Sleep/>} />
         </Routes>
 
         <ScrollToTop />
