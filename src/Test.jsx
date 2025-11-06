@@ -1,7 +1,7 @@
 // test.jsx
 import React, { useRef, useState, useEffect, useMemo } from "react";
 import gen1 from './Images/gen1.jpg'
-import gen2 from './Images/gen1.jpg'
+
 import gen3 from './Images/gen3.jpg'
 import gen4 from './Images/gen4.jpg'
 import gen5 from './Images/gen5.jpg'
@@ -147,8 +147,8 @@ export default function Test({ testimonials }) {
 
   // ---- Scroller state ----
   const scrollerRef = useRef(null);
-  const [canScrollLeft, setCanScrollLeft] = useState(false);
-  const [canScrollRight, setCanScrollRight] = useState(false);
+  const [_canScrollLeft, setCanScrollLeft] = useState(false);
+  const [_canScrollRight, setCanScrollRight] = useState(false);
   const [cardBasisPct, setCardBasisPct] = useState(85); // responsive width per card
 
   // Responsive card width without media queries in CSS files
@@ -226,7 +226,7 @@ export default function Test({ testimonials }) {
           }}
         >
           <div style={{ margin: "0 auto", textAlign: "center" }}>
-            <h2 style={{ fontSize: 25, fontWeight: 600, margin: 0, color: "blue" }}>
+            <h2 style={{ fontSize: 25, fontWeight: 500, margin: 0, color: "blue" }}>
               What people are saying
             </h2>
             <p style={{ margin: "8px 0 0", color: "#6b7280" }}></p>
@@ -325,19 +325,19 @@ export default function Test({ testimonials }) {
   );
 }
 
-const mobileBtnStyle = {
-  height: 40,
-  width: 40,
-  borderRadius: 12,
-  background: "#fff",
-  border: "1px solid rgba(0,0,0,0.1)",
-  boxShadow: "0 6px 16px rgba(0,0,0,0.06)",
-  display: "inline-flex",
-  alignItems: "center",
-  justifyContent: "center",
-  fontSize: 20,
-  cursor: "pointer",
-};
+// const mobileBtnStyle = {
+//   height: 40,
+//   width: 40,
+//   borderRadius: 12,
+//   background: "#fff",
+//   border: "1px solid rgba(0,0,0,0.1)",
+//   boxShadow: "0 6px 16px rgba(0,0,0,0.06)",
+//   display: "inline-flex",
+//   alignItems: "center",
+//   justifyContent: "center",
+//   fontSize: 20,
+//   cursor: "pointer",
+// };
 
 // ---- Helpers ----
 function getInitials(name = "?") {

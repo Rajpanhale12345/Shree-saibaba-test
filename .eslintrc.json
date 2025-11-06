@@ -1,0 +1,32 @@
+{
+  "env": { "browser": true, "es2021": true },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings"
+  ],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "ecmaFeatures": { "jsx": true }
+  },
+  "plugins": ["react", "import", "unused-imports"],
+  "settings": {
+    "react": { "version": "detect" },
+    "import/resolver": { "node": { "extensions": [".js", ".jsx", ".json"] } }
+  },
+  "rules": {
+    "import/no-unresolved": ["error", { "caseSensitive": true }],
+
+    /* Auto-remove unused imports on --fix, warn for leftover unused vars. */
+    "unused-imports/no-unused-imports": "error",
+    "unused-imports/no-unused-vars": [
+      "warn",
+      { "vars": "all", "varsIgnorePattern": "^_", "args": "after-used", "argsIgnorePattern": "^_" }
+    ],
+
+    /* If you prefer strict errors instead of warns, change the 'warn' above to 'error'. */
+    "react/prop-types": "off"
+  }
+}

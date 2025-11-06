@@ -9,7 +9,7 @@ import Collapse from '@mui/material/Collapse';
 import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import { red } from '@mui/material/colors';
+
 import CallIcon from '@mui/icons-material/Call';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
@@ -17,7 +17,7 @@ import { Link } from 'react-router-dom';
 import './Card.css';
 
 const ExpandMore = styled((props) => {
-  const { expand, ...other } = props;
+  const { expand: _expand, ...other } = props;
   return <IconButton {...other} />;
 })(({ theme }) => ({
   marginLeft: 'auto',

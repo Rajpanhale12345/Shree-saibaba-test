@@ -19,7 +19,7 @@ import './Medical.css';
 // import Stack from '@mui/material/Stack';
 // import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
-import orthomed from './Images/orthomed.png'
+
 import Checkup from './CheckCard';
 import fullbody from './Images/fullbody.jpg'
 import { alignItems, justifyContent, justifyItems } from '@mui/system';

@@ -10,6 +10,13 @@
   margin: auto;
 }
 
+.book{
+  background: linear-gradient(90deg, rgb(148, 220, 197), white);
+}
+
+
+
+
 /* Vertical divider between items */
 .specialty > hr {
   margin: 0;

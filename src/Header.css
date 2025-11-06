@@ -1,12 +1,12 @@
 .header {
-  background-color: #e4e2f1;
+  background-color: #2F2583;
   padding: 10px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-family: Arial, sans-serif;
-  border-bottom: solid 1px rgb(180, 173, 173);
-  height: 35px;
+  border-bottom: solid 1px rgb(255, 255, 255);
+  height: 45px;
   
 }
 
@@ -17,16 +17,24 @@ color: rgb(254, 3, 3);
 
 }
 
-.social-icons a {
+.social-icons  {
   margin-left: 10px;
-  color: #333;
+  color: #ffffff;
   transition: color 0.3s ease;
   font-size: 1.2rem;
-  color: rgb(17, 128, 152);
+  color: rgb(255, 255, 255);
+  display: flex;
+}
+.social-icons i:hover {
+ 
+ 
+  transition: color 0.3s ease;
+  font-size: 1.2rem;
+  color: rgb(64, 151, 218);
 }
 
 .social-icons a:hover {
-  color: #007bff;
+  color: #ffffff;
 }
 @media (max-width: 768px) {
   .header {
@@ -43,4 +51,9 @@ color: rgb(254, 3, 3);
     margin-top: 10px;
     display: none;
   } 
+  .appointment{
+  margin-left: 26px;
+  justify-content: center;
+  justify-items: center;
+}
 }

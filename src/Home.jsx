@@ -1,29 +1,29 @@
-import React from "react";
-import "./Home.css";
-import video from "./Videos/video.mp4";
-import Button from "@mui/material/Button";
-import { Link, useLocation } from "react-router-dom";
-import spe1 from "./Images/spe1.webp";
-import spe15 from "./Images/spe2.webp";
-import spe2 from "./Images/spe3.webp";
-import spe3 from "./Images/spe4.webp";
-import spe4 from "./Images/spe5.webp";
-import spe5 from "./Images/spe6.webp";
-import spe6 from "./Images/spe7.webp";
-import spe7 from "./Images/spe8.webp";
-import spe8 from "./Images/spe9.webp";
-import spe9 from "./Images/spe10.webp";
-import spe10 from "./Images/spe11.webp";
-import spe11 from "./Images/spe12.webp";
-import spe13 from "./Images/spe13.webp";
-import spe14 from "./Images/spe14.webp";
-import spe16 from "./Images/spe15.webp";
-import spe17 from "./Images/spe17.webp";
-import spe18 from "./Images/spe18.webp";
-import spe19 from "./Images/spe19.webp";
-import OPD from "./OPD.";
-import Test from "./Test";
-import { Helmet } from "react-helmet-async";
+import React from 'react';
+import './Home.css';
+import video from './Videos/video.mp4';
+import Button from '@mui/material/Button';
+import { Link } from 'react-router-dom';
+import spe1 from './Images/spe1.webp';
+import spe15 from './Images/spe2.webp';
+import spe2 from './Images/spe3.webp';
+import spe3 from './Images/spe4.webp';
+import spe4 from './Images/spe5.webp';
+import spe5 from './Images/spe6.webp';
+import spe6 from './Images/spe7.webp';
+import { useLocation } from 'react-router-dom';
+import spe8 from './Images/spe9.webp';
+import spe9 from './Images/spe10.webp';
+import spe10 from './Images/spe11.webp';
+import spe11 from './Images/spe12.webp';
+import spe13 from './Images/spe13.webp';
+import spe14 from './Images/spe14.webp';
+import spe16 from './Images/spe15.webp';
+import spe17 from './Images/spe17.webp';
+import spe18 from './Images/spe18.webp';
+import spe19 from './Images/spe19.webp';
+import OPD from './OPD.';
+import Test from './Test';
+import { Helmet } from 'react-helmet';
 
 function Home() {
   const { pathname } = useLocation();
@@ -91,7 +91,7 @@ function Home() {
         <meta property="og:url" content={canonical} />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
-
+<br />
       <div>
         <div className="video-container">
           <video height="auto" autoPlay loop muted playsInline poster="/video-poster.jpg">
@@ -99,35 +99,42 @@ function Home() {
             Your browser does not support the video tag.
           </video>
         </div>
-<br /><br />
-        <p className="our" style={{ color: "blue", fontSize: "25px", fontWeight: 500 }}>
-          Our Specialities
-        </p> <br /><br />
-        {renderRow(specialties.slice(0, 4))} <br />
-        {renderRow(specialties.slice(4, 8))} <br />
-        {renderRow(specialties.slice(8, 12))} <br />
-        {renderRow(specialties.slice(12, 16))} <br />
-<br />
-        <Link to="/departments">
-          <Button variant="contained">View all Specialities</Button>
-        </Link>
-<br /><br /><br />
-        <hr /><br />
-        <h2 className="titlemed" style={{ color: "blue", fontSize: "25px", fontWeight: 500 }}>
-          Take Charge of Your Health Today!
-        </h2><br />
+
+        <br /><br />
+        <div className="title"></div>
+        <br /><br /><br />
+        <br /><br />
+
+        <p className="our" style={{ color: 'blue', fontSize: '25px', fontWeight: 500 }}>Our Specialities</p>
+        <br /><br />
+
+        {renderRow(specialties.slice(0, 4))}
+        <br /><br />
+        {renderRow(specialties.slice(4, 8))}
+        <br /><br />
+        {renderRow(specialties.slice(8, 12))}
+        <br /><br />
+        {renderRow(specialties.slice(12, 15))}
+        <br /><br />
+        <br />
+
+        <Link to="/departments"><Button variant="contained">View all Specialities</Button></Link>
+
+        <br /><br /><hr />
+        <div className='book'><br /><br /><br />
+
+        <h2 className="titlemed" style={{ color: 'blue', fontSize: '25px', fontWeight: 500 }}>Take Charge of Your Health Today!</h2><br />
         <p className="desc">
           Book your complete health screening package now — 2D Echo, ECG, X-Ray, Ultrasound, Lipid Profile, Thyroid &amp; Diabetes tests and more.
         </p><br />
 
-        <Link to="/medical">
-          <Button variant="contained" style={{ fontFamily: "poppins" }}>
-            Book an Appointment
-          </Button>
-        </Link>
-<br /><br />
-        <hr /><br /><br />
-        <Test />
+        <Link to="/medical"><Button variant="contained" style={{ fontFamily: 'poppins' }}>Book an Appointment</Button></Link>
+
+        <br /><br /><br /></div><hr />  <div className='testimonials-container'><br /><br />
+      
+              <Test/>
+                  </div>
+        
         <OPD />
       </div>
     </>
