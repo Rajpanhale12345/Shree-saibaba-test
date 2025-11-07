@@ -15,8 +15,10 @@ const Footer = () => {
         <Link to="/">  <img src={logo} alt="Shree Saibaba Logo" /></Link>
           <p>
             Shree Saibaba Heart Institute & Multispeciality Hospital, <br />
-            Opp. Wani House, Mumbai Naka, Mirajkar Nagar, <br />
-            Nashik, Maharashtra 422001
+            Mumbai-Agra Highway, Opp. Pillar No. 125-127, Bhaba Nagar, Dwarka,
+            <br/>
+            Nashik.- 422001 <br />
+       
           </p>
           <div className="social-icons">
             <a href="https://www.facebook.com/ShreeSaibabaHeartInstituteAndResearchCentre/"><i className="fab fa-facebook-f"></i></a>
