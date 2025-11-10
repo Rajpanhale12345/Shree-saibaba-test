@@ -8,7 +8,7 @@ import Departments from "./Departments";
 import About from "./About";
 import Doctors from "./Doctors";
 import Medical from "./Medical";
-import Blogs from "./Blogs";
+import Blogs from "./Blogs/Blogs";
 import PressReleases from "./PressReleases";
 import Contact from "./Contact";
 import Footer from "./Footer";
@@ -21,8 +21,8 @@ import Radiology from "./Radiology";
 import InterventionalRadiology from "./IR";
 import Neurosurgery from "./Neurosurgery";
 import Testimonials from "./Testimonials";
-import Kidney from "./Kidney";
-import Spine from "./Spine";
+import Kidney from "./Blogs/Kidney";
+import Spine from "./Blogs/Spine";
 import Sitemap from "./Sitemap";
 import ScrollToTop from "./ScrollToTop";
 import GTranslate from "./GTranslate";
@@ -35,7 +35,7 @@ import Gastroenterology from "./Gastroenterology";
 import Nephrology from "./Nephrology";
 import OPD from "./OPD.";
 import FullBodyCheckup from "./FullBodyCheckup";
-import Cardio_blog from "./Cardio_blog";
+import Cardio_blog from "./Blogs/Cardio_blog";
 import PrivacyPolicy from "./PrivacyPolicy";
 import TermsAndConditions from "./TermsAndConditions";
 import SpineCare from "./SpineCare";
@@ -44,7 +44,7 @@ import Gynecology from "./Gynecology";
 import Pulmonology from "./Pulmonology";
 import Facilities from "./Facilities";
 import TieUps from "./TieUps";
-import Nutrition_Sleep from "./Nutrition_blog"
+import Nutrition_Sleep from "./Blogs/Nutrition_blog"
 
 
 function App() {
