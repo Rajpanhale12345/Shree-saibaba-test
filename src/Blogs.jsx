@@ -44,7 +44,7 @@ function Blogs() {
 
         <Link to='/nutrition'><div className="imageblog">
           <img src={nutrition} alt="Nurtition, Sleep & Lifestyle" /><br /> <br />
-          <h2><i style={{ color: 'red', }}>Spine Health</i></h2></div>
+          <h2><i style={{ color: 'red', }}>Healthy Life</i></h2></div>
         </Link>
 
 
