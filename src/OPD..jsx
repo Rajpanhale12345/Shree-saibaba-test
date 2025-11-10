@@ -8,7 +8,7 @@ const opdData = [
       { name: "DR. ANIRUDDHA DHARMADHIKARI", timing: "2.00 pm to 6.00 pm" },
       { name: "DR. AMIT CHAUDHARI", timing: "4.00 pm to 5.00 pm" },
       { name: "DR. NILESH TAWADE", timing: "12.00 pm to 3.00 pm" },
-      { name: "DR. GAURAV VARMA", timing: "9.00 am to 10.00 am" },
+     
     ],
   },
   {
@@ -27,8 +27,8 @@ const opdData = [
     department: "ORTHOPAEDIC",
     doctors: [
       { name: "DR. SATYEN JOSHI", timing: "1.30 pm to 3.30 pm" },
-      { name: "DR. BRIJBHUSHAN MAHAJAN", timing: "4.00 pm to 6.00 pm" },
-      { name: "DR. MAHALE SWAPNIL", timing: "10.00 to 1.00 pm" },
+      // { name: "DR. BRIJBHUSHAN MAHAJAN", timing: "4.00 pm to 6.00 pm" },
+      // { name: "DR. MAHALE SWAPNIL", timing: "10.00 to 1.00 pm" },
     ],
   },
   {
@@ -36,6 +36,13 @@ const opdData = [
     doctors: [
       { name: "DR. PALLAVI DHARMADHIKARI", timing: "10.30 am to 7.00 pm" },
       { name: "DR. VAIBHAV NIMBHORE", timing: "12.30 pm to 8.00 pm" },
+    ],
+  },
+   {
+    department: "INTERVENTIONAL RADIOLOGIST",
+    doctors: [
+      { name: "DR. AJIT PATIL", timing: "On Call" },
+     
     ],
   },
   {
@@ -60,18 +67,18 @@ const opdData = [
   {
     department: "GASTROENTROLOGY",
     doctors: [
-      { name: "Dr. Sumit Heere", timing: "On Call" },
-      
+      { name: "DR. SUDARSHAN PATIL", timing: "On Call" },
+      { name: "DR. MAHESH PATIL", timing: "On Call" }
     ],
   },
   {
     department: "PLASTIC SURGEON",
-    doctors: [{ name: "DR. SACHIN MAHADIK", timing: "12 to 2" }],
+    doctors: [{ name: "DR. LALIT DERLE", timing: "12 to 2" }],
   },
   {
     department: "PHYSICIAN",
     doctors: [
-      { name: "DR. KUNAL NIAKM", timing: "10.00 to 5.30" },
+      { name: "DR. KUNAL NIKAM", timing: "10.00 to 5.30" },
       { name: "DR. GANESH MOTWANI", timing: "4.00 to 9.00" },
       { name: "DR. BHARAT PATIL", timing: "10.00 to 5.00" },
     ],
@@ -82,7 +89,7 @@ const opdData = [
   },
   {
     department: "GENERAL SURGERY",
-    doctors: [{ name: "DR. HEMANT DEORE", timing: "On Call" }],
+    doctors: [{ name: "DR. AMIT KELE", timing: "On Call" }],
   },
   {
     department: "DENTIST",

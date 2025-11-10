@@ -21,7 +21,7 @@ const specialties = [
     doctors: [
       { name: "DR. KUNAL NIKAM", degree: "MBBS, MD" },
       { name: "DR. GANESH MOTWANI", degree: "MBBS, MD" },
-      { name: "DR. SUDARSHANA PATIL", degree: "MBBS, MD" }
+      { name: "DR. BHARAT PATIL", degree: "MBBS, MD" }
     ]
   },
   {
@@ -74,11 +74,13 @@ const specialties = [
   { name: "Urology", color: "#0a9396", doctors: [{ name: "DR. AMEY PATIL", degree: "MBBS, MS, MCh" }] },
   { name: "Orthopaedic", color: "#0a9396", doctors: [{ name: "DR. SATYEN JOSHI", degree: "MBBS, MD, MCh" }] },
   { name: "Interventional Radiology", color: "#0a9396", doctors: [{ name: "DR. AJIT PATIL", degree: "MBBS, MD, FVIR" }] },
-  { name: "Nephrologist", color: "#0a9396", doctors: [{ name: "DR. SAURABH BORGAONKAR", degree: "MBBS, MCh" }] },
+  { name: "Nephrologist", color: "#0a9396", doctors: [{ name: "DR. ABHIJEET MORE ", degree: "MBBS, MCh" }] },
   { name: "Plastic Surgeon", color: "#0a9396", doctors: [{ name: "DR. LALIT DERLE", degree: "MBBS, DNB, MS" }] },
   { name: "General Surgery", color: "#0a9396", doctors: [{ name: "DR. AMIT KELE", degree: "MBBS, DNB" }] },
   { name: "Dentist", color: "#0a9396", doctors: [{ name: "DR. AMIT BORSE", degree: "BDS" }] },
-  { name: "Ophthalmologist", color: "#0a9396", doctors: [{ name: "DR. MANJIRI LELE", degree: "MBBS, MS" }] },
+  { name: "Ophthalmologist", color: "#0a9396", doctors: [{ name: "DR. MANJIRI LELE", degree: "MBBS, MS" },
+    { name: "DR. APURVA MANKARE", degree: "MBBS, MS" }
+  ] },
   { name: "Neurologist", color: "#0a9396", doctors: [{ name: "DR. RAHUL NAIK", degree: "MBBS, DM" }] },
 ];
 
