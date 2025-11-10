@@ -12,8 +12,10 @@ export default function Checkup({image,title,text,share,learn}) {
       <CardMedia
         component="img"
         alt='medical'
-        height="140"
+        height="200"
+        width="20"
         image={image}
+        style={{objectFit : 'cover'}}
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">

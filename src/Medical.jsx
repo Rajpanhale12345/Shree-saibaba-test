@@ -19,6 +19,7 @@ import './Medical.css';
 // import Stack from '@mui/material/Stack';
 // import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
+import fullbodycheckup from "./Images/fullbodycheckup.jpg"
 
 import Checkup from './CheckCard';
 import fullbody from './Images/fullbody.jpg'
@@ -56,10 +57,10 @@ It goes beyond a routine full-body assessment by concentrating on risk factors, 
 
         />
         <Checkup
-          image={fullbody}
+          image={fullbodycheckup}
           title='Full body Check up'
           text='A full-body check-up is a complete health screening that evaluates all major body systems. It helps detect hidden conditions, establishes your overall health baseline, and guides preventive care, ensuring you stay ahead of potential risks.
-'
+'       
           share='Book an appointment'
           learn={<Link to='/fullbodycheckup' style={{}}>Learn More</Link>}
         />

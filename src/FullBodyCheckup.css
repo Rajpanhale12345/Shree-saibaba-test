@@ -178,7 +178,7 @@
   grid-template-columns: 1fr;
   gap: 10px;
   justify-items: center;             /* center each grid cell's content */
-  text-align: center;                /* center text inside items */
+  text-align: left;                /* center text inside items */
 }
 @media (min-width: 640px) {
   .fbc-list { grid-template-columns: 1fr 1fr; }
@@ -188,20 +188,20 @@
 }
 
 .fbc-list__item {
-  display: flex;
-  align-items: center;               /* center icon + text vertically */
-  justify-content: center;           /* center horizontally */
+  display: flex;   
   gap: 10px;
   padding: 10px 12px;
   border: 1px dashed var(--fbc-border);
   border-radius: 12px;
   max-width: 100%;
   background: linear-gradient(180deg, rgba(249, 249, 249, 0.4), rgba(255, 255, 255, 0));
+  text-align: left;
 }
 .fbc-list__icon {
   margin-top: 0;
   color: var(--fbc-accent);
   flex: 0 0 auto;
+  text-align: center;
 }
 
 /* ---------- Bullet lists ---------- */
