@@ -1,6 +1,8 @@
 import React from 'react';
 import Cardio from './Images/Cardio_blog.jpg';
 import './cardio_blog.css'; // reuse the same stylesheet
+import LifePacemaker from './Images/pacemaker_daily.jpg'; // <-- add this
+import Pacemaker_Life from './Images/Pacemaker_Life_Expectancy.png';
 import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import { Helmet } from "react-helmet-async";
@@ -48,15 +50,6 @@ function Cardio_blog() {
               <h1 className="kidney-title">Pacemaker Care: Surgery, Recovery & Lifestyle Changes Explained</h1>
             </header>
 
-            {/* TOC */}
-            <nav className="toc" aria-label="On this page">
-              <p className="toc__label">On this page</p>
-              <ul>
-                {toc.map((item) => (
-                  <li key={item.id}><a href={`#${item.id}`}>{item.label}</a></li>
-                ))}
-              </ul>
-            </nav>
 
             {/* Content */}
             <section className="kidney-content">
@@ -80,6 +73,19 @@ function Cardio_blog() {
               </ul>
 
               <h2 id="life">Daily Life with a Pacemaker</h2>
+
+              <figure className="inline-illustration">
+                <img
+                  src={LifePacemaker}
+                  alt="Everyday living with a pacemaker"
+                  loading="lazy"
+                  decoding="async"
+                />
+                {/* Optional: remove this figcaption if you don't want text under the image */}
+                <figcaption>Simple habits can keep you active and confident with a pacemaker.</figcaption>
+              </figure>
+
+
               <h3>1) Physical Activity</h3>
               <ul>
                 <li>Walking, yoga, and light stretches are generally safe</li>
@@ -114,6 +120,17 @@ function Cardio_blog() {
                 is replaced while leads often remain in place. With routine care, patients can lead long, active lives.
               </p>
 
+              <figure className="inline-illustration">
+                <img
+                  src={Pacemaker_Life}
+                  alt="Everyday living with a pacemaker"
+                  loading="lazy"
+                  decoding="async"
+                />
+                {/* Optional: remove this figcaption if you don't want text under the image */}
+                <figcaption><b>On the device side (battery/generator):</b> the pacemaker’s battery typically lasts 5-10 years before needing replacement.</figcaption>
+              </figure>
+
               <h2 id="myths">Myths & Facts</h2>
               <p><strong>Myth:</strong> You can’t use household appliances.</p>
               <p><strong>Fact:</strong> Most household appliances are safe with a pacemaker.</p>
@@ -124,12 +141,12 @@ function Cardio_blog() {
 
               <h2 id="conclusion">Conclusion</h2>
               <p>
-                A pacemaker is a lifesaving device that restores a healthy rhythm and enables an active life. With follow-ups,
-                device care, and heart-healthy habits, patients can remain independent and well.
+                A pacemaker is a lifesaving device that restores a healthy rhythm and enables an active life. With follow ups,
+                device care, and heart healthy habits, patients can remain independent and well.
               </p>
               <p>
                 At Shree Saibaba Heart Institute, Nashik, our cardiologists and electrophysiologists offer advanced therapies
-                including leadless pacemakers and CRT—delivered with compassionate, world-class care.
+                including leadless pacemakers and CRT delivered with compassionate, world-class care.
               </p>
 
               {/* CTA */}
@@ -147,6 +164,17 @@ function Cardio_blog() {
         {/* RIGHT: Sticky, independently scrolling sidebar */}
         <aside className="pane pane--sidebar" aria-label="Other blog posts">
           <div className="sidebar-inner">
+
+            {/* TOC */}
+            <nav className="toc" aria-label="On this page">
+              <p className="toc__label">On this page</p>
+              <ul>
+                {toc.map((item) => (
+                  <li key={item.id}><a href={`#${item.id}`}>{item.label}</a></li>
+                ))}
+              </ul>
+            </nav>
+            <br />
             <h2 className="sidebar-title">Other Blogs</h2>
             <div className="sidebar-list" role="list">
               {otherBlogs.map((post, idx) => (
