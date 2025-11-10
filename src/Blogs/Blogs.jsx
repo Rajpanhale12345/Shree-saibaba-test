@@ -6,7 +6,8 @@ import './Blogs.css'
 import kidney from './Images/kidney.png';
 import spine from './Images/spinemain.jpg';
 import cardio from './Images/Cardio_blog.jpg';
-import nutrition from './Images/nutrition.jpg'
+import nutrition from './Images/nutrition.jpg';
+import understanding from './Images/understanding_stroke.png';
 import { Link } from 'react-router-dom';
 import { Helmet } from "react-helmet-async";
 
@@ -45,6 +46,11 @@ function Blogs() {
         <Link to='/nutrition'><div className="imageblog">
           <img src={nutrition} alt="Nurtition, Sleep & Lifestyle" /><br /> <br />
           <h2><i style={{ color: 'red', }}>Healthy Life</i></h2></div>
+        </Link>
+
+        <Link to='/understanding'><div className="imageblog">
+          <img src={understanding} alt="Understanding Stroke" /><br /> <br />
+          <h2><i style={{ color: 'red', }}>Understanding Stroke</i></h2></div>
         </Link>
 
 
