@@ -47,6 +47,7 @@ import TieUps from "./TieUps";
 import Nutrition_Sleep from "./Blogs/Nutrition_blog";
 import Understanding from "./Blogs/understanding_stroke";
 import Cardiac_Surgery from "./Blogs/Cardiac_Surgery";
+import Dengue from "./Blogs/Dengue";
 
 
 function App() {
@@ -102,6 +103,7 @@ function App() {
           <Route path="/nutrition" element={< Nutrition_Sleep/>} />
           <Route path="/understanding" element={< Understanding/>} />
           <Route path="/Cardiac_Surgery" element={< Cardiac_Surgery/>} />
+          <Route path="/Dengue" element={< Dengue/>} />
         </Routes>
 
         <ScrollToTop />
