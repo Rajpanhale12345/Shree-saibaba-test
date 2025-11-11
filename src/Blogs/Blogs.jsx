@@ -8,6 +8,7 @@ import spine from './Images/spinemain.jpg';
 import cardio from './Images/Cardio_blog.jpg';
 import nutrition from './Images/nutrition.jpg';
 import understanding from './Images/understanding_stroke.png';
+import Cardiac_Surgery from './Images/Cardia_Surgery1.jpg'
 import { Link } from 'react-router-dom';
 import { Helmet } from "react-helmet-async";
 
@@ -53,13 +54,10 @@ function Blogs() {
           <h2><i style={{ color: 'red', }}>Understanding Stroke</i></h2></div>
         </Link>
 
-
-        
-
-        
-
-
-
+        <Link to='/Cardiac_Surgery'><div className="imageblog">
+          <img src={Cardiac_Surgery} alt="Cardiac Surgery" /><br /> <br />
+          <h2><i style={{ color: 'red', }}>कार्डियाक सर्जरी</i></h2></div>
+        </Link>
 
 
       </div><br /><br />
