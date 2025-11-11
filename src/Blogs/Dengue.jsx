@@ -14,15 +14,13 @@ function Dengue() {
     ];
 
     const toc = [
-        { id: "Stroke", label: "What is a Stroke?" },
-        { id: "Types_of_Stroke", label: "Types of Stroke" },
-        { id: "Common_Symptoms_of_Stroke", label: "Common Symptoms of Stroke" },
-        { id: "Remember:_Act_F.A.S.T.", label: "Remember: Act F.A.S.T." },
-        { id: "Golden_Hour", label: "'Golden Hour' for Ischemic Stroke" },
-        { id: "Risk_Factors", label: "Risk Factors" },
-        { id: "Prevention_Tips", label: "Prevention Tips" },
-        { id: "Recovery_and_Rehabilitation", label: "Recovery and Rehabilitation" },
-        { id: "When_to_Talk_Help", label: "When to Talk Help" },
+        { id: "Introduction", label: "Introduction" },
+        { id: "Transmission", label: "Transmission" },
+        { id: "Diagnosis", label: "Diagnosis" },
+        { id: "Complication", label: "Complication" },
+        { id: "Treatment", label: "Treatment" },
+        { id: "Prevention", label: "Prevention" },
+        { id: "Conclusion", label: "Conclusion" },
     ];
 
     return (
@@ -44,13 +42,13 @@ function Dengue() {
                             <img style={{objectFit : "fill"}}
                                 src={Denguee}
                                 alt="Recovery care after hospital discharge"
-                                className="kidney-image"
-                            />
+                                className="kidney-image"/>
+
                             <div className="kidney-meta">
                                 <Link to="/cardiology" className="kidney-category">
                                     Dr. Aniruddha Dharmadhikari
                                 </Link>
-                                <span className="kidney-date">🕗 1 September 2025</span>
+                                <span className="kidney-date">🕗 1 August 2024</span>
                             </div>
                             <h1 className="kidney-title">
                                 Dengue: Understanding the Disease
@@ -59,18 +57,18 @@ function Dengue() {
 
                         {/* Content */}
                         <section className="kidney-content">
-                            <h2 id="Stroke">Introduction</h2>
+                            <h2 id="Introduction">Introduction</h2>
                             <p>Dengue, or more simply dengue fever, is a viral infection transmitted by mosquitoes that has become a serious public health threat worldwide. It occurs in tropical and sub-tropical areas of the world, with the major burden in urban and peri-urban areas. Dengue disease results from infection with the dengue virus (DENV), for which there exist four distinct, but closely related, serotypes (DENV-1, DENV-2, DENV-3, and DENV-4). A person can be infected by each serotype independently, resulting in potential lifetime risks of dengue infection.</p>
 
                             <br />
 
-                            <h2 id="Stroke">Transmission</h2>
+                            <h2 id="Transmission">Transmission</h2>
                             <p>Dengue is primarily spread by the bites of female mosquitoes from the Aedes aegypti species, though in some cases it may be spread by Aedes albopictus. These mosquitoes prefer laying their eggs in stagnant water found in places like containers, discarded tires, and blocked gutters. They are most active during daylight, especially in the early morning and late afternoon.</p>
 
                             <br />
 
 
-                            <h2 id="Stroke">Diagnosis</h2>
+                            <h2 id="Diagnosis">Diagnosis</h2>
                             <p>The diagnosis of dengue primarily relies on the symptoms presented and the patient's history, especially if they have traveled to or live in areas where dengue is endemic. Laboratory tests can confirm either the presence of the virus or antibodies that indicate an infection.</p>
 
                             <p>Laboratory confirmation of the disease includes:</p>
@@ -93,7 +91,7 @@ function Dengue() {
                                 {/* <figcaption>Simple habits can keep you active and confident with a pacemaker.</figcaption> */}
                             </figure> <br />
 
-                            <h2 id="Stroke">Complication</h2>
+                            <h2 id="Complication">Complication</h2>
                             <p>Symptoms of dengue can range from mild to severe. It usually presents 4-10 days after the infective mosquito bite. The common symptoms include:</p>
                             <ul>
                                 <li>High fever</li>
@@ -111,7 +109,7 @@ function Dengue() {
 
                             <br />
 
-                            <h2 id="Stroke">Treatment</h2>
+                            <h2 id="Treatment">Treatment</h2>
                             <p>There is no specific antiviral treatment for dengue. Management of the disease focuses on relief of symptoms and supporting the patient's immune response. Key aspects of treatment include:</p>
                             <ul>
                                 <li><b>Rest and hydration:</b> An abundance of fluids should be taken by the patients to avoid dehydration.</li>
@@ -132,7 +130,7 @@ function Dengue() {
                                 {/* <figcaption>Simple habits can keep you active and confident with a pacemaker.</figcaption> */}
                             </figure> <br />
 
-                            <h2 id="Stroke">Prevention</h2>
+                            <h2 id="Prevention">Prevention</h2>
 
                             <p>Prevention of Dengue focuses primarily on controlling mosquito populations and protecting people from mosquito bites. Effective prevention strategies include: </p>
 
@@ -146,7 +144,7 @@ function Dengue() {
                             <br />
 
 
-                            <h2 id="Stroke">Conclusion:</h2>
+                            <h2 id="Conclusion">Conclusion:</h2>
                             <p>Dengue fever, a significant health threat in many areas of the world, can have its effects mitigated by appropriate prevention and management. Controlling mosquitoes, educating the public, and improving health infrastructure are all key components of combating dengue. Likewise, research into vaccines and treatment is ongoing and holds promise for improved prevention and management of the disease in the future.</p>
 
                             <br />
@@ -167,6 +165,20 @@ function Dengue() {
                 {/* Sidebar */}
                 <aside className="pane pane--sidebar" aria-label="Other blog posts">
                     <div className="sidebar-inner">
+
+                        {/* TOC */}
+                        <nav className="toc" aria-label="On this page">
+                            <p className="toc__label"><span style={{color : "Red"}}>On this page</span></p>
+                            <ul>
+                                {toc.map((item) => (
+                                    <li key={item.id}>
+                                        <a href={`#${item.id}`}>{item.label}</a>
+                                    </li>
+                                ))}
+                            </ul>
+                        </nav>  
+
+                        <br />
 
                         <h2 className="sidebar-title">Other Blogs</h2>
                         <div className="sidebar-list" role="list">
