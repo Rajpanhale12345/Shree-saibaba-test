@@ -25,7 +25,7 @@ import Kidney from "./Blogs/Kidney";
 import Spine from "./Blogs/Spine";
 import Sitemap from "./Sitemap";
 import ScrollToTop from "./ScrollToTop";
-import GTranslate from "./GTranslate";
+
 import InternalMedicine from "./InternalMedicine";
 import Dentistry from "./Dentistry";
 import GeneralSurgery from "./GeneralSurgery";
@@ -50,7 +50,7 @@ import Nutrition_Sleep from "./Blogs/Nutrition_blog"
 function App() {
   return (
     <Router>
-      <GTranslate />
+     
       <header>
         <Header />
         <Navbar />
