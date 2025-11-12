@@ -23,7 +23,7 @@ function NutritionBlog() {
   return (
     <>
       <Helmet>
-        <title>Post-Hospital Recovery: Nutrition, Sleep & Lifestyle | Shree Saibaba Multispeciality Hospital</title>
+        <title>Nutrition & Lifestyle | Shree Saibaba Multispeciality Hospital</title>
         <meta
           name="description"
           content="A practical, science-backed guide to post-hospital recovery. Learn how targeted nutrition, restorative sleep, gentle movement, and emotional care accelerate healing and reduce complications."

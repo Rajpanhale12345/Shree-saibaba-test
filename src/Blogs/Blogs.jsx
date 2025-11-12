@@ -6,7 +6,11 @@ import './Blogs.css'
 import kidney from './Images/kidney.png';
 import spine from './Images/spinemain.jpg';
 import cardio from './Images/Cardio_blog.jpg';
-import nutrition from './Images/nutrition.jpg'
+import nutrition from './Images/nutrition.jpg';
+import understanding from './Images/understanding_stroke.png';
+import Cardiac_Surgery from './Images/Cardia_Surgery1.jpg';
+import Dengue from './Images/Dengue.png';
+import Vitamin_B12 from './Images/Vitamin_B.png'
 import { Link } from 'react-router-dom';
 import { Helmet } from "react-helmet-async";
 
@@ -47,13 +51,25 @@ function Blogs() {
           <h2><i style={{ color: 'red', }}>Healthy Life</i></h2></div>
         </Link>
 
+        <Link to='/understanding'><div className="imageblog">
+          <img src={understanding} alt="Understanding Stroke" /><br /> <br />
+          <h2><i style={{ color: 'red', }}>Understanding Stroke</i></h2></div>
+        </Link>
 
-        
+        <Link to='/Cardiac_Surgery'><div className="imageblog">
+          <img src={Cardiac_Surgery} alt="Cardiac Surgery" /><br /> <br />
+          <h2><i style={{ color: 'red', }}>कार्डियाक सर्जरी</i></h2></div>
+        </Link>
 
-        
+        <Link to='/Dengue'><div className="imageblog">
+          <img src={Dengue} alt="Cardiac Surgery" /><br /> <br />
+          <h2><i style={{ color: 'red', }}>Dengue Disease</i></h2></div>
+        </Link>
 
-
-
+        <Link to='/Vitamin_B12'><div className="imageblog">
+          <img src={Vitamin_B12} alt="Cardiac Surgery" /><br /> <br />
+          <h2><i style={{ color: 'red', }}>Vitamin B12</i></h2></div>
+        </Link>
 
 
       </div><br /><br />
