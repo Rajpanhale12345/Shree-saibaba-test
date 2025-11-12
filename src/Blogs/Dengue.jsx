@@ -26,7 +26,7 @@ function Dengue() {
     return (
         <>
             <Helmet>
-                <title>Vitamin B12 | Shree Saibaba Multispeciality Hospital</title>
+                <title>Dengue | Shree Saibaba Multispeciality Hospital</title>
                 <meta name="description" content="" />
                 <meta name="keywords" content="" />
                 <meta name="og:description" content="" />
