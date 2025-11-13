@@ -10,7 +10,8 @@ import nutrition from './Images/nutrition.jpg';
 import understanding from './Images/understanding_stroke.png';
 import Cardiac_Surgery from './Images/Cardia_Surgery1.jpg';
 import Dengue from './Images/Dengue.png';
-import Vitamin_B12 from './Images/Vitamin_B.png'
+import Vitamin_B12 from './Images/Vitamin_B.png';
+import Heart_Attack1 from './Images/Heart_Attack.png'
 import { Link } from 'react-router-dom';
 import { Helmet } from "react-helmet-async";
 
@@ -69,6 +70,11 @@ function Blogs() {
         <Link to='/Vitamin_B12'><div className="imageblog">
           <img src={Vitamin_B12} alt="Cardiac Surgery" /><br /> <br />
           <h2><i style={{ color: 'red', }}>Vitamin B12</i></h2></div>
+        </Link>
+
+        <Link to='/Heart_Attack'><div className="imageblog">
+          <img src={Heart_Attack1} alt="Cardiac Surgery" /><br /> <br />
+          <h2><i style={{ color: 'red', }}>Heart Attack</i></h2></div>
         </Link>
 
 

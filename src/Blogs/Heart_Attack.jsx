@@ -1,7 +1,7 @@
 import React from "react";
-import Vitamin from "./Images/Vitamin_B.png";
-import Vitamin1 from './Images/Vitamin_B1.png';
-import Vitamin2 from './Images/Vitamin_B11.jpg';
+import Heart_Attack from "./Images/Heart_Attack.png";
+import Heart_Attack1 from './Images/Heart_Attack1.png';
+import Heart_Attack2 from './Images/Heart_Attack2.jpg';
 import "./cardio_blog.css";
 import { Link } from "react-router-dom";
 import Button from "@mui/material/Button";
@@ -15,9 +15,9 @@ function Dengue() {
 
     const toc = [
         { id: "Introduction", label: "Introduction" },
-        { id: "Vitamin B12", label: "Vitamin B12" },
-        { id: "Calcium", label: "Calcium" },
-        { id: "Conclusion", label: "Conclusion" },
+        { id: "Heartburn", label: "Heartburn vs Heart Attack" },
+        { id: "Ignore", label: "Don't Ignore Persistent Discomfort" },
+        { id: "Proactive", label: "Taking A Proactive Approach To Your Heart Health" },
     ];
 
     return (
@@ -36,43 +36,42 @@ function Dengue() {
                     <article className="kidney-article">
                         {/* Hero */}
                         <header className="kidney-header">
-                            <img style={{objectFit : "fill"}}
-                                src={Vitamin}
+                            <img style={{ objectFit: "fill" }}
+                                src={Heart_Attack1}
                                 alt="Recovery care after hospital discharge"
-                                className="kidney-image"/>
+                                className="kidney-image" />
 
                             <div className="kidney-meta">
                                 <Link to="/cardiology" className="kidney-category">
                                     Dr. Aniruddha Dharmadhikari
                                 </Link>
-                                <span className="kidney-date">🕗 1 June 2024</span>
+                                <span className="kidney-date">🕗 1 April 2024</span>
                             </div>
                             <h1 className="kidney-title">
-                                Vitamin B12 and Calcium
+                                Heartburn or Heart Attack
                             </h1>
                         </header>
 
                         {/* Content */}
                         <section className="kidney-content">
                             <h2 id="Introduction">Introduction</h2>
-                            <p>Vitamins and minerals are key factors in maintaining overall health and well-being. Vitamin B12 and Calcium rank among two commonly deliberated nutrients concerning health. Both nutrients are crucial in different body functions, and the deficiency of either leads to serious health problems. The current article deals with the importance, sources, and benefits of Vitamin B12 and Calcium.</p>
+                            <p>At times, it is common for us to feel heartburn: that burning sensation behind the breastbone produced by stomach acid moving back up into the esophagus. But what if we told you heartburn could be more than just a nuisance? Shree Saibaba Heart Institute and Research Center (SSHIRC) would like to educate you about another connection that may surprise you: heartburn and one's heart attack.</p>
 
                             <br />
 
-                            <h2 id="Vitamin B12">Vitamin B12: The Energy Vitamin</h2>
-                            
+                            <h2 id="Heartburn">Heartburn vs Heart Attack: Not so Always Black and White</h2>
 
-                            <p>1. Functions and Benefits</p>
+                            <p>Although one may experience discomfort with heartburn, or a heart attack, it does not mean they are the same explanation:</p>
+
                             <ul>
-                                <li><b>Energy Production:</b> Vitamin B12 is essential in the production of energy from food. This vitamin plays a crucial role in the metabolic activity of each cell in the body; thus, it directly impacts DNA synthesis and regulation, fatty acid synthesis, and energy production.</li>
-                                <li><b>Nervous System Health:</b> This vitamin is crucial for the health of the nervous system. Vitamin B12 aids in forming the myelin sheath that further protects nerves and allows for proper nerve transmission.</li>
-                                <li><b>Formation of Red Blood Cells:</b> It is highly essential for the production of RBCs. A good level of Vitamin B12 prevents megaloblastic anemia, wherein there are large and inefficient red blood cells.</li>
-                            </ul>  
+                                <li><b>Heartburn:</b> esophagus irritation from stomach acid</li>
+                                <li><b>Heart Attack:</b> heart muscle becomes starved for blood, because the coronary arteries are blocked</li>
+                            </ul>
                             <br />
 
                             <figure className="inline-illustration">
-                                <img style={{objectFit : 'fill'}}
-                                    src={Vitamin1}
+                                <img style={{ objectFit: 'fill' }}
+                                    src={Heart_Attack}
                                     alt="Everyday living with a pacemaker"
                                     loading="lazy"
                                     decoding="async"
@@ -81,36 +80,19 @@ function Dengue() {
                                 {/* <figcaption>Simple habits can keep you active and confident with a pacemaker.</figcaption> */}
                             </figure> <br />
 
-                            <p>2. Sources of Vitamin B12</p>
+
+                            <h2 id="Ignore">Don't Ignore Persistent Discomfort</h2>
+
+                            <p>If you are a frequent, or severe heartburn sufferer, here is what to do about it:</p>
                             <ul>
-                                <li><b>Animal Products:</b> These include meat, fish, poultry, eggs, and various dairy products, which are considered plentiful sources of Vitamin B12.</li>
-                                <li><b>Fortified Foods:</b> Vitamin B12 can be found in several breakfast cereals, nutritional yeasts, and some plant-based milk, which are good options for vegetarians and vegans.</li>
-                                <li><b>Supplements:</b> Vitamin B12 supplements come in a variety of forms, such as tablets, capsules, and injections, which may be preferred by those who have trouble getting Vitamin B12 through their diet.</li>
+                                <li><b>Medical Advice:</b> Describe your symptoms to an SSHIRC doctor. After ruling out any heart conditions, they will be able to help you with the best treatments for heartburn.</li>
+                                <li><b>Control Heartburn:</b> For many people, heartburn can be managed by changing lifestyle habits, such as avoiding trigger foods, maintaining a healthy weight, and raising the head of the bed and medication can help.</li>
                             </ul>
                             <br />
-
-                            <p>3. Deficiency and Health Risks</p>
-                            <ul>
-                                <li><b>Anemia:</b> A deficiency in Vitamin B12 can cause megaloblastic anemia, which presents itself with symptoms of fatigue, weakness, and pallor.</li>
-                                <li><b>Neurological Issues:</b> Having low levels of Vitamin B12 may lead to neurological issues which may include symptoms such as numbness and tingling and balance problems as well as issues with cognition.</li>
-                            </ul>
-
-                            <br />  
-                            
-
-                            <h2 id="Calcium">Calcium: The Bone Builder</h2>
-
-                            <p>1. Calcium purposes and benefits</p>
-                            <ul>
-                                <li><b>Bone Health:</b> Calcium is popular known and is widely recognized for its importance in bone and teeth development and maintenance. Calcium plays an important role where bones are forming, such as during childhood, adolescence, pregnancy, lactation, and when older adults are experiencing bone loss.</li>
-                                <li><b>Muscle Function:</b> Calcium is essential to muscle contraction. Calcium helps muscles contract and relax properly thus providing smooth movements and coordination.</li>
-                                <li><b>Cardiovascular Health:</b> Calcium helps in the coagulation of blood and in the proper functioning of the heart, ensuring a normal pulse, among others. It also helps in the maintenance of healthy blood vessels.</li>
-                            </ul>
-                            <br />                          
 
                             <figure className="inline-illustration">
                                 <img
-                                    src={Vitamin2}
+                                    src={Heart_Attack2}
                                     alt="Everyday living with a pacemaker"
                                     loading="lazy"
                                     decoding="async"
@@ -119,28 +101,22 @@ function Dengue() {
                                 {/* <figcaption>Simple habits can keep you active and confident with a pacemaker.</figcaption> */}
                             </figure> <br />
 
-                            <p>2. Sources of Calcium</p>
-                            <ul>
-                                <li><b>Dairy Products:</b> These are found in rather high amounts in foods made from milk, such as milk, cheese, and yogurt.</li>
-                                <li><b>Leafy Greens:</b> The best sources for this important mineral include leafy greens like kale, broccoli, and spinach.</li>
-                                <li><b>Fortified Foods:</b> Most plant-based milks, juices, cereals, and Ragi (nachani) Rajgira are fortified with plenty of calcium to support daily intake.</li>
-                                <li><b>Supplements:</b> include calcium supplements for people, especially with higher needs and dietary restrictions, who may not get enough from their diet alone.</li>
-                                <li><b>Nuts and Oil seeds:</b> sesame seeds, Poppy seeds, Halim and Almonds</li>
-                            </ul>  <br />
 
-                            <p>3. Deficiency and Health Risks</p>
+                            <h2 id="Proactive">Taking A Proactive Approach To Your Heart Health</h2>
+                            <p>At SSHIRC we take a proactive approach to preventive cardiology. Ths is how we can help: </p>
+                            
                             <ul>
-                                <li><b>Osteoporosis:</b> A long-term calcium deficiency can lead to the development of osteoporosis, a condition in which bones are weak and brittle.</li>
-                                <li><b>Muscle Cramps:</b> Low levels of calcium can result in muscle cramps and spasms; it shows the importance of the mineral in muscles.</li>
-                                <li><b>Cardiovascular Problems:</b> Insufficient intake of calcium can affect the heart, thereby causing cardiovascular problems.</li>
+                                <li>Comprehensive Heart Risk Assessment: Our well trained team will assess your individual risk factors for having heart disease including any reported history of heartburn. </li>
+                                <li>Advanced Diagnostics: We use the most leading technology to diagnose and treat potential heart issues at an early stage.</li>
+                                <li>Personalized Treatment Plans: We develop a personalized treatment plan to alleviate your heartburn and improve heart health.</li>
                             </ul>
+                            
+                            <p>Remember, early detection and early intervention are the ways to prevent a heart attack. If your heartburn does not go away or is more than just mildly uncomfortable, we encourage you to book an appointment at SSHIRC.</p>
 
                             <br />
 
-                            <h2 id="Conclusion">Conclusion:</h2>
-                            <p>Vitamin B12 and Calcium are both substances that aid in various important bodily functions. It is vital that they are obtained through diet or supplementation, when advised, to maintain health and prevent deficiency. By knowing the functions these nutrients serve and the dietary sources to get them from, individuals can make informed decisions that support their own health.</p>
-
-                            <br />
+                            <h2 style={{color: "blue"}}>Care for your heart starts with awareness. Let's come together for a healthier you!</h2>  <br />
+                            <h2 style={{color : "blue"}}>Shree Saibaba Heart Institute and Research Center: A Partner in Heart Health</h2>  <br />
 
                             {/* CTA */}
                             <footer className="cta-section" aria-labelledby="cta-title">
@@ -160,7 +136,7 @@ function Dengue() {
 
                         {/* TOC */}
                         <nav className="toc" aria-label="On this page">
-                            <p className="toc__label"><span style={{color : "Red"}}>On this page</span></p>
+                            <p className="toc__label"><span style={{ color: "Red" }}>On this page</span></p>
                             <ul>
                                 {toc.map((item) => (
                                     <li key={item.id}>
@@ -168,7 +144,7 @@ function Dengue() {
                                     </li>
                                 ))}
                             </ul>
-                        </nav>  
+                        </nav>
 
                         <br />
 
