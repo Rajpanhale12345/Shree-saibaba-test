@@ -111,7 +111,6 @@ function App() {
           <Route path="/Heart_Disease" element={< Heart_Disease/>} />
         </Routes>
         <ScrollToTop />
-        
       </main>
       <footer>
         <Footer />
