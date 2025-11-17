@@ -1,5 +1,5 @@
 import React from 'react';
-import img from './Images/Orthopedicdep.jpg'; // replace with orthopedic-specific image if available
+import img from './Images/orthopedicdep.jpg'; // replace with orthopedic-specific image if available
 import { Helmet } from "react-helmet-async";
 
 const styles = {
