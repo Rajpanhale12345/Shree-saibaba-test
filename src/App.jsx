@@ -48,7 +48,9 @@ import Nutrition_Sleep from "./Blogs/Nutrition_blog";
 import Understanding from "./Blogs/understanding_stroke";
 import Cardiac_Surgery from "./Blogs/Cardiac_Surgery";
 import Dengue from "./Blogs/Dengue";
-import Vitamin_B12 from "./Blogs/B12"
+import Vitamin_B12 from "./Blogs/B12";
+import Heart_Attack from "./Blogs/Heart_Attack";
+import Heart_Disease from "./Blogs/Heart_Disease"
 
 
 function App() {
@@ -105,8 +107,11 @@ function App() {
           <Route path="/Cardiac_Surgery" element={< Cardiac_Surgery/>} />
           <Route path="/Dengue" element={< Dengue/>} />
           <Route path="/Vitamin_B12" element={< Vitamin_B12/>} />
+          <Route path="/Heart_Attack" element={< Heart_Attack/>} />
+          <Route path="/Heart_Disease" element={< Heart_Disease/>} />
         </Routes>
         <ScrollToTop />
+        
       </main>
       <footer>
         <Footer />

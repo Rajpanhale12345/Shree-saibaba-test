@@ -1,7 +1,7 @@
 import React from "react";
-import Heart_Attack from "./Images/Heart_Attack.png";
-import Heart_Attack1 from './Images/Heart_Attack1.png';
-import Heart_Attack2 from './Images/Heart_Attack2.jpg';
+import Heart_Disease from "./Images/Heart_Disease.png";
+import Heart_Disease1 from './Images/Heart_Disease1.png';
+import Heart_Disease2 from './Images/Heart_Disease2.jpg';
 import "./cardio_blog.css";
 import { Link } from "react-router-dom";
 import Button from "@mui/material/Button";
@@ -15,15 +15,18 @@ function Dengue() {
 
     const toc = [
         { id: "Introduction", label: "Introduction" },
-        { id: "Heartburn", label: "Heartburn vs Heart Attack" },
-        { id: "Ignore", label: "Don't Ignore Persistent Discomfort" },
-        { id: "Proactive", label: "Taking A Proactive Approach To Your Heart Health" },
+        { id: "Causes", label: "Causes" },
+        { id: "Congenital", label: "Types of Congenital Heart Disease" },
+        { id: "Symptoms", label: "Symptoms" },
+        { id: "Diagnosis", label: "Diagnosis" },
+        { id: "Treatment", label: "Treatment" },
+        { id: "Conclusion", label: "Conclusion" },
     ];
 
     return (
         <>
             <Helmet>
-                <title>Heart Attack | Shree Saibaba Multispeciality Hospital</title>
+                <title>Congenital Heart Disease | Shree Saibaba Multispeciality Hospital</title>
                 <meta name="description" content="" />
                 <meta name="keywords" content="" />
                 <meta name="og:description" content="" />
@@ -37,7 +40,7 @@ function Dengue() {
                         {/* Hero */}
                         <header className="kidney-header">
                             <img style={{ objectFit: "fill" }}
-                                src={Heart_Attack1}
+                                src={Heart_Disease2}
                                 alt="Recovery care after hospital discharge"
                                 className="kidney-image" />
 
@@ -55,23 +58,19 @@ function Dengue() {
                         {/* Content */}
                         <section className="kidney-content">
                             <h2 id="Introduction">Introduction</h2>
-                            <p>At times, it is common for us to feel heartburn: that burning sensation behind the breastbone produced by stomach acid moving back up into the esophagus. But what if we told you heartburn could be more than just a nuisance? Shree Saibaba Heart Institute and Research Center (SSHIRC) would like to educate you about another connection that may surprise you: heartburn and one's heart attack.</p>
+                            <p>Congenital heart disease (CHD) is a broad term for multiple structural abnormalities of the heart that are present at birth. This is one of the most common congenital conditions, with an incidence of 1% of infants born around the world. Although the exact etiology of congenital heart diseases is usually not identified, they can be attributed to a variety of genetic and environmental factors.</p>
 
                             <br />
 
-                            <h2 id="Heartburn">Heartburn vs Heart Attack: Not so Always Black and White</h2>
+                            <h2 id="Causes">Causes:</h2>
 
-                            <p>Although one may experience discomfort with heartburn, or a heart attack, it does not mean they are the same explanation:</p>
+                            <p>The etiology of congenital heart diseases includes genetic, environmental, and multifactorial causes. Genetic causes exist due to some genetic conditions and chromosomal abnormalities, which are important in the pathogenesis of CHD. Infections in the mother during pregnancy and exposures to toxic agents during pregnancy can also contribute as risk factors for congenital heart disease, as can maternal health conditions (i.e. maternal diabetes). Similarly, certain lifestyle factors and prescribed medications have been linked with increased risks.</p>
 
-                            <ul>
-                                <li><b>Heartburn:</b> esophagus irritation from stomach acid</li>
-                                <li><b>Heart Attack:</b> heart muscle becomes starved for blood, because the coronary arteries are blocked</li>
-                            </ul>
                             <br />
 
                             <figure className="inline-illustration">
                                 <img style={{ objectFit: 'fill' }}
-                                    src={Heart_Attack}
+                                    src={Heart_Disease1}
                                     alt="Everyday living with a pacemaker"
                                     loading="lazy"
                                     decoding="async"
@@ -81,18 +80,44 @@ function Dengue() {
                             </figure> <br />
 
 
-                            <h2 id="Ignore">Don't Ignore Persistent Discomfort</h2>
+                            <h2 id="Congenital">Types of Congenital Heart Disease:</h2>
 
-                            <p>If you are a frequent, or severe heartburn sufferer, here is what to do about it:</p>
+                            <p>CHD includes a variety of congenital defects in heart structure, ranging from mild to severe. The most common types are:</p>
                             <ul>
-                                <li><b>Medical Advice:</b> Describe your symptoms to an SSHIRC doctor. After ruling out any heart conditions, they will be able to help you with the best treatments for heartburn.</li>
-                                <li><b>Control Heartburn:</b> For many people, heartburn can be managed by changing lifestyle habits, such as avoiding trigger foods, maintaining a healthy weight, and raising the head of the bed and medication can help.</li>
+                                <li>Atrial Septal Defect (ASD)</li>
+                                <li>Ventricular Septal Defect (VSD)</li>
+                                <li>Tetralogy of Fallot</li>
+                                <li>Transposition of the Great Arteries</li>
+                                <li>Coarctation of the Aorta</li>
+                                <li>Hypoplastic Left Heart Syndrome</li>
+                                <li>Each specific type of congenital heart disease is accompanied by different defects in heart structure, as well as unique symptoms and complications.</li>
                             </ul>
+                            <br />
+
+
+                            <h2 id="Symptoms">Symptoms:</h2>
+                            <p>Symptoms of congenital heart disease depend on the specific defect and severity of the congenital condition. Some individuals may present with no symptoms or mild symptoms, maybe for many years. Some individuals can have life-threatening problems at birth. Some common symptoms associated with CHD are:</p>
+
+                            <ul>
+                                <li>Leaning Breathing</li>
+                                <li>Poor feeding and failure to thrive in infants</li>
+                                <li>Fatigue</li>
+                                <li>Shortness of breath, particularly with exertion</li>
+                                <li>Heart murmurs</li>
+                                <li>Bluish coloration of the skin</li>
+                            </ul>
+
+                            <br />
+
+                            <h2 id="Diagnosis">Diagnosis:</h2>
+
+                            <p>Congenital heart disease is typically diagnosed through a combination of physical exams, prenatal screening, and diagnostic tests. In some cases, prenatal ultrasound can highlight issues with the heart before birth. After birth, a pediatrician may notice signs of congenital heart disease during a physical exam when they detect abnormal heart sounds or murmurs. The pediatrician may refer the child for more definitive diagnostic testing, which may include 2-dimensional echocardiograms, electrocardiograms (ECG), Spo2 monitoring, and possibly cardiac catheterization.</p>
+
                             <br />
 
                             <figure className="inline-illustration">
                                 <img
-                                    src={Heart_Attack2}
+                                    src={Heart_Disease}
                                     alt="Everyday living with a pacemaker"
                                     loading="lazy"
                                     decoding="async"
@@ -102,21 +127,24 @@ function Dengue() {
                             </figure> <br />
 
 
-                            <h2 id="Proactive">Taking A Proactive Approach To Your Heart Health</h2>
-                            <p>At SSHIRC we take a proactive approach to preventive cardiology. Ths is how we can help: </p>
-                            
+                            <h2 id="Treatment">Treatment:</h2>
+                            <p>Treatment for congenital heart disease will depend on the type and severity of the defect. In less serious cases, children may just require observation by a cardiologist, or their congenital heart disease may never require treatment. In more serious cases, treatment may consist of one or more of the following:</p>
+
                             <ul>
-                                <li>Comprehensive Heart Risk Assessment: Our well trained team will assess your individual risk factors for having heart disease including any reported history of heartburn. </li>
-                                <li>Advanced Diagnostics: We use the most leading technology to diagnose and treat potential heart issues at an early stage.</li>
-                                <li>Personalized Treatment Plans: We develop a personalized treatment plan to alleviate your heartburn and improve heart health.</li>
+                                <li>Intervention via catheter. Examples include: Balloon angioplasty or valve repair</li>
+                                <li>Surgical procedures to repair or correct the structural defect</li>
+                                <li>Heart transplantation in the case of life-threatening congenital heart defects</li>
+                                <li>Pinhole surgeries/Device closures</li>
                             </ul>
                             
-                            <p>Remember, early detection and early intervention are the ways to prevent a heart attack. If your heartburn does not go away or is more than just mildly uncomfortable, we encourage you to book an appointment at SSHIRC.</p>
-
                             <br />
 
-                            <h2 style={{color: "blue"}}>Care for your heart starts with awareness. Let's come together for a healthier you!</h2>  <br />
-                            <h2 style={{color : "blue"}}>Shree Saibaba Heart Institute and Research Center: A Partner in Heart Health</h2>  <br />
+                            <h2 id="Conclusion">Conclusion: </h2>
+                            <p>Congenital heart disease is multifactorial, and it is important to consider how this will affect diagnosis and management. Advances in medical technology and treatment have allowed for improved outcomes in treatment so that people with congenital heart disease may be required to lead healthy and fulfilling lives.</p>
+                            
+                            <p>Nevertheless, more research is warranted for a more complete understanding of the causes of CHD and for effective treatment of this complex medical condition. Early detection, appropriate clinical care, and family support are markedly important for individuals living with congenital heart defect conditions.</p>
+
+                            <br />
 
                             {/* CTA */}
                             <footer className="cta-section" aria-labelledby="cta-title">
