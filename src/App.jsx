@@ -65,7 +65,6 @@ function App() {
 
       <main style={{ padding: "2rem", textAlign: "center" }}>
         <ScrollToTop />
-
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -113,11 +112,8 @@ function App() {
           <Route path="/Heart_Disease" element={< Heart_Disease/>} />
           <Route path="/Interventional_Radiology" element={< Interventional_R/>} />
         </Routes>
-
         <ScrollToTop />
-        
       </main>
-
       <footer>
         <Footer />
       </footer>
