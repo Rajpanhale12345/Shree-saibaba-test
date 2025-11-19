@@ -89,7 +89,13 @@ export default function Sitemap() {
               <ListItemLink to="/kidney">Kidney Stone</ListItemLink>
               <ListItemLink to="/spine">Spine Health</ListItemLink>
               <ListItemLink to="/nutrition">Nutrition &amp; Sleep</ListItemLink>
-              <ListItemLink to="/understanding">Understanding Stroke</ListItemLink>
+              <ListItemLink to="/understanding">Understanding Stroke</ListItemLink>              
+              <ListItemLink to="/Cardiac_Surgery">कार्डियाक सर्जरी</ListItemLink>
+              <ListItemLink to="/Dengue">Dengue Disease</ListItemLink>
+              <ListItemLink to="/Vitamin_B12">Vitamin B12</ListItemLink>
+              <ListItemLink to="/Heart_Attack">Heart Attack</ListItemLink>
+              <ListItemLink to="/Heart_Disease">Heart Disease</ListItemLink>
+              <ListItemLink to="/Interventional_Radiology">IR</ListItemLink>
             </ul>
           </section>
 
