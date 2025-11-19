@@ -65,7 +65,7 @@ function Contact() {
         🚨 <span style={{ color: 'blue' }}>Emergency Care</span> : <a href="tel:7041704114">7041704114</a> / <a href="tel:9158887554">9158887554</a>
         <br /><br />
 
-        ☎️ <span style={{ color: 'blue' }}>Landline No</span> : <a href="tel:02532507001">0253 250 7001</a> <br /><br />
+        ☎️ <span style={{ color: 'blue' }}>Landline No</span> : <a href="tel:02533508000">0253 350 8000</a> <br /><br />
 
         📞 <span style={{ color: 'blue' }}>Mob. No</span>: <a href="tel:+919158887554">+91 9158887554</a> <br /><br />
 
