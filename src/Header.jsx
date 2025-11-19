@@ -11,7 +11,7 @@ function Header() {
             <a href="https://www.instagram.com/shreesaibabahospital/"><i   style={{color : "white"}} className="fab fa-instagram"></i></a>
             <a href="https://www.youtube.com/@shreesaibabaheartinstitute"><i   style={{color : "white"}} className="fab fa-youtube"></i></a>
           </div>
-      <p className="header-text"> <a href="tel:02533508000" style={{color : "#ffffffff", fontSize:'15px'}}><button style={{backgroundColor : "#E63946"}} className='appointment'>Book an Appointment : 0253 350 8000</button></a></p>
+      <p className="header-text"> <a href="tel:02533508000" style={{color : "#ffffffff", fontSize:'15px'}}><button style={{backgroundColor : "#E63946"}} className='appointment'>Book an Appointment : 02533508000</button></a></p>
     </header>
     </>
   );
