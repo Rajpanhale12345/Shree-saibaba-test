@@ -13,9 +13,11 @@ import Dengue from './Images/Dengue.png';
 import Vitamin_B12 from './Images/Vitamin_B.png';
 import Heart_Attack1 from './Images/Heart_Attack.png';
 import Heart_Disease from './Images/Heart_Disease.png';
-import Shantanuu from './Images/IR.png';
+import InterR from './Images/IR.png';
+import Pneumonia from './Images/Pneumonia.png'
 import { Link } from 'react-router-dom';
 import { Helmet } from "react-helmet-async";
+
 
 
 
@@ -85,8 +87,13 @@ function Blogs() {
         </Link>
 
         <Link to='/Interventional_Radiology'><div className="imageblog">
-          <img src={Shantanuu} alt="Cardiac Surgery" /><br /> <br />
+          <img src={InterR} alt="Cardiac Surgery" /><br /> <br />
           <h2><i style={{ color: 'red', }}>IR</i></h2></div>
+        </Link>
+
+        <Link to='/Pneumonia'><div className="imageblog">
+          <img src={Pneumonia} alt="Cardiac Surgery" /><br /> <br />
+          <h2><i style={{ color: 'red', }}>Pneumonia</i></h2></div>
         </Link>
 
 
