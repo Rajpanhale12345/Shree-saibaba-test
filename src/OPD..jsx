@@ -129,7 +129,6 @@ const opdData = [
     department: "ONCOLOGIST",
     doctors: [{ name: "DR. AMBARISH CHATARJEE", timing: "On Call" },
       { name: "DR. SULABCHANDRA BHAMARE", timing: "On Call" },
-      { name: "DR. PRANAV CHHAJED", timing: "On Call" }
     ],
   },
   {
