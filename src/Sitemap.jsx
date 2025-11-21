@@ -96,6 +96,7 @@ export default function Sitemap() {
               <ListItemLink to="/Heart_Attack">Heart Attack</ListItemLink>
               <ListItemLink to="/Heart_Disease">Heart Disease</ListItemLink>
               <ListItemLink to="/Interventional_Radiology">IR</ListItemLink>
+              <ListItemLink to="/Pneumonia">Pneumonia</ListItemLink>
             </ul>
           </section>
 
