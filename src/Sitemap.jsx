@@ -3,7 +3,7 @@ import { Link as RouterLink } from "react-router-dom";
 import Upper from "./Upper";
 import { Helmet } from "react-helmet-async";
 
-export default function Sitemap() {
+function Sitemap() {
   const styles = {
     page: { padding: "40px 24px", fontFamily: "system-ui, Segoe UI, Roboto, Arial, sans-serif" },
     title: { margin: "0 0 28px", fontSize: 38, color: "Red", fontWeight: 700 },
@@ -128,3 +128,5 @@ export default function Sitemap() {
     </>
   );
 }
+
+export default Sitemap;

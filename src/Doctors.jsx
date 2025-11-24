@@ -104,6 +104,10 @@ const flattenDoctors = (specs) =>
     }))
   );
 
+
+
+  
+
 const Doctors = () => {
   const [view, setView] = useState("specialty"); // "specialty" | "directory"
   const [q, setQ] = useState("");

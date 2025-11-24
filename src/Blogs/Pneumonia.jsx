@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import Button from "@mui/material/Button";
 import { Helmet } from "react-helmet-async";
 
-function Pneumonia() {
+function Pneumonia_Blog() {
     const otherBlogs = [
         { to: "/spine", title: "Spine Health and Sitting", date: "11 Aug 2025", category: "🏥 Neurosurgery" },
         { to: "/kidney", title: "Kidney Stones", date: "11 Aug 2025", category: "🏥 Urology" },
@@ -234,4 +234,4 @@ function Pneumonia() {
     );
 }
 
-export default Pneumonia;
+export default Pneumonia_Blog;

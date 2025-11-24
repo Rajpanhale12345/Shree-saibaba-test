@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 import Button from "@mui/material/Button";
 import { Helmet } from "react-helmet-async";
 
-function Dengue() {
+function Interventional_blog() {
     const otherBlogs = [
         { to: "/spine", title: "Spine Health and Sitting", date: "11 Aug 2025", category: "🏥 Neurosurgery" },
         { to: "/kidney", title: "Kidney Stones", date: "11 Aug 2025", category: "🏥 Urology" },
@@ -273,4 +273,4 @@ function Dengue() {
     );
 }
 
-export default Dengue;
+export default Interventional_blog;
