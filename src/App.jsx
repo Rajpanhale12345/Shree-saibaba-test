@@ -52,7 +52,8 @@ import Vitamin_B12 from "./Blogs/B12";
 import Heart_Attack from "./Blogs/Heart_Attack";
 import Heart_Disease from "./Blogs/Heart_Disease";
 import Interventional_R from "./Blogs/Interventional_R";
-import Pneumonia from "./Blogs/Pneumonia"
+import Pneumonia from "./Blogs/Pneumonia";
+import Lifestyle from "./Blogs/Lifestyle_Changes";
 
 
 function App() {
@@ -113,6 +114,7 @@ function App() {
           <Route path="/Heart_Disease" element={< Heart_Disease/>} />
           <Route path="/Interventional_Radiology" element={< Interventional_R/>} />
           <Route path="/Pneumonia" element={< Pneumonia/>} />
+          <Route path="/Lifestyle" element={< Lifestyle/>} />
         </Routes>
         <ScrollToTop />
       </main>
