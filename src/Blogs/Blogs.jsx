@@ -15,7 +15,8 @@ import Heart_Attack1 from './Images/Heart_Attack.png';
 import Heart_Disease from './Images/Heart_Disease.png';
 import InterR from './Images/IR.png';
 import Pneumonia from './Images/Pneumonia.png';
-import CABG from './Images/CABG.png'
+import CABG from './Images/CABG.png';
+import Understanding_CABG from './Images/Understanding_CABG.png'
 import { Link } from 'react-router-dom';
 import { Helmet } from "react-helmet-async";
 
@@ -103,7 +104,7 @@ function Blogs() {
         </Link>
 
         <Link to='/Understanding_CABG'><div className="imageblog">
-          <img src={CABG} alt="Cardiac Surgery" /><br /> <br />
+          <img src={Understanding_CABG} alt="Cardiac Surgery" /><br /> <br />
           <h2><i style={{ color: 'red', }}>Understanding CABG</i></h2></div>
         </Link>
 
