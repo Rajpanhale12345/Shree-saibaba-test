@@ -36,7 +36,7 @@ function NutritionBlog() {
                     <article className="kidney-article">
                         {/* Hero */}
                         <header className="kidney-header">
-                            <img
+                            <img style={{objectFit : "fill"}}
                                 src={Understanding_CABG}
                                 alt="Recovery care after hospital discharge"
                                 className="kidney-image"
@@ -81,7 +81,7 @@ function NutritionBlog() {
                             <h2 id="Different">Different Types of Grafts Used in CABG:</h2>
 
                             <figure className="inline-illustration">
-                                <img
+                                <img style={{objectFit : "fill"}}
                                     src={Understanding_CABG1}
                                     alt="Everyday living with a pacemaker"
                                     loading="lazy"
@@ -132,7 +132,7 @@ function NutritionBlog() {
                             <h2 id="Advancements">Advancements in Minimally Invasive CABG Techniques:</h2>
 
                             <figure className="inline-illustration">
-                                <img
+                                <img style={{objectFit : "fill"}}
                                     src={Understanding_CABG2}
                                     alt="Everyday living with a pacemaker"
                                     loading="lazy"
