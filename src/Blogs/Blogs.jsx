@@ -102,6 +102,11 @@ function Blogs() {
           <h2><i style={{ color: 'red', }}>Lifestyle</i></h2></div>
         </Link>
 
+        <Link to='/Understanding_CABG'><div className="imageblog">
+          <img src={CABG} alt="Cardiac Surgery" /><br /> <br />
+          <h2><i style={{ color: 'red', }}>Understanding CABG</i></h2></div>
+        </Link>
+
 
       </div><br /><br />
     </>

@@ -54,6 +54,7 @@ import Heart_Disease from "./Blogs/Heart_Disease";
 import Interventional_R from "./Blogs/Interventional_R";
 import Pneumonia from "./Blogs/Pneumonia";
 import Lifestyle from "./Blogs/Lifestyle_Changes";
+import Understanding_CABG from "./Blogs/Cabg"
 
 
 function App() {
@@ -115,6 +116,7 @@ function App() {
           <Route path="/Interventional_Radiology" element={< Interventional_R/>} />
           <Route path="/Pneumonia" element={< Pneumonia/>} />
           <Route path="/Lifestyle" element={< Lifestyle/>} />
+          <Route path="/Understanding_CABG" element={< Understanding_CABG/>} />
         </Routes>
         <ScrollToTop />
       </main>

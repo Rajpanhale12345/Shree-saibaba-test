@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 import Button from "@mui/material/Button";
 import { Helmet } from "react-helmet-async";
 
-function Pneumonia_Blog() {
+function Lifestyle_Blog() {
     const otherBlogs = [
         { to: "/spine", title: "Spine Health and Sitting", date: "11 Aug 2025", category: "🏥 Neurosurgery" },
         { to: "/kidney", title: "Kidney Stones", date: "11 Aug 2025", category: "🏥 Urology" },
@@ -52,7 +52,7 @@ function Pneumonia_Blog() {
                                 <Link to="/cardiology" className="kidney-category">
                                     Dr. Aniruddha Dharmadhikari
                                 </Link>
-                                <span className="kidney-date">🕗 1 February 2024</span>
+                                <span className="kidney-date">🕗 15 February 2024</span>
                             </div>
                             <h1 className="kidney-title">
                                 Lifestyle Changes and Medications After CABG
@@ -232,4 +232,4 @@ function Pneumonia_Blog() {
     );
 }
 
-export default Pneumonia_Blog;
+export default Lifestyle_Blog;
