@@ -30,23 +30,23 @@ function Home() {
   const canonical = `https://shreesaibabamultispecialityhospital.com/${pathname}`;
 
   const specialties = [
-    { src: spe2,                className: "cardiology",        path: "/cardiology" },
-    { src: spe13,           className: "cvts",              path: "/cardiovascular" },
-    { src: spe4,                  className: "neurology",         path: "/neurology" },
-    { src: spe5,                 className: "spine-care",        path: "/spinecare" },
-    { src: spe14,               className: "orthopaedic",       path: "/ortho" },
-    { src: spe9,                 className: "nephrology",        path: "/nephrology" },
-    { src: spe10,                   className: "urology",           path: "/urology" },
-    { src: spe16,         className: "general-medicine",  path: "/generalmedicine" },
-    { src: spe6,            className: "general-surgery",   path: "/generalsurgery" },
-    { src: spe3,          className: "gastro",            path: "/gastroenterology" },
-    { src: spe8,            className: "plastic-surgery",   path: "/plasticsurgery" },
-    { src: spe11,               className: "gynaecology",       path: "/gynaecology" },
-    { src: spe18,  className: "ir",                path: "/interventionalradiology" },
-    { src: spe19,                 className: "radiology",         path: "/radiology" },
-    { src: spe17,              className: "neurosurgery",      path: "/neurosurgery" },
-    { src: spe15,         className: "checkup",           path: "/fullbodycheckup" },
-    { src: spe1,                 className: "facilities",        path: "/facilities" },
+    { src: spe2, className: "cardiology", path: "/cardiology" },
+    { src: spe13, className: "cvts", path: "/cardiovascular" },
+    { src: spe4, className: "neurology", path: "/neurology" },
+    { src: spe5, className: "spine-care", path: "/spinecare" },
+    { src: spe14, className: "orthopaedic", path: "/ortho" },
+    { src: spe9, className: "nephrology", path: "/nephrology" },
+    { src: spe10, className: "urology", path: "/urology" },
+    { src: spe16, className: "general-medicine", path: "/generalmedicine" },
+    { src: spe6, className: "general-surgery", path: "/generalsurgery" },
+    { src: spe3, className: "gastro", path: "/gastroenterology" },
+    { src: spe8, className: "plastic-surgery", path: "/plasticsurgery" },
+    { src: spe11, className: "gynaecology", path: "/gynaecology" },
+    { src: spe18, className: "ir", path: "/interventionalradiology" },
+    { src: spe19, className: "radiology", path: "/radiology" },
+    { src: spe17, className: "neurosurgery", path: "/neurosurgery" },
+    { src: spe15, className: "checkup", path: "/fullbodycheckup" },
+    { src: spe1, className: "facilities", path: "/facilities" },
   ];
 
   const renderRow = (items) => (
@@ -91,7 +91,7 @@ function Home() {
         <meta property="og:url" content={canonical} />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
-<br />
+      <br />
       <div>
         <div className="video-container">
           <video height="auto" autoPlay loop muted playsInline poster="/video-poster.jpg">
@@ -123,18 +123,18 @@ function Home() {
         <br /><br /><hr />
         <div className='book'><br /><br /><br />
 
-        <h2 className="titlemed" style={{ color: 'blue', fontSize: '25px', fontWeight: 500 }}>Take Charge of Your Health Today!</h2><br />
-        <p className="desc">
-          Book your complete health screening package now — 2D Echo, ECG, X-Ray, Ultrasound, Lipid Profile, Thyroid &amp; Diabetes tests and more.
-        </p><br />
+          <h2 className="titlemed" style={{ color: 'blue', fontSize: '25px', fontWeight: 500 }}>Take Charge of Your Health Today!</h2><br />
+          <p className="desc">
+            Book your complete health screening package now — 2D Echo, ECG, X-Ray, Ultrasound, Lipid Profile, Thyroid &amp; Diabetes tests and more.
+          </p><br />
 
-        <Link to="/medical"><Button variant="contained" style={{ fontFamily: 'poppins' }}>Book an Appointment</Button></Link>
+          <Link to="/medical"><Button variant="contained" style={{ fontFamily: 'poppins' }}>Book an Appointment</Button></Link>
 
-        <br /><br /><br /></div><hr />  <div className='testimonials-container'><br /><br />
-      
-              <Test/>
-                  </div>
-        
+          <br /><br /><br /></div><hr />  <div className='testimonials-container'><br /><br />
+
+          <Test />
+        </div>
+
         <OPD />
       </div>
     </>

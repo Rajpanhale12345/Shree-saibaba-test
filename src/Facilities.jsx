@@ -1,7 +1,7 @@
 // Facilities.jsx
 import './Facilities.css';
 
-export default function Facilities() {
+function Facilities() {
   return (
     <main className="page-content">
      
@@ -9,3 +9,6 @@ export default function Facilities() {
     </main>
   );
 }
+
+
+export default Facilities;

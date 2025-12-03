@@ -40,7 +40,7 @@ const ExpandMore = styled((props) => {
   ],
 }));
 
- function Card1 ({image,text,text1,text2,text3}) {
+function Card1 ({image,text,text1,text2,text3}) {
   const [expanded, setExpanded] = React.useState(false);
 
   const handleExpandClick = () => {

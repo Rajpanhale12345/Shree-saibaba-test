@@ -1,6 +1,6 @@
 import React from 'react'
 
- function Services() {
+function Services() {
   return (
     <div>
       this is the services page

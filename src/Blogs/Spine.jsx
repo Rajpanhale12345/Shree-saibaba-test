@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import { Helmet } from "react-helmet-async";
 
-export default function Spine() {
+function Spine_Blog() {
   const otherBlogs = [
 
     { to: '/Cardio', title: 'Pacemaker care', date: '11 Aug 2025', category: '🏥 Cardiology' },
@@ -146,3 +146,6 @@ export default function Spine() {
     </>
   );
 }
+
+
+export default Spine_Blog;
