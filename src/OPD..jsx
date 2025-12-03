@@ -26,9 +26,9 @@ const opdData = [
   {
     department: "ORTHOPAEDIC",
     doctors: [
-         { name: "DR. AJINKYA DESALE", timing: "12:30 pm to 3:00pm" },
+         { name: "DR. AJINKYA DESALE", timing: "12:30 pm to 5:00pm" },
       { name: "DR. SATYEN JOSHI", timing: "On Call" },
-      { name: "DR. SANDEEP PANGAVHANE", timing: "On Call" },
+    
       { name: "DR. BRIJBHUSHAN MAHAJAN", timing: "On Call" },
       { name: "DR. SWAPNIL MAHALE", timing: "On Call" },
    
@@ -138,7 +138,7 @@ const opdData = [
     doctors: [{ name: "DR. DIVYA BANGERA", timing: "On Call" }],
   },
     {
-    department: "Anesthetic",
+    department: "ANESTHETIC",
     doctors: [{ name: "DR. SUMAN KESHAV", timing: "On Call" }],
   },
   

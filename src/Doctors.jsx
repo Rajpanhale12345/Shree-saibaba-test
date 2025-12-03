@@ -72,7 +72,7 @@ const specialties = [
        },
 
   { name: "Urology", color: "#0a9396", doctors: [{ name: "DR. AMEY PATIL", degree: "MBBS, MS, MCh" }] },
-  { name: "Orthopaedic", color: "#0a9396", doctors: [{ name: "DR. SATYEN JOSHI", degree: "MBBS, MD, MCh" }] },
+  { name: "Orthopaedic", color: "#0a9396", doctors: [{ name: "DR. AJINKYA DESALE", degree: "MBBS, MD, MCh" }] },
   { name: "Interventional Radiology", color: "#0a9396", doctors: [{ name: "DR. AJIT PATIL", degree: "MBBS, MD, FVIR" }] },
   { name: "Nephrologist", color: "#0a9396", doctors: [{ name: "DR. ABHIJEET MORE ", degree: "MBBS, MCh" }] },
   { name: "Plastic Surgeon", color: "#0a9396", doctors: [{ name: "DR. LALIT DERLE", degree: "MBBS, DNB, MS" }] },
