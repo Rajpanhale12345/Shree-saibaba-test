@@ -6,7 +6,7 @@ const opdData = [
     department: "CARDIOLOGIST",
     doctors: [
       { name: "DR. ANIRUDDHA DHARMADHIKARI", timing: "2.00 pm to 6.00 pm" },
-      { name: "DR. AMIT CHAUDHARI", timing: "4.00 pm to 5.00 pm" },
+      { name: "DR. AMIT CHAUDHARI", timing: "4.00 pm to 9.00 pm" },
       { name: "DR. NILESH TAWADE", timing: "12.00 pm to 3.00 pm" },
      
     ],
@@ -29,7 +29,8 @@ const opdData = [
          { name: "DR. AJINKYA DESALE", timing: "12:30 pm to 3:00pm" },
       { name: "DR. SATYEN JOSHI", timing: "On Call" },
       { name: "DR. SANDEEP PANGAVHANE", timing: "On Call" },
-      { name: "DR. BRIJBHUSHAN MAHAJAN", timing: "On Call" }
+      { name: "DR. BRIJBHUSHAN MAHAJAN", timing: "On Call" },
+      { name: "DR. SWAPNIL MAHALE", timing: "On Call" },
    
     ],
   },
@@ -49,7 +50,7 @@ const opdData = [
   },
   {
     department: "NEUROLOGIST",
-    doctors: [{ name: "DR. RAHUL NAIK", timing: "10:00 am to 7:00 pm" }],
+    doctors: [{ name: "DR. RAHUL NAIK", timing: "10:00 am to 5:00 pm" }],
   },
   {
     department: "NEURO SURGEON",
@@ -62,18 +63,18 @@ const opdData = [
     department: "UROSURGEON",
     doctors: [
       { name: "DR. AMEY PATIL", timing: "12:30 pm to 1:30 pm" },
-       { name: "DR. AMIT SINGAL", timing: "On Call" }
+       { name: "DR. AMIT SINGAL", timing: "1:30 pm to 2:30 pm" },
+       { name: "DR. PRANAV CHHAJED", timing: "On Call" }
     ],
   },
   {
     department: "NEPHROLOGIST",
-    doctors: [{ name: "DR. ABHIJEET MORE", timing: "11 to 12 and 5 to 6" }],
+    doctors: [{ name: "DR. ABHIJEET MORE", timing: "11 am to 12 pm and 5pm to 6 pm" }],
   },
   {
     department: "GASTROENTROLOGY",
     doctors: [
-      { name: "DR. SUDARSHAN PATIL", timing: "On Call" },
-      { name: "DR. MAHESH PATIL", timing: "On Call" },
+    
           { name: "DR. SOHAM DOSHI", timing: "8:00 am to 9:00 am and 5:00 pm to 6:00 pm" }
     ],
   },
@@ -102,7 +103,8 @@ const opdData = [
     department: "GENERAL SURGERY",
     doctors: [
       { name: "DR. AMIT KELE", timing: "On Call" },
-        { name: "DR. TOSHIT LODHA", timing: "On Call" }
+        { name: "DR. TOSHIT LODHA", timing: "On Call" },
+         { name: "DR. HEMANT DEORE", timing: "1:00 pm to 2:00 pm" }
 
 
     ],
@@ -145,9 +147,7 @@ const opdData = [
 
 const OPD = () => {
   return (
-
     <>
-
     <div className="opd-container">
       <h2 className="opd-title" style={{color:"blue", fontWeight : "500", fontSize : 25}}>OPD Doctors & Timings</h2><br />
       {opdData.map((dept, index) => (
@@ -174,7 +174,6 @@ const OPD = () => {
         </div>
       ))}
     </div>
-
 </>
   );
 };
