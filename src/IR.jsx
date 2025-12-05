@@ -148,12 +148,14 @@ const styles = {
   list: {
     paddingLeft: '18px',
     margin: 0,
+    textAlign : "left"
   },
   listItem: {
     fontSize: '14px',
     lineHeight: 1.7,
     color: '#1e293b',
     marginBottom: '6px',
+    textAlign : "centre"
   },
 
   // Grid / layout helpers

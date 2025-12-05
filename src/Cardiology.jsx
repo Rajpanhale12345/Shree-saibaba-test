@@ -122,19 +122,21 @@ const styles = {
   },
   sectionHeaderRow: {
     display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'baseline',
+    justifyContent: 'flex-start',
+    alignItems: 'flex-start',
     gap: '10px',
     marginBottom: '12px',
-  },
+},
+
   sectionTitle: {
     fontSize: '18px',
     fontWeight: 700,
     color: '#0f172a',
     display: 'flex',
-    alignItems: 'center',
+    alignItems: 'left',
     gap: '8px',
   },
+ 
   sectionAccentBar: {
     width: '3px',
     height: '18px',
@@ -145,16 +147,20 @@ const styles = {
     fontSize: '12px',
     color: '#94a3b8',
   },
-  list: {
-    paddingLeft: '18px',
-    margin: 0,
-  },
-  listItem: {
-    fontSize: '14px',
-    lineHeight: 1.7,
-    color: '#1e293b',
-    marginBottom: '6px',
-  },
+ list: {
+  paddingLeft: '18px',
+  margin: 0,
+  textAlign: 'left',   // ADD THIS LINE
+},
+
+ listItem: {
+  fontSize: '14px',
+  lineHeight: 1.7,
+  color: '#1e293b',
+  marginBottom: '6px',
+  textAlign: 'left',   // ADD THIS LINE
+},
+
 
   // Grid / layout helpers
   twoColumnGrid: {

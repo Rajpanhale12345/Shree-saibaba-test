@@ -252,7 +252,7 @@ export default function TieUps() {
         <footer className="footer">
           <div className="cta">
             <h4>Need help with approvals?</h4>
-            <p>Our insurance helpdesk can verify eligibility and guide pre-auth within minutes.</p>
+            <p>Our insurance helpdesk can verify eligibility and guide you through pre-authorization within minutes.</p>
            <br /> <a className="btn" href="/contact">Contact Helpdesk</a>
           </div>
             <a

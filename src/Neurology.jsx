@@ -148,6 +148,7 @@ const styles = {
   list: {
     paddingLeft: '18px',
     margin: 0,
+    textAlign : "left"
   },
   listItem: {
     fontSize: '14px',
