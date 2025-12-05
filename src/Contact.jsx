@@ -56,8 +56,9 @@ function Contact() {
 
       <div className="address">
         📍 Shree Saibaba Heart Institute & Multispeciality Hospital,
-        Opp. Wani House, Mumbai Naka, Mirajkar Nagar,
-        Nashik, Maharashtra 422001 <br /><br />
+            Mumbai-Agra Highway, Opp. Pillar No. 125-127, Bhaba Nagar, Dwarka,
+            
+            Nashik.- 422001 <br /><br />
 
         🚑 <span style={{ color: 'blue' }}>Cardiac Ambulance</span> : <a href="tel:9158887554">9158887554</a>
         <br /><br />

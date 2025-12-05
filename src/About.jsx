@@ -83,22 +83,22 @@ function About() {
         <div className='service-sec'>
           <div className='service-section'>
             <span><gen style={{ color: 'red' }}>General OPD</gen> <br />
-              <nm style={{ color: 'white' }}>Mon-Sat : 10:00AM - 08:00PM <br />
+              <nm style={{ color: 'white' }}>24 x 7<br />
                 <a href='tel:7041704114'>Call on: 7041 7041 14</a></nm> <br /><br />
             </span><br /></div>
           <div className='service-section1'>
             <span><gen style={{ color: 'red' }}>Ambulance</gen><br />
-              <nm style={{ color: 'white' }}>Mon-Sat : 10:00AM - 08:00PM <br />
+              <nm style={{ color: 'white' }}>24 x 7<br />
                 <a href='tel:7041704114'>Call on: 7041 7041 14</a></nm> <br /><br />
             </span> <br /></div>
           <div className='service-section2'>
             <span><gen style={{ color: 'red', }}>Emergency Care</gen><br />
-              <nm style={{ color: 'white' }}>Mon-Sat : 10:00AM - 08:00PM <br />
+              <nm style={{ color: 'white' }}>24 x 7<br />
                 <a href='tel:7041704114'>Call on: 7041 7041 14</a></nm> <br />
             </span> <br /></div>
           <div className='service-section3'>
             <span><gen style={{ color: 'red', }}>Consultation No.</gen> <br />
-              <nm style={{ color: 'white' }}>Mon-Sat : 10:00AM - 08:00PM <br />
+              <nm style={{ color: 'white' }}>24 x 7<br />
                 <a href='tel:7041704114'>Call on: 7041 7041 14</a></nm><br /><br />
             </span> </div>
         </div>
