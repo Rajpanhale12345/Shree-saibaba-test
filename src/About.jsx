@@ -17,10 +17,24 @@ function About() {
 
       <Helmet>
         <title>About | Shree Saibaba Multispeciality Hospital</title>
-        <meta name='description' content='' />
-        <meta name='keywords' content='' />
-        <meta name='og:description' content='' />
+
+        <meta name="description" content="Shree Saibaba Heart Institute & Multispeciality Hospital in Nashik delivers advanced cardiac, orthopaedic, robotic joint care, diagnostics, and 24x7 emergency services." />
+        <meta name="keywords" content="shree saibaba hospital nashik, saibaba heart institute, multispeciality hospital nashik, cardiac hospital nashik, cardiology services nashik, orthopaedic care nashik, robotic joint replacement nashik, emergency hospital nashik, best heart hospital nashik, healthcare services nashik" />
+        <meta property="og:description" content="A leading centre for advanced cardiac care, orthopaedics, robotic joint replacement, diagnostics, and 24x7 emergency services in Nashik." />
+
+        <meta property="og:title" content="About | Shree Saibaba Heart Institute & Multispeciality Hospital, Nashik" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://shreesaibabamultispecialityhospital.com/about" />
+        <meta property="og:image" content="https://shreesaibabamultispecialityhospital.com/assets/mission-CCSDa_Bs.jpg" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="About | Shree Saibaba Multispeciality Hospital" />
+        <meta name="twitter:description" content="A trusted hospital in Nashik offering excellence in cardiology, orthopaedics, robotic surgery, diagnostics, and 24x7 emergency care." />
+        <meta name="twitter:image" content="https://shreesaibabamultispecialityhospital.com/assets/mission-CCSDa_Bs.jpg" />
+
+        <link rel="canonical" href="https://shreesaibabamultispecialityhospital.com/about" />
       </Helmet>
+
 
       <Upper text="About Us" />
 
@@ -30,26 +44,26 @@ function About() {
 
           <div className='title'>
 
-            <p style={{ textAlign: "left", fontSize: "15px" }}>The Saibaba Heart Institute & Multispeciality Hospital leads the 
-              industry in high-end cardiac services as well as a well-established, reputable centre with total Orthopaedic care. 
-              The Institute has built an impressive reputation in many areas of healthcare delivery by providing patient-focused 
-              and ethical healthcare that is affordable, with the specific vision to be a Centre of Excellence in the healthcare 
-              Community, providing state-of-the-art infrastructure and technology to medical professionals, along with a 
-              compassionate and healing environment for patients. Our mission includes a commitment to both excellence and 
+            <p style={{ textAlign: "left", fontSize: "15px" }}>The Saibaba Heart Institute & Multispeciality Hospital leads the
+              industry in high-end cardiac services as well as a well-established, reputable centre with total Orthopaedic care.
+              The Institute has built an impressive reputation in many areas of healthcare delivery by providing patient-focused
+              and ethical healthcare that is affordable, with the specific vision to be a Centre of Excellence in the healthcare
+              Community, providing state-of-the-art infrastructure and technology to medical professionals, along with a
+              compassionate and healing environment for patients. Our mission includes a commitment to both excellence and
               accountability for all health care services.</p> <br />
 
-            <p style={{ textAlign: "left", fontSize: "15px" }}>Saibaba Heart Institute & Multispeciality Hospital combines 
-              cutting-edge medical technology with personal devotion to provide local patients with an easy-to-access, 
-              comprehensive facility where they can receive consistently superior and exceptional care. In addition to 
-              being nationally recognised leaders in cardiology and heart disease care, we provide comprehensive Orthopaedic 
-              services for all external injuries, as well as comprehensive care and repair of the spine, robotic arthroscopy, 
-              complex osteosynthesis, and many other procedures for increased speed of recovery, precision-guided-motion results, 
+            <p style={{ textAlign: "left", fontSize: "15px" }}>Saibaba Heart Institute & Multispeciality Hospital combines
+              cutting-edge medical technology with personal devotion to provide local patients with an easy-to-access,
+              comprehensive facility where they can receive consistently superior and exceptional care. In addition to
+              being nationally recognised leaders in cardiology and heart disease care, we provide comprehensive Orthopaedic
+              services for all external injuries, as well as comprehensive care and repair of the spine, robotic arthroscopy,
+              complex osteosynthesis, and many other procedures for increased speed of recovery, precision-guided-motion results,
               and enhanced long-term mobility.</p>  <br />
 
-            <p style={{ textAlign: "left", fontSize: "15px" }}>The Saibaba Heart Institute and Multispeciality Hospital offers a 
-              complete and total Healthcare Package. This means that all of our services are included and delivered in one location; 
-              cardiac, orthopaedic, robotic joint replacement, highly accurate diagnostic imaging service, and 24x7 emergency 
-              services are all available at one location, ensuring the best possible outcomes for each patient. Our staff embraces 
+            <p style={{ textAlign: "left", fontSize: "15px" }}>The Saibaba Heart Institute and Multispeciality Hospital offers a
+              complete and total Healthcare Package. This means that all of our services are included and delivered in one location;
+              cardiac, orthopaedic, robotic joint replacement, highly accurate diagnostic imaging service, and 24x7 emergency
+              services are all available at one location, ensuring the best possible outcomes for each patient. Our staff embraces
               an environment of Integrity and Innovation while serving the best health interests of each patient in their community.</p>
             {/* <i> Our <span style={{color : 'blue'}}>Vision </span>and<span  style={{color : 'blue'}}> Mission</span></i> */}
           </div>
