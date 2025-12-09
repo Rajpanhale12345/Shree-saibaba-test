@@ -14,11 +14,11 @@ import Vitamin_B12 from './Images/Vitamin_B.png';
 import Heart_Attack1 from './Images/Heart_Attack.png';
 import Heart_Disease from './Images/Heart_Disease.png';
 import InterR from './Images/IR.png';
-import Pneumonia from './Images/Pneumonia.png';
+import Pneumoniaa from './Images/Pneumonia.png';
 import CABG from './Images/CABG.png';
-import Understanding_CABG from './Images/Understanding_CABG.png';
-import Kidney_Health from './Images/Kidney_Health.jpg';
-import holter from './Images/Holter.png'
+import Understanding_CABGG from './Images/Understanding_CABG.png';
+import Kidney_Healthh from './Images/Kidney_Health.jpg';
+import holter from './Images/Holterr.png';
 import { Link } from 'react-router-dom';
 import { Helmet } from "react-helmet-async";
 
@@ -96,7 +96,7 @@ function Blogs() {
         </Link>
 
         <Link to='/Pneumonia'><div className="imageblog">
-          <img src={Pneumonia} alt="Cardiac Surgery" /><br /> <br />
+          <img src={Pneumoniaa} alt="Cardiac Surgery" /><br /> <br />
           <h2><i style={{ color: 'red', }}>Pneumonia</i></h2></div>
         </Link>
 
@@ -106,12 +106,12 @@ function Blogs() {
         </Link>
 
         <Link to='/Understanding_CABG'><div className="imageblog">
-          <img src={Understanding_CABG} alt="Cardiac Surgery" /><br /> <br />
+          <img src={Understanding_CABGG} alt="Cardiac Surgery" /><br /> <br />
           <h2><i style={{ color: 'red', }}>Understanding CABG</i></h2></div>
         </Link>
 
         <Link to='/Kidney_Health'><div className="imageblog">
-          <img src={Kidney_Health} alt="Cardiac Surgery" /><br /> <br />
+          <img src={Kidney_Healthh} alt="Cardiac Surgery" /><br /> <br />
           <h2><i style={{ color: 'red', }}>Kidney Health</i></h2></div>
         </Link>
 

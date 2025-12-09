@@ -52,7 +52,11 @@ import Vitamin_B12 from "./Blogs/B12";
 import Heart_Attack from "./Blogs/Heart_Attack";
 import Heart_Disease from "./Blogs/Heart_Disease";
 import Interventional_R from "./Blogs/Interventional_R";
-import Holter from "./Blogs/holter_monitors"
+import Pneumonia from "./Blogs/Pneumonia";
+import Lifestyle from "./Blogs/Lifestyle_Changes";
+import Understanding_CABG from "./Blogs/understanding_stroke";
+import Kidney_Health from "./Blogs/Kidney_Health";
+import Holter from "./Blogs/holter_monitors";
 // import Popup from "./popup";
 
 function App() {
@@ -113,6 +117,10 @@ function App() {
           <Route path="/Heart_Attack" element={< Heart_Attack/>} />
           <Route path="/Heart_Disease" element={< Heart_Disease/>} />
           <Route path="/Interventional_Radiology" element={< Interventional_R/>} />
+          <Route path="/Pneumonia" element={< Pneumonia/>} />
+          <Route path="/Lifestyle" element={< Lifestyle/>} />
+          <Route path="/Understanding_CABG" element={< Understanding_CABG/>} />
+          <Route path="/Kidney_Health" element={< Kidney_Health/>} />
           <Route path="/Holter" element={< Holter/>} />
      
         </Routes>
