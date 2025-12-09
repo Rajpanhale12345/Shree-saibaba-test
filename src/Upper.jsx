@@ -21,9 +21,9 @@ const Upper = ({ text }) => {
       </div>
 <br /><br /><br /><br /><br /><br /><br />
       {/* Down Arrow */}
-      <div className="down-arrow" onClick={scrollToDoctors}>
+      {/* <div className="down-arrow" onClick={scrollToDoctors}>
         <FaChevronDown />
-      </div>
+      </div> */}
     </div>
   );
 };
