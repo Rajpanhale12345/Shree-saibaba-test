@@ -42,7 +42,7 @@ function Holter_Blog() {
                                 <Link to="/cardiology" className="kidney-category">
                                     Dr. Aniruddha Dharmadhikari
                                 </Link>
-                                <span className="kidney-date">🕗 08 January 2024</span>
+                                <span className="kidney-date">🕗 28 April 2023</span>
                             </div>
                             <h1 className="kidney-title">
                                 General Information About Holter Monitors
