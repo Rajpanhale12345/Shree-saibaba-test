@@ -57,6 +57,9 @@ import Lifestyle from "./Blogs/Lifestyle_Changes";
 import Understanding_CABG from "./Blogs/understanding_stroke";
 import Kidney_Health from "./Blogs/Kidney_Health";
 import Holter from "./Blogs/holter_monitors";
+import Spine_Joint from "./Blogs/Spine_Joint";
+import Varicose from "./Blogs/Varicose_Veins";
+import Angiographies from "./Blogs/Angiographies"
 // import Popup from "./popup";
 
 function App() {
@@ -122,6 +125,9 @@ function App() {
           <Route path="/Understanding_CABG" element={< Understanding_CABG/>} />
           <Route path="/Kidney_Health" element={< Kidney_Health/>} />
           <Route path="/Holter" element={< Holter/>} />
+          <Route path="/Spine_Joint" element={< Spine_Joint/>} />
+          <Route path="/Varicose" element={< Varicose/>} />
+          <Route path="/Angiographies" element={< Angiographies/>} />
      
         </Routes>
         <ScrollToTop />
