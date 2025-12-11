@@ -59,7 +59,10 @@ import Kidney_Health from "./Blogs/Kidney_Health";
 import Holter from "./Blogs/holter_monitors";
 import Spine_Joint from "./Blogs/Spine_Joint";
 import Varicose from "./Blogs/Varicose_Veins";
-import Angiographies from "./Blogs/Angiographies"
+import Angioplasty from "./Blogs/Angioplasty";
+import Angiography from "./Blogs/Angiography";
+import Angiographies from "./Blogs/Angiographies";
+import Heart_Healthy from "./Blogs/Heart_Healthy";
 // import Popup from "./popup";
 
 function App() {
@@ -127,7 +130,10 @@ function App() {
           <Route path="/Holter" element={< Holter/>} />
           <Route path="/Spine_Joint" element={< Spine_Joint/>} />
           <Route path="/Varicose" element={< Varicose/>} />
-          <Route path="/Angiographies" element={< Angiographies/>} />
+          <Route path="/Angiographies" element={< Angioplasty/>} />
+          <Route path="/Angiography" element={< Angiography/>} />
+          <Route path="/Angiographiess" element={< Angiographies/>} />
+          <Route path="/Heart_Healthy" element={< Heart_Healthy/>} />
      
         </Routes>
         <ScrollToTop />

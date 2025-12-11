@@ -21,7 +21,10 @@ import Kidney_Healthh from './Images/Kidney_Health.jpg';
 import holter from './Images/Holterr.png';
 import SpineJ from './Images/Spine_Joint1.png';
 import Varicose from './Images/Varicose_Veins.png';
-import Angiographiess from './Images/Angiographies.png'
+import Angiographiess from './Images/Angioplasty.png';
+import Angiographyy from './Images/Angiography.png';
+import Angiographies from './Images/Angiographies.png';
+import Heart_healthy from './Images/Heart_healthy.jpg'
 import { Link } from 'react-router-dom';
 import { Helmet } from "react-helmet-async";
 
@@ -130,12 +133,27 @@ function Blogs() {
 
         <Link to='/Angiographies'><div className="imageblog">
           <img src={Angiographiess} alt="Cardiac Surgery" /><br /> <br />
-          <h2><i style={{ color: 'red', }}>Angiographies</i></h2></div>
+          <h2><i style={{ color: 'red', }}>Angioplasty</i></h2></div>
         </Link>
 
         <Link to='/Holter'><div className="imageblog">
           <img src={holter} alt="Cardiac Surgery" /><br /> <br />
           <h2><i style={{ color: 'red', }}>Holter Monitors</i></h2></div>
+        </Link>
+
+        <Link to='/Angiography'><div className="imageblog">
+          <img src={Angiographyy} alt="Cardiac Surgery" /><br /> <br />
+          <h2><i style={{ color: 'red', }}>Benefits of Radial Angiography</i></h2></div>
+        </Link>
+
+        <Link to='/Angiographiess'><div className="imageblog">
+          <img src={Angiographies} alt="Cardiac Surgery" /><br /> <br />
+          <h2><i style={{ color: 'red', }}>Types of Angiographies</i></h2></div>
+        </Link>
+
+        <Link to='/Heart_Healthy'><div className="imageblog">
+          <img src={Heart_healthy} alt="Cardiac Surgery" /><br /> <br />
+          <h2><i style={{ color: 'red', }}>Types of Angiographies</i></h2></div>
         </Link>
 
 
