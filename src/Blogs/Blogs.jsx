@@ -153,7 +153,7 @@ function Blogs() {
 
         <Link to='/Heart_Healthy'><div className="imageblog">
           <img src={Heart_healthy} alt="Cardiac Surgery" /><br /> <br />
-          <h2><i style={{ color: 'red', }}>Types of Angiographies</i></h2></div>
+          <h2><i style={{ color: 'red', }}>Heart-Healthy Nutrition</i></h2></div>
         </Link>
 
 
