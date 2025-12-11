@@ -63,6 +63,7 @@ import Angioplasty from "./Blogs/Angioplasty";
 import Angiography from "./Blogs/Angiography";
 import Angiographies from "./Blogs/Angiographies";
 import Heart_Healthy from "./Blogs/Heart_Healthy";
+import Stress_Anxiety from "./Blogs/Stress_Anxiety";
 // import Popup from "./popup";
 
 function App() {
@@ -134,6 +135,7 @@ function App() {
           <Route path="/Angiography" element={< Angiography/>} />
           <Route path="/Angiographiess" element={< Angiographies/>} />
           <Route path="/Heart_Healthy" element={< Heart_Healthy/>} />
+          <Route path="/Stress_Anxiety" element={< Stress_Anxiety/>} />
      
         </Routes>
         <ScrollToTop />

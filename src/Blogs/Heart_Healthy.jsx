@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import Button from "@mui/material/Button";
 import { Helmet } from "react-helmet-async";
 
-function Angiographies_Blog() {
+function Heart_Blog() {
     const otherBlogs = [
         { to: "/spine", title: "Spine Health and Sitting", date: "11 Aug 2025", category: "🏥 Neurosurgery" },
         { to: "/kidney", title: "Kidney Stones", date: "11 Aug 2025", category: "🏥 Urology" },
@@ -156,4 +156,4 @@ function Angiographies_Blog() {
     );
 }
 
-export default Angiographies_Blog;
+export default Heart_Blog;

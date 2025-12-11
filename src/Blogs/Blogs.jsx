@@ -24,7 +24,8 @@ import Varicose from './Images/Varicose_Veins.png';
 import Angiographiess from './Images/Angioplasty.png';
 import Angiographyy from './Images/Angiography.png';
 import Angiographies from './Images/Angiographies.png';
-import Heart_healthy from './Images/Heart_healthy.jpg'
+import Heart_healthy from './Images/Heart_healthy.jpg';
+import Stress_Anxiety from './Images/Stress_Anxiety.png';
 import { Link } from 'react-router-dom';
 import { Helmet } from "react-helmet-async";
 
@@ -154,6 +155,11 @@ function Blogs() {
         <Link to='/Heart_Healthy'><div className="imageblog">
           <img src={Heart_healthy} alt="Cardiac Surgery" /><br /> <br />
           <h2><i style={{ color: 'red', }}>Heart-Healthy Nutrition</i></h2></div>
+        </Link>
+
+        <Link to='/Stress_Anxiety'><div className="imageblog">
+          <img src={Stress_Anxiety} alt="Cardiac Surgery" /><br /> <br />
+          <h2><i style={{ color: 'red', }}>Stress & Anxiety</i></h2></div>
         </Link>
 
 
