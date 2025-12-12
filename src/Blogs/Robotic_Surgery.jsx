@@ -29,12 +29,12 @@ function Stress_Blog() {
                 <title>Robotic Surgery | Shree Saibaba Multispeciality Hospital</title>
                 <meta name="description" content="Shree Saibaba Multispeciality Hospital offers advanced robotic surgery in Nashik, including robotic knee replacement, cancer, heart & urology care with expert surgeons." />
                 <meta name="keywords" content="robotic surgery in nashik, robotic knee replacement nashik, robot assisted knee surgery, mako robotic knee replacement, robotic orthopedic surgery, robotic heart surgery, robotic cancer surgery, robotic prostate surgery, best robotic surgery hospital nashik, shree saibabha hospital nashik, advanced knee replacement surgery, robotic joint replacement india" />
-                <link rel="canonical" href="" />
+                <link rel="canonical" href="https://shreesaibabamultispecialityhospital.com/Robotic_Surgery" />
 
                 <meta property="og:title" content="Advanced Robotic Surgery in Nashik | Shree Saibaba Multispeciality Hospital" />
                 <meta property="og:description" content="Experience precision-driven robotic surgery in Nashik at Shree Saibaba Hospital. Robotic knee replacement, cancer, heart & urology care with faster recovery." />
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content="" />
+                <meta property="og:url" content="https://shreesaibabamultispecialityhospital.com/Robotic_Surgery" />
                 <meta property="og:site_name" content="Shree Saibaba Multispeciality Hospital" />
 
 
