@@ -25,20 +25,20 @@ function Stress_Blog() {
         <>
             <Helmet>
                 <title>Robotic Joint Replacement Surgery | Shree Saibaba Multispeciality Hospital</title>
-                <meta name="description" content="Shree Saibaba Multispeciality Hospital offers advanced robotic surgery in Nashik, including robotic knee replacement, cancer, heart & urology care with expert surgeons." />
-                <meta name="keywords" content="robotic surgery in nashik, robotic knee replacement nashik, robot assisted knee surgery, mako robotic knee replacement, robotic orthopedic surgery, robotic heart surgery, robotic cancer surgery, robotic prostate surgery, best robotic surgery hospital nashik, shree saibabha hospital nashik, advanced knee replacement surgery, robotic joint replacement india" />
-                <link rel="canonical" href="https://shreesaibabamultispecialityhospital.com/Robotic_Surgery" />
+                <meta name="description" content="" />
+                <meta name="keywords" content="" />
+                <link rel="canonical" href="https://shreesaibabamultispecialityhospital.com/Robotic_Joint" />
 
-                <meta property="og:title" content="Advanced Robotic Surgery in Nashik | Shree Saibaba Multispeciality Hospital" />
-                <meta property="og:description" content="Experience precision-driven robotic surgery in Nashik at Shree Saibaba Hospital. Robotic knee replacement, cancer, heart & urology care with faster recovery." />
+                <meta property="og:title" content="Robotic Joint Replacement Surgery | Shree Saibaba Multispeciality Hospital" />
+                <meta property="og:description" content="" />
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://shreesaibabamultispecialityhospital.com/Robotic_Surgery" />
+                <meta property="og:url" content="https://shreesaibabamultispecialityhospital.com/Robotic_Joint" />
                 <meta property="og:site_name" content="Shree Saibaba Multispeciality Hospital" />
 
 
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="Robotic Surgery & Robotic Knee Replacement in Nashik" />
-                <meta name="twitter:description" content="Cutting-edge robotic surgery at Shree Saibaba Hospital, Nashik. Trusted care for knee replacement, cancer & heart surgery." />
+                <meta name="twitter:title" content="Robotic Joint Replacement Surgery" />
+                <meta name="twitter:description" content="" />
 
 
                 <meta name="geo.region" content="IN-MH" />
@@ -63,7 +63,7 @@ function Stress_Blog() {
                                 <Link to="/cardiology" className="kidney-category">
                                     Dr. Aniruddha Dharmadhikari
                                 </Link>
-                                <span className="kidney-date">🕗 12 Dec 2025</span>
+                                <span className="kidney-date">🕗 16 Dec 2025</span>
                             </div>
                             <h1 className="kidney-title">
                                 Robotic Joint Replacement Surgery
