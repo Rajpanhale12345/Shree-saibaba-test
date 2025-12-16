@@ -27,6 +27,7 @@ import Angiographies from './Images/Angiographies.png';
 import Heart_healthy from './Images/Heart_healthy.jpg';
 import Stress_Anxiety from './Images/Stress_Anxiety.png';
 import Robotic_Surgery from './Images/Advanced_Robotic_Surgery.jpg';
+import Robotic_Joint from './Images/Robotic Joint Replacement.jpg'
 import { Link } from 'react-router-dom';
 import { Helmet } from "react-helmet-async";
 
@@ -48,6 +49,11 @@ function Blogs() {
         text="Blogs" />
       <br /><br />
       <div className="imageblog1">
+        
+        <Link to='/Robotic_Joint'><div className="imageblog">
+          <img src={Robotic_Joint} alt="Cardio" /> <br /> <br />
+          <h2><i style={{ color: 'red', }}>Robotic Joint Replacement Surgery</i></h2></div>
+        </Link>
         
         <Link to='/Robotic_Surgery'><div className="imageblog">
           <img src={Robotic_Surgery} alt="Cardio" /> <br /> <br />
