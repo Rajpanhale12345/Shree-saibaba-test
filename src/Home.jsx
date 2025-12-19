@@ -7,7 +7,6 @@ import carousel1 from "./Images/carousel1.webp";
 import carousel2 from "./Images/carousel2.webp";
 import carousel1m from "./Images/mobilecarousel1.webp";
 import carousel2m from "./Images/mobilecarousel2.webp";
-
 import OPD from "./OPD.";
 import Test from "./Test";
 
