@@ -3,11 +3,8 @@ import "./Home.css";
 import Button from "@mui/material/Button";
 import { Link, useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet";
-
 import carousel1 from "./Images/carousel1.webp";
 import carousel2 from "./Images/carousel2.webp";
-
-// ✅ Mobile hero images (add your mobile banner files here)
 import carousel1m from "./Images/mobilecarousel1.webp";
 import carousel2m from "./Images/mobilecarousel2.webp";
 
