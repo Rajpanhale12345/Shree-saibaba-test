@@ -1,5 +1,6 @@
 import React, { useMemo, useState } from "react";
 import "./TieUps.css"; // <-- use the isolated stylesheet
+import { Helmet } from "react-helmet-async";
 
 const DATA = [
   {
@@ -148,6 +149,11 @@ export default function TieUps() {
 
   // NOTE: scoped wrapper + an id="top" for back-to-top
   return (
+<>
+    <Helmet>
+            <title>Tie-ups | Shree Saibaba Multispeciality Hospital</title>
+          
+          </Helmet>
     <div id="top" className="partners-scope">
       <div className="partners-wrap">
         {/* Sticky Top Bar */}
@@ -268,5 +274,6 @@ export default function TieUps() {
         </footer>
       </div>
     </div>
+    </>
   );
 }

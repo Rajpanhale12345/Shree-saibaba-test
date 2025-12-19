@@ -48,7 +48,7 @@ function PressReleases() {
         <>
 
             <Helmet>
-                <title>Press Releases | Shree Saibaba Multispeciality Hospital</title>
+                <title>Media | Shree Saibaba Multispeciality Hospital</title>
                 <meta name='description' content='' />
                 <meta name='keywords' content='' />
                 <meta name='og:description' content='' />
