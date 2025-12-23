@@ -52,7 +52,7 @@ function Angioplasty_Blog() {
                         <header className="kidney-header">
                             <img style={{ objectFit: "fill" }}
                                 src={Kidneyy}
-                                alt="Recovery care after hospital discharge"
+                                alt="Angioplasty"
                                 className="kidney-image" />
 
                             <div className="kidney-meta">

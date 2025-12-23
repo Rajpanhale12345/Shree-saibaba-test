@@ -39,7 +39,7 @@ function Pneumonia_Blog() {
                         <header className="kidney-header">
                             <img style={{ objectFit: "fill" }}
                                 src={Pneumoniaa}
-                                alt="Recovery care after hospital discharge"
+                                alt="Pneumonia"
                                 className="kidney-image" />
 
                             <div className="kidney-meta">
@@ -71,7 +71,7 @@ function Pneumonia_Blog() {
                             <figure className="inline-illustration">
                                 <img style={{ objectFit: 'fill' }}
                                     src={Pneumoniaa1}
-                                    alt="Everyday living with a pacemaker"
+                                    alt="Enfermedad Pulmonar Obstructiva Cronica"
                                     loading="lazy"
                                     decoding="async"
                                 />
@@ -103,7 +103,7 @@ function Pneumonia_Blog() {
                             <figure className="inline-illustration">
                                 <img style={{ objectFit: 'fill' }}
                                     src={Pneumoniaa2}
-                                    alt="Everyday living with a pacemaker"
+                                    alt="Symptoms of Pneumonia"
                                     loading="lazy"
                                     decoding="async"
                                 />

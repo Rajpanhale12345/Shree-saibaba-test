@@ -38,7 +38,7 @@ function B12_Blog() {
                         <header className="kidney-header">
                             <img style={{objectFit : "fill"}}
                                 src={Vitamin}
-                                alt="Recovery care after hospital discharge"
+                                alt="Vitamin B12"
                                 className="kidney-image"/>
 
                             <div className="kidney-meta">
@@ -73,7 +73,7 @@ function B12_Blog() {
                             <figure className="inline-illustration">
                                 <img style={{objectFit : 'fill'}}
                                     src={Vitamin1}
-                                    alt="Everyday living with a pacemaker"
+                                    alt="Vitamin Food Infographic"
                                     loading="lazy"
                                     decoding="async"
                                 />
@@ -111,7 +111,7 @@ function B12_Blog() {
                             <figure className="inline-illustration">
                                 <img
                                     src={Vitamin2}
-                                    alt="Everyday living with a pacemaker"
+                                    alt="Vitamin B12"
                                     loading="lazy"
                                     decoding="async"
                                 />

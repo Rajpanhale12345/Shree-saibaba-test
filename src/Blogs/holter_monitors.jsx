@@ -35,7 +35,7 @@ function Holter_Blog() {
                         <header className="kidney-header">
                             <img style={{ objectFit: "fill" }}
                                 src={Kidneyy}
-                                alt="Recovery care after hospital discharge"
+                                alt="Several Type of Angiographies"
                                 className="kidney-image" />
 
                             <div className="kidney-meta">
@@ -68,7 +68,7 @@ function Holter_Blog() {
                             <figure className="inline-illustration">
                                 <img style={{ objectFit: 'fill' }}
                                     src={Kidneyy1}
-                                    alt="Everyday living with a pacemaker"
+                                    alt="Cerebral Angiography"
                                     loading="lazy"
                                     decoding="async"
                                 />

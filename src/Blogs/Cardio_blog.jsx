@@ -1,7 +1,7 @@
 import React from 'react';
 import Cardio from './Images/Cardio_blog.jpg';
-import './cardio_blog.css'; // reuse the same stylesheet
-import LifePacemaker from './Images/pacemaker_daily.jpg'; // <-- add this
+import './cardio_blog.css'; 
+import LifePacemaker from './Images/pacemaker_daily.jpg';
 import Pacemaker_Life from './Images/Pacemaker_Life_Expectancy.png';
 import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
@@ -77,7 +77,7 @@ function Cardio_blog() {
               <figure className="inline-illustration">
                 <img
                   src={LifePacemaker}
-                  alt="Everyday living with a pacemaker"
+                  alt="Life Pacemaker"
                   loading="lazy"
                   decoding="async"
                 />
@@ -123,7 +123,7 @@ function Cardio_blog() {
               <figure className="inline-illustration">
                 <img
                   src={Pacemaker_Life}
-                  alt="Everyday living with a pacemaker"
+                  alt="Pacemaker Life"
                   loading="lazy"
                   decoding="async"
                 />

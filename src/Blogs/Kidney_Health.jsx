@@ -41,7 +41,7 @@ function Kidney_Blog() {
                         <header className="kidney-header">
                             <img style={{ objectFit: "fill" }}
                                 src={Kidneyy}
-                                alt="Recovery care after hospital discharge"
+                                alt="Kidney Health"
                                 className="kidney-image" />
 
                             <div className="kidney-meta">
@@ -70,7 +70,7 @@ function Kidney_Blog() {
                             <figure className="inline-illustration">
                                 <img style={{ objectFit: 'fill' }}
                                     src={Kidneyy1}
-                                    alt="Everyday living with a pacemaker"
+                                    alt="Stages of Chronic Kidney Diseases"
                                     loading="lazy"
                                     decoding="async"
                                 />
@@ -110,7 +110,7 @@ function Kidney_Blog() {
                             <figure className="inline-illustration">
                                 <img style={{ objectFit: 'fill' }}
                                     src={Kidneyy3}
-                                    alt="Everyday living with a pacemaker"
+                                    alt="Kidney Health"
                                     loading="lazy"
                                     decoding="async"
                                 />
@@ -135,7 +135,7 @@ function Kidney_Blog() {
                             <figure className="inline-illustration">
                                 <img style={{ objectFit: 'fill' }}
                                     src={Kidneyy2}
-                                    alt="Everyday living with a pacemaker"
+                                    alt="Stress Management"
                                     loading="lazy"
                                     decoding="async"
                                 />

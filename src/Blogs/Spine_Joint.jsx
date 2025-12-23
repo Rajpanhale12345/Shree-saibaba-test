@@ -37,7 +37,7 @@ function Spine_Blog() {
                         <header className="kidney-header">
                             <img style={{ objectFit: "fill" }}
                                 src={Kidneyy}
-                                alt="Recovery care after hospital discharge"
+                                alt="Human Vertebral Column"
                                 className="kidney-image" />
 
                             <div className="kidney-meta">
@@ -79,7 +79,7 @@ function Spine_Blog() {
                             <figure className="inline-illustration">
                                 <img style={{ objectFit: 'fill' }}
                                     src={Kidneyy1}
-                                    alt="Everyday living with a pacemaker"
+                                    alt="Joint replacement surgery"
                                     loading="lazy"
                                     decoding="async"
                                 />

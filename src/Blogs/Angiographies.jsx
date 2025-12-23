@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 import Button from "@mui/material/Button";
 import { Helmet } from "react-helmet-async";
 
-function Angiographies_Blog() {
+function Angiographies_Blog() { 
     const otherBlogs = [
         { to: "/spine", title: "Spine Health and Sitting", date: "11 Aug 2025", category: "🏥 Neurosurgery" },
         { to: "/kidney", title: "Kidney Stones", date: "11 Aug 2025", category: "🏥 Urology" },
@@ -43,7 +43,7 @@ function Angiographies_Blog() {
                         <header className="kidney-header">
                             <img style={{ objectFit: "fill" }}
                                 src={Kidneyy}
-                                alt="Recovery care after hospital discharge"
+                                alt="Several Type of Angiographies"
                                 className="kidney-image" />
 
                             <div className="kidney-meta">
@@ -73,7 +73,7 @@ function Angiographies_Blog() {
                             <figure className="inline-illustration">
                                 <img style={{ objectFit: 'fill' }}
                                     src={Angiographies1}
-                                    alt="Everyday living with a pacemaker"
+                                    alt="Coronary Angiography"
                                     loading="lazy"
                                     decoding="async"
                                 />
@@ -89,7 +89,7 @@ function Angiographies_Blog() {
                              <figure className="inline-illustration">
                                 <img style={{ objectFit: 'fill' }}
                                     src={Angiographies2}
-                                    alt="Everyday living with a pacemaker"
+                                    alt="Cerebral Angiography"
                                     loading="lazy"
                                     decoding="async"
                                 />
@@ -104,7 +104,7 @@ function Angiographies_Blog() {
                             <figure className="inline-illustration">
                                 <img style={{ objectFit: 'fill' }}
                                     src={Angiographies3}
-                                    alt="Everyday living with a pacemaker"
+                                    alt="Pulmonary Angiography"
                                     loading="lazy"
                                     decoding="async"
                                 />
@@ -120,7 +120,7 @@ function Angiographies_Blog() {
                             <figure className="inline-illustration">
                                 <img style={{ objectFit: 'fill' }}
                                     src={Angiographies4}
-                                    alt="Everyday living with a pacemaker"
+                                    alt="Renal Angiography"
                                     loading="lazy"
                                     decoding="async"
                                 />
@@ -138,7 +138,7 @@ function Angiographies_Blog() {
                             <figure className="inline-illustration">
                                 <img style={{ objectFit: 'fill' }}
                                     src={Angiographies5}
-                                    alt="Everyday living with a pacemaker"
+                                    alt="Peripheral Angiography"
                                     loading="lazy"
                                     decoding="async"
                                 />

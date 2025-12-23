@@ -41,7 +41,7 @@ function Kidney_Blog() {
 
             {/* Hero */}
             <header className="kidney-header">
-              <img style={{objectFit : "contain"}} src={kidneymid} alt="Kidney health illustration" className="kidney-image" />
+              <img style={{objectFit : "contain"}} src={kidneymid} alt="Renal Calculi" className="kidney-image" />
               <div className="kidney-meta">
                 <Link to="/urology" className="kidney-category">🏥 Urology</Link>
                 <span className="kidney-date">🕗 11 August 2025</span>

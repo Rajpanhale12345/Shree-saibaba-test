@@ -43,7 +43,7 @@ function Cardia_Surgery_Blog() {
                         <header className="kidney-header">
                             <img
                                 src={Cardiac1}
-                                alt="Recovery care after hospital discharge"
+                                alt="Cardiac Surgery"
                                 className="kidney-image"
                             />
                             <div className="kidney-meta">
@@ -71,7 +71,7 @@ function Cardia_Surgery_Blog() {
                             <figure className="inline-illustration">
                                 <img
                                     src={Cardiac}
-                                    alt="Everyday living with a pacemaker"
+                                    alt="Cardiac Surgery"
                                     loading="lazy"
                                     decoding="async"
                                 />
@@ -90,7 +90,7 @@ function Cardia_Surgery_Blog() {
                             <figure className="doctor-card" aria-labelledby="doctor-caption">
                                 <img
                                     src={DoctorPhoto}
-                                    alt="डॉ. किशोर देवरे (M.S., M.Ch., CVTS)"
+                                    alt="डॉ. किशोर देवरे (M.S., M.Ch., CVTS"
                                     loading="lazy"
                                 />
                                 <figcaption id="doctor-caption">

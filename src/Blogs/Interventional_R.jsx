@@ -43,7 +43,7 @@ function Interventional_blog() {
                         <header className="kidney-header">
                             <img style={{ objectFit: "fill" }}
                                 src={I_R}
-                                alt="Recovery care after hospital discharge"
+                                alt="Interventional Radiology"
                                 className="kidney-image" />
 
                             <div className="kidney-meta">
@@ -98,7 +98,7 @@ function Interventional_blog() {
                             <figure className="inline-illustration">
                                 <img style={{ objectFit: 'fill' }}
                                     src={I_R2}
-                                    alt="Everyday living with a pacemaker"
+                                    alt="Types of Interventional Radiology"
                                     loading="lazy"
                                     decoding="async"
                                 />
@@ -115,7 +115,7 @@ function Interventional_blog() {
                             <figure className="inline-illustration">
                                 <img style={{ objectFit: 'fill' }}
                                     src={I_R3}
-                                    alt="Everyday living with a pacemaker"
+                                    alt="Biopsy"
                                     loading="lazy"
                                     decoding="async"
                                 />
@@ -132,7 +132,7 @@ function Interventional_blog() {
                             <figure className="inline-illustration">
                                 <img style={{ objectFit: 'fill' }}
                                     src={I_R4}
-                                    alt="Everyday living with a pacemaker"
+                                    alt="Radiofrequency Ablation"
                                     loading="lazy"
                                     decoding="async"
                                 />
@@ -149,7 +149,7 @@ function Interventional_blog() {
                             <figure className="inline-illustration">
                                 <img style={{ objectFit: 'fill' }}
                                     src={I_R5}
-                                    alt="Everyday living with a pacemaker"
+                                    alt="Percutaneous Drainage"
                                     loading="lazy"
                                     decoding="async"
                                 />

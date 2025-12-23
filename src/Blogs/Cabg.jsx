@@ -38,7 +38,7 @@ function NutritionBlog() {
                         <header className="kidney-header">
                             <img style={{objectFit : "fill"}}
                                 src={Understanding_CABG}
-                                alt="Recovery care after hospital discharge"
+                                alt="Coronary Artery Disease"
                                 className="kidney-image"
                             />
                             <div className="kidney-meta">
@@ -83,7 +83,7 @@ function NutritionBlog() {
                             <figure className="inline-illustration">
                                 <img style={{objectFit : "fill"}}
                                     src={Understanding_CABG1}
-                                    alt="Everyday living with a pacemaker"
+                                    alt="CABG Different Type"
                                     loading="lazy"
                                     decoding="async"
                                 />
@@ -134,7 +134,7 @@ function NutritionBlog() {
                             <figure className="inline-illustration">
                                 <img style={{objectFit : "fill"}}
                                     src={Understanding_CABG2}
-                                    alt="Everyday living with a pacemaker"
+                                    alt="Advancements CABG Techniques"
                                     loading="lazy"
                                     decoding="async"
                                 />

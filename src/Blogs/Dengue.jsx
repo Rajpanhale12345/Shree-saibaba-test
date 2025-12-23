@@ -41,7 +41,7 @@ function Dengue_Blog() {
                         <header className="kidney-header">
                             <img style={{objectFit : "fill"}}
                                 src={Denguee}
-                                alt="Recovery care after hospital discharge"
+                                alt="Dengue"
                                 className="kidney-image"/>
 
                             <div className="kidney-meta">
@@ -83,7 +83,7 @@ function Dengue_Blog() {
                             <figure className="inline-illustration">
                                 <img
                                     src={Dengue1}
-                                    alt="Everyday living with a pacemaker"
+                                    alt="Mosquito"
                                     loading="lazy"
                                     decoding="async"
                                 />
@@ -122,7 +122,7 @@ function Dengue_Blog() {
                             <figure className="inline-illustration">
                                 <img
                                     src={Dengue2}
-                                    alt="Everyday living with a pacemaker"
+                                    alt="Body Sprey"
                                     loading="lazy"
                                     decoding="async"
                                 />

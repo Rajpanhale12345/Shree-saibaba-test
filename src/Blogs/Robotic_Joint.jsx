@@ -66,7 +66,7 @@ function Stress_Blog() {
                         <header className="kidney-header">
                             <img style={{ objectFit: "fill" }}
                                 src={Kidneyy}
-                                alt="Recovery care after hospital discharge"
+                                alt="Robotic Joint Replacememnt Surgery"
                                 className="kidney-image" />
 
                             <div className="kidney-meta">

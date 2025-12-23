@@ -38,7 +38,7 @@ function Varicose_Blog() {
                         <header className="kidney-header">
                             <img style={{ objectFit: "fill" }}
                                 src={Kidneyy}
-                                alt="Recovery care after hospital discharge"
+                                alt="Varicose Veins"
                                 className="kidney-image" />
 
                             <div className="kidney-meta">
@@ -69,7 +69,7 @@ function Varicose_Blog() {
                             <figure className="inline-illustration">
                                 <img style={{ objectFit: 'fill' }}
                                     src={Kidneyy1}
-                                    alt="Everyday living with a pacemaker"
+                                    alt="Endovenous Laser Treatment"
                                     loading="lazy"
                                     decoding="async" />
                                 {/* Optional: remove this figcaption if you don't want text under the image */}
@@ -91,7 +91,7 @@ function Varicose_Blog() {
                             <figure className="inline-illustration">
                                 <img style={{ objectFit: 'fill' }}
                                     src={Kidneyy2}
-                                    alt="Everyday living with a pacemaker"
+                                    alt="Compression Stockings"
                                     loading="lazy"
                                     decoding="async"
                                 />
@@ -113,7 +113,7 @@ function Varicose_Blog() {
                             <figure className="inline-illustration">
                                 <img style={{ objectFit: 'fill' }}
                                     src={Kidneyy3}
-                                    alt="Everyday living with a pacemaker"
+                                    alt="Scalerotherapy"
                                     loading="lazy"
                                     decoding="async"
                                 />

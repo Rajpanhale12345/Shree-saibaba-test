@@ -38,7 +38,7 @@ function Spine_Blog() {
         <main className="pane pane--main" aria-label="Blog article">
           <article className="blog-article">
             <header className="blog-header">
-              <img src={spinemain} alt="Spine health illustration" className="blog-image" />
+              <img src={spinemain} alt="Spine" className="blog-image" />
               <div className="blog-meta">
                 <Link to="/neurosurgery" className="blog-category">🏥 Neurosurgery</Link>
                 <span className="blog-date">🕗 11 August 2025</span>

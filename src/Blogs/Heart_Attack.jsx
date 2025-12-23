@@ -38,7 +38,7 @@ function Heart_Attack_Blog() {
                         <header className="kidney-header">
                             <img style={{ objectFit: "fill" }}
                                 src={Heart_Attack1}
-                                alt="Recovery care after hospital discharge"
+                                alt="Heart Attack"
                                 className="kidney-image" />
 
                             <div className="kidney-meta">
@@ -72,7 +72,7 @@ function Heart_Attack_Blog() {
                             <figure className="inline-illustration">
                                 <img style={{ objectFit: 'fill' }}
                                     src={Heart_Attack}
-                                    alt="Everyday living with a pacemaker"
+                                    alt="Heart Attack"
                                     loading="lazy"
                                     decoding="async"
                                 />
@@ -93,7 +93,7 @@ function Heart_Attack_Blog() {
                             <figure className="inline-illustration">
                                 <img
                                     src={Heart_Attack2}
-                                    alt="Everyday living with a pacemaker"
+                                    alt="Heart Attack Signs"
                                     loading="lazy"
                                     decoding="async"
                                 />

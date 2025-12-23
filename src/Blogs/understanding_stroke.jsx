@@ -43,7 +43,7 @@ function NutritionBlog() {
                         <header className="kidney-header">
                             <img
                                 src={Understanding_stroke1}
-                                alt="Recovery care after hospital discharge"
+                                alt="Ischemic & Hemorrhagic Stroke"
                                 className="kidney-image"
                             />
                             <div className="kidney-meta">
@@ -101,7 +101,7 @@ function NutritionBlog() {
                             <figure className="inline-illustration">
                                 <img
                                     src={nutrition}
-                                    alt="Everyday living with a pacemaker"
+                                    alt="Common Type of Stroke"
                                     loading="lazy"
                                     decoding="async"
                                 />
@@ -154,7 +154,7 @@ function NutritionBlog() {
                             <figure className="inline-illustration">
                                 <img
                                     src={Understanding_stroke2}
-                                    alt="Everyday living with a pacemaker"
+                                    alt="Prevention Tips"
                                     loading="lazy"
                                     decoding="async"
                                 />

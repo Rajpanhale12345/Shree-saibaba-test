@@ -47,7 +47,7 @@ function NutritionBlog() {
             <header className="kidney-header">
               <img
                 src={nutrition}
-                alt="Recovery care after hospital discharge"
+                alt="Nutrition Healthy Life"
                 className="kidney-image"
               />
               <div className="kidney-meta">
