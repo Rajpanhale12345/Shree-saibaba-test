@@ -6,7 +6,7 @@ const TermsAndConditions = () => {
         <>
 
             <Helmet>
-                <title>Tearms & Condition | Shree Saibaba Multispeciality Hospital</title>
+                <title>Terms & Conditions | Shree Saibaba Multispeciality Hospital</title>
                 <meta name='description' content='Learn how sitting affects your spine and practical steps to protect your back at work and home. Tips from Saibaba Multispeciality Hospital.' />
                 <meta name='keywords' content='' />
                 <meta name='og:description' content='' />
