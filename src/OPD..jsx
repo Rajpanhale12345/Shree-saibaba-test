@@ -69,7 +69,7 @@ const opdData = [
   },
   {
     department: "NEPHROLOGIST",
-    doctors: [{ name: "DR. ABHIJEET MORE", timing: "11 am to 12 pm and 5pm to 6 pm" }],
+    doctors: [{ name: "DR. ABHIJEET MORE", timing: "11:00 am to 12:00 pm and 5:00 pm to 6:00 pm" }],
   },
   {
     department: "GASTROENTROLOGY",
@@ -129,8 +129,11 @@ const opdData = [
   
   {
     department: "ONCOLOGIST",
-    doctors: [{ name: "DR. AMBARISH CHATARJEE", timing: "On Call" },
+    doctors: [
+      { name: "DR. NAGESH MADNOORKAR", timing: "4:00 pm to 6:00 pm" },
+      { name: "DR. AMBARISH CHATARJEE", timing: "On Call" },
       { name: "DR. SULABCHANDRA BHAMARE", timing: "On Call" },
+     
     ],
   },
   {
