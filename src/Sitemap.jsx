@@ -83,24 +83,6 @@ function Sitemap() {
           </section>
 
           <section style={styles.col}>
-            <h2 style={styles.h2}>Blogs</h2>
-            <ul style={styles.ul}>
-              <ListItemLink to="/cardio">Pacemaker Care</ListItemLink>
-              <ListItemLink to="/kidney">Kidney Stone</ListItemLink>
-              <ListItemLink to="/spine">Spine Health</ListItemLink>
-              <ListItemLink to="/nutrition">Nutrition &amp; Sleep</ListItemLink>
-              <ListItemLink to="/understanding">Understanding Stroke</ListItemLink>              
-              <ListItemLink to="/Cardiac_Surgery">कार्डियाक सर्जरी</ListItemLink>
-              <ListItemLink to="/Dengue">Dengue Disease</ListItemLink>
-              <ListItemLink to="/Vitamin_B12">Vitamin B12</ListItemLink>
-              <ListItemLink to="/Heart_Attack">Heart Attack</ListItemLink>
-              <ListItemLink to="/Heart_Disease">Heart Disease</ListItemLink>
-              <ListItemLink to="/Interventional_Radiology">IR</ListItemLink>
-              <ListItemLink to="/Pneumonia">Pneumonia</ListItemLink>
-            </ul>
-          </section>
-
-          <section style={styles.col}>
             <h2 style={styles.h2}>Departments</h2>
             <ul style={styles.ul}>
               <ListItemLink to="/cardiology">Cardiology</ListItemLink>
@@ -119,6 +101,37 @@ function Sitemap() {
               <ListItemLink to="/gastroenterology">Gastroenterology</ListItemLink>
               <ListItemLink to="/gynaecology">Gynecology</ListItemLink>
               <ListItemLink to="/pulmonology">Pulmonology</ListItemLink>
+            </ul>
+          </section>
+
+          <section style={styles.col}>
+            <h2 style={styles.h2}>Blogs</h2>
+            <ul style={styles.ul}>
+              <ListItemLink to="/Robotic_Joint">Robotic Joint Replacememnt Surgery</ListItemLink>
+              <ListItemLink to="/Robotic_Surgery">Advance Robotic Surgery</ListItemLink>
+              <ListItemLink to="/cardio">Pacemaker Care</ListItemLink>
+              <ListItemLink to="/kidney">Kidney Stone</ListItemLink>
+              <ListItemLink to="/spine">Spine Health</ListItemLink>
+              <ListItemLink to="/nutrition">Nutrition &amp; Sleep</ListItemLink>
+              <ListItemLink to="/understanding">Understanding Stroke</ListItemLink>
+              <ListItemLink to="/Cardiac_Surgery">कार्डियाक सर्जरी</ListItemLink>
+              <ListItemLink to="/Dengue">Dengue Disease</ListItemLink>
+              <ListItemLink to="/Vitamin_B12">Vitamin B12</ListItemLink>
+              <ListItemLink to="/Heart_Attack">Heart Attack</ListItemLink>
+              <ListItemLink to="/Heart_Disease">Heart Disease</ListItemLink>
+              <ListItemLink to="/Interventional_Radiology">Interventional Radiology</ListItemLink>
+              <ListItemLink to="/Pneumonia">Pneumonia</ListItemLink>
+              <ListItemLink to="/Lifestyle">Lifestyle</ListItemLink>
+              <ListItemLink to="/Understanding_CABG">Understanding CABG</ListItemLink>
+              <ListItemLink to="/Kidney_Health">Kidney Health</ListItemLink>
+              <ListItemLink to="/Spine_Joint">Spine & Joint Replacement</ListItemLink>
+              <ListItemLink to="/Varicose">Varicose Veins</ListItemLink>
+              <ListItemLink to="/Angiographies">Angioplasty</ListItemLink>
+              <ListItemLink to="/Holter">Holter Monitors</ListItemLink>
+              <ListItemLink to="/Angiography">Benefits of Radial Angiography</ListItemLink>
+              <ListItemLink to="/Angiographiess">Types of Angiographies</ListItemLink>
+              <ListItemLink to="/Heart_Healthy">Heart Healthy Nutrition</ListItemLink>
+              <ListItemLink to="/Stress_Anxiety">Stress & Anxiety</ListItemLink>
             </ul>
           </section>
 
