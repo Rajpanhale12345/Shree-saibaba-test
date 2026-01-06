@@ -1,223 +1,196 @@
-import React from 'react';
-import thoracic from './Images/thoracicdep.jpg'; // change to CVTS-specific image if you have one
+import React from "react";
+import thoracic from "./Images/thoracicdep.jpg";
 import { Helmet } from "react-helmet-async";
 
 const styles = {
   page: {
-    background: 'linear-gradient(135deg, #f4f7fb, #e5edf9)',
-    padding: '40px 16px',
+    background: "linear-gradient(135deg, #f4f7fb, #e5edf9)",
+    padding: "40px 16px",
   },
   container: {
-    maxWidth: '1200px',
-    margin: '0 auto',
-    fontFamily: '"Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif',
-    color: '#0f172a',
+    maxWidth: "1200px",
+    margin: "0 auto",
+    fontFamily:
+      '"Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif',
+    color: "#0f172a",
   },
+
+  // ✅ HERO: grid on desktop, stacks on mobile via CSS class + media query below
   hero: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    gap: '24px',
-    alignItems: 'stretch',
-    marginBottom: '32px',
+    display: "grid",
+    gridTemplateColumns: "minmax(280px, 420px) 1fr",
+    gap: "24px",
+    alignItems: "start",
+    marginBottom: "32px",
   },
+
   heroImageWrapper: {
-    flex: '1 1 320px',
-    minWidth: '280px',
+    minWidth: "280px",
   },
   heroImageCard: {
-    height: '100%',
-    borderRadius: '20px',
-    overflow: 'hidden',
-    boxShadow: '0 18px 45px rgba(15,23,42,0.16)',
-    border: '1px solid rgba(148,163,184,0.4)',
-    background: '#0f172a',
+    width: "100%",
+    borderRadius: "20px",
+    overflow: "hidden",
+    boxShadow: "0 18px 45px rgba(15,23,42,0.16)",
+    border: "1px solid rgba(148,163,184,0.4)",
+    background: "#0f172a",
+
+    // ✅ responsive height for the image card
+    height: "clamp(220px, 32vw, 420px)",
   },
   heroImage: {
-    width: '100%',
-    height: '100%',
-    objectFit: 'fill',
-    display: 'block',
+    width: "100%",
+    height: "100%",
+    objectFit: "cover", // ✅ prevents stretching
+    objectPosition: "center",
+    display: "block",
     opacity: 0.95,
   },
+
   heroTextWrapper: {
-    flex: '2 1 420px',
-    minWidth: '280px',
+    minWidth: "280px",
   },
   heroTextCard: {
-    height: '100%',
-    borderRadius: '20px',
-    padding: '28px 28px 24px',
-    background: 'rgba(255,255,255,0.92)',
-    backdropFilter: 'blur(10px)',
-    boxShadow: '0 18px 45px rgba(15,23,42,0.08)',
-    border: '1px solid rgba(148,163,184,0.4)',
+    borderRadius: "20px",
+    padding: "28px 28px 24px",
+    background: "rgba(255,255,255,0.92)",
+    backdropFilter: "blur(10px)",
+    boxShadow: "0 18px 45px rgba(15,23,42,0.08)",
+    border: "1px solid rgba(148,163,184,0.4)",
   },
+
   pill: {
-    display: 'inline-flex',
-    alignItems: 'center',
-    gap: '8px',
-    padding: '4px 12px',
-    borderRadius: '999px',
-    fontSize: '12px',
+    display: "inline-flex",
+    alignItems: "center",
+    gap: "8px",
+    padding: "4px 12px",
+    borderRadius: "999px",
+    fontSize: "12px",
     fontWeight: 600,
-    letterSpacing: '0.06em',
-    textTransform: 'uppercase',
-    background: 'rgba(37,99,235,0.08)',
-    color: '#1d4ed8',
-    marginBottom: '10px',
+    letterSpacing: "0.06em",
+    textTransform: "uppercase",
+    background: "rgba(37,99,235,0.08)",
+    color: "#1d4ed8",
+    marginBottom: "10px",
   },
   pillDot: {
-    width: '8px',
-    height: '8px',
-    borderRadius: '50%',
-    background: '#22c55e',
+    width: "8px",
+    height: "8px",
+    borderRadius: "50%",
+    background: "#22c55e",
   },
-  heroTitle: {
-    fontSize: '30px',
-    fontWeight: 700,
-    margin: '4px 0 4px',
-    color: '#0f172a',
-  },
+
   heroSubtitle: {
-    fontSize: '16px',
+    fontSize: "16px",
     fontWeight: 500,
-    color: '#64748b',
-    marginBottom: '18px',
+    color: "#64748b",
+    marginBottom: "18px",
   },
-  heroTagline: {
-    fontSize: '14px',
-    fontWeight: 500,
-    color: '#0f766e',
-    marginBottom: '14px',
-  },
+
   heroParagraph: {
-    fontSize: '14px',
+    fontSize: "14px",
     lineHeight: 1.7,
-    color: '#1e293b',
-    marginBottom: '10px',
+    color: "#1e293b",
+    marginBottom: "10px",
+    textAlign: "left",
   },
+  heroParagraph1: {
+    fontSize: "24px",
+    lineHeight: 1.7,
+    color: "#1e293b",
+    marginBottom: "10px",
+    textAlign: "left",
+  },
+  heroParagraph2: {
+    fontSize: "40px",
+    lineHeight: 1.2,
+    color: "#1e293b",
+    marginBottom: "10px",
+  },
+
   highlightStrip: {
-    marginTop: '16px',
-    padding: '10px 14px',
-    borderRadius: '12px',
-    background: 'linear-gradient(90deg, rgba(37,99,235,0.08), rgba(56,189,248,0.10))',
-    fontSize: '13px',
-    color: '#0f172a',
-    border: '1px solid rgba(129,140,248,0.4)',
+    marginTop: "16px",
+    padding: "10px 14px",
+    borderRadius: "12px",
+    background:
+      "linear-gradient(90deg, rgba(37,99,235,0.08), rgba(56,189,248,0.10))",
+    fontSize: "13px",
+    color: "#0f172a",
+    border: "1px solid rgba(129,140,248,0.4)",
   },
   highlightLabel: {
     fontWeight: 600,
-    marginRight: '6px',
+    marginRight: "6px",
   },
 
   // Section styles
   section: {
-    borderRadius: '18px',
-    padding: '22px 22px 20px',
-    marginBottom: '20px',
-    background: 'rgba(255,255,255,0.96)',
-    backdropFilter: 'blur(8px)',
-    boxShadow: '0 14px 35px rgba(15,23,42,0.06)',
-    border: '1px solid rgba(203,213,225,0.8)',
+    borderRadius: "18px",
+    padding: "22px 22px 20px",
+    marginBottom: "20px",
+    background: "rgba(255,255,255,0.96)",
+    backdropFilter: "blur(8px)",
+    boxShadow: "0 14px 35px rgba(15,23,42,0.06)",
+    border: "1px solid rgba(203,213,225,0.8)",
   },
   sectionHeaderRow: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'baseline',
-    gap: '10px',
-    marginBottom: '12px',
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "baseline",
+    gap: "10px",
+    marginBottom: "12px",
   },
   sectionTitle: {
-    fontSize: '18px',
+    fontSize: "18px",
     fontWeight: 700,
-    color: '#0f172a',
-    display: 'flex',
-    alignItems: 'center',
-    gap: '8px',
+    color: "#0f172a",
+    display: "flex",
+    alignItems: "center",
+    gap: "8px",
   },
   sectionAccentBar: {
-    width: '3px',
-    height: '18px',
-    borderRadius: '999px',
-    background: 'linear-gradient(180deg, #2563eb, #22c55e)',
+    width: "3px",
+    height: "18px",
+    borderRadius: "999px",
+    background: "linear-gradient(180deg, #2563eb, #22c55e)",
   },
-  sectionSubtext: {
-    fontSize: '12px',
-    color: '#94a3b8',
-  },
+
   list: {
-    paddingLeft: '18px',
+    paddingLeft: "18px",
     margin: 0,
-    textAlign: 'left'
+    textAlign: "left",
   },
   listItem: {
-    fontSize: '14px',
+    fontSize: "14px",
     lineHeight: 1.7,
-    color: '#1e293b',
-    marginBottom: '6px',
+    color: "#1e293b",
+    marginBottom: "6px",
   },
 
-  // Grid / layout helpers
   twoColumnGrid: {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
-    gap: '12px 32px',
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+    gap: "12px 32px",
   },
 
-  // Doctors
   doctorList: {
-    listStyle: 'none',
+    listStyle: "none",
     paddingLeft: 0,
     margin: 0,
   },
-  doctorItem: {
-    fontSize: '14px',
-    color: '#0f172a',
-    padding: '6px 10px',
-    borderRadius: '999px',
-    border: '1px solid rgba(148,163,184,0.5)',
-    background: 'rgba(248,250,252,0.9)',
-    display: 'inline-block',
-    marginBottom: '6px',
-  },
 
-  // Achievements / Timings
   tagListItem: {
-    fontSize: '14px',
+    fontSize: "14px",
     lineHeight: 1.7,
-    color: '#0f172a',
-    padding: '6px 10px',
-    borderRadius: '10px',
-    background: 'rgba(239,246,255,0.9)',
-    border: '1px solid rgba(191,219,254,1)',
-    marginBottom: '6px',
-  },
-
-  // FAQs (not used here, but kept for consistency if needed later)
-  faqList: {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
-    gap: '12px',
-  },
-  faqItem: {
-    borderRadius: '14px',
-    padding: '14px 14px 12px',
-    background: '#ffffffff',
-    color: '#000000ff',
-    boxShadow: '0 16px 30px rgba(15,23,42,0.4)',
-    borderLeft: '4px solid #38bdf8',
-  },
-  faqQuestion: {
-    fontSize: '14px',
-    fontWeight: 600,
-    marginBottom: '6px',
-  },
-  faqAnswer: {
-    fontSize: '13px',
-    lineHeight: 1.6,
-    color: '#000000ff',
+    color: "#0f172a",
+    padding: "6px 10px",
+    borderRadius: "10px",
+    background: "rgba(239,246,255,0.9)",
+    border: "1px solid rgba(191,219,254,1)",
+    marginBottom: "6px",
   },
 };
+
 
 function CardioVascular() {
   return (
@@ -258,23 +231,106 @@ function CardioVascular() {
                   <span style={styles.pillDot} />
                   <span>Cardiovascular &amp; Thoracic Surgery</span>
                 </div>
-                <h1 style={styles.heroTitle}>Cardiovascular Thoracic Surgery Department</h1>
+                <h1 style={styles.heroParagraph2}>Cardiovascular Thoracic Surgery</h1>
                 <div style={styles.heroSubtitle}>Nashik, Maharashtra</div>
-                <div style={styles.heroTagline}>
-                  Precision surgery, advanced technology and compassionate cardiac care.
-                </div>
+                <br />
+
+                <h1 style={styles.heroParagraph1}>Cardiovascular & Thoracic Surgery Care You Can Trust</h1>
 
                 <p style={styles.heroParagraph}>
-                  Our Cardiovascular Thoracic Surgery team is at the forefront of innovation,
-                  providing advanced surgical care for heart and thoracic conditions. From
-                  cutting-edge minimally invasive procedures to complex bypass surgeries, our
-                  experienced surgeons work closely with cardiologists and other specialists
-                  to ensure comprehensive care for our patients.
+                  At Shree Saibaba Multispeciality Hospital, our cardiovascular and thoracic surgery
+                  department is dedicated to providing advanced, safe, and reliable surgical care for
+                  patients with heart and chest-related conditions. We combine modern medical technology
+                  with experienced surgical expertise to deliver treatment that improves both quality
+                  of life and long-term heart health.
                 </p>
                 <p style={styles.heroParagraph}>
-                  We aim to improve heart health through precision surgery and compassionate
-                  care, focusing on safety, faster recovery and better long-term outcomes.
+                  Cardiothoracic surgery is a specialized area of medicine that involves the surgical
+                  treatment of the heart, lungs, chest cavity, and large blood vessels. Many people have
+                  heard of cardiothoracic surgery, but they may not know exactly what it means. Simple
+                  definition of cardiothoracic surgery simply describes it as a procedure to fix or
+                  restore the normal functioning of these essential organs, such as the heart and lungs,
+                  so that patients can again live a more active and healthy lifestyle.
                 </p>
+                <p style={styles.heroParagraph}>
+                  At our hospital, we are fortunate to have an excellent team of cardiothoracic surgery
+                  specialists working together with other medical professionals such as cardiologists,
+                  anesthesiologists, critical care doctors, and nursing staff to provide comprehensive
+                  care to all of our patients, everything from diagnosis and surgery through recovery and
+                  rehabilitation.
+                </p>
+                <br />
+
+                <h2 style={styles.heroParagraph1}>Advanced Surgical Services for Heart & Chest Disorders</h2>
+
+                <p style={styles.heroParagraph}>
+                  We provide a wide variety of traditional and minimally invasive surgical techniques for
+                  heart and chest disorders. Our surgical procedures include, but are not limited to, coronary
+                  artery disease, heart valve disease, congenital heart defects, lung conditions, and other
+                  heart or chest-related disorder treatments. Compared to traditional open-heart surgery,
+                  minimally invasive surgical techniques typically use smaller incisions and result in less
+                  pain, fewer complications, and an earlier return to normal function.
+                </p>
+                <p style={styles.heroParagraph}>
+                  Our team of cardiovascular and cardiothoracic surgeons offers care for all patients requiring
+                  complex surgical treatment, with the goal of ensuring a safe and accurate surgical procedure.
+                  Each patient receives his/her own individualized treatment plan based upon his/her specific
+                  medical conditions, age, and complete medical history. This will lead to increased opportunities
+                  for patients to experience great success with their surgical procedure.
+                </p>
+                <br />
+
+                <h2 style={styles.heroParagraph1}>Professional Guidance for Cardiac Surgery</h2>
+
+                <p style={styles.heroParagraph}>
+                  Your choice of surgeons is an important decision regarding your cardiac health. All of our
+                  surgeons have years of experience, but each has been specifically trained to care for both
+                  routine and complicated surgical procedures. The surgeons in our department perform their
+                  surgical procedures with the utmost accuracy and precision, while also incorporating the
+                  latest information and technology available, as well as complying with various international
+                  guidelines and standards for safety.
+                </p>
+                <p style={styles.heroParagraph}>
+                  Patients seeking a cardiothoracic surgeon should consider both experience and technological
+                  skill. Our hospital is dedicated to providing both a technologically advanced and a compassionate
+                  level of care. Our surgeons are recognized throughout the region for their exceptional clinical
+                  abilities, as well as for their commitment to providing care that is centered on the patient,
+                  making our hospital is a trusted place to go for heart and thoracic care in the area.
+                </p>
+                <br />
+
+                <h2 style={styles.heroParagraph1}>Coordinated Care Before and After Surgery</h2>
+
+                <p style={styles.heroParagraph}>
+                  An operation alone is not enough to ensure the success of a surgical procedure. A patient's
+                  preparation prior to surgery and their recovery after surgery both have a significant impact on
+                  the overall outcome of the procedure. Prior to surgery, each patient receives an extensive
+                  pre-operative evaluation, which includes imaging studies, blood tests, and a comprehensive
+                  risk assessment. Following their operation, patients are closely monitored in one of the most
+                  sophisticated intensive care units and they will receive an individualized postoperative care
+                  and rehabilitation plan.
+                </p>
+                <p style={styles.heroParagraph}>
+                  We place great emphasis on providing patient education and support so that patients and their
+                  families are informed about what is occurring with their condition and the treatment provided.
+                  By offering patients complete transparency and a high level of support, patients will have more
+                  confidence going through the treatment process and will experience less anxiety.
+                </p>
+                <br />
+
+                <h2 style={styles.heroParagraph1}>A Trusted Center in Maharashtra</h2>
+
+                <p style={styles.heroParagraph}>Shree Saibaba Multi-Speciality Hospital is developing into the top
+                  facility to visit for cardiac thoracic surgery in the state of Maharashtra. Our facility has
+                  advanced technology and modern facilities; therefore, we are committed to providing access to
+                  globally recognized quality thoracic and heart care at a reasonable price for all Americans.</p>
+                <p style={styles.heroParagraph}>
+                  We at Shree Saibaba Multi-Speciality Hospital provide a complete range of medical services for the 
+                  treatment of diseases of the heart and lungs. We believe that there should be no limit to how quickly 
+                  a patient recovers from surgery. Shree Saibaba Multi-Speciality Hospital will be here to help you 
+                  stay on the path to a healthy heart and strong heart for a lifetime. Every heartbeat counts!
+                </p>
+                <br />
 
                 <div style={styles.highlightStrip}>
                   <span style={styles.highlightLabel}>Quick Facts:</span>
