@@ -96,6 +96,20 @@ const styles = {
     lineHeight: 1.7,
     color: '#1e293b',
     marginBottom: '10px',
+    textAlign: 'left'
+  },
+  heroParagraph1: {
+    fontSize: "24px",
+    lineHeight: 1.7,
+    color: "#1e293b",
+    marginBottom: "10px",
+    textAlign: "left",
+  },
+  heroParagraph2: {
+    fontSize: "40px",
+    lineHeight: 1.2,
+    color: "#1e293b",
+    marginBottom: "10px",
   },
   highlightStrip: {
     marginTop: '16px',
@@ -252,26 +266,112 @@ function Nephrology() {
                   <span>Specialized Kidney Care</span>
                 </div>
 
-                <h1 style={styles.heroTitle}>Nephrology Department</h1>
+                <h1 style={styles.heroParagraph2}>Nephrology Department</h1>
                 <div style={styles.heroSubtitle}>Nashik, Maharashtra</div>
 
-                <div style={styles.heroTagline}>
-                  Comprehensive diagnosis, treatment, and long-term management for kidney disorders with advanced dialysis support.
+                <div style={styles.heroParagraph1}>
+                  <b>Comprehensive Kidney Care</b>
                 </div>
 
                 <p style={styles.heroParagraph}>
-                  The Nephrology Department provides specialized care for patients with kidney-related diseases and disorders.
-                  Our expert nephrologists offer comprehensive diagnosis, treatment, and long-term management of chronic kidney
-                  disease, acute kidney injuries, electrolyte imbalances, and hypertension related to kidney disorders.
+                  It is vital for you to maintain a healthy kidney function in order to be healthy overall. The
+                  nephrology department at Shree Saibaba Multispeciality Hospital aims to increase prevention and
+                  early diagnosis of kidney diseases and to help patients successfully treat their conditions. This
+                  hospital provides service to the entire community, regardless of their age, who have problems
+                  related to kidneys. These conditions may be mild, serious, acute or chronic.
                 </p>
 
                 <p style={styles.heroParagraph}>
-                  With advanced facilities and a dedicated care team, we ensure accurate evaluation and personalized treatment plans.
+                  Our nephrology team consists of experienced board-certified nephrologists who are highly qualified
+                  and experienced in their field, allowing them to accurately diagnose and effectively manage all types
+                  of renal disorders. A lot of patients will search for a quote like "nephrologist near me" when they
+                  start experiencing symptoms such as swelling, fatigue, abnormal urine output, and/or high blood pressure.
+                  Each patient will have the ability to receive their nephrology consultation, evaluation, and treatment
+                  plan(s) promptly, all under one roof.
                 </p>
+                <br />
+
+                <h2 style={styles.heroParagraph1}>Advanced Diagnosis and Personalized Treatment</h2>
+
+                <p style={styles.heroParagraph}>
+                  Kidney diseases can progress silently, which is why early diagnosis is essential. Our specialists
+                  carefully assess each patient using modern diagnostic tools such as blood investigations, urine analysis,
+                  imaging studies, and kidney function tests. These evaluations help identify conditions like acute kidney
+                  injury, long-term renal damage, and electrolyte imbalance at an early stage.
+                </p>
+                <p style={styles.heroParagraph}>
+                  In addition to the nephrology doctor providing ongoing treatment and guidance for patients with long-term
+                  kidney disease conditions, we also have a chronic kidney disease doctor who will monitor their condition
+                  continuously to slow their progression, improve their quality of life, and develop customized treatment
+                  plans based on the patients' stage of disease progression and overall health and lifestyle.
+                </p>
+                <br />
+
+                <h2 style={styles.heroParagraph1}>A collaborative effort between the Nephrologists and Urologists</h2>
+
+                <p style={styles.heroParagraph}>
+                  At our facility, we utilize the services of urologists and nephrologists and take a team approach to
+                  ensuring our patients receive a standard of care from all specialists. A nephrologist and urologist treat
+                  urinary tract infections and/or kidney damage from hypertension and/or other related conditions.
+                </p>
+                <p style={styles.heroParagraph}>
+                  Those who are seeking nephrologists will find that they will receive comprehensive support. This includes
+                  compassion, simple solutions, and several ways to treat their kidney disease. As many nephrology patients
+                  will need to be monitored for months or years, educating the patient about their kidney condition, how to
+                  change their diet, and how to take preventive measures to avoid complications is a major focus.
+                </p>
+                <br />
+
+                <h2 style={styles.heroParagraph1}>Expertise Close to Home</h2>
+
+                <p style={styles.heroParagraph}>
+                  Shree Saibaba Multispeciality Hospital is a quality source of nephrology services within the community for
+                  those looking for a local nephrologist to provide expert services. We are recognized as a trusted center for
+                  renal care, serving patients from Nashik and nearby regions. Those seeking a kidney disease specialist in Nashik
+                  benefit from accessible consultations, emergency support, and continuity of care.
+                </p>
+                <p style={styles.heroParagraph}>
+                  Our hospital is also known as a dependable stone specialist hospital, providing evaluation and medical management
+                  for kidney stones, along with preventive advice to reduce recurrence. Patients commonly refer to our specialists
+                  as the kidney ka doctor due to their approachable nature and clear communication.
+                </p>
+                <br />
+
+                <h2 style={styles.heroParagraph1}>A Patient-Centered Approach to Managing Kidney Disease</h2>
+
+                <p style={styles.heroParagraph}>
+                  The care team provides each of their patients with the attention of a kidney disease specialist who emphasizes
+                  patient safety, comfort, and long-term health. The team works with patients on diet, medications, and lifestyle
+                  changes throughout the entire treatment process.
+                </p>
+                <p style={styles.heroParagraph}>
+                  Patients who do online searches for "the best nephrologist near me" or "top nephrology doctor near me" are often
+                  looking for credible and competent help with their kidney issues. The Shree Saibaba Multispeciality Hospital is
+                  different from other hospitals by maintaining an unwavering commitment to ethical practices, cutting-edge treatment
+                  options, and patient satisfaction.
+                </p>
+                <br />
+
+                <h2 style={styles.heroParagraph1}>What Makes Shree Saibaba Multispeciality Hospital An Excellent Choice?</h2>
+
+                <ul style={{textAlign: 'left'}}>
+                  <li>Our renal care specialists offer you years of expertise.</li>
+                  <li>We provide advanced diagnostic and treatment options.</li>
+                  <li>We take a personal approach to every patient we treat.</li>
+                  <li>Our team will coordinate with all your specialist doctors as they care for your complex kidney health.</li>
+                  <li>Our team is focused on preventing and managing long term health issues.</li>
+                </ul>
+                <br />
+
+                <p style={styles.heroParagraph}>
+                  If you or a member of your family have kidney problems, we will support you in your journey back to health and confident 
+                  and in charge of your kidney health.
+                </p>
+                <br />
 
                 <div style={styles.highlightStrip}>
                   <span style={styles.highlightLabel}>Quick Facts:</span>
-                  CKD &amp; AKI care • Hemodialysis • Renal biopsy • 24×7 dialysis unit (as required)
+                  CKD &amp; AKI care • Hemodialysis • Renal biopsy • 24x7 dialysis unit (as required)
                 </div>
               </div>
             </div>
