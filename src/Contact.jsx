@@ -131,7 +131,7 @@ function Contact() {
 
       <div className="map">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15003.876725838495!2d73.816404!3d19.988015!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bddec4df65a507f%3A0x6d9f52f36f6d5257!2sShree%20Saibaba%20Heart%20Institute%20%26%20Multispeciality%20Hospital!5e0!3m2!1sen!2sin!4v1701357602410!5m2!1sen!2sin"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2856.014243581841!2d73.7873125076294!3d19.990288178980673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bddeb0030c799f9%3A0x8fae3232a01d138c!2sShree%20Saibaba%20Multispeciality%20Hospital%2C%20Nashik!5e1!3m2!1sen!2sin!4v1767699907105!5m2!1sen!2sin"
           width="100%"
           height="100%"
           style={{ border: 0 }}
