@@ -103,7 +103,7 @@ export default function FullBodyCheckup({
         <div className="fbc-actions no-print">
           <Link to="/contact">
             <button className="fbc-btn fbc-btn--primary" aria-label="Book package">
-              Book Now
+              Schedule your Health Check today!
             </button>
           </Link>
           <button className="fbc-btn fbc-btn--ghost" onClick={handlePrint} aria-label="Print this page">
@@ -114,6 +114,7 @@ export default function FullBodyCheckup({
 
       <section className="fbc-card" aria-labelledby="tests-heading">
         <h2 id="tests-heading" className="fbc-card__title">What’s Included</h2>
+        <h2 id="tests-heading" className="fbc-card__title">Total Cost : Rs.4000/-</h2>
         <ul className="fbc-list" role="list">
           {tests.map((item, idx) => (
             <li className="fbc-list__item" key={idx}>
