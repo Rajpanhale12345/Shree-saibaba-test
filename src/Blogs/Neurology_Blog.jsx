@@ -60,22 +60,77 @@ function Stress_Blog() {
 
             <Helmet>
                 <title>Neurology Brain Disorders | Shree Saibaba Multispeciality Hospital</title>
-                <meta name="description" content="" />
-                <meta name="keywords" content="" />
+                <meta name="description" content="Learn neurology basics, common brain and nerve disorders (stroke, epilepsy, Parkinson's, MS), diagnosis, advanced treatment, and rehabilitation. Consult an experienced neurologist in Nashik at Shree Saibaba Multispeciality Hospital." />
+                <meta name="keywords" content="neurologist in nashik, neurology hospital nashik, best neurologist near me, brain disorder treatment, stroke treatment nashik, epilepsy specialist nashik, parkinson's treatment, multiple sclerosis care, neuro physician nashik, neuro rehabilitation, neuro physiotherapy, brain and nerve disorders" />
                 <link rel="canonical" href="https://shreesaibabamultispecialityhospital.com/Neurology_Blog" />
-                <meta property="og:title" content="Neurology Brain Disorders | Shree Saibaba Multispeciality Hospital" />
-                <meta property="og:description" content="" />
+                <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+                <meta name="googlebot" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+                <meta name="language" content="English" />
+                <meta name="geo.region" content="IN-MH" />
+                <meta name="geo.placename" content="Nashik" />
+                <meta property="og:title" content="Neurology in Nashik: Brain & Nerve Disorders, Treatment and Rehab" />
+                <meta property="og:description" content="Understand neurology, common brain/nerve disorders, modern diagnosis, advanced treatments, and neuro rehabilitation at Shree Saibaba Multispeciality Hospital, Nashik." />
                 <meta property="og:type" content="article" />
                 <meta property="og:url" content="https://shreesaibabamultispecialityhospital.com/Neurology_Blog" />
                 <meta property="og:site_name" content="Shree Saibaba Multispeciality Hospital" />
                 <meta property="og:locale" content="en_IN" />
+                <meta property="og:image" content="https://shreesaibabamultispecialityhospital.com/assets/Shreesaibabalogo-D9LTGZox.png" />
+                <meta property="og:image:width" content="1200" />
+                <meta property="og:image:height" content="630" />
+                <meta property="og:image:alt" content="Neurology care in Nashik - diagnosis and treatment" />
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="Neurology Brain Disorders" />
-                <meta name="twitter:description" content="" />
-                <meta name="article:section" content="Orthopedics" />
-                <meta name="geo.region" content="IN-MH" />
-                <meta name="geo.placename" content="Nashik" />
-                <meta name="language" content="English" />
+                <meta name="twitter:title" content="Neurology in Nashik: Brain & Nerve Disorders, Treatment and Rehab" />
+                <meta name="twitter:description" content="Neurology basics, common brain/nerve disorders, diagnosis, advanced treatment, and rehab. Shree Saibaba Multispeciality Hospital, Nashik." />
+                <meta name="twitter:image" content="https://shreesaibabamultispecialityhospital.com/assets/Shreesaibabalogo-D9LTGZox.png" />
+                <meta name="author" content="Dr. Aniruddha Dharmadhikari" />
+                <meta property="article:section" content="Neurology" />
+                <meta property="article:published_time" content="2026-01-01" />
+                <meta property="article:modified_time" content="2026-01-01" />
+
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "MedicalWebPage",
+                        "name": "Understanding Neurology: The Key to Unlocking Brain Disorders",
+                        "url": "https://shreesaibabamultispecialityhospital.com/Neurology_Blog",
+                        "description":
+                            "Neurology basics, common brain and nerve disorders, diagnosis, advanced treatment, and rehabilitation in Nashik.",
+                        "inLanguage": "en-IN",
+                        "about": [
+                            { "@type": "MedicalCondition", "name": "Stroke" },
+                            { "@type": "MedicalCondition", "name": "Epilepsy" },
+                            { "@type": "MedicalCondition", "name": "Parkinson's disease" },
+                            { "@type": "MedicalCondition", "name": "Multiple sclerosis" }
+                        ],
+                        "reviewedBy": {
+                            "@type": "Physician",
+                            "name": "Dr. Aniruddha Dharmadhikari"
+                        },
+                        "publisher": {
+                            "@type": "Hospital",
+                            "name": "Shree Saibaba Multispeciality Hospital",
+                            "address": {
+                                "@type": "PostalAddress",
+                                "addressLocality": "Nashik",
+                                "addressRegion": "MH",
+                                "addressCountry": "IN"
+                            }
+                        },
+                        "mainEntity": {
+                            "@type": "Article",
+                            "headline": "Understanding Neurology: The Key to Unlocking Brain Disorders",
+                            "datePublished": "2026-01-01",
+                            "dateModified": "2026-01-01",
+                            "author": {
+                                "@type": "Person",
+                                "name": "Dr. Aniruddha Dharmadhikari"
+                            },
+                            "image": [
+                                "https://shreesaibabamultispecialityhospital.com/assets/Shreesaibabalogo-D9LTGZox.png"
+                            ]
+                        }
+                    })}
+                </script>
             </Helmet>
 
             <div className="kidney-page">
