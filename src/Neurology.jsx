@@ -95,6 +95,7 @@ const styles = {
     lineHeight: 1.7,
     color: '#1e293b',
     marginBottom: '10px',
+    textAlign: 'left'
   },
   highlightStrip: {
     marginTop: '16px',
@@ -148,7 +149,7 @@ const styles = {
   list: {
     paddingLeft: '18px',
     margin: 0,
-    textAlign : "left"
+    textAlign: "left"
   },
   listItem: {
     fontSize: '14px',
@@ -265,36 +266,52 @@ function Neurology() {
                 </div>
 
                 <p style={styles.heroParagraph}>
-                  Neurology is a specialized branch of medicine focused on diagnosing,
-                  treating, and managing disorders of the brain, spinal cord, nerves,
-                  and muscles. As the nervous system controls virtually every function
-                  in the body, neurological diseases can have profound impacts on
-                  mobility, cognition, and overall quality of life. Timely intervention,
-                  accurate diagnosis, and multidisciplinary care are essential to
-                  achieving the best outcomes in neurological health.
+                  Neurology is the study of how abnormalities in the functioning of the
+                  brain, spinal cord, nerves, and musculature can cause problems in the
+                  way we perform everyday activities such as moving, thinking, feeling,
+                  talking, and remembering. There is no way to imagine what life would
+                  be like if your brain and nervous system did not function correctly.
                 </p>
                 <p style={styles.heroParagraph}>
-                  Shree Saibaba Multispeciality Hospital is recognized as one of the
-                  top hospitals in Nashik for Neurology, offering comprehensive
-                  neurological services backed by state-of-the-art diagnostic
-                  facilities, advanced neuro-interventions, and a team of expert
-                  neurologists and neurosurgeons. With a focus on early detection,
-                  personalized treatment plans, and long-term management, the hospital
-                  is committed to delivering high-quality care across a wide range of
-                  neurological conditions.
+                  The Shree Saibaba Multispeciality Hospital has been a premier source
+                  of exceptional service in the field of neurology in Nashik. One of
+                  the strengths of Shree Saibaba Multispeciality Hospital is that they
+                  have some of the best neurologists in the area. They have the latest
+                  technology and utilize the latest in clinical practices to treat both
+                  children and adults.
                 </p>
                 <p style={styles.heroParagraph}>
-                  Our Neurology Department is led by a team of highly skilled
-                  specialists with expertise in treating complex brain, spine, and
-                  nerve disorders. Supported by advanced neuroimaging, electrophysiology
-                  labs, and 24/7 emergency services, we are fully equipped to handle
-                  stroke, epilepsy, movement disorders, neurodegenerative diseases,
-                  spine conditions, and more—with precision and compassion.
+                  The Neurology Department at Shree Saibaba Multispeciality Hospital
+                  provides care for a wide variety of conditions, including stroke,
+                  seizures (epilepsy), migraines, peripheral neuropathy (nerve pain),
+                  degenerative spinal disorders, Parkinson's disease, confusion,
+                  forgetfulness, and muscle weakness. The Neurology Department has
+                  advanced imaging capabilities, a full range of nerve testing services,
+                  and 24-hour emergency services to ensure a proper diagnosis and a quick
+                  recovery for their patients.
                 </p>
                 <p style={styles.heroParagraph}>
-                  The department follows a multidisciplinary approach, working closely
-                  with neurosurgeons, rehabilitation experts, psychologists, and
-                  critical care specialists to ensure holistic care and optimal recovery.
+                  Kids have a special place at Shree Saibaba Multispeciality Hospital.
+                  Kids in Neurology consists of highly trained neurologists who specialize
+                  in diagnosing and treating conditions affecting the brain and nerves in
+                  children. Common conditions treated through kids in neurology are seizure
+                  disorders, developmental delays and disorders, cerebral palsy, infectious
+                  brain disease (meningitis), and other neurological issues in infants and
+                  children.
+                </p>
+                <p style={styles.heroParagraph}>
+                  The children's neurology department of the hospital promotes a friendly
+                  and welcoming atmosphere that encourages children and their parents to feel
+                  comfortable, supported, and empowered throughout every step of their care
+                  journey.
+                </p>
+                <p style={styles.heroParagraph}>
+                  We pride ourselves on using a collaborative model of care where our 
+                  neurologists and neurosurgeons, along with our physiotherapists, 
+                  psychologists, and critical care specialists, work closely together 
+                  as a cohesive team. Our patients receive individualised, focused, early 
+                  intervention so that they may recover quickly, live a healthy and productive 
+                  life, and achieve their full potential.
                 </p>
 
                 <div style={styles.highlightStrip}>

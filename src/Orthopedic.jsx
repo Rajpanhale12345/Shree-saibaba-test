@@ -95,6 +95,7 @@ const styles = {
     lineHeight: 1.7,
     color: '#1e293b',
     marginBottom: '10px',
+    textAlign: 'left',
   },
   highlightStrip: {
     marginTop: '16px',
@@ -144,7 +145,7 @@ const styles = {
   list: {
     paddingLeft: '18px',
     margin: 0,
-    textAlign : "left"
+    textAlign: "left"
   },
   listItem: {
     fontSize: '14px',
@@ -226,14 +227,40 @@ function Orthopedic() {
                 </div>
 
                 <p style={styles.heroParagraph}>
-                  Our Orthopedic department is committed to providing comprehensive care for bone, joint,
-                  and muscle disorders. Our team of experienced orthopedic surgeons and specialists
-                  work together to diagnose and treat a wide range of conditions, from fractures and
-                  sports injuries to degenerative diseases like arthritis.
+                  Shree Saibaba Multispeciality Hospital provides orthopedic specialists and expertise in
+                  treating individuals with a variety of orthopedic conditions. We have a complete orthopedic
+                  service offering that allows our patients to receive complete orthopedic care in one location.
+                  To provide the most advanced orthopedic treatments available, we have only the highest skilled
+                  and most experienced orthopedic surgeons on staff to provide you with all of your orthopedic
+                  needs at our hospital, including how to care for your long-term orthopedic health.
                 </p>
                 <p style={styles.heroParagraph}>
-                  We aim to restore mobility, alleviate pain, and improve the overall quality of life
-                  for our patients through evidence-based surgical and non-surgical treatments.
+                  Our staff consists of highly qualified orthopedic surgeons, orthopedists, and physicians
+                  specializing in bone and joint conditions. The treatment of many orthopedic conditions or
+                  injuries include; fractures, sports injuries, arthritis (joint disease), diseases or conditions
+                  of the spine such as bulging discs and herniated discs, (the spinal cord being inside the
+                  vertebrae) and joint pain due to overuse. The medical staff will focus on relieving pain,
+                  restoring movement and returning patients back to active participation.
+                </p>
+                <p style={styles.heroParagraph}>
+                  Our orthopedic department is also proficient in a variety of advanced surgical techniques,
+                  including total knee replacement, knee arthroscopy, and hip replacement. The hospital's
+                  experts are known for performing robotic knee replacements that provide greater accuracy,
+                  shorter recovery times, and longer-lasting results. When it comes to choosing a top knee
+                  replacement surgeon in Nashik, our team has the expertise and utilizes the most modern
+                  techniques available.
+                </p>
+                <p style={styles.heroParagraph}>
+                  Our orthopedic surgeons not only provide the most advanced orthopedic surgeries for adults, 
+                  but they also provide excellent pediatric orthopedic surgery. Our pediatric orthopedic surgeon 
+                  has years of experience providing pediatric orthopedic care to patients suffering from growth 
+                  disorders and/or deformities due to injury or abnormal development. We aim to improve our 
+                  patients' quality of life by using new technology, evidence based practices and patient 
+                  centered care to improve mobility, reduce pain and provide the best possible outcome.
+                </p>
+                <p style={styles.heroParagraph}>
+                  Shree Saibaba Multispeciality Hospital has been recognised as one of the leading 
+                  organisations in the field of Orthopedics in the Nashik Region of India.
                 </p>
 
                 <div style={styles.highlightStrip}>

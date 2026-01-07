@@ -95,6 +95,7 @@ const styles = {
     lineHeight: 1.7,
     color: '#1e293b',
     marginBottom: '10px',
+    textAlign: 'left',
   },
   highlightStrip: {
     marginTop: '16px',
@@ -126,7 +127,7 @@ const styles = {
     alignItems: 'flex-start',
     gap: '10px',
     marginBottom: '12px',
-},
+  },
 
   sectionTitle: {
     fontSize: '18px',
@@ -136,7 +137,7 @@ const styles = {
     alignItems: 'left',
     gap: '8px',
   },
- 
+
   sectionAccentBar: {
     width: '3px',
     height: '18px',
@@ -147,19 +148,19 @@ const styles = {
     fontSize: '12px',
     color: '#94a3b8',
   },
- list: {
-  paddingLeft: '18px',
-  margin: 0,
-  textAlign: 'left',   // ADD THIS LINE
-},
+  list: {
+    paddingLeft: '18px',
+    margin: 0,
+    textAlign: 'left',   // ADD THIS LINE
+  },
 
- listItem: {
-  fontSize: '14px',
-  lineHeight: 1.7,
-  color: '#1e293b',
-  marginBottom: '6px',
-  textAlign: 'left',   // ADD THIS LINE
-},
+  listItem: {
+    fontSize: '14px',
+    lineHeight: 1.7,
+    color: '#1e293b',
+    marginBottom: '6px',
+    textAlign: 'left',   // ADD THIS LINE
+  },
 
 
   // Grid / layout helpers
@@ -253,7 +254,7 @@ function Cardiology() {
                   src={cardio}
                   alt="Cardiology Department"
                   style={styles.heroImage}
-                 
+
                 />
               </div>
             </div>
@@ -271,33 +272,45 @@ function Cardiology() {
                 </div>
 
                 <p style={styles.heroParagraph}>
-                  Cardiology is one of the most crucial and key sectors in the healthcare
-                  system, as it deals with one of the most vital organs — the heart.
-                  Cardiologists play a significant role in monitoring and preserving
-                  overall body health.
+                  Cardiology is a medical specialty that helps to heal the heart. The heart
+                  is the most vital organ in our body, and thus, if you have any kind of
+                  issue, you must go to a doctor promptly. Untreated, these problems could
+                  become serious and have a negative impact on your daily life. This includes
+                  the conditions of heart disease, cardiovascular disease and all of their
+                  related disorders.
                 </p>
                 <p style={styles.heroParagraph}>
-                  Shree Saibaba Multispeciality Hospital is one of the best cardiology
-                  hospitals in Nashik, designed with a deep understanding of the critical
-                  nature of cardiac care. The hospital has made significant investments in
-                  state-of-the-art, technology-driven medical equipment related to
-                  cardiology with a steadfast objective: to provide the highest quality
-                  cardiac services.
+                  The Shree Saibaba Multispeciality Hospital is the leading cardiology hospital
+                  in Nashik, with state-of-the-art, reliable, advanced cardiac services. It is
+                  also one of the best hospitals to find heart specialists (doctors) in Nashik.
+                  Patients choose Shree Saibaba Multispeciality Hospital for its accurate
+                  diagnosis, up-to-date treatment techniques and caring attitudes of about
+                  patients.
                 </p>
                 <p style={styles.heroParagraph}>
-                  Shree Saibaba Multispeciality Hospital stands as the best cardiac hospital
-                  in Nashik, where highly qualified and seasoned cardiologists—many of whom
-                  bring years of experience from leading institutions and have handled some
-                  of the most challenging cardiac cases—form the backbone of the cardiac
-                  care team.
+                  The cardiology department at Shree Saibaba Multispeciality Hospital is comprised
+                  of well-trained cardiologists including specialists in heart failure. This
+                  comprehensive approach allows us to treat a variety of cardiovascular issues,
+                  such as hypertension (high blood pressure), chest pain, arrhythmias (irregular
+                  heartbeats), blocked arteries, and chronic heart disease.
                 </p>
                 <p style={styles.heroParagraph}>
-                  They are equipped to diagnose and treat a wide range of heart conditions,
-                  from common ailments like hypertension and chest pain to complex
-                  procedures like open-heart surgeries, CABG, and valve replacements. This
-                  leading heart hospital in Nashik is fully equipped with in-house
-                  diagnostic facilities, ensuring timely and efficient care for patients in
-                  cardiac distress.
+                  We provide complete care for patients facing cardiovascular emergencies, ensuring
+                  fast response and lifesaving treatment. With advanced diagnostic facilities available
+                  in-house, heart conditions are identified quickly, allowing immediate and effective
+                  treatment.
+                </p>
+                <p style={styles.heroParagraph}>
+                  As one of the best heart hospitals in the region, our goal is to prevent, diagnose,
+                  and manage heart-related conditions with precision and care. Every patient receives
+                  a personalized approach to their heart health through routine examinations and extensive
+                  procedures and treatment.
+                </p>
+                <p style={styles.heroParagraph}>
+                  The focus is on enhancing long term heart health and providing improved quality of 
+                  life to all patients. Individuals seeking a qualified specialist or patient care provider 
+                  for cardiovascular disease will find the Shree Saibaba Multispeciality Hospital to be the 
+                  place to go for all types of cardiovascular care in Nashik.
                 </p>
 
                 <div style={styles.highlightStrip}>
@@ -315,7 +328,7 @@ function Cardiology() {
                 <span style={styles.sectionAccentBar} />
                 Services Offered
               </div>
-           
+
             </div>
             <ul style={styles.list}>
               <li style={styles.listItem}>
@@ -343,7 +356,7 @@ function Cardiology() {
                 <span style={styles.sectionAccentBar} />
                 Facilities &amp; Equipment
               </div>
-             
+
             </div>
             <ul style={styles.list}>
               <li style={styles.listItem}>
@@ -370,7 +383,7 @@ function Cardiology() {
                 <span style={styles.sectionAccentBar} />
                 Why Choose Us
               </div>
-            
+
             </div>
             <p style={styles.listItem}>
               Shree Saibaba Multispeciality Hospital is widely recognized as a leading center
@@ -394,7 +407,7 @@ function Cardiology() {
                 <span style={styles.sectionAccentBar} />
                 Meet Our Experienced Cardiologists
               </div>
-             
+
             </div>
             <div style={styles.twoColumnGrid}>
               <ul style={styles.doctorList}>
@@ -424,7 +437,7 @@ function Cardiology() {
                 <span style={styles.sectionAccentBar} />
                 Achievements &amp; Highlights
               </div>
-             
+
             </div>
             <ul style={styles.list}>
               <li style={styles.tagListItem}>
@@ -446,7 +459,7 @@ function Cardiology() {
                 <span style={styles.sectionAccentBar} />
                 Patient Guidelines
               </div>
-             
+
             </div>
             <ul style={styles.list}>
               <li style={styles.listItem}>
@@ -476,7 +489,7 @@ function Cardiology() {
               <div style={styles.sectionTitle}>
                 <span style={styles.sectionAccentBar} />
                 Department Timings
-              </div>  
+              </div>
             </div>
             <ul style={styles.list}>
               <li style={styles.tagListItem}>
@@ -495,7 +508,7 @@ function Cardiology() {
                 <span style={styles.sectionAccentBar} />
                 FAQs
               </div>
-          
+
             </div>
             <div style={styles.faqList}>
               <div style={styles.faqItem}>
