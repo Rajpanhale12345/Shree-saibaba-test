@@ -87,7 +87,7 @@ async function generateSitemap() {
   const xml = await streamToPromise(sitemap).then((data) => data.toString());
 
   writeFileSync("public/sitemap.xml", xml);
-  console.log("✅ public/sitemap.xml generated");
+  console.log("public/sitemap.xml generated");
 }
 
 generateSitemap();

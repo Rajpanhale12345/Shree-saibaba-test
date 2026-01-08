@@ -92,10 +92,25 @@ const styles = {
     marginBottom: '14px',
   },
   heroParagraph: {
-    fontSize: '14px',
+    fontSize: '16px',
     lineHeight: 1.7,
     color: '#1e293b',
     marginBottom: '10px',
+    textAlign: "left"
+  },
+  heroParagraph1: {
+    fontSize: "28px",
+    lineHeight: 1.7,
+    color: "#1e293b",
+    marginBottom: "10px",
+    textAlign: "left",
+  },
+  heroParagraph2: {
+    fontSize: "40px",
+    lineHeight: 1.2,
+    color: "#1e293b",
+    marginBottom: "10px",
+    textAlign: "left",
   },
   highlightStrip: {
     marginTop: '16px',
@@ -254,25 +269,58 @@ function GeneralMedicine() {
 
                 <h1 style={styles.heroTitle}>General Medicine Department</h1>
                 <div style={styles.heroSubtitle}>Nashik, Maharashtra</div>
+                <br />
 
-                <div style={styles.heroTagline}>
-                  Accurate diagnosis, effective treatment, and long-term management for acute &amp; chronic illnesses.
-                </div>
+                <h2 style={styles.heroParagraph1}>Comprehensive Medical Care in Nashik</h2>
 
                 <p style={styles.heroParagraph}>
-                  The General Medicine Department provides comprehensive evaluation, treatment, and long-term management
-                  of a wide spectrum of medical conditions. Our team of experienced physicians is dedicated to delivering
-                  accurate diagnosis, effective treatment, and holistic care.
+                  Shree Saibaba Multispeciality Hospital provides advanced Patient-Centric General
+                  Medicine department in Nashik, with comprehensive medical care available to help diagnose,
+                  prevent and treat a variety of health problems. Our qualified and experienced General
+                  Medicine specialists have years of experience in treating chronic & acute medical problems,
+                  and have extensive knowledge of how to best care for patients.
+                </p>
+                <p style={styles.heroParagraph}>
+                  Our dedicated team of expert General Medicine physicians are recognized as some of the
+                  top General Medicine physicians in Nashik and offer the highest standard of General
+                  Medicine care in Nashik, across a wide range of specialties. Our General Medicine services
+                  include Family Medicine, Acute and Chronic Disease Management, Emergency Medicine, and
+                  Preventative Health Care.
+                </p>
+                <p style={styles.heroParagraph}>
+                  The General Medicine Department also treats both acute and chronic diseases, and also
+                  provides services to cover lifestyle-related diseases. The General Medicine Department
+                  treats the following conditions.
                 </p>
 
                 <p style={styles.heroParagraph}>
-                  We manage acute and chronic illnesses such as diabetes, hypertension, respiratory disorders,
-                  gastrointestinal issues, and infectious diseases with a patient-first approach.
+                  We treat acute and chronic disease, and lifestyle-related disease, which include:
                 </p>
+
+                <ul style={{color: "#1e293b", textAlign: "left"}}>
+                  <li>Metabolic Diseases, Diabetes & Metabolic Syndrome</li>
+                  <li>Heart Disease, High Blood Pressure & Hypertension</li>
+                  <li>Respiratory Disease & Respiratory Infection</li>
+                  <li>Gastrointestinal Disease & Liver Disease</li>
+                  <li>Infectious Disease, Viral Disease, Fever</li>
+                  <li>Long-Term Disease Management & Comprehensive Health Assessment</li>
+                </ul> <br />
+
+                <p style={styles.heroParagraph}>
+                  Our general internal medicine group will create your own personalised treatment plan
+                  created with a specific goal of diagnosing early, preventing disease through preventative
+                  measures and ultimately increasing your overall health and wellness.
+                </p>
+                <p style={styles.heroParagraph}>
+                  Our physicians at the Shree Saibaba Multispeciality Hospital focus on total healing using 
+                  only the best available medical evidence for their recommendations. Our continual approach 
+                  to health gives us a unique place in Nashik as a provider of general medicine services.
+                </p>
+                <br />
 
                 <div style={styles.highlightStrip}>
                   <span style={styles.highlightLabel}>Quick Facts:</span>
-                  Preventive screenings • ICU support • Chronic disease clinics • 24×7 emergency services
+                  Preventive screenings • ICU support • Chronic disease clinics • 24x7 emergency services
                 </div>
               </div>
             </div>
