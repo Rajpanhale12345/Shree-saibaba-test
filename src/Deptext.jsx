@@ -35,8 +35,8 @@ function Deptext({ image, title, subtitle, description, description1, descriptio
           <br />   <br />
 
           {description3}
-          <br />   <br />
-          <br />
+          <br />  <br />
+         
           <h1 style={{ textAlign: "left" }}>{bullet} </h1><br />
           <i>
             <ul className='border1' style={{ textAlign: 'left' }}>
@@ -49,12 +49,11 @@ function Deptext({ image, title, subtitle, description, description1, descriptio
               <lil style={{ color: 'red' }} className='list'>{bullet7}</lil><br />
             </ul>
           </i>
-          <br />
 
         </ul><br /><i>
 
           <h1 style={{ textAlign: "left" }}>{ipd} </h1><br />
-          <i>
+          {/* <i>
             <ul className='border2' style={{ textAlign: 'left' }}>
               <lil style={{ color: 'red' }} className='list'>{detail1}</lil><br />
               <lil style={{ color: 'red' }} className='list'>{detail2}</lil><br />
@@ -64,8 +63,7 @@ function Deptext({ image, title, subtitle, description, description1, descriptio
               <lil style={{ color: 'red' }} className='list'>{detail6}</lil><br />
               <lil style={{ color: 'red' }} className='list'>{detail7}</lil><br />
             </ul>
-          </i>
-          <br /><br />
+          </i> */}
 
           <h2 className='choose'>Why Choose us</h2></i><br />
         <p style={{ color: 'black' }}>{choose}</p><br />
