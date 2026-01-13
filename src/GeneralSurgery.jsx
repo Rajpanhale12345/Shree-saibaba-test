@@ -103,11 +103,10 @@ const styles = {
     textAlign: "left",
   },
   heroParagraph2: {
-    fontSize: "40px",
+    fontSize: "30px",
     lineHeight: 1.2,
     color: "#1e293b",
     marginBottom: "10px",
-    textAlign: "left",
   },
 
   highlightStrip: {
@@ -258,7 +257,7 @@ function GeneralMedicine() {
                   <span>Comprehensive Medical Care</span>
                 </div>
 
-                <h1 style={styles.heroTitle}>General Medicine Department</h1>
+                <h1 style={styles.heroParagraph2}>General Medicine Department</h1>
                 <div style={styles.heroSubtitle}>Nashik, Maharashtra</div>
                 <br />
 
