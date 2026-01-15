@@ -7,7 +7,7 @@
     <url>
         <loc>https://shreesaibabamultispecialityhospital.com/</loc>
         <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
+        <priority>1.0</priority>
     </url>
     <url>
         <loc>https://shreesaibabamultispecialityhospital.com/about</loc>
@@ -226,6 +226,81 @@
     </url>
     <url>
         <loc>https://shreesaibabamultispecialityhospital.com/Interventional_Radiology</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://shreesaibabamultispecialityhospital.com/Pneumonia</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://shreesaibabamultispecialityhospital.com/Lifestyle</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://shreesaibabamultispecialityhospital.com/Understanding_CABG</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://shreesaibabamultispecialityhospital.com/Kidney_Health</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://shreesaibabamultispecialityhospital.com/Holter</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://shreesaibabamultispecialityhospital.com/Spine_Joint</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://shreesaibabamultispecialityhospital.com/Varicose</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://shreesaibabamultispecialityhospital.com/Angiographies</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://shreesaibabamultispecialityhospital.com/Angiography</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://shreesaibabamultispecialityhospital.com/Angiographiess</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://shreesaibabamultispecialityhospital.com/Heart_Healthy</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://shreesaibabamultispecialityhospital.com/Stress_Anxiety</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://shreesaibabamultispecialityhospital.com/Robotic_Surgery</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://shreesaibabamultispecialityhospital.com/Robotic_Joint</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://shreesaibabamultispecialityhospital.com/Neurology_Blog</loc>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>

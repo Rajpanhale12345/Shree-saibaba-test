@@ -106,6 +106,7 @@ const styles = {
     lineHeight: 1.2,
     color: "#1e293b",
     marginBottom: "10px",
+    textAlign: "left",
   },
 
   highlightStrip: {

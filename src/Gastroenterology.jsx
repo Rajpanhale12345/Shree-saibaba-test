@@ -1,234 +1,256 @@
 import React from 'react';
-import gastro from './Images/gastro.jpg'; // <-- update image filename if different
+import gastro from './Images/gastro.jpg';
 import { Helmet } from "react-helmet-async";
 
-// ✅ Same structure + layout + styling pattern as Cardiology
 const styles = {
   page: {
-    background: 'linear-gradient(135deg, #f4f7fb, #e5edf9)',
-    padding: '40px 16px',
+    background: "linear-gradient(135deg, #f4f7fb, #e5edf9)",
+    padding: "40px 16px",
   },
   container: {
-    maxWidth: '1200px',
-    margin: '0 auto',
-    fontFamily: '"Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif',
-    color: '#0f172a',
+    maxWidth: "1200px",
+    margin: "0 auto",
+    fontFamily:
+      '"Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif',
+    color: "#0f172a",
   },
+
+  // ✅ HERO: grid on desktop, stacks on mobile via CSS class + media query below
   hero: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    gap: '24px',
-    alignItems: 'stretch',
-    marginBottom: '32px',
+    display: "grid",
+    gridTemplateColumns: "minmax(280px, 420px) 1fr",
+    gap: "24px",
+    alignItems: "start",
+    marginBottom: "32px",
   },
+
   heroImageWrapper: {
-    flex: '1 1 320px',
-    minWidth: '280px',
+    minWidth: "280px",
   },
   heroImageCard: {
-    height: '100%',
-    borderRadius: '20px',
-    overflow: 'hidden',
-    boxShadow: '0 18px 45px rgba(15,23,42,0.16)',
-    border: '1px solid rgba(148,163,184,0.4)',
-    background: '#0f172a',
+    width: "100%",
+    borderRadius: "20px",
+    overflow: "hidden",
+    boxShadow: "0 18px 45px rgba(15,23,42,0.16)",
+    border: "1px solid rgba(148,163,184,0.4)",
+    background: "#0f172a",
+
+    // ✅ responsive height for the image card
+    height: "clamp(220px, 32vw, 420px)",
   },
   heroImage: {
-    width: '100%',
-    height: '100%',
-    objectFit: 'fill',
-    display: 'block',
+    width: "100%",
+    height: "100%",
+    objectFit: "cover", // ✅ prevents stretching
+    objectPosition: "center",
+    display: "block",
     opacity: 0.95,
   },
+
   heroTextWrapper: {
-    flex: '2 1 420px',
-    minWidth: '280px',
+    minWidth: "280px",
   },
   heroTextCard: {
-    height: '100%',
-    borderRadius: '20px',
-    padding: '28px 28px 24px',
-    background: 'rgba(255,255,255,0.92)',
-    backdropFilter: 'blur(10px)',
-    boxShadow: '0 18px 45px rgba(15,23,42,0.08)',
-    border: '1px solid rgba(148,163,184,0.4)',
+    borderRadius: "20px",
+    padding: "28px 28px 24px",
+    background: "rgba(255,255,255,0.92)",
+    backdropFilter: "blur(10px)",
+    boxShadow: "0 18px 45px rgba(15,23,42,0.08)",
+    border: "1px solid rgba(148,163,184,0.4)",
   },
+
   pill: {
-    display: 'inline-flex',
-    alignItems: 'center',
-    gap: '8px',
-    padding: '4px 12px',
-    borderRadius: '999px',
-    fontSize: '12px',
+    display: "inline-flex",
+    alignItems: "center",
+    gap: "8px",
+    padding: "4px 12px",
+    borderRadius: "999px",
+    fontSize: "12px",
     fontWeight: 600,
-    letterSpacing: '0.06em',
-    textTransform: 'uppercase',
-    background: 'rgba(37,99,235,0.08)',
-    color: '#1d4ed8',
-    marginBottom: '10px',
+    letterSpacing: "0.06em",
+    textTransform: "uppercase",
+    background: "rgba(37,99,235,0.08)",
+    color: "#1d4ed8",
+    marginBottom: "10px",
   },
   pillDot: {
-    width: '8px',
-    height: '8px',
-    borderRadius: '50%',
-    background: '#22c55e',
+    width: "8px",
+    height: "8px",
+    borderRadius: "50%",
+    background: "#22c55e",
   },
-  heroTitle: {
-    fontSize: '30px',
-    fontWeight: 700,
-    margin: '4px 0 4px',
-    color: '#0f172a',
-  },
+
   heroSubtitle: {
-    fontSize: '16px',
+    fontSize: "16px",
     fontWeight: 500,
-    color: '#64748b',
-    marginBottom: '18px',
+    color: "#64748b",
+    marginBottom: "18px",
   },
-  heroTagline: {
-    fontSize: '14px',
-    fontWeight: 500,
-    color: '#0f766e',
-    marginBottom: '14px',
-  },
+
   heroParagraph: {
-    fontSize: '14px',
+    fontSize: "14px",
     lineHeight: 1.7,
-    color: '#1e293b',
-    marginBottom: '10px',
+    color: "#1e293b",
+    marginBottom: "10px",
+    textAlign: "left",
   },
+  heroParagraph1: {
+    fontSize: "24px",
+    lineHeight: 1.7,
+    color: "#1e293b",
+    marginBottom: "10px",
+    textAlign: "left",
+  },
+  heroParagraph2: {
+    fontSize: "30px",
+    lineHeight: 1.2,
+    color: "#1e293b",
+    marginBottom: "10px",
+  },
+
   highlightStrip: {
-    marginTop: '16px',
-    padding: '10px 14px',
-    borderRadius: '12px',
-    background: 'linear-gradient(90deg, rgba(37,99,235,0.08), rgba(56,189,248,0.10))',
-    fontSize: '13px',
-    color: '#0f172a',
-    border: '1px solid rgba(129,140,248,0.4)',
+    marginTop: "16px",
+    padding: "10px 14px",
+    borderRadius: "12px",
+    background:
+      "linear-gradient(90deg, rgba(37,99,235,0.08), rgba(56,189,248,0.10))",
+    fontSize: "13px",
+    color: "#0f172a",
+    border: "1px solid rgba(129,140,248,0.4)",
   },
   highlightLabel: {
     fontWeight: 600,
-    marginRight: '6px',
+    marginRight: "6px",
   },
 
+  // Section styles
   section: {
-    borderRadius: '18px',
-    padding: '22px 22px 20px',
-    marginBottom: '20px',
-    background: 'rgba(255,255,255,0.96)',
-    backdropFilter: 'blur(8px)',
-    boxShadow: '0 14px 35px rgba(15,23,42,0.06)',
-    border: '1px solid rgba(203,213,225,0.8)',
+    borderRadius: "18px",
+    padding: "22px 22px 20px",
+    marginBottom: "20px",
+    background: "rgba(255,255,255,0.96)",
+    backdropFilter: "blur(8px)",
+    boxShadow: "0 14px 35px rgba(15,23,42,0.06)",
+    border: "1px solid rgba(203,213,225,0.8)",
   },
   sectionHeaderRow: {
-    display: 'flex',
-    justifyContent: 'flex-start',
-    alignItems: 'flex-start',
-    gap: '10px',
-    marginBottom: '12px',
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "baseline",
+    gap: "10px",
+    marginBottom: "12px",
   },
   sectionTitle: {
-    fontSize: '18px',
+    fontSize: "18px",
     fontWeight: 700,
-    color: '#0f172a',
-    display: 'flex',
-    alignItems: 'left',
-    gap: '8px',
+    color: "#0f172a",
+    display: "flex",
+    alignItems: "center",
+    gap: "8px",
   },
   sectionAccentBar: {
-    width: '3px',
-    height: '18px',
-    borderRadius: '999px',
-    background: 'linear-gradient(180deg, #2563eb, #22c55e)',
+    width: "3px",
+    height: "18px",
+    borderRadius: "999px",
+    background: "linear-gradient(180deg, #2563eb, #22c55e)",
   },
+
   list: {
-    paddingLeft: '18px',
+    paddingLeft: "18px",
     margin: 0,
-    textAlign: 'left',
+    textAlign: "left",
   },
   listItem: {
-    fontSize: '14px',
+    fontSize: "14px",
     lineHeight: 1.7,
-    color: '#1e293b',
-    marginBottom: '6px',
-    textAlign: 'left',
+    color: "#1e293b",
+    marginBottom: "6px",
   },
 
   twoColumnGrid: {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
-    gap: '12px 32px',
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+    gap: "12px 32px",
   },
 
   doctorList: {
-    listStyle: 'none',
+    listStyle: "none",
     paddingLeft: 0,
     margin: 0,
   },
-  doctorItem: {
-    fontSize: '14px',
-    color: '#0f172a',
-    padding: '6px 10px',
-    borderRadius: '999px',
-    border: '1px solid rgba(148,163,184,0.5)',
-    background: 'rgba(248,250,252,0.9)',
-    display: 'inline-block',
-    marginBottom: '6px',
-  },
 
   tagListItem: {
-    fontSize: '14px',
+    fontSize: "14px",
     lineHeight: 1.7,
-    color: '#0f172a',
-    padding: '6px 10px',
-    borderRadius: '10px',
-    background: 'rgba(239,246,255,0.9)',
-    border: '1px solid rgba(191,219,254,1)',
-    marginBottom: '6px',
+    color: "#0f172a",
+    padding: "6px 10px",
+    borderRadius: "10px",
+    background: "rgba(239,246,255,0.9)",
+    border: "1px solid rgba(191,219,254,1)",
+    marginBottom: "6px",
   },
-
+  // FAQ styles (were referenced but missing)
   faqList: {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
-    gap: '12px',
+    display: "grid",
+    gap: "12px",
   },
   faqItem: {
-    borderRadius: '14px',
-    padding: '14px 14px 12px',
-    background: '#ffffffff',
-    color: '#000000ff',
-    boxShadow: '0 16px 30px rgba(15,23,42,0.4)',
-    borderLeft: '4px solid #38bdf8',
+    borderRadius: "14px",
+    padding: "14px 14px 12px",
+    background: "rgba(255,255,255,0.95)",
+    border: "1px solid rgba(226,232,240,1)",
+    boxShadow: "0 10px 24px rgba(15,23,42,0.05)",
+    textAlign: "left",
   },
   faqQuestion: {
-    fontSize: '14px',
-    fontWeight: 600,
-    marginBottom: '6px',
+    fontWeight: 800,
+    color: "#0f172a",
+    marginBottom: "6px",
+    fontSize: "14px",
   },
   faqAnswer: {
-    fontSize: '13px',
-    lineHeight: 1.6,
-    color: '#000000ff',
+    color: "#334155",
+    fontSize: "14px",
+    lineHeight: 1.7,
   },
 };
 
+
 function Gastroenterology() {
+
+
+  const canonicalUrl = "https://shreesaibabamultispecialityhospital.com/gastroenterology";
+
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Hospital",
+    name: "Shree Saibaba Multispeciality Hospital",
+    department: {
+      "@type": "MedicalClinic",
+      name: "Gastroenterology Department",
+      medicalSpecialty: "Gastroenterology",
+      areaServed: "Nashik, Maharashtra",
+    },
+  };
+
+
   return (
     <>
       <Helmet>
         <title>Gastroenterology | Shree Saibaba Multispeciality Hospital</title>
-        <meta
-          name="description"
-          content="Shree Saibaba Multispeciality Hospital offers comprehensive gastroenterology care with expert gastroenterologists, advanced endoscopy, colonoscopy, liver & pancreas disease management, and 24x7 emergency services."
-        />
-        <meta
-          name="keywords"
-          content="gastroenterology hospital Nashik, best gastro doctor Nashik, endoscopy Nashik, colonoscopy Nashik, liver specialist Nashik, Shree Saibaba Multispeciality Hospital gastroenterology"
-        />
-        <meta
-          name="og:description"
-          content="Advanced diagnostic and therapeutic gastroenterology services including endoscopy, colonoscopy, liver disease management, IBD care, and 24x7 emergency support at Shree Saibaba Multispeciality Hospital."
-        />
+        <meta name="description" content="Comprehensive gastroenterology care in Nashik at Shree Saibaba Multispeciality Hospital: endoscopy, colonoscopy, liver & pancreas care, IBD management, and 24x7 emergency support." />
+        <meta name="keywords" content="gastroenterology hospital Nashik, gastroenterologist Nashik, endoscopy Nashik, colonoscopy Nashik, liver specialist Nashik, pancreas specialist Nashik, IBD treatment Nashik, ERCP Nashik, Shree Saibaba Multispeciality Hospital gastroenterology" />
+        <link rel="canonical" href={canonicalUrl} />
+        <meta property="og:title" content="Gastroenterology Department | Shree Saibaba Multispeciality Hospital" />
+        <meta property="og:description" content="Advanced gastroenterology services including endoscopy, colonoscopy, liver disease management, IBD care, and 24x7 emergency support at Shree Saibaba Multispeciality Hospital, Nashik." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Gastroenterology Department | Shree Saibaba Multispeciality Hospital" />
+        <meta name="twitter:description" content="Expert digestive care in Nashik: endoscopy, colonoscopy, liver & pancreas care, IBD management, and emergency services." />
+
+        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 
       <div style={styles.page}>
@@ -239,7 +261,7 @@ function Gastroenterology() {
               <div style={styles.heroImageCard}>
                 <img
                   src={gastro}
-                  alt="Gastroenterology Department"
+                  alt="Cardiovascular Thoracic Surgery Department"
                   style={styles.heroImage}
                 />
               </div>
@@ -249,28 +271,110 @@ function Gastroenterology() {
               <div style={styles.heroTextCard}>
                 <div style={styles.pill}>
                   <span style={styles.pillDot} />
-                  <span>Advanced Digestive Care</span>
+                  <span>Comprehensive Medical Care</span>
                 </div>
 
-                <h1 style={styles.heroTitle}>Gastroenterology Department</h1>
+                <h1 style={styles.heroParagraph2}>Gastroenterology Department</h1>
                 <div style={styles.heroSubtitle}>Nashik, Maharashtra</div>
-
-                <div style={styles.heroTagline}>
-                  Comprehensive evaluation & treatment for digestive system, liver, pancreas, and biliary tract disorders.
-                </div>
+                <br />
 
                 <p style={styles.heroParagraph}>
-                  The Gastroenterology Department provides comprehensive evaluation and treatment for disorders of the
-                  digestive system, liver, pancreas, and biliary tract. Our expert team offers advanced diagnostic and
-                  therapeutic services supported by state-of-the-art technology.
+                  The gastroenterology department is concerned with the diagnosis, treatment, and
+                  management of digestive disorders. Ailments affecting the stomach, intestinal system,
+                  liver, pancreas, gall bladder, and bile ducts are included in this category. The
+                  ultimate objective is to achieve maximum health with digestion by providing
+                  appropriate diagnostic tests and use of both medications and concern for the patient
+                  via proper treatment methods.
                 </p>
                 <p style={styles.heroParagraph}>
-                  We are committed to delivering patient-centred care with accuracy, safety, and compassion.
+                  Digestive issues can range from minor inconveniences such as heartburn, bloating,
+                  constipation, and abdominal discomfort to more serious ones such as chronic bowel disease;
+                  bleeding within the gastrointestinal system; liver diseases; and pancreatic issues. Our
+                  skilled staff can address both routine and advanced healthcare issues related to digestive
+                  health placing the patients at the forefront.
                 </p>
+                <br />
+
+                <h2 style={styles.heroParagraph1}>Advanced Diagnosis and Treatments</h2>
+
+                <p style={styles.heroParagraph}>
+                  Utilizing cutting-edge technology and evidence-based practice to determine the actual cause
+                  of a person's digestive difficulty. Our department is outfitted with state-of-the-art
+                  equipment for performing endoscopic imaging to allow physicians to accurately and safely
+                  examine the digestive tract of patients. Through diagnostic studies, we can detect ulcerated,
+                  inflammatory, or other pathological conditions earlier, enabling faster treatment and improved
+                  outcomes.
+                </p>
+                <p style={styles.heroParagraph}>
+                  Treatments are individualised to each patient to promote maximum long-term symptom relief while
+                  improving quality of life. Depending upon the individual's diagnosis, this type of care may
+                  include medication, dietary advice, lifestyle modification, minimally invasive procedures, as
+                  well as, when necessary coordinated management with other specialties.
+                </p>
+                <br />
+
+                <h2 style={styles.heroParagraph1}>Emergency & Specialty Digestive Care</h2>
+                <p style={styles.heroParagraph}>
+                  The digestive emergency requires immediate and professional attention. We offer 24/7 support for
+                  urgent issues: piercing belly pain, vomiting blood, bowel obstruction, or sudden liver problems.
+                  Timely evaluation and intervention and a quick response from us are necessary to prevent
+                  complications to the digestive system.
+                </p>
+                <p style={styles.heroParagraph}>
+                  We offer pediatric digestion specialty care. Pediatric digestive problems usually require gentle,
+                  personalized treatment, and the doctors make sure children receive safe, age-appropriate evaluation
+                  and treatment in a comfortable setting.
+                </p>
+                <br />
+
+                <h2 style={styles.heroParagraph1}>Holistic and Preventive Approach</h2>
+                <p style={styles.heroParagraph}>
+                  At Shree Saibaba Multispeciality Hospital, gut health is serious business-affecting your overall
+                  well-being. Our physicians are also focused on preventing future problems. Our team provides
+                  education on diet, stress management, and how to make healthier lifestyle choices that will promote
+                  good digestion and reduce the chances of future problems.
+                </p>
+                <p style={styles.heroParagraph}>
+                  We are clear in our descriptions and explanations of your medical conditions and treatment options,
+                  allowing you to make informed decisions regarding your health. This open communication creates a
+                  trusting relationship and promotes confidence while you are on your path to receiving care.
+                </p>
+                <br />
+
+                <h2 style={styles.heroParagraph1}>You Can Trust: Patient-Focused Care</h2>
+                <p style={styles.heroParagraph}>
+                  Our team strictly adheres to safety standards and ethical medical practices. Each patient is treated
+                  with dignity, respect, and empathy. From the time you first visit us to the time you complete your
+                  treatment, we want you to feel comfortable, understand everything, and receive consistent care.
+                </p>
+                <p style={styles.heroParagraph}>
+                  Regardless of whether you present to our office with a chronic condition, need additional testing,
+                  or require urgent medical attention, we strive to offer complete and appropriate digestive care
+                  within one facility.
+                </p>
+                <br />
+
+                <h2 style={styles.heroParagraph1}>There are many reasons to choose Shree Saibaba Multispeciality Hospital:</h2>
+                <ul style={styles.heroParagraph}>
+                  <li>We provide expertise and treatments for all aspects of your digestive health.</li>
+                  <li>We offer access to cutting-edge diagnostic and treatment technologies.</li>
+                  <li>We provide immediate emergency care for life-threatening conditions.</li>
+                  <li>We work to provide comfort and support to our pediatric patients who have digestive concerns.</li>
+                  <li>We develop a plan of care specific to the needs of each patient.</li>
+                  <li>We listen to you and demonstrate honesty, compassion, and thoroughness when we discuss your care.</li>
+                </ul>
+
+                <p style={styles.heroParagraph}>Overall health is significantly affected by the health of the digestive system.</p>
+                <br />
+                <p style={styles.heroParagraph}>
+                  If you would like to feel better, live with greater confidence, and lead a healthier lifestyle, please reach
+                  out to Shree Saibaba Multispecialty Hospital.
+                </p>
+                <br />
 
                 <div style={styles.highlightStrip}>
                   <span style={styles.highlightLabel}>Quick Facts:</span>
-                  Endoscopy • Colonoscopy • Liver &amp; pancreas care • 24×7 emergency services
+                  Preventive screenings • ICU support • Chronic disease clinics • 24x7 emergency services
                 </div>
               </div>
             </div>
@@ -286,43 +390,44 @@ function Gastroenterology() {
             </div>
 
             {/* Diagnostic Services */}
-            <div style={{ marginBottom: '12px' }}>
-              <div style={styles.tagListItem}><strong>Diagnostic Services</strong></div>
+            <div style={{ marginBottom: "12px" }}>
+              <div style={styles.tagListItem}>
+                <strong>Diagnostic Services</strong>
+              </div>
               <ul style={styles.list}>
-                <li style={styles.listItem}>Upper GI Endoscopy</li>
-                <li style={styles.listItem}>Colonoscopy</li>
-                <li style={styles.listItem}>Ultrasound for abdominal conditions</li>
-                <li style={styles.listItem}>CT scan for GI and liver evaluation</li>
-                <li style={styles.listItem}>Liver function tests (LFTs) and comprehensive GI-related laboratory investigations</li>
+                <li style={styles.listItem}>Endoscopy (Upper GI endoscopy)</li>
+                <li style={styles.listItem}>Colonoscopy &amp; biopsy evaluation</li>
+                <li style={styles.listItem}>Evaluation of GI bleeding and anemia work-up</li>
+                <li style={styles.listItem}>Liver function evaluation &amp; hepatitis screening support</li>
+                <li style={styles.listItem}>Assessment for fatty liver, jaundice, and cirrhosis complications</li>
               </ul>
             </div>
 
             {/* Treatment Services */}
-            <div style={{ marginBottom: '12px' }}>
-              <div style={styles.tagListItem}><strong>Treatment Services</strong></div>
+            <div style={{ marginBottom: "12px" }}>
+              <div style={styles.tagListItem}>
+                <strong>Treatment Services</strong>
+              </div>
               <ul style={styles.list}>
-                <li style={styles.listItem}>
-                  Management of liver diseases (Hepatitis, Fatty Liver, Cirrhosis, etc.)
-                </li>
-                <li style={styles.listItem}>
-                  Treatment of gastrointestinal disorders (GERD, Gastritis, IBS, Acid Peptic Disease, etc.)
-                </li>
-                <li style={styles.listItem}>
-                  Management of pancreatic disorders (Pancreatitis, Pancreatic insufficiency)
-                </li>
+                <li style={styles.listItem}>Acidity, GERD, gastritis, and ulcer management</li>
+                <li style={styles.listItem}>IBS, chronic constipation, and digestive symptom care</li>
+                <li style={styles.listItem}>Inflammatory Bowel Disease (IBD) management</li>
+                <li style={styles.listItem}>Liver disease care (fatty liver, hepatitis, cirrhosis monitoring)</li>
+                <li style={styles.listItem}>Pancreatitis and gall bladder disease support</li>
+                <li style={styles.listItem}>Dietary guidance and lifestyle modification for long-term control</li>
               </ul>
             </div>
 
-            {/* Specialised Services */}
+            {/* Specialized / Emergency Services */}
             <div>
-              <div style={styles.tagListItem}><strong>Specialised Services</strong></div>
+              <div style={styles.tagListItem}>
+                <strong>Emergency &amp; Specialized Care</strong>
+              </div>
               <ul style={styles.list}>
-                <li style={styles.listItem}>
-                  Therapeutic Endoscopy (polypectomy, stenting, band ligation, etc.)
-                </li>
-                <li style={styles.listItem}>
-                  Comprehensive Inflammatory Bowel Disease (IBD) management (Ulcerative Colitis, Crohn’s Disease)
-                </li>
+                <li style={styles.listItem}>24x7 management of vomiting blood / GI bleeding</li>
+                <li style={styles.listItem}>Acute abdomen, bowel obstruction, and severe pain evaluation</li>
+                <li style={styles.listItem}>Urgent liver-related complications and supportive care</li>
+                <li style={styles.listItem}>Pediatric gastroenterology evaluation and treatment support</li>
               </ul>
             </div>
           </section>
@@ -335,12 +440,12 @@ function Gastroenterology() {
                 Facilities &amp; Equipment
               </div>
             </div>
-            <div style={styles.listItem}>Our department is equipped with:</div>
             <ul style={styles.list}>
-              <li style={styles.listItem}>Spacious, well-designed Endoscopy Room</li>
-              <li style={styles.listItem}>Advanced high-definition endoscopy systems</li>
-              <li style={styles.listItem}>Modern ultrasound, CT scan and MRI facilities</li>
-              <li style={styles.listItem}>Dedicated recovery area for post-procedure monitoring</li>
+              <li style={styles.listItem}>Endoscopy setup for diagnostic evaluation</li>
+              <li style={styles.listItem}>Support facilities for safe procedures and monitoring</li>
+              <li style={styles.listItem}>Laboratory support for liver and digestive investigations</li>
+              <li style={styles.listItem}>Imaging support (as required) for GI-related assessment</li>
+              <li style={styles.listItem}>Comfortable OPD and patient-friendly consultation areas</li>
             </ul>
           </section>
 
@@ -354,7 +459,8 @@ function Gastroenterology() {
             </div>
             <div style={styles.twoColumnGrid}>
               <ul style={styles.doctorList}>
-                <li style={styles.doctorItem}>Dr. Soham Doshi</li>
+                <li style={styles.doctorItem}>Dr. Kunal Nikam</li>
+                <li style={styles.doctorItem}>Dr. Ganesh Motwani</li>
               </ul>
             </div>
           </section>
@@ -372,13 +478,10 @@ function Gastroenterology() {
                 <strong>OPD:</strong> Monday to Saturday
               </li>
               <li style={styles.tagListItem}>
-                <strong>Dr. Soham Joshi (DM Gastroenterology):</strong> Morning 8:30 AM – 9:30 AM &nbsp; | &nbsp; Evening 5:00 PM – 6:00 PM
+                <strong>Timings:</strong> 10:00 AM - 9:30 PM
               </li>
               <li style={styles.tagListItem}>
-                <strong>Dr. Kunal Nikam (MD Medicine):</strong> 10:00 AM – 5:00 PM
-              </li>
-              <li style={styles.tagListItem}>
-                <strong>Emergency Services:</strong> Available 24×7
+                <strong>Emergency Services:</strong> Available 24x7
               </li>
             </ul>
           </section>
@@ -392,10 +495,18 @@ function Gastroenterology() {
               </div>
             </div>
             <ul style={styles.list}>
-              <li style={styles.tagListItem}>Successful management of complex GI and liver disease cases</li>
-              <li style={styles.tagListItem}>Expertise in advanced therapeutic endoscopy</li>
-              <li style={styles.tagListItem}>High success rate in minimally invasive GI procedures</li>
-              <li style={styles.tagListItem}>Focus on patient comfort, safety, and clinical excellence</li>
+              <li style={styles.tagListItem}>
+                Strong focus on early diagnosis of digestive disorders
+              </li>
+              <li style={styles.tagListItem}>
+                Patient-centered care for chronic GI conditions (GERD, IBS, IBD)
+              </li>
+              <li style={styles.tagListItem}>
+                Comprehensive liver and pancreas care with supportive monitoring
+              </li>
+              <li style={styles.tagListItem}>
+                24x7 readiness for digestive emergencies and urgent interventions
+              </li>
             </ul>
           </section>
 
@@ -409,13 +520,16 @@ function Gastroenterology() {
             </div>
             <ul style={styles.list}>
               <li style={styles.listItem}>
-                Please arrive 30 minutes before your appointment for registration and evaluation.
+                Please arrive at least 30 minutes before your appointment.
               </li>
               <li style={styles.listItem}>
-                Inform your doctor about any ongoing medications, allergies, surgeries, or past medical history.
+                Inform your doctor about ongoing medicines, allergies, and past history.
               </li>
               <li style={styles.listItem}>
-                Follow specific preparation instructions for diagnostic tests such as endoscopy or colonoscopy.
+                Follow preparation instructions for endoscopy/colonoscopy if advised.
+              </li>
+              <li style={styles.listItem}>
+                Carry previous reports, scans, prescriptions, and lab results for continuity of care.
               </li>
             </ul>
           </section>
@@ -431,47 +545,66 @@ function Gastroenterology() {
 
             <div style={styles.faqList}>
               <div style={styles.faqItem}>
-                <div style={styles.faqQuestion}>1. What is an endoscopy, and is it painful?</div>
+                <div style={styles.faqQuestion}>
+                  1. When should I consult a gastroenterologist?
+                </div>
                 <div style={styles.faqAnswer}>
-                  Endoscopy is a procedure where a thin flexible tube with a camera is used to examine your digestive tract.
-                  It is usually done under mild sedation and is not painful.
+                  If you have persistent acidity/heartburn, abdominal pain, bloating, constipation/diarrhea,
+                  blood in vomit or stool, jaundice, unexplained weight loss, or long-lasting digestive symptoms.
                 </div>
               </div>
 
               <div style={styles.faqItem}>
-                <div style={styles.faqQuestion}>2. How do I prepare for a colonoscopy?</div>
+                <div style={styles.faqQuestion}>
+                  2. Is endoscopy or colonoscopy painful?
+                </div>
                 <div style={styles.faqAnswer}>
-                  Your doctor will provide a bowel-cleansing preparation. You may need to follow a liquid diet and take prescribed laxatives.
+                  These procedures are generally well-tolerated. Your doctor will explain the process and use
+                  appropriate comfort measures so the test is safe and as comfortable as possible.
                 </div>
               </div>
 
               <div style={styles.faqItem}>
-                <div style={styles.faqQuestion}>3. When should I see a gastroenterologist?</div>
+                <div style={styles.faqQuestion}>
+                  3. Do I need an appointment?
+                </div>
                 <div style={styles.faqAnswer}>
-                  If you experience symptoms like persistent abdominal pain, acidity, bloating, vomiting, rectal bleeding,
-                  change in bowel habits, jaundice, or unexplained weight loss.
+                  Walk-ins may be accepted, but an appointment helps reduce waiting time—especially for procedures
+                  and follow-ups.
                 </div>
               </div>
 
               <div style={styles.faqItem}>
-                <div style={styles.faqQuestion}>4. Are the procedures safe?</div>
+                <div style={styles.faqQuestion}>
+                  4. What symptoms require emergency care?
+                </div>
                 <div style={styles.faqAnswer}>
-                  Yes. They are performed by experienced specialists using advanced equipment with strict safety protocols.
+                  Severe abdominal pain, vomiting blood, black stools, sudden jaundice with confusion, or suspected
+                  bowel obstruction require urgent evaluation.
                 </div>
               </div>
 
               <div style={styles.faqItem}>
-                <div style={styles.faqQuestion}>5. Do I need someone to accompany me for an endoscopy?</div>
+                <div style={styles.faqQuestion}>
+                  5. Will I get diet and lifestyle guidance?
+                </div>
                 <div style={styles.faqAnswer}>
-                  Yes, as sedation may be used, you should have someone to take you home safely after the procedure.
+                  Yes. We provide dietary advice, lifestyle guidance, and preventive counselling tailored to your
+                  diagnosis for long-term symptom control and better gut health.
                 </div>
               </div>
             </div>
           </section>
         </div>
       </div>
+
+      {/* Optional: simple responsive stacking without external CSS */}
+      <style>{`
+        @media (max-width: 900px) {
+          .heroGridFix { grid-template-columns: 1fr !important; }
+        }
+      `}</style>
     </>
   );
 }
-
 export default Gastroenterology;

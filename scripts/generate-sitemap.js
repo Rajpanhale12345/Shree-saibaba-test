@@ -1,8 +1,9 @@
-const { SitemapStream, streamToPromise } = require('sitemap');
-const { createWriteStream } = require('fs');
+import { writeFileSync } from "fs";
+import { SitemapStream, streamToPromise } from "sitemap";
 
-const SITE_URL = "https://shreesaibabamultispecialityhospital.com";
-
+/**
+ * Keep this list in sync with App.jsx routes
+ */
 const routes = [
   "/",
   "/about",
@@ -41,6 +42,8 @@ const routes = [
   "/pulmonology",
   "/facilities",
   "/tieups",
+
+  // Blogs
   "/nutrition",
   "/understanding",
   "/Cardiac_Surgery",
@@ -48,25 +51,43 @@ const routes = [
   "/Vitamin_B12",
   "/Heart_Attack",
   "/Heart_Disease",
-  "/Interventional_Radiology"
+  "/Interventional_Radiology",
+  "/Pneumonia",
+  "/Lifestyle",
+  "/Understanding_CABG",
+  "/Kidney_Health",
+  "/Holter",
+  "/Spine_Joint",
+  "/Varicose",
+  "/Angiographies",
+  "/Angiography",
+  "/Angiographiess",
+  "/Heart_Healthy",
+  "/Stress_Anxiety",
+  "/Robotic_Surgery",
+  "/Robotic_Joint",
+  "/Neurology_Blog",
 ];
 
-(async () => {
-  const sitemap = new SitemapStream({ hostname: SITE_URL });
-
-  const writeStream = createWriteStream("./public/sitemap.xml");
-  sitemap.pipe(writeStream);
+async function generateSitemap() {
+  const sitemap = new SitemapStream({
+    hostname: "https://shreesaibabamultispecialityhospital.com",
+  });
 
   routes.forEach((route) => {
     sitemap.write({
       url: route,
       changefreq: "weekly",
-      priority: 0.8,
+      priority: route === "/" ? 1.0 : 0.8,
     });
   });
 
   sitemap.end();
-  await streamToPromise(sitemap);
 
-  console.log("✔ Sitemap successfully generated at: public/sitemap.xml");
-})();
+  const xml = await streamToPromise(sitemap).then((data) => data.toString());
+
+  writeFileSync("public/sitemap.xml", xml);
+  console.log("public/sitemap.xml generated");
+}
+
+generateSitemap();

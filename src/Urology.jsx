@@ -95,6 +95,21 @@ const styles = {
     lineHeight: 1.7,
     color: '#1e293b',
     marginBottom: '10px',
+    textAlign: "left"
+  },
+  heroParagraph1: {
+    fontSize: "24px",
+    lineHeight: 1.7,
+    color: "#1e293b",
+    marginBottom: "10px",
+    textAlign: "left",
+  },
+  heroParagraph2: {
+    fontSize: "40px",
+    lineHeight: 1.2,
+    color: "#1e293b",
+    marginBottom: "10px",
+    textAlign: "left",
   },
   highlightStrip: {
     marginTop: '16px',
@@ -144,7 +159,7 @@ const styles = {
   list: {
     paddingLeft: '18px',
     margin: 0,
-    textAlign : "left"
+    textAlign: "left"
   },
   listItem: {
     fontSize: '14px',
@@ -253,19 +268,46 @@ function Urology() {
                   <span style={styles.pillDot} />
                   <span>Comprehensive Urology Care</span>
                 </div>
-                <h1 style={styles.heroTitle}>Urology Department</h1>
-                <div style={styles.heroSubtitle}>Nashik, Maharashtra</div>
-                <div style={styles.heroTagline}>
-                  Specialized care for kidney, prostate and urinary tract conditions.
-                </div>
+                <h1 style={styles.heroTitle}>Urology Department - Best Urology Hospital in Nashik</h1>
+                <br />
 
                 <p style={styles.heroParagraph}>
-                  Our Urology department provides comprehensive care for patients with
-                  urological conditions, including kidney stones, prostate issues, and
-                  urinary tract infections. Our team of experienced urologists and
-                  specialists works together to diagnose and treat a wide range of
-                  urological conditions.
+                  The Center for Urology at Shree Saibaba Multispeciality Hospital provides patients with
+                  the highest level of advanced and compassionate care available for all types of urological
+                  diseases. recognized as one of the top hospitals for Urology in Nashik, we offer complete
+                  diagnostic services, treatment options and surgical procedures for both men and women
+                  suffering from urological conditions.
                 </p>
+                <p style={styles.heroParagraph}>
+                  Our highly trained and experienced urology doctors and urology specialists lead our department.
+                  Highly trained and experienced urosurgeons on staff are well-known for providing patients with
+                  Excellent outcomes using minimally invasive modern techniques.
+                </p>
+                <p style={styles.heroParagraph}>
+                  In our department, we treat many urological conditions, such as kidney stones, prostate disorders,
+                  Urinary Tract Infections (UTIs), bladder disorders, and many other complex urological Issues using
+                  minimally invasive methods.
+                </p>
+                <p style={styles.heroParagraph}>
+                  To provide the best care possible to Women in need of Urological issues, we provide access to the
+                  expertise of our urologist doctor for Women, and we take care of Women's Urology issues with Privacy
+                  and Accuracy.
+                </p>
+                <p style={styles.heroParagraph}>
+                  For critical cases, we provide round-the-clock access to an Emergency Urologist, so we can get
+                  Patients in need of timely intervention and life-saving care.
+                </p>
+                <p style={styles.heroParagraph}>
+                  With an emphasis on the use of State-of-the-art technologies, the implementation of Patient-Centric
+                  Treatment Protocols, and with some of the best-trained urologists in Nashik on our Staff, our Team
+                  is here to provide safe, effective, long-lasting Solutions for our patients' urological health issues.
+                </p>
+                <p style={styles.heroParagraph}>
+                  If you are looking for Urology Consultants you can trust, advanced Urology surgery, or highly-skilled 
+                  Urosurgeons in Nashik, Shree Saibaba Multispeciality Hospital is your one-stop-shop for complete 
+                  Urology Care.
+                </p>
+                <br />
 
                 <div style={styles.highlightStrip}>
                   <span style={styles.highlightLabel}>Quick Facts:</span>
