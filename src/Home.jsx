@@ -3,21 +3,17 @@ import "./Home.css";
 import Button from "@mui/material/Button";
 import { Link, useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import carousel1 from "./Images/carousel1.webp";
-import carousel2 from "./Images/carousel2.webp";
+import carousel1 from "./Images/carousel3.webp";
+import carousel2 from "./Images/carousel4.webp";
 import carousel1m from "./Images/mobilecarousel1.webp";
 import carousel2m from "./Images/mobilecarousel2.webp";
 import OPD from "./OPD.";
 import Test from "./Test";
-
-// ✅ Swiper (ONLY for hero carousel)
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay, A11y } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-
-// ✅ Specialities images
 import spe1 from "./Images/spe1.webp";
 import spe15 from "./Images/spe2.webp";
 import spe2 from "./Images/spe3.webp";
@@ -150,7 +146,7 @@ function Home() {
                     />
                   </picture>
 
-                  {/* Optional overlay */}
+               
                   
                 </div>
               </SwiperSlide>

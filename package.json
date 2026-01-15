@@ -20,6 +20,8 @@
     "@fortawesome/react-fontawesome": "^3.0.0",
     "@mui/icons-material": "^7.3.1",
     "@mui/material": "^7.3.2",
+    "baseline-browser-mapping": "^2.9.11",
+    "caniuse-lite": "^1.0.30001762",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-helmet": "^6.1.0",
