@@ -422,17 +422,19 @@ function Urology() {
                 <li style={styles.tagListItem}>
                   <strong>Dr. Amey Patil</strong>
                   <br />
-                  (Urethroplasty)
+                  12:30 pm to 1:30 pm
                 </li>
                 <li style={styles.tagListItem}>
-                  <strong>Dr. Nandan Velekar</strong>
+                  <strong>Dr. Amit Singal</strong>
+                  <br />
+                  1:30 pm to 2:30 pm
                 </li>
               </ul>
-              <ul style={styles.doctorList}>
+              <ul style={styles.doctorList}>                
                 <li style={styles.tagListItem}>
-                  <strong>OPD Timings:</strong>
+                  <strong>Dr. Pranav Chhajed</strong>
                   <br />
-                  Monday to Saturday, 9:00 AM – 5:00 PM
+                  On Call
                 </li>
                 <li style={styles.tagListItem}>
                   <strong>Emergency Services:</strong> 24 x 7

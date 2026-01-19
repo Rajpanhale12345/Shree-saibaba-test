@@ -406,7 +406,7 @@ function Nephrology() {
                 <li style={styles.listItem}>Management of Chronic Kidney Disease (CKD)</li>
                 <li style={styles.listItem}>Treatment of Acute Kidney Injury (AKI)</li>
                 <li style={styles.listItem}>Management of nephrotic and nephritic syndromes</li>
-                <li style={styles.listItem}>Treatment of kidney infections and kidney stone–related issues</li>
+                <li style={styles.listItem}>Treatment of kidney infections and kidney stone-related issues</li>
                 <li style={styles.listItem}>Hypertension management related to renal disorders</li>
                 <li style={styles.listItem}>Long-term follow-up and counselling for renal patients</li>
               </ul>
@@ -446,12 +446,23 @@ function Nephrology() {
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
                 <span style={styles.sectionAccentBar} />
-                Team Members
+                Team Members &amp; Department Timings
               </div>
             </div>
+            <p style={{...styles.listItem, textAlign : "center"}}>Meet our experienced Orthopedic:</p>
+
             <div style={styles.twoColumnGrid}>
               <ul style={styles.doctorList}>
-                <li style={styles.doctorItem}>Dr. Abhijeet More</li>
+                <li style={styles.tagListItem}>
+                  <strong>Dr. Abhijeet More</strong>
+                  <br />
+                  OPD: 	11:00 am to 12:00 pm and 5:00 pm to 6:00 pm
+                </li>
+              </ul>
+              <ul style={styles.doctorList}>               
+                <li style={styles.tagListItem}>
+                  <strong>Emergency Services:</strong> 24 x 7
+                </li>
               </ul>
             </div>
           </section>
@@ -469,19 +480,15 @@ function Nephrology() {
               <li style={styles.tagListItem}><strong>OPD:</strong> Monday to Saturday</li>
 
               <li style={styles.tagListItem}>
-                <strong>Dr. Abhijeet More (DM Nephrology):</strong> Morning 8:00 AM – 9:00 AM &nbsp; | &nbsp; Evening 6:00 PM – 7:00 PM
+                <strong>Dr. Abhijeet More (DM Nephrology):</strong> Morning 8:00 AM - 9:00 AM &nbsp; | &nbsp; Evening 6:00 PM - 7:00 PM
               </li>
 
               <li style={styles.tagListItem}>
-                <strong>Dr. Kunal Nikam (MD Medicine):</strong> 10:00 AM – 5:00 PM
+                <strong>Dialysis Unit:</strong> Functional 24x7 (as per patient requirement)
               </li>
 
               <li style={styles.tagListItem}>
-                <strong>Dialysis Unit:</strong> Functional 24×7 (as per patient requirement)
-              </li>
-
-              <li style={styles.tagListItem}>
-                <strong>Emergency Services:</strong> 24×7 availability for renal emergencies
+                <strong>Emergency Services:</strong> 24x7 availability for renal emergencies
               </li>
             </ul>
           </section>
@@ -565,7 +572,7 @@ function Nephrology() {
               <div style={styles.faqItem}>
                 <div style={styles.faqQuestion}>4. How often is dialysis required?</div>
                 <div style={styles.faqAnswer}>
-                  Most patients need dialysis 2–3 times a week, based on medical advice.
+                  Most patients need dialysis 2-3 times a week, based on medical advice.
                 </div>
               </div>
 
