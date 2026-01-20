@@ -221,7 +221,7 @@ function GeneralMedicine() {
   return (
     <>
       <Helmet>
-        <title>General Medicine | Shree Saibaba Multispeciality Hospital</title>
+        <title>General Surgery | Shree Saibaba Multispeciality Hospital</title>
         <meta
           name="description"
           content="Shree Saibaba Multispeciality Hospital offers comprehensive General Medicine care including diagnosis, treatment, and long-term management of diabetes, hypertension, infections, respiratory disorders, and preventive health check-ups."
@@ -485,16 +485,38 @@ function GeneralMedicine() {
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
                 <span style={styles.sectionAccentBar} />
-                Team Members
+                Team Members &amp; Department Timings
               </div>
             </div>
+
+            <p style={{...styles.listItem, textAlign : "center"}}>Meet our experienced General Surgery:</p>
+
             <div style={styles.twoColumnGrid}>
               <ul style={styles.doctorList}>
-                <li style={styles.doctorItem}>Dr. Kunal Nikam</li>
-                <li style={styles.doctorItem}>Dr. Ganesh Motwani</li>
+                <li style={styles.tagListItem}>
+                  <strong>Dr. Amit Kele</strong>
+                  <br />
+                  On Call
+                </li>
+                <li style={styles.tagListItem}>
+                  <strong>Dr. Toshit Lodha</strong>
+                  <br />
+                  On Call
+                </li>
+              </ul>
+              <ul style={styles.doctorList}>                
+                <li style={styles.tagListItem}>
+                  <strong>Dr. Hemant Deore</strong>
+                  <br />
+                  1:00 pm to 2:00 pm
+                </li>
+                <li style={styles.tagListItem}>
+                  <strong>Emergency Services:</strong> 24 x 7
+                </li>
               </ul>
             </div>
           </section>
+
 
           {/* Department Timings */}
           <section style={styles.section}>

@@ -297,7 +297,7 @@ function GeneralMedicine() {
                   We treat acute and chronic disease, and lifestyle-related disease, which include:
                 </p>
 
-                <ul style={{color: "#1e293b", textAlign: "left"}}>
+                <ul style={{ color: "#1e293b", textAlign: "left" }}>
                   <li>Metabolic Diseases, Diabetes & Metabolic Syndrome</li>
                   <li>Heart Disease, High Blood Pressure & Hypertension</li>
                   <li>Respiratory Disease & Respiratory Infection</li>
@@ -312,8 +312,8 @@ function GeneralMedicine() {
                   measures and ultimately increasing your overall health and wellness.
                 </p>
                 <p style={styles.heroParagraph}>
-                  Our physicians at the Shree Saibaba Multispeciality Hospital focus on total healing using 
-                  only the best available medical evidence for their recommendations. Our continual approach 
+                  Our physicians at the Shree Saibaba Multispeciality Hospital focus on total healing using
+                  only the best available medical evidence for their recommendations. Our continual approach
                   to health gives us a unique place in Nashik as a provider of general medicine services.
                 </p>
                 <br />
@@ -393,13 +393,39 @@ function GeneralMedicine() {
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
                 <span style={styles.sectionAccentBar} />
-                Team Members
+                Team Members &amp; Department Timings
               </div>
             </div>
+
+            <p style={{ ...styles.listItem, textAlign: "center" }}>Meet our experienced General Medicine:</p>
+
             <div style={styles.twoColumnGrid}>
               <ul style={styles.doctorList}>
-                <li style={styles.doctorItem}>Dr. Kunal Nikam</li>
-                <li style={styles.doctorItem}>Dr. Ganesh Motwani</li>
+                <li style={styles.tagListItem}>
+                  <strong>Dr. Kunal Nikam</strong>
+                  <br />
+                  10:00 am to 5:30 pm
+                </li>
+                <li style={styles.tagListItem}>
+                  <strong>Dr. Ganesh Motwani</strong>
+                  <br />
+                  4:00 pm to 9:00 pm
+                </li>
+              </ul>
+              <ul style={styles.doctorList}>
+                <li style={styles.tagListItem}>
+                  <strong>Dr. Bharat Patil</strong>
+                  <br />
+                 	10:00 am to 5:00 pm
+                </li>
+                <li style={styles.tagListItem}>
+                  <strong>Dr. Rahul Barhate</strong>
+                  <br />
+                 		9:00 am to 2:00 pm
+                </li>
+                <li style={styles.tagListItem}>
+                  <strong>Emergency Services:</strong> 24 x 7
+                </li>
               </ul>
             </div>
           </section>

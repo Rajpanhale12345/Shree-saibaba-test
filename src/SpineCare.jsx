@@ -423,22 +423,33 @@ function SpineCare() {
                 Team Members &amp; Department Timings
               </div>
             </div>
-
-            <p style={styles.listItem}>
-              Meet our experienced Spine Care team (Orthopedics &amp; Neurosurgery) for
-              complete spine evaluation and treatment planning.
-            </p>
+            <p style={styles.listItem}>Meet our experienced Spine Care:</p>
 
             <div style={styles.twoColumnGrid}>
               <ul style={styles.doctorList}>
                 <li style={styles.tagListItem}>
-                  <strong>Spine OPD:</strong>
+                  <strong>Dr. Gaurav Gujrathi</strong>
                   <br />
-                  Monday to Saturday (By Appointment)
+                  OPD: On Call
                 </li>
+                <li style={styles.tagListItem}>
+                  <strong>Dr. Sumit Hire</strong>
+                  <br />
+                  OPD: 3:00 pm to 5:00 pm
+                </li>
+                
               </ul>
-
               <ul style={styles.doctorList}>
+                <li style={styles.tagListItem}>
+                  <strong>Dr. Anil Jadhav</strong>
+                  <br />
+                  OPD: On Call
+                </li>
+                <li style={styles.tagListItem}>
+                  <strong>Dr. Gaurav Kulshrestha</strong>
+                  <br />
+                  OPD: On Call
+                </li>                
                 <li style={styles.tagListItem}>
                   <strong>Emergency Services:</strong> 24 x 7
                 </li>

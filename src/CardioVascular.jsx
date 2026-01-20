@@ -405,7 +405,7 @@ function CardioVascular() {
               support complex cardiovascular and thoracic procedures safely and effectively, including:
             </p>
             <ul style={styles.list}>
-              <li style={styles.listItem}>Heart–Lung machine.</li>
+              <li style={styles.listItem}>Heart-Lung machine.</li>
               <li style={styles.listItem}>Intra-aortic balloon pump (IABP).</li>
             </ul>
           </section>
@@ -452,19 +452,19 @@ function CardioVascular() {
                 <li style={styles.tagListItem}>
                   <strong>Dr. Kishore Deore</strong>
                   <br />
-                  OPD: Monday, Tuesday – 11:00 AM to 05:00 PM
+                  OPD: Monday, Tuesday - 11:00 AM to 05:00 PM
                 </li>
                 <li style={styles.tagListItem}>
                   <strong>Dr. Kiran Kurkure</strong>
                   <br />
-                  OPD: Wednesday to Saturday – 5:00 PM to 07:00 PM
+                  OPD: Wednesday to Saturday - 5:00 PM to 07:00 PM
                 </li>
               </ul>
               <ul style={styles.doctorList}>
                 <li style={styles.tagListItem}>
-                  <strong>Dr. Nilesh Purkar</strong>
+                  <strong>Dr. Nitin Thakare</strong>
                   <br />
-                  Visiting Consultant
+                  5.00 pm to 6.00 pm
                 </li>
                 <li style={styles.tagListItem}>
                   <strong>Emergency Services:</strong> 24 x 7

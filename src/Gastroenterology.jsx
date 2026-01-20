@@ -449,41 +449,31 @@ function Gastroenterology() {
             </ul>
           </section>
 
-          {/* Team Members */}
-          <section style={styles.section}>
-            <div style={styles.sectionHeaderRow}>
-              <div style={styles.sectionTitle}>
-                <span style={styles.sectionAccentBar} />
-                Team Members
-              </div>
-            </div>
-            <div style={styles.twoColumnGrid}>
-              <ul style={styles.doctorList}>
-                <li style={styles.doctorItem}>Dr. Kunal Nikam</li>
-                <li style={styles.doctorItem}>Dr. Ganesh Motwani</li>
-              </ul>
-            </div>
-          </section>
-
           {/* Department Timings */}
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
                 <span style={styles.sectionAccentBar} />
-                Department Timings
+                Team Members &amp; Department Timings
               </div>
             </div>
-            <ul style={styles.list}>
-              <li style={styles.tagListItem}>
-                <strong>OPD:</strong> Monday to Saturday
-              </li>
-              <li style={styles.tagListItem}>
-                <strong>Timings:</strong> 10:00 AM - 9:30 PM
-              </li>
-              <li style={styles.tagListItem}>
-                <strong>Emergency Services:</strong> Available 24x7
-              </li>
-            </ul>
+
+            <p style={{ ...styles.listItem, textAlign: "center" }}>Meet our experienced Gastroentrology:</p>
+
+            <div style={styles.twoColumnGrid}>
+              <ul style={styles.doctorList}>
+                <li style={styles.tagListItem}>
+                  <strong>Dr. Soham Doshi</strong>
+                  <br />
+                  8:00 am to 9:00 am and 5:00 pm to 6:00 pm
+                </li>
+              </ul>
+              <ul style={styles.doctorList}>
+                <li style={styles.tagListItem}>
+                  <strong>Emergency Services:</strong> 24 x 7
+                </li>
+              </ul>
+            </div>
           </section>
 
           {/* Achievements & Highlights */}

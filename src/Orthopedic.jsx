@@ -374,30 +374,33 @@ function Orthopedic() {
                 Team Members &amp; Department Timings
               </div>
             </div>
-
-            <p style={styles.listItem}>
-              Meet our experienced Orthopedic Surgeons:
-            </p>
+            <p style={styles.listItem}>Meet our experienced Orthopedic:</p>
 
             <div style={styles.twoColumnGrid}>
               <ul style={styles.doctorList}>
                 <li style={styles.tagListItem}>
+                  <strong>Dr. Ajinkya Desale</strong>
+                  <br />
+                  OPD: 12:30 pm to 5:00pm
+                </li>
+                <li style={styles.tagListItem}>
                   <strong>Dr. Satyen Joshi</strong>
                   <br />
-                  OPD Time: 01:30 PM to 03:30 PM (Monday to Saturday)
+                  OPD: On Call
+                </li>
+                
+              </ul>
+              <ul style={styles.doctorList}>
+                <li style={styles.tagListItem}>
+                  <strong>Dr. Brijbhushan Mahajan</strong>
+                  <br />
+                  OPD: On Call
                 </li>
                 <li style={styles.tagListItem}>
                   <strong>Dr. Swapnil Mahale</strong>
                   <br />
-                  OPD Time: 10:00 AM to 12:00 PM (Monday to Saturday)
-                </li>
-                <li style={styles.tagListItem}>
-                  <strong>Dr. Brijbhushan Mahajan</strong>
-                  <br />
-                  OPD Time: 04:00 PM to 06:00 PM (Monday to Saturday)
-                </li>
-              </ul>
-              <ul style={styles.doctorList}>
+                  OPD: On Call
+                </li>                
                 <li style={styles.tagListItem}>
                   <strong>Emergency Services:</strong> 24 x 7
                 </li>

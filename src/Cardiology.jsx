@@ -411,21 +411,9 @@ function Cardiology() {
             </div>
             <div style={styles.twoColumnGrid}>
               <ul style={styles.doctorList}>
-                <li style={styles.doctorItem}>Dr. Aniruddha Dharmadhikari</li>
-                <li style={styles.doctorItem}>Dr. Amit Chaudhary</li>
+                <li style={styles.doctorItem}>Dr. Aniruddha Dharmadhikari</li> <br />
+                <li style={styles.doctorItem}>Dr. Amit Chaudhary</li><br />
                 <li style={styles.doctorItem}>Dr. Nilesh Tawade</li>
-                <li style={styles.doctorItem}>Dr. Gaurav Verma</li>
-                <li style={styles.doctorItem}>Dr. Atul Patil</li>
-                <li style={styles.doctorItem}>Dr. Mahesh Aher</li>
-              </ul>
-              <ul style={styles.doctorList}>
-                <li style={styles.doctorItem}>
-                  Dr. Rajesh Dhopeshwarkar (Cardiac Electrophysiologist)
-                </li>
-                <li style={styles.doctorItem}>Dr. Kaustubh Mahamnie</li>
-                <li style={styles.doctorItem}>Dr. Naresh Vidhate</li>
-                <li style={styles.doctorItem}>Dr. Akashay Kor</li>
-                <li style={styles.doctorItem}>Dr. Girish Kale</li>
               </ul>
             </div>
           </section>
@@ -493,7 +481,7 @@ function Cardiology() {
             </div>
             <ul style={styles.list}>
               <li style={styles.tagListItem}>
-                <strong>OPD Timings:</strong> Monday to Saturday, 9:00 AM – 9:00 PM
+                <strong>OPD Timings:</strong> 12:00 PM - 9:00 PM
               </li>
               <li style={styles.tagListItem}>
                 <strong>Emergency Services:</strong> 24 x 7

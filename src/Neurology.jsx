@@ -450,7 +450,7 @@ function Neurology() {
                 <li style={styles.tagListItem}>
                   <strong>Dr. Rahul Naik</strong>
                   <br />
-                  OPD: Monday to Saturday, 9:00 AM – 5:00 PM
+                  OPD: Monday to Saturday, 10:00 AM - 5:00 PM
                 </li>
               </ul>
               <ul style={styles.doctorList}>
