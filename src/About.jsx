@@ -190,7 +190,7 @@ function About() {
                 <br />
                 <p>Dr. Aniruddha Dharmadhikari </p>
                 <span style={{ color: 'blue', fontSize: '20px' }}>
-                  M.D., M.B.B.S. (Internal Medicine), D.M. (Cardiology)
+                  M.B.B.S., M.D. (Internal Medicine), D.M. (Cardiology)
                 </span>
                 <br />
                 <br />
@@ -245,7 +245,7 @@ function About() {
                 <br />
                 <p>Dr. Pallavi Dharmadhikari</p>
                 <span style={{ color: 'blue', fontSize: '20px' }}>
-                  M.D., M.B.B.S. And D.N.B. (Radiodiagnosis)
+                  M.B.B.S., M.D. And D.N.B. (Radiodiagnosis)
                 </span>
                 <br />
                 <br />
