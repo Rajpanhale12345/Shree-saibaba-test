@@ -67,6 +67,7 @@ import Stress_Anxiety from "./Blogs/Stress_Anxiety";
 import Robotic_Surgery from "./Blogs/Robotic_Surgery";
 import Robotic_Joint from "./Blogs/Robotic_Joint";
 import Neurology_Blog from "./Blogs/Neurology_Blog";
+import GTranslate from "./GTranslate";
 // import Popup from "./popup";
 
 function App() {
@@ -144,6 +145,7 @@ function App() {
           <Route path="/Neurology_Blog" element={< Neurology_Blog/>} />
      
         </Routes>
+        <GTranslate/>
         <ScrollToTop />
       </main>
       <footer>
