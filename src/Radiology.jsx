@@ -1,207 +1,321 @@
 import React from 'react';
-import img from './Images/Radiologydep.jpg'; // replace with radiology-specific image if available
+import img from './Images/Radiologydep.jpg';
 import { Helmet } from "react-helmet-async";
 
 const styles = {
   page: {
-    background: 'linear-gradient(135deg, #f4f7fb, #e5edf9)',
-    padding: '40px 16px',
+    background: "linear-gradient(135deg, #f4f7fb, #e5edf9)",
+    padding: "40px 16px",
   },
   container: {
-    maxWidth: '1200px',
-    margin: '0 auto',
-    fontFamily: '"Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif',
-    color: '#0f172a',
+    maxWidth: "1200px",
+    margin: "0 auto",
+    fontFamily:
+      '"Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif',
+    color: "#0f172a",
   },
+
+  // ✅ HERO: grid on desktop, stacks on mobile via CSS class + media query below
   hero: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    gap: '24px',
-    alignItems: 'stretch',
-    marginBottom: '32px',
+    display: "grid",
+    gridTemplateColumns: "minmax(280px, 420px) 1fr",
+    gap: "24px",
+    alignItems: "start",
+    marginBottom: "32px",
   },
+
   heroImageWrapper: {
-    flex: '1 1 320px',
-    minWidth: '280px',
+    minWidth: "280px",
   },
   heroImageCard: {
-    height: '100%',
-    borderRadius: '20px',
-    overflow: 'hidden',
-    boxShadow: '0 18px 45px rgba(15,23,42,0.16)',
-    border: '1px solid rgba(148,163,184,0.4)',
-    background: '#0f172a',
+    width: "100%",
+    borderRadius: "20px",
+    overflow: "hidden",
+    boxShadow: "0 18px 45px rgba(15,23,42,0.16)",
+    border: "1px solid rgba(148,163,184,0.4)",
+    background: "#ffffff",
+
+    // ✅ responsive height for the image card
+    height: "clamp(220px, 32vw, 420px)",
   },
   heroImage: {
-    width: '100%',
-    height: '100%',
-    objectFit: 'fill',
-    display: 'block',
+    width: "100%",
+    height: "100%",
+    objectFit: "cover", // ✅ prevents stretching
+    objectPosition: "center",
+    display: "block",
     opacity: 0.95,
   },
+
   heroTextWrapper: {
-    flex: '2 1 420px',
-    minWidth: '280px',
+    minWidth: "280px",
   },
   heroTextCard: {
-    height: '100%',
-    borderRadius: '20px',
-    padding: '28px 28px 24px',
-    background: 'rgba(255,255,255,0.92)',
-    backdropFilter: 'blur(10px)',
-    boxShadow: '0 18px 45px rgba(15,23,42,0.08)',
-    border: '1px solid rgba(148,163,184,0.4)',
+    borderRadius: "20px",
+    padding: "28px 28px 24px",
+    background: "rgba(255,255,255,0.92)",
+    backdropFilter: "blur(10px)",
+    boxShadow: "0 18px 45px rgba(15,23,42,0.08)",
+    border: "1px solid rgba(148,163,184,0.4)",
   },
+
   pill: {
-    display: 'inline-flex',
-    alignItems: 'center',
-    gap: '8px',
-    padding: '4px 12px',
-    borderRadius: '999px',
-    fontSize: '12px',
+    display: "inline-flex",
+    alignItems: "center",
+    gap: "8px",
+    padding: "4px 12px",
+    borderRadius: "999px",
+    fontSize: "12px",
     fontWeight: 600,
-    letterSpacing: '0.06em',
-    textTransform: 'uppercase',
-    background: 'rgba(37,99,235,0.08)',
-    color: '#1d4ed8',
-    marginBottom: '10px',
+    letterSpacing: "0.06em",
+    textTransform: "uppercase",
+    background: "rgba(37,99,235,0.08)",
+    color: "#1d4ed8",
+    marginBottom: "10px",
   },
   pillDot: {
-    width: '8px',
-    height: '8px',
-    borderRadius: '50%',
-    background: '#22c55e',
+    width: "8px",
+    height: "8px",
+    borderRadius: "50%",
+    background: "#22c55e",
   },
-  heroTitle: {
-    fontSize: '30px',
-    fontWeight: 700,
-    margin: '4px 0 4px',
-    color: '#0f172a',
-  },
+
   heroSubtitle: {
-    fontSize: '16px',
+    fontSize: "16px",
     fontWeight: 500,
-    color: '#64748b',
-    marginBottom: '6px',
+    color: "#64748b",
+    marginBottom: "18px",
   },
-  heroTagline: {
-    fontSize: '14px',
-    fontWeight: 500,
-    color: '#0f766e',
-    marginBottom: '14px',
-  },
+
   heroParagraph: {
-    fontSize: '14px',
+    fontSize: "14px",
     lineHeight: 1.7,
-    color: '#1e293b',
-    marginBottom: '10px',
+    color: "#1e293b",
+    marginBottom: "10px",
+    textAlign: "left",
   },
+  heroParagraph1: {
+    fontSize: "24px",
+    lineHeight: 1.7,
+    color: "#1e293b",
+    marginBottom: "10px",
+    textAlign: "left",
+  },
+  heroParagraph2: {
+    fontSize: "30px",
+    lineHeight: 1.2,
+    color: "#1e293b",
+    marginBottom: "10px",
+  }, 
+
   highlightStrip: {
-    marginTop: '16px',
-    padding: '10px 14px',
-    borderRadius: '12px',
-    background: 'linear-gradient(90deg, rgba(37,99,235,0.08), rgba(56,189,248,0.10))',
-    fontSize: '13px',
-    color: '#0f172a',
-    border: '1px solid rgba(129,140,248,0.4)',
+    marginTop: "16px",
+    padding: "10px 14px",
+    borderRadius: "12px",
+    background:
+      "linear-gradient(90deg, rgba(37,99,235,0.08), rgba(56,189,248,0.10))",
+    fontSize: "13px",
+    color: "#0f172a",
+    border: "1px solid rgba(129,140,248,0.4)",
   },
   highlightLabel: {
     fontWeight: 600,
-    marginRight: '6px',
+    marginRight: "6px",
   },
 
   // Section styles
   section: {
-    borderRadius: '18px',
-    padding: '22px 22px 20px',
-    marginBottom: '20px',
-    background: 'rgba(255,255,255,0.96)',
-    backdropFilter: 'blur(8px)',
-    boxShadow: '0 14px 35px rgba(15,23,42,0.06)',
-    border: '1px solid rgba(203,213,225,0.8)',
+    borderRadius: "18px",
+    padding: "22px 22px 20px",
+    marginBottom: "20px",
+    background: "rgba(255,255,255,0.96)",
+    backdropFilter: "blur(8px)",
+    boxShadow: "0 14px 35px rgba(15,23,42,0.06)",
+    border: "1px solid rgba(203,213,225,0.8)",
   },
   sectionHeaderRow: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'baseline',
-    gap: '10px',
-    marginBottom: '12px',
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "baseline",
+    gap: "10px",
+    marginBottom: "12px",
   },
   sectionTitle: {
-    fontSize: '18px',
+    fontSize: "18px",
     fontWeight: 700,
-    color: '#0f172a',
-    display: 'flex',
-    alignItems: 'center',
-    gap: '8px',
+    color: "#0f172a",
+    display: "flex",
+    alignItems: "center",
+    gap: "8px",
   },
   sectionAccentBar: {
-    width: '3px',
-    height: '18px',
-    borderRadius: '999px',
-    background: 'linear-gradient(180deg, #2563eb, #22c55e)',
+    width: "3px",
+    height: "18px",
+    borderRadius: "999px",
+    background: "linear-gradient(180deg, #2563eb, #22c55e)",
   },
+
   list: {
-    paddingLeft: '18px',
+    paddingLeft: "18px",
     margin: 0,
-    textAlign : "left"
+    textAlign: "left",
   },
   listItem: {
-    fontSize: '14px',
+    fontSize: "14px",
     lineHeight: 1.7,
-    color: '#1e293b',
-    marginBottom: '6px',
+    color: "#1e293b",
+    marginBottom: "6px",
   },
 
-  // Grid / layout helpers
   twoColumnGrid: {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
-    gap: '12px 32px',
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+    gap: "12px 32px",
   },
 
-  // Doctors / tags / FAQs
   doctorList: {
-    listStyle: 'none',
+    listStyle: "none",
     paddingLeft: 0,
     margin: 0,
   },
+
   tagListItem: {
-    fontSize: '14px',
+    fontSize: "14px",
     lineHeight: 1.7,
-    color: '#0f172a',
-    padding: '6px 10px',
-    borderRadius: '10px',
-    background: 'rgba(239,246,255,0.9)',
-    border: '1px solid rgba(191,219,254,1)',
-    marginBottom: '6px',
+    color: "#0f172a",
+    padding: "6px 10px",
+    borderRadius: "10px",
+    background: "rgba(239,246,255,0.9)",
+    border: "1px solid rgba(191,219,254,1)",
+    marginBottom: "6px",
   },
+  // FAQ styles (were referenced but missing)
   faqList: {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
-    gap: '12px',
+    display: "grid",
+    gap: "12px",
   },
   faqItem: {
-    borderRadius: '14px',
-    padding: '14px 14px 12px',
-    background: '#ffffffff',
-    color: '#000000ff',
-    boxShadow: '0 16px 30px rgba(15,23,42,0.4)',
-    borderLeft: '4px solid #38bdf8',
+    borderRadius: "14px",
+    padding: "14px 14px 12px",
+    background: "rgba(255,255,255,0.95)",
+    border: "1px solid rgba(226,232,240,1)",
+    boxShadow: "0 10px 24px rgba(15,23,42,0.05)",
+    textAlign: "left",
   },
   faqQuestion: {
-    fontSize: '14px',
-    fontWeight: 600,
-    marginBottom: '6px',
+    fontWeight: 800,
+    color: "#0f172a",
+    marginBottom: "6px",
+    fontSize: "14px",
   },
   faqAnswer: {
-    fontSize: '13px',
-    lineHeight: 1.6,
-    color: '#000000ff',
+    color: "#334155",
+    fontSize: "14px",
+    lineHeight: 1.7,
   },
+};
+const radiologyContent = {
+  servicesOffered: [
+    {
+      title: "Imaging Services",
+      items: [
+        "X-ray",
+        "Ultrasonography",
+        "Peripheral Doppler study",
+        "Carotid Doppler",
+        "Fetal cardiac echo",
+        "1st digital mammography in Nashik",
+        "Computed Tomography (CT) scans",
+        "Magnetic Resonance Imaging (MRI)",
+      ],
+    },
+    {
+      title: "Image-guided Procedures",
+      items: ["Biopsies", "Drainage procedures", "Vascular interventions"],
+    },
+  ],
+
+  facilitiesEquipmentIntro:
+    "Our department is equipped with state-of-the-art imaging technology to support a wide range of diagnostic and interventional procedures:",
+  facilitiesEquipment: [
+    "State-of-the-art imaging equipment",
+    "Advanced digital X-ray systems",
+    "State-of-the-art ultrasonography machines",
+    "High-field MRI machines",
+    "CT Scan",
+    "1st digital mammography in Nashik",
+  ],
+
+  specialisedImagingServices: ["Cardiac MRI"],
+
+  achievementsHighlights: [
+    "We specialise in cardiac MRI to assess viability of myocardium and evaluate cardiomyopathies, helping guide advanced cardiac treatment decisions.",
+  ],
+
+  patientGuidelines: [
+    "Please arrive at least 10 minutes before your scheduled appointment.",
+    "Inform your doctor about any medications, allergies, or previous medical conditions.",
+    "Follow specific instructions for imaging procedures, including fasting or drinking water as advised for certain tests.",
+  ],
+
+  team: {
+    doctors: [
+      { name: "Dr. Pallavi Dharmadhikari", degree: "MD, DNB" },
+      { name: "Dr. Vaibhav Nimbhore", degree: "DNB" },
+    ],
+    timings: [
+      { label: "Imaging Services", value: "Monday to Saturday, 9:00 AM - 9:00 PM" },
+      { label: "Emergency Services", value: "24 x 7" },
+    ],
+  },
+
+  faqs: [
+  {
+    q: "What is Radiology?",
+    a: "Radiology is a medical specialty that uses imaging technologies such as X-rays, Ultrasound, CT scans, and MRI to diagnose and monitor diseases inside the body without surgery.",
+  },
+  {
+    q: "What types of imaging services are available in the Radiology Department?",
+    a: "We provide X-ray, Ultrasound, Doppler studies, CT scans, MRI, Digital Mammography, and image-guided procedures such as biopsies and drainage.",
+  },
+  {
+    q: "Do radiology tests cause pain?",
+    a: "Most radiology tests are completely painless. Some procedures that involve contrast injections or biopsies may cause mild discomfort, but our team ensures your safety and comfort at all times.",
+  },
+  {
+    q: "Are CT scans and X-rays safe?",
+    a: "Yes. These tests use controlled doses of radiation. We follow strict safety protocols and always use the lowest radiation dose necessary for accurate diagnosis.",
+  },
+  {
+    q: "Is MRI safe for everyone?",
+    a: "MRI does not use radiation, but it may not be suitable for patients with pacemakers, metal implants, or certain medical devices. Always inform the staff about any implants before your scan.",
+  },
+  {
+    q: "How should I prepare for my scan?",
+    a: "Preparation depends on the test. Some scans may require fasting, drinking water, or avoiding metal objects. You will receive detailed instructions when your appointment is scheduled.",
+  },
+  {
+    q: "How long does an imaging procedure take?",
+    a: "Approximate times are: X-ray (10-15 minutes), Ultrasound (20-45 minutes), CT scan (15-30 minutes), MRI (30-60 minutes). Duration may vary depending on the study.",
+  },
+  {
+    q: "Will I need contrast dye during my scan?",
+    a: "Some CT and MRI scans require contrast to improve image clarity. The contrast is generally safe, but inform the doctor if you have allergies, kidney problems, or previous reactions.",
+  },
+  {
+    q: "How soon will I receive my radiology report?",
+    a: "Most reports are available within 1-2 hours. Complex or specialised studies may take up to 24 hours. Your doctor will discuss the results with you.",
+  },
+  {
+    q: "Can pregnant women undergo radiology tests?",
+    a: "Ultrasound and MRI (in most cases) are considered safe. X-rays and CT scans are avoided during pregnancy unless absolutely necessary. Always inform the staff if you are pregnant or may be pregnant.",
+  },
+]
 };
 
 function Radiology() {
+  const c = radiologyContent;
+
   return (
     <>
       <Helmet>
@@ -227,7 +341,7 @@ function Radiology() {
             <div style={styles.heroImageWrapper}>
               <div style={styles.heroImageCard}>
                 <img
-                  src={img} // replace with radiology-specific image if available
+                  src={img}
                   alt="Radiology Department"
                   style={styles.heroImage}
                 />
@@ -238,30 +352,99 @@ function Radiology() {
               <div style={styles.heroTextCard}>
                 <div style={styles.pill}>
                   <span style={styles.pillDot} />
-                  <span>Advanced Radiology</span>
-                </div>
-                <h1 style={styles.heroTitle}>Radiology Department</h1>
-                <div style={styles.heroSubtitle}>Nashik, Maharashtra</div>
-                <div style={styles.heroTagline}>
-                  Comprehensive imaging and image-guided procedures for accurate diagnosis and treatment.
+                  <span>Comprehensive Medical Care</span>
                 </div>
 
+                <h1 style={styles.heroParagraph2}>Radiology Department</h1>
+                <div style={styles.heroSubtitle}>Nashik, Maharashtra</div>
+                <br />
+
                 <p style={styles.heroParagraph}>
-                  Our Radiology department provides comprehensive imaging services to diagnose
-                  and help treat a wide range of medical conditions. Our team of experienced
-                  radiologists and technicians work together to deliver high-quality imaging
-                  with a focus on accuracy, safety and patient comfort.
+                  Shree Saibaba Multi-speciality Hospital is a premier hospital in Nashik, offering state-of-the-art Radiology
+                  Services for accurate Diagnosis, Treatment Planning and Disease Monitoring. With the increasing use of Medical
+                  Imaging as the most widely used Diagnostic Tool in Modern Healthcare, our Radiology Department has combined
+                  Cutting-Edge Technology with Highly Experienced Medical Professionals to ensure Reliable Results are provided
+                  to Patients and Physicians.
                 </p>
+                <p style={styles.heroParagraph}>
+                  As the "Best Radiology Hospital in Nashik," we have created a State-of-the-Art Laboratory for Diagnostic Imaging
+                  that uses Advanced Systems to enable fast and accurate Production of High Quality Detailed Body Images. Advanced
+                  Imaging Technology enables early detection of Broken Bones, Infection, Tumours or problems with Internal Organs
+                  (e.g. a Heart Problem) as well as many other types of problems such as Vascular/Nerve Disorders and Early Warning
+                  Systems. The earlier a problem is detected, the more likely it is to be treated successfully with fewer
+                  complications.
+                </p>
+                <p style={styles.heroParagraph}>
+                  We provide many types of Diagnostic Imaging Services, including Ultrasound, CT Scans, MRIs, Doppler Studies and
+                  many others. In addition, we also provide Digital Imaging Technology which enables Higher Resolution Images,
+                  Lower Radiation Exposure and Faster Results than Conventional Technologies. These services are used by Physicians
+                  and Surgeons to prepare for Surgery or to monitor Chronic Conditions or to check routine health.
+                </p>
+                <p style={styles.heroParagraph}>
+                  The department is comprised of highly trained radiologists with many years of experience interpreting complex
+                  imaging studies. Radiologists at the facility work closely with all medical staff, including specialists, to
+                  relate imaging findings to the clinical presentation of the patient. Following the completion of each radiological
+                  examination, the radiologist will author a comprehensive and detailed report that will assist the referring physician
+                  in making good clinical decisions.
+                </p>
+                <p style={styles.heroParagraph}>
+                  The radiologists are supported by a team of certified radiologic technologists who have been specifically trained in 
+                  relation to positioning patients properly, utilizing radiographic equipment safely, and following strict safety 
+                  guidelines. Additionally, radiologic technologists are educated and trained to help ensure that each radiographic 
+                  examination is performed in a manner that provides a safe, efficient, and comfortable experience for the patient, 
+                  as well as following regulations from the US Food and Drug Administration regarding the minimum level of safety and 
+                  reducing the risk of recurrence through the minimization of radiation exposure.
+                </p>
+                <p style={styles.heroParagraph}>
+                  To ensure that patients have access to expert teleradiology support without interruption, our hospital utilizes 
+                  teleradiology systems so that specialists working offsite can easily analyze images sent via those systems and 
+                  provide additional opinions when required. The digital connection with specialists allows our staff to provide 
+                  rapid reporting on emergencies, overnight cases, and critical care situations as well as improve the collaborative 
+                  work of all healthcare providers and have improved treatment outcomes.
+                </p>
+                <p style={styles.heroParagraph}>
+                  Our pediatric radiology services are specifically designed to meet the special needs of infants, children, and 
+                  adolescents; while providing the necessary imaging services to safely assess and treat their conditions. Imaging 
+                  a child requires the use of unique imaging techniques, smaller radiation dose protocols, and a gentle approach to 
+                  performing procedures. To create a safe, reassuring environment, our staff provides child-friendly imaging 
+                  procedures, makes every effort to reduce discomfort and trauma associated with imaging, and effectively communicates 
+                  with the child's parents regarding their child's safety.
+                </p>
+                <p style={styles.heroParagraph}>
+                  Our patient-centered workflow begins with providing patients with detailed, simple explanations of the scans prior 
+                  to their imaging procedure. During the scan, we focus on privacy and comfort for all of our patients. Our modern 
+                  equipment is designed to reduce scan times, noise, and discomfort; therefore, creating a more comfortable experience 
+                  for elderly patients, children, and anxious patients.
+                </p>
+                <p style={styles.heroParagraph}>
+                  The imaging unit is an integral part of the support provided to our cardiology, orthopedics, neurology, oncology, 
+                  gynecology, and trauma care departments. Diagnostic imaging provides the basis for achieving clinical excellence 
+                  within our institution, from identifying heart disease to facilitating the diagnosis and treatment of cancer to 
+                  assessing athletes with sports-related injuries.
+                </p>
+                <p style={styles.heroParagraph}>
+                  All necessary hygiene and quality controls are upheld constantly; equipment is calibrated prior to/after each 
+                  usage; equipment is maintained per standard protocol of operating; and infection prevention control is performed 
+                  at all times for the benefit of both patients and staff.
+                </p>
+                <p style={styles.heroParagraph}>
+                  The Shree Saibaba Multispeciality Hospital offers quality MD imaging services using the latest technology along 
+                  with experienced physicians who treat all patients with respect and compassion. We strive to deliver timely, 
+                  accurate, and dependable results so our providers can make better informed choices about their patient's treatment 
+                  plan leading to improved patient outcomes.
+                </p>
+                <br />
 
                 <div style={styles.highlightStrip}>
                   <span style={styles.highlightLabel}>Quick Facts:</span>
-                  X-ray • USG &amp; Doppler • CT &amp; MRI • 1st Digital Mammography in Nashik • Cardiac MRI
+                  Advanced OT • Safety-first protocols • Cosmetic & Reconstructive
+                  expertise • 24x7 emergency support
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Services Offered – Imaging Services */}
+           {/* Services Offered */}
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -271,28 +454,18 @@ function Radiology() {
             </div>
 
             <ul style={styles.list}>
-              <li style={styles.listItem}>
-                <strong>Imaging Services:</strong>
-                <ul style={styles.list}>
-                  <li style={styles.listItem}>X-ray.</li>
-                  <li style={styles.listItem}>Ultrasonography.</li>
-                  <li style={styles.listItem}>Peripheral Doppler study.</li>
-                  <li style={styles.listItem}>Carotid Doppler.</li>
-                  <li style={styles.listItem}>Fetal cardiac echo.</li>
-                  <li style={styles.listItem}>1st digital mammography in Nashik.</li>
-                  <li style={styles.listItem}>Computed Tomography (CT) scans.</li>
-                  <li style={styles.listItem}>Magnetic Resonance Imaging (MRI).</li>
-                </ul>
-              </li>
-
-              <li style={styles.listItem}>
-                <strong>Image-guided Procedures:</strong>
-                <ul style={styles.list}>
-                  <li style={styles.listItem}>Biopsies.</li>
-                  <li style={styles.listItem}>Drainage procedures.</li>
-                  <li style={styles.listItem}>Vascular interventions.</li>
-                </ul>
-              </li>
+              {c.servicesOffered.map((block) => (
+                <li key={block.title} style={styles.listItem}>
+                  <strong>{block.title}:</strong>
+                  <ul style={styles.list}>
+                    {block.items.map((item) => (
+                      <li key={item} style={styles.listItem}>
+                        {item}.
+                      </li>
+                    ))}
+                  </ul>
+                </li>
+              ))}
             </ul>
           </section>
 
@@ -304,17 +477,14 @@ function Radiology() {
                 Facilities &amp; Equipment
               </div>
             </div>
-            <p style={styles.listItem}>
-              Our department is equipped with state-of-the-art imaging technology to
-              support a wide range of diagnostic and interventional procedures:
-            </p>
+
+            <p style={styles.listItem}>{c.facilitiesEquipmentIntro}</p>
             <ul style={styles.list}>
-              <li style={styles.listItem}>State-of-the-art imaging equipment.</li>
-              <li style={styles.listItem}>Advanced digital X-ray systems.</li>
-              <li style={styles.listItem}>State-of-the-art ultrasonography machines.</li>
-              <li style={styles.listItem}>High-field MRI machines.</li>
-              <li style={styles.listItem}>CT Scan.</li>
-              <li style={styles.listItem}>1st digital mammography in Nashik.</li>
+              {c.facilitiesEquipment.map((item) => (
+                <li key={item} style={styles.listItem}>
+                  {item}.
+                </li>
+              ))}
             </ul>
           </section>
 
@@ -326,8 +496,13 @@ function Radiology() {
                 Specialised Imaging Services
               </div>
             </div>
+
             <ul style={styles.list}>
-              <li style={styles.listItem}>Cardiac MRI.</li>
+              {c.specialisedImagingServices.map((item) => (
+                <li key={item} style={styles.listItem}>
+                  {item}.
+                </li>
+              ))}
             </ul>
           </section>
 
@@ -339,11 +514,13 @@ function Radiology() {
                 Achievements &amp; Highlights
               </div>
             </div>
+
             <ul style={styles.list}>
-              <li style={styles.tagListItem}>
-                We specialise in cardiac MRI to assess viability of myocardium and evaluate
-                cardiomyopathies, helping guide advanced cardiac treatment decisions.
-              </li>
+              {c.achievementsHighlights.map((item) => (
+                <li key={item} style={styles.tagListItem}>
+                  {item}
+                </li>
+              ))}
             </ul>
           </section>
 
@@ -355,17 +532,13 @@ function Radiology() {
                 Patient Guidelines
               </div>
             </div>
+
             <ul style={styles.list}>
-              <li style={styles.listItem}>
-                Please arrive at least 10 minutes before your scheduled appointment.
-              </li>
-              <li style={styles.listItem}>
-                Inform your doctor about any medications, allergies, or previous medical conditions.
-              </li>
-              <li style={styles.listItem}>
-                Follow specific instructions for imaging procedures, including fasting or
-                drinking water as advised for certain tests.
-              </li>
+              {c.patientGuidelines.map((item) => (
+                <li key={item} style={styles.listItem}>
+                  {item}
+                </li>
+              ))}
             </ul>
           </section>
 
@@ -382,22 +555,21 @@ function Radiology() {
 
             <div style={styles.twoColumnGrid}>
               <ul style={styles.doctorList}>
-                <li style={styles.tagListItem}>
-                  <strong>Dr. Pallavi Dharmadhikari</strong> (MD, DNB)
-                </li>
-                <li style={styles.tagListItem}>
-                  <strong>Dr. Vaibhav Nimbhore</strong> (DNB)
-                </li>
+                {c.team.doctors.map((d) => (
+                  <li key={d.name} style={styles.tagListItem}>
+                    <strong>{d.name}</strong> ({d.degree})
+                  </li>
+                ))}
               </ul>
+
               <ul style={styles.doctorList}>
-                <li style={styles.tagListItem}>
-                  <strong>Imaging Services:</strong>
-                  <br />
-                  Monday to Saturday, 9:00 AM – 9:00 PM
-                </li>
-                <li style={styles.tagListItem}>
-                  <strong>Emergency Services:</strong> 24 x 7
-                </li>
+                {c.team.timings.map((t) => (
+                  <li key={t.label} style={styles.tagListItem}>
+                    <strong>{t.label}:</strong>
+                    <br />
+                    {t.value}
+                  </li>
+                ))}
               </ul>
             </div>
           </section>
@@ -412,84 +584,12 @@ function Radiology() {
             </div>
 
             <div style={styles.faqList}>
-              <div style={styles.faqItem}>
-                <div style={styles.faqQuestion}>Q1: What is a CT scan?</div>
-                <div style={styles.faqAnswer}>
-                  A CT scan is a non-invasive imaging test that uses X-rays and a rotating
-                  scanner to create detailed cross-sectional images of internal organs,
-                  bones, blood vessels and tissues.
+              {c.faqs.map((f, idx) => (
+                <div key={`${idx}-${f.q}`} style={styles.faqItem}>
+                  <div style={styles.faqQuestion}>{`Q${idx + 1}: ${f.q}`}</div>
+                  <div style={styles.faqAnswer}>{f.a}</div>
                 </div>
-              </div>
-
-              <div style={styles.faqItem}>
-                <div style={styles.faqQuestion}>Q2: What is MRI?</div>
-                <div style={styles.faqAnswer}>
-                  MRI is a non-invasive imaging test that uses strong magnetic fields and
-                  radio waves to create detailed images of internal organs and tissues. It
-                  is particularly useful for brain, spine, joint and soft tissue evaluation.
-                </div>
-              </div>
-
-              <div style={styles.faqItem}>
-                <div style={styles.faqQuestion}>Q3: How do I prepare for my scan?</div>
-                <div style={styles.faqAnswer}>
-                  Preparation depends on the type of scan:
-                  <br />• <strong>Chest X-rays:</strong> Usually no preparation is needed.
-                  <br />• <strong>CT / MRI:</strong> You may be asked not to eat or drink
-                  for a few hours before the scan; some tests may require contrast injection.
-                  <br />• <strong>Ultrasound:</strong> Some tests may require a full bladder
-                  or fasting.
-                  <br />
-                  You will receive specific instructions when you book your appointment.
-                </div>
-              </div>
-
-              <div style={styles.faqItem}>
-                <div style={styles.faqQuestion}>Q4: How long will the procedure take?</div>
-                <div style={styles.faqAnswer}>
-                  Average procedure times are:
-                  <br />• X-ray: 10–15 minutes
-                  <br />• Ultrasound: 20–45 minutes
-                  <br />• CT scan: 15–30 minutes
-                  <br />• MRI: 30–60 minutes
-                  <br />
-                  These are approximate and can vary depending on the body part being imaged
-                  and the complexity of the study.
-                </div>
-              </div>
-
-              <div style={styles.faqItem}>
-                <div style={styles.faqQuestion}>
-                  Q5: Is the procedure painful or dangerous?
-                </div>
-                <div style={styles.faqAnswer}>
-                  Most radiology tests are painless and non-invasive. Some may involve
-                  contrast injections, which can cause mild discomfort or, rarely, allergic
-                  reactions. Our team follows strict safety protocols and monitors you
-                  closely during and after the procedure.
-                </div>
-              </div>
-
-              <div style={styles.faqItem}>
-                <div style={styles.faqQuestion}>
-                  Q6: Are there risks from radiation exposure?
-                </div>
-                <div style={styles.faqAnswer}>
-                  Some imaging tests (X-ray, CT) use ionizing radiation. The amount used
-                  for diagnostic tests is generally low, and we always use the minimum dose
-                  necessary. MRI and ultrasound do not involve any radiation. We avoid
-                  repeat scans unless absolutely required.
-                </div>
-              </div>
-
-              <div style={styles.faqItem}>
-                <div style={styles.faqQuestion}>Q7: How do I get my results?</div>
-                <div style={styles.faqAnswer}>
-                  In most cases, reports are available within 1–2 hours. Some specialised
-                  studies may take up to 24 hours. Your doctor will review the report with
-                  you and explain the findings and next steps.
-                </div>
-              </div>
+              ))}
             </div>
           </section>
         </div>

@@ -19,7 +19,7 @@
   --fbc-shadow-md: 0 6px 18px rgba(2, 8, 23, .08);
   --fbc-radius: 14px;
   --fbc-radius-pill: 999px;
-}
+} 
 
 /* Force the same light palette even if user prefers dark mode */
 @media (prefers-color-scheme: dark) {
@@ -177,7 +177,7 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 10px;
-  justify-items: center;             /* center each grid cell's content */
+  justify-items: left;             /* center each grid cell's content */
   text-align: left;                /* center text inside items */
 }
 @media (min-width: 640px) {
@@ -213,7 +213,7 @@
 .fbc-bullets li {
   margin: 8px 0;
   color: var(--fbc-text);
-  text-align: center;                /* center list lines */
+  text-align: left;                /* center list lines */
 }
 .fbc-bullets li::marker {
   color: var(--fbc-accent);
