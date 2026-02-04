@@ -18,7 +18,6 @@ const styles = {
     color: "#0f172a",
   },
 
-  // ✅ HERO: grid on desktop, stacks on mobile via CSS class + media query below
   hero: {
     display: "grid",
     gridTemplateColumns: "minmax(280px, 420px) 1fr",
@@ -36,15 +35,13 @@ const styles = {
     overflow: "hidden",
     boxShadow: "0 18px 45px rgba(15,23,42,0.16)",
     border: "1px solid rgba(148,163,184,0.4)",
-    background: "#0f172a",
-
-    // ✅ responsive height for the image card
+    background: "white",
     height: "clamp(220px, 32vw, 420px)",
   },
   heroImage: {
     width: "100%",
     height: "100%",
-    objectFit: "cover", // ✅ prevents stretching
+    objectFit: "cover", 
     objectPosition: "center",
     display: "block",
     opacity: 0.95,
