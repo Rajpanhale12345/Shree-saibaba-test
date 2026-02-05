@@ -32,9 +32,7 @@ function Urology_Blog() {
     const keywords =
         "best urology hospital in nashik, kidney stone treatment nashik, kidney stone surgery nashik, ureteroscopy laser nashik, lithotripsy nashik, laser prostate surgery nashik, TURP nashik, enlarged prostate treatment nashik, UTI treatment nashik, women's urology nashik, minimally invasive urology surgery nashik, urologist in nashik, Shree Saibaba Multispeciality Hospital";
 
-    // ✅ If you have a real public URL for this image, use it.
-    // If not, keep it as-is (OG tags prefer absolute URLs).
-    const ogImage = `${siteUrl}/static/media/Urology_Kidney_Blog.jpg`; // <-- adjust to actual deployed path
+    const ogImage = `${siteUrl}/assets/Urology_Kidney_Blog-nWZxCyLL.jpg`; 
 
     const publishedDate = "2026-02-05";
     const modifiedDate = "2026-02-05"; // update when you edit content
