@@ -29,6 +29,7 @@ import Stress_Anxiety from './Images/Stress_Anxiety.png';
 import Robotic_Surgery from './Images/Advanced_Robotic_Surgery.jpg';
 import Robotic_Joint from './Images/Robotic Joint Replacement.jpg';
 import Neurology_blog from "./Images/Neurology_Blog.jpg"
+import Urology_Kidney_Blog from "./Images/Urology_Kidney_Blog.jpg"
 import { Link } from 'react-router-dom';
 import { Helmet } from "react-helmet-async";
 
@@ -50,6 +51,11 @@ function Blogs() {
         text="Blogs" />
       <br /><br />
       <div className="imageblog1">
+        
+        <Link to='/Urology_Blog'><div className="imageblog">
+          <img src={Urology_Kidney_Blog} alt="Urology Kidney Blog" /> <br /> <br />
+          <h2><i style={{ color: 'red', }}>Kidney Stones & Prostate Care</i></h2></div>
+        </Link>
         
         <Link to='/Neurology_Blog'><div className="imageblog">
           <img src={Neurology_blog} alt="Cardio" /> <br /> <br />

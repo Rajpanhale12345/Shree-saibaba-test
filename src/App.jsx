@@ -68,6 +68,7 @@ import Robotic_Surgery from "./Blogs/Robotic_Surgery";
 import Robotic_Joint from "./Blogs/Robotic_Joint";
 import Neurology_Blog from "./Blogs/Neurology_Blog";
 import GTranslate from "./GTranslate";
+import Urology_Blog from "./Blogs/Urology_Kidney";
 // import Popup from "./popup";
 
 function App() {
@@ -143,6 +144,7 @@ function App() {
           <Route path="/Robotic_Surgery" element={< Robotic_Surgery/>} />
           <Route path="/Robotic_Joint" element={< Robotic_Joint/>} />
           <Route path="/Neurology_Blog" element={< Neurology_Blog/>} />
+          <Route path="/Urology_Blog" element={< Urology_Blog/>} />
      
         </Routes>
         <GTranslate/>
