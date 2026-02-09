@@ -2,101 +2,97 @@ import React from 'react';
 import nephrology from './Images/nephrology.jpg';
 import { Helmet } from "react-helmet-async";
 
-// ✅ Same structure + layout + styling pattern as Cardiology
 const styles = {
   page: {
-    background: 'linear-gradient(135deg, #f4f7fb, #e5edf9)',
-    padding: '40px 16px',
+    background: "linear-gradient(135deg, #f4f7fb, #e5edf9)",
+    padding: "40px 16px",
   },
   container: {
-    maxWidth: '1200px',
-    margin: '0 auto',
-    fontFamily: '"Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif',
-    color: '#0f172a',
+    maxWidth: "1200px",
+    margin: "0 auto",
+    fontFamily:
+      '"Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif',
+    color: "#0f172a",
   },
+
+  // ✅ HERO: grid on desktop, stacks on mobile via CSS class + media query below
   hero: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    gap: '24px',
-    alignItems: 'stretch',
-    marginBottom: '32px',
+    display: "grid",
+    gridTemplateColumns: "minmax(280px, 420px) 1fr",
+    gap: "24px",
+    alignItems: "start",
+    marginBottom: "32px",
   },
+
   heroImageWrapper: {
-    flex: '1 1 320px',
-    minWidth: '280px',
+    minWidth: "280px",
   },
   heroImageCard: {
-    height: '100%',
-    borderRadius: '20px',
-    overflow: 'hidden',
-    boxShadow: '0 18px 45px rgba(15,23,42,0.16)',
-    border: '1px solid rgba(148,163,184,0.4)',
-    background: '#0f172a',
+    width: "100%",
+    borderRadius: "20px",
+    overflow: "hidden",
+    boxShadow: "0 18px 45px rgba(15,23,42,0.16)",
+    border: "1px solid rgba(148,163,184,0.4)",
+    background: "#0f172a",
+
+    // ✅ responsive height for the image card
+    height: "clamp(220px, 32vw, 420px)",
   },
   heroImage: {
-    width: '100%',
-    height: '100%',
-    objectFit: 'fill',
-    display: 'block',
+    width: "100%",
+    height: "100%",
+    objectFit: "cover", // ✅ prevents stretching
+    objectPosition: "center",
+    display: "block",
     opacity: 0.95,
   },
+
   heroTextWrapper: {
-    flex: '2 1 420px',
-    minWidth: '280px',
+    minWidth: "280px",
   },
   heroTextCard: {
-    height: '100%',
-    borderRadius: '20px',
-    padding: '28px 28px 24px',
-    background: 'rgba(255,255,255,0.92)',
-    backdropFilter: 'blur(10px)',
-    boxShadow: '0 18px 45px rgba(15,23,42,0.08)',
-    border: '1px solid rgba(148,163,184,0.4)',
+    borderRadius: "20px",
+    padding: "28px 28px 24px",
+    background: "rgba(255,255,255,0.92)",
+    backdropFilter: "blur(10px)",
+    boxShadow: "0 18px 45px rgba(15,23,42,0.08)",
+    border: "1px solid rgba(148,163,184,0.4)",
   },
+
   pill: {
-    display: 'inline-flex',
-    alignItems: 'center',
-    gap: '8px',
-    padding: '4px 12px',
-    borderRadius: '999px',
-    fontSize: '12px',
+    display: "inline-flex",
+    alignItems: "center",
+    gap: "8px",
+    padding: "4px 12px",
+    borderRadius: "999px",
+    fontSize: "12px",
     fontWeight: 600,
-    letterSpacing: '0.06em',
-    textTransform: 'uppercase',
-    background: 'rgba(37,99,235,0.08)',
-    color: '#1d4ed8',
-    marginBottom: '10px',
+    letterSpacing: "0.06em",
+    textTransform: "uppercase",
+    background: "rgba(37,99,235,0.08)",
+    color: "#1d4ed8",
+    marginBottom: "10px",
   },
   pillDot: {
-    width: '8px',
-    height: '8px',
-    borderRadius: '50%',
-    background: '#22c55e',
+    width: "8px",
+    height: "8px",
+    borderRadius: "50%",
+    background: "#22c55e",
   },
-  heroTitle: {
-    fontSize: '30px',
-    fontWeight: 700,
-    margin: '4px 0 4px',
-    color: '#0f172a',
-  },
+
   heroSubtitle: {
-    fontSize: '16px',
+    fontSize: "16px",
     fontWeight: 500,
-    color: '#64748b',
-    marginBottom: '18px',
+    color: "#64748b",
+    marginBottom: "18px",
   },
-  heroTagline: {
-    fontSize: '14px',
-    fontWeight: 500,
-    color: '#0f766e',
-    marginBottom: '14px',
-  },
+
   heroParagraph: {
-    fontSize: '14px',
+    fontSize: "14px",
     lineHeight: 1.7,
-    color: '#1e293b',
-    marginBottom: '10px',
-    textAlign: 'left'
+    color: "#1e293b",
+    marginBottom: "10px",
+    textAlign: "left",
   },
   heroParagraph1: {
     fontSize: "24px",
@@ -110,97 +106,92 @@ const styles = {
     lineHeight: 1.2,
     color: "#1e293b",
     marginBottom: "10px",
+    textAlign: "center",
   },
+
   highlightStrip: {
-    marginTop: '16px',
-    padding: '10px 14px',
-    borderRadius: '12px',
-    background: 'linear-gradient(90deg, rgba(37,99,235,0.08), rgba(56,189,248,0.10))',
-    fontSize: '13px',
-    color: '#0f172a',
-    border: '1px solid rgba(129,140,248,0.4)',
+    marginTop: "16px",
+    padding: "10px 14px",
+    borderRadius: "12px",
+    background:
+      "linear-gradient(90deg, rgba(37,99,235,0.08), rgba(56,189,248,0.10))",
+    fontSize: "13px",
+    color: "#0f172a",
+    border: "1px solid rgba(129,140,248,0.4)",
   },
   highlightLabel: {
     fontWeight: 600,
-    marginRight: '6px',
+    marginRight: "6px",
   },
 
+  // Section styles
   section: {
-    borderRadius: '18px',
-    padding: '22px 22px 20px',
-    marginBottom: '20px',
-    background: 'rgba(255,255,255,0.96)',
-    backdropFilter: 'blur(8px)',
-    boxShadow: '0 14px 35px rgba(15,23,42,0.06)',
-    border: '1px solid rgba(203,213,225,0.8)',
+    borderRadius: "18px",
+    padding: "22px 22px 20px",
+    marginBottom: "20px",
+    background: "rgba(255,255,255,0.96)",
+    backdropFilter: "blur(8px)",
+    boxShadow: "0 14px 35px rgba(15,23,42,0.06)",
+    border: "1px solid rgba(203,213,225,0.8)",
   },
   sectionHeaderRow: {
-    display: 'flex',
-    justifyContent: 'flex-start',
-    alignItems: 'flex-start',
-    gap: '10px',
-    marginBottom: '12px',
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "baseline",
+    gap: "10px",
+    marginBottom: "12px",
   },
   sectionTitle: {
-    fontSize: '18px',
+    fontSize: "18px",
     fontWeight: 700,
-    color: '#0f172a',
-    display: 'flex',
-    alignItems: 'left',
-    gap: '8px',
+    color: "#0f172a",
+    display: "flex",
+    alignItems: "center",
+    gap: "8px",
   },
   sectionAccentBar: {
-    width: '3px',
-    height: '18px',
-    borderRadius: '999px',
-    background: 'linear-gradient(180deg, #2563eb, #22c55e)',
+    width: "3px",
+    height: "18px",
+    borderRadius: "999px",
+    background: "linear-gradient(180deg, #2563eb, #22c55e)",
   },
+
   list: {
-    paddingLeft: '18px',
+    paddingLeft: "18px",
     margin: 0,
-    textAlign: 'left',
+    textAlign: "left",
   },
   listItem: {
-    fontSize: '14px',
+    fontSize: "14px",
     lineHeight: 1.7,
-    color: '#1e293b',
-    marginBottom: '6px',
-    textAlign: 'left',
+    color: "#1e293b",
+    marginBottom: "6px",
   },
 
   twoColumnGrid: {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
-    gap: '12px 32px',
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+    gap: "12px 32px",
   },
 
   doctorList: {
-    listStyle: 'none',
+    listStyle: "none",
     paddingLeft: 0,
     margin: 0,
   },
-  doctorItem: {
-    fontSize: '14px',
-    color: '#0f172a',
-    padding: '6px 10px',
-    borderRadius: '999px',
-    border: '1px solid rgba(148,163,184,0.5)',
-    background: 'rgba(248,250,252,0.9)',
-    display: 'inline-block',
-    marginBottom: '6px',
-  },
 
   tagListItem: {
-    fontSize: '14px',
+    fontSize: "14px",
     lineHeight: 1.7,
-    color: '#0f172a',
-    padding: '6px 10px',
-    borderRadius: '10px',
-    background: 'rgba(239,246,255,0.9)',
-    border: '1px solid rgba(191,219,254,1)',
-    marginBottom: '6px',
+    color: "#0f172a",
+    padding: "6px 10px",
+    borderRadius: "10px",
+    background: "rgba(239,246,255,0.9)",
+    border: "1px solid rgba(191,219,254,1)",
+    marginBottom: "6px",
   },
 
+  // FAQs
   faqList: {
     display: 'grid',
     gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
@@ -223,6 +214,7 @@ const styles = {
     fontSize: '13px',
     lineHeight: 1.6,
     color: '#000000ff',
+    textAlign: 'left',
   },
 };
 
@@ -548,7 +540,7 @@ function Nephrology() {
 
             <div style={styles.faqList}>
               <div style={styles.faqItem}>
-                <div style={styles.faqQuestion}>1. When should I see a Nephrologist?</div>
+                <div style={styles.faqQuestion}>Q. When should I see a Nephrologist?</div>
                 <div style={styles.faqAnswer}>
                   If you have high creatinine, swelling, decreased urine output, uncontrolled BP, kidney stones, or persistent
                   abnormalities in urine tests.
@@ -556,28 +548,28 @@ function Nephrology() {
               </div>
 
               <div style={styles.faqItem}>
-                <div style={styles.faqQuestion}>2. What is Chronic Kidney Disease (CKD)?</div>
+                <div style={styles.faqQuestion}>Q. What is Chronic Kidney Disease (CKD)?</div>
                 <div style={styles.faqAnswer}>
                   A long-term condition where kidneys gradually lose function. Early diagnosis helps slow progression.
                 </div>
               </div>
 
               <div style={styles.faqItem}>
-                <div style={styles.faqQuestion}>3. Is dialysis painful?</div>
+                <div style={styles.faqQuestion}>Q. Is dialysis painful?</div>
                 <div style={styles.faqAnswer}>
                   No, dialysis is generally not painful. Some discomfort may occur during needle insertion.
                 </div>
               </div>
 
               <div style={styles.faqItem}>
-                <div style={styles.faqQuestion}>4. How often is dialysis required?</div>
+                <div style={styles.faqQuestion}>Q. How often is dialysis required?</div>
                 <div style={styles.faqAnswer}>
                   Most patients need dialysis 2-3 times a week, based on medical advice.
                 </div>
               </div>
 
               <div style={styles.faqItem}>
-                <div style={styles.faqQuestion}>5. Can kidney disease be prevented?</div>
+                <div style={styles.faqQuestion}>Q. Can kidney disease be prevented?</div>
                 <div style={styles.faqAnswer}>
                   Yes. Controlling diabetes, BP, staying hydrated, and regular health checks help prevent kidney disease.
                 </div>

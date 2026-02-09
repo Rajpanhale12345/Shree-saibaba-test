@@ -190,29 +190,31 @@ const styles = {
     border: "1px solid rgba(191,219,254,1)",
     marginBottom: "6px",
   },
-    // FAQ styles (were referenced but missing)
+
+  // FAQs
   faqList: {
-    display: "grid",
-    gap: "12px",
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+    gap: '12px',
   },
   faqItem: {
-    borderRadius: "14px",
-    padding: "14px 14px 12px",
-    background: "rgba(255,255,255,0.95)",
-    border: "1px solid rgba(226,232,240,1)",
-    boxShadow: "0 10px 24px rgba(15,23,42,0.05)",
-    textAlign: "left",
+    borderRadius: '14px',
+    padding: '14px 14px 12px',
+    background: '#ffffffff',
+    color: '#000000ff',
+    boxShadow: '0 16px 30px rgba(15,23,42,0.4)',
+    borderLeft: '4px solid #38bdf8',
   },
   faqQuestion: {
-    fontWeight: 800,
-    color: "#0f172a",
-    marginBottom: "6px",
-    fontSize: "14px",
+    fontSize: '14px',
+    fontWeight: 600,
+    marginBottom: '6px',
   },
   faqAnswer: {
-    color: "#334155",
-    fontSize: "14px",
-    lineHeight: 1.7,
+    fontSize: '13px',
+    lineHeight: 1.6,
+    color: '#000000ff',
+    textAlign: 'left',
   },
 };
 
@@ -605,7 +607,7 @@ function GeneralMedicine() {
             <div style={styles.faqList}>
               <div style={styles.faqItem}>
                 <div style={styles.faqQuestion}>
-                  1. When should I visit a General Physician?
+                  Q. When should I visit a General Physician?
                 </div>
                 <div style={styles.faqAnswer}>
                   You should visit if you have fever, cough, fatigue, body pain,
@@ -616,7 +618,7 @@ function GeneralMedicine() {
 
               <div style={styles.faqItem}>
                 <div style={styles.faqQuestion}>
-                  2. Can the General Medicine department manage chronic diseases?
+                  Q. Can the General Medicine department manage chronic diseases?
                 </div>
                 <div style={styles.faqAnswer}>
                   Yes. Conditions like diabetes, hypertension, thyroid
@@ -627,7 +629,7 @@ function GeneralMedicine() {
 
               <div style={styles.faqItem}>
                 <div style={styles.faqQuestion}>
-                  3. Do I need an appointment beforehand?
+                  Q. Do I need an appointment beforehand?
                 </div>
                 <div style={styles.faqAnswer}>
                   Walk-ins are accepted, but a prior appointment helps reduce
@@ -637,7 +639,7 @@ function GeneralMedicine() {
 
               <div style={styles.faqItem}>
                 <div style={styles.faqQuestion}>
-                  4. Are routine blood tests available in the hospital?
+                  Q. Are routine blood tests available in the hospital?
                 </div>
                 <div style={styles.faqAnswer}>
                   Yes, all major blood investigations and screening tests are
@@ -647,7 +649,7 @@ function GeneralMedicine() {
 
               <div style={styles.faqItem}>
                 <div style={styles.faqQuestion}>
-                  5. Will the doctor guide me on lifestyle and diet changes?
+                  Q. Will the doctor guide me on lifestyle and diet changes?
                 </div>
                 <div style={styles.faqAnswer}>
                   Absolutely. Our physicians provide complete lifestyle,

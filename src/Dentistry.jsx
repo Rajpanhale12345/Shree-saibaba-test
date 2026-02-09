@@ -242,6 +242,31 @@ const styles = {
     color: "#1e293b",
   },
 
+  // FAQs
+  faqList: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+    gap: '12px',
+  },
+  faqItem: {
+    borderRadius: '14px',
+    padding: '14px 14px 12px',
+    background: '#ffffffff',
+    color: '#000000ff',
+    boxShadow: '0 16px 30px rgba(15,23,42,0.4)',
+    borderLeft: '4px solid #38bdf8',
+  },
+  faqQuestion: {
+    fontSize: '14px',
+    fontWeight: 600,
+    marginBottom: '6px',
+  },
+  faqAnswer: {
+    fontSize: '13px',
+    lineHeight: 1.6,
+    color: '#000000ff',
+    textAlign: 'left',
+  },
 };
 
 function Dentistry() {
@@ -615,6 +640,81 @@ function Dentistry() {
               </ul>
             </div>
           </section>
+
+          {/* FAQs */}
+          <section style={styles.section}>
+            <div style={styles.sectionHeaderRow}>
+              <div style={styles.sectionTitle}>
+                <span style={styles.sectionAccentBar} />
+                FAQs
+              </div>
+            </div>
+
+            <div style={styles.faqList}>
+              <div style={styles.faqItem}>
+                <div style={styles.faqQuestion}>
+                  Q: How often should I visit a dentist?
+                </div>
+                <div style={styles.faqAnswer}>
+                  Most people benefit from a dental check-up and professional cleaning every 6 months. Your dentist may
+                  suggest more frequent visits if you have gum disease, frequent cavities, braces, or sensitivity.
+                </div>
+              </div>
+
+              <div style={styles.faqItem}>
+                <div style={styles.faqQuestion}>
+                  Q: When do I need a root canal treatment (RCT)?
+                </div>
+                <div style={styles.faqAnswer}>
+                  RCT may be needed when a tooth has deep decay or infection causing severe pain, prolonged sensitivity to
+                  hot/cold, swelling, pus discharge, or pain while biting. A dental examination and X-ray help confirm it.
+                </div>
+              </div>
+
+              <div style={styles.faqItem}>
+                <div style={styles.faqQuestion}>
+                  Q: Is professional teeth cleaning (scaling) safe?
+                </div>
+                <div style={styles.faqAnswer}>
+                  Yes. Professional cleaning safely removes plaque and tartar, helps reduce gum bleeding and bad breath,
+                  and lowers the risk of cavities and gum disease. We follow strict sterilization and hygiene protocols.
+                </div>
+              </div>
+
+              <div style={styles.faqItem}>
+                <div style={styles.faqQuestion}>
+                  Q: Do you provide dental care for children?
+                </div>
+                <div style={styles.faqAnswer}>
+                  Yes. We provide child-friendly dental check-ups, cavity prevention guidance, fillings when needed, and
+                  support for healthy brushing/flossing habits from early childhood.
+                </div>
+              </div>
+
+              <div style={styles.faqItem}>
+                <div style={styles.faqQuestion}>
+                  Q: What should I do if I have a toothache or swelling?
+                </div>
+                <div style={styles.faqAnswer}>
+                  Get evaluated early—especially if there is swelling, fever, or severe pain. Avoid placing aspirin on
+                  the tooth/gums. You may rinse gently with warm salt water and take pain relief only as advised, but
+                  definitive treatment requires a dental check-up.
+                </div>
+              </div>
+
+              <div style={styles.faqItem}>
+                <div style={styles.faqQuestion}>
+                  Q: How do crowns, bridges, and dentures help?
+                </div>
+                <div style={styles.faqAnswer}>
+                  Crowns protect weak or root-canal-treated teeth, bridges replace missing teeth by supporting adjacent
+                  teeth, and dentures replace multiple missing teeth. Your dentist will recommend the best option based
+                  on bite, gum health, and comfort.
+                </div>
+              </div>
+            </div>
+          </section>
+
         </div>
       </div>
     </>

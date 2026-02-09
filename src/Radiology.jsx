@@ -189,31 +189,35 @@ const styles = {
     border: "1px solid rgba(191,219,254,1)",
     marginBottom: "6px",
   },
-  // FAQ styles (were referenced but missing)
+
+  // FAQs
   faqList: {
-    display: "grid",
-    gap: "12px",
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+    gap: '12px',
   },
   faqItem: {
-    borderRadius: "14px",
-    padding: "14px 14px 12px",
-    background: "rgba(255,255,255,0.95)",
-    border: "1px solid rgba(226,232,240,1)",
-    boxShadow: "0 10px 24px rgba(15,23,42,0.05)",
-    textAlign: "left",
+    borderRadius: '14px',
+    padding: '14px 14px 12px',
+    background: '#ffffffff',
+    color: '#000000ff',
+    boxShadow: '0 16px 30px rgba(15,23,42,0.4)',
+    borderLeft: '4px solid #38bdf8',
   },
   faqQuestion: {
-    fontWeight: 800,
-    color: "#0f172a",
-    marginBottom: "6px",
-    fontSize: "14px",
+    fontSize: '14px',
+    fontWeight: 600,
+    marginBottom: '6px',
   },
   faqAnswer: {
-    color: "#334155",
-    fontSize: "14px",
-    lineHeight: 1.7,
+    fontSize: '13px',
+    lineHeight: 1.6,
+    color: '#000000ff',
+    textAlign: 'left',
   },
 };
+
+
 const radiologyContent = {
   servicesOffered: [
     {
@@ -289,26 +293,6 @@ const radiologyContent = {
   {
     q: "Is MRI safe for everyone?",
     a: "MRI does not use radiation, but it may not be suitable for patients with pacemakers, metal implants, or certain medical devices. Always inform the staff about any implants before your scan.",
-  },
-  {
-    q: "How should I prepare for my scan?",
-    a: "Preparation depends on the test. Some scans may require fasting, drinking water, or avoiding metal objects. You will receive detailed instructions when your appointment is scheduled.",
-  },
-  {
-    q: "How long does an imaging procedure take?",
-    a: "Approximate times are: X-ray (10-15 minutes), Ultrasound (20-45 minutes), CT scan (15-30 minutes), MRI (30-60 minutes). Duration may vary depending on the study.",
-  },
-  {
-    q: "Will I need contrast dye during my scan?",
-    a: "Some CT and MRI scans require contrast to improve image clarity. The contrast is generally safe, but inform the doctor if you have allergies, kidney problems, or previous reactions.",
-  },
-  {
-    q: "How soon will I receive my radiology report?",
-    a: "Most reports are available within 1-2 hours. Complex or specialised studies may take up to 24 hours. Your doctor will discuss the results with you.",
-  },
-  {
-    q: "Can pregnant women undergo radiology tests?",
-    a: "Ultrasound and MRI (in most cases) are considered safe. X-rays and CT scans are avoided during pregnancy unless absolutely necessary. Always inform the staff if you are pregnant or may be pregnant.",
   },
 ]
 };
@@ -586,7 +570,7 @@ function Radiology() {
             <div style={styles.faqList}>
               {c.faqs.map((f, idx) => (
                 <div key={`${idx}-${f.q}`} style={styles.faqItem}>
-                  <div style={styles.faqQuestion}>{`Q${idx + 1}: ${f.q}`}</div>
+                  <div style={styles.faqQuestion}>{`Q: ${f.q}`}</div>
                   <div style={styles.faqAnswer}>{f.a}</div>
                 </div>
               ))}

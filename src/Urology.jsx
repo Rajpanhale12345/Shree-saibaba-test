@@ -189,29 +189,32 @@ const styles = {
     border: "1px solid rgba(191,219,254,1)",
     marginBottom: "6px",
   },
-    // FAQ styles (were referenced but missing)
+
+
+  // FAQs
   faqList: {
-    display: "grid",
-    gap: "12px",
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+    gap: '12px',
   },
   faqItem: {
-    borderRadius: "14px",
-    padding: "14px 14px 12px",
-    background: "rgba(255,255,255,0.95)",
-    border: "1px solid rgba(226,232,240,1)",
-    boxShadow: "0 10px 24px rgba(15,23,42,0.05)",
-    textAlign: "left",
+    borderRadius: '14px',
+    padding: '14px 14px 12px',
+    background: '#ffffffff',
+    color: '#000000ff',
+    boxShadow: '0 16px 30px rgba(15,23,42,0.4)',
+    borderLeft: '4px solid #38bdf8',
   },
   faqQuestion: {
-    fontWeight: 800,
-    color: "#0f172a",
-    marginBottom: "6px",
-    fontSize: "14px",
+    fontSize: '14px',
+    fontWeight: 600,
+    marginBottom: '6px',
   },
   faqAnswer: {
-    color: "#334155",
-    fontSize: "14px",
-    lineHeight: 1.7,
+    fontSize: '13px',
+    lineHeight: 1.6,
+    color: '#000000ff',
+    textAlign: 'left',
   },
 };
 
@@ -441,7 +444,7 @@ function Urology() {
             <div style={styles.faqList}>
               <div style={styles.faqItem}>
                 <div style={styles.faqQuestion}>
-                  Q1: What is a kidney stone removal surgery?
+                  Q: What is a kidney stone removal surgery?
                 </div>
                 <div style={styles.faqAnswer}>
                   Kidney stone removal surgery involves removing a stone from the kidney or
@@ -453,7 +456,7 @@ function Urology() {
 
               <div style={styles.faqItem}>
                 <div style={styles.faqQuestion}>
-                  Q2: What are the symptoms of prostate issues?
+                  Q: What are the symptoms of prostate issues?
                 </div>
                 <div style={styles.faqAnswer}>
                   Common symptoms include difficulty urinating, frequent urination (especially
@@ -464,7 +467,7 @@ function Urology() {
 
               <div style={styles.faqItem}>
                 <div style={styles.faqQuestion}>
-                  Q3: What causes kidney stones?
+                  Q: What causes kidney stones?
                 </div>
                 <div style={styles.faqAnswer}>
                   Dehydration, high salt or protein intake, certain dietary factors,
@@ -475,7 +478,7 @@ function Urology() {
 
               <div style={styles.faqItem}>
                 <div style={styles.faqQuestion}>
-                  Q4: How are kidney stones treated?
+                  Q: How are kidney stones treated?
                 </div>
                 <div style={styles.faqAnswer}>
                   Treatment depends on the size, location and symptoms, and may include:
@@ -489,7 +492,7 @@ function Urology() {
 
               <div style={styles.faqItem}>
                 <div style={styles.faqQuestion}>
-                  Q5: What are the symptoms of bladder issues?
+                  Q: What are the symptoms of bladder issues?
                 </div>
                 <div style={styles.faqAnswer}>
                   Symptoms may include pain or burning during urination, blood in the urine,

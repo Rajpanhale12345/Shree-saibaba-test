@@ -242,7 +242,34 @@ const styles = {
     color: "#1e293b",
   },
 
+  // FAQs
+  faqList: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+    gap: '12px',
+  },
+  faqItem: {
+    borderRadius: '14px',
+    padding: '14px 14px 12px',
+    background: '#ffffffff',
+    color: '#000000ff',
+    boxShadow: '0 16px 30px rgba(15,23,42,0.4)',
+    borderLeft: '4px solid #38bdf8',
+  },
+  faqQuestion: {
+    fontSize: '14px',
+    fontWeight: 600,
+    marginBottom: '6px',
+  },
+  faqAnswer: {
+    fontSize: '13px',
+    lineHeight: 1.6,
+    color: '#000000ff',
+    textAlign: 'left',
+  },
 };
+
+
 
 
 function Neurosurgery() {
@@ -252,6 +279,96 @@ function Neurosurgery() {
         <title>Neuro & Spine Surgery | Shree Saibaba Multispeciality Hospital</title>
         <meta name="description" content="Shree Saibaba Multispeciality Hospital, Nashik offers advanced neurosurgery and spine surgery including brain tumor surgery, minimally invasive spine surgery, neurotrauma and neurocritical care." />
         <meta name="keywords" content="neurosurgery Nashik, spine surgery Nashik, brain tumor surgery Nashik, best neurosurgeon in Nashik, spine specialist Maharashtra" />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What conditions are treated in the Neuro & Spine Surgery Department at Shree Saibaba Multispeciality Hospital, Nashik?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "We treat brain, spine and nerve disorders including brain tumors, head injury and brain hemorrhage, slipped/herniated disc, sciatica, spinal cord compression, spinal tumors, scoliosis/kyphosis, aneurysms and other cerebrovascular conditions, and congenital neurological/spinal disorders."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do you offer minimally invasive spine surgery in Nashik?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Whenever suitable, we use minimally invasive spine surgery techniques for conditions such as slipped disc, sciatica and nerve compression to reduce pain, blood loss and recovery time."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What neurosurgical procedures are available here?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Our neurosurgical services include brain tumor surgery, cerebrovascular procedures (such as aneurysm clipping/coiling and vascular neurosurgery), neuroendoscopic procedures, neurotrauma surgery, pediatric neurosurgery and surgery for spinal/intradural tumors."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do you provide neurocritical care after surgery or for emergencies?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. We provide specialized neurocritical care with advanced monitoring, ventilatory support and post-operative/emergency neurological ICU care for trauma and complex neurosurgical cases."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Which imaging and facilities support neurosurgery and spine surgery?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "We support treatment with MRI and CT imaging, high-tech modular operating theatres, neuro-navigation, intraoperative imaging and neuromonitoring for improved surgical accuracy and safety."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "When should I consult a neurosurgeon or spine surgeon?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "You should consult urgently for severe headache with vomiting, sudden weakness/numbness, seizures, loss of consciousness, head injury, loss of bladder/bowel control, or rapidly worsening back/neck pain with radiating pain, weakness or numbness. For chronic symptoms like persistent back/neck pain, sciatica or tingling/numbness, evaluation helps decide whether medicines, physiotherapy or surgery is needed."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are the OPD timings for Neuro & Spine Surgery?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "OPD timings are Monday to Saturday, 3:00 PM to 5:00 PM. Emergency services are available 24×7."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Which doctors are available in the Neurosurgery and Spine Surgery team?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Neurosurgeons: Dr. Sumit Hire and Dr. Anil Jadhav. Spine Surgeons: Dr. Gaurav Kulshrestha and Dr. Gaurav Gujrathi."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What should I bring for my neurosurgery/spine consultation?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Please bring previous reports (MRI/CT/X-rays), a list of current medications, details of allergies, and any past surgery or medical history. Arrive at least 10 minutes before your appointment."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do you decide whether surgery is necessary?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Our specialists evaluate symptoms, examination findings and imaging. Many conditions improve with medicines/physiotherapy, while surgery may be advised when there is significant nerve/spinal cord compression, instability, tumors, bleeding, or when conservative care fails."
+                }
+              }
+            ]
+          })}
+        </script>
+
       </Helmet>
 
       <div style={styles.page}>
@@ -572,16 +689,94 @@ function Neurosurgery() {
                 <li style={styles.tagListItem}>
                   <strong>OPD Timings</strong>
                   <br />
-                  Monday to Saturday, 3:00 PM – 5:00 PM
+                  Monday to Saturday, 3:00 PM - 5:00 PM
                 </li>
                 <li style={styles.tagListItem}>
                   <strong>Emergency Services</strong>
                   <br />
-                  Available 24 × 7
+                  Available 24 x 7
                 </li>
               </ul>
             </div>
           </section>
+
+          {/* FAQs */}
+          {/* FAQs */}
+          <section style={styles.section}>
+            <div style={styles.sectionHeaderRow}>
+              <div style={styles.sectionTitle}>
+                <span style={styles.sectionAccentBar} />
+                FAQs
+              </div>
+            </div>
+
+            <div style={styles.faqList}>
+              <div style={styles.faqItem}>
+                <div style={styles.faqQuestion}>
+                  Q: What conditions are treated in the Neuro &amp; Spine Surgery Department?
+                </div>
+                <div style={styles.faqAnswer}>
+                  We treat brain, spine and nerve disorders including brain tumors, head injuries and brain
+                  hemorrhage, slipped/herniated disc, sciatica, spinal cord compression, spinal tumors,
+                  scoliosis/kyphosis, and congenital neurological/spinal conditions.
+                </div>
+              </div>
+
+              <div style={styles.faqItem}>
+                <div style={styles.faqQuestion}>
+                  Q: When should I consult a neurosurgeon or spine surgeon?
+                </div>
+                <div style={styles.faqAnswer}>
+                  Consult urgently for severe headache with vomiting, seizures, sudden weakness/numbness,
+                  loss of consciousness, head injury, loss of bladder/bowel control, or rapidly worsening
+                  back/neck pain with radiating pain, numbness or weakness. For persistent back/neck pain
+                  or sciatica, evaluation helps plan the right treatment.
+                </div>
+              </div>
+
+              <div style={styles.faqItem}>
+                <div style={styles.faqQuestion}>
+                  Q: Do you offer minimally invasive spine surgery?
+                </div>
+                <div style={styles.faqAnswer}>
+                  Yes. Whenever suitable, we use minimally invasive techniques for slipped disc, sciatica
+                  and nerve compression to reduce pain, blood loss and recovery time.
+                </div>
+              </div>
+
+              <div style={styles.faqItem}>
+                <div style={styles.faqQuestion}>
+                  Q: What neurosurgical procedures are available at your hospital?
+                </div>
+                <div style={styles.faqAnswer}>
+                  Services include brain tumor surgery, neurotrauma care, neuroendoscopic procedures,
+                  cerebrovascular procedures (such as aneurysm clipping/coiling), and surgery for spinal
+                  and intradural tumors based on specialist evaluation.
+                </div>
+              </div>
+
+              <div style={styles.faqItem}>
+                <div style={styles.faqQuestion}>
+                  Q: Do you provide neurocritical care after surgery or for emergencies?
+                </div>
+                <div style={styles.faqAnswer}>
+                  Yes. We provide specialized neurocritical care with advanced monitoring and ventilatory
+                  support for post-operative, trauma and emergency neurological cases.
+                </div>
+              </div>
+
+              <div style={styles.faqItem}>
+                <div style={styles.faqQuestion}>
+                  Q: What are the OPD timings and emergency availability?
+                </div>
+                <div style={styles.faqAnswer}>
+                  OPD timings are Monday to Saturday, 3:00 PM - 5:00 PM. Emergency services are available 24x7.
+                </div>
+              </div>
+            </div>
+          </section>
+
+
         </div>
       </div>
     </>

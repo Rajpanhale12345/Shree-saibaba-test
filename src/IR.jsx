@@ -189,31 +189,35 @@ const styles = {
     border: "1px solid rgba(191,219,254,1)",
     marginBottom: "6px",
   },
-  // FAQ styles (were referenced but missing)
+
+  // FAQs
   faqList: {
-    display: "grid",
-    gap: "12px",
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+    gap: '12px',
   },
   faqItem: {
-    borderRadius: "14px",
-    padding: "14px 14px 12px",
-    background: "rgba(255,255,255,0.95)",
-    border: "1px solid rgba(226,232,240,1)",
-    boxShadow: "0 10px 24px rgba(15,23,42,0.05)",
-    textAlign: "left",
+    borderRadius: '14px',
+    padding: '14px 14px 12px',
+    background: '#ffffffff',
+    color: '#000000ff',
+    boxShadow: '0 16px 30px rgba(15,23,42,0.4)',
+    borderLeft: '4px solid #38bdf8',
   },
   faqQuestion: {
-    fontWeight: 800,
-    color: "#0f172a",
-    marginBottom: "6px",
-    fontSize: "14px",
+    fontSize: '14px',
+    fontWeight: 600,
+    marginBottom: '6px',
   },
   faqAnswer: {
-    color: "#334155",
-    fontSize: "14px",
-    lineHeight: 1.7,
+    fontSize: '13px',
+    lineHeight: 1.6,
+    color: '#000000ff',
+    textAlign: 'left',
   },
 };
+
+
 const radiologyContent = {
   servicesOffered: [
     {
@@ -277,32 +281,12 @@ const radiologyContent = {
     a: "IR can help manage vascular and non-vascular conditions such as blocked or narrowed blood vessels, bleeding control, varicose veins, dialysis access issues, certain tumors (through image-guided therapies), abscess or fluid drainage, and targeted biopsies.",
   },
   {
-    q: "What are common Interventional Radiology procedures?",
-    a: "Common IR procedures include angiography, angioplasty and stenting, embolization, image-guided biopsy, drainage of abscess/fluid collections, central venous access, dialysis fistula/graft interventions, and minimally invasive treatments for select tumors.",
-  },
-  {
-    q: "Are IR procedures painful?",
-    a: "Most IR procedures cause minimal discomfort. Local anesthesia is commonly used, and some procedures may require sedation. Your care team ensures comfort and monitors you throughout.",
-  },
-  {
-    q: "How is an IR procedure performed?",
-    a: "The doctor uses real-time imaging to guide a thin catheter, wire, or needle to the target area through a tiny skin puncture. This improves accuracy while reducing trauma to surrounding tissues.",
-  },
-  {
     q: "Is Interventional Radiology safer than surgery?",
     a: "IR is often associated with lower risk compared to open surgery because it uses small punctures instead of large incisions. However, every procedure has risks, and your doctor will explain benefits and potential complications based on your case.",
   },
   {
     q: "How should I prepare for an IR procedure?",
     a: "Preparation depends on the procedure. You may be asked to fast for a few hours, stop certain medicines (like blood thinners) temporarily, and complete blood tests. Always share your medical history, allergies, kidney issues, and current medicines.",
-  },
-  {
-    q: "Will I need admission or can I go home the same day?",
-    a: "Many IR procedures are day-care (same-day discharge). Some may require short observation or hospital stay depending on the procedure and your health condition.",
-  },
-  {
-    q: "What are the possible risks or side effects?",
-    a: "Risks vary by procedure but may include minor bruising at the puncture site, infection, bleeding, contrast allergy (for some angiography/CT-guided procedures), or injury to nearby structures. Serious complications are uncommon and are actively monitored for.",
   },
   {
     q: "When will I resume normal activities after IR treatment?",
@@ -590,7 +574,7 @@ function Interventional_Radiology() {
             <div style={styles.faqList}>
               {c.faqs.map((f, idx) => (
                 <div key={`${idx}-${f.q}`} style={styles.faqItem}>
-                  <div style={styles.faqQuestion}>{`Q${idx + 1}: ${f.q}`}</div>
+                  <div style={styles.faqQuestion}>{`Q: ${f.q}`}</div>
                   <div style={styles.faqAnswer}>{f.a}</div>
                 </div>
               ))}

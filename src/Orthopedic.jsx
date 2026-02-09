@@ -4,181 +4,219 @@ import { Helmet } from "react-helmet-async";
 
 const styles = {
   page: {
-    background: 'linear-gradient(135deg, #f4f7fb, #e5edf9)',
-    padding: '40px 16px',
+    background: "linear-gradient(135deg, #f4f7fb, #e5edf9)",
+    padding: "40px 16px",
   },
   container: {
-    maxWidth: '1200px',
-    margin: '0 auto',
-    fontFamily: '"Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif',
-    color: '#0f172a',
+    maxWidth: "1200px",
+    margin: "0 auto",
+    fontFamily:
+      '"Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif',
+    color: "#0f172a",
   },
+
+  // ✅ HERO: grid on desktop, stacks on mobile via CSS class + media query below
   hero: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    gap: '24px',
-    alignItems: 'stretch',
-    marginBottom: '32px',
+    display: "grid",
+    gridTemplateColumns: "minmax(280px, 420px) 1fr",
+    gap: "24px",
+    alignItems: "start",
+    marginBottom: "32px",
   },
+
   heroImageWrapper: {
-    flex: '1 1 320px',
-    minWidth: '280px',
+    minWidth: "280px",
   },
   heroImageCard: {
-    height: '100%',
-    borderRadius: '20px',
-    overflow: 'hidden',
-    boxShadow: '0 18px 45px rgba(15,23,42,0.16)',
-    border: '1px solid rgba(148,163,184,0.4)',
-    background: '#0f172a',
+    width: "100%",
+    borderRadius: "20px",
+    overflow: "hidden",
+    boxShadow: "0 18px 45px rgba(15,23,42,0.16)",
+    border: "1px solid rgba(148,163,184,0.4)",
+    background: "#0f172a",
+
+    // ✅ responsive height for the image card
+    height: "clamp(220px, 32vw, 420px)",
   },
   heroImage: {
-    width: '100%',
-    height: '100%',
-    objectFit: 'fill',
-    display: 'block',
+    width: "100%",
+    height: "100%",
+    objectFit: "cover", // ✅ prevents stretching
+    objectPosition: "center",
+    display: "block",
     opacity: 0.95,
   },
+
   heroTextWrapper: {
-    flex: '2 1 420px',
-    minWidth: '280px',
+    minWidth: "280px",
   },
   heroTextCard: {
-    height: '100%',
-    borderRadius: '20px',
-    padding: '28px 28px 24px',
-    background: 'rgba(255,255,255,0.92)',
-    backdropFilter: 'blur(10px)',
-    boxShadow: '0 18px 45px rgba(15,23,42,0.08)',
-    border: '1px solid rgba(148,163,184,0.4)',
+    borderRadius: "20px",
+    padding: "28px 28px 24px",
+    background: "rgba(255,255,255,0.92)",
+    backdropFilter: "blur(10px)",
+    boxShadow: "0 18px 45px rgba(15,23,42,0.08)",
+    border: "1px solid rgba(148,163,184,0.4)",
   },
+
   pill: {
-    display: 'inline-flex',
-    alignItems: 'center',
-    gap: '8px',
-    padding: '4px 12px',
-    borderRadius: '999px',
-    fontSize: '12px',
+    display: "inline-flex",
+    alignItems: "center",
+    gap: "8px",
+    padding: "4px 12px",
+    borderRadius: "999px",
+    fontSize: "12px",
     fontWeight: 600,
-    letterSpacing: '0.06em',
-    textTransform: 'uppercase',
-    background: 'rgba(37,99,235,0.08)',
-    color: '#1d4ed8',
-    marginBottom: '10px',
+    letterSpacing: "0.06em",
+    textTransform: "uppercase",
+    background: "rgba(37,99,235,0.08)",
+    color: "#1d4ed8",
+    marginBottom: "10px",
   },
   pillDot: {
-    width: '8px',
-    height: '8px',
-    borderRadius: '50%',
-    background: '#22c55e',
+    width: "8px",
+    height: "8px",
+    borderRadius: "50%",
+    background: "#22c55e",
   },
-  heroTitle: {
-    fontSize: '30px',
-    fontWeight: 700,
-    margin: '4px 0 4px',
-    color: '#0f172a',
-  },
+
   heroSubtitle: {
-    fontSize: '16px',
+    fontSize: "16px",
     fontWeight: 500,
-    color: '#64748b',
-    marginBottom: '6px',
+    color: "#64748b",
+    marginBottom: "18px",
   },
-  heroTagline: {
-    fontSize: '14px',
-    fontWeight: 500,
-    color: '#0f766e',
-    marginBottom: '14px',
-  },
+
   heroParagraph: {
-    fontSize: '14px',
+    fontSize: "14px",
     lineHeight: 1.7,
-    color: '#1e293b',
-    marginBottom: '10px',
-    textAlign: 'left',
+    color: "#1e293b",
+    marginBottom: "10px",
+    textAlign: "left",
   },
+  heroParagraph1: {
+    fontSize: "24px",
+    lineHeight: 1.7,
+    color: "#1e293b",
+    marginBottom: "10px",
+    textAlign: "left",
+  },
+  heroParagraph2: {
+    fontSize: "40px",
+    lineHeight: 1.2,
+    color: "#1e293b",
+    marginBottom: "10px",
+    textAlign: "center",
+  },
+
   highlightStrip: {
-    marginTop: '16px',
-    padding: '10px 14px',
-    borderRadius: '12px',
-    background: 'linear-gradient(90deg, rgba(37,99,235,0.08), rgba(56,189,248,0.10))',
-    fontSize: '13px',
-    color: '#0f172a',
-    border: '1px solid rgba(129,140,248,0.4)',
+    marginTop: "16px",
+    padding: "10px 14px",
+    borderRadius: "12px",
+    background:
+      "linear-gradient(90deg, rgba(37,99,235,0.08), rgba(56,189,248,0.10))",
+    fontSize: "13px",
+    color: "#0f172a",
+    border: "1px solid rgba(129,140,248,0.4)",
   },
   highlightLabel: {
     fontWeight: 600,
-    marginRight: '6px',
+    marginRight: "6px",
   },
 
   // Section styles
   section: {
-    borderRadius: '18px',
-    padding: '22px 22px 20px',
-    marginBottom: '20px',
-    background: 'rgba(255,255,255,0.96)',
-    backdropFilter: 'blur(8px)',
-    boxShadow: '0 14px 35px rgba(15,23,42,0.06)',
-    border: '1px solid rgba(203,213,225,0.8)',
+    borderRadius: "18px",
+    padding: "22px 22px 20px",
+    marginBottom: "20px",
+    background: "rgba(255,255,255,0.96)",
+    backdropFilter: "blur(8px)",
+    boxShadow: "0 14px 35px rgba(15,23,42,0.06)",
+    border: "1px solid rgba(203,213,225,0.8)",
   },
   sectionHeaderRow: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'baseline',
-    gap: '10px',
-    marginBottom: '12px',
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "baseline",
+    gap: "10px",
+    marginBottom: "12px",
   },
   sectionTitle: {
-    fontSize: '18px',
+    fontSize: "18px",
     fontWeight: 700,
-    color: '#0f172a',
-    display: 'flex',
-    alignItems: 'center',
-    gap: '8px',
+    color: "#0f172a",
+    display: "flex",
+    alignItems: "center",
+    gap: "8px",
   },
   sectionAccentBar: {
-    width: '3px',
-    height: '18px',
-    borderRadius: '999px',
-    background: 'linear-gradient(180deg, #2563eb, #22c55e)',
+    width: "3px",
+    height: "18px",
+    borderRadius: "999px",
+    background: "linear-gradient(180deg, #2563eb, #22c55e)",
   },
+
   list: {
-    paddingLeft: '18px',
+    paddingLeft: "18px",
     margin: 0,
-    textAlign: "left"
+    textAlign: "left",
   },
   listItem: {
-    fontSize: '14px',
+    fontSize: "14px",
     lineHeight: 1.7,
-    color: '#1e293b',
-    marginBottom: '6px',
+    color: "#1e293b",
+    marginBottom: "6px",
   },
 
-  // Grid / layout helpers
   twoColumnGrid: {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
-    gap: '12px 32px',
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+    gap: "12px 32px",
   },
 
-  // Doctors / tags
   doctorList: {
-    listStyle: 'none',
+    listStyle: "none",
     paddingLeft: 0,
     margin: 0,
   },
+
   tagListItem: {
-    fontSize: '14px',
+    fontSize: "14px",
     lineHeight: 1.7,
-    color: '#0f172a',
-    padding: '6px 10px',
-    borderRadius: '10px',
-    background: 'rgba(239,246,255,0.9)',
-    border: '1px solid rgba(191,219,254,1)',
-    marginBottom: '6px',
+    color: "#0f172a",
+    padding: "6px 10px",
+    borderRadius: "10px",
+    background: "rgba(239,246,255,0.9)",
+    border: "1px solid rgba(191,219,254,1)",
+    marginBottom: "6px",
   },
 
-  // FAQs can reuse existing styles from other pages if needed later
+
+  // FAQs
+  faqList: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+    gap: '12px',
+  },
+  faqItem: {
+    borderRadius: '14px',
+    padding: '14px 14px 12px',
+    background: '#ffffffff',
+    color: '#000000ff',
+    boxShadow: '0 16px 30px rgba(15,23,42,0.4)',
+    borderLeft: '4px solid #38bdf8',
+  },
+  faqQuestion: {
+    fontSize: '14px',
+    fontWeight: 600,
+    marginBottom: '6px',
+  },
+  faqAnswer: {
+    fontSize: '13px',
+    lineHeight: 1.6,
+    color: '#000000ff',
+    textAlign: 'left',
+  },
 };
 
 function Orthopedic() {
@@ -220,7 +258,7 @@ function Orthopedic() {
                   <span style={styles.pillDot} />
                   <span>Advanced Orthopedic Care</span>
                 </div>
-                <h1 style={styles.heroTitle}>Orthopedic Department</h1>
+                <h1 style={styles.heroParagraph2}>Orthopedic Department</h1>
                 <div style={styles.heroSubtitle}>Nashik, Maharashtra</div>
                 <div style={styles.heroTagline}>
                   Comprehensive care for bones, joints and muscles to restore mobility and quality of life.
@@ -251,15 +289,15 @@ function Orthopedic() {
                   techniques available.
                 </p>
                 <p style={styles.heroParagraph}>
-                  Our orthopedic surgeons not only provide the most advanced orthopedic surgeries for adults, 
-                  but they also provide excellent pediatric orthopedic surgery. Our pediatric orthopedic surgeon 
-                  has years of experience providing pediatric orthopedic care to patients suffering from growth 
-                  disorders and/or deformities due to injury or abnormal development. We aim to improve our 
-                  patients' quality of life by using new technology, evidence based practices and patient 
+                  Our orthopedic surgeons not only provide the most advanced orthopedic surgeries for adults,
+                  but they also provide excellent pediatric orthopedic surgery. Our pediatric orthopedic surgeon
+                  has years of experience providing pediatric orthopedic care to patients suffering from growth
+                  disorders and/or deformities due to injury or abnormal development. We aim to improve our
+                  patients' quality of life by using new technology, evidence based practices and patient
                   centered care to improve mobility, reduce pain and provide the best possible outcome.
                 </p>
                 <p style={styles.heroParagraph}>
-                  Shree Saibaba Multispeciality Hospital has been recognised as one of the leading 
+                  Shree Saibaba Multispeciality Hospital has been recognised as one of the leading
                   organisations in the field of Orthopedics in the Nashik Region of India.
                 </p>
 
@@ -388,7 +426,7 @@ function Orthopedic() {
                   <br />
                   OPD: On Call
                 </li>
-                
+
               </ul>
               <ul style={styles.doctorList}>
                 <li style={styles.tagListItem}>
@@ -400,7 +438,7 @@ function Orthopedic() {
                   <strong>Dr. Swapnil Mahale</strong>
                   <br />
                   OPD: On Call
-                </li>                
+                </li>
                 <li style={styles.tagListItem}>
                   <strong>Emergency Services:</strong> 24 x 7
                 </li>
@@ -445,6 +483,85 @@ function Orthopedic() {
               </li>
             </ul>
           </section>
+
+          {/* FAQs */}
+          <section style={styles.section}>
+            <div style={styles.sectionHeaderRow}>
+              <div style={styles.sectionTitle}>
+                <span style={styles.sectionAccentBar} />
+                FAQs
+              </div>
+            </div>
+
+            <div style={styles.faqList}>
+              <div style={styles.faqItem}>
+                <div style={styles.faqQuestion}>
+                  Q: When should I consult an orthopedic doctor?
+                </div>
+                <div style={styles.faqAnswer}>
+                  Consult an orthopedic doctor for persistent joint or bone pain, swelling, stiffness, difficulty walking,
+                  reduced range of motion, sports injuries, or after a fall/accident with suspected fracture or dislocation.
+                </div>
+              </div>
+
+              <div style={styles.faqItem}>
+                <div style={styles.faqQuestion}>
+                  Q: What conditions are treated in the Orthopedic Department?
+                </div>
+                <div style={styles.faqAnswer}>
+                  We manage fractures and trauma, arthritis and joint pain, ligament/tendon injuries, sports injuries,
+                  back/neck pain due to spine problems, joint degeneration, and pediatric orthopedic issues including
+                  growth-related deformities (as advised by the specialist).
+                </div>
+              </div>
+
+              <div style={styles.faqItem}>
+                <div style={styles.faqQuestion}>
+                  Q: When is joint replacement surgery advised?
+                </div>
+                <div style={styles.faqAnswer}>
+                  Joint replacement (knee/hip) may be advised when arthritis causes severe pain, deformity, or stiffness
+                  that limits daily activities and does not improve with medicines, physiotherapy, injections, or lifestyle changes.
+                  X-rays and clinical assessment help confirm the need.
+                </div>
+              </div>
+
+              <div style={styles.faqItem}>
+                <div style={styles.faqQuestion}>
+                  Q: What is arthroscopy and when is it done?
+                </div>
+                <div style={styles.faqAnswer}>
+                  Arthroscopy is a minimally invasive “keyhole” procedure used to diagnose and treat joint problems such as
+                  meniscus tears, ligament injuries (like ACL), cartilage damage, and some shoulder/ankle conditions.
+                  It often helps reduce recovery time compared to open surgery.
+                </div>
+              </div>
+
+              <div style={styles.faqItem}>
+                <div style={styles.faqQuestion}>
+                  Q: What should I do if I suspect a fracture after an injury?
+                </div>
+                <div style={styles.faqAnswer}>
+                  Immobilize the injured area, avoid putting weight on it, and seek medical attention promptly.
+                  Apply ice if possible and do not attempt to straighten a deformed limb. Early evaluation and X-ray
+                  help prevent complications and support proper healing.
+                </div>
+              </div>
+
+              <div style={styles.faqItem}>
+                <div style={styles.faqQuestion}>
+                  Q: What should I bring for my orthopedic consultation?
+                </div>
+                <div style={styles.faqAnswer}>
+                  Bring previous reports (X-ray/MRI/CT), discharge papers if any, a list of current medications,
+                  details of allergies, and relevant history like diabetes/BP or prior surgeries. Wear comfortable clothing
+                  that allows easy examination of the affected joint/limb.
+                </div>
+              </div>
+            </div>
+          </section>
+
+
         </div>
       </div>
     </>

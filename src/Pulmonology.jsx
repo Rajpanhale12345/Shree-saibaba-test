@@ -41,7 +41,7 @@ const styles = {
   heroImage: {
     width: "100%",
     height: "100%",
-    objectFit: "cover", 
+    objectFit: "cover",
     objectPosition: "center",
     display: "block",
     opacity: 0.95,
@@ -242,6 +242,33 @@ const styles = {
     color: "#1e293b",
   },
 
+
+
+  // FAQs
+  faqList: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+    gap: '12px',
+  },
+  faqItem: {
+    borderRadius: '14px',
+    padding: '14px 14px 12px',
+    background: '#ffffffff',
+    color: '#000000ff',
+    boxShadow: '0 16px 30px rgba(15,23,42,0.4)',
+    borderLeft: '4px solid #38bdf8',
+  },
+  faqQuestion: {
+    fontSize: '14px',
+    fontWeight: 600,
+    marginBottom: '6px',
+  },
+  faqAnswer: {
+    fontSize: '13px',
+    lineHeight: 1.6,
+    color: '#000000ff',
+    textAlign: 'left',
+  },
 };
 
 function Pulmonology() {
@@ -312,7 +339,7 @@ function Pulmonology() {
     ],
   };
 
-  
+
 
   return (
     <>
@@ -624,6 +651,82 @@ function Pulmonology() {
                   Available 24 x 7
                 </li>
               </ul>
+            </div>
+          </section>
+
+
+          {/* FAQs */}
+          <section style={styles.section}>
+            <div style={styles.sectionHeaderRow}>
+              <div style={styles.sectionTitle}>
+                <span style={styles.sectionAccentBar} />
+                FAQs
+              </div>
+            </div>
+
+            <div style={styles.faqList}>
+              <div style={styles.faqItem}>
+                <div style={styles.faqQuestion}>
+                  Q: When should I visit a chest specialist (pulmonologist)?
+                </div>
+                <div style={styles.faqAnswer}>
+                  Visit a chest specialist if you have a cough lasting more than 2–3 weeks, breathlessness,
+                  wheezing, chest tightness, repeated chest infections, coughing up blood, snoring with
+                  daytime sleepiness, or low oxygen levels.
+                </div>
+              </div>
+
+              <div style={styles.faqItem}>
+                <div style={styles.faqQuestion}>
+                  Q: What conditions are treated in the Pulmonology Department?
+                </div>
+                <div style={styles.faqAnswer}>
+                  We evaluate and manage asthma, COPD/chronic bronchitis, pneumonia and other chest infections,
+                  suspected tuberculosis (TB) support, allergy/occupational lung problems, persistent cough,
+                  breathlessness, and sleep-related breathing disorders such as sleep apnea.
+                </div>
+              </div>
+
+              <div style={styles.faqItem}>
+                <div style={styles.faqQuestion}>
+                  Q: What tests are commonly used to evaluate lung problems?
+                </div>
+                <div style={styles.faqAnswer}>
+                  Common tests include pulmonary function testing (PFT/spirometry), oxygen saturation monitoring,
+                  chest imaging (X-ray/CT as advised), lab tests for infection/inflammation, and sleep assessment
+                  when sleep apnea is suspected.
+                </div>
+              </div>
+
+              <div style={styles.faqItem}>
+                <div style={styles.faqQuestion}>
+                  Q: Can asthma and COPD be managed long-term?
+                </div>
+                <div style={styles.faqAnswer}>
+                  Yes. With the right inhaler plan, correct technique, trigger control, regular follow-ups,
+                  and rehabilitation support, many patients improve symptom control and reduce flare-ups.
+                </div>
+              </div>
+
+              <div style={styles.faqItem}>
+                <div style={styles.faqQuestion}>
+                  Q: Do you provide nebulization and oxygen therapy?
+                </div>
+                <div style={styles.faqAnswer}>
+                  Yes. We provide nebulization/inhalation therapy, personalized medication plans, and oxygen
+                  support when needed, along with guidance on home care and prevention.
+                </div>
+              </div>
+
+              <div style={styles.faqItem}>
+                <div style={styles.faqQuestion}>
+                  Q: Do you handle emergency breathing problems or ICU respiratory care?
+                </div>
+                <div style={styles.faqAnswer}>
+                  Yes. The hospital supports urgent respiratory care including monitoring and oxygen therapy,
+                  and ICU respiratory support for severe breathing difficulty when required.
+                </div>
+              </div>
             </div>
           </section>
 

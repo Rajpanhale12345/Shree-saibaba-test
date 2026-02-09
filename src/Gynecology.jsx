@@ -189,29 +189,31 @@ const styles = {
     border: "1px solid rgba(191,219,254,1)",
     marginBottom: "6px",
   },
-  // FAQ styles (were referenced but missing)
+
+  // FAQs
   faqList: {
-    display: "grid",
-    gap: "12px",
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+    gap: '12px',
   },
   faqItem: {
-    borderRadius: "14px",
-    padding: "14px 14px 12px",
-    background: "rgba(255,255,255,0.95)",
-    border: "1px solid rgba(226,232,240,1)",
-    boxShadow: "0 10px 24px rgba(15,23,42,0.05)",
-    textAlign: "left",
+    borderRadius: '14px',
+    padding: '14px 14px 12px',
+    background: '#ffffffff',
+    color: '#000000ff',
+    boxShadow: '0 16px 30px rgba(15,23,42,0.4)',
+    borderLeft: '4px solid #38bdf8',
   },
   faqQuestion: {
-    fontWeight: 800,
-    color: "#0f172a",
-    marginBottom: "6px",
-    fontSize: "14px",
+    fontSize: '14px',
+    fontWeight: 600,
+    marginBottom: '6px',
   },
   faqAnswer: {
-    color: "#334155",
-    fontSize: "14px",
-    lineHeight: 1.7,
+    fontSize: '13px',
+    lineHeight: 1.6,
+    color: '#000000ff',
+    textAlign: 'left',
   },
 };
 
@@ -527,7 +529,7 @@ function Gynecology() {
             <div style={styles.faqList}>
               <div style={styles.faqItem}>
                 <div style={styles.faqQuestion}>
-                  1. When should I visit a gynecologist?
+                  Q. When should I visit a gynecologist?
                 </div>
                 <div style={styles.faqAnswer}>
                   If you have irregular periods, pelvic pain, unusual discharge,
@@ -538,7 +540,7 @@ function Gynecology() {
 
               <div style={styles.faqItem}>
                 <div style={styles.faqQuestion}>
-                  2. What should I bring to my appointment?
+                  Q. What should I bring to my appointment?
                 </div>
                 <div style={styles.faqAnswer}>
                   Carry previous reports, ultrasound/scans, lab results,
@@ -548,7 +550,7 @@ function Gynecology() {
 
               <div style={styles.faqItem}>
                 <div style={styles.faqQuestion}>
-                  3. Do you provide screening tests?
+                  Q. Do you provide screening tests?
                 </div>
                 <div style={styles.faqAnswer}>
                   Yes, screening and diagnostic evaluation (like Pap smear or
@@ -559,7 +561,7 @@ function Gynecology() {
 
               <div style={styles.faqItem}>
                 <div style={styles.faqQuestion}>
-                  4. Can PCOS be managed?
+                  Q. Can PCOS be managed?
                 </div>
                 <div style={styles.faqAnswer}>
                   PCOS is commonly managed with individualized guidance including
@@ -570,7 +572,7 @@ function Gynecology() {
 
               <div style={styles.faqItem}>
                 <div style={styles.faqQuestion}>
-                  5. Is my visit confidential?
+                  Q. Is my visit confidential?
                 </div>
                 <div style={styles.faqAnswer}>
                   Yes. We follow strict privacy and confidentiality practices so

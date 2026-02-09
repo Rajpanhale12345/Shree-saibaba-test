@@ -21,22 +21,23 @@ const styles = {
     marginBottom: '32px',
   },
   heroImageWrapper: {
-    flex: '1 1 320px',
-    minWidth: '280px',
+    minWidth: "280px",
   },
   heroImageCard: {
-    height: '100%',
-    borderRadius: '20px',
-    overflow: 'hidden',
-    boxShadow: '0 18px 45px rgba(15,23,42,0.16)',
-    border: '1px solid rgba(148,163,184,0.4)',
-    background: '#0f172a',
+    width: "100%",
+    borderRadius: "20px",
+    overflow: "hidden",
+    boxShadow: "0 18px 45px rgba(15,23,42,0.16)",
+    border: "1px solid rgba(148,163,184,0.4)",
+    background: "#0f172a",
+    height: "clamp(220px, 32vw, 420px)",
   },
   heroImage: {
-    width: '100%',
-    height: '100%',
-    objectFit: 'fill',
-    display: 'block',
+    width: "100%",
+    height: "100%",
+    objectFit: "cover",
+    objectPosition: "center",
+    display: "block",
     opacity: 0.95,
   },
   heroTextWrapper: {
@@ -194,7 +195,7 @@ const styles = {
     marginBottom: '6px',
   },
 
-  // FAQs (kept for consistency if you add later)
+  // FAQs
   faqList: {
     display: 'grid',
     gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
@@ -217,6 +218,7 @@ const styles = {
     fontSize: '13px',
     lineHeight: 1.6,
     color: '#000000ff',
+    textAlign: 'left',
   },
 };
 
@@ -246,7 +248,7 @@ function Neurology() {
             <div style={styles.heroImageWrapper}>
               <div style={styles.heroImageCard}>
                 <img
-                  src={Neurologyimg} // replace with neurology-specific image if available
+                  src={Neurologyimg}
                   alt="Neurology Department"
                   style={styles.heroImage}
                 />
@@ -306,11 +308,11 @@ function Neurology() {
                   journey.
                 </p>
                 <p style={styles.heroParagraph}>
-                  We pride ourselves on using a collaborative model of care where our 
-                  neurologists and neurosurgeons, along with our physiotherapists, 
-                  psychologists, and critical care specialists, work closely together 
-                  as a cohesive team. Our patients receive individualised, focused, early 
-                  intervention so that they may recover quickly, live a healthy and productive 
+                  We pride ourselves on using a collaborative model of care where our
+                  neurologists and neurosurgeons, along with our physiotherapists,
+                  psychologists, and critical care specialists, work closely together
+                  as a cohesive team. Our patients receive individualised, focused, early
+                  intervention so that they may recover quickly, live a healthy and productive
                   life, and achieve their full potential.
                 </p>
 
@@ -460,6 +462,84 @@ function Neurology() {
               </ul>
             </div>
           </section>
+
+          {/* FAQs */}
+          <section style={styles.section}>
+            <div style={styles.sectionHeaderRow}>
+              <div style={styles.sectionTitle}>
+                <span style={styles.sectionAccentBar} />
+                FAQs
+              </div>
+            </div>
+
+            <div style={styles.faqList}>
+              <div style={styles.faqItem}>
+                <div style={styles.faqQuestion}>
+                  Q: When should I see a neurologist?
+                </div>
+                <div style={styles.faqAnswer}>
+                  See a neurologist for persistent headaches or migraines, seizures/fainting episodes, dizziness,
+                  numbness or tingling, weakness, tremors, memory problems, sleep-related neurological issues,
+                  or back/neck pain with nerve symptoms.
+                </div>
+              </div>
+
+              <div style={styles.faqItem}>
+                <div style={styles.faqQuestion}>
+                  Q: What are the warning signs of stroke?
+                </div>
+                <div style={styles.faqAnswer}>
+                  Sudden face drooping, arm weakness, speech difficulty, sudden vision loss, severe dizziness,
+                  loss of balance, or sudden severe headache can be stroke warning signs. Seek emergency care
+                  immediately—early treatment can be life-saving.
+                </div>
+              </div>
+
+              <div style={styles.faqItem}>
+                <div style={styles.faqQuestion}>
+                  Q: What tests are done in neurology (EEG/EMG/NCS)?
+                </div>
+                <div style={styles.faqAnswer}>
+                  EEG helps evaluate seizures and certain brain conditions. EMG and nerve conduction studies (NCS)
+                  help assess nerve and muscle problems such as neuropathy, muscle weakness, and nerve compression.
+                  MRI/CT imaging may be advised based on symptoms.
+                </div>
+              </div>
+
+              <div style={styles.faqItem}>
+                <div style={styles.faqQuestion}>
+                  Q: Do you provide 24×7 stroke care?
+                </div>
+                <div style={styles.faqAnswer}>
+                  Yes. The hospital provides 24×7 emergency support for suspected stroke and neurological emergencies,
+                  with rapid assessment and treatment planning, including thrombolysis when clinically indicated.
+                </div>
+              </div>
+
+              <div style={styles.faqItem}>
+                <div style={styles.faqQuestion}>
+                  Q: Can epilepsy (seizures) be treated and controlled?
+                </div>
+                <div style={styles.faqAnswer}>
+                  Yes. Many patients achieve good control with the right medicines and regular follow-ups.
+                  Your neurologist will guide diagnosis, triggers, safety precautions, and long-term management.
+                </div>
+              </div>
+
+              <div style={styles.faqItem}>
+                <div style={styles.faqQuestion}>
+                  Q: Do you treat children with neurological problems?
+                </div>
+                <div style={styles.faqAnswer}>
+                  Yes. We evaluate and manage pediatric neurological conditions such as seizure disorders,
+                  developmental delays, cerebral palsy, and infections like meningitis, with a child-friendly
+                  approach and family guidance.
+                </div>
+              </div>
+            </div>
+          </section>
+
+
         </div>
       </div>
     </>
