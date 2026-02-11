@@ -42,6 +42,7 @@ const styles = {
     display: "block",
     fontWeight: 700,
     marginBottom: 6,
+    textAlign: "left",
   },
   address: {
     fontStyle: "normal",
@@ -86,7 +87,7 @@ const PrivacyPolicy = () => {
 
           <p style={styles.updated}>Last Updated: 19 May 2025</p>
 
-          <p>
+          <p style={{textAlign : "left"}}>
             Shree Saibaba Heart Institute and Research Centre (hereinafter
             referred to as “the Hospital,” “we,” “us,” or “our”) is committed to
             protecting the privacy and security of your personal information. This
@@ -98,9 +99,9 @@ const PrivacyPolicy = () => {
           <ol style={styles.listReset}>
             <li style={styles.listItem}>
               <strong style={styles.sectionTitle}>Information We Collect</strong>
-              <p>We may collect the following types of personal information:</p>
+              <p style={{textAlign : "left"}}>We may collect the following types of personal information:</p>
               <ul>
-                <li>
+                <li style={{textAlign : "left"}}>
                   <strong>Personal Identification Information:</strong> This
                   includes your name, age, gender, date of birth, address (Opp.
                   Wani House, Mumbai Naka, Mirajkar Nagar, Nashik, Maharashtra
@@ -114,24 +115,24 @@ const PrivacyPolicy = () => {
                   <a href="tel:+912532507001">+91 253 250 7001</a>), and other
                   identifying information.
                 </li>
-                <li>
+                <li style={{textAlign : "left"}}>
                   <strong>Medical Information:</strong> This includes your medical
                   history, current health conditions, diagnoses, treatments,
                   medications, allergies, test results, and other health-related
                   information provided by you or collected during your medical
                   care.
                 </li>
-                <li>
+                <li style={{textAlign : "left"}}>
                   <strong>Insurance Information:</strong> Details of your health
                   insurance policy, insurer, and related information necessary for
                   billing and payment purposes.
                 </li>
-                <li>
+                <li style={{textAlign : "left"}}>
                   <strong>Payment Information:</strong> Billing address, payment
                   card details, or other payment information when you make
                   payments for our services.
                 </li>
-                <li>
+                <li style={{textAlign : "left"}}>
                   <strong>Website Usage Information:</strong> When you visit our
                   website{" "}
                   <a
@@ -146,22 +147,23 @@ const PrivacyPolicy = () => {
                   the dates and times of your visits. We may use cookies or
                   similar tracking technologies for this purpose.
                 </li>
-                <li>
+                <li style={{textAlign : "left"}}>
                   <strong>Communication Data:</strong> Records of your
                   communication with us, including emails, phone calls, and other
                   correspondence.
                 </li>
-                <li>
+                <li style={{textAlign : "left"}}>
                   <strong>Other Information:</strong> Any other information you
                   voluntarily provide to us.
                 </li>
               </ul>
-            </li>
+            </li> 
+            <br />
 
             <li style={styles.listItem}>
               <strong style={styles.sectionTitle}>How We Collect Your Information</strong>
-              <p>We may collect your personal information in the following ways:</p>
-              <ul>
+              <p style={{textAlign : "left"}}>We may collect your personal information in the following ways:</p>
+              <ul style={{textAlign : "left"}}>
                 <li>
                   <strong>Directly from you:</strong> When you provide information
                   during registration, consultations, treatment, or when you
@@ -182,11 +184,12 @@ const PrivacyPolicy = () => {
                 </li>
               </ul>
             </li>
+            <br />
 
             <li style={styles.listItem}>
               <strong style={styles.sectionTitle}>How We Use Your Information</strong>
-              <p>We may use your personal information for the following purposes:</p>
-              <ul>
+              <p style={{textAlign : "left"}}>We may use your personal information for the following purposes:</p>
+              <ul style={{textAlign : "left"}}>
                 <li>
                   <strong>Providing Medical Services:</strong> To diagnose and
                   treat your medical conditions, provide necessary care, and
@@ -232,10 +235,12 @@ const PrivacyPolicy = () => {
               </ul>
             </li>
 
+            <br />
+
             <li style={styles.listItem}>
               <strong style={styles.sectionTitle}>Disclosure of Your Information</strong>
-              <p>We may disclose your personal information to the following parties:</p>
-              <ul>
+              <p style={{textAlign : "left"}}>We may disclose your personal information to the following parties:</p>
+              <ul style={{textAlign : "left"}}>
                 <li>
                   <strong>Healthcare Professionals:</strong> Doctors, nurses,
                   technicians, and other healthcare professionals involved in your
@@ -276,10 +281,11 @@ const PrivacyPolicy = () => {
                 </li>
               </ul>
             </li>
+            <br />
 
             <li style={styles.listItem}>
               <strong style={styles.sectionTitle}>Data Security</strong>
-              <p>
+              <p style={{textAlign : "left"}}>
                 We take reasonable measures to protect your personal information
                 from unauthorized access, use, disclosure, alteration, or
                 destruction. These measures include physical, electronic, and
@@ -288,14 +294,15 @@ const PrivacyPolicy = () => {
                 is completely secure.
               </p>
             </li>
+            <br />
 
             <li style={styles.listItem}>
               <strong style={styles.sectionTitle}>Your Rights</strong>
-              <p>
+              <p style={{textAlign : "left"}}>
                 You may have certain rights regarding your personal information
                 under applicable laws, which may include the right to:
               </p>
-              <ul>
+              <ul style={{textAlign : "left"}}>
                 <li>
                   <strong>Access:</strong> Request access to the personal
                   information we hold about you.
@@ -323,16 +330,17 @@ const PrivacyPolicy = () => {
                   machine-readable format.
                 </li>
               </ul>
-              <p>
+              <p style={{textAlign : "left"}}>
                 To exercise these rights, please contact us using the contact
                 details provided below. We may require you to verify your identity
                 before processing your request.
               </p>
             </li>
+            <br />
 
             <li style={styles.listItem}>
               <strong style={styles.sectionTitle}>Retention of Your Information</strong>
-              <p>
+              <p style={{textAlign : "left"}}>
                 We will retain your personal information for as long as necessary
                 to fulfill the purposes for which it was collected, as required by
                 law, or as necessary to protect our legal rights. Medical records
@@ -340,10 +348,11 @@ const PrivacyPolicy = () => {
                 regulations.
               </p>
             </li>
+            <br />
 
             <li style={styles.listItem}>
               <strong style={styles.sectionTitle}>Cookies and Tracking Technologies</strong>
-              <p>
+              <p style={{textAlign : "left"}}>
                 Our website{" "}
                 <a
                   href="https://www.shreesaibabaheartinstitute.com/"
@@ -357,20 +366,22 @@ const PrivacyPolicy = () => {
                 your cookie preferences through your browser settings.
               </p>
             </li>
+            <br />
 
             <li style={styles.listItem}>
               <strong style={styles.sectionTitle}>Links to Other Websites</strong>
-              <p>
+              <p style={{textAlign : "left"}}>
                 Our website may contain links to other websites. We are not
                 responsible for the privacy practices or the content of those
                 websites. We encourage you to review the privacy policies of any
                 third-party websites you visit.
               </p>
             </li>
+            <br />
 
             <li style={styles.listItem}>
               <strong style={styles.sectionTitle}>Children&apos;s Privacy</strong>
-              <p>
+              <p style={{textAlign : "left"}}>
                 Our services are generally not directed towards children. We do
                 not knowingly collect personal information from children under the
                 age of 18 without the consent of their parent or guardian. If you
@@ -379,10 +390,11 @@ const PrivacyPolicy = () => {
                 take steps to remove the information.
               </p>
             </li>
+            <br />
 
             <li style={styles.listItem}>
               <strong style={styles.sectionTitle}>Changes to This Privacy Policy</strong>
-              <p>
+              <p style={{textAlign : "left"}}>
                 We may update this Privacy Policy from time to time to reflect
                 changes in our practices or legal requirements. We will post any
                 changes on our website and update the “Last Updated” date at the
@@ -390,10 +402,11 @@ const PrivacyPolicy = () => {
                 periodically.
               </p>
             </li>
+            <br />
 
             <li style={styles.listItem}>
               <strong style={styles.sectionTitle}>Contact Us</strong>
-              <p>
+              <p style={{textAlign : "left"}}>
                 If you have any questions, concerns, or requests regarding this
                 Privacy Policy or the handling of your personal information,
                 please contact us at:

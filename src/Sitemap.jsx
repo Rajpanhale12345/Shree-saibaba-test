@@ -160,15 +160,16 @@ function Sitemap() {
               <ListItemLink to="/ortho">Orthopedic</ListItemLink>
               <ListItemLink to="/interventionalradiology">IR</ListItemLink>
               <ListItemLink to="/neurosurgery">Neurosurgery</ListItemLink>
-              <ListItemLink to="/internalmedicine">Internal Medicine</ListItemLink>
               <ListItemLink to="/dentistry">Dentistry</ListItemLink>
               <ListItemLink to="/generalsurgery">General Surgery</ListItemLink>
               <ListItemLink to="/plasticsurgery">Plastic Surgery</ListItemLink>
-              <ListItemLink to="/opthalmology">Opthalmology</ListItemLink>
               <ListItemLink to="/nephrology">Nephrology</ListItemLink>
               <ListItemLink to="/gastroenterology">Gastroenterology</ListItemLink>
               <ListItemLink to="/gynaecology">Gynecology</ListItemLink>
               <ListItemLink to="/pulmonology">Pulmonology</ListItemLink>
+              <ListItemLink to="/spinecare">Spine Care</ListItemLink>
+              <ListItemLink to="/cardiovascular">Cardiovascular Thoracic Surgery</ListItemLink>
+              <ListItemLink to="/generalmedicine">General Medicine</ListItemLink>
             </ul>
           </section>
 

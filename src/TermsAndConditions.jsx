@@ -22,18 +22,18 @@ const TermsAndConditions = () => {
                 </p>
 
                 <section style={{ marginBottom: 24 }}>
-                    <h2 style={{ fontSize: "1.2rem", fontWeight: 600, color: "#34495e" }}>1. Acceptance of Terms</h2>
-                    <p>
+                    <h2 style={{ fontSize: "1.2rem", fontWeight: 600, color: "#34495e", textAlign: "left" }}>1. Acceptance of Terms</h2>
+                    <p style={{textAlign : "left"}}>
                         By accessing or using the services provided by Shree Saibaba Heart Institute and Research Centre (hereinafter referred to as "the Hospital"), located at Opp. Wani House, Mumbai Naka, Mirajkar Nagar, Nashik, Maharashtra 422001, you (hereinafter referred to as "the Patient" or "the User") agree to be bound by these Terms and Conditions. Please read these terms carefully before using our services. If you do not agree to all of these Terms and Conditions, do not access or use our services.
                     </p>
                 </section>
 
-                <section style={{ marginBottom: 24 }}></section>
-                <h2 style={{ fontSize: "1.2rem", fontWeight: 600, color: "#34495e" }}>2. Services Provided</h2>
-                <p>
+                <section style={{ marginBottom: 24,textAlign : "left" }}></section>
+                <h2 style={{ fontSize: "1.2rem", fontWeight: 600, color: "#34495e", textAlign: "left" }}>2. Services Provided</h2>
+                <p style={{textAlign : "left"}}>
                     Shree Saibaba Heart Institute and Research Centre is a multi-specialist hospital offering a range of medical services including, but not limited to:
                 </p>
-                <ul style={{ marginLeft: 24 }}>
+                <ul style={{ marginLeft: 24, textAlign: "left" }}>
                     <li>Cardiology services (including diagnosis, treatment, and surgery)</li>
                     <li>Cardiovascular Thoracic Surgery</li>
                     <li>Orthopedic</li>
@@ -43,12 +43,13 @@ const TermsAndConditions = () => {
                     <li>Inpatient and outpatient care</li>
                     <li>Rehabilitation services</li>
                 </ul>
-                <p>
+                <p style={{textAlign : "left"}}>
                     The Hospital reserves the right to modify or discontinue any service at any time without prior notice.
                 </p>
+                <br />
 
 
-                <section style={{ marginBottom: 24 }}>
+                <section style={{ marginBottom: 24, textAlign: "left" }}>
                     <h2 style={{ fontSize: "1.2rem", fontWeight: 600, color: "#34495e" }}>3. Patient Responsibilities</h2>
                     <ul style={{ marginLeft: 24 }}>
                         <li>Provide accurate and complete medical history and personal information.</li>
@@ -61,8 +62,9 @@ const TermsAndConditions = () => {
                         <li>Refrain from any disruptive or inappropriate behavior within the Hospital premises.</li>
                     </ul>
                 </section>
+                <br />
 
-                <section style={{ marginBottom: 24 }}>
+                <section style={{ marginBottom: 24, textAlign: "left" }}>
                     <h2 style={{ fontSize: "1.2rem", fontWeight: 600, color: "#34495e" }}>4. Appointments and Consultations</h2>
                     <ul style={{ marginLeft: 24 }}>
                         <li>
@@ -76,8 +78,9 @@ const TermsAndConditions = () => {
                         </li>
                     </ul>
                 </section>
+                <br />
 
-                <section style={{ marginBottom: 24 }}>
+                <section style={{ marginBottom: 24, textAlign: "left" }}>
                     <h2 style={{ fontSize: "1.2rem", fontWeight: 600, color: "#34495e" }}>5. Medical Records and Privacy</h2>
                     <ul style={{ marginLeft: 24 }}>
                         <li>
@@ -88,8 +91,9 @@ const TermsAndConditions = () => {
                         </li>
                     </ul>
                 </section>
+                <br />
 
-                <section style={{ marginBottom: 24 }}>
+                <section style={{ marginBottom: 24, textAlign: "left" }}>
                     <h2 style={{ fontSize: "1.2rem", fontWeight: 600, color: "#34495e" }}>6. Payment and Billing</h2>
                     <ul style={{ marginLeft: 24 }}>
                         <li>Patients are responsible for all fees and charges associated with the medical services received.</li>
@@ -98,8 +102,9 @@ const TermsAndConditions = () => {
                         <li>The Hospital reserves the right to revise its fees and charges at any time.</li>
                     </ul>
                 </section>
+                <br />
 
-                <section style={{ marginBottom: 24 }}>
+                <section style={{ marginBottom: 24, textAlign: "left" }}>
                     <h2 style={{ fontSize: "1.2rem", fontWeight: 600, color: "#34495e" }}>7. Limitation of Liability</h2>
                     <ul style={{ marginLeft: 24 }}>
                         <li>The Hospital will provide medical services with reasonable care and skill. However, we do not guarantee any specific outcome or result from any treatment or procedure.</li>
@@ -108,30 +113,34 @@ const TermsAndConditions = () => {
                         </li>
                     </ul>
                 </section>
+                <br />
 
-                <section style={{ marginBottom: 24 }}>
+                <section style={{ marginBottom: 24, textAlign: "left" }}>
                     <h2 style={{ fontSize: "1.2rem", fontWeight: 600, color: "#34495e" }}>8. Intellectual Property</h2>
                     <p>
                         All content and materials provided by the Hospital, including but not limited to text, graphics, logos, images, and software, are the property of Shree Saibaba Heart Institute and Research Centre or its licensors and are protected by applicable intellectual property laws. You may not use, reproduce, or distribute any such content without our prior written consent.
                     </p>
                 </section>
+                <br />
 
-                <section style={{ marginBottom: 24 }}>
+                <section style={{ marginBottom: 24, textAlign: "left" }}>
                     <h2 style={{ fontSize: "1.2rem", fontWeight: 600, color: "#34495e" }}>9. Governing Law and Jurisdiction</h2>
                     <p>
                         These Terms and Conditions shall be governed by and construed in accordance with the laws of India.<br />
                         Any disputes arising out of or relating to these Terms and Conditions shall be subject to the exclusive jurisdiction of the courts in Nashik, Maharashtra, India.
                     </p>
                 </section>
+                <br />
 
-                <section style={{ marginBottom: 24 }}>
+                <section style={{ marginBottom: 24, textAlign: "left" }}>
                     <h2 style={{ fontSize: "1.2rem", fontWeight: 600, color: "#34495e" }}>10. Amendments to Terms and Conditions</h2>
                     <p>
                         The Hospital reserves the right to modify or update these Terms and Conditions at any time without prior notice. Any changes will be effective immediately upon posting on our website or within the Hospital premises. Your continued use of our services after any such changes constitutes your acceptance of the revised Terms and Conditions.
                     </p>
                 </section>
+                <br />
 
-                <section style={{ marginBottom: 24 }}>
+                <section style={{ marginBottom: 24, textAlign: "left" }}>
                     <h2 style={{ fontSize: "1.2rem", fontWeight: 600, color: "#34495e" }}>11. Contact Us</h2>
                     <address style={{ fontStyle: "normal", marginLeft: 24 }}>
                         <div>Shree Saibaba Heart Institute and Research Centre</div>
@@ -143,7 +152,7 @@ const TermsAndConditions = () => {
                     </address>
                 </section>
 
-                <p style={{ marginTop: 32, fontWeight: 500, color: "blue" }}>
+                <p style={{ marginTop: 32, fontWeight: 500, color: "blue", textAlign: "left" }}>
                     By proceeding to use the services of Shree Saibaba Heart Institute and Research Centre, you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions.
                 </p>
             </div>
