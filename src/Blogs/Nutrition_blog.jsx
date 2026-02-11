@@ -62,16 +62,7 @@ function NutritionBlog() {
             </header>
 
             {/* TOC */}
-            <nav className="toc" aria-label="On this page">
-              <p className="toc__label">On this page</p>
-              <ul>
-                {toc.map((item) => (
-                  <li key={item.id}>
-                    <a href={`#${item.id}`}>{item.label}</a>
-                  </li>
-                ))}
-              </ul>
-            </nav>
+            
 
             {/* Content */}
             <section className="kidney-content">
@@ -192,6 +183,19 @@ function NutritionBlog() {
         {/* Sidebar */}
         <aside className="pane pane--sidebar" aria-label="Other blog posts">
           <div className="sidebar-inner">
+
+            <nav className="toc" aria-label="On this page">
+              <p className="toc__label">On this page</p>
+              <ul>
+                {toc.map((item) => (
+                  <li key={item.id}>
+                    <a href={`#${item.id}`}>{item.label}</a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+
+            <br />
             <h2 className="sidebar-title">Other Blogs</h2>
             <div className="sidebar-list" role="list">
               {otherBlogs.map((post, idx) => (

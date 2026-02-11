@@ -46,14 +46,7 @@ function Spine_Blog() {
               <h1 className="blog-title">Spine Health and Sitting: What You Need to Know</h1>
             </header>
 
-            <nav className="toc" aria-label="On this page">
-              <p className="toc__label">On this page</p>
-              <ul>
-                {toc.map(item => (
-                  <li key={item.id}><a href={`#${item.id}`}>{item.label}</a></li>
-                ))}
-              </ul>
-            </nav>
+            
 
             <section className="blog-content">
               <p>
@@ -123,6 +116,17 @@ function Spine_Blog() {
         {/* Right: Sticky sidebar with its own scroll */}
         <aside className="pane pane--sidebar" aria-label="Other blog posts">
           <div className="sidebar-inner">
+
+            <nav className="toc" aria-label="On this page">
+              <p className="toc__label">On this page</p>
+              <ul>
+                {toc.map(item => (
+                  <li key={item.id}><a href={`#${item.id}`}>{item.label}</a></li>
+                ))}
+              </ul>
+            </nav>
+
+            <br />
             <h2 className="sidebar-title">Other Blogs</h2>
 
             <div className="sidebar-list" role="list">

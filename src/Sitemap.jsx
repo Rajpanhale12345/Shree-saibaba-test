@@ -134,14 +134,12 @@ function Sitemap() {
           <section style={styles.col}>
             <h2 style={styles.h2}>Other</h2>
             <ul style={styles.ul}>
-              <ListItemLink to="/facilities">Facilities</ListItemLink>
               <ListItemLink to="/tieups">Tie Ups</ListItemLink>
               <ListItemLink to="/testimonials">Testimonials</ListItemLink>
               <ListItemLink to="/pr">Press Releases</ListItemLink>
               <ListItemLink to="/contact">Contact</ListItemLink>
               <ListItemLink to="/privacypolicy">Privacy Policy</ListItemLink>
               <ListItemLink to="/termsandconditions">Terms &amp; Conditions</ListItemLink>
-              <ListItemLink to="/sitemap">Sitemap</ListItemLink>
             </ul>
           </section>
 
