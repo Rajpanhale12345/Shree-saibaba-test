@@ -315,7 +315,7 @@ function Nephrology() {
 
       <div style={styles.page}>
         <div style={styles.container}>
-          {/* Hero */}
+      
           <div style={styles.hero}>
             <div style={styles.heroImageWrapper}>
               <div style={styles.heroImageCard}>
@@ -444,9 +444,8 @@ function Nephrology() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> 
 
-          {/* Services Offered */}
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -454,8 +453,7 @@ function Nephrology() {
                 Services Offered
               </div>
             </div>
-
-            {/* Diagnostic Services */}
+ 
             <div style={{ marginBottom: '12px' }}>
               <div style={styles.tagListItem}><strong>Diagnostic Services</strong></div>
               <ul style={styles.list}>
@@ -467,8 +465,7 @@ function Nephrology() {
                 <li style={styles.listItem}>Assessment of electrolyte and fluid imbalances</li>
               </ul>
             </div>
-
-            {/* Treatment Services */}
+ 
             <div style={{ marginBottom: '12px' }}>
               <div style={styles.tagListItem}><strong>Treatment Services</strong></div>
               <ul style={styles.list}>
@@ -480,8 +477,7 @@ function Nephrology() {
                 <li style={styles.listItem}>Long-term follow-up and counselling for renal patients</li>
               </ul>
             </div>
-
-            {/* Specialised Services */}
+ 
             <div>
               <div style={styles.tagListItem}><strong>Specialised Services</strong></div>
               <ul style={styles.list}>
@@ -491,8 +487,7 @@ function Nephrology() {
               </ul>
             </div>
           </section>
-
-          {/* Facilities & Equipment */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -509,8 +504,7 @@ function Nephrology() {
               <li style={styles.listItem}>Procedure room for kidney biopsies</li>
             </ul>
           </section>
-
-          {/* Team Members */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -535,8 +529,7 @@ function Nephrology() {
               </ul>
             </div>
           </section>
-
-          {/* Department Timings */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -561,8 +554,7 @@ function Nephrology() {
               </li>
             </ul>
           </section>
-
-          {/* Achievements & Highlights */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -585,8 +577,7 @@ function Nephrology() {
               </li>
             </ul>
           </section>
-
-          {/* Patient Guidelines */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -605,8 +596,7 @@ function Nephrology() {
               </li>
             </ul>
           </section>
-
-          {/* FAQs */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>

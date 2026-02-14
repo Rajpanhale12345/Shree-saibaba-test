@@ -35,7 +35,7 @@ function Urology_Blog() {
     const ogImage = `${siteUrl}/assets/Urology_Kidney_Blog-nWZxCyLL.jpg`; 
 
     const publishedDate = "2026-02-05";
-    const modifiedDate = "2026-02-05"; // update when you edit content
+    const modifiedDate = "2026-02-05";  
 
     const articleSchema = {
         "@context": "https://schema.org",
@@ -73,16 +73,16 @@ function Urology_Blog() {
     return (
         <>
             <Helmet>
-                {/* Primary SEO */}
+      
                 <title>{title} | Shree Saibaba Multispeciality Hospital</title>
                 <meta name="description" content={description} />
                 <meta name="keywords" content={keywords} />
                 <link rel="canonical" href={pageUrl} />
 
-                {/* Robots */}
+           
                 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
 
-                {/* Open Graph */}
+             
                 <meta property="og:title" content={title} />
                 <meta property="og:description" content={description} />
                 <meta property="og:type" content="article" />
@@ -91,32 +91,32 @@ function Urology_Blog() {
                 <meta property="og:image:alt" content="Urology care in Nashik - kidney stones and prostate treatment" />
                 <meta property="og:site_name" content="Shree Saibaba Multispeciality Hospital" />
 
-                {/* Twitter */}
+          
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content={title} />
                 <meta name="twitter:description" content={description} />
                 <meta name="twitter:image" content={ogImage} />
 
-                {/* Local SEO helpers */}
+             
                 <meta name="geo.region" content="IN-MH" />
                 <meta name="geo.placename" content="Nashik" />
                 <meta name="language" content="English" />
 
-                {/* Article dates (optional but helpful) */}
+ 
                 <meta property="article:published_time" content={`${publishedDate}T00:00:00+05:30`} />
                 <meta property="article:modified_time" content={`${modifiedDate}T00:00:00+05:30`} />
 
-                {/* Structured Data */}
+           
                 <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
                 <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
             </Helmet>
 
-            {/* 2-column page: main on the left, sticky sidebar on the right */}
+    
             <div className="kidney-page">
-                {/* Main */}
+           
                 <main className="pane pane--main" aria-label="Recovery article">
                     <article className="kidney-article">
-                        {/* Hero */}
+           
                         <header className="kidney-header">
                             <img style={{ objectFit: "fill" }}
                                 src={Kidneyy}
@@ -133,8 +133,7 @@ function Urology_Blog() {
                                 Kidney Stones & Prostate Care
                             </h1>
                         </header>
-
-                        {/* Content */}
+ 
                         <section className="kidney-content">
                             <h2 id="Introduction">Introduction</h2>
 
@@ -304,7 +303,7 @@ function Urology_Blog() {
                             <p>If you have been experiencing any of these urinary symptoms, don't wait any longer to get the relief that is available to you through 21st-century urological medicine.</p>
                             <br />
 
-                            {/* CTA */}
+                 
                             <footer className="cta-section" aria-labelledby="cta-title">
                                 <h2 id="cta-title" className="sr-only">Call to Action</h2>
                                 <h5 className="CTA">📞 Call us or visit us for a consultation. Your health deserves the best care.</h5>
@@ -316,11 +315,11 @@ function Urology_Blog() {
                     </article>
                 </main>
 
-                {/* Sidebar */}
+ 
                 <aside className="pane pane--sidebar" aria-label="Other blog posts">
                     <div className="sidebar-inner">
 
-                        {/* TOC */}
+    
                         <nav className="toc" aria-label="On this page">
                             <p className="toc__label"><span style={{ color: "Red" }}>On this page</span></p>
                             <ul style={{textAlign : "left"}}>

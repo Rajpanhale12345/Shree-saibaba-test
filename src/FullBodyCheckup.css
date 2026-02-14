@@ -1,27 +1,21 @@
-/* ========== FullBodyCheckup.css ==========
-   Single-file, responsive, print-ready (A4), no external deps
-   System fonts, high contrast (light palette only), centered layout
-   ------------------------------------------ */
-
-/* Root tokens (light, no dark colors) */
+ 
 :root {
-  --fbc-bg: #ffffff;                 /* white background */
-  --fbc-surface: #ffffff;            /* surfaces also white for clean look */
-  --fbc-text: #475569;               /* slate-600 (softer than near-black) */
-  --fbc-text-muted: #64748b;         /* slate-500-ish */
-  --fbc-border: #e2e8f0;             /* slate-200 */
-  --fbc-accent: #10b6b7;             /* soft teal */
-  --fbc-accent-ink: #0b6f70;         /* slightly deeper teal for legibility */
-  --fbc-hero-grad-a: #e6fffa;        /* very light aqua */
-  --fbc-hero-grad-b: #f0f9ff;        /* very light blue */
-  --fbc-focus: #60a5fa;              /* light blue focus ring */
+  --fbc-bg: #ffffff;                  
+  --fbc-surface: #ffffff;             
+  --fbc-text: #475569;                
+  --fbc-text-muted: #64748b;         
+  --fbc-border: #e2e8f0;            
+  --fbc-accent: #10b6b7;              
+  --fbc-accent-ink: #0b6f70;         
+  --fbc-hero-grad-a: #e6fffa;         
+  --fbc-hero-grad-b: #f0f9ff;        
+  --fbc-focus: #60a5fa;               
   --fbc-shadow-sm: 0 1px 2px rgba(0,0,0,.06);
   --fbc-shadow-md: 0 6px 18px rgba(2, 8, 23, .08);
   --fbc-radius: 14px;
   --fbc-radius-pill: 999px;
 } 
-
-/* Force the same light palette even if user prefers dark mode */
+ 
 @media (prefers-color-scheme: dark) {
   :root {
     --fbc-bg: #ffffff;
@@ -35,8 +29,7 @@
     --fbc-shadow-md: 0 6px 18px rgba(2, 8, 23, .08);
   }
 }
-
-/* Global reset-ish (scoped) */
+ 
 .fbc-page * { box-sizing: border-box; }
 .fbc-page {
   font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
@@ -45,16 +38,13 @@
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   padding: 24px;
-  text-align: center;                /* center all text by default */
-}
-
-/* Layout container sizes for screen; print uses @page below */
+  text-align: center;               
+} 
 .fbc-page {
   max-width: 960px;
   margin: 0 auto;
 }
-
-/* ---------- Hero ---------- */
+ 
 .fbc-hero {
   background: radial-gradient(1200px 600px at 10% -10%, var(--fbc-hero-grad-a), transparent 70%),
               radial-gradient(1000px 500px at 100% 10%, var(--fbc-hero-grad-b), transparent 60%),
@@ -89,14 +79,13 @@
   color: var(--fbc-text-muted);
   font-size: clamp(14px, 2.2vw, 16px);
 }
-
-/* Center the meta pills nicely */
+ 
 .fbc-hero__meta {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
   margin: 10px 0 14px;
-  justify-content: center;           /* center pills row */
+  justify-content: center;          
 }
 
 .fbc-hero__pill {
@@ -117,13 +106,12 @@
   border-color: rgba(16,182,183,.35);
   color: var(--fbc-accent-ink);
 }
-
-/* ---------- Buttons ---------- */
+ 
 .fbc-actions { 
   display: flex; 
   gap: 10px; 
   margin-top: 8px; 
-  justify-content: center;           /* center buttons row */
+  justify-content: center;        
 }
 .fbc-btn {
   appearance: none;
@@ -152,8 +140,7 @@
 .fbc-btn--ghost {
   background: transparent;
 }
-
-/* ---------- Cards ---------- */
+ 
 .fbc-card {
   background: var(--fbc-surface);
   border: 1px solid var(--fbc-border);
@@ -161,15 +148,14 @@
   padding: 18px;
   margin: 14px 0;
   box-shadow: var(--fbc-shadow-sm);
-  text-align: center;                /* ensure card content centered */
+  text-align: center;             
 }
 
 .fbc-card__title {
   margin: 0 0 10px;
   font-size: 18px;
 }
-
-/* ---------- Included list ---------- */
+ 
 .fbc-list {
   list-style: none;
   margin: 0;
@@ -177,8 +163,8 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 10px;
-  justify-items: left;             /* center each grid cell's content */
-  text-align: left;                /* center text inside items */
+  justify-items: left;         
+  text-align: left;                
 }
 @media (min-width: 640px) {
   .fbc-list { grid-template-columns: 1fr 1fr; }
@@ -204,60 +190,56 @@
   text-align: center;
 }
 
-/* ---------- Bullet lists ---------- */
+ 
 .fbc-bullets {
   margin: 0;
-  padding-left: 0;                   /* remove default indent */
-  list-style-position: inside;       /* markers inside for centered layout */
+  padding-left: 0;               
+  list-style-position: inside;   
 }
 .fbc-bullets li {
   margin: 8px 0;
   color: var(--fbc-text);
-  text-align: left;                /* center list lines */
+  text-align: left;       
 }
 .fbc-bullets li::marker {
   color: var(--fbc-accent);
   font-weight: 700;
 }
-
-/* ---------- Two-column grid ---------- */
+ 
 .fbc-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 14px;
-  justify-items: center;             /* center items in the grid */
+  justify-items: center;     
   align-items: start;
 }
 @media (min-width: 768px) {
   .fbc-grid { grid-template-columns: 1fr 1fr; }
 }
-
-/* Ensure child cards inside grid don't stretch oddly when centered */
+ 
 .fbc-grid > * {
   width: 100%;
 }
-
-/* ---------- Footer ---------- */
+ 
 .fbc-footer {
   margin-top: 10px;
   padding: 10px 4px 0;
   color: var(--fbc-text-muted);
-  text-align: center;                /* center footer text */
+  text-align: center;                 
 }
 .fbc-note {
   margin: 0 0 8px;
   font-size: 13px;
 }
 .fbc-contact {
-  display: inline-flex;              /* shrink to content and center */
+  display: inline-flex;         
   flex-wrap: wrap;
   gap: 10px 16px;
-  font-style: normal;                /* keep <address> upright */
+  font-style: normal;              
   font-size: 14px;
   justify-content: center;
 }
-
-/* ---------- Accessibility helpers ---------- */
+ 
 .fbc-page a,
 .fbc-page button {
   -webkit-tap-highlight-color: transparent;
@@ -265,25 +247,22 @@
 .fbc-page [aria-label] {
   letter-spacing: 0;
 }
-
-/* ---------- Print styles (A4) ---------- */
-@media print {
-  /* Hide interactive-only bits */
+ 
+@media print { 
   .no-print { display: none !important; }
-
-  /* Page setup */
+ 
   @page {
     size: A4 portrait;
     margin: 14mm;
   }
 
   .fbc-page {
-    background: #ffffff !important;  /* keep print bg white */
-    color: #475569 !important;        /* readable soft slate on white */
+    background: #ffffff !important;  
+    color: #475569 !important;       
     padding: 0;
     max-width: unset;
     box-shadow: none;
-    text-align: center;               /* preserve centering */
+    text-align: center;          
   }
 
   .fbc-hero {
@@ -292,19 +271,16 @@
     border-color: #dddddd;
   }
   .fbc-card { box-shadow: none; border-color: #dddddd; }
-
-  /* Avoid awkward breaks */
+ 
   .fbc-hero,
   .fbc-card,
   .fbc-grid,
   .fbc-list,
   .fbc-footer { break-inside: avoid; }
-
-  /* Ensure colors print crisply */
+ 
   * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 }
-
-/* ---------- Reduced motion ---------- */
+ 
 @media (prefers-reduced-motion: reduce) {
   .fbc-btn { transition: none; }
 }

@@ -60,8 +60,7 @@ const StyledMenu = styled((props) => (
   },
 }));
 
-function About() {
-  // Separate state for each doctor's menu
+function About() { 
   const [anchorElAnir, setAnchorElAnir] = React.useState(null);
   const [anchorElPallavi, setAnchorElPallavi] = React.useState(null);
 
@@ -81,8 +80,7 @@ function About() {
   const handleClosePallavi = () => {
     setAnchorElPallavi(null);
   };
-
-  // Background block for the three info paragraphs
+ 
   const infoWrapperStyle = {
     maxWidth: '1180px',
     margin: '0 auto 2.5rem',
@@ -183,8 +181,7 @@ function About() {
             </h2>
             <br />
             <br />
-            <div className="founders">
-              {/* ---------- Dr Aniruddha ---------- */}
+            <div className="founders"> 
               <div className="founder1">
                 <img src={founder2} alt="founder2" />
                 <br />
@@ -238,8 +235,7 @@ function About() {
                   </MenuItem>
                 </StyledMenu>
               </div>
-
-              {/* ---------- Dr Pallavi ---------- */}
+ 
               <div className="founder">
                 <img src={founder1} alt="founder1" />
                 <br />
@@ -290,8 +286,7 @@ function About() {
             </div>
             <br />
             <br />
-
-            {/* ---------- Three paragraphs with background image ---------- */}
+ 
             <div style={infoWrapperStyle}>
               <div style={infoInnerStyle}>
                 <p style={infoParagraphStyle}>

@@ -18,15 +18,13 @@
   },
   "rules": {
     "import/no-unresolved": ["error", { "caseSensitive": true }],
-
-    /* Auto-remove unused imports on --fix, warn for leftover unused vars. */
+ 
     "unused-imports/no-unused-imports": "error",
     "unused-imports/no-unused-vars": [
       "warn",
       { "vars": "all", "varsIgnorePattern": "^_", "args": "after-used", "argsIgnorePattern": "^_" }
     ],
-
-    /* If you prefer strict errors instead of warns, change the 'warn' above to 'error'. */
+ 
     "react/prop-types": "off"
   }
 }

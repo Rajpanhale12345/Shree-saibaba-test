@@ -7,7 +7,7 @@ export default function GTranslate() {
       default_language: "en",
       languages: ["en", "mr"],
       wrapper_selector: ".gtranslate_wrapper",
-      switcher: "dropdown" // dropdown without flags
+      switcher: "dropdown"  
     };
 
     const script = document.createElement("script");
@@ -23,8 +23,7 @@ export default function GTranslate() {
   return (
     <>
 
-      
-      {/* Internal CSS to hide flags */}
+       
       <style>{`
         .gtranslate_wrapper img {
           display: none !important;

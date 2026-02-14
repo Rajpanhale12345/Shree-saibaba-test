@@ -317,8 +317,7 @@ function Gynecology() {
 
 
       <div style={styles.page}>
-        <div style={styles.container}>
-          {/* Hero */}
+        <div style={styles.container}> 
           <div style={styles.hero}>
             <div style={styles.heroImageWrapper}>
               <div style={styles.heroImageCard}>
@@ -437,8 +436,7 @@ function Gynecology() {
               </div>
             </div>
           </div>
-
-          {/* Services Offered */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -483,8 +481,7 @@ function Gynecology() {
               </ul>
             </div>
           </section>
-
-          {/* Facilities & Equipment */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -499,9 +496,7 @@ function Gynecology() {
               <li style={styles.listItem}>Patient-friendly counseling environment</li>
               <li style={styles.listItem}>Post-procedure monitoring and follow-up</li>
             </ul>
-          </section>
-
-          {/* Team Members */}
+          </section> 
 
 
           {/* <section style={styles.section}>
@@ -523,12 +518,7 @@ function Gynecology() {
               </ul>
             </div>
           </section> */}
-
-
-
-
-          {/* Department Timings */}
-
+  
 
           {/* <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
@@ -547,7 +537,7 @@ function Gynecology() {
             </ul>
           </section> */}
 
-          {/* Patient Guidelines */}
+     
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -571,7 +561,7 @@ function Gynecology() {
             </ul>
           </section>
 
-          {/* FAQs */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>

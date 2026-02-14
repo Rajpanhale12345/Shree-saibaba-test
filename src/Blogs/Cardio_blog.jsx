@@ -36,11 +36,10 @@ function Cardio_blog() {
         <meta name='og:description' content='' />
       </Helmet>
 
-      <div className="kidney-page">{/* same grid as kidney page */}
-        {/* LEFT: Main article (normal page scroll) */}
+      <div className="kidney-page">
         <main className="pane pane--main" aria-label="Cardiology article">
           <article className="kidney-article">
-            {/* Hero */}
+          
             <header className="kidney-header">
               <img src={Cardio} alt="Cardiology pacemaker care" className="kidney-image" />
               <div className="kidney-meta">
@@ -51,7 +50,7 @@ function Cardio_blog() {
             </header>
 
 
-            {/* Content */}
+           
             <section className="kidney-content">
               <h2 id="what">What Is a Pacemaker?</h2>
               <p>
@@ -81,7 +80,7 @@ function Cardio_blog() {
                   loading="lazy"
                   decoding="async"
                 />
-                {/* Optional: remove this figcaption if you don't want text under the image */}
+               
                 <figcaption>Simple habits can keep you active and confident with a pacemaker.</figcaption>
               </figure>
 
@@ -127,7 +126,7 @@ function Cardio_blog() {
                   loading="lazy"
                   decoding="async"
                 />
-                {/* Optional: remove this figcaption if you don't want text under the image */}
+                
                 <figcaption><b>On the device side (battery/generator):</b> the pacemaker’s battery typically lasts 5-10 years before needing replacement.</figcaption>
               </figure>
 
@@ -149,7 +148,7 @@ function Cardio_blog() {
                 including leadless pacemakers and CRT delivered with compassionate, world-class care.
               </p>
 
-              {/* CTA */}
+           
               <footer className="cta-section" aria-labelledby="cta-title">
                 <h2 id="cta-title" className="sr-only">Call to Action</h2>
                 <h5 className="CTA">📞 Call us or visit us for a consultation. Your heart deserves the best care.</h5>
@@ -161,11 +160,11 @@ function Cardio_blog() {
           </article>
         </main>
 
-        {/* RIGHT: Sticky, independently scrolling sidebar */}
+     
         <aside className="pane pane--sidebar" aria-label="Other blog posts">
           <div className="sidebar-inner">
 
-            {/* TOC */}
+      
             <nav className="toc" aria-label="On this page">
               <p className="toc__label">On this page</p>
               <ul>

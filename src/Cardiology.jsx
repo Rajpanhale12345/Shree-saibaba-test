@@ -318,7 +318,7 @@ function Cardiology() {
 
       <div style={styles.page}>
         <div style={styles.container}>
-          {/* Hero */}
+     
           <div style={styles.hero}>
             <div style={styles.heroImageWrapper}>
               <div style={styles.heroImageCard}>
@@ -391,9 +391,8 @@ function Cardiology() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> 
 
-          {/* Services Offered */}
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -405,7 +404,7 @@ function Cardiology() {
             <ul style={styles.list}>
               <li style={styles.listItem}>
                 Life-saving interventional procedures like rescue angioplasty, permanent
-                pacemaker, AICD, ASD, VSD, PDA, and BMV – cardiac catheterization and
+                pacemaker, AICD, ASD, VSD, PDA, and BMV - cardiac catheterization and
                 angiography.
               </li>
               <li style={styles.listItem}>Preventive cardiology and risk assessment.</li>
@@ -420,8 +419,7 @@ function Cardiology() {
               </li>
             </ul>
           </section>
-
-          {/* Facilities & Equipment */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -447,8 +445,7 @@ function Cardiology() {
               <li style={styles.listItem}>Dedicated cardiac rehabilitation gym.</li>
             </ul>
           </section>
-
-          {/* Why Choose Us */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -471,8 +468,7 @@ function Cardiology() {
               unwavering commitment to delivering world-class heart care with a personal touch.
             </p>
           </section>
-
-          {/* Doctors */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -489,8 +485,7 @@ function Cardiology() {
               </ul>
             </div>
           </section>
-
-          {/* Achievements */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -511,8 +506,7 @@ function Cardiology() {
               </li>
             </ul>
           </section>
-
-          {/* Patient Guidelines */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -542,8 +536,7 @@ function Cardiology() {
               </li>
             </ul>
           </section>
-
-          {/* Department Timings */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -560,8 +553,7 @@ function Cardiology() {
               </li>
             </ul>
           </section>
-
-          {/* FAQs */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>

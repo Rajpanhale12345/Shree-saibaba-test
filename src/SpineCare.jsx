@@ -312,8 +312,7 @@ function SpineCare() {
 
 
       <div style={styles.page}>
-        <div style={styles.container}>
-          {/* Hero */}
+        <div style={styles.container}> 
           <div style={styles.hero}>
             <div style={styles.heroImageWrapper}>
               <div style={styles.heroImageCard}>
@@ -389,7 +388,7 @@ function SpineCare() {
             </div>
           </div>
 
-          {/* Services Offered */}
+         
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -453,7 +452,7 @@ function SpineCare() {
             </ul>
           </section>
 
-          {/* Facilities & Equipment */}
+         
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -476,7 +475,7 @@ function SpineCare() {
             </ul>
           </section>
 
-          {/* Achievements & Highlights */}
+      
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -501,7 +500,7 @@ function SpineCare() {
             </ul>
           </section>
 
-          {/* Patient Guidelines */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -528,7 +527,7 @@ function SpineCare() {
             </ul>
           </section>
 
-          {/* Team Members & Department Timings */}
+       
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -568,7 +567,8 @@ function SpineCare() {
                 </li>
               </ul>
             </div>
-          </section>{/* FAQs */}
+          </section>
+          
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>

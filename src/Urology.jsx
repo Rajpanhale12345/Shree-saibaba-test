@@ -306,7 +306,7 @@ function Urology() {
 
       <div style={styles.page}>
         <div style={styles.container}>
-          {/* Hero */}
+       
           <div style={styles.hero}>
             <div style={styles.heroImageWrapper}>
               <div style={styles.heroImageCard}>
@@ -371,9 +371,8 @@ function Urology() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> 
 
-          {/* Services Offered */}
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -382,8 +381,7 @@ function Urology() {
               </div>
             </div>
 
-            <ul style={styles.list}>
-              {/* Urological Surgeries */}
+            <ul style={styles.list}> 
               <li style={styles.listItem}>
                 <strong>Urological Surgeries:</strong>
                 <ul style={styles.list}>
@@ -396,8 +394,7 @@ function Urology() {
                   </li>
                 </ul>
               </li>
-
-              {/* Minimally Invasive Procedures */}
+ 
               <li style={styles.listItem}>
                 <strong>Minimally Invasive Procedures:</strong>
                 <ul style={styles.list}>
@@ -409,8 +406,7 @@ function Urology() {
                   </li>
                 </ul>
               </li>
-
-              {/* Diagnostic Services */}
+ 
               <li style={styles.listItem}>
                 <strong>Diagnostic Services:</strong>
                 <ul style={styles.list}>
@@ -421,8 +417,7 @@ function Urology() {
               </li>
             </ul>
           </section>
-
-          {/* Facilities & Equipment */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -439,8 +434,7 @@ function Urology() {
               <li style={styles.listItem}>Advanced endoscopic equipment.</li>
             </ul>
           </section>
-
-          {/* Patient Guidelines */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -461,8 +455,7 @@ function Urology() {
               </li>
             </ul>
           </section>
-
-          {/* Team Members & Department Timings */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -498,8 +491,7 @@ function Urology() {
               </ul>
             </div>
           </section>
-
-          {/* FAQs */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>

@@ -29,13 +29,12 @@ function Pneumonia_Blog() {
                 <meta name="keywords" content="" />
                 <meta name="og:description" content="" />
             </Helmet>
-
-            {/* 2-column page: main on the left, sticky sidebar on the right */}
+ 
             <div className="kidney-page">
-                {/* Main */}
+        
                 <main className="pane pane--main" aria-label="Recovery article">
                     <article className="kidney-article">
-                        {/* Hero */}
+             
                         <header className="kidney-header">
                             <img style={{ objectFit: "fill" }}
                                 src={Pneumoniaa}
@@ -53,7 +52,7 @@ function Pneumonia_Blog() {
                             </h1>
                         </header>
 
-                        {/* Content */}
+         
                         <section className="kidney-content">
                             <h2 id="Introduction">Introduction</h2>
                             <p>Pneumonia, a severe respiratory infection, profoundly impacts the lungs It can be caused by various factors including bacteria, viruses, fungi, or even chemicals. Pneumonia develops when the air sacs in the lungs become inflamed and accumulate fluid, leading to breathing difficulties. Common symptoms of pneumonia include cough, chest pain, fever, difficulty breathing, fatigue, and in severe cases, bluish lips or nails. It can affect people of all ages, but infants, young children, older adults, and individuals with weakened immune systems are at a higher risk. Early diagnosis is crucial for prompt treatment and to prevent complications.</p>
@@ -75,8 +74,7 @@ function Pneumonia_Blog() {
                                     loading="lazy"
                                     decoding="async"
                                 />
-                                {/* Optional: remove this figcaption if you don't want text under the image */}
-                                {/* <figcaption>Simple habits can keep you active and confident with a pacemaker.</figcaption> */}
+                                
                             </figure>
 
                             <br />
@@ -107,8 +105,7 @@ function Pneumonia_Blog() {
                                     loading="lazy"
                                     decoding="async"
                                 />
-                                {/* Optional: remove this figcaption if you don't want text under the image */}
-                                {/* <figcaption>Simple habits can keep you active and confident with a pacemaker.</figcaption> */}
+ 
                             </figure>
 
                             <br /> 
@@ -182,7 +179,7 @@ function Pneumonia_Blog() {
 
 
 
-                            {/* CTA */}
+                 
                             <footer className="cta-section" aria-labelledby="cta-title">
                                 <h2 id="cta-title" className="sr-only">Call to Action</h2>
                                 <h5 className="CTA">📞 Call us or visit us for a consultation. Your health deserves the best care.</h5>
@@ -193,12 +190,11 @@ function Pneumonia_Blog() {
                         </section>
                     </article>
                 </main>
-
-                {/* Sidebar */}
+ 
                 <aside className="pane pane--sidebar" aria-label="Other blog posts">
                     <div className="sidebar-inner">
 
-                        {/* TOC */}
+           
                         <nav className="toc" aria-label="On this page">
                             <p className="toc__label"><span style={{ color: "Red" }}>On this page</span></p>
                             <ul>

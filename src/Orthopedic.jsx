@@ -254,8 +254,7 @@ function Orthopedic() {
 
 
       <div style={styles.page}>
-        <div style={styles.container}>
-          {/* Hero */}
+        <div style={styles.container}> 
           <div style={styles.hero}>
             <div style={styles.heroImageWrapper}>
               <div style={styles.heroImageCard}>
@@ -324,7 +323,7 @@ function Orthopedic() {
             </div>
           </div>
 
-          {/* Services Offered */}
+    
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -334,7 +333,7 @@ function Orthopedic() {
             </div>
 
             <ul style={styles.list}>
-              {/* 1. Orthopedic Surgeries */}
+          
               <li style={styles.listItem}>
                 <strong>1. Orthopedic Surgeries:</strong>
                 <ul style={styles.list}>
@@ -353,7 +352,7 @@ function Orthopedic() {
                 </ul>
               </li>
 
-              {/* 2. Minimally Invasive Procedures */}
+ 
               <li style={styles.listItem}>
                 <strong>2. Minimally Invasive Procedures:</strong>
                 <ul style={styles.list}>
@@ -366,7 +365,7 @@ function Orthopedic() {
                 </ul>
               </li>
 
-              {/* 3. Rehabilitation Services */}
+          
               <li style={styles.listItem}>
                 <strong>3. Rehabilitation Services:</strong>
                 <ul style={styles.list}>
@@ -375,7 +374,7 @@ function Orthopedic() {
                 </ul>
               </li>
 
-              {/* 4. Emergency Orthopedic Care */}
+          
               <li style={styles.listItem}>
                 <strong>4. Emergency Orthopedic Care:</strong>
                 <ul style={styles.list}>
@@ -387,7 +386,7 @@ function Orthopedic() {
             </ul>
           </section>
 
-          {/* Facilities & Equipment */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -419,7 +418,7 @@ function Orthopedic() {
             </ul>
           </section>
 
-          {/* Team Members & Department Timings */}
+           
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -461,7 +460,7 @@ function Orthopedic() {
             </div>
           </section>
 
-          {/* Achievements & Highlights */}
+  
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -480,7 +479,7 @@ function Orthopedic() {
             </ul>
           </section>
 
-          {/* Patient Guidelines */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -499,7 +498,7 @@ function Orthopedic() {
             </ul>
           </section>
 
-          {/* FAQs */}
+     
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>

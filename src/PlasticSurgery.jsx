@@ -267,8 +267,7 @@ function PlasticSurgery() {
       </Helmet>
 
       <div style={styles.page}>
-        <div style={styles.container}>
-          {/* Hero */}
+        <div style={styles.container}> 
           <div style={styles.hero}>
             <div style={styles.heroImageWrapper}>
               <div style={styles.heroImageCard}>
@@ -373,7 +372,7 @@ function PlasticSurgery() {
             </div>
           </div>
 
-          {/* Services Offered */}
+        
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -408,7 +407,7 @@ function PlasticSurgery() {
             </div>
           </section>
 
-          {/* Facilities & Equipment */}
+   
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -425,7 +424,7 @@ function PlasticSurgery() {
             </ul>
           </section>
 
-          {/* Team Members */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -440,7 +439,7 @@ function PlasticSurgery() {
             </div>
           </section>
 
-          {/* Department Timings */}
+     
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -458,7 +457,7 @@ function PlasticSurgery() {
             </ul>
           </section>
 
-          {/* Achievements & Highlights */}
+        
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -474,7 +473,7 @@ function PlasticSurgery() {
             </ul>
           </section>
 
-          {/* Patient Guidelines */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -498,7 +497,7 @@ function PlasticSurgery() {
             </ul>
           </section>
 
-          {/* FAQs */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -565,7 +564,7 @@ function PlasticSurgery() {
         </div>
       </div>
 
-      {/* Responsive stacking */}
+ 
       <style>{`
         @media (max-width: 900px) {
           .heroGridFix {

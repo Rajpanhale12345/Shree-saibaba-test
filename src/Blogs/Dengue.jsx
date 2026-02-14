@@ -32,12 +32,11 @@ function Dengue_Blog() {
                 <meta name="og:description" content="" />
             </Helmet>
 
-            {/* 2-column page: main on the left, sticky sidebar on the right */}
             <div className="kidney-page">
-                {/* Main */}
+            
                 <main className="pane pane--main" aria-label="Recovery article">
                     <article className="kidney-article">
-                        {/* Hero */}
+                       
                         <header className="kidney-header">
                             <img style={{objectFit : "fill"}}
                                 src={Denguee}
@@ -55,7 +54,7 @@ function Dengue_Blog() {
                             </h1>
                         </header>
 
-                        {/* Content */}
+                      
                         <section className="kidney-content">
                             <h2 id="Introduction">Introduction</h2>
                             <p>Dengue, or more simply dengue fever, is a viral infection transmitted by mosquitoes that has become a serious public health threat worldwide. It occurs in tropical and sub-tropical areas of the world, with the major burden in urban and peri-urban areas. Dengue disease results from infection with the dengue virus (DENV), for which there exist four distinct, but closely related, serotypes (DENV-1, DENV-2, DENV-3, and DENV-4). A person can be infected by each serotype independently, resulting in potential lifetime risks of dengue infection.</p>
@@ -87,8 +86,7 @@ function Dengue_Blog() {
                                     loading="lazy"
                                     decoding="async"
                                 />
-                                {/* Optional: remove this figcaption if you don't want text under the image */}
-                                {/* <figcaption>Simple habits can keep you active and confident with a pacemaker.</figcaption> */}
+                               
                             </figure> <br />
 
                             <h2 id="Complication">Complication</h2>
@@ -126,8 +124,7 @@ function Dengue_Blog() {
                                     loading="lazy"
                                     decoding="async"
                                 />
-                                {/* Optional: remove this figcaption if you don't want text under the image */}
-                                {/* <figcaption>Simple habits can keep you active and confident with a pacemaker.</figcaption> */}
+                                
                             </figure> <br />
 
                             <h2 id="Prevention">Prevention</h2>
@@ -150,7 +147,6 @@ function Dengue_Blog() {
                             <br />
 
 
-                            {/* CTA */}
                             <footer className="cta-section" aria-labelledby="cta-title">
                                 <h2 id="cta-title" className="sr-only">Call to Action</h2>
                                 <h5 className="CTA">📞 Call us or visit us for a consultation. Your health deserves the best care.</h5>
@@ -162,11 +158,9 @@ function Dengue_Blog() {
                     </article>
                 </main>
 
-                {/* Sidebar */}
                 <aside className="pane pane--sidebar" aria-label="Other blog posts">
                     <div className="sidebar-inner">
 
-                        {/* TOC */}
                         <nav className="toc" aria-label="On this page">
                             <p className="toc__label"><span style={{color : "Red"}}>On this page</span></p>
                             <ul>

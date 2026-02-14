@@ -32,12 +32,12 @@ function Kidney_Blog() {
                 <meta name="og:description" content="" />
             </Helmet>
 
-            {/* 2-column page: main on the left, sticky sidebar on the right */}
+            
             <div className="kidney-page">
-                {/* Main */}
+                
                 <main className="pane pane--main" aria-label="Recovery article">
                     <article className="kidney-article">
-                        {/* Hero */}
+                        
                         <header className="kidney-header">
                             <img style={{ objectFit: "fill" }}
                                 src={Kidneyy}
@@ -55,7 +55,7 @@ function Kidney_Blog() {
                             </h1>
                         </header>
 
-                        {/* Content */}
+                      
                         <section className="kidney-content">
                             <h2 id="Introduction">Introduction</h2>
                             <p>Kidneys are vital organs that filter waste, balance fluids, and regulate vital nutrients in the body. Maintaining kidney health is critical, as dysfunction can lead to serious conditions such as chronic kidney disease (CKD). Lifestyle factors—diet, exercise, and avoidance of harmful substances—are key in preserving kidney function. Proactive changes can reduce the risk of developing kidney-related health issues. It's essential to understand how lifestyle choices directly influence kidney health, necessitating conscious efforts for optimal kidney function.</p>
@@ -74,8 +74,7 @@ function Kidney_Blog() {
                                     loading="lazy"
                                     decoding="async"
                                 />
-                                {/* Optional: remove this figcaption if you don't want text under the image */}
-                                {/* <figcaption>Simple habits can keep you active and confident with a pacemaker.</figcaption> */}
+                                
                             </figure>
 
                             <br />
@@ -164,8 +163,7 @@ function Kidney_Blog() {
                             
                             <br />
 
-
-                            {/* CTA */}
+ 
                             <footer className="cta-section" aria-labelledby="cta-title">
                                 <h2 id="cta-title" className="sr-only">Call to Action</h2>
                                 <h5 className="CTA">📞 Call us or visit us for a consultation. Your health deserves the best care.</h5>
@@ -177,11 +175,11 @@ function Kidney_Blog() {
                     </article>
                 </main>
 
-                {/* Sidebar */}
+             
                 <aside className="pane pane--sidebar" aria-label="Other blog posts">
                     <div className="sidebar-inner">
 
-                        {/* TOC */}
+                   
                         <nav className="toc" aria-label="On this page">
                             <p className="toc__label"><span style={{ color: "Red" }}>On this page</span></p>
                             <ul>

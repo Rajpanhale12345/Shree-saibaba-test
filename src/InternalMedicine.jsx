@@ -4,9 +4,9 @@ import Internal from './Images/InternalMedicine.jpg';
 import { Helmet } from "react-helmet-async";
 
 const SITE_NAME = "Shree Saibaba Multispeciality Hospital";
-const SITE_URL = "https://shreesaibabahospital.com"; // set your one canonical domain
+const SITE_URL = "https://shreesaibabahospital.com";  
 const CANONICAL_URL = `${SITE_URL}/internalmedicine`;
-const OG_IMAGE_URL = `${SITE_URL}/static/og/internal-medicine.jpg`; // create or change
+const OG_IMAGE_URL = `${SITE_URL}/static/og/internal-medicine.jpg`;  
 
 
 function InternalMedicine() {

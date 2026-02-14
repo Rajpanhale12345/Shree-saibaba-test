@@ -67,8 +67,7 @@ import Robotic_Surgery from "./Blogs/Robotic_Surgery";
 import Robotic_Joint from "./Blogs/Robotic_Joint";
 import Neurology_Blog from "./Blogs/Neurology_Blog";
 import GTranslate from "./GTranslate";
-import Urology_Blog from "./Blogs/Urology_Kidney";
-// import Popup from "./popup";
+import Urology_Blog from "./Blogs/Urology_Kidney"; 
 
 function App() {
   return (

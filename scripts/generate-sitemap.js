@@ -1,9 +1,7 @@
 import { writeFileSync } from "fs";
 import { SitemapStream, streamToPromise } from "sitemap";
 
-/**
- * Keep this list in sync with App.jsx routes
- */
+ 
 const routes = [
   "/",
   "/about",
@@ -43,7 +41,7 @@ const routes = [
   "/facilities",
   "/tieups",
 
-  // Blogs
+  
   "/nutrition",
   "/understanding",
   "/Cardiac_Surgery",

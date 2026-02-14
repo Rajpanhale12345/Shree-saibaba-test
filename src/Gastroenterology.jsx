@@ -316,7 +316,7 @@ function Gastroenterology() {
 
       <div style={styles.page}>
         <div style={styles.container}>
-          {/* Hero */}
+ 
           <div style={styles.hero}>
             <div style={styles.heroImageWrapper}>
               <div style={styles.heroImageCard}>
@@ -440,9 +440,8 @@ function Gastroenterology() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> 
 
-          {/* Services Offered */}
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -451,7 +450,7 @@ function Gastroenterology() {
               </div>
             </div>
 
-            {/* Diagnostic Services */}
+          
             <div style={{ marginBottom: "12px" }}>
               <div style={styles.tagListItem}>
                 <strong>Diagnostic Services</strong>
@@ -465,7 +464,7 @@ function Gastroenterology() {
               </ul>
             </div>
 
-            {/* Treatment Services */}
+ 
             <div style={{ marginBottom: "12px" }}>
               <div style={styles.tagListItem}>
                 <strong>Treatment Services</strong>
@@ -480,7 +479,7 @@ function Gastroenterology() {
               </ul>
             </div>
 
-            {/* Specialized / Emergency Services */}
+ 
             <div>
               <div style={styles.tagListItem}>
                 <strong>Emergency &amp; Specialized Care</strong>
@@ -494,7 +493,7 @@ function Gastroenterology() {
             </div>
           </section>
 
-          {/* Facilities & Equipment */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -511,7 +510,7 @@ function Gastroenterology() {
             </ul>
           </section>
 
-          {/* Department Timings */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -538,7 +537,7 @@ function Gastroenterology() {
             </div>
           </section>
 
-          {/* Achievements & Highlights */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -562,7 +561,7 @@ function Gastroenterology() {
             </ul>
           </section>
 
-          {/* Patient Guidelines */}
+  
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -586,7 +585,7 @@ function Gastroenterology() {
             </ul>
           </section>
 
-          {/* FAQs */}
+  
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -650,7 +649,7 @@ function Gastroenterology() {
         </div>
       </div>
 
-      {/* Optional: simple responsive stacking without external CSS */}
+ 
       <style>{`
         @media (max-width: 900px) {
           .heroGridFix { grid-template-columns: 1fr !important; }

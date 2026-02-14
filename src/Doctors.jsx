@@ -4,8 +4,7 @@ import Upper from "./Upper";
 import OPD from "./OPD.";
 import "./Doctors.css";
 import { useLocation } from "react-router-dom";
-
-// ——— your existing data ———
+ 
 const specialties = [
   {
     name: "Cardiology",
@@ -87,19 +86,17 @@ const specialties = [
   },
   { name: "Neurologist", color: "#0a9396", doctors: [{ name: "DR. RAHUL NAIK", degree: "MBBS, DM" }] },
 ];
-
-// ——— helpers ———
+  
 const normalize = (s) => s.toLowerCase().replace(/\s+/g, " ").trim();
 const getInitials = (full) => {
-  // takes "DR. FIRST LAST" → "FL"
+ 
   const clean = full.replace(/^dr\.?\s*/i, "");
   const parts = clean.split(/\s+/);
   const first = parts[0]?.[0] || "";
   const last = parts[parts.length - 1]?.[0] || "";
   return (first + last).toUpperCase();
 };
-
-// Flatten for A–Z Directory
+ 
 const flattenDoctors = (specs) =>
   specs.flatMap((s) =>
     s.doctors.map((d) => ({
@@ -113,7 +110,7 @@ const flattenDoctors = (specs) =>
 
 
 const Doctors = () => {
-  const [view, setView] = useState("specialty"); // "specialty" | "directory"
+  const [view, setView] = useState("specialty");  
   const [q, setQ] = useState("");
 
   const allDoctors = useMemo(() => flattenDoctors(specialties), []);
@@ -268,7 +265,7 @@ const Doctors = () => {
               <header
                 className="specialty-head"
                 style={{
-                  // subtle accent without icons
+                  
                   background:
                     "linear-gradient(180deg, rgba(10,147,150,0.12), rgba(10,147,150,0.03))",
                   borderColor: s.color

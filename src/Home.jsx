@@ -35,8 +35,8 @@ import spe19 from "./Images/spe19.webp";
 function Home() {
   const { pathname } = useLocation();
   const SITE_NAME = "Shree Saibaba Multispeciality Hospital";
-  const SITE_URL = "https://shreesaibabahospital.com"; // IMPORTANT: set your one canonical domain
-  const OG_IMAGE_URL = `${SITE_URL}/static/og/home.jpg`; // create or change
+  const SITE_URL = "https://shreesaibabahospital.com"; 
+  const OG_IMAGE_URL = `${SITE_URL}/static/og/home.jpg`; 
   const canonical = `${SITE_URL}${pathname}`;
 
 
@@ -118,8 +118,7 @@ function Home() {
           name="robots"
           content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"
         />
-
-        {/* Open Graph */}
+ 
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content={SITE_NAME} />
         <meta property="og:title" content="Shree Saibaba Multispeciality Hospital, Nashik" />
@@ -130,8 +129,7 @@ function Home() {
         <meta property="og:url" content={canonical} />
         <meta property="og:image" content={OG_IMAGE_URL} />
         <meta property="og:image:alt" content="Shree Saibaba Multispeciality Hospital in Nashik" />
-
-        {/* Twitter */}
+ 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Shree Saibaba Multispeciality Hospital, Nashik" />
         <meta
@@ -187,8 +185,7 @@ function Home() {
           >
             {heroSlides.map((slide, idx) => (
               <SwiperSlide key={`hero-${idx}`}>
-                <div className="hero-slide">
-                  {/* ✅ picture tag switches image based on screen width */}
+                <div className="hero-slide"> 
                   <picture>
                     <source media="(max-width: 768px)" srcSet={slide.mobileSrc} />
                     <img
@@ -211,8 +208,7 @@ function Home() {
         <div className="title"></div>
         <br /><br /><br />
         <br /><br />
-
-        {/* ✅ Specialities stays as before */}
+ 
         <p className="our" style={{ color: "blue", fontSize: "25px", fontWeight: 500 }}>
           Our Specialities
         </p>

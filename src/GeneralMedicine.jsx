@@ -393,7 +393,7 @@ function GeneralMedicine() {
             </div>
           </div>
 
-          {/* Services Offered */}
+         
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -402,7 +402,7 @@ function GeneralMedicine() {
               </div>
             </div>
 
-            {/* Diagnostic Services */}
+          
             <div style={{ marginBottom: '12px' }}>
               <div style={styles.tagListItem}><strong>Diagnostic Services</strong></div>
               <ul style={styles.list}>
@@ -413,7 +413,7 @@ function GeneralMedicine() {
               </ul>
             </div>
 
-            {/* Treatment Services */}
+     
             <div style={{ marginBottom: '12px' }}>
               <div style={styles.tagListItem}><strong>Treatment Services</strong></div>
               <ul style={styles.list}>
@@ -424,7 +424,7 @@ function GeneralMedicine() {
               </ul>
             </div>
 
-            {/* Specialized Services */}
+    
             <div>
               <div style={styles.tagListItem}><strong>Specialized Services</strong></div>
               <ul style={styles.list}>
@@ -437,7 +437,7 @@ function GeneralMedicine() {
             </div>
           </section>
 
-          {/* Facilities & Equipment */}
+       
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -455,7 +455,7 @@ function GeneralMedicine() {
             </ul>
           </section>
 
-          {/* Team Members */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -497,7 +497,7 @@ function GeneralMedicine() {
             </div>
           </section>
 
-          {/* Department Timings */}
+      
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -512,7 +512,7 @@ function GeneralMedicine() {
             </ul>
           </section>
 
-          {/* Achievements & Highlights */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -528,7 +528,7 @@ function GeneralMedicine() {
             </ul>
           </section>
 
-          {/* Patient Guidelines */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -544,7 +544,7 @@ function GeneralMedicine() {
             </ul>
           </section>
 
-          {/* FAQs */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>

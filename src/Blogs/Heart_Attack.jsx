@@ -29,12 +29,11 @@ function Heart_Attack_Blog() {
                 <meta name="og:description" content="" />
             </Helmet>
 
-            {/* 2-column page: main on the left, sticky sidebar on the right */}
             <div className="kidney-page">
-                {/* Main */}
+             
                 <main className="pane pane--main" aria-label="Recovery article">
                     <article className="kidney-article">
-                        {/* Hero */}
+                       
                         <header className="kidney-header">
                             <img style={{ objectFit: "fill" }}
                                 src={Heart_Attack1}
@@ -52,7 +51,6 @@ function Heart_Attack_Blog() {
                             </h1>
                         </header>
 
-                        {/* Content */}
                         <section className="kidney-content">
                             <h2 id="Introduction">Introduction</h2>
                             <p>At times, it is common for us to feel heartburn: that burning sensation behind the breastbone produced by stomach acid moving back up into the esophagus. But what if we told you heartburn could be more than just a nuisance? Shree Saibaba Heart Institute and Research Center (SSHIRC) would like to educate you about another connection that may surprise you: heartburn and one's heart attack.</p>
@@ -76,8 +74,7 @@ function Heart_Attack_Blog() {
                                     loading="lazy"
                                     decoding="async"
                                 />
-                                {/* Optional: remove this figcaption if you don't want text under the image */}
-                                {/* <figcaption>Simple habits can keep you active and confident with a pacemaker.</figcaption> */}
+                                
                             </figure> <br />
 
 
@@ -97,8 +94,8 @@ function Heart_Attack_Blog() {
                                     loading="lazy"
                                     decoding="async"
                                 />
-                                {/* Optional: remove this figcaption if you don't want text under the image */}
-                                {/* <figcaption>Simple habits can keep you active and confident with a pacemaker.</figcaption> */}
+                                
+                                
                             </figure> <br />
 
 
@@ -118,7 +115,7 @@ function Heart_Attack_Blog() {
                             <h2 style={{color: "blue"}}>Care for your heart starts with awareness. Let's come together for a healthier you!</h2>  <br />
                             <h2 style={{color : "blue"}}>Shree Saibaba Heart Institute and Research Center: A Partner in Heart Health</h2>  <br />
 
-                            {/* CTA */}
+                        
                             <footer className="cta-section" aria-labelledby="cta-title">
                                 <h2 id="cta-title" className="sr-only">Call to Action</h2>
                                 <h5 className="CTA">📞 Call us or visit us for a consultation. Your health deserves the best care.</h5>
@@ -130,11 +127,11 @@ function Heart_Attack_Blog() {
                     </article>
                 </main>
 
-                {/* Sidebar */}
+     
                 <aside className="pane pane--sidebar" aria-label="Other blog posts">
                     <div className="sidebar-inner">
 
-                        {/* TOC */}
+                    
                         <nav className="toc" aria-label="On this page">
                             <p className="toc__label"><span style={{ color: "Red" }}>On this page</span></p>
                             <ul>

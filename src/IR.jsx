@@ -353,8 +353,7 @@ function Interventional_Radiology() {
 
 
       <div style={styles.page}>
-        <div style={styles.container}>
-          {/* Hero */}
+        <div style={styles.container}> 
           <div style={styles.hero}>
             <div style={styles.heroImageWrapper}>
               <div style={styles.heroImageCard}>
@@ -463,8 +462,7 @@ function Interventional_Radiology() {
               </div>
             </div>
           </div>
-
-          {/* Services Offered */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -487,9 +485,8 @@ function Interventional_Radiology() {
                 </li>
               ))}
             </ul>
-          </section>
+          </section> 
 
-          {/* Facilities & Equipment */}
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -507,8 +504,7 @@ function Interventional_Radiology() {
               ))}
             </ul>
           </section>
-
-          {/* Specialised Imaging Services */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -525,8 +521,7 @@ function Interventional_Radiology() {
               ))}
             </ul>
           </section>
-
-          {/* Achievements & Highlights */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -543,8 +538,7 @@ function Interventional_Radiology() {
               ))}
             </ul>
           </section>
-
-          {/* Patient Guidelines */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -561,8 +555,7 @@ function Interventional_Radiology() {
               ))}
             </ul>
           </section>
-
-          {/* Team Members & Department Timings */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -593,8 +586,7 @@ function Interventional_Radiology() {
               </ul>
             </div>
           </section>
-
-          {/* FAQs */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>

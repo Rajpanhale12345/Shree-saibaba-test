@@ -18,7 +18,7 @@ function Sitemap() {
       letterSpacing: 0.2,
     },
 
-    // ✅ Responsive Grid (auto-fit)
+ 
     grid: {
       display: "grid",
       gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
@@ -35,7 +35,7 @@ function Sitemap() {
       color: "Black",
     },
 
-    // ✅ No fixed left margin — use padding for consistent spacing
+ 
     ul: {
       listStyle: "none",
       padding: 0,
@@ -57,7 +57,7 @@ function Sitemap() {
       flexShrink: 0,
     },
 
-    // ✅ Better tap target on mobile
+ 
     link: {
       color: "blue",
       textDecoration: "none",
@@ -70,7 +70,7 @@ function Sitemap() {
 
     linkHover: { color: "#c40000", textDecoration: "none" },
 
-    // ✅ Small-screen tweaks
+ 
     mobileWrap: {
       padding: "28px 14px",
     },
@@ -95,7 +95,7 @@ function Sitemap() {
     );
   };
 
-  // ✅ Simple responsive padding (no CSS file needed)
+   
   const [isMobile, setIsMobile] = React.useState(false);
   React.useEffect(() => {
     const check = () => setIsMobile(window.innerWidth < 600);

@@ -242,7 +242,7 @@ function CardioVascular() {
 
       <div style={styles.page}>
         <div style={styles.container}>
-          {/* Hero */}
+     
           <div style={styles.hero}>
             <div style={styles.heroImageWrapper}>
               <div style={styles.heroImageCard}>
@@ -368,8 +368,7 @@ function CardioVascular() {
               </div>
             </div>
           </div>
-
-          {/* Advanced Services */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -378,7 +377,7 @@ function CardioVascular() {
               </div>
             </div>
 
-            {/* Cardiac Surgeries */}
+  
             <ul style={styles.list}>
               <li style={styles.listItem}>
                 <strong>Cardiac Surgeries:</strong>
@@ -392,7 +391,7 @@ function CardioVascular() {
                 </ul>
               </li>
 
-              {/* MICAS */}
+  
               <li style={styles.listItem}>
                 <strong>Minimally Invasive Coronary Artery Surgery (MICAS):</strong>
                 <ul style={styles.list}>
@@ -405,7 +404,7 @@ function CardioVascular() {
                 </ul>
               </li>
 
-              {/* Post-Surgical Care */}
+     
               <li style={styles.listItem}>
                 <strong>Post-Surgical Care:</strong>
                 <ul style={styles.list}>
@@ -420,7 +419,7 @@ function CardioVascular() {
             </ul>
           </section>
 
-          {/* Advanced Facilities & Equipment */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -438,7 +437,7 @@ function CardioVascular() {
             </ul>
           </section>
 
-          {/* Achievements & Highlights */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -463,7 +462,7 @@ function CardioVascular() {
             </ul>
           </section>
 
-          {/* Team Members / Department Timings */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -501,7 +500,7 @@ function CardioVascular() {
             </div>
           </section>
 
-          {/* Patient Guidelines */}
+     
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -529,7 +528,7 @@ function CardioVascular() {
             </ul>
           </section>
 
-          {/* FAQs */}
+  
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>

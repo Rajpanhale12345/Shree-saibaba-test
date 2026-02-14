@@ -5,11 +5,9 @@ import { Helmet } from "react-helmet-async";
 
 const SITE_NAME = "Shree Saibaba Multispeciality Hospital";
 const SITE_URL = "https://shreesaibabamultispecialityhospital.com";
-
-// ✅ Use your real route slug here
+ 
 const CANONICAL_URL = `${SITE_URL}/ophthalmology`;
-
-// ✅ Put an OG image at this public URL (recommended), or replace with a real hosted image
+ 
 const OG_IMAGE_URL = `${SITE_URL}/static/og/ophthalmology.jpg`;
 
 function Ophthalmology() {

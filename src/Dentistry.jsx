@@ -482,7 +482,7 @@ function Dentistry() {
             </div>
           </div>
 
-          {/* Dental Services */}
+ 
           <section style={styles.section} aria-labelledby="dentistry-services">
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle} id="dentistry-services">
@@ -502,7 +502,7 @@ function Dentistry() {
             </ul>
           </section>
 
-          {/* Diagnostics */}
+ 
           <section style={styles.section} aria-labelledby="dentistry-diagnostics">
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle} id="dentistry-diagnostics">
@@ -520,7 +520,7 @@ function Dentistry() {
             </ul>
           </section>
 
-          {/* Treatment */}
+ 
           <section style={styles.section} aria-labelledby="dentistry-treatment">
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle} id="dentistry-treatment">
@@ -539,7 +539,7 @@ function Dentistry() {
             </ul>
           </section>
 
-          {/* Highlights */}
+   
           <section style={styles.section} aria-labelledby="dentistry-highlights">
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle} id="dentistry-highlights">
@@ -561,7 +561,7 @@ function Dentistry() {
             </ul>
           </section>
 
-          {/* Facilities */}
+     
           <section style={styles.section} aria-labelledby="dentistry-facilities">
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle} id="dentistry-facilities">
@@ -578,7 +578,7 @@ function Dentistry() {
             </ul>
           </section>
 
-          {/* Patient Guidelines */}
+ 
           <section style={styles.section} aria-labelledby="dentistry-guidelines">
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle} id="dentistry-guidelines">
@@ -594,8 +594,7 @@ function Dentistry() {
               <li style={styles.listItem}>For tooth pain, avoid self-medication and get an evaluation early.</li>
             </ul>
           </section>
-
-          {/* Team & Timings */}
+ 
           <section style={styles.section} aria-labelledby="dentistry-team-timings">
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle} id="dentistry-team-timings">
@@ -638,7 +637,7 @@ function Dentistry() {
             </div>
           </section>
 
-          {/* FAQs */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>

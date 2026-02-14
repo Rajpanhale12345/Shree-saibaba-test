@@ -43,12 +43,11 @@ function Angioplasty_Blog() {
                 <meta name="og:description" content="" />
             </Helmet>
 
-            {/* 2-column page: main on the left, sticky sidebar on the right */}
             <div className="kidney-page">
-                {/* Main */}
+      
                 <main className="pane pane--main" aria-label="Recovery article">
                     <article className="kidney-article">
-                        {/* Hero */}
+           
                         <header className="kidney-header">
                             <img style={{ objectFit: "fill" }}
                                 src={Kidneyy}
@@ -66,7 +65,6 @@ function Angioplasty_Blog() {
                             </h1>
                         </header>
 
-                        {/* Content */}
                         <section className="kidney-content">
                             <h2 id="Introduction">What Is Angioplasty?</h2>
 
@@ -198,8 +196,6 @@ function Angioplasty_Blog() {
 
                             <br />
 
-
-                            {/* CTA */}
                             <footer className="cta-section" aria-labelledby="cta-title">
                                 <h2 id="cta-title" className="sr-only">Call to Action</h2>
                                 <h5 className="CTA">📞 Call us or visit us for a consultation. Your health deserves the best care.</h5>
@@ -211,11 +207,9 @@ function Angioplasty_Blog() {
                     </article>
                 </main>
 
-                {/* Sidebar */}
                 <aside className="pane pane--sidebar" aria-label="Other blog posts">
                     <div className="sidebar-inner">
 
-                        {/* TOC */}
                         <nav className="toc" aria-label="On this page">
                             <p className="toc__label"><span style={{ color: "Red" }}>On this page</span></p>
                             <ul>

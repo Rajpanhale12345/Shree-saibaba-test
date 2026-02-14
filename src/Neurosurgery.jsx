@@ -357,7 +357,7 @@ function Neurosurgery() {
 
       <div style={styles.page}>
         <div style={styles.container}>
-          {/* Hero */}
+       
           <div style={styles.hero}>
             <div style={styles.heroImageWrapper}>
               <div style={styles.heroImageCard}>
@@ -522,8 +522,7 @@ function Neurosurgery() {
               </li>
             </ul>
           </section>
-
-          {/* Services Offered – Spine Surgeries */}
+ 
           <section style={styles.section} aria-labelledby="spine-surgeries">
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle} id="spine-surgeries">
@@ -552,8 +551,7 @@ function Neurosurgery() {
               </li>
             </ul>
           </section>
-
-          {/* Neurocritical Care */}
+ 
           <section style={styles.section} aria-labelledby="neurocritical-care">
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle} id="neurocritical-care">
@@ -571,8 +569,7 @@ function Neurosurgery() {
               </li>
             </ul>
           </section>
-
-          {/* Achievements & Highlights */}
+ 
           <section style={styles.section} aria-labelledby="achievements-highlights">
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle} id="achievements-highlights">
@@ -591,8 +588,7 @@ function Neurosurgery() {
               </li>
             </ul>
           </section>
-
-          {/* Facilities & Equipment */}
+ 
           <section style={styles.section} aria-labelledby="facilities-equipment">
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle} id="facilities-equipment">
@@ -615,8 +611,7 @@ function Neurosurgery() {
               </li>
             </ul>
           </section>
-
-          {/* Patient Guidelines */}
+ 
           <section style={styles.section} aria-labelledby="patient-guidelines">
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle} id="patient-guidelines">
@@ -638,8 +633,7 @@ function Neurosurgery() {
               </li>
             </ul>
           </section>
-
-          {/* Team Members & Department Timings */}
+ 
           <section style={styles.section} aria-labelledby="team-timings">
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle} id="team-timings">
@@ -684,9 +678,7 @@ function Neurosurgery() {
               </ul>
             </div>
           </section>
-
-          {/* FAQs */}
-          {/* FAQs */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>

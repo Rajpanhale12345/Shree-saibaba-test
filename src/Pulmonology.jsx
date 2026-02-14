@@ -491,7 +491,7 @@ function Pulmonology() {
             </div>
           </div>
 
-          {/* Pulmonology Services */}
+         
           <section style={styles.section} aria-labelledby="pulmonology-services">
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle} id="pulmonology-services">
@@ -511,7 +511,7 @@ function Pulmonology() {
             </ul>
           </section>
 
-          {/* Diagnostics & Testing */}
+   
           <section style={styles.section} aria-labelledby="pulmonology-diagnostics">
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle} id="pulmonology-diagnostics">
@@ -530,7 +530,7 @@ function Pulmonology() {
             </ul>
           </section>
 
-          {/* Treatment & Procedures */}
+  
           <section style={styles.section} aria-labelledby="pulmonology-treatment">
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle} id="pulmonology-treatment">
@@ -549,7 +549,7 @@ function Pulmonology() {
             </ul>
           </section>
 
-          {/* Achievements & Highlights */}
+ 
           <section style={styles.section} aria-labelledby="pulmonology-highlights">
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle} id="pulmonology-highlights">
@@ -571,7 +571,7 @@ function Pulmonology() {
             </ul>
           </section>
 
-          {/* Facilities & Equipment */}
+           
           <section style={styles.section} aria-labelledby="pulmonology-facilities">
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle} id="pulmonology-facilities">
@@ -589,7 +589,7 @@ function Pulmonology() {
             </ul>
           </section>
 
-          {/* Patient Guidelines */}
+ 
           <section style={styles.section} aria-labelledby="pulmonology-guidelines">
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle} id="pulmonology-guidelines">
@@ -612,7 +612,7 @@ function Pulmonology() {
             </ul>
           </section>
 
-          {/* Team Members & Department Timings */}
+ 
           <section style={styles.section} aria-labelledby="pulmonology-team-timings">
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle} id="pulmonology-team-timings">
@@ -657,7 +657,7 @@ function Pulmonology() {
           </section>
 
 
-          {/* FAQs */}
+   
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>

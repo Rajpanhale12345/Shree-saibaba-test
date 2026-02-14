@@ -5,13 +5,13 @@ import { Helmet } from "react-helmet-async";
 function Contact() {
   const [formData, setFormData] = useState({
     name: "",
-    mobile: "", // Changed from 'email' to 'mobile' to match the form input
+    mobile: "", 
     service: "",
     message: "",
   });
 
   const handleChange = (e) => {
-    // Correctly updates the state for any input by its 'name' attribute
+     
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
@@ -28,8 +28,8 @@ function Contact() {
       .then((response) => response.json())
       .then((data) => {
         console.log("Success:", data);
-        alert("Your message has been sent successfully!"); // User feedback
-        setFormData({ // Reset form after successful submission
+        alert("Your message has been sent successfully!");   
+        setFormData({  
           name: "",
           mobile: "",
           service: "",
@@ -38,7 +38,7 @@ function Contact() {
       })
       .catch((error) => {
         console.error("Error:", error);
-        alert("Failed to send message. Please try again."); // User feedback
+        alert("Failed to send message. Please try again."); 
       });
   };
 
@@ -82,7 +82,7 @@ function Contact() {
           placeholder="Your Name"
           value={formData.name}
           onChange={handleChange}
-          required // Added validation
+          required  
         />
         <input
           type="number"
@@ -90,14 +90,14 @@ function Contact() {
           placeholder="Your Mobile Number"
           value={formData.mobile}
           onChange={handleChange}
-          required // Added validation
+          required  
         />
         <select
           name="service"
           value={formData.service}
           onChange={handleChange}
           className="service-select"
-        // Added validation
+         
         >
           <option value="">Services</option>
           <option>Cardiology</option>
@@ -122,7 +122,7 @@ function Contact() {
           placeholder="Your Message"
           value={formData.message}
           onChange={handleChange}
-          required // Added validation
+          required  
         ></textarea>
         <button type="submit">Send</button>
       </form>

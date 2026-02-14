@@ -1,4 +1,4 @@
-// test.jsx
+ 
 import React, { useRef, useState, useEffect, useMemo } from "react";
 import gen1 from './Images/gen1.jpg'
 
@@ -18,7 +18,7 @@ import lad4 from './Images/lad4.jpg'
 
 
 export default function Test({ testimonials }) {
-  // ---- Data ----
+ 
   const defaultTestimonials = useMemo(
     () => [
       {
@@ -109,7 +109,7 @@ export default function Test({ testimonials }) {
     []
   );
 
-  // ---- Avatar URL resolver (prefers external, else local, else SVG) ----
+ 
   function getCustomAvatarUrl(id) {
     const avatarMap = {
   
@@ -117,13 +117,11 @@ export default function Test({ testimonials }) {
   
     };
 
-  
-    // Try local file under /public/images/avatars/{id}.png
-    // (Works in CRA, Vite, Next.js; if file doesn't exist, onError will swap to SVG.)
+ 
    
   }
 
-  // Merge incoming testimonials with avatar URLs
+ 
   const items = (testimonials && testimonials.length ? testimonials : defaultTestimonials).map(
     (t, idx) => ({
       ...t,
@@ -131,13 +129,13 @@ export default function Test({ testimonials }) {
     })
   );
 
-  // ---- Scroller state ----
+ 
   const scrollerRef = useRef(null);
   const [_canScrollLeft, setCanScrollLeft] = useState(false);
   const [_canScrollRight, setCanScrollRight] = useState(false);
-  const [cardBasisPct, setCardBasisPct] = useState(85); // responsive width per card
+  const [cardBasisPct, setCardBasisPct] = useState(85);  
 
-  // Responsive card width without media queries in CSS files
+ 
   useEffect(() => {
     const setBasis = () => {
       const w = window.innerWidth;
@@ -185,7 +183,7 @@ export default function Test({ testimonials }) {
     el.scrollBy({ left: delta, behavior: "smooth" });
   };
 
-  // Enable desktop arrows via inline CSS hack (kept for parity)
+ 
   useEffect(() => {
     const style = document.createElement("style");
     style.innerHTML = `
@@ -197,11 +195,11 @@ export default function Test({ testimonials }) {
     return () => document.head.removeChild(style);
   }, []);
 
-  // ---- Render ----
+ 
   return (
     <section style={{ width: "100%" }}>
       <div style={{ position: "relative", margin: "0 auto", maxWidth: 1200 }}>
-        {/* Heading */}
+       
         <div
           style={{
             marginBottom: 24,
@@ -219,7 +217,7 @@ export default function Test({ testimonials }) {
           </div>
         </div>
 
-        {/* Scroller */}
+    
         <div
           ref={scrollerRef}
           role="region"
@@ -283,7 +281,7 @@ export default function Test({ testimonials }) {
           })}
         </div>
 
-        {/* Mobile controls */}
+        
         <div style={{ display: "flex", gap: 8, padding: 8 }}>
          <br /><br />
         </div>
@@ -306,7 +304,7 @@ export default function Test({ testimonials }) {
 //   cursor: "pointer",
 // };
 
-// ---- Helpers ----
+ 
 function getInitials(name = "?") {
   return name
     .split(" ")

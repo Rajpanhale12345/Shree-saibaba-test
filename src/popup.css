@@ -8,8 +8,8 @@
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
   z-index: 999;
-  width: 400px;          /* Default size on desktop */
-  max-width: 90%;        /* Prevents overflow on small screens */
+  width: 400px;        
+  max-width: 90%;      
 }
 
 .popup img {
@@ -20,24 +20,19 @@
   border-radius: 8px;
 }
 
-/* ----------------------------- */
-/* 📱 Small screens (phones) */
-/* ----------------------------- */
+ 
 @media (max-width: 600px) {
   .popup {
-    width: 90%;        /* Popup becomes almost full-width */
+    width: 90%;         
     padding: 15px;
     top: 60%;
   }
 
   .popup img {
-    height: auto;      /* Let the image shrink naturally */
+    height: auto;       
   }
 }
-
-/* ----------------------------- */
-/* 📱 Medium screens (tablets) */
-/* ----------------------------- */
+ 
 @media (min-width: 601px) and (max-width: 900px) {
   .popup {
     width: 70%;
@@ -49,15 +44,13 @@
   }
 }
 
-/* ----------------------------- */
-/* 🖥️ Large screens (desktops) */
-/* ----------------------------- */
+ 
 @media (min-width: 901px) {
   .popup {
-    width: 400px;     /* Keep your original size */
+    width: 400px;      
   }
 
   .popup img {
-    height: 400px;    /* Your original image height */
+    height: 400px;     
   }
 }

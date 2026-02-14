@@ -32,9 +32,9 @@ function Spine_Blog() {
       </Helmet>
 
 
-      {/* Normal page scroll; only sidebar has its own scroll */}
+ 
       <div className="blog-page">
-        {/* Left: Main content (no independent scroll) */}
+       
         <main className="pane pane--main" aria-label="Blog article">
           <article className="blog-article">
             <header className="blog-header">
@@ -113,7 +113,7 @@ function Spine_Blog() {
           </article>
         </main>
 
-        {/* Right: Sticky sidebar with its own scroll */}
+ 
         <aside className="pane pane--sidebar" aria-label="Other blog posts">
           <div className="sidebar-inner">
 

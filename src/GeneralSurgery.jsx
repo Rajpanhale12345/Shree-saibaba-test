@@ -315,7 +315,7 @@ function GeneralSurgery() {
 
       <div style={styles.page}>
         <div style={styles.container}>
-          {/* Hero */}
+ 
           <div style={styles.hero}>
             <div style={styles.heroImageWrapper}>
               <div style={styles.heroImageCard}>
@@ -460,7 +460,7 @@ function GeneralSurgery() {
             </div>
           </div>
 
-          {/* Services Offered */}
+     
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -469,7 +469,7 @@ function GeneralSurgery() {
               </div>
             </div>
 
-            {/* Diagnostic Services */}
+          
             <div style={{ marginBottom: "12px" }}>
               <div style={styles.tagListItem}>
                 <strong>Diagnostic Services</strong>
@@ -488,7 +488,7 @@ function GeneralSurgery() {
               </ul>
             </div>
 
-            {/* Treatment Services */}
+    
             <div style={{ marginBottom: "12px" }}>
               <div style={styles.tagListItem}>
                 <strong>Treatment Services</strong>
@@ -511,7 +511,7 @@ function GeneralSurgery() {
               </ul>
             </div>
 
-            {/* Specialized Services */}
+ 
             <div>
               <div style={styles.tagListItem}>
                 <strong>Specialized Services</strong>
@@ -532,7 +532,7 @@ function GeneralSurgery() {
             </div>
           </section>
 
-          {/* Facilities & Equipment */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -558,7 +558,7 @@ function GeneralSurgery() {
             </ul>
           </section>
 
-          {/* Team Members */}
+  
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -595,8 +595,7 @@ function GeneralSurgery() {
             </div>
           </section>
 
-
-          {/* Department Timings */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -617,7 +616,7 @@ function GeneralSurgery() {
             </ul>
           </section>
 
-          {/* Achievements & Highlights */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -642,8 +641,7 @@ function GeneralSurgery() {
               </li>
             </ul>
           </section>
-
-          {/* Patient Guidelines */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -671,7 +669,7 @@ function GeneralSurgery() {
             </ul>
           </section>
 
-          {/* FAQs */}
+    
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>

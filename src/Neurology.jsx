@@ -292,8 +292,7 @@ function Neurology() {
           name="robots"
           content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"
         />
-
-        {/* Open Graph */}
+ 
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content={SITE_NAME} />
         <meta property="og:title" content={`${SITE_NAME} | Neurology Department, Nashik`} />
@@ -303,15 +302,12 @@ function Neurology() {
         <meta
           property="og:image:alt"
           content="Neurology Department - Shree Saibaba Multispeciality Hospital, Nashik"
-        />
-
-        {/* Twitter */}
+        /> 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={`${SITE_NAME} | Neurology Department, Nashik`} />
         <meta name="twitter:description" content={pageDescription} />
         <meta name="twitter:image" content={OG_IMAGE_URL} />
-
-        {/* Structured Data */}
+ 
         <script type="application/ld+json">{JSON.stringify(jsonLdDepartment)}</script>
         <script type="application/ld+json">{JSON.stringify(jsonLdFaq)}</script>
       </Helmet>
@@ -319,7 +315,7 @@ function Neurology() {
 
       <div style={styles.page}>
         <div style={styles.container}>
-          {/* Hero */}
+       
           <div style={styles.hero}>
             <div style={styles.heroImageWrapper}>
               <div style={styles.heroImageCard}>
@@ -400,8 +396,7 @@ function Neurology() {
               </div>
             </div>
           </div>
-
-          {/* Services Offered */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -445,8 +440,7 @@ function Neurology() {
               </li>
             </ul>
           </section>
-
-          {/* Facilities & Equipment */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -470,8 +464,7 @@ function Neurology() {
               </li>
             </ul>
           </section>
-
-          {/* Achievements & Highlights */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -489,9 +482,8 @@ function Neurology() {
                 clinical outcomes.
               </li>
             </ul>
-          </section>
+          </section> 
 
-          {/* Patient Guidelines */}
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -513,8 +505,7 @@ function Neurology() {
               </li>
             </ul>
           </section>
-
-          {/* Team Members & Department Timings */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -539,8 +530,7 @@ function Neurology() {
               </ul>
             </div>
           </section>
-
-          {/* FAQs */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>

@@ -71,9 +71,7 @@ function PressReleases() {
                         className="thumbnail"
                     />
                 ))}
-            </div>
-
-            {/* Modal for enlarged image */}
+            </div> 
             {selectedImage && (
                 <div className="modal-overlay" onClick={() => setSelectedImage(null)}>
                     <div className="modal-content" onClick={(e) => e.stopPropagation()}>
