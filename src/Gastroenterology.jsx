@@ -15,7 +15,6 @@ const styles = {
     color: "#0f172a",
   },
 
-  // ✅ HERO: grid on desktop, stacks on mobile via CSS class + media query below
   hero: {
     display: "grid",
     gridTemplateColumns: "minmax(280px, 420px) 1fr",
@@ -35,13 +34,12 @@ const styles = {
     border: "1px solid rgba(148,163,184,0.4)",
     background: "#0f172a",
 
-    // ✅ responsive height for the image card
     height: "clamp(220px, 32vw, 420px)",
   },
   heroImage: {
     width: "100%",
     height: "100%",
-    objectFit: "cover", // ✅ prevents stretching
+    objectFit: "cover",
     objectPosition: "center",
     display: "block",
     opacity: 0.95,
@@ -123,7 +121,6 @@ const styles = {
     marginRight: "6px",
   },
 
-  // Section styles
   section: {
     borderRadius: "18px",
     padding: "22px 22px 20px",
@@ -190,7 +187,6 @@ const styles = {
     marginBottom: "6px",
   },
 
-  // FAQs
   faqList: {
     display: 'grid',
     gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
@@ -220,40 +216,103 @@ const styles = {
 
 function Gastroenterology() {
 
-
-  const canonicalUrl = "https://shreesaibabamultispecialityhospital.com/gastroenterology";
-
-
-  const jsonLd = {
+  const jsonLdDepartment = {
     "@context": "https://schema.org",
-    "@type": "Hospital",
-    name: "Shree Saibaba Multispeciality Hospital",
+    "@type": "MedicalClinic",
+    name: SITE_NAME,
+    url: CANONICAL_URL,
     department: {
-      "@type": "MedicalClinic",
+      "@type": "MedicalBusiness",
       name: "Gastroenterology Department",
       medicalSpecialty: "Gastroenterology",
-      areaServed: "Nashik, Maharashtra",
-    },
+      description:
+        "Comprehensive gastroenterology care including endoscopy, colonoscopy, liver & pancreas care, IBD management and emergency support.",
+      areaServed: { "@type": "City", name: "Nashik" }
+    }
   };
+
+  const jsonLdFaq = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "When should I consult a gastroenterologist?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Consult a gastroenterologist for persistent acidity/heartburn, abdominal pain, bloating, constipation/diarrhea, blood in vomit or stool, jaundice, unexplained weight loss, or long-lasting digestive symptoms."
+        }
+      },
+      {
+        "@type": "Question",
+        name: "Is endoscopy or colonoscopy painful?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "These procedures are generally well-tolerated. Your doctor will explain the process and use appropriate comfort measures so the test is safe and as comfortable as possible."
+        }
+      },
+      {
+        "@type": "Question",
+        name: "Do I need an appointment?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Walk-ins may be accepted, but an appointment helps reduce waiting time—especially for procedures and follow-ups."
+        }
+      },
+      {
+        "@type": "Question",
+        name: "What symptoms require emergency care?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Severe abdominal pain, vomiting blood, black stools, sudden jaundice with confusion, or suspected bowel obstruction require urgent evaluation."
+        }
+      },
+      {
+        "@type": "Question",
+        name: "Will I get diet and lifestyle guidance?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Yes. We provide dietary advice, lifestyle guidance, and preventive counselling tailored to your diagnosis for long-term symptom control and better gut health."
+        }
+      }
+    ]
+  };
+
+
+  const SITE_NAME = "Shree Saibaba Multispeciality Hospital";
+  const SITE_URL = "https://shreesaibabamultispecialityhospital.com";
+  const CANONICAL_URL = `${SITE_URL}/gastroenterology`;
+  const OG_IMAGE_URL = `https://shreesaibabamultispecialityhospital.com/assets/gastro-Bc8v_u3q.jpg`;
 
 
   return (
     <>
       <Helmet>
-        <title>Gastroenterology | Shree Saibaba Multispeciality Hospital</title>
-        <meta name="description" content="Comprehensive gastroenterology care in Nashik at Shree Saibaba Multispeciality Hospital: endoscopy, colonoscopy, liver & pancreas care, IBD management, and 24x7 emergency support." />
-        <meta name="keywords" content="gastroenterology hospital Nashik, gastroenterologist Nashik, endoscopy Nashik, colonoscopy Nashik, liver specialist Nashik, pancreas specialist Nashik, IBD treatment Nashik, ERCP Nashik, Shree Saibaba Multispeciality Hospital gastroenterology" />
-        <link rel="canonical" href={canonicalUrl} />
-        <meta property="og:title" content="Gastroenterology Department | Shree Saibaba Multispeciality Hospital" />
-        <meta property="og:description" content="Advanced gastroenterology services including endoscopy, colonoscopy, liver disease management, IBD care, and 24x7 emergency support at Shree Saibaba Multispeciality Hospital, Nashik." />
+        <title>Gastroenterology | Best Gastroenterology Hospital in Nashik</title>
+        <meta name="description" content="Comprehensive gastroenterology care in Nashik: endoscopy, colonoscopy, liver & pancreas care, IBD management, preventive screening, and 24x7 emergency support at Shree Saibaba Multispeciality Hospital." />
+        <link rel="canonical" href={CANONICAL_URL} />
+        <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:site_name" content={SITE_NAME} />
+        <meta property="og:title" content="Gastroenterology Department | Shree Saibaba Multispeciality Hospital, Nashik" />
+        <meta property="og:description" content="Advanced gastroenterology services: endoscopy, colonoscopy, liver disease management, IBD care, and 24x7 emergency support in Nashik." />
+        <meta property="og:url" content={CANONICAL_URL} />
+        <meta property="og:image" content={OG_IMAGE_URL} />
+        <meta property="og:image:alt" content="Gastroenterology Department - Shree Saibaba Multispeciality Hospital, Nashik" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Gastroenterology Department | Shree Saibaba Multispeciality Hospital" />
-        <meta name="twitter:description" content="Expert digestive care in Nashik: endoscopy, colonoscopy, liver & pancreas care, IBD management, and emergency services." />
+        <meta name="twitter:title" content="Gastroenterology Department | Shree Saibaba Multispeciality Hospital, Nashik" />
+        <meta name="twitter:description" content="Expert digestive care: endoscopy, colonoscopy, liver & pancreas care, IBD management and emergency services in Nashik." />
+        <meta name="twitter:image" content={OG_IMAGE_URL} />
 
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(jsonLdDepartment)}</script>
+        <script type="application/ld+json">{JSON.stringify(jsonLdFaq)}</script>
       </Helmet>
+
 
       <div style={styles.page}>
         <div style={styles.container}>
@@ -263,7 +322,8 @@ function Gastroenterology() {
               <div style={styles.heroImageCard}>
                 <img
                   src={gastro}
-                  alt="Cardiovascular Thoracic Surgery Department"
+                  alt="Gastroenterology Department at Shree Saibaba Multispeciality Hospital in Nashik"
+                  loading="lazy"
                   style={styles.heroImage}
                 />
               </div>

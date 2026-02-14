@@ -16,7 +16,6 @@ const styles = {
     color: "#0f172a",
   },
 
-  // ✅ HERO: grid on desktop, stacks on mobile via CSS class + media query below
   hero: {
     display: "grid",
     gridTemplateColumns: "minmax(280px, 420px) 1fr",
@@ -36,13 +35,12 @@ const styles = {
     border: "1px solid rgba(148,163,184,0.4)",
     background: "white",
 
-    // ✅ responsive height for the image card
     height: "clamp(220px, 32vw, 420px)",
   },
   heroImage: {
     width: "100%",
     height: "100%",
-    objectFit: "cover", // ✅ prevents stretching
+    objectFit: "cover",
     objectPosition: "center",
     display: "block",
     opacity: 0.95,
@@ -125,7 +123,6 @@ const styles = {
     marginRight: "6px",
   },
 
-  // Section styles
   section: {
     borderRadius: "18px",
     padding: "22px 22px 20px",
@@ -192,7 +189,6 @@ const styles = {
     marginBottom: "6px",
   },
 
-  // FAQs
   faqList: {
     display: 'grid',
     gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
@@ -219,28 +215,106 @@ const styles = {
   },
 };
 
+const SITE_NAME = "Shree Saibaba Multispeciality Hospital";
+const SITE_URL = "https://shreesaibabamultispecialityhospital.com";
+const CANONICAL_URL = `${SITE_URL}/generalmedicine`;
+const OG_IMAGE_URL = `${SITE_URL}/assets/generalmedicinedep-DwsdZENh.webp`;
+
+
 function GeneralMedicine() {
   return (
     <>
       <Helmet>
-        <title>General Medicine | Shree Saibaba Multispeciality Hospital</title>
-        <meta
-          name="description"
-          content="Shree Saibaba Multispeciality Hospital offers comprehensive General Medicine care including diagnosis, treatment, and long-term management of diabetes, hypertension, infections, respiratory disorders, and preventive health check-ups."
-        />
-        <meta
-          name="keywords"
-          content="general medicine hospital Nashik, general physician Nashik, diabetes care Nashik, hypertension clinic Nashik, preventive health checkup Nashik, Shree Saibaba Multispeciality Hospital general medicine"
-        />
-        <meta
-          name="og:description"
-          content="Holistic General Medicine services with experienced physicians, advanced diagnostics, ICU support, preventive screenings, and 24x7 emergency care at Shree Saibaba Multispeciality Hospital."
-        />
+        <title>General Medicine | Best General Medicine Hospital in Nashik</title>
+        <meta name="description" content="General Medicine care in Nashik at Shree Saibaba Multispeciality Hospital: diagnosis and long-term management of diabetes, hypertension, infections, respiratory disorders, preventive health check-ups, ICU support and 24x7 emergency services." />
+        <link rel="canonical" href={CANONICAL_URL} />
+        <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content={SITE_NAME} />
+        <meta property="og:title" content="General Medicine Department | Shree Saibaba Multispeciality Hospital, Nashik" />
+        <meta property="og:description" content="Comprehensive general medicine services in Nashik: diabetes and hypertension clinics, infection and respiratory care, preventive check-ups, ICU support and 24x7 emergency services." />
+        <meta property="og:url" content={CANONICAL_URL} />
+        <meta property="og:image" content={OG_IMAGE_URL} />
+        <meta property="og:image:alt" content="General Medicine Department - Shree Saibaba Multispeciality Hospital, Nashik" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="General Medicine Department | Shree Saibaba Multispeciality Hospital, Nashik" />
+        <meta name="twitter:description" content="Physicians and general medicine care in Nashik: diabetes, hypertension, infections, respiratory disorders, preventive check-ups, ICU support and emergency services." />
+        <meta name="twitter:image" content={OG_IMAGE_URL} />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "MedicalClinic",
+            name: SITE_NAME,
+            url: CANONICAL_URL,
+            department: {
+              "@type": "MedicalBusiness",
+              name: "General Medicine Department",
+              medicalSpecialty: "InternalMedicine",
+              description:
+                "Diagnosis, treatment and long-term management of chronic and acute medical conditions including diabetes, hypertension, infections and respiratory disorders, with preventive check-ups and emergency support.",
+              areaServed: { "@type": "City", name: "Nashik" }
+            }
+          })}
+        </script>
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "When should I visit a General Physician?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text:
+                    "Visit if you have fever, cough, fatigue, body pain, blood pressure issues, diabetes concerns, digestive problems, or any persistent symptoms."
+                }
+              },
+              {
+                "@type": "Question",
+                name: "Can the General Medicine department manage chronic diseases?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text:
+                    "Yes. Conditions like diabetes, hypertension, thyroid disorders, and asthma are routinely managed with regular follow-up and personalised treatment plans."
+                }
+              },
+              {
+                "@type": "Question",
+                name: "Do I need an appointment beforehand?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text:
+                    "Walk-ins are accepted, but a prior appointment helps reduce waiting time."
+                }
+              },
+              {
+                "@type": "Question",
+                name: "Are routine blood tests available in the hospital?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text:
+                    "Yes, major blood investigations and screening tests are available in our laboratory."
+                }
+              },
+              {
+                "@type": "Question",
+                name: "Will the doctor guide me on lifestyle and diet changes?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text:
+                    "Yes. Physicians provide lifestyle, dietary, and medication counselling for long-term disease control."
+                }
+              }
+            ]
+          })}
+        </script>
       </Helmet>
 
       <div style={styles.page}>
         <div style={styles.container}>
-          {/* Hero */}
           <div style={styles.hero}>
             <div style={styles.heroImageWrapper}>
               <div style={styles.heroImageCard}>
@@ -248,6 +322,7 @@ function GeneralMedicine() {
                   src={generalmedicine}
                   alt="General Medicine Department"
                   style={styles.heroImage}
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -408,12 +483,12 @@ function GeneralMedicine() {
                 <li style={styles.tagListItem}>
                   <strong>Dr. Bharat Patil</strong>
                   <br />
-                 	10:00 am to 5:00 pm
+                  10:00 am to 5:00 pm
                 </li>
                 <li style={styles.tagListItem}>
                   <strong>Dr. Rahul Barhate</strong>
                   <br />
-                 		9:00 am to 2:00 pm
+                  9:00 am to 2:00 pm
                 </li>
                 <li style={styles.tagListItem}>
                   <strong>Emergency Services:</strong> 24 x 7

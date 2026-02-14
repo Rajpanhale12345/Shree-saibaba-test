@@ -15,7 +15,6 @@ const styles = {
     color: "#0f172a",
   },
 
-  // ✅ HERO: grid on desktop, stacks on mobile via CSS class + media query below
   hero: {
     display: "grid",
     gridTemplateColumns: "minmax(280px, 420px) 1fr",
@@ -35,13 +34,12 @@ const styles = {
     border: "1px solid rgba(148,163,184,0.4)",
     background: "#0f172a",
 
-    // ✅ responsive height for the image card
     height: "clamp(220px, 32vw, 420px)",
   },
   heroImage: {
     width: "100%",
     height: "100%",
-    objectFit: "cover", // ✅ prevents stretching
+    objectFit: "cover",
     objectPosition: "center",
     display: "block",
     opacity: 0.95,
@@ -124,7 +122,6 @@ const styles = {
     marginRight: "6px",
   },
 
-  // Section styles
   section: {
     borderRadius: "18px",
     padding: "22px 22px 20px",
@@ -191,7 +188,6 @@ const styles = {
     marginBottom: "6px",
   },
 
-  // FAQs
   faqList: {
     display: 'grid',
     gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
@@ -218,24 +214,107 @@ const styles = {
   },
 };
 
+const SITE_NAME = "Shree Saibaba Multispeciality Hospital";
+const PAGE_TITLE = "Cardiology | Best Cardiology Hospital in Nashik";
+const PAGE_DESCRIPTION = "Advanced cardiology care in Nashik, Maharashtra - experienced cardiologists, 24x7 cardiac emergency, cath labs, cardiac ICU (ICCU), diagnostics, and heart check-up packages at Shree Saibaba Multispeciality Hospital.";
+const CANONICAL_URL = "https://shreesaibabamultispecialityhospital.com/cardiology";
+const OG_IMAGE_URL = "https://shreesaibabamultispecialityhospital.com/assets/cardiodep-Db5VvU1f.jpg";
+
+
 function Cardiology() {
   return (
     <>
       <Helmet>
-        <title>Cardiology | Shree Saibaba Multispeciality Hospital</title>
-        <meta
-          name="description"
-          content="Shree Saibaba Multispeciality Hospital offers advanced cardiology care in Nashik, Maharashtra, with experienced cardiologists, 24x7 cardiac emergency services, cath labs, cardiac ICU, and comprehensive heart check-up packages."
-        />
-        <meta
-          name="keywords"
-          content="cardiology hospital Nashik, best heart hospital Nashik, cardiac care Nashik, Shree Saibaba Multispeciality Hospital cardiology"
-        />
-        <meta
-          name="og:description"
-          content="Shree Saibaba Multispeciality Hospital is a leading center for advanced cardiac care in Nashik, offering interventional cardiology, cardiac surgery, diagnostics, rehabilitation, and 24x7 emergency services."
-        />
+        <title>{PAGE_TITLE}</title>
+        <meta name="description" content={PAGE_DESCRIPTION} />
+        <link rel="canonical" href={CANONICAL_URL} />
+        <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content={SITE_NAME} />
+        <meta property="og:title" content={PAGE_TITLE} />
+        <meta property="og:description" content={PAGE_DESCRIPTION} />
+        <meta property="og:url" content={CANONICAL_URL} />
+        <meta property="og:image" content={OG_IMAGE_URL} />
+        <meta property="og:image:alt" content="Cardiology Department - Shree Saibaba Multispeciality Hospital, Nashik" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={PAGE_TITLE} />
+        <meta name="twitter:description" content={PAGE_DESCRIPTION} />
+        <meta name="twitter:image" content={OG_IMAGE_URL} />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "MedicalClinic",
+            "name": SITE_NAME,
+            "url": CANONICAL_URL,
+            "department": {
+              "@type": "MedicalBusiness",
+              "name": "Cardiology Department",
+              "description": PAGE_DESCRIPTION,
+              "medicalSpecialty": "Cardiovascular"
+            },
+            "areaServed": {
+              "@type": "City",
+              "name": "Nashik"
+            }
+          })}
+        </script>
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What should I expect during a cardiac stress test?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text":
+                    "A cardiac stress test monitors your heart’s activity while you walk on a treadmill or ride a stationary bike. It helps diagnose heart conditions and assess your heart’s response to physical activity."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do I prepare for an echocardiogram?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text":
+                    "Usually no special preparation is required. You may need to remove clothing from the waist up and wear a gown during the procedure."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are the early symptoms of heart problems?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text":
+                    "Common early symptoms include chest pain or discomfort, shortness of breath, fatigue, palpitations, dizziness, and swelling in the legs. Seek medical advice promptly if you notice these symptoms."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I exercise after a heart attack or surgery?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text":
+                    "Yes, but only under your doctor’s guidance. Cardiac rehabilitation programs are often recommended to help you return to safe levels of physical activity."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What foods should I avoid for better heart health?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text":
+                    "Limit fried foods, processed meats, excess salt, sugary drinks, and trans fats. Focus on fruits, vegetables, whole grains, lean proteins, and healthy fats."
+                }
+              }
+            ]
+          })}
+        </script>
       </Helmet>
+
 
       <div style={styles.page}>
         <div style={styles.container}>
@@ -300,9 +379,9 @@ function Cardiology() {
                   procedures and treatment.
                 </p>
                 <p style={styles.heroParagraph}>
-                  The focus is on enhancing long term heart health and providing improved quality of 
-                  life to all patients. Individuals seeking a qualified specialist or patient care provider 
-                  for cardiovascular disease will find the Shree Saibaba Multispeciality Hospital to be the 
+                  The focus is on enhancing long term heart health and providing improved quality of
+                  life to all patients. Individuals seeking a qualified specialist or patient care provider
+                  for cardiovascular disease will find the Shree Saibaba Multispeciality Hospital to be the
                   place to go for all types of cardiovascular care in Nashik.
                 </p>
 

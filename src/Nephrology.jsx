@@ -15,7 +15,6 @@ const styles = {
     color: "#0f172a",
   },
 
-  // ✅ HERO: grid on desktop, stacks on mobile via CSS class + media query below
   hero: {
     display: "grid",
     gridTemplateColumns: "minmax(280px, 420px) 1fr",
@@ -35,13 +34,12 @@ const styles = {
     border: "1px solid rgba(148,163,184,0.4)",
     background: "#0f172a",
 
-    // ✅ responsive height for the image card
     height: "clamp(220px, 32vw, 420px)",
   },
   heroImage: {
     width: "100%",
     height: "100%",
-    objectFit: "cover", // ✅ prevents stretching
+    objectFit: "cover",
     objectPosition: "center",
     display: "block",
     opacity: 0.95,
@@ -124,7 +122,6 @@ const styles = {
     marginRight: "6px",
   },
 
-  // Section styles
   section: {
     borderRadius: "18px",
     padding: "22px 22px 20px",
@@ -191,7 +188,6 @@ const styles = {
     marginBottom: "6px",
   },
 
-  // FAQs
   faqList: {
     display: 'grid',
     gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
@@ -218,24 +214,104 @@ const styles = {
   },
 };
 
+const SITE_NAME = "Shree Saibaba Multispeciality Hospital";
+const SITE_URL = "https://shreesaibabamultispecialityhospital.com"; 
+const CANONICAL_URL = `${SITE_URL}/nephrology`;
+const OG_IMAGE_URL = `${SITE_URL}/assets/nephrology-DVXC12eA.jpg`;
+
+const jsonLdDepartment = {
+  "@context": "https://schema.org",
+  "@type": "MedicalClinic",
+  name: SITE_NAME,
+  url: CANONICAL_URL,
+  department: {
+    "@type": "MedicalBusiness",
+    name: "Nephrology Department",
+    medicalSpecialty: "Nephrology",
+    description:
+      "Kidney care including CKD and AKI management, dialysis support, renal biopsy evaluation, electrolyte imbalance care and renal emergency services.",
+    areaServed: { "@type": "City", name: "Nashik" }
+  }
+};
+
+const jsonLdFaq = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "When should I see a nephrologist?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text:
+          "Consult a nephrologist if you have high creatinine, swelling, reduced urine output, uncontrolled blood pressure, kidney stones, or persistent abnormalities in urine tests."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What is Chronic Kidney Disease (CKD)?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text:
+          "CKD is a long-term condition where kidneys gradually lose function. Early diagnosis and proper care can help slow progression."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Is dialysis painful?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text:
+          "Dialysis is generally not painful, though some discomfort can occur during needle insertion."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "How often is dialysis required?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text:
+          "Many patients require dialysis 2-3 times per week, but frequency depends on medical assessment and individual needs."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Can kidney disease be prevented?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text:
+          "Managing diabetes and blood pressure, staying hydrated, avoiding unnecessary painkillers, and regular checkups can reduce the risk of kidney disease."
+      }
+    }
+  ]
+};
+
+
+
 function Nephrology() {
   return (
     <>
       <Helmet>
-        <title>Nephrology | Shree Saibaba Multispeciality Hospital</title>
-        <meta
-          name="description"
-          content="Shree Saibaba Multispeciality Hospital offers specialized nephrology care including kidney function evaluation, CKD & AKI management, dialysis services, renal biopsy, electrolyte imbalance care, and 24x7 renal emergency support."
-        />
-        <meta
-          name="keywords"
-          content="nephrology hospital Nashik, kidney specialist Nashik, dialysis Nashik, CKD treatment Nashik, AKI treatment Nashik, renal biopsy Nashik, Shree Saibaba Multispeciality Hospital nephrology"
-        />
-        <meta
-          name="og:description"
-          content="Comprehensive kidney care with advanced dialysis facilities, CKD/AKI management, renal biopsy, and 24x7 renal emergencies at Shree Saibaba Multispeciality Hospital."
-        />
+        <title>Nephrology | Best Nephrology Hospital in Nashik</title>
+        <meta name="description" content="Nephrology care in Nashik at Shree Saibaba Multispeciality Hospital: kidney function evaluation, CKD & AKI management, hemodialysis, renal biopsy (as advised), electrolyte imbalance care, and 24x7 renal emergency support." />
+        <link rel="canonical" href={CANONICAL_URL} />
+        <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content={SITE_NAME} />
+        <meta property="og:title" content="Nephrology Department | Shree Saibaba Multispeciality Hospital, Nashik" />
+        <meta property="og:description" content="Comprehensive kidney care in Nashik: CKD/AKI management, dialysis services, renal biopsy evaluation and emergency renal support." />
+        <meta property="og:url" content={CANONICAL_URL} />
+        <meta property="og:image" content={OG_IMAGE_URL} />
+        <meta property="og:image:alt" content="Nephrology Department - Shree Saibaba Multispeciality Hospital, Nashik" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Nephrology Department | Shree Saibaba Multispeciality Hospital, Nashik" />
+        <meta name="twitter:description" content="Kidney specialist care in Nashik with dialysis support, CKD/AKI management and renal emergency services." />
+        <meta name="twitter:image" content={OG_IMAGE_URL} />
+
+        <script type="application/ld+json">{JSON.stringify(jsonLdDepartment)}</script>
+        <script type="application/ld+json">{JSON.stringify(jsonLdFaq)}</script>
       </Helmet>
+
 
       <div style={styles.page}>
         <div style={styles.container}>
@@ -247,6 +323,7 @@ function Nephrology() {
                   src={nephrology}
                   alt="Nephrology Department"
                   style={styles.heroImage}
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -346,7 +423,7 @@ function Nephrology() {
 
                 <h2 style={styles.heroParagraph1}>What Makes Shree Saibaba Multispeciality Hospital An Excellent Choice?</h2>
 
-                <ul style={{textAlign: 'left'}}>
+                <ul style={{ textAlign: 'left' }}>
                   <li>Our renal care specialists offer you years of expertise.</li>
                   <li>We provide advanced diagnostic and treatment options.</li>
                   <li>We take a personal approach to every patient we treat.</li>
@@ -356,7 +433,7 @@ function Nephrology() {
                 <br />
 
                 <p style={styles.heroParagraph}>
-                  If you or a member of your family have kidney problems, we will support you in your journey back to health and confident 
+                  If you or a member of your family have kidney problems, we will support you in your journey back to health and confident
                   and in charge of your kidney health.
                 </p>
                 <br />
@@ -441,7 +518,7 @@ function Nephrology() {
                 Team Members &amp; Department Timings
               </div>
             </div>
-            <p style={{...styles.listItem, textAlign : "center"}}>Meet our experienced Orthopedic:</p>
+            <p style={{ ...styles.listItem, textAlign: "center" }}>Meet our experienced Nephrologist:</p>
 
             <div style={styles.twoColumnGrid}>
               <ul style={styles.doctorList}>
@@ -451,7 +528,7 @@ function Nephrology() {
                   OPD: 	11:00 am to 12:00 pm and 5:00 pm to 6:00 pm
                 </li>
               </ul>
-              <ul style={styles.doctorList}>               
+              <ul style={styles.doctorList}>
                 <li style={styles.tagListItem}>
                   <strong>Emergency Services:</strong> 24 x 7
                 </li>

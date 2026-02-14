@@ -123,7 +123,6 @@ const styles = {
     marginRight: "6px",
   },
 
-  // Section styles
   section: {
     borderRadius: "18px",
     padding: "22px 22px 20px",
@@ -189,7 +188,7 @@ const styles = {
     border: "1px solid rgba(191,219,254,1)",
     marginBottom: "6px",
   },
-  // FAQ styles (were referenced but missing)
+
   faqList: {
     display: "grid",
     gap: "12px",
@@ -242,7 +241,6 @@ const styles = {
     color: "#1e293b",
   },
 
-  // FAQs
   faqList: {
     display: 'grid',
     gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
@@ -270,13 +268,12 @@ const styles = {
 };
 
 function Dentistry() {
-  const title = "Dentistry | Shree Saibaba Multispeciality Hospital, Nashik";
+  const title = "Dentistry | Best Dentistry Hospital in Nashik";
   const description =
     "Complete dental care in Nashik at Shree Saibaba Multispeciality Hospital — dental check-ups, cleaning, fillings, root canal treatment, extractions, crowns & bridges, dentures, and smile care with safe sterilization protocols.";
   const keywords =
     "dentist in nashik, dental clinic nashik, dental hospital nashik, teeth cleaning nashik, tooth filling nashik, root canal treatment nashik, tooth extraction nashik, crowns and bridges nashik, dentures nashik, gum treatment nashik, pediatric dentist nashik, dental checkup nashik";
 
-  // Prefer Dentist/LocalBusiness style schema for a dental department page
   const jsonLdClinic = {
     "@context": "https://schema.org",
     "@type": "Dentist",

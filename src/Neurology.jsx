@@ -1,5 +1,5 @@
 import React from 'react';
-import Neurologyimg from './Images/Neurologydep.jpg'; // change to neurology image if you have one
+import Neurologyimg from './Images/Neurologydep.jpg';
 import { Helmet } from "react-helmet-async";
 
 const styles = {
@@ -112,7 +112,6 @@ const styles = {
     marginRight: '6px',
   },
 
-  // Section styles
   section: {
     borderRadius: '18px',
     padding: '22px 22px 20px',
@@ -159,14 +158,12 @@ const styles = {
     marginBottom: '6px',
   },
 
-  // Grid / layout helpers
   twoColumnGrid: {
     display: 'grid',
     gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
     gap: '12px 32px',
   },
 
-  // Doctors
   doctorList: {
     listStyle: 'none',
     paddingLeft: 0,
@@ -183,7 +180,6 @@ const styles = {
     marginBottom: '6px',
   },
 
-  // Achievements / Timings
   tagListItem: {
     fontSize: '14px',
     lineHeight: 1.7,
@@ -195,7 +191,6 @@ const styles = {
     marginBottom: '6px',
   },
 
-  // FAQs
   faqList: {
     display: 'grid',
     gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
@@ -222,24 +217,105 @@ const styles = {
   },
 };
 
+
+const SITE_NAME = "Shree Saibaba Multispeciality Hospital";
+const SITE_URL = "https://shreesaibabamultispecialityhospital.com";
+const CANONICAL_URL = `${SITE_URL}/neurology`;
+const OG_IMAGE_URL = `${SITE_URL}/assets/Neurologydep-Cup-dRly.jpg`;
+
+
+const pageTitle = "Neurology | Best Neurology Hospital in Nashik";
+const pageDescription =
+  "Neurology Department at Shree Saibaba Multispeciality Hospital, Nashik offers expert care for brain, spine, nerve and muscle disorders with advanced diagnostics and 24x7 stroke emergency support.";
+
+const jsonLdDepartment = {
+  "@context": "https://schema.org",
+  "@type": "MedicalClinic",
+  name: SITE_NAME,
+  url: CANONICAL_URL,
+  department: {
+    "@type": "MedicalBusiness",
+    name: "Neurology Department",
+    medicalSpecialty: "Neurology",
+    description:
+      "Neurology care including stroke, epilepsy, movement disorders, neuropathy, headaches, EEG/EMG/NCS testing and neuroimaging support.",
+    areaServed: { "@type": "City", name: "Nashik" }
+  }
+};
+
+const faqs = [
+  {
+    q: "When should I see a neurologist?",
+    a: "See a neurologist for persistent headaches or migraines, seizures/fainting episodes, dizziness, numbness or tingling, weakness, tremors, memory problems, sleep-related neurological issues, or back/neck pain with nerve symptoms."
+  },
+  {
+    q: "What are the warning signs of stroke?",
+    a: "Sudden face drooping, arm weakness, speech difficulty, sudden vision loss, severe dizziness, loss of balance, or sudden severe headache can be stroke warning signs. Seek emergency care immediately—early treatment can be life-saving."
+  },
+  {
+    q: "What tests are done in neurology (EEG/EMG/NCS)?",
+    a: "EEG helps evaluate seizures and certain brain conditions. EMG and nerve conduction studies (NCS) help assess nerve and muscle problems such as neuropathy, muscle weakness, and nerve compression. MRI/CT imaging may be advised based on symptoms."
+  },
+  {
+    q: "Do you provide 24×7 stroke care?",
+    a: "Yes. The hospital provides 24×7 emergency support for suspected stroke and neurological emergencies, with rapid assessment and treatment planning, including thrombolysis when clinically indicated."
+  },
+  {
+    q: "Can epilepsy (seizures) be treated and controlled?",
+    a: "Yes. Many patients achieve good control with the right medicines and regular follow-ups. Your neurologist will guide diagnosis, triggers, safety precautions, and long-term management."
+  },
+  {
+    q: "Do you treat children with neurological problems?",
+    a: "Yes. We evaluate and manage pediatric neurological conditions such as seizure disorders, developmental delays, cerebral palsy, and infections like meningitis, with a child-friendly approach and family guidance."
+  }
+];
+
+const jsonLdFaq = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a }
+  }))
+};
+
+
 function Neurology() {
   return (
     <>
       <Helmet>
-        <title>Neurology | Shree Saibaba Multispeciality Hospital</title>
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
+        <link rel="canonical" href={CANONICAL_URL} />
         <meta
-          name="description"
-          content="Neurology Department at Shree Saibaba Multispeciality Hospital, Nashik offers expert care for brain, spine, nerve and muscle disorders with advanced diagnostics and 24x7 stroke care."
+          name="robots"
+          content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"
         />
+
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content={SITE_NAME} />
+        <meta property="og:title" content={`${SITE_NAME} | Neurology Department, Nashik`} />
+        <meta property="og:description" content={pageDescription} />
+        <meta property="og:url" content={CANONICAL_URL} />
+        <meta property="og:image" content={OG_IMAGE_URL} />
         <meta
-          name="keywords"
-          content="neurology hospital Nashik, best neurology hospital Nashik, stroke care Nashik, EEG EMG Nashik"
+          property="og:image:alt"
+          content="Neurology Department - Shree Saibaba Multispeciality Hospital, Nashik"
         />
-        <meta
-          name="og:description"
-          content="Comprehensive neurology services including stroke, epilepsy, movement disorders and neurodiagnostic facilities at Shree Saibaba Multispeciality Hospital, Nashik."
-        />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${SITE_NAME} | Neurology Department, Nashik`} />
+        <meta name="twitter:description" content={pageDescription} />
+        <meta name="twitter:image" content={OG_IMAGE_URL} />
+
+        {/* Structured Data */}
+        <script type="application/ld+json">{JSON.stringify(jsonLdDepartment)}</script>
+        <script type="application/ld+json">{JSON.stringify(jsonLdFaq)}</script>
       </Helmet>
+
 
       <div style={styles.page}>
         <div style={styles.container}>
@@ -251,6 +327,7 @@ function Neurology() {
                   src={Neurologyimg}
                   alt="Neurology Department"
                   style={styles.heroImage}
+                  loading="lazy"
                 />
               </div>
             </div>

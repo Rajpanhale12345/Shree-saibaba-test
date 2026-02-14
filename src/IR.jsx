@@ -15,7 +15,6 @@ const styles = {
     color: "#0f172a",
   },
 
-  // ✅ HERO: grid on desktop, stacks on mobile via CSS class + media query below
   hero: {
     display: "grid",
     gridTemplateColumns: "minmax(280px, 420px) 1fr",
@@ -35,13 +34,12 @@ const styles = {
     border: "1px solid rgba(148,163,184,0.4)",
     background: "#ffffff",
 
-    // ✅ responsive height for the image card
     height: "clamp(220px, 32vw, 420px)",
   },
   heroImage: {
     width: "100%",
     height: "100%",
-    objectFit: "cover", // ✅ prevents stretching
+    objectFit: "cover",
     objectPosition: "center",
     display: "block",
     opacity: 0.95,
@@ -123,7 +121,6 @@ const styles = {
     marginRight: "6px",
   },
 
-  // Section styles
   section: {
     borderRadius: "18px",
     padding: "22px 22px 20px",
@@ -190,7 +187,6 @@ const styles = {
     marginBottom: "6px",
   },
 
-  // FAQs
   faqList: {
     display: 'grid',
     gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
@@ -272,52 +268,88 @@ const radiologyContent = {
   },
 
   faqs: [
-  {
-    q: "What is Interventional Radiology (IR)?",
-    a: "Interventional Radiology is a specialty that treats many conditions using minimally invasive, image-guided procedures (using ultrasound, CT, or fluoroscopy). Most treatments are done through a small needle puncture instead of open surgery.",
-  },
-  {
-    q: "What conditions can be treated with Interventional Radiology?",
-    a: "IR can help manage vascular and non-vascular conditions such as blocked or narrowed blood vessels, bleeding control, varicose veins, dialysis access issues, certain tumors (through image-guided therapies), abscess or fluid drainage, and targeted biopsies.",
-  },
-  {
-    q: "Is Interventional Radiology safer than surgery?",
-    a: "IR is often associated with lower risk compared to open surgery because it uses small punctures instead of large incisions. However, every procedure has risks, and your doctor will explain benefits and potential complications based on your case.",
-  },
-  {
-    q: "How should I prepare for an IR procedure?",
-    a: "Preparation depends on the procedure. You may be asked to fast for a few hours, stop certain medicines (like blood thinners) temporarily, and complete blood tests. Always share your medical history, allergies, kidney issues, and current medicines.",
-  },
-  {
-    q: "When will I resume normal activities after IR treatment?",
-    a: "Recovery is usually faster than surgery. Many patients return to routine activities within 24–72 hours, depending on the procedure. Your doctor will provide specific post-procedure instructions.",
-  },
-],
+    {
+      q: "What is Interventional Radiology (IR)?",
+      a: "Interventional Radiology is a specialty that treats many conditions using minimally invasive, image-guided procedures (using ultrasound, CT, or fluoroscopy). Most treatments are done through a small needle puncture instead of open surgery.",
+    },
+    {
+      q: "What conditions can be treated with Interventional Radiology?",
+      a: "IR can help manage vascular and non-vascular conditions such as blocked or narrowed blood vessels, bleeding control, varicose veins, dialysis access issues, certain tumors (through image-guided therapies), abscess or fluid drainage, and targeted biopsies.",
+    },
+    {
+      q: "Is Interventional Radiology safer than surgery?",
+      a: "IR is often associated with lower risk compared to open surgery because it uses small punctures instead of large incisions. However, every procedure has risks, and your doctor will explain benefits and potential complications based on your case.",
+    },
+    {
+      q: "How should I prepare for an IR procedure?",
+      a: "Preparation depends on the procedure. You may be asked to fast for a few hours, stop certain medicines (like blood thinners) temporarily, and complete blood tests. Always share your medical history, allergies, kidney issues, and current medicines.",
+    },
+    {
+      q: "When will I resume normal activities after IR treatment?",
+      a: "Recovery is usually faster than surgery. Many patients return to routine activities within 24–72 hours, depending on the procedure. Your doctor will provide specific post-procedure instructions.",
+    },
+  ],
 }
 
 function Interventional_Radiology() {
   const c = radiologyContent;
 
-  const pageTitle =
-    "Interventional Radiology | Shree Saibaba Multispeciality Hospital";
-  const pageDescription =
-    "Interventional Radiology Department at Shree Saibaba Multispeciality Hospital offers minimally invasive, image-guided procedures for vascular and non-vascular conditions with 24x7 emergency services.";
+  const pageTitle = "Interventional Radiology | Best Interventional Radiology Hospital in Nashik";
+  const pageDescription = "Interventional Radiology Department at Shree Saibaba Multispeciality Hospital offers minimally invasive, image-guided procedures for vascular and non-vascular conditions with 24x7 emergency services.";
+
+  const SITE_NAME = "Shree Saibaba Multispeciality Hospital";
+  const SITE_URL = "https://shreesaibabamultispecialityhospital.com";
+  const CANONICAL_URL = `${SITE_URL}/interventionalradiology`;
+  const OG_IMAGE_URL = `${SITE_URL}/assets/interventionaldep-DOQq9WTi.jpg`;
+
+  const jsonLdDepartment = {
+    "@context": "https://schema.org",
+    "@type": "MedicalClinic",
+    name: SITE_NAME,
+    url: CANONICAL_URL,
+    department: {
+      "@type": "MedicalBusiness",
+      name: "Interventional Radiology Department",
+      medicalSpecialty: "Radiology",
+      description: "Minimally invasive, image-guided procedures for vascular and non-vascular conditions using ultrasound, CT and fluoroscopy.",
+      areaServed: { "@type": "City", name: "Nashik" }
+    }
+  };
+
+  const jsonLdFaq = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: c.faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a }
+    }))
+  };
+
 
   return (
     <>
       <Helmet>
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
-        <meta name="keywords" content="interventional radiology Nashik, IR procedures Nashik, angiography Nashik, tumour ablation Nashik" />
+        <link rel="canonical" href={CANONICAL_URL} />
+        <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content={SITE_NAME} />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDescription} />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content={img} />
+        <meta property="og:url" content={CANONICAL_URL} />
+        <meta property="og:image" content={OG_IMAGE_URL} />
+        <meta property="og:image:alt" content="Interventional Radiology Department - Shree Saibaba Multispeciality Hospital, Nashik" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={pageDescription} />
-        <meta name="twitter:image" content={img} />
+        <meta name="twitter:image" content={OG_IMAGE_URL} />
+
+        <script type="application/ld+json">{JSON.stringify(jsonLdDepartment)}</script>
+        <script type="application/ld+json">{JSON.stringify(jsonLdFaq)}</script>
       </Helmet>
+
 
 
       <div style={styles.page}>
@@ -539,7 +571,7 @@ function Interventional_Radiology() {
               </div>
             </div>
 
-            <p style={styles.listItem}>Meet our experienced Radiologists:</p>
+            <p style={styles.listItem}>Meet our Interventional Radiologist:</p>
 
             <div style={styles.twoColumnGrid}>
               <ul style={styles.doctorList}>

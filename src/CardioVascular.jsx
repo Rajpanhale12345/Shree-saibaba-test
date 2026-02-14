@@ -15,7 +15,6 @@ const styles = {
     color: "#0f172a",
   },
 
-  // ✅ HERO: grid on desktop, stacks on mobile via CSS class + media query below
   hero: {
     display: "grid",
     gridTemplateColumns: "minmax(280px, 420px) 1fr",
@@ -35,13 +34,12 @@ const styles = {
     border: "1px solid rgba(148,163,184,0.4)",
     background: "#0f172a",
 
-    // ✅ responsive height for the image card
     height: "clamp(220px, 32vw, 420px)",
   },
   heroImage: {
     width: "100%",
     height: "100%",
-    objectFit: "cover", // ✅ prevents stretching
+    objectFit: "cover",
     objectPosition: "center",
     display: "block",
     opacity: 0.95,
@@ -124,7 +122,6 @@ const styles = {
     marginRight: "6px",
   },
 
-  // Section styles
   section: {
     borderRadius: "18px",
     padding: "22px 22px 20px",
@@ -191,8 +188,6 @@ const styles = {
     marginBottom: "6px",
   },
 
-
-  // FAQs
   faqList: {
     display: 'grid',
     gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
@@ -219,12 +214,18 @@ const styles = {
   },
 };
 
+const SITE_NAME = "Shree Saibaba Multispeciality Hospital";
+const PAGE_TITLE = "Cardiovascular Thoracic Surgery  | Best Cardiovascular Hospital in Nashik";
+const PAGE_DESCRIPTION = "Cardiovascular & Thoracic Surgery Department in Nashik — CABG (bypass), valve repair/replacement, minimally invasive cardiac surgery (MICAS), ICU care and rehabilitation at Shree Saibaba Multispeciality Hospital.";
+const CANONICAL_URL = "https://shreesaibabamultispecialityhospital.com/cardiovascular";
+const OG_IMAGE_URL = "https://shreesaibabamultispecialityhospital.com/assets/thoracicdep-Dt7W-j3u.jpg"; 
+
 
 function CardioVascular() {
   return (
     <>
       <Helmet>
-        <title>Cardiovascular Thoracic Surgery | Shree Saibaba Multispeciality Hospital</title>
+        <title>Cardiovascular Thoracic Surgery  | Best Cardiovascular Hospital in Nashik</title>
         <meta
           name="description"
           content="Cardiovascular Thoracic Surgery Department at Shree Saibaba Multispeciality Hospital offers advanced heart and thoracic surgeries including CABG, valve surgery, MICAS and post-surgical ICU and rehabilitation care."

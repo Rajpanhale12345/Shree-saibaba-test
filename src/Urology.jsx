@@ -1,5 +1,5 @@
 import React from 'react';
-import img from './Images/urologydep.jpg'; // replace with urology-specific image if available
+import img from './Images/urologydep.jpg';
 import { Helmet } from "react-helmet-async";
 
 const styles = {
@@ -15,7 +15,6 @@ const styles = {
     color: "#0f172a",
   },
 
-  // ✅ HERO: grid on desktop, stacks on mobile via CSS class + media query below
   hero: {
     display: "grid",
     gridTemplateColumns: "minmax(280px, 420px) 1fr",
@@ -35,13 +34,12 @@ const styles = {
     border: "1px solid rgba(148,163,184,0.4)",
     background: "#0f172a",
 
-    // ✅ responsive height for the image card
     height: "clamp(220px, 32vw, 420px)",
   },
   heroImage: {
     width: "100%",
     height: "100%",
-    objectFit: "cover", // ✅ prevents stretching
+    objectFit: "cover",
     objectPosition: "center",
     display: "block",
     opacity: 0.95,
@@ -123,7 +121,6 @@ const styles = {
     marginRight: "6px",
   },
 
-  // Section styles
   section: {
     borderRadius: "18px",
     padding: "22px 22px 20px",
@@ -190,8 +187,6 @@ const styles = {
     marginBottom: "6px",
   },
 
-
-  // FAQs
   faqList: {
     display: 'grid',
     gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
@@ -219,23 +214,94 @@ const styles = {
 };
 
 
+
+const SITE_URL = "https://shreesaibabamultispecialityhospital.com";
+const PAGE_URL = `${SITE_URL}/urology`;
+const ogImage = img?.startsWith("http") ? img : `${SITE_URL}${img}`;  
+
+const jsonLdClinic = {
+  "@context": "https://schema.org",
+  "@type": "MedicalClinic",
+  name: "Shree Saibaba Multispeciality Hospital",
+  url: PAGE_URL,
+  image: ogImage,
+  medicalSpecialty: "Urology",
+  description:
+    "Comprehensive urology care in Nashik for kidney stones, prostate disorders, urinary infections, and minimally invasive urology procedures.",
+  areaServed: ["Nashik", "Maharashtra"],
+  department: {
+    "@type": "MedicalClinic",
+    name: "Urology Department",
+    medicalSpecialty: "Urology",
+    url: PAGE_URL,
+  },
+};
+
+const jsonLdFaq = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What are the symptoms of kidney stones?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text:
+          "Common symptoms include severe flank pain, pain radiating to the groin, nausea/vomiting, burning while urinating, blood in urine, and frequent urge to pass urine.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How are kidney stones treated?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text:
+          "Treatment depends on size and location and may include hydration and medicines, shock wave lithotripsy, ureteroscopy, or minimally invasive surgery for larger or complex stones.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What are common symptoms of prostate enlargement (BPH)?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text:
+          "Symptoms may include frequent urination (especially at night), weak urine stream, straining, urgency, and a feeling of incomplete bladder emptying.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "When should I see a urologist urgently?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text:
+          "Seek urgent care for inability to pass urine, severe pain with fever/chills, blood in urine with clots, severe scrotal pain/swelling, or worsening symptoms with vomiting or low urine output.",
+      },
+    },
+  ],
+};
+
+
+
+
 function Urology() {
   return (
     <>
       <Helmet>
-        <title>Urology | Shree Saibaba Multispeciality Hospital</title>
-        <meta
-          name="description"
-          content="Urology Department at Shree Saibaba Multispeciality Hospital provides comprehensive care for kidney stones, prostate problems, urinary infections and other urological conditions with advanced surgeries and minimally invasive procedures."
-        />
-        <meta
-          name="keywords"
-          content="urology hospital Nashik, kidney stone surgery Nashik, prostate surgery Nashik, TURP, laser prostatectomy"
-        />
-        <meta
-          name="og:description"
-          content="Advanced urology care including kidney and ureteric stone removal, prostate surgery, laparoscopic and endoscopic procedures at Shree Saibaba Multispeciality Hospital."
-        />
+        <title>Urology | Best Urology Hospital in Nashik</title>
+        <meta name="description" content="Urology Department at Shree Saibaba Multispeciality Hospital provides comprehensive care for kidney stones, prostate problems, urinary infections and other urological conditions with advanced surgeries and minimally invasive procedures." />
+        <meta name="keywords" content="urology hospital Nashik, kidney stone surgery Nashik, prostate surgery Nashik, TURP Nashik, laser prostatectomy Nashik, ureteroscopy Nashik, cystoscopy Nashik" />
+        <link rel="canonical" href={PAGE_URL} />
+        <meta property="og:title" content="Urology | Best Urology Hospital in Nashik" />
+        <meta property="og:description" content="Advanced urology care including kidney and ureteric stone removal, prostate surgery, laparoscopic and endoscopic procedures at Shree Saibaba Multispeciality Hospital." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={PAGE_URL} />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:image:alt" content="Urology Department - Shree Saibaba Multispeciality Hospital" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Urology | Best Urology Hospital in Nashik" />
+        <meta name="twitter:description" content="Kidney stone and prostate care with minimally invasive urology procedures in Nashik." />
+        <meta name="twitter:image" content={ogImage} />
+        <meta name="twitter:image:alt" content="Urology Department - Shree Saibaba Multispeciality Hospital" />
       </Helmet>
 
       <div style={styles.page}>
@@ -245,9 +311,10 @@ function Urology() {
             <div style={styles.heroImageWrapper}>
               <div style={styles.heroImageCard}>
                 <img
-                  src={img} // replace with urology-specific image if available
+                  src={img} 
                   alt="Urology Department"
                   style={styles.heroImage}
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -264,7 +331,7 @@ function Urology() {
                 <p style={styles.heroParagraph}>
                   The Center for Urology at Shree Saibaba Multispeciality Hospital provides patients with
                   the highest level of advanced and compassionate care available for all types of urological
-                  diseases. recognized as one of the top hospitals for Urology in Nashik, we offer complete
+                  diseases. Recognized as one of the top hospitals for Urology in Nashik, we offer complete
                   diagnostic services, treatment options and surgical procedures for both men and women
                   suffering from urological conditions.
                 </p>
@@ -293,9 +360,8 @@ function Urology() {
                   is here to provide safe, effective, long-lasting Solutions for our patients' urological health issues.
                 </p>
                 <p style={styles.heroParagraph}>
-                  If you are looking for Urology Consultants you can trust, advanced Urology surgery, or highly-skilled 
-                  Urosurgeons in Nashik, Shree Saibaba Multispeciality Hospital is your one-stop-shop for complete 
-                  Urology Care.
+                  If you are looking for trusted urology consultation, advanced urology surgery, or experienced 
+                  urosurgeons in Nashik, Shree Saibaba Multispeciality Hospital provides complete urology care under one roof.
                 </p>
                 <br />
 
@@ -412,15 +478,15 @@ function Urology() {
                 <li style={styles.tagListItem}>
                   <strong>Dr. Amey Patil</strong>
                   <br />
-                  12:30 pm to 1:30 pm
+                  OPD: 12:30 PM - 1:30 PM
                 </li>
                 <li style={styles.tagListItem}>
                   <strong>Dr. Amit Singal</strong>
                   <br />
-                  1:30 pm to 2:30 pm
+                  OPD: 1:30 pm - 2:30 pm
                 </li>
               </ul>
-              <ul style={styles.doctorList}>                
+              <ul style={styles.doctorList}>
                 <li style={styles.tagListItem}>
                   <strong>Dr. Pranav Chhajed</strong>
                   <br />

@@ -15,7 +15,6 @@ const styles = {
     color: "#0f172a",
   },
 
-  // ✅ HERO: grid on desktop, stacks on mobile via CSS class + media query below
   hero: {
     display: "grid",
     gridTemplateColumns: "minmax(280px, 420px) 1fr",
@@ -35,13 +34,12 @@ const styles = {
     border: "1px solid rgba(148,163,184,0.4)",
     background: "#0f172a",
 
-    // ✅ responsive height for the image card
     height: "clamp(220px, 32vw, 420px)",
   },
   heroImage: {
     width: "100%",
     height: "100%",
-    objectFit: "cover", // ✅ prevents stretching
+    objectFit: "cover",
     objectPosition: "center",
     display: "block",
     opacity: 0.95,
@@ -124,7 +122,6 @@ const styles = {
     marginRight: "6px",
   },
 
-  // Section styles
   section: {
     borderRadius: "18px",
     padding: "22px 22px 20px",
@@ -191,8 +188,6 @@ const styles = {
     marginBottom: "6px",
   },
 
-
-  // FAQs
   faqList: {
     display: 'grid',
     gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
@@ -221,28 +216,100 @@ const styles = {
 
 
 
+const SITE_URL = "https://shreesaibabamultispecialityhospital.com";
+const PAGE_URL = `${SITE_URL}/spinecare`;
+const ogImage = SpineCareImg.startsWith("http") ? SpineCareImg : `${SITE_URL}${SpineCareImg}`;
+
+
+const jsonLdClinic = {
+  "@context": "https://schema.org",
+  "@type": "MedicalClinic",
+  name: "Shree Saibaba Multispeciality Hospital",
+  url: PAGE_URL,
+  image: ogImage,
+  medicalSpecialty: "Orthopedic",
+  description:
+    "Advanced spine care in Nashik with modern diagnostics and minimally invasive treatment options.",
+  areaServed: ["Nashik", "Maharashtra"],
+  department: {
+    "@type": "MedicalClinic",
+    name: "Spine Care Department",
+    medicalSpecialty: "Orthopedic",
+    url: PAGE_URL,
+  },
+};
+
+const jsonLdFaq = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "When should I consult a spine specialist?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text:
+          "Consult a spine specialist if you have back or neck pain lasting more than 2–3 weeks, pain radiating to the arm/leg, tingling or numbness, weakness, difficulty walking, or pain affecting daily activities or sleep.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is a slipped (herniated) disc and what symptoms can it cause?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text:
+          "A slipped or herniated disc occurs when disc material presses on nearby nerves, causing back/neck pain, sciatica (leg pain), tingling, numbness, or weakness depending on the level affected.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do all spine problems need surgery?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text:
+          "No. Many spine conditions improve with medicines, physiotherapy, posture correction, and lifestyle changes. Surgery may be advised for significant nerve/spinal cord compression, instability, progressive weakness, severe pain not improving with conservative care, or certain fractures/tumors.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you provide minimally invasive spine surgery?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text:
+          "Yes. When clinically suitable, minimally invasive procedures may be used to reduce muscle injury, blood loss, and recovery time. The approach depends on diagnosis and imaging findings.",
+      },
+    },
+  ],
+};
+
+
+
+
 function SpineCare() {
   return (
     <>
       <Helmet>
-        <title>Spine Care | Shree Saibaba Multispeciality Hospital</title>
-        <meta
-          name="description"
-          content="Shree Saibaba Multispeciality Hospital offers advanced Spine Care in Nashik with expert specialists, modern diagnostics, minimally invasive procedures, and compassionate patient-centered treatment."
-        />
-        <meta
-          name="keywords"
-          content="Spine Care Hospital Nashik, Best Spine Hospital Nashik, Back Pain Treatment Nashik, Slip Disc Treatment Nashik, Minimally Invasive Spine Surgery Nashik, Spinal Fusion Nashik, Spine Surgeon Nashik"
-        />
-        <meta
-          property="og:title"
-          content="Spine Care | Shree Saibaba Multispeciality Hospital"
-        />
-        <meta
-          property="og:description"
-          content="World-class spine care in Nashik with advanced diagnostics, expert spine surgeons, and minimally invasive treatments for faster recovery."
-        />
+        <title>Spine Care | Best Spine Care Hospital in Nashik</title>
+        <meta name="description" content="Shree Saibaba Multispeciality Hospital offers advanced Spine Care in Nashik with expert specialists, modern diagnostics, minimally invasive procedures, and compassionate patient-centered treatment." />
+        <meta name="keywords" content="Spine Care Hospital Nashik, Best Spine Hospital Nashik, Back Pain Treatment Nashik, Slip Disc Treatment Nashik, Minimally Invasive Spine Surgery Nashik, Spinal Fusion Nashik, Spine Surgeon Nashik" />
+        <link rel="canonical" href={PAGE_URL} />
+        <meta property="og:title" content="Spine Care | Shree Saibaba Multispeciality Hospital" />
+        <meta property="og:description" content="World-class spine care in Nashik with advanced diagnostics, expert spine surgeons, and minimally invasive treatments for faster recovery." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={PAGE_URL} />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:image:alt" content="Spine Care Department - Shree Saibaba Multispeciality Hospital" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Spine Care | Best Spine Care Hospital in Nashik" />
+        <meta name="twitter:description" content="Advanced spine care in Nashik with modern diagnostics and minimally invasive treatment options." />
+        <meta name="twitter:image" content={ogImage} />
+        <meta name="twitter:image:alt" content="Spine Care Department - Shree Saibaba Multispeciality Hospital" />
+
+        <script type="application/ld+json">{JSON.stringify(jsonLdClinic)}</script>
+        <script type="application/ld+json">{JSON.stringify(jsonLdFaq)}</script>
+
       </Helmet>
+
 
       <div style={styles.page}>
         <div style={styles.container}>
@@ -254,6 +321,7 @@ function SpineCare() {
                   src={SpineCareImg}
                   alt="Spine Care Department"
                   style={styles.heroImage}
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -468,7 +536,7 @@ function SpineCare() {
                 Team Members &amp; Department Timings
               </div>
             </div>
-            <p style={styles.listItem}>Meet our experienced Spine Care:</p>
+            <p style={styles.listItem}>Meet our spine specialists:</p>
 
             <div style={styles.twoColumnGrid}>
               <ul style={styles.doctorList}>

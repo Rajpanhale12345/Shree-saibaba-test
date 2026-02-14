@@ -15,7 +15,6 @@ const styles = {
     color: "#0f172a",
   },
 
-  // ✅ HERO: grid on desktop, stacks on mobile via CSS class + media query below
   hero: {
     display: "grid",
     gridTemplateColumns: "minmax(280px, 420px) 1fr",
@@ -35,13 +34,12 @@ const styles = {
     border: "1px solid rgba(148,163,184,0.4)",
     background: "#0f172a",
 
-    // ✅ responsive height for the image card
     height: "clamp(220px, 32vw, 420px)",
   },
   heroImage: {
     width: "100%",
     height: "100%",
-    objectFit: "cover", // ✅ prevents stretching
+    objectFit: "cover",
     objectPosition: "center",
     display: "block",
     opacity: 0.95,
@@ -123,7 +121,6 @@ const styles = {
     marginRight: "6px",
   },
 
-  // Section styles
   section: {
     borderRadius: "18px",
     padding: "22px 22px 20px",
@@ -190,7 +187,6 @@ const styles = {
     marginBottom: "6px",
   },
 
-  // FAQs
   faqList: {
     display: 'grid',
     gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
@@ -224,7 +220,7 @@ function PlasticSurgery() {
   const canonicalUrl = "https://shreesaibabamultispecialityhospital.com/plasticsurgery";
 
   const metaTitle =
-    "Plastic Surgery | Shree Saibaba Multispeciality Hospital, Nashik";
+    "Plastic Surgery | Best Plastic Surgery Hospital in Nashik";
   const metaDescription =
     "Expert cosmetic and reconstructive plastic surgery care in Nashik. Advanced OT setup, safety-focused protocols, and personalized consultations at Shree Saibaba Multispeciality Hospital.";
   const metaKeywords =
@@ -235,13 +231,15 @@ function PlasticSurgery() {
     "@context": "https://schema.org",
     "@type": "Hospital",
     name: "Shree Saibaba Multispeciality Hospital",
+    url: canonicalUrl,
     department: {
       "@type": "MedicalClinic",
-      name: "Gastroenterology Department",
-      medicalSpecialty: "Gastroenterology",
+      name: "Plastic Surgery Department",
+      medicalSpecialty: "Plastic Surgery",
       areaServed: "Nashik, Maharashtra",
     },
   };
+
 
 
   return (
@@ -260,6 +258,10 @@ function PlasticSurgery() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={metaTitle} />
         <meta name="twitter:description" content={metaDescription} />
+        <meta property="og:image" content={gastro} />
+        <meta property="og:image:alt" content="Plastic Surgery Department" />
+        <meta name="twitter:image" content={gastro} />
+
 
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
@@ -272,7 +274,7 @@ function PlasticSurgery() {
               <div style={styles.heroImageCard}>
                 <img
                   src={gastro}
-                  alt="Cardiovascular Thoracic Surgery Department"
+                  alt="Plastic Surgery Department"
                   style={styles.heroImage}
                 />
               </div>
@@ -297,7 +299,7 @@ function PlasticSurgery() {
                   was originally available.
                 </p>
                 <p style={styles.heroParagraph}>
-                  The Shree Saibaba Multipurpose Hospital is known for its highly-skilled doctors and state-of-the-art
+                  The Shree Saibaba Multispeciality Hospital is known for its highly-skilled doctors and state-of-the-art
                   technological capabilities which provide the opportunity for cosmetic and reconstructive surgical
                   procedures to be performed on a wide variety of individuals. All surgical procedures conducted by the
                   hospital are conducted with great medical care, integrity, and safety measured by appropriate means.
@@ -433,7 +435,7 @@ function PlasticSurgery() {
             </div>
             <div style={styles.twoColumnGrid}>
               <ul style={styles.doctorList}>
-                <li style={styles.doctorItem}><b>DR. LALIT DERLE</b> <br /><span style={{fontSize : "11px"}}>MBBS, DNB, MS</span></li>
+                <li style={styles.doctorItem}><b>DR. LALIT DERLE</b> <br /><span style={{ fontSize: "11px" }}>MBBS, DNB, MS</span></li>
               </ul>
             </div>
           </section>

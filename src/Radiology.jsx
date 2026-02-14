@@ -15,7 +15,6 @@ const styles = {
     color: "#0f172a",
   },
 
-  // ✅ HERO: grid on desktop, stacks on mobile via CSS class + media query below
   hero: {
     display: "grid",
     gridTemplateColumns: "minmax(280px, 420px) 1fr",
@@ -35,13 +34,12 @@ const styles = {
     border: "1px solid rgba(148,163,184,0.4)",
     background: "#ffffff",
 
-    // ✅ responsive height for the image card
     height: "clamp(220px, 32vw, 420px)",
   },
   heroImage: {
     width: "100%",
     height: "100%",
-    objectFit: "cover", // ✅ prevents stretching
+    objectFit: "cover",
     objectPosition: "center",
     display: "block",
     opacity: 0.95,
@@ -106,7 +104,7 @@ const styles = {
     lineHeight: 1.2,
     color: "#1e293b",
     marginBottom: "10px",
-  }, 
+  },
 
   highlightStrip: {
     marginTop: "16px",
@@ -123,7 +121,6 @@ const styles = {
     marginRight: "6px",
   },
 
-  // Section styles
   section: {
     borderRadius: "18px",
     padding: "22px 22px 20px",
@@ -190,7 +187,6 @@ const styles = {
     marginBottom: "6px",
   },
 
-  // FAQs
   faqList: {
     display: 'grid',
     gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
@@ -274,49 +270,98 @@ const radiologyContent = {
   },
 
   faqs: [
-  {
-    q: "What is Radiology?",
-    a: "Radiology is a medical specialty that uses imaging technologies such as X-rays, Ultrasound, CT scans, and MRI to diagnose and monitor diseases inside the body without surgery.",
-  },
-  {
-    q: "What types of imaging services are available in the Radiology Department?",
-    a: "We provide X-ray, Ultrasound, Doppler studies, CT scans, MRI, Digital Mammography, and image-guided procedures such as biopsies and drainage.",
-  },
-  {
-    q: "Do radiology tests cause pain?",
-    a: "Most radiology tests are completely painless. Some procedures that involve contrast injections or biopsies may cause mild discomfort, but our team ensures your safety and comfort at all times.",
-  },
-  {
-    q: "Are CT scans and X-rays safe?",
-    a: "Yes. These tests use controlled doses of radiation. We follow strict safety protocols and always use the lowest radiation dose necessary for accurate diagnosis.",
-  },
-  {
-    q: "Is MRI safe for everyone?",
-    a: "MRI does not use radiation, but it may not be suitable for patients with pacemakers, metal implants, or certain medical devices. Always inform the staff about any implants before your scan.",
-  },
-]
+    {
+      q: "What is Radiology?",
+      a: "Radiology is a medical specialty that uses imaging technologies such as X-rays, Ultrasound, CT scans, and MRI to diagnose and monitor diseases inside the body without surgery.",
+    },
+    {
+      q: "What types of imaging services are available in the Radiology Department?",
+      a: "We provide X-ray, Ultrasound, Doppler studies, CT scans, MRI, Digital Mammography, and image-guided procedures such as biopsies and drainage.",
+    },
+    {
+      q: "Do radiology tests cause pain?",
+      a: "Most radiology tests are completely painless. Some procedures that involve contrast injections or biopsies may cause mild discomfort, but our team ensures your safety and comfort at all times.",
+    },
+    {
+      q: "Are CT scans and X-rays safe?",
+      a: "Yes. These tests use controlled doses of radiation. We follow strict safety protocols and always use the lowest radiation dose necessary for accurate diagnosis.",
+    },
+    {
+      q: "Is MRI safe for everyone?",
+      a: "MRI does not use radiation, but it may not be suitable for patients with pacemakers, metal implants, or certain medical devices. Always inform the staff about any implants before your scan.",
+    },
+  ]
 };
+
+
+
+
+const SITE_URL = "https://shreesaibabamultispecialityhospital.com";
+const PAGE_URL = `${SITE_URL}/radiology`;
+const ogImage = img.startsWith("http") ? img : `${SITE_URL}${img}`;
+const metaTitle = "Radiology | Best Radiology Hospital in Nashik";
+const metaDescription = "Radiology Department at Shree Saibaba Multispeciality Hospital offers comprehensive imaging services including X-ray, ultrasound, Doppler, CT, MRI, cardiac MRI and digital mammography with 24x7 emergency support.";
+
+
+
 
 function Radiology() {
   const c = radiologyContent;
 
+
+  const jsonLdClinic = {
+    "@context": "https://schema.org",
+    "@type": "MedicalClinic",
+    name: "Shree Saibaba Multispeciality Hospital",
+    url: PAGE_URL,
+    image: ogImage,
+    medicalSpecialty: "Radiology",
+    description: metaDescription,
+    areaServed: ["Nashik", "Maharashtra"],
+    department: {
+      "@type": "MedicalClinic",
+      name: "Radiology Department",
+      medicalSpecialty: "Radiology",
+      url: PAGE_URL,
+    },
+  };
+
+  const jsonLdFaq = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: c.faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+
   return (
     <>
       <Helmet>
-        <title>Radiology | Shree Saibaba Multispeciality Hospital</title>
-        <meta
-          name="description"
-          content="Radiology Department at Shree Saibaba Multispeciality Hospital offers comprehensive imaging services including X-ray, ultrasound, Doppler, CT, MRI, cardiac MRI and digital mammography with 24x7 emergency support."
-        />
-        <meta
-          name="keywords"
-          content="radiology Nashik, CT scan Nashik, MRI Nashik, ultrasound Nashik, digital mammography Nashik, cardiac MRI Nashik"
-        />
-        <meta
-          name="og:description"
-          content="Advanced radiology and imaging services including X-ray, ultrasonography, CT, MRI, Doppler studies, digital mammography and image-guided procedures at Shree Saibaba Multispeciality Hospital."
-        />
+        <title>{metaTitle}</title>
+        <meta name="description" content={metaDescription} />
+        <meta name="keywords" content="radiology Nashik, CT scan Nashik, MRI Nashik, ultrasound Nashik, digital mammography Nashik, cardiac MRI Nashik" />
+        <link rel="canonical" href={PAGE_URL} />
+
+        <meta property="og:title" content={metaTitle} />
+        <meta property="og:description" content={metaDescription} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={PAGE_URL} />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:image:alt" content="Radiology Department - Shree Saibaba Multispeciality Hospital" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={metaTitle} />
+        <meta name="twitter:description" content={metaDescription} />
+        <meta name="twitter:image" content={ogImage} />
+        <meta name="twitter:image:alt" content="Radiology Department - Shree Saibaba Multispeciality Hospital" />
+
+        <script type="application/ld+json">{JSON.stringify(jsonLdClinic)}</script>
+        <script type="application/ld+json">{JSON.stringify(jsonLdFaq)}</script>
+
       </Helmet>
+
 
       <div style={styles.page}>
         <div style={styles.container}>
@@ -328,6 +373,7 @@ function Radiology() {
                   src={img}
                   alt="Radiology Department"
                   style={styles.heroImage}
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -372,49 +418,49 @@ function Radiology() {
                   in making good clinical decisions.
                 </p>
                 <p style={styles.heroParagraph}>
-                  The radiologists are supported by a team of certified radiologic technologists who have been specifically trained in 
-                  relation to positioning patients properly, utilizing radiographic equipment safely, and following strict safety 
-                  guidelines. Additionally, radiologic technologists are educated and trained to help ensure that each radiographic 
-                  examination is performed in a manner that provides a safe, efficient, and comfortable experience for the patient, 
-                  as well as following regulations from the US Food and Drug Administration regarding the minimum level of safety and 
+                  The radiologists are supported by a team of certified radiologic technologists who have been specifically trained in
+                  relation to positioning patients properly, utilizing radiographic equipment safely, and following strict safety
+                  guidelines. Additionally, radiologic technologists are educated and trained to help ensure that each radiographic
+                  examination is performed in a manner that provides a safe, efficient, and comfortable experience for the patient,
+                  as well as following regulations from the US Food and Drug Administration regarding the minimum level of safety and
                   reducing the risk of recurrence through the minimization of radiation exposure.
                 </p>
                 <p style={styles.heroParagraph}>
-                  To ensure that patients have access to expert teleradiology support without interruption, our hospital utilizes 
-                  teleradiology systems so that specialists working offsite can easily analyze images sent via those systems and 
-                  provide additional opinions when required. The digital connection with specialists allows our staff to provide 
-                  rapid reporting on emergencies, overnight cases, and critical care situations as well as improve the collaborative 
+                  To ensure that patients have access to expert teleradiology support without interruption, our hospital utilizes
+                  teleradiology systems so that specialists working offsite can easily analyze images sent via those systems and
+                  provide additional opinions when required. The digital connection with specialists allows our staff to provide
+                  rapid reporting on emergencies, overnight cases, and critical care situations as well as improve the collaborative
                   work of all healthcare providers and have improved treatment outcomes.
                 </p>
                 <p style={styles.heroParagraph}>
-                  Our pediatric radiology services are specifically designed to meet the special needs of infants, children, and 
-                  adolescents; while providing the necessary imaging services to safely assess and treat their conditions. Imaging 
-                  a child requires the use of unique imaging techniques, smaller radiation dose protocols, and a gentle approach to 
-                  performing procedures. To create a safe, reassuring environment, our staff provides child-friendly imaging 
-                  procedures, makes every effort to reduce discomfort and trauma associated with imaging, and effectively communicates 
+                  Our pediatric radiology services are specifically designed to meet the special needs of infants, children, and
+                  adolescents; while providing the necessary imaging services to safely assess and treat their conditions. Imaging
+                  a child requires the use of unique imaging techniques, smaller radiation dose protocols, and a gentle approach to
+                  performing procedures. To create a safe, reassuring environment, our staff provides child-friendly imaging
+                  procedures, makes every effort to reduce discomfort and trauma associated with imaging, and effectively communicates
                   with the child's parents regarding their child's safety.
                 </p>
                 <p style={styles.heroParagraph}>
-                  Our patient-centered workflow begins with providing patients with detailed, simple explanations of the scans prior 
-                  to their imaging procedure. During the scan, we focus on privacy and comfort for all of our patients. Our modern 
-                  equipment is designed to reduce scan times, noise, and discomfort; therefore, creating a more comfortable experience 
+                  Our patient-centered workflow begins with providing patients with detailed, simple explanations of the scans prior
+                  to their imaging procedure. During the scan, we focus on privacy and comfort for all of our patients. Our modern
+                  equipment is designed to reduce scan times, noise, and discomfort; therefore, creating a more comfortable experience
                   for elderly patients, children, and anxious patients.
                 </p>
                 <p style={styles.heroParagraph}>
-                  The imaging unit is an integral part of the support provided to our cardiology, orthopedics, neurology, oncology, 
-                  gynecology, and trauma care departments. Diagnostic imaging provides the basis for achieving clinical excellence 
-                  within our institution, from identifying heart disease to facilitating the diagnosis and treatment of cancer to 
+                  The imaging unit is an integral part of the support provided to our cardiology, orthopedics, neurology, oncology,
+                  gynecology, and trauma care departments. Diagnostic imaging provides the basis for achieving clinical excellence
+                  within our institution, from identifying heart disease to facilitating the diagnosis and treatment of cancer to
                   assessing athletes with sports-related injuries.
                 </p>
                 <p style={styles.heroParagraph}>
-                  All necessary hygiene and quality controls are upheld constantly; equipment is calibrated prior to/after each 
-                  usage; equipment is maintained per standard protocol of operating; and infection prevention control is performed 
+                  All necessary hygiene and quality controls are upheld constantly; equipment is calibrated prior to/after each
+                  usage; equipment is maintained per standard protocol of operating; and infection prevention control is performed
                   at all times for the benefit of both patients and staff.
                 </p>
                 <p style={styles.heroParagraph}>
-                  The Shree Saibaba Multispeciality Hospital offers quality MD imaging services using the latest technology along 
-                  with experienced physicians who treat all patients with respect and compassion. We strive to deliver timely, 
-                  accurate, and dependable results so our providers can make better informed choices about their patient's treatment 
+                  The Shree Saibaba Multispeciality Hospital offers quality MD imaging services using the latest technology along
+                  with experienced physicians who treat all patients with respect and compassion. We strive to deliver timely,
+                  accurate, and dependable results so our providers can make better informed choices about their patient's treatment
                   plan leading to improved patient outcomes.
                 </p>
                 <br />
@@ -428,7 +474,7 @@ function Radiology() {
             </div>
           </div>
 
-           {/* Services Offered */}
+          {/* Services Offered */}
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>

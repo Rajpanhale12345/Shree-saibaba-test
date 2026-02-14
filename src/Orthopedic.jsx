@@ -1,5 +1,5 @@
 import React from 'react';
-import img from './Images/orthopedicdep.jpg'; // replace with orthopedic-specific image if available
+import img from './Images/orthopedicdep.jpg';
 import { Helmet } from "react-helmet-async";
 
 const styles = {
@@ -15,7 +15,6 @@ const styles = {
     color: "#0f172a",
   },
 
-  // ✅ HERO: grid on desktop, stacks on mobile via CSS class + media query below
   hero: {
     display: "grid",
     gridTemplateColumns: "minmax(280px, 420px) 1fr",
@@ -35,13 +34,12 @@ const styles = {
     border: "1px solid rgba(148,163,184,0.4)",
     background: "#0f172a",
 
-    // ✅ responsive height for the image card
     height: "clamp(220px, 32vw, 420px)",
   },
   heroImage: {
     width: "100%",
     height: "100%",
-    objectFit: "cover", // ✅ prevents stretching
+    objectFit: "cover",
     objectPosition: "center",
     display: "block",
     opacity: 0.95,
@@ -124,7 +122,6 @@ const styles = {
     marginRight: "6px",
   },
 
-  // Section styles
   section: {
     borderRadius: "18px",
     padding: "22px 22px 20px",
@@ -191,8 +188,6 @@ const styles = {
     marginBottom: "6px",
   },
 
-
-  // FAQs
   faqList: {
     display: 'grid',
     gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
@@ -223,20 +218,40 @@ function Orthopedic() {
   return (
     <>
       <Helmet>
-        <title>Orthopedic | Shree Saibaba Multispeciality Hospital</title>
-        <meta
-          name="description"
-          content="Orthopedic Department at Shree Saibaba Multispeciality Hospital offers comprehensive care for bone, joint and muscle disorders including joint replacement, fracture management, sports injury care and spine surgery."
-        />
-        <meta
-          name="keywords"
-          content="orthopedic hospital Nashik, joint replacement Nashik, fracture treatment Nashik, sports injury Nashik, spine surgery Nashik"
-        />
-        <meta
-          name="og:description"
-          content="Advanced orthopedic services including joint replacement, trauma care, sports injury management, spine surgery and rehabilitation at Shree Saibaba Multispeciality Hospital."
-        />
+        <title>Orthopedic | Best Orthopedic Hospital in Nashik</title>
+        <meta name="description" content="Orthopedics at Shree Saibaba Multispeciality Hospital, Nashik: joint replacement, fracture & trauma care, sports injuries, arthroscopy, spine care and rehabilitation with 24x7 emergency support." />
+        <meta name="keywords" content="orthopedic hospital Nashik, orthopaedic doctor Nashik, joint replacement Nashik, knee replacement Nashik, hip replacement Nashik, fracture treatment Nashik, trauma care Nashik, arthroscopy Nashik, sports injury Nashik, spine surgery Nashik" />
+        <link rel="canonical" href="https://shreesaibabamultispecialityhospital.com/ortho" />
+        <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Orthopedics Department | Shree Saibaba Multispeciality Hospital, Nashik" />
+        <meta property="og:description" content="Advanced orthopedic care including joint replacement, fracture & trauma management, sports injuries, arthroscopy, spine care and rehabilitation at Shree Saibaba Multispeciality Hospital, Nashik." />
+        <meta property="og:url" content="https://shreesaibabamultispecialityhospital.com/ortho" />
+        <meta property="og:image" content={img} />
+        <meta property="og:image:alt" content="Orthopedics Department - Shree Saibaba Multispeciality Hospital, Nashik" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Orthopedics in Nashik | Shree Saibaba Multispeciality Hospital" />
+        <meta name="twitter:description" content="Joint replacement, fracture & trauma care, sports injuries, arthroscopy, spine care and rehab with 24x7 emergency support." />
+        <meta name="twitter:image" content={img} />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "MedicalClinic",
+            "name": "Shree Saibaba Multispeciality Hospital",
+            "url": "https://shreesaibabamultispecialityhospital.com/ortho",
+            "department": {
+              "@type": "MedicalBusiness",
+              "name": "Orthopedics Department",
+              "medicalSpecialty": "Orthopedic",
+              "areaServed": { "@type": "City", "name": "Nashik" },
+              "description":
+                "Orthopedics and trauma care including joint replacement, fracture management, arthroscopy, sports injuries, spine care and rehabilitation."
+            }
+          })}
+        </script>
       </Helmet>
+
 
       <div style={styles.page}>
         <div style={styles.container}>
@@ -245,8 +260,8 @@ function Orthopedic() {
             <div style={styles.heroImageWrapper}>
               <div style={styles.heroImageCard}>
                 <img
-                  src={img} // replace with orthopedic-specific image if available
-                  alt="Orthopedic Department"
+                  src={img} 
+                  alt="Orthopedics and Joint Replacement Department in Nashik"
                   style={styles.heroImage}
                 />
               </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import generalmedicine from './Images/GeneralSurgery.jpg';
+import generalSurgeryImg from './Images/GeneralSurgery.jpg';
 import { Helmet } from "react-helmet-async";
 
 
@@ -16,7 +16,6 @@ const styles = {
     color: "#0f172a",
   },
 
-  // ✅ HERO: grid on desktop, stacks on mobile via CSS class + media query below
   hero: {
     display: "grid",
     gridTemplateColumns: "minmax(280px, 420px) 1fr",
@@ -35,14 +34,12 @@ const styles = {
     boxShadow: "0 18px 45px rgba(15,23,42,0.16)",
     border: "1px solid rgba(148,163,184,0.4)",
     background: "#0f172a",
-
-    // ✅ responsive height for the image card
     height: "clamp(220px, 32vw, 420px)",
   },
   heroImage: {
     width: "100%",
     height: "100%",
-    objectFit: "cover", // ✅ prevents stretching
+    objectFit: "cover",
     objectPosition: "center",
     display: "block",
     opacity: 0.95,
@@ -124,7 +121,6 @@ const styles = {
     marginRight: "6px",
   },
 
-  // Section styles
   section: {
     borderRadius: "18px",
     padding: "22px 22px 20px",
@@ -191,7 +187,6 @@ const styles = {
     marginBottom: "6px",
   },
 
-  // FAQs
   faqList: {
     display: 'grid',
     gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
@@ -218,25 +213,105 @@ const styles = {
   },
 };
 
+const SITE_NAME = "Shree Saibaba Multispeciality Hospital";
+const SITE_URL = "https://shreesaibabamultispecialityhospital.com";
+const CANONICAL_URL = `${SITE_URL}/generalsurgery`;
+const OG_IMAGE_URL = `${SITE_URL}/assets/GeneralSurgery-Dkoi9Lvl.jpg`;
 
-function GeneralMedicine() {
+
+
+function GeneralSurgery() {
   return (
     <>
       <Helmet>
-        <title>General Surgery | Shree Saibaba Multispeciality Hospital</title>
-        <meta
-          name="description"
-          content="Shree Saibaba Multispeciality Hospital offers comprehensive General Medicine care including diagnosis, treatment, and long-term management of diabetes, hypertension, infections, respiratory disorders, and preventive health check-ups."
-        />
-        <meta
-          name="keywords"
-          content="general medicine hospital Nashik, general physician Nashik, diabetes care Nashik, hypertension clinic Nashik, preventive health checkup Nashik, Shree Saibaba Multispeciality Hospital general medicine"
-        />
-        <meta
-          name="og:description"
-          content="Holistic General Medicine services with experienced physicians, advanced diagnostics, ICU support, preventive screenings, and 24x7 emergency care at Shree Saibaba Multispeciality Hospital."
-        />
+        <title>General Surgery | Best General Surgery Hospital in Nashik</title>
+        <meta name="description" content="General Surgery services in Nashik at Shree Saibaba Multispeciality Hospital: abdominal and GI surgery, hernia and gallbladder procedures, soft tissue surgery, minimally invasive techniques, and 24x7 emergency surgical care." />
+        <link rel="canonical" href={CANONICAL_URL} />
+        <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content={SITE_NAME} />
+        <meta property="og:title" content="General Surgery Department | Shree Saibaba Multispeciality Hospital, Nashik" />
+        <meta property="og:description" content="Expert general surgery care in Nashik with minimally invasive techniques, multidisciplinary support, safe OT standards, and 24x7 emergency surgery services." />
+        <meta property="og:url" content={CANONICAL_URL} />
+        <meta property="og:image" content={OG_IMAGE_URL} />
+        <meta property="og:image:alt" content="General Surgery Department - Shree Saibaba Multispeciality Hospital, Nashik" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="General Surgery Department | Shree Saibaba Multispeciality Hospital, Nashik" />
+        <meta name="twitter:description" content="General surgery in Nashik: minimally invasive procedures, abdominal and GI surgery, hernia and gallbladder care, plus 24x7 emergency surgery support." />
+        <meta name="twitter:image" content={OG_IMAGE_URL} />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "MedicalClinic",
+            name: SITE_NAME,
+            url: CANONICAL_URL,
+            department: {
+              "@type": "MedicalBusiness",
+              name: "General Surgery Department",
+              medicalSpecialty: "Surgery",
+              description:
+                "General surgery services including abdominal and gastrointestinal surgery, hernia and gallbladder procedures, soft tissue surgery, minimally invasive techniques and emergency surgical care.",
+              areaServed: { "@type": "City", name: "Nashik" }
+            }
+          })}
+        </script>
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "When should I consult a general surgeon?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text:
+                    "Consult a general surgeon for conditions such as hernia, gallbladder problems, appendicitis, abdominal pain requiring surgical evaluation, soft tissue swellings, infected wounds, or when your physician advises surgical treatment."
+                }
+              },
+              {
+                "@type": "Question",
+                name: "Do you offer minimally invasive (laparoscopic) surgery?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text:
+                    "Yes. Many suitable cases can be treated with minimally invasive techniques, which may involve smaller incisions and support faster recovery. The surgeon will advise the best option after evaluation."
+                }
+              },
+              {
+                "@type": "Question",
+                name: "Is emergency surgery available?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text:
+                    "Yes. Emergency surgical services are available 24x7 for urgent conditions such as acute abdomen, trauma-related injuries, severe infections, and other surgical emergencies."
+                }
+              },
+              {
+                "@type": "Question",
+                name: "What should I bring for a surgical consultation?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text:
+                    "Bring previous reports (lab tests, scans), a list of current medications, allergy history, and any prior surgical/medical records to help the surgeon plan the safest approach."
+                }
+              },
+              {
+                "@type": "Question",
+                name: "How is recovery managed after surgery?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text:
+                    "After surgery, patients receive monitored post-operative care, pain management, wound care guidance, and follow-up plans. Rehabilitation and diet advice may be provided depending on the procedure."
+                }
+              }
+            ]
+          })}
+        </script>
       </Helmet>
+
 
       <div style={styles.page}>
         <div style={styles.container}>
@@ -245,9 +320,10 @@ function GeneralMedicine() {
             <div style={styles.heroImageWrapper}>
               <div style={styles.heroImageCard}>
                 <img
-                  src={generalmedicine}
+                  src={generalSurgeryImg}
                   alt="Cardiovascular Thoracic Surgery Department"
                   style={styles.heroImage}
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -491,7 +567,7 @@ function GeneralMedicine() {
               </div>
             </div>
 
-            <p style={{...styles.listItem, textAlign : "center"}}>Meet our experienced General Surgery:</p>
+            <p style={{ ...styles.listItem, textAlign: "center" }}>Meet our experienced General Surgery:</p>
 
             <div style={styles.twoColumnGrid}>
               <ul style={styles.doctorList}>
@@ -506,7 +582,7 @@ function GeneralMedicine() {
                   On Call
                 </li>
               </ul>
-              <ul style={styles.doctorList}>                
+              <ul style={styles.doctorList}>
                 <li style={styles.tagListItem}>
                   <strong>Dr. Hemant Deore</strong>
                   <br />
@@ -665,4 +741,4 @@ function GeneralMedicine() {
   );
 }
 
-export default GeneralMedicine;
+export default GeneralSurgery;

@@ -1,5 +1,5 @@
 import React from 'react';
-import gastro from './Images/gynacdep.webp';
+import GynecologyImg from './Images/gynacdep.webp';
 import { Helmet } from "react-helmet-async";
 
 const styles = {
@@ -15,7 +15,6 @@ const styles = {
     color: "#0f172a",
   },
 
-  // ✅ HERO: grid on desktop, stacks on mobile via CSS class + media query below
   hero: {
     display: "grid",
     gridTemplateColumns: "minmax(280px, 420px) 1fr",
@@ -35,13 +34,12 @@ const styles = {
     border: "1px solid rgba(148,163,184,0.4)",
     background: "#ffffff",
 
-    // ✅ responsive height for the image card
     height: "clamp(220px, 32vw, 420px)",
   },
   heroImage: {
     width: "100%",
     height: "100%",
-    objectFit: "cover", // ✅ prevents stretching
+    objectFit: "cover",
     objectPosition: "center",
     display: "block",
     opacity: 0.95,
@@ -106,7 +104,7 @@ const styles = {
     lineHeight: 1.2,
     color: "#1e293b",
     marginBottom: "10px",
-  }, 
+  },
 
   highlightStrip: {
     marginTop: "16px",
@@ -123,7 +121,6 @@ const styles = {
     marginRight: "6px",
   },
 
-  // Section styles
   section: {
     borderRadius: "18px",
     padding: "22px 22px 20px",
@@ -190,7 +187,6 @@ const styles = {
     marginBottom: "6px",
   },
 
-  // FAQs
   faqList: {
     display: 'grid',
     gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
@@ -220,48 +216,105 @@ const styles = {
 
 function Gynecology() {
 
-
-  const canonicalUrl = "https://shreesaibabamultispecialityhospital.com/gynaecology";
-
   const metaTitle =
-    "Gynecology | Shree Saibaba Multispeciality Hospital, Nashik";
-  const metaDescription =
-    "Comprehensive gynecology care in Nashik — consultations, PCOS, menstrual disorders, fibroids, infections, screening, and minimally invasive procedures at Shree Saibaba Multispeciality Hospital.";
-  const metaKeywords =
-    "gynecology in nashik, gynaecologist nashik, PCOS treatment nashik, menstrual disorder treatment, fibroid treatment, pelvic pain clinic, women's health, pap smear nashik";
+    "Gynecology | Best Gynecology Hospital in Nashik";
+  const SITE_NAME = "Shree Saibaba Multispeciality Hospital";
+  const SITE_URL = "https://shreesaibabamultispecialityhospital.com";
+  const CANONICAL_URL = `${SITE_URL}/gynaecology`;
+  const OG_IMAGE_URL = `${SITE_URL}/assets/gynacdep-DbWh545x.webp`;
 
-  const jsonLd = {
+  const jsonLdDepartment = {
     "@context": "https://schema.org",
-    "@type": "Hospital",
-    name: "Shree Saibaba Multispeciality Hospital",
+    "@type": "MedicalClinic",
+    name: SITE_NAME,
+    url: CANONICAL_URL,
     department: {
-      "@type": "MedicalClinic",
-      name: "Gastroenterology Department",
-      medicalSpecialty: "Gastroenterology",
-      areaServed: "Nashik, Maharashtra",
-    },
+      "@type": "MedicalBusiness",
+      name: "Gynaecology Department",
+      medicalSpecialty: "ObstetricsAndGynecology",
+      description:
+        "Comprehensive gynaecology care including consultations, menstrual disorders, PCOS management, fibroids, infections, screening and minimally invasive procedures.",
+      areaServed: { "@type": "City", name: "Nashik" }
+    }
   };
+
+  const jsonLdFaq = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "When should I visit a gynecologist?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "If you have irregular periods, pelvic pain, unusual discharge, heavy bleeding, concerns like PCOS, or need preventive checkups and screening, a consultation is recommended."
+        }
+      },
+      {
+        "@type": "Question",
+        name: "What should I bring to my appointment?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Carry previous reports, ultrasound/scans, lab results, prescriptions, and a list of current medicines and allergies."
+        }
+      },
+      {
+        "@type": "Question",
+        name: "Do you provide screening tests?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Yes. Screening and diagnostic evaluation (like Pap smear or ultrasound guidance) may be advised depending on symptoms and age."
+        }
+      },
+      {
+        "@type": "Question",
+        name: "Can PCOS be managed?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "PCOS is commonly managed with individualized guidance including lifestyle measures and medicines when needed. Treatment is planned based on symptoms and goals."
+        }
+      },
+      {
+        "@type": "Question",
+        name: "Is my visit confidential?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Yes. We follow privacy and confidentiality practices so you can discuss sensitive concerns comfortably."
+        }
+      }
+    ]
+  };
+
 
 
   return (
     <>
       <Helmet>
-        <title>{metaTitle}</title>
-        <meta name="description" content={metaDescription} />
-        <meta name="keywords" content={metaKeywords} />
-        <link rel="canonical" href={canonicalUrl} />
-
-        <meta property="og:title" content={metaTitle} />
-        <meta property="og:description" content={metaDescription} />
+        <title>Gynecology | Best Gynecology Hospital in Nashik</title>
+        <meta name="description" content="Comprehensive gynaecology care in Nashik — consultations, PCOS, menstrual disorders, fibroids, infections, screening and minimally invasive procedures at Shree Saibaba Multispeciality Hospital." />
+        <link rel="canonical" href={CANONICAL_URL} />
+        <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={canonicalUrl} />
-
+        <meta property="og:site_name" content={SITE_NAME} />
+        <meta property="og:title" content="Gynaecology Department | Shree Saibaba Multispeciality Hospital, Nashik" />
+        <meta property="og:description" content="Women's health services in Nashik: PCOS care, menstrual disorders, pelvic pain evaluation, infection management, screening and minimally invasive procedures." />
+        <meta property="og:url" content={CANONICAL_URL} />
+        <meta property="og:image" content={OG_IMAGE_URL} />
+        <meta property="og:image:alt" content="Gynaecology Department - Shree Saibaba Multispeciality Hospital, Nashik" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={metaTitle} />
-        <meta name="twitter:description" content={metaDescription} />
+        <meta name="twitter:title" content="Gynaecology Department | Shree Saibaba Multispeciality Hospital, Nashik" />
+        <meta name="twitter:description" content="Expert women's health care in Nashik: PCOS, menstrual disorders, screening, infection care and minimally invasive procedures." />
+        <meta name="twitter:image" content={OG_IMAGE_URL} />
 
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(jsonLdDepartment)}</script>
+        <script type="application/ld+json">{JSON.stringify(jsonLdFaq)}</script>
       </Helmet>
+
 
       <div style={styles.page}>
         <div style={styles.container}>
@@ -270,9 +323,10 @@ function Gynecology() {
             <div style={styles.heroImageWrapper}>
               <div style={styles.heroImageCard}>
                 <img
-                  src={gastro}
-                  alt="Cardiovascular Thoracic Surgery Department"
+                  src={GynecologyImg}
+                  alt="Gynaecology Department at Shree Saibaba Multispeciality Hospital in Nashik"
                   style={styles.heroImage}
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -475,7 +529,7 @@ function Gynecology() {
 
           {/* Department Timings */}
 
-          
+
           {/* <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>

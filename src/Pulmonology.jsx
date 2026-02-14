@@ -123,7 +123,6 @@ const styles = {
     marginRight: "6px",
   },
 
-  // Section styles
   section: {
     borderRadius: "18px",
     padding: "22px 22px 20px",
@@ -189,7 +188,7 @@ const styles = {
     border: "1px solid rgba(191,219,254,1)",
     marginBottom: "6px",
   },
-  // FAQ styles (were referenced but missing)
+
   faqList: {
     display: "grid",
     gap: "12px",
@@ -242,9 +241,6 @@ const styles = {
     color: "#1e293b",
   },
 
-
-
-  // FAQs
   faqList: {
     display: 'grid',
     gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
@@ -279,22 +275,25 @@ function Pulmonology() {
   const keywords =
     "pulmonology in nashik, chest specialist nashik, lung specialist nashik, respiratory clinic nashik, asthma treatment nashik, copd treatment nashik, pneumonia care, tuberculosis care, pulmonary function test nashik, sleep apnea test nashik, bronchoscopy, critical care respiratory";
 
+  const ogImage = img.startsWith("http") ? img : `${SITE_URL}${img}`;
+
   const jsonLdClinic = {
     "@context": "https://schema.org",
     "@type": "MedicalClinic",
     name: "Shree Saibaba Multispeciality Hospital",
     url: PAGE_URL,
-    image: `${SITE_URL}/assets/pulmonologydep.webp`,
-    medicalSpecialty: "Pulmonary",
+    image: ogImage,
+    medicalSpecialty: "Pulmonary Medicine",
     description,
     areaServed: ["Nashik", "Maharashtra"],
     department: {
       "@type": "MedicalClinic",
       name: "Pulmonology Department",
-      medicalSpecialty: "Pulmonary",
+      medicalSpecialty: "Pulmonary Medicine",
       url: PAGE_URL,
     },
   };
+
 
   const jsonLdFaq = {
     "@context": "https://schema.org",
@@ -352,11 +351,13 @@ function Pulmonology() {
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:url" content={PAGE_URL} />
-        <meta property="og:image" content={`${SITE_URL}/assets/pulmonologydep.webp`} />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:image:alt" content="Pulmonology Department - Shree Saibaba Multispeciality Hospital" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={`${SITE_URL}/assets/pulmonologydep.webp`} />
+        <meta name="twitter:image" content={ogImage} />
+        <meta name="twitter:image:alt" content="Pulmonology Department - Shree Saibaba Multispeciality Hospital" />  
         <script type="application/ld+json">{JSON.stringify(jsonLdClinic)}</script>
         <script type="application/ld+json">{JSON.stringify(jsonLdFaq)}</script>
       </Helmet>
@@ -370,6 +371,7 @@ function Pulmonology() {
                   src={img}
                   alt="Pulmonology"
                   style={styles.heroImage}
+                  loading="lazy"
                 />
               </div>
             </div>

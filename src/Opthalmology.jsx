@@ -3,15 +3,91 @@ import Deptext from './Deptext';
 import Opthamology from './Images/optha.jpg';
 import { Helmet } from "react-helmet-async";
 
+const SITE_NAME = "Shree Saibaba Multispeciality Hospital";
+const SITE_URL = "https://shreesaibabamultispecialityhospital.com";
+
+// ✅ Use your real route slug here
+const CANONICAL_URL = `${SITE_URL}/ophthalmology`;
+
+// ✅ Put an OG image at this public URL (recommended), or replace with a real hosted image
+const OG_IMAGE_URL = `${SITE_URL}/static/og/ophthalmology.jpg`;
+
 function Ophthalmology() {
+  const pageTitle = "Opthalmology | Best Opthalmology Hospital in Nashik";
+  const pageDescription = "Shree Saibaba Multispeciality Hospital, Nashik offers comprehensive ophthalmology and eye care—cataract surgery, glaucoma screening, retina services, diabetic eye care, cornea care, refractive surgery and pediatric ophthalmology with advanced diagnostics.";
+
+  const metaKeywords = "ophthalmology Nashik, eye hospital Nashik, eye specialist Nashik, cataract surgery Nashik, phaco surgery Nashik, glaucoma treatment Nashik, retina specialist Nashik, diabetic retinopathy treatment Nashik, cornea specialist Nashik, LASIK Nashik, pediatric eye doctor Nashik";
+
+  const jsonLdDepartment = {
+    "@context": "https://schema.org",
+    "@type": "MedicalClinic",
+    name: SITE_NAME,
+    url: CANONICAL_URL,
+    department: {
+      "@type": "MedicalBusiness",
+      name: "Ophthalmology & Eye Care Department",
+      medicalSpecialty: "Ophthalmology",
+      areaServed: { "@type": "City", name: "Nashik" },
+      description:
+        "Comprehensive eye care services including cataract surgery, glaucoma screening and management, retina and diabetic eye care, cornea services, refractive surgery and pediatric ophthalmology."
+    }
+  };
+
+  const faqItems = [
+    {
+      q: "When should I consult an ophthalmologist?",
+      a: "If you have blurred vision, eye pain, redness, frequent headaches, watering, sudden vision changes, diabetes-related eye concerns, or need routine screening (especially after age 40)."
+    },
+    {
+      q: "Is cataract surgery safe?",
+      a: "Cataract surgery is one of the most common and safe procedures. Your doctor will evaluate your eye, explain lens options, and guide you on the best approach for your case."
+    },
+    {
+      q: "How often should I get an eye check-up?",
+      a: "Adults should consider routine check-ups every 1-2 years, or sooner if you have diabetes, high blood pressure, glaucoma risk, or vision problems."
+    },
+    {
+      q: "Do you treat diabetic retinopathy?",
+      a: "Yes. Diabetic eye evaluation and retina care are provided, and treatment is planned based on the stage of retinopathy and overall eye health."
+    },
+    {
+      q: "Do you provide pediatric eye care?",
+      a: "Yes. We evaluate children for vision issues, squint, lazy eye, infections and other pediatric eye concerns with age-appropriate, child-friendly care."
+    }
+  ];
+
+  const jsonLdFaq = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a }
+    }))
+  };
+
   return (
     <>
-
       <Helmet>
-        <title>Opthalmology | Shree Saibaba Multispeciality Hospital</title>
-        <meta name='description' content='' />
-        <meta name='keywords' content='' />
-        <meta name='og:description' content='' />
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
+        <meta name="keywords" content={metaKeywords} />
+        <link rel="canonical" href={CANONICAL_URL} />
+        <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content={SITE_NAME} />
+        <meta property="og:title" content={`${SITE_NAME} | Ophthalmology & Eye Care`} />
+        <meta property="og:description" content={pageDescription} />
+        <meta property="og:url" content={CANONICAL_URL} />
+        <meta property="og:image" content={OG_IMAGE_URL} />
+        <meta property="og:image:alt" content="Ophthalmology & Eye Care Department - Shree Saibaba Multispeciality Hospital, Nashik" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${SITE_NAME} | Ophthalmology & Eye Care`} />
+        <meta name="twitter:description" content={pageDescription} />
+        <meta name="twitter:image" content={OG_IMAGE_URL} />
+
+        <script type="application/ld+json">{JSON.stringify(jsonLdDepartment)}</script>
+        <script type="application/ld+json">{JSON.stringify(jsonLdFaq)}</script>
       </Helmet>
 
       <div>
