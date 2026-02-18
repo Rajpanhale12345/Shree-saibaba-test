@@ -318,7 +318,7 @@ function Cardiology() {
 
       <div style={styles.page}>
         <div style={styles.container}>
-     
+
           <div style={styles.hero}>
             <div style={styles.heroImageWrapper}>
               <div style={styles.heroImageCard}>
@@ -344,54 +344,78 @@ function Cardiology() {
                 </div>
 
                 <p style={styles.heroParagraph}>
-                  Cardiology is a medical specialty that helps to heal the heart. The heart
-                  is the most vital organ in our body, and thus, if you have any kind of
-                  issue, you must go to a doctor promptly. Untreated, these problems could
-                  become serious and have a negative impact on your daily life. This includes
-                  the conditions of heart disease, cardiovascular disease and all of their
-                  related disorders.
+                  To ensure heart health, individuals must select the best cardiology hospital
+                  in Nashik, where they can receive accurate diagnosis, timely treatments, and
+                  long-term health and well-being. In addition to providing heart care services,
+                  cardiology is a specialised field that revolves around diagnosing, preventing,
+                  and treating diseases affecting the heart and blood vessels. As the most important
+                  organ within our bodies, even minor symptoms like chest pain, difficulty breathing,
+                  palpitations and/or elevated blood pressure levels should be taken seriously.
                 </p>
                 <p style={styles.heroParagraph}>
-                  The Shree Saibaba Multispeciality Hospital is the leading cardiology hospital
-                  in Nashik, with state-of-the-art, reliable, advanced cardiac services. It is
-                  also one of the best hospitals to find heart specialists (doctors) in Nashik.
-                  Patients choose Shree Saibaba Multispeciality Hospital for its accurate
-                  diagnosis, up-to-date treatment techniques and caring attitudes of about
-                  patients.
+                  There are many hospitals in Nashik that can provide quality cardiac care; however,
+                  Shree Saibaba Multispeciality Hospital has been consistently recognised as one of
+                  the leading cardiology hospitals in Nashik and the northern part of Maharashtra
+                  and is providing a comprehensive cardiac care experience through modern technologies,
+                  skilled professionals and patient-centric care. Because of their expertise, patients
+                  have confidence in receiving an accurate diagnosis, evidence-based treatment options
+                  and compassionate medical service from some of Nashik's top cardiology specialists
+                  while receiving treatment at Shree Saibaba Multispeciality Hospital.
+                </p>
+                <br />
+                <p style={styles.heroParagraph}>
+                  <b>Expert Cardiology Specialists and Advanced Treatment</b>
+                </p>
+                <ul style={styles.heroParagraph}>
+                  <li>coronary artery disease</li>
+                  <li>hypertension (high blood pressure)</li>
+                  <li>arrhythmia or irregular heart rhythms</li>
+                  <li>Heart valve disorders</li>
+                  <li>congestive heart failure</li>
+                  <li>angina or chest pain</li>
+                  <li>congenital heart defects</li>
+                  <li>preventive cardiology and assessment of your heart disease risk</li>
+                </ul>
+                <p style={styles.heroParagraph}>
+                  The multidisciplinary nature of our approach allows us to provide individualised treatment
+                  plans based on each patient's needs that will help improve their heart health and quality of life.
+                </p>
+                <br />
+                <p style={styles.heroParagraph}>
+                  <b>Emergency Cardiac Care & Rapid Diagnosis</b>
                 </p>
                 <p style={styles.heroParagraph}>
-                  The cardiology department at Shree Saibaba Multispeciality Hospital is comprised
-                  of well-trained cardiologists including specialists in heart failure. This
-                  comprehensive approach allows us to treat a variety of cardiovascular issues,
-                  such as hypertension (high blood pressure), chest pain, arrhythmias (irregular
-                  heartbeats), blocked arteries, and chronic heart disease.
+                  The top heart hospital in Nashik is available around the clock for emergency cardiac services
+                  related to heart attacks, severe chest pain, and other forms of acute cardiovascular emergencies.
+                  Our advanced in-house diagnostic equipment ECG, 2D Echo, stress testing, cardiac monitoring, and
+                  imaging, allows for quick detection of heart-related problems and immediate treatment at the most
+                  crucial moment when seconds count.
+                </p>
+                <br />
+                <p style={styles.heroParagraph}>
+                  <b>Complete Cardiovascular Care Offered in One Location</b>
                 </p>
                 <p style={styles.heroParagraph}>
-                  We provide complete care for patients facing cardiovascular emergencies, ensuring
-                  fast response and lifesaving treatment. With advanced diagnostic facilities available
-                  in-house, heart conditions are identified quickly, allowing immediate and effective
-                  treatment.
+                  We offer cardiovascular preventive screenings as well as provide a wide range of treatment options
+                  for all types of heart disease, including advanced techniques to treat many different types of cardiac
+                  problems. We not only want to help you with your current cardiac issue but also reduce the chances of
+                  having another heart problem by providing advice about healthy lifestyle changes, managing risk factors,
+                  and having regular follow-up visits with the best cardiologists in Nashik.
+                </p>
+                <br />
+                <p style={styles.heroParagraph}>
+                  <b>Trusted Heart Hospital in Nashik</b>
                 </p>
                 <p style={styles.heroParagraph}>
-                  As one of the best heart hospitals in the region, our goal is to prevent, diagnose,
-                  and manage heart-related conditions with precision and care. Every patient receives
-                  a personalized approach to their heart health through routine examinations and extensive
-                  procedures and treatment.
+                  Shree Saibaba Multispeciality Hospital is the preferred place for patients who are seeking the best cardiologist in Nashik or who need a trusted or reliable source of cardiac care. Our goal is to promote long-term cardiac health, improve the quality of life, and ultimately serve our community as the most trusted provider of cardiac medicine and health care in Nashik and North Maharashtra.
                 </p>
-                <p style={styles.heroParagraph}>
-                  The focus is on enhancing long term heart health and providing improved quality of
-                  life to all patients. Individuals seeking a qualified specialist or patient care provider
-                  for cardiovascular disease will find the Shree Saibaba Multispeciality Hospital to be the
-                  place to go for all types of cardiovascular care in Nashik.
-                </p>
-
                 <div style={styles.highlightStrip}>
                   <span style={styles.highlightLabel}>Quick Facts:</span>
                   2 cath labs • 30-bed intensive cardiac care • 24x7 cardiac emergency services
                 </div>
               </div>
             </div>
-          </div> 
+          </div>
 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
@@ -419,7 +443,7 @@ function Cardiology() {
               </li>
             </ul>
           </section>
- 
+
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -445,7 +469,7 @@ function Cardiology() {
               <li style={styles.listItem}>Dedicated cardiac rehabilitation gym.</li>
             </ul>
           </section>
- 
+
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -468,7 +492,7 @@ function Cardiology() {
               unwavering commitment to delivering world-class heart care with a personal touch.
             </p>
           </section>
- 
+
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -485,7 +509,7 @@ function Cardiology() {
               </ul>
             </div>
           </section>
- 
+
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -506,7 +530,7 @@ function Cardiology() {
               </li>
             </ul>
           </section>
- 
+
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -536,7 +560,7 @@ function Cardiology() {
               </li>
             </ul>
           </section>
- 
+
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -553,7 +577,7 @@ function Cardiology() {
               </li>
             </ul>
           </section>
- 
+
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
