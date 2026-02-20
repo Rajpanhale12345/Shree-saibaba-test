@@ -67,7 +67,8 @@ import Robotic_Surgery from "./Blogs/Robotic_Surgery";
 import Robotic_Joint from "./Blogs/Robotic_Joint";
 import Neurology_Blog from "./Blogs/Neurology_Blog";
 import GTranslate from "./GTranslate";
-import Urology_Blog from "./Blogs/Urology_Kidney"; 
+import Urology_Blog from "./Blogs/Urology_Kidney";
+import Multidisciplinary from "./Blogs/MultidisciplinaryCare"; 
 
 function App() {
   return (
@@ -116,8 +117,7 @@ function App() {
           <Route path="/spinecare" element={<SpineCare />} />
           <Route path="/gynaecology" element={<Gynecology />} />
           <Route path="/generalmedicine" element={<GeneralMedicine />} />
-          <Route path="/pulmonology" element={<Pulmonology />} />
-      
+          <Route path="/pulmonology" element={<Pulmonology />} />      
           <Route path="/tieups" element={<TieUps />} />
           <Route path="/nutrition" element={< Nutrition_Sleep/>} />
           <Route path="/understanding" element={< Understanding/>} />
@@ -143,6 +143,7 @@ function App() {
           <Route path="/Robotic_Joint" element={< Robotic_Joint/>} />
           <Route path="/Neurology_Blog" element={< Neurology_Blog/>} />
           <Route path="/Urology_Blog" element={< Urology_Blog/>} />
+          <Route path="/Multidisciplinary" element={< Multidisciplinary/>} />
      
         </Routes>
         <GTranslate/>

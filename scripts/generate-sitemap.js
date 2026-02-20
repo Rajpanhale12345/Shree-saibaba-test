@@ -65,6 +65,8 @@ const routes = [
   "/Robotic_Surgery",
   "/Robotic_Joint",
   "/Neurology_Blog",
+  "/Urology_Blog",
+  "/Multidisciplinary",
 ];
 
 async function generateSitemap() {
