@@ -29,6 +29,7 @@ import Stress_Anxiety from './Images/Stress_Anxiety.png';
 import Robotic_Surgery from './Images/Advanced_Robotic_Surgery.jpg';
 import Robotic_Joint from './Images/Robotic Joint Replacement.jpg';
 import Neurology_blog from "./Images/Neurology_Blog.jpg"
+import Asthma from "./Images/Asthma.webp";
 import { Link } from 'react-router-dom';
 import { Helmet } from "react-helmet-async";
 
@@ -51,6 +52,12 @@ function Blogs() {
       <br /><br />
       <div className="imageblog1">
         
+
+<Link to='/Asthma'><div className="imageblog">
+          <img src={Asthma} alt="Asthma" /> <br /> <br />
+          <h2><i style={{ color: 'red', }}>Asthma</i></h2></div>
+        </Link>
+
         <Link to='/Neurology_Blog'><div className="imageblog">
           <img src={Neurology_blog} alt="Cardio" /> <br /> <br />
           <h2><i style={{ color: 'red', }}>Neurology Brain Disorders</i></h2></div>
