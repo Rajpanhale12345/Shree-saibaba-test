@@ -15,7 +15,6 @@ const styles = {
     color: "#0f172a",
   },
 
-  // ✅ HERO: grid on desktop, stacks on mobile via CSS class + media query below
   hero: {
     display: "grid",
     gridTemplateColumns: "minmax(280px, 420px) 1fr",
@@ -35,13 +34,12 @@ const styles = {
     border: "1px solid rgba(148,163,184,0.4)",
     background: "#0f172a",
 
-    // ✅ responsive height for the image card
     height: "clamp(220px, 32vw, 420px)",
   },
   heroImage: {
     width: "100%",
     height: "100%",
-    objectFit: "cover", // ✅ prevents stretching
+    objectFit: "cover",
     objectPosition: "center",
     display: "block",
     opacity: 0.95,
@@ -123,7 +121,6 @@ const styles = {
     marginRight: "6px",
   },
 
-  // Section styles
   section: {
     borderRadius: "18px",
     padding: "22px 22px 20px",
@@ -189,29 +186,30 @@ const styles = {
     border: "1px solid rgba(191,219,254,1)",
     marginBottom: "6px",
   },
-  // FAQ styles (were referenced but missing)
+
   faqList: {
-    display: "grid",
-    gap: "12px",
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+    gap: '12px',
   },
   faqItem: {
-    borderRadius: "14px",
-    padding: "14px 14px 12px",
-    background: "rgba(255,255,255,0.95)",
-    border: "1px solid rgba(226,232,240,1)",
-    boxShadow: "0 10px 24px rgba(15,23,42,0.05)",
-    textAlign: "left",
+    borderRadius: '14px',
+    padding: '14px 14px 12px',
+    background: '#ffffffff',
+    color: '#000000ff',
+    boxShadow: '0 16px 30px rgba(15,23,42,0.4)',
+    borderLeft: '4px solid #38bdf8',
   },
   faqQuestion: {
-    fontWeight: 800,
-    color: "#0f172a",
-    marginBottom: "6px",
-    fontSize: "14px",
+    fontSize: '14px',
+    fontWeight: 600,
+    marginBottom: '6px',
   },
   faqAnswer: {
-    color: "#334155",
-    fontSize: "14px",
-    lineHeight: 1.7,
+    fontSize: '13px',
+    lineHeight: 1.6,
+    color: '#000000ff',
+    textAlign: 'left',
   },
 };
 
@@ -222,7 +220,7 @@ function PlasticSurgery() {
   const canonicalUrl = "https://shreesaibabamultispecialityhospital.com/plasticsurgery";
 
   const metaTitle =
-    "Plastic Surgery | Shree Saibaba Multispeciality Hospital, Nashik";
+    "Plastic Surgery | Best Plastic Surgery Hospital in Nashik";
   const metaDescription =
     "Expert cosmetic and reconstructive plastic surgery care in Nashik. Advanced OT setup, safety-focused protocols, and personalized consultations at Shree Saibaba Multispeciality Hospital.";
   const metaKeywords =
@@ -233,13 +231,15 @@ function PlasticSurgery() {
     "@context": "https://schema.org",
     "@type": "Hospital",
     name: "Shree Saibaba Multispeciality Hospital",
+    url: canonicalUrl,
     department: {
       "@type": "MedicalClinic",
-      name: "Gastroenterology Department",
-      medicalSpecialty: "Gastroenterology",
+      name: "Plastic Surgery Department",
+      medicalSpecialty: "Plastic Surgery",
       areaServed: "Nashik, Maharashtra",
     },
   };
+
 
 
   return (
@@ -258,19 +258,22 @@ function PlasticSurgery() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={metaTitle} />
         <meta name="twitter:description" content={metaDescription} />
+        <meta property="og:image" content={gastro} />
+        <meta property="og:image:alt" content="Plastic Surgery Department" />
+        <meta name="twitter:image" content={gastro} />
+
 
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 
       <div style={styles.page}>
-        <div style={styles.container}>
-          {/* Hero */}
+        <div style={styles.container}> 
           <div style={styles.hero}>
             <div style={styles.heroImageWrapper}>
               <div style={styles.heroImageCard}>
                 <img
                   src={gastro}
-                  alt="Cardiovascular Thoracic Surgery Department"
+                  alt="Plastic Surgery Department"
                   style={styles.heroImage}
                 />
               </div>
@@ -295,7 +298,7 @@ function PlasticSurgery() {
                   was originally available.
                 </p>
                 <p style={styles.heroParagraph}>
-                  The Shree Saibaba Multipurpose Hospital is known for its highly-skilled doctors and state-of-the-art
+                  The Shree Saibaba Multispeciality Hospital is known for its highly-skilled doctors and state-of-the-art
                   technological capabilities which provide the opportunity for cosmetic and reconstructive surgical
                   procedures to be performed on a wide variety of individuals. All surgical procedures conducted by the
                   hospital are conducted with great medical care, integrity, and safety measured by appropriate means.
@@ -369,7 +372,7 @@ function PlasticSurgery() {
             </div>
           </div>
 
-          {/* Services Offered */}
+        
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -404,7 +407,7 @@ function PlasticSurgery() {
             </div>
           </section>
 
-          {/* Facilities & Equipment */}
+   
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -421,7 +424,7 @@ function PlasticSurgery() {
             </ul>
           </section>
 
-          {/* Team Members */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -431,12 +434,12 @@ function PlasticSurgery() {
             </div>
             <div style={styles.twoColumnGrid}>
               <ul style={styles.doctorList}>
-                <li style={styles.doctorItem}><b>DR. LALIT DERLE</b> <br /><span style={{fontSize : "11px"}}>MBBS, DNB, MS</span></li>
+                <li style={styles.doctorItem}><b>DR. LALIT DERLE</b> <br /><span style={{ fontSize: "11px" }}>MBBS, DNB, MS</span></li>
               </ul>
             </div>
           </section>
 
-          {/* Department Timings */}
+     
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -454,7 +457,7 @@ function PlasticSurgery() {
             </ul>
           </section>
 
-          {/* Achievements & Highlights */}
+        
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -470,7 +473,7 @@ function PlasticSurgery() {
             </ul>
           </section>
 
-          {/* Patient Guidelines */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -494,7 +497,7 @@ function PlasticSurgery() {
             </ul>
           </section>
 
-          {/* FAQs */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -506,7 +509,7 @@ function PlasticSurgery() {
             <div style={styles.faqList}>
               <div style={styles.faqItem}>
                 <div style={styles.faqQuestion}>
-                  1. When should I consult a plastic surgeon?
+                  Q. When should I consult a plastic surgeon?
                 </div>
                 <div style={styles.faqAnswer}>
                   If you want cosmetic improvement, have scars/deformities, need
@@ -518,7 +521,7 @@ function PlasticSurgery() {
 
               <div style={styles.faqItem}>
                 <div style={styles.faqQuestion}>
-                  2. Is cosmetic surgery safe?
+                  Q. Is cosmetic surgery safe?
                 </div>
                 <div style={styles.faqAnswer}>
                   When performed by qualified surgeons in a properly equipped hospital
@@ -529,7 +532,7 @@ function PlasticSurgery() {
 
               <div style={styles.faqItem}>
                 <div style={styles.faqQuestion}>
-                  3. Do I need an appointment?
+                  Q. Do I need an appointment?
                 </div>
                 <div style={styles.faqAnswer}>
                   Walk-ins may be accepted, but an appointment helps reduce waiting time
@@ -539,7 +542,7 @@ function PlasticSurgery() {
 
               <div style={styles.faqItem}>
                 <div style={styles.faqQuestion}>
-                  4. How long does recovery take?
+                  Q. How long does recovery take?
                 </div>
                 <div style={styles.faqAnswer}>
                   Recovery depends on the procedure and your health. Your surgeon will
@@ -549,7 +552,7 @@ function PlasticSurgery() {
 
               <div style={styles.faqItem}>
                 <div style={styles.faqQuestion}>
-                  5. Will results look natural?
+                  Q. Will results look natural?
                 </div>
                 <div style={styles.faqAnswer}>
                   The aim is balanced, natural-looking improvement. Your consultation will
@@ -561,7 +564,7 @@ function PlasticSurgery() {
         </div>
       </div>
 
-      {/* Responsive stacking */}
+ 
       <style>{`
         @media (max-width: 900px) {
           .heroGridFix {

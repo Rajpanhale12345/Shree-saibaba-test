@@ -61,7 +61,6 @@ const StyledMenu = styled((props) => (
 }));
 
 function About() {
-  // Separate state for each doctor's menu
   const [anchorElAnir, setAnchorElAnir] = React.useState(null);
   const [anchorElPallavi, setAnchorElPallavi] = React.useState(null);
 
@@ -82,7 +81,6 @@ function About() {
     setAnchorElPallavi(null);
   };
 
-  // Background block for the three info paragraphs
   const infoWrapperStyle = {
     maxWidth: '1180px',
     margin: '0 auto 2.5rem',
@@ -170,8 +168,8 @@ function About() {
         />
       </Helmet>
 
-   
-<br /><br /><br /><br /><br />
+
+      <br /><br /><br /><br /><br />
       <div className="main1">
         <ul>
           <div className="title">
@@ -184,7 +182,6 @@ function About() {
             <br />
             <br />
             <div className="founders">
-              {/* ---------- Dr Aniruddha ---------- */}
               <div className="founder1">
                 <img src={founder2} alt="founder2" />
                 <br />
@@ -196,7 +193,7 @@ function About() {
                 <br />
 
                 <Button
-                className='readmore'
+                  className='readmore'
                   id="readmore-anir"
                   aria-controls={openAnir ? 'menu-anir' : undefined}
                   aria-haspopup="true"
@@ -222,15 +219,15 @@ function About() {
                 >
                   <MenuItem className='para' onClick={handleCloseAnir} disableRipple>
                     Dr. Aniruddha Dharmadhikari is a cardiologist<br /> who has
-                    performed 
+                    performed
                     thousands of <br />successful cardiac procedures and <br /> has shaped a
-                    hospital 
+                    hospital
                     into one of<br /> the leading hospitals for heart <br /> treatment and
-                    advanced 
+                    advanced
                     cardiac care in <br />Nashik. He is a highly respected physician<br />
-                    who practices 
+                    who practices
                     interventional cardiology <br />and evidence-based medicine. His
-                   <br /> dedication 
+                    <br /> dedication
                     to patient care has made the<br /> hospital the preferred choice
                     for cardiac<br /> treatment,
                     angiograms, and other advanced <br /> cardiac services in Nashik
@@ -239,7 +236,6 @@ function About() {
                 </StyledMenu>
               </div>
 
-              {/* ---------- Dr Pallavi ---------- */}
               <div className="founder">
                 <img src={founder1} alt="founder1" />
                 <br />
@@ -276,13 +272,13 @@ function About() {
                 >
                   <MenuItem className='para' onClick={handleClosePallavi} disableRipple>
                     Dr. Pallavi Dharmadhikari has created <br /> one of the most
-                    reputable 
+                    reputable
                     radiology<br /> departments  in the region by ensuring that <br />
                     patients receive
                     timely and accurate <br /> diagnoses through high-quality imaging
-                    <br /> equipment 
+                    <br /> equipment
                     and interpretation.<br /> As a trusted physician, Dr. Pallavi <br /> is
-                    committed 
+                    committed
                     to providing  the best possible <br />    care to her patients.
                   </MenuItem>
                 </StyledMenu>
@@ -291,50 +287,59 @@ function About() {
             <br />
             <br />
 
-            {/* ---------- Three paragraphs with background image ---------- */}
             <div style={infoWrapperStyle}>
               <div style={infoInnerStyle}>
                 <p style={infoParagraphStyle}>
-                  <h1 style={{color : "white"}}>About us</h1> <br />
-                  The Saibaba Heart Institute &amp; Multispeciality Hospital
-                  leads the industry in high-end cardiac services as well as a
-                  well-established, reputable centre with total Orthopaedic
-                  care. The Institute has built an impressive reputation in many
-                  areas of healthcare delivery by providing patient-focused and
-                  ethical healthcare that is affordable, with the specific
-                  vision to be a Centre of Excellence in the healthcare
-                  Community, providing state-of-the-art infrastructure and
-                  technology to medical professionals, along with a
-                  compassionate and healing environment for patients. Our
-                  mission includes a commitment to both excellence and
-                  accountability for all health care services.
+                  <h1 style={{ color: "white" }}>About us</h1> <br />
+                  Saibaba Heart Institute & Multispecialty Hospital is the best multispecialty
+                  hospital in Nashik and also the best hospital in Northern Maharashtra. Families
+                  have trusted Saibaba & their staff for compassionate, ethical, and cutting-edge
+                  medical care since they opened their doors. Every time a person comes to Saibaba
+                  Heart Institute & Multispecialty Hospital, we treat every patient like a member
+                  of our family by providing clear and honest guidance, advice, and treatment at
+                  the appropriate time.
                 </p>
 
                 <p style={infoParagraphStyle}>
-                  Saibaba Heart Institute &amp; Multispeciality Hospital
-                  combines cutting-edge medical technology with personal
-                  devotion to provide local patients with an easy-to-access,
-                  comprehensive facility where they can receive consistently
-                  superior and exceptional care. In addition to being nationally
-                  recognised leaders in cardiology and heart disease care, we
-                  provide comprehensive Orthopaedic services for all external
-                  injuries, as well as comprehensive care and repair of the
-                  spine, robotic arthroscopy, complex osteosynthesis, and many
-                  other procedures for increased speed of recovery,
-                  precision-guided-motion results, and enhanced long-term
-                  mobility.
+                  Saibaba Heart Institute & Multispecialty Hospital is a leading cardiac hospital
+                  in Nashik and a leading orthopaedic and spine care hospital in North Maharashtra.
+                  Our goal is to ensure that our patients receive world-class treatment at affordable
+                  prices. Our patients don't have to go too far to receive world-class treatment. We
+                  have modern equipment and a caring environment to ensure healing for both body and mind.
                 </p>
 
-                <p style={{ ...infoParagraphStyle, marginBottom: 0 }}>
-                  The Saibaba Heart Institute and Multispeciality Hospital
-                  offers a complete and total Healthcare Package. This means
-                  that all of our services are included and delivered in one
-                  location; cardiac, orthopaedic, robotic joint replacement,
-                  highly accurate diagnostic imaging service, and 24x7 emergency
-                  services are all available at one location, ensuring the best
-                  possible outcomes for each patient. Our staff embraces an
-                  environment of Integrity and Innovation while serving the best
-                  health interests of each patient in their community.
+                <p style={infoParagraphStyle}>
+                  At our hospital, our patients receive a full gamut of medical services under one
+                  roof. We are a top heart hospital in Nashik, and our expertise in the field of
+                  heart diseases, preventive cardiology, and cardiac procedures is unparalleled.
+                  Along with this, our orthopaedic department provides specialised care for injuries,
+                  joint problems, spine conditions, robotic joint replacement in Nashik, minimally
+                  invasive orthopaedic procedures, and rehabilitation.
+                </p>
+
+                <p style={infoParagraphStyle}>
+                  Saibaba Hospital in Nashik is a 24-hour emergency hospital with extremely accurate
+                  diagnostic imaging, state-of-the-art surgical facilities, and a team of doctors
+                  available round the clock. We are a multispecialty hospital located near your home
+                  in Nashik. We provide all our services under one roof with no waiting time for our
+                  patients. We provide cardiology, orthopaedics, diagnostics, emergency services, and
+                  speciality vision.
+                </p>
+
+                <p style={infoParagraphStyle}>
+                  What truly sets us apart from other multispecialty hospitals in Nashik is our people.
+                  Our doctors, nurses, and staff at Saibaba Heart Institute & Multispeciality Hospital
+                  believe that healing starts with kindness, listening, and respect. That is why Saibaba
+                  Hospital in Nashik has always been recognised as one of the top multispecialty
+                  hospitals in Nashik for cardiac and orthopaedic care. We are recognised for our
+                  compassion.
+                </p>
+
+                <p style={infoParagraphStyle}>
+                  <b>Our Promise:</b> <br />
+                  We commit to offering contemporary, low-budget, patient-centred health care services to 
+                  our customers. We will evolve into a Centre of Excellence in Nashik, building a reputation 
+                  for providing exemplary health care in the area.
                 </p>
               </div>
             </div>
@@ -375,8 +380,8 @@ function About() {
           health care.{' '}
         </p>
       </div>
-      
-    
+
+
       <hr />
       <br />
       <br />

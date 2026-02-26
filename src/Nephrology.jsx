@@ -2,101 +2,95 @@ import React from 'react';
 import nephrology from './Images/nephrology.jpg';
 import { Helmet } from "react-helmet-async";
 
-// ✅ Same structure + layout + styling pattern as Cardiology
 const styles = {
   page: {
-    background: 'linear-gradient(135deg, #f4f7fb, #e5edf9)',
-    padding: '40px 16px',
+    background: "linear-gradient(135deg, #f4f7fb, #e5edf9)",
+    padding: "40px 16px",
   },
   container: {
-    maxWidth: '1200px',
-    margin: '0 auto',
-    fontFamily: '"Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif',
-    color: '#0f172a',
+    maxWidth: "1200px",
+    margin: "0 auto",
+    fontFamily:
+      '"Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif',
+    color: "#0f172a",
   },
+
   hero: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    gap: '24px',
-    alignItems: 'stretch',
-    marginBottom: '32px',
+    display: "grid",
+    gridTemplateColumns: "minmax(280px, 420px) 1fr",
+    gap: "24px",
+    alignItems: "start",
+    marginBottom: "32px",
   },
+
   heroImageWrapper: {
-    flex: '1 1 320px',
-    minWidth: '280px',
+    minWidth: "280px",
   },
   heroImageCard: {
-    height: '100%',
-    borderRadius: '20px',
-    overflow: 'hidden',
-    boxShadow: '0 18px 45px rgba(15,23,42,0.16)',
-    border: '1px solid rgba(148,163,184,0.4)',
-    background: '#0f172a',
+    width: "100%",
+    borderRadius: "20px",
+    overflow: "hidden",
+    boxShadow: "0 18px 45px rgba(15,23,42,0.16)",
+    border: "1px solid rgba(148,163,184,0.4)",
+    background: "#0f172a",
+
+    height: "clamp(220px, 32vw, 420px)",
   },
   heroImage: {
-    width: '100%',
-    height: '100%',
-    objectFit: 'fill',
-    display: 'block',
+    width: "100%",
+    height: "100%",
+    objectFit: "cover",
+    objectPosition: "center",
+    display: "block",
     opacity: 0.95,
   },
+
   heroTextWrapper: {
-    flex: '2 1 420px',
-    minWidth: '280px',
+    minWidth: "280px",
   },
   heroTextCard: {
-    height: '100%',
-    borderRadius: '20px',
-    padding: '28px 28px 24px',
-    background: 'rgba(255,255,255,0.92)',
-    backdropFilter: 'blur(10px)',
-    boxShadow: '0 18px 45px rgba(15,23,42,0.08)',
-    border: '1px solid rgba(148,163,184,0.4)',
+    borderRadius: "20px",
+    padding: "28px 28px 24px",
+    background: "rgba(255,255,255,0.92)",
+    backdropFilter: "blur(10px)",
+    boxShadow: "0 18px 45px rgba(15,23,42,0.08)",
+    border: "1px solid rgba(148,163,184,0.4)",
   },
+
   pill: {
-    display: 'inline-flex',
-    alignItems: 'center',
-    gap: '8px',
-    padding: '4px 12px',
-    borderRadius: '999px',
-    fontSize: '12px',
+    display: "inline-flex",
+    alignItems: "center",
+    gap: "8px",
+    padding: "4px 12px",
+    borderRadius: "999px",
+    fontSize: "12px",
     fontWeight: 600,
-    letterSpacing: '0.06em',
-    textTransform: 'uppercase',
-    background: 'rgba(37,99,235,0.08)',
-    color: '#1d4ed8',
-    marginBottom: '10px',
+    letterSpacing: "0.06em",
+    textTransform: "uppercase",
+    background: "rgba(37,99,235,0.08)",
+    color: "#1d4ed8",
+    marginBottom: "10px",
   },
   pillDot: {
-    width: '8px',
-    height: '8px',
-    borderRadius: '50%',
-    background: '#22c55e',
+    width: "8px",
+    height: "8px",
+    borderRadius: "50%",
+    background: "#22c55e",
   },
-  heroTitle: {
-    fontSize: '30px',
-    fontWeight: 700,
-    margin: '4px 0 4px',
-    color: '#0f172a',
-  },
+
   heroSubtitle: {
-    fontSize: '16px',
+    fontSize: "16px",
     fontWeight: 500,
-    color: '#64748b',
-    marginBottom: '18px',
+    color: "#64748b",
+    marginBottom: "18px",
   },
-  heroTagline: {
-    fontSize: '14px',
-    fontWeight: 500,
-    color: '#0f766e',
-    marginBottom: '14px',
-  },
+
   heroParagraph: {
-    fontSize: '14px',
+    fontSize: "14px",
     lineHeight: 1.7,
-    color: '#1e293b',
-    marginBottom: '10px',
-    textAlign: 'left'
+    color: "#1e293b",
+    marginBottom: "10px",
+    textAlign: "left",
   },
   heroParagraph1: {
     fontSize: "24px",
@@ -110,95 +104,88 @@ const styles = {
     lineHeight: 1.2,
     color: "#1e293b",
     marginBottom: "10px",
+    textAlign: "center",
   },
+
   highlightStrip: {
-    marginTop: '16px',
-    padding: '10px 14px',
-    borderRadius: '12px',
-    background: 'linear-gradient(90deg, rgba(37,99,235,0.08), rgba(56,189,248,0.10))',
-    fontSize: '13px',
-    color: '#0f172a',
-    border: '1px solid rgba(129,140,248,0.4)',
+    marginTop: "16px",
+    padding: "10px 14px",
+    borderRadius: "12px",
+    background:
+      "linear-gradient(90deg, rgba(37,99,235,0.08), rgba(56,189,248,0.10))",
+    fontSize: "13px",
+    color: "#0f172a",
+    border: "1px solid rgba(129,140,248,0.4)",
   },
   highlightLabel: {
     fontWeight: 600,
-    marginRight: '6px',
+    marginRight: "6px",
   },
 
   section: {
-    borderRadius: '18px',
-    padding: '22px 22px 20px',
-    marginBottom: '20px',
-    background: 'rgba(255,255,255,0.96)',
-    backdropFilter: 'blur(8px)',
-    boxShadow: '0 14px 35px rgba(15,23,42,0.06)',
-    border: '1px solid rgba(203,213,225,0.8)',
+    borderRadius: "18px",
+    padding: "22px 22px 20px",
+    marginBottom: "20px",
+    background: "rgba(255,255,255,0.96)",
+    backdropFilter: "blur(8px)",
+    boxShadow: "0 14px 35px rgba(15,23,42,0.06)",
+    border: "1px solid rgba(203,213,225,0.8)",
   },
   sectionHeaderRow: {
-    display: 'flex',
-    justifyContent: 'flex-start',
-    alignItems: 'flex-start',
-    gap: '10px',
-    marginBottom: '12px',
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "baseline",
+    gap: "10px",
+    marginBottom: "12px",
   },
   sectionTitle: {
-    fontSize: '18px',
+    fontSize: "18px",
     fontWeight: 700,
-    color: '#0f172a',
-    display: 'flex',
-    alignItems: 'left',
-    gap: '8px',
+    color: "#0f172a",
+    display: "flex",
+    alignItems: "center",
+    gap: "8px",
   },
   sectionAccentBar: {
-    width: '3px',
-    height: '18px',
-    borderRadius: '999px',
-    background: 'linear-gradient(180deg, #2563eb, #22c55e)',
+    width: "3px",
+    height: "18px",
+    borderRadius: "999px",
+    background: "linear-gradient(180deg, #2563eb, #22c55e)",
   },
+
   list: {
-    paddingLeft: '18px',
+    paddingLeft: "18px",
     margin: 0,
-    textAlign: 'left',
+    textAlign: "left",
   },
   listItem: {
-    fontSize: '14px',
+    fontSize: "14px",
     lineHeight: 1.7,
-    color: '#1e293b',
-    marginBottom: '6px',
-    textAlign: 'left',
+    color: "#1e293b",
+    marginBottom: "6px",
   },
 
   twoColumnGrid: {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
-    gap: '12px 32px',
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+    gap: "12px 32px",
   },
 
   doctorList: {
-    listStyle: 'none',
+    listStyle: "none",
     paddingLeft: 0,
     margin: 0,
   },
-  doctorItem: {
-    fontSize: '14px',
-    color: '#0f172a',
-    padding: '6px 10px',
-    borderRadius: '999px',
-    border: '1px solid rgba(148,163,184,0.5)',
-    background: 'rgba(248,250,252,0.9)',
-    display: 'inline-block',
-    marginBottom: '6px',
-  },
 
   tagListItem: {
-    fontSize: '14px',
+    fontSize: "14px",
     lineHeight: 1.7,
-    color: '#0f172a',
-    padding: '6px 10px',
-    borderRadius: '10px',
-    background: 'rgba(239,246,255,0.9)',
-    border: '1px solid rgba(191,219,254,1)',
-    marginBottom: '6px',
+    color: "#0f172a",
+    padding: "6px 10px",
+    borderRadius: "10px",
+    background: "rgba(239,246,255,0.9)",
+    border: "1px solid rgba(191,219,254,1)",
+    marginBottom: "6px",
   },
 
   faqList: {
@@ -223,31 +210,112 @@ const styles = {
     fontSize: '13px',
     lineHeight: 1.6,
     color: '#000000ff',
+    textAlign: 'left',
   },
 };
+
+const SITE_NAME = "Shree Saibaba Multispeciality Hospital";
+const SITE_URL = "https://shreesaibabamultispecialityhospital.com"; 
+const CANONICAL_URL = `${SITE_URL}/nephrology`;
+const OG_IMAGE_URL = `${SITE_URL}/assets/nephrology-DVXC12eA.jpg`;
+
+const jsonLdDepartment = {
+  "@context": "https://schema.org",
+  "@type": "MedicalClinic",
+  name: SITE_NAME,
+  url: CANONICAL_URL,
+  department: {
+    "@type": "MedicalBusiness",
+    name: "Nephrology Department",
+    medicalSpecialty: "Nephrology",
+    description:
+      "Kidney care including CKD and AKI management, dialysis support, renal biopsy evaluation, electrolyte imbalance care and renal emergency services.",
+    areaServed: { "@type": "City", name: "Nashik" }
+  }
+};
+
+const jsonLdFaq = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "When should I see a nephrologist?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text:
+          "Consult a nephrologist if you have high creatinine, swelling, reduced urine output, uncontrolled blood pressure, kidney stones, or persistent abnormalities in urine tests."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What is Chronic Kidney Disease (CKD)?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text:
+          "CKD is a long-term condition where kidneys gradually lose function. Early diagnosis and proper care can help slow progression."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Is dialysis painful?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text:
+          "Dialysis is generally not painful, though some discomfort can occur during needle insertion."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "How often is dialysis required?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text:
+          "Many patients require dialysis 2-3 times per week, but frequency depends on medical assessment and individual needs."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Can kidney disease be prevented?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text:
+          "Managing diabetes and blood pressure, staying hydrated, avoiding unnecessary painkillers, and regular checkups can reduce the risk of kidney disease."
+      }
+    }
+  ]
+};
+
+
 
 function Nephrology() {
   return (
     <>
       <Helmet>
-        <title>Nephrology | Shree Saibaba Multispeciality Hospital</title>
-        <meta
-          name="description"
-          content="Shree Saibaba Multispeciality Hospital offers specialized nephrology care including kidney function evaluation, CKD & AKI management, dialysis services, renal biopsy, electrolyte imbalance care, and 24x7 renal emergency support."
-        />
-        <meta
-          name="keywords"
-          content="nephrology hospital Nashik, kidney specialist Nashik, dialysis Nashik, CKD treatment Nashik, AKI treatment Nashik, renal biopsy Nashik, Shree Saibaba Multispeciality Hospital nephrology"
-        />
-        <meta
-          name="og:description"
-          content="Comprehensive kidney care with advanced dialysis facilities, CKD/AKI management, renal biopsy, and 24x7 renal emergencies at Shree Saibaba Multispeciality Hospital."
-        />
+        <title>Nephrology | Best Nephrology Hospital in Nashik</title>
+        <meta name="description" content="Nephrology care in Nashik at Shree Saibaba Multispeciality Hospital: kidney function evaluation, CKD & AKI management, hemodialysis, renal biopsy (as advised), electrolyte imbalance care, and 24x7 renal emergency support." />
+        <link rel="canonical" href={CANONICAL_URL} />
+        <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content={SITE_NAME} />
+        <meta property="og:title" content="Nephrology Department | Shree Saibaba Multispeciality Hospital, Nashik" />
+        <meta property="og:description" content="Comprehensive kidney care in Nashik: CKD/AKI management, dialysis services, renal biopsy evaluation and emergency renal support." />
+        <meta property="og:url" content={CANONICAL_URL} />
+        <meta property="og:image" content={OG_IMAGE_URL} />
+        <meta property="og:image:alt" content="Nephrology Department - Shree Saibaba Multispeciality Hospital, Nashik" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Nephrology Department | Shree Saibaba Multispeciality Hospital, Nashik" />
+        <meta name="twitter:description" content="Kidney specialist care in Nashik with dialysis support, CKD/AKI management and renal emergency services." />
+        <meta name="twitter:image" content={OG_IMAGE_URL} />
+
+        <script type="application/ld+json">{JSON.stringify(jsonLdDepartment)}</script>
+        <script type="application/ld+json">{JSON.stringify(jsonLdFaq)}</script>
       </Helmet>
+
 
       <div style={styles.page}>
         <div style={styles.container}>
-          {/* Hero */}
+      
           <div style={styles.hero}>
             <div style={styles.heroImageWrapper}>
               <div style={styles.heroImageCard}>
@@ -255,6 +323,7 @@ function Nephrology() {
                   src={nephrology}
                   alt="Nephrology Department"
                   style={styles.heroImage}
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -354,7 +423,7 @@ function Nephrology() {
 
                 <h2 style={styles.heroParagraph1}>What Makes Shree Saibaba Multispeciality Hospital An Excellent Choice?</h2>
 
-                <ul style={{textAlign: 'left'}}>
+                <ul style={{ textAlign: 'left' }}>
                   <li>Our renal care specialists offer you years of expertise.</li>
                   <li>We provide advanced diagnostic and treatment options.</li>
                   <li>We take a personal approach to every patient we treat.</li>
@@ -364,7 +433,7 @@ function Nephrology() {
                 <br />
 
                 <p style={styles.heroParagraph}>
-                  If you or a member of your family have kidney problems, we will support you in your journey back to health and confident 
+                  If you or a member of your family have kidney problems, we will support you in your journey back to health and confident
                   and in charge of your kidney health.
                 </p>
                 <br />
@@ -375,9 +444,8 @@ function Nephrology() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> 
 
-          {/* Services Offered */}
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -385,8 +453,7 @@ function Nephrology() {
                 Services Offered
               </div>
             </div>
-
-            {/* Diagnostic Services */}
+ 
             <div style={{ marginBottom: '12px' }}>
               <div style={styles.tagListItem}><strong>Diagnostic Services</strong></div>
               <ul style={styles.list}>
@@ -398,8 +465,7 @@ function Nephrology() {
                 <li style={styles.listItem}>Assessment of electrolyte and fluid imbalances</li>
               </ul>
             </div>
-
-            {/* Treatment Services */}
+ 
             <div style={{ marginBottom: '12px' }}>
               <div style={styles.tagListItem}><strong>Treatment Services</strong></div>
               <ul style={styles.list}>
@@ -411,8 +477,7 @@ function Nephrology() {
                 <li style={styles.listItem}>Long-term follow-up and counselling for renal patients</li>
               </ul>
             </div>
-
-            {/* Specialised Services */}
+ 
             <div>
               <div style={styles.tagListItem}><strong>Specialised Services</strong></div>
               <ul style={styles.list}>
@@ -422,8 +487,7 @@ function Nephrology() {
               </ul>
             </div>
           </section>
-
-          {/* Facilities & Equipment */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -440,8 +504,7 @@ function Nephrology() {
               <li style={styles.listItem}>Procedure room for kidney biopsies</li>
             </ul>
           </section>
-
-          {/* Team Members */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -449,7 +512,7 @@ function Nephrology() {
                 Team Members &amp; Department Timings
               </div>
             </div>
-            <p style={{...styles.listItem, textAlign : "center"}}>Meet our experienced Orthopedic:</p>
+            <p style={{ ...styles.listItem, textAlign: "center" }}>Meet our experienced Nephrologist:</p>
 
             <div style={styles.twoColumnGrid}>
               <ul style={styles.doctorList}>
@@ -459,15 +522,14 @@ function Nephrology() {
                   OPD: 	11:00 am to 12:00 pm and 5:00 pm to 6:00 pm
                 </li>
               </ul>
-              <ul style={styles.doctorList}>               
+              <ul style={styles.doctorList}>
                 <li style={styles.tagListItem}>
                   <strong>Emergency Services:</strong> 24 x 7
                 </li>
               </ul>
             </div>
           </section>
-
-          {/* Department Timings */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -492,8 +554,7 @@ function Nephrology() {
               </li>
             </ul>
           </section>
-
-          {/* Achievements & Highlights */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -516,8 +577,7 @@ function Nephrology() {
               </li>
             </ul>
           </section>
-
-          {/* Patient Guidelines */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -536,8 +596,7 @@ function Nephrology() {
               </li>
             </ul>
           </section>
-
-          {/* FAQs */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -548,7 +607,7 @@ function Nephrology() {
 
             <div style={styles.faqList}>
               <div style={styles.faqItem}>
-                <div style={styles.faqQuestion}>1. When should I see a Nephrologist?</div>
+                <div style={styles.faqQuestion}>Q. When should I see a Nephrologist?</div>
                 <div style={styles.faqAnswer}>
                   If you have high creatinine, swelling, decreased urine output, uncontrolled BP, kidney stones, or persistent
                   abnormalities in urine tests.
@@ -556,28 +615,28 @@ function Nephrology() {
               </div>
 
               <div style={styles.faqItem}>
-                <div style={styles.faqQuestion}>2. What is Chronic Kidney Disease (CKD)?</div>
+                <div style={styles.faqQuestion}>Q. What is Chronic Kidney Disease (CKD)?</div>
                 <div style={styles.faqAnswer}>
                   A long-term condition where kidneys gradually lose function. Early diagnosis helps slow progression.
                 </div>
               </div>
 
               <div style={styles.faqItem}>
-                <div style={styles.faqQuestion}>3. Is dialysis painful?</div>
+                <div style={styles.faqQuestion}>Q. Is dialysis painful?</div>
                 <div style={styles.faqAnswer}>
                   No, dialysis is generally not painful. Some discomfort may occur during needle insertion.
                 </div>
               </div>
 
               <div style={styles.faqItem}>
-                <div style={styles.faqQuestion}>4. How often is dialysis required?</div>
+                <div style={styles.faqQuestion}>Q. How often is dialysis required?</div>
                 <div style={styles.faqAnswer}>
                   Most patients need dialysis 2-3 times a week, based on medical advice.
                 </div>
               </div>
 
               <div style={styles.faqItem}>
-                <div style={styles.faqQuestion}>5. Can kidney disease be prevented?</div>
+                <div style={styles.faqQuestion}>Q. Can kidney disease be prevented?</div>
                 <div style={styles.faqAnswer}>
                   Yes. Controlling diabetes, BP, staying hydrated, and regular health checks help prevent kidney disease.
                 </div>

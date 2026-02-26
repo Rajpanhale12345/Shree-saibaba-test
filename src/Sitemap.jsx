@@ -1,27 +1,88 @@
 import React from "react";
 import { Link as RouterLink } from "react-router-dom";
-import Upper from "./Upper";
 import { Helmet } from "react-helmet-async";
 
 function Sitemap() {
   const styles = {
-    page: { padding: "40px 24px", fontFamily: "system-ui, Segoe UI, Roboto, Arial, sans-serif" },
-    title: { margin: "0 0 28px", fontSize: 38, color: "Red", fontWeight: 700 },
-    grid: { display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: "40px 10px" },
+    page: {
+      padding: "40px 24px",
+      fontFamily: "system-ui, Segoe UI, Roboto, Arial, sans-serif",
+      maxWidth: 1200,
+      margin: "0 auto",
+    },
+    title: {
+      margin: "0 0 28px",
+      fontSize: "clamp(26px, 4vw, 38px)",
+      color: "Red",
+      fontWeight: 700,
+      letterSpacing: 0.2,
+    },
+
+ 
+    grid: {
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+      gap: "28px 18px",
+      alignItems: "start",
+    },
+
     col: { minWidth: 0 },
-    h2: { margin: "0 0 6px", fontSize: 22, fontWeight: 700, color: "Black" },
-    ul: { listStyle: "none", padding: 0, margin: 0, marginLeft: "40px" },
-    li: { display: "flex", gap: 6, alignItems: "flex-start", margin: "10px 0" },
-    dot: { color: "#c40000", fontSize: 18, lineHeight: 1, marginTop: 2 },
-    link: { color: "blue", textDecoration: "none", transition: "color 0.2s ease" },
+
+    h2: {
+      margin: "0 0 10px",
+      fontSize: "clamp(18px, 2.2vw, 22px)",
+      fontWeight: 700,
+      color: "Black",
+    },
+
+ 
+    ul: {
+      listStyle: "none",
+      padding: 0,
+      margin: 0,
+    },
+
+    li: {
+      display: "flex",
+      gap: 8,
+      alignItems: "flex-start",
+      margin: "10px 0",
+    },
+
+    dot: {
+      color: "#c40000",
+      fontSize: 18,
+      lineHeight: 1,
+      marginTop: 4,
+      flexShrink: 0,
+    },
+
+ 
+    link: {
+      color: "blue",
+      textDecoration: "none",
+      transition: "color 0.2s ease",
+      padding: "2px 0",
+      lineHeight: 1.5,
+      display: "inline-block",
+      wordBreak: "break-word",
+    },
+
     linkHover: { color: "#c40000", textDecoration: "none" },
+
+ 
+    mobileWrap: {
+      padding: "28px 14px",
+    },
   };
 
   const ListItemLink = ({ to, children }) => {
     const [hover, setHover] = React.useState(false);
     return (
       <li style={styles.li}>
-        <span aria-hidden="true" style={styles.dot}>•</span>
+        <span aria-hidden="true" style={styles.dot}>
+          •
+        </span>
         <RouterLink
           to={to}
           style={hover ? { ...styles.link, ...styles.linkHover } : styles.link}
@@ -34,6 +95,15 @@ function Sitemap() {
     );
   };
 
+   
+  const [isMobile, setIsMobile] = React.useState(false);
+  React.useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 600);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
+
   return (
     <>
       <Helmet>
@@ -43,7 +113,7 @@ function Sitemap() {
         <meta property="og:description" content="" />
       </Helmet>
 
-      <div style={styles.page}>
+      <div style={isMobile ? { ...styles.page, ...styles.mobileWrap } : styles.page}>
         <h1 style={styles.title}>SITEMAP</h1>
 
         <div style={styles.grid}>
@@ -64,14 +134,12 @@ function Sitemap() {
           <section style={styles.col}>
             <h2 style={styles.h2}>Other</h2>
             <ul style={styles.ul}>
-              <ListItemLink to="/facilities">Facilities</ListItemLink>
               <ListItemLink to="/tieups">Tie Ups</ListItemLink>
               <ListItemLink to="/testimonials">Testimonials</ListItemLink>
               <ListItemLink to="/pr">Press Releases</ListItemLink>
               <ListItemLink to="/contact">Contact</ListItemLink>
               <ListItemLink to="/privacypolicy">Privacy Policy</ListItemLink>
               <ListItemLink to="/termsandconditions">Terms &amp; Conditions</ListItemLink>
-              <ListItemLink to="/sitemap">Sitemap</ListItemLink>
             </ul>
           </section>
 
@@ -92,21 +160,25 @@ function Sitemap() {
               <ListItemLink to="/ortho">Orthopedic</ListItemLink>
               <ListItemLink to="/interventionalradiology">IR</ListItemLink>
               <ListItemLink to="/neurosurgery">Neurosurgery</ListItemLink>
-              <ListItemLink to="/internalmedicine">Internal Medicine</ListItemLink>
               <ListItemLink to="/dentistry">Dentistry</ListItemLink>
               <ListItemLink to="/generalsurgery">General Surgery</ListItemLink>
               <ListItemLink to="/plasticsurgery">Plastic Surgery</ListItemLink>
-              <ListItemLink to="/opthalmology">Opthalmology</ListItemLink>
               <ListItemLink to="/nephrology">Nephrology</ListItemLink>
               <ListItemLink to="/gastroenterology">Gastroenterology</ListItemLink>
               <ListItemLink to="/gynaecology">Gynecology</ListItemLink>
               <ListItemLink to="/pulmonology">Pulmonology</ListItemLink>
+              <ListItemLink to="/spinecare">Spine Care</ListItemLink>
+              <ListItemLink to="/cardiovascular">Cardiovascular Thoracic Surgery</ListItemLink>
+              <ListItemLink to="/generalmedicine">General Medicine</ListItemLink>
             </ul>
           </section>
 
           <section style={styles.col}>
             <h2 style={styles.h2}>Blogs</h2>
             <ul style={styles.ul}>
+              <ListItemLink to="/Multidisciplinary">Multidisciplinary Care</ListItemLink>
+              <ListItemLink to="/Urology_Blog">Kidney Stones & Prostate Care</ListItemLink>
+              <ListItemLink to="/Neurology_Blog">Neurology Brain Disorders</ListItemLink>
               <ListItemLink to="/Robotic_Joint">Robotic Joint Replacememnt Surgery</ListItemLink>
               <ListItemLink to="/Robotic_Surgery">Advance Robotic Surgery</ListItemLink>
               <ListItemLink to="/cardio">Pacemaker Care</ListItemLink>
@@ -134,8 +206,6 @@ function Sitemap() {
               <ListItemLink to="/Stress_Anxiety">Stress & Anxiety</ListItemLink>
             </ul>
           </section>
-
-
         </div>
       </div>
     </>

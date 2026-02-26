@@ -1,190 +1,190 @@
 import React from 'react';
-import gyn from './Images/gynacdep.webp'; 
+import GynecologyImg from './Images/gynacdep.webp';
 import { Helmet } from "react-helmet-async";
 
-// ✅ Same structure + layout + styling pattern as Cardiology
 const styles = {
   page: {
-    background: 'linear-gradient(135deg, #f4f7fb, #e5edf9)',
-    padding: '40px 16px',
+    background: "linear-gradient(135deg, #f4f7fb, #e5edf9)",
+    padding: "40px 16px",
   },
   container: {
-    maxWidth: '1200px',
-    margin: '0 auto',
-    fontFamily: '"Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif',
-    color: '#0f172a',
+    maxWidth: "1200px",
+    margin: "0 auto",
+    fontFamily:
+      '"Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif',
+    color: "#0f172a",
   },
+
   hero: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    gap: '24px',
-    alignItems: 'stretch',
-    marginBottom: '32px',
+    display: "grid",
+    gridTemplateColumns: "minmax(280px, 420px) 1fr",
+    gap: "24px",
+    alignItems: "start",
+    marginBottom: "32px",
   },
+
   heroImageWrapper: {
-    flex: '1 1 320px',
-    minWidth: '280px',
+    minWidth: "280px",
   },
   heroImageCard: {
-    height: '100%',
-    borderRadius: '20px',
-    overflow: 'hidden',
-    boxShadow: '0 18px 45px rgba(15,23,42,0.16)',
-    border: '1px solid rgba(148,163,184,0.4)',
-    background: '#ffffffff',
+    width: "100%",
+    borderRadius: "20px",
+    overflow: "hidden",
+    boxShadow: "0 18px 45px rgba(15,23,42,0.16)",
+    border: "1px solid rgba(148,163,184,0.4)",
+    background: "#ffffff",
+
+    height: "clamp(220px, 32vw, 420px)",
   },
   heroImage: {
-    width: '100%',
-    height: '100%',
-    objectFit: 'fill',
-    display: 'block',
+    width: "100%",
+    height: "100%",
+    objectFit: "cover",
+    objectPosition: "center",
+    display: "block",
     opacity: 0.95,
   },
+
   heroTextWrapper: {
-    flex: '2 1 420px',
-    minWidth: '280px',
+    minWidth: "280px",
   },
   heroTextCard: {
-    height: '100%',
-    borderRadius: '20px',
-    padding: '28px 28px 24px',
-    background: 'rgba(255,255,255,0.92)',
-    backdropFilter: 'blur(10px)',
-    boxShadow: '0 18px 45px rgba(15,23,42,0.08)',
-    border: '1px solid rgba(148,163,184,0.4)',
+    borderRadius: "20px",
+    padding: "28px 28px 24px",
+    background: "rgba(255,255,255,0.92)",
+    backdropFilter: "blur(10px)",
+    boxShadow: "0 18px 45px rgba(15,23,42,0.08)",
+    border: "1px solid rgba(148,163,184,0.4)",
   },
+
   pill: {
-    display: 'inline-flex',
-    alignItems: 'center',
-    gap: '8px',
-    padding: '4px 12px',
-    borderRadius: '999px',
-    fontSize: '12px',
+    display: "inline-flex",
+    alignItems: "center",
+    gap: "8px",
+    padding: "4px 12px",
+    borderRadius: "999px",
+    fontSize: "12px",
     fontWeight: 600,
-    letterSpacing: '0.06em',
-    textTransform: 'uppercase',
-    background: 'rgba(37,99,235,0.08)',
-    color: '#1d4ed8',
-    marginBottom: '10px',
+    letterSpacing: "0.06em",
+    textTransform: "uppercase",
+    background: "rgba(37,99,235,0.08)",
+    color: "#1d4ed8",
+    marginBottom: "10px",
   },
   pillDot: {
-    width: '8px',
-    height: '8px',
-    borderRadius: '50%',
-    background: '#22c55e',
+    width: "8px",
+    height: "8px",
+    borderRadius: "50%",
+    background: "#22c55e",
   },
-  heroTitle: {
-    fontSize: '30px',
-    fontWeight: 700,
-    margin: '4px 0 4px',
-    color: '#0f172a',
-  },
+
   heroSubtitle: {
-    fontSize: '16px',
+    fontSize: "16px",
     fontWeight: 500,
-    color: '#64748b',
-    marginBottom: '18px',
+    color: "#64748b",
+    marginBottom: "18px",
   },
-  heroTagline: {
-    fontSize: '14px',
-    fontWeight: 500,
-    color: '#0f766e',
-    marginBottom: '14px',
-  },
+
   heroParagraph: {
-    fontSize: '14px',
+    fontSize: "14px",
     lineHeight: 1.7,
-    color: '#1e293b',
-    marginBottom: '10px',
+    color: "#1e293b",
+    marginBottom: "10px",
+    textAlign: "left",
   },
+  heroParagraph1: {
+    fontSize: "24px",
+    lineHeight: 1.7,
+    color: "#1e293b",
+    marginBottom: "10px",
+    textAlign: "left",
+  },
+  heroParagraph2: {
+    fontSize: "30px",
+    lineHeight: 1.2,
+    color: "#1e293b",
+    marginBottom: "10px",
+  },
+
   highlightStrip: {
-    marginTop: '16px',
-    padding: '10px 14px',
-    borderRadius: '12px',
-    background: 'linear-gradient(90deg, rgba(37,99,235,0.08), rgba(56,189,248,0.10))',
-    fontSize: '13px',
-    color: '#0f172a',
-    border: '1px solid rgba(129,140,248,0.4)',
+    marginTop: "16px",
+    padding: "10px 14px",
+    borderRadius: "12px",
+    background:
+      "linear-gradient(90deg, rgba(37,99,235,0.08), rgba(56,189,248,0.10))",
+    fontSize: "13px",
+    color: "#0f172a",
+    border: "1px solid rgba(129,140,248,0.4)",
   },
   highlightLabel: {
     fontWeight: 600,
-    marginRight: '6px',
+    marginRight: "6px",
   },
 
   section: {
-    borderRadius: '18px',
-    padding: '22px 22px 20px',
-    marginBottom: '20px',
-    background: 'rgba(255,255,255,0.96)',
-    backdropFilter: 'blur(8px)',
-    boxShadow: '0 14px 35px rgba(15,23,42,0.06)',
-    border: '1px solid rgba(203,213,225,0.8)',
+    borderRadius: "18px",
+    padding: "22px 22px 20px",
+    marginBottom: "20px",
+    background: "rgba(255,255,255,0.96)",
+    backdropFilter: "blur(8px)",
+    boxShadow: "0 14px 35px rgba(15,23,42,0.06)",
+    border: "1px solid rgba(203,213,225,0.8)",
   },
   sectionHeaderRow: {
-    display: 'flex',
-    justifyContent: 'flex-start',
-    alignItems: 'flex-start',
-    gap: '10px',
-    marginBottom: '12px',
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "baseline",
+    gap: "10px",
+    marginBottom: "12px",
   },
   sectionTitle: {
-    fontSize: '18px',
+    fontSize: "18px",
     fontWeight: 700,
-    color: '#0f172a',
-    display: 'flex',
-    alignItems: 'left',
-    gap: '8px',
+    color: "#0f172a",
+    display: "flex",
+    alignItems: "center",
+    gap: "8px",
   },
   sectionAccentBar: {
-    width: '3px',
-    height: '18px',
-    borderRadius: '999px',
-    background: 'linear-gradient(180deg, #2563eb, #22c55e)',
+    width: "3px",
+    height: "18px",
+    borderRadius: "999px",
+    background: "linear-gradient(180deg, #2563eb, #22c55e)",
   },
+
   list: {
-    paddingLeft: '18px',
+    paddingLeft: "18px",
     margin: 0,
-    textAlign: 'left',
+    textAlign: "left",
   },
   listItem: {
-    fontSize: '14px',
+    fontSize: "14px",
     lineHeight: 1.7,
-    color: '#1e293b',
-    marginBottom: '6px',
-    textAlign: 'left',
+    color: "#1e293b",
+    marginBottom: "6px",
   },
 
   twoColumnGrid: {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
-    gap: '12px 32px',
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+    gap: "12px 32px",
   },
 
   doctorList: {
-    listStyle: 'none',
+    listStyle: "none",
     paddingLeft: 0,
     margin: 0,
   },
-  doctorItem: {
-    fontSize: '14px',
-    color: '#0f172a',
-    padding: '6px 10px',
-    borderRadius: '999px',
-    border: '1px solid rgba(148,163,184,0.5)',
-    background: 'rgba(248,250,252,0.9)',
-    display: 'inline-block',
-    marginBottom: '6px',
-  },
 
   tagListItem: {
-    fontSize: '14px',
+    fontSize: "14px",
     lineHeight: 1.7,
-    color: '#0f172a',
-    padding: '6px 10px',
-    borderRadius: '10px',
-    background: 'rgba(239,246,255,0.9)',
-    border: '1px solid rgba(191,219,254,1)',
-    marginBottom: '6px',
+    color: "#0f172a",
+    padding: "6px 10px",
+    borderRadius: "10px",
+    background: "rgba(239,246,255,0.9)",
+    border: "1px solid rgba(191,219,254,1)",
+    marginBottom: "6px",
   },
 
   faqList: {
@@ -209,38 +209,123 @@ const styles = {
     fontSize: '13px',
     lineHeight: 1.6,
     color: '#000000ff',
+    textAlign: 'left',
   },
 };
 
+
 function Gynecology() {
+
+  const metaTitle =
+    "Gynecology | Best Gynecology Hospital in Nashik";
+  const SITE_NAME = "Shree Saibaba Multispeciality Hospital";
+  const SITE_URL = "https://shreesaibabamultispecialityhospital.com";
+  const CANONICAL_URL = `${SITE_URL}/gynaecology`;
+  const OG_IMAGE_URL = `${SITE_URL}/assets/gynacdep-DbWh545x.webp`;
+
+  const jsonLdDepartment = {
+    "@context": "https://schema.org",
+    "@type": "MedicalClinic",
+    name: SITE_NAME,
+    url: CANONICAL_URL,
+    department: {
+      "@type": "MedicalBusiness",
+      name: "Gynaecology Department",
+      medicalSpecialty: "ObstetricsAndGynecology",
+      description:
+        "Comprehensive gynaecology care including consultations, menstrual disorders, PCOS management, fibroids, infections, screening and minimally invasive procedures.",
+      areaServed: { "@type": "City", name: "Nashik" }
+    }
+  };
+
+  const jsonLdFaq = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "When should I visit a gynecologist?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "If you have irregular periods, pelvic pain, unusual discharge, heavy bleeding, concerns like PCOS, or need preventive checkups and screening, a consultation is recommended."
+        }
+      },
+      {
+        "@type": "Question",
+        name: "What should I bring to my appointment?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Carry previous reports, ultrasound/scans, lab results, prescriptions, and a list of current medicines and allergies."
+        }
+      },
+      {
+        "@type": "Question",
+        name: "Do you provide screening tests?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Yes. Screening and diagnostic evaluation (like Pap smear or ultrasound guidance) may be advised depending on symptoms and age."
+        }
+      },
+      {
+        "@type": "Question",
+        name: "Can PCOS be managed?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "PCOS is commonly managed with individualized guidance including lifestyle measures and medicines when needed. Treatment is planned based on symptoms and goals."
+        }
+      },
+      {
+        "@type": "Question",
+        name: "Is my visit confidential?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Yes. We follow privacy and confidentiality practices so you can discuss sensitive concerns comfortably."
+        }
+      }
+    ]
+  };
+
+
+
   return (
     <>
       <Helmet>
-        <title>gynaecology | Shree Saibaba Multispeciality Hospital</title>
-        <meta
-          name="description"
-          content="Shree Saibaba Multispeciality Hospital offers comprehensive gynaecology care (excluding obstetrics) including screenings, ultrasound, Pap smear, PCOS management, minimally invasive procedures, menopause care, and family planning counselling."
-        />
-        <meta
-          name="keywords"
-          content="gynaecology hospital Nashik, best gynecologist Nashik, pap smear Nashik, PCOS treatment Nashik, laparoscopy hysteroscopy Nashik, menopause clinic Nashik, Shree Saibaba Multispeciality Hospital gynaecology"
-        />
-        <meta
-          name="og:description"
-          content="Expert gynaecology services (excluding obstetrics) including preventive screening, Pap smear, PCOS care, menopause clinic, and minimally invasive laparoscopy & hysteroscopy at Shree Saibaba Multispeciality Hospital."
-        />
+        <title>Gynecology | Best Gynecology Hospital in Nashik</title>
+        <meta name="description" content="Comprehensive gynaecology care in Nashik — consultations, PCOS, menstrual disorders, fibroids, infections, screening and minimally invasive procedures at Shree Saibaba Multispeciality Hospital." />
+        <link rel="canonical" href={CANONICAL_URL} />
+        <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content={SITE_NAME} />
+        <meta property="og:title" content="Gynaecology Department | Shree Saibaba Multispeciality Hospital, Nashik" />
+        <meta property="og:description" content="Women's health services in Nashik: PCOS care, menstrual disorders, pelvic pain evaluation, infection management, screening and minimally invasive procedures." />
+        <meta property="og:url" content={CANONICAL_URL} />
+        <meta property="og:image" content={OG_IMAGE_URL} />
+        <meta property="og:image:alt" content="Gynaecology Department - Shree Saibaba Multispeciality Hospital, Nashik" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Gynaecology Department | Shree Saibaba Multispeciality Hospital, Nashik" />
+        <meta name="twitter:description" content="Expert women's health care in Nashik: PCOS, menstrual disorders, screening, infection care and minimally invasive procedures." />
+        <meta name="twitter:image" content={OG_IMAGE_URL} />
+
+        <script type="application/ld+json">{JSON.stringify(jsonLdDepartment)}</script>
+        <script type="application/ld+json">{JSON.stringify(jsonLdFaq)}</script>
       </Helmet>
 
+
       <div style={styles.page}>
-        <div style={styles.container}>
-          {/* Hero */}
+        <div style={styles.container}> 
           <div style={styles.hero}>
             <div style={styles.heroImageWrapper}>
               <div style={styles.heroImageCard}>
                 <img
-                  src={gyn}
-                  alt="gynaecology Department"
+                  src={GynecologyImg}
+                  alt="Gynaecology Department at Shree Saibaba Multispeciality Hospital in Nashik"
                   style={styles.heroImage}
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -249,36 +334,109 @@ function Gynecology() {
               <div style={styles.heroTextCard}>
                 <div style={styles.pill}>
                   <span style={styles.pillDot} />
-                  <span>Women’s Health Care</span>
+                  <span>Comprehensive Medical Care</span>
                 </div>
 
-                <h1 style={styles.heroTitle}>Gynaecology Department</h1>
+                <h1 style={styles.heroParagraph2}>Gynecology Department</h1>
                 <div style={styles.heroSubtitle}>Nashik, Maharashtra</div>
-
-                <div style={styles.heroTagline}>
-                  Comprehensive care for female reproductive health (excluding obstetrics), delivered with privacy and compassion.
-                </div>
+                <br />
 
                 <p style={styles.heroParagraph}>
-                  The gynaecology Department provides comprehensive care for women across all age groups, focusing exclusively
-                  on female reproductive health (excluding obstetrics). Our experienced gynecologists offer expert
-                  consultations, diagnostic evaluations, preventive screenings, and advanced treatment for a wide range of
-                  gynecological conditions.
+                  The Gynaecology Department at Shree Saibaba Multispeciality Hospital is dedicated to supporting Women's
+                  Health needs throughout their entire lifespan. Our department specialises in women's health only and is
+                  designed to offer our patients the highest level of professional care in a secure and respectful environment
+                  that is focused on comfort.
                 </p>
-
                 <p style={styles.heroParagraph}>
-                  We aim to provide compassionate, confidential, and patient-centered care.
+                  We have a team of qualified gynaecologists, skilled nursing staff, and modern medical equipment to ensure
+                  that you receive the right diagnosis and treatment. From puberty to the end of menstrual periods (menopause)
+                  and beyond, the Gynaecology Department has a dedicated focus on meeting each woman's unique healthcare needs
+                  with professionalism and compassion.
                 </p>
+                <br />
+
+                <h2 style={styles.heroParagraph1}>All Women's Health Services</h2>
+                <p style={styles.heroParagraph}>
+                  We provide care by diagnosing and treating women with many gynaecological concerns, such as Menstrual Disorders,
+                  Pelvic Pain, Hormonal Disorders, Ovarian/Uterine Disorders and common Gynecological Infections. Our providers
+                  will spend time listening to the reasons why you are coming to see them and gathering information from your
+                  past medical history in order to develop a treatment plan.
+                </p>
+                <p style={styles.heroParagraph}>
+                  We focus particularly on PCOS, irregular bleeding, fibroids, cysts, and endometriosis. Early diagnosis and
+                  treatment can help you avoid complications and improve your quality of life.
+                </p>
+                <br />
+
+                <h2 style={styles.heroParagraph1}>Preventive Care & Early Diagnosis</h2>
+                <p style={styles.heroParagraph}>
+                  When it comes to your total health, Prevention is a BIG WORD! We advocate for women to receive periodic routine
+                  examinations (gynecologic exams), regular screening tests, and counselling services to identify health risks
+                  early, before they become serious medical issues. By using routine gynecologic appointments to screen for
+                  potential issues, a woman has the ability to make educated decisions related to her health and well-being.
+                </p>
+                <p style={styles.heroParagraph}>
+                  Additionally, we provide support on an overall basis to help you stay healthy throughout your entire menstrual
+                  cycle through recommendations on diet, exercise and alleviate your symptoms when you experience hormonal
+                  fluctuations.
+                </p>
+                <br />
+
+                <h2 style={styles.heroParagraph1}>Advanced Diagnostic and Treatment Facilities</h2>
+                <p style={styles.heroParagraph}>
+                  Our facility is fully equipped with the latest technology for diagnosing and assessing gynecologic conditions.
+                  If surgical interventions become necessary, we will utilise minimally invasive technologies as well as the
+                  most current surgical techniques available to you, assisting your recovery as quickly and effectively as possible.
+                </p>
+                <p style={styles.heroParagraph}>
+                  We combine solid medical expertise with the best treatment options to ensure that care remains safe and effective.
+                  We want to ensure that each procedure is thoroughly explained so you understand what is going to happen and feel
+                  comfortable with what is about to occur.
+                </p>
+                <br />
+
+                <h2 style={styles.heroParagraph1}>Menopause and Midlife Care</h2>
+                <p style={styles.heroParagraph}>
+                  This is a period of major physical and emotional changes. Our gynaecology specialists provide specialised care
+                  for menopause-related issues such as hormonal changes, bone health, and general well-being. With the right
+                  advice, care, and counselling, we assist you in maintaining an active and healthy life during this stage.
+                </p>
+                <br />
+
+                <h2 style={styles.heroParagraph1}>Patient-Centred & Confidential Care</h2>
+                <p style={styles.heroParagraph}>
+                  Women's Health issues are highly sensitive. Our Department has stringent policies regarding confidentiality,
+                  privacy, and respect for our patients. The objective of our Department is to provide you with a kind and
+                  nurturing place to feel that you are being respected, listened to and cared for by providers who will assist
+                  you in all aspects of your Women's Health.
+                </p>
+                <p style={styles.heroParagraph}>
+                  Our doctors have a great desire to communicate with you and answer any questions you may have, as well as
+                  to equip you with knowledge about your Women's Health to enable you to feel empowered.
+                </p>
+                <br />
+
+                <h2 style={styles.heroParagraph1}>Commitment to Quality Healthcare</h2>
+                <p style={styles.heroParagraph}>
+                  The Gynaecology Department at Shree Saibaba Multispeciality Hospital is dedicated to providing credible,
+                  ethical, and quality care. With a combination of medical expertise, state-of-the-art facilities, and caring
+                  staff, we strive to be your trusted destination for all gynaecological needs.
+                </p>
+                <p style={styles.heroParagraph}>
+                  We're about more than just treatment; we want long-term health, confidence, and well-being for every woman
+                  who walks through our doors.
+                </p>
+                <br />
 
                 <div style={styles.highlightStrip}>
                   <span style={styles.highlightLabel}>Quick Facts:</span>
-                  Pap smear screening • PCOS care • Laparoscopy &amp; hysteroscopy • Women’s wellness counselling
+                  Advanced OT • Safety-first protocols • Cosmetic & Reconstructive
+                  expertise • 24x7 emergency support
                 </div>
               </div>
             </div>
           </div>
-
-          {/* Services Offered */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -287,46 +445,43 @@ function Gynecology() {
               </div>
             </div>
 
-            {/* Diagnostic Services */}
-            <div style={{ marginBottom: '12px' }}>
-              <div style={styles.tagListItem}><strong>Diagnostic Services</strong></div>
+            <div style={{ marginBottom: "12px" }}>
+              <div style={styles.tagListItem}>
+                <strong>Outpatient Gynecology</strong>
+              </div>
               <ul style={styles.list}>
-                <li style={styles.listItem}>Pelvic examinations and gynaecological assessments</li>
-                <li style={styles.listItem}>Ultrasound for pelvic and reproductive system evaluation</li>
-                <li style={styles.listItem}>Pap smear and cervical cancer screening</li>
-                <li style={styles.listItem}>Hormonal profile and laboratory investigations</li>
-                <li style={styles.listItem}>Colposcopy and biopsy (if required)</li>
+                <li style={styles.listItem}>Gynecology consultations</li>
+                <li style={styles.listItem}>Menstrual disorders management</li>
+                <li style={styles.listItem}>PCOS/PCOD evaluation & guidance</li>
+                <li style={styles.listItem}>Pelvic pain assessment</li>
+                <li style={styles.listItem}>Vaginal discharge & infection care</li>
               </ul>
             </div>
 
-            {/* Treatment Services */}
-            <div style={{ marginBottom: '12px' }}>
-              <div style={styles.tagListItem}><strong>Treatment Services</strong></div>
+            <div style={{ marginBottom: "12px" }}>
+              <div style={styles.tagListItem}>
+                <strong>Screening & Diagnostics</strong>
+              </div>
               <ul style={styles.list}>
-                <li style={styles.listItem}>Management of menstrual disorders (irregular periods, heavy bleeding, PCOS, etc.)</li>
-                <li style={styles.listItem}>Treatment of vaginal infections, pelvic pain, and reproductive tract infections</li>
-                <li style={styles.listItem}>Management of menopausal symptoms</li>
-                <li style={styles.listItem}>
-                  Treatment of fibroids, ovarian cysts, endometriosis, and other gynaecological conditions
-                </li>
-                <li style={styles.listItem}>Family planning and contraception counseling (non-obstetric)</li>
+                <li style={styles.listItem}>Routine gynecological examination</li>
+                <li style={styles.listItem}>Ultrasound guidance (as advised)</li>
+                <li style={styles.listItem}>Cervical screening (Pap smear, as advised)</li>
+                <li style={styles.listItem}>Evaluation for fibroids/cysts</li>
               </ul>
             </div>
 
-            {/* Specialized Services */}
             <div>
-              <div style={styles.tagListItem}><strong>Specialized Services</strong></div>
+              <div style={styles.tagListItem}>
+                <strong>Procedures & Surgical Support</strong>
+              </div>
               <ul style={styles.list}>
-                <li style={styles.listItem}>Minimal invasive gynecological procedures (Laparoscopy &amp; Hysteroscopy)</li>
-                <li style={styles.listItem}>Comprehensive PCOS management</li>
-                <li style={styles.listItem}>Menopause clinic and hormonal therapy guidance</li>
-                <li style={styles.listItem}>Preventive gynecological health check-ups</li>
-                <li style={styles.listItem}>Breast examination and women’s wellness counseling</li>
+                <li style={styles.listItem}>Minor procedures (as advised)</li>
+                <li style={styles.listItem}>Minimally invasive options (as indicated)</li>
+                <li style={styles.listItem}>Pre-op and post-op care coordination</li>
               </ul>
             </div>
           </section>
-
-          {/* Facilities & Equipment */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -334,32 +489,38 @@ function Gynecology() {
                 Facilities &amp; Equipment
               </div>
             </div>
-            <div style={styles.listItem}>Our department is equipped with:</div>
             <ul style={styles.list}>
-              <li style={styles.listItem}>Modern ultrasound systems for gynecological imaging</li>
-              <li style={styles.listItem}>Dedicated gynaecology examination rooms</li>
-              <li style={styles.listItem}>Colposcopy and minor procedure facilities</li>
-              <li style={styles.listItem}>Well-equipped operation theatres for gynecological surgeries</li>
+              <li style={styles.listItem}>Modern consultation rooms</li>
+              <li style={styles.listItem}>Diagnostic support & imaging access</li>
+              <li style={styles.listItem}>Safe procedure and OT support (as needed)</li>
+              <li style={styles.listItem}>Patient-friendly counseling environment</li>
+              <li style={styles.listItem}>Post-procedure monitoring and follow-up</li>
             </ul>
-          </section>
+          </section> 
 
-          {/* Team Members */}
-          <section style={styles.section}>
+
+          {/* <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
                 <span style={styles.sectionAccentBar} />
                 Team Members
               </div>
             </div>
+
             <div style={styles.twoColumnGrid}>
               <ul style={styles.doctorList}>
-                <li style={styles.doctorItem}>Dr. Shraddha Walvekar</li>
+                <li style={styles.tagListItem}>
+                  <b>DR. ________</b> <br />
+                  <span style={{ fontSize: "11px" }}>
+                    MBBS, MS (ObGyn) / DGO (Update as applicable)
+                  </span>
+                </li>
               </ul>
             </div>
-          </section>
+          </section> */}
+  
 
-          {/* Department Timings */}
-          <section style={styles.section}>
+          {/* <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
                 <span style={styles.sectionAccentBar} />
@@ -367,31 +528,16 @@ function Gynecology() {
               </div>
             </div>
             <ul style={styles.list}>
-              <li style={styles.tagListItem}><strong>OPD:</strong> Monday to Saturday</li>
-              <li style={styles.tagListItem}><strong>Timings:</strong> 2:00 PM – 4:00 PM</li>
               <li style={styles.tagListItem}>
-                <strong>Emergency Services:</strong> 24×7 (for gynaecology-related emergencies only)
+                <strong>Timings:</strong> On Call
+              </li>
+              <li style={styles.tagListItem}>
+                <strong>Emergency Services:</strong> Available 24x7
               </li>
             </ul>
-          </section>
+          </section> */}
 
-          {/* Achievements & Highlights */}
-          <section style={styles.section}>
-            <div style={styles.sectionHeaderRow}>
-              <div style={styles.sectionTitle}>
-                <span style={styles.sectionAccentBar} />
-                Achievements &amp; Highlights
-              </div>
-            </div>
-            <ul style={styles.list}>
-              <li style={styles.tagListItem}>Successful management of complex gynecological disorders</li>
-              <li style={styles.tagListItem}>Expertise in advanced laparoscopic and hysteroscopic procedures</li>
-              <li style={styles.tagListItem}>Strong focus on preventive screening and early diagnosis</li>
-              <li style={styles.tagListItem}>High patient satisfaction through personalized and confidential care</li>
-            </ul>
-          </section>
-
-          {/* Patient Guidelines */}
+     
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -400,14 +546,22 @@ function Gynecology() {
               </div>
             </div>
             <ul style={styles.list}>
-              <li style={styles.listItem}>Please arrive at least 30 minutes prior to your appointment.</li>
-              <li style={styles.listItem}>Inform your doctor about any ongoing medications, allergies, or previous surgeries.</li>
-              <li style={styles.listItem}>Carry previous reports, ultrasound findings, or test results.</li>
-              <li style={styles.listItem}>Follow preparation instructions for diagnostic procedures like ultrasound or Pap smear.</li>
+              <li style={styles.listItem}>
+                Please arrive at least 30 minutes before your appointment.
+              </li>
+              <li style={styles.listItem}>
+                Share prior reports, scans, prescriptions, and lab results.
+              </li>
+              <li style={styles.listItem}>
+                Inform your doctor about ongoing medicines, allergies, and past history.
+              </li>
+              <li style={styles.listItem}>
+                Follow any test or pre-procedure instructions given by your doctor.
+              </li>
             </ul>
           </section>
 
-          {/* FAQs */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -418,44 +572,70 @@ function Gynecology() {
 
             <div style={styles.faqList}>
               <div style={styles.faqItem}>
-                <div style={styles.faqQuestion}>1. What conditions does the gynaecology department treat?</div>
+                <div style={styles.faqQuestion}>
+                  Q. When should I visit a gynecologist?
+                </div>
                 <div style={styles.faqAnswer}>
-                  All reproductive health issues except pregnancy-related care, including menstrual problems, infections,
-                  fibroids, ovarian cysts, PCOS, and menopause-related issues.
+                  If you have irregular periods, pelvic pain, unusual discharge,
+                  heavy bleeding, concerns like PCOS, or need preventive checkups
+                  and screening, a consultation is recommended.
                 </div>
               </div>
 
               <div style={styles.faqItem}>
-                <div style={styles.faqQuestion}>2. How often should I get a routine gynecological check-up?</div>
+                <div style={styles.faqQuestion}>
+                  Q. What should I bring to my appointment?
+                </div>
                 <div style={styles.faqAnswer}>
-                  Once a year is recommended, or as advised by your doctor.
+                  Carry previous reports, ultrasound/scans, lab results,
+                  prescriptions, and a list of current medicines and allergies.
                 </div>
               </div>
 
               <div style={styles.faqItem}>
-                <div style={styles.faqQuestion}>3. Is a Pap smear painful?</div>
+                <div style={styles.faqQuestion}>
+                  Q. Do you provide screening tests?
+                </div>
                 <div style={styles.faqAnswer}>
-                  It may be slightly uncomfortable but is generally painless and very quick.
+                  Yes, screening and diagnostic evaluation (like Pap smear or
+                  ultrasound guidance) may be advised depending on your symptoms
+                  and age.
                 </div>
               </div>
 
               <div style={styles.faqItem}>
-                <div style={styles.faqQuestion}>4. Do you provide family planning and contraception counseling?</div>
+                <div style={styles.faqQuestion}>
+                  Q. Can PCOS be managed?
+                </div>
                 <div style={styles.faqAnswer}>
-                  Yes, we offer guidance on safe and effective contraception methods (non-obstetric).
+                  PCOS is commonly managed with individualized guidance including
+                  lifestyle measures and medicines when needed. Your doctor will
+                  plan treatment based on symptoms and goals.
                 </div>
               </div>
 
               <div style={styles.faqItem}>
-                <div style={styles.faqQuestion}>5. Can menopausal symptoms be treated?</div>
+                <div style={styles.faqQuestion}>
+                  Q. Is my visit confidential?
+                </div>
                 <div style={styles.faqAnswer}>
-                  Yes. Our specialists provide medical therapy, lifestyle guidance, and hormonal management for menopause-related concerns.
+                  Yes. We follow strict privacy and confidentiality practices so
+                  you can discuss sensitive concerns comfortably.
                 </div>
               </div>
             </div>
           </section>
         </div>
       </div>
+
+      {/* Responsive stacking */}
+      <style>{`
+        @media (max-width: 900px) {
+          .heroGridFix {
+            grid-template-columns: 1fr !important;
+          }
+        }
+      `}</style>
     </>
   );
 }

@@ -67,8 +67,7 @@
   font-size: 13px;
   color: #666;
 }
-
-/* ✅ Responsive */
+ 
 @media (max-width: 900px) {
   .footer-top {
     grid-template-columns: 1fr 1fr;

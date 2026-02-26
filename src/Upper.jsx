@@ -12,10 +12,7 @@ const Upper = ({ text }) => {
 
   return (
     <div className="upper-container">
-      {/* Replace with your actual image */}
-    
-
-      {/* Overlay text */}
+     
       <div className="upper">
         <h1>{text}</h1>
       </div>

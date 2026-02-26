@@ -9,8 +9,7 @@ const Footer = () => {
     <hr />
       <footer className="footer">
       <div className="footer-top">
-
-        {/* Logo + Address */}
+ 
         <div className="footer-logo">
         <Link to="/">  <img src={logo} alt="Shree Saibaba Logo" /></Link>
           <p>
@@ -26,7 +25,7 @@ const Footer = () => {
             <a href="https://www.youtube.com/@shreesaibabaheartinstitute"><i className="fab fa-youtube"></i></a>
           </div>
         </div>
-        {/* Resources */}
+ 
         <div className="footer-col">
           <h3>Resources</h3>
           <ul>
@@ -35,7 +34,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Quick Links */}
+     
         <div className="footer-col">
           <h3>Quick Links</h3>
           <ul>
@@ -44,8 +43,7 @@ const Footer = () => {
             <li><Link to="/sitemap">Site Map</Link></li>
           </ul>
         </div>
-
-        {/* Discover */}
+ 
         <div className="footer-col">
           <h3>Discover</h3>
           <ul>

@@ -38,12 +38,12 @@ function NutritionBlog() {
         />
       </Helmet>
 
-      {/* 2-column page: main on the left, sticky sidebar on the right */}
+     
       <div className="kidney-page">
-        {/* Main */}
+   
         <main className="pane pane--main" aria-label="Recovery article">
           <article className="kidney-article">
-            {/* Hero */}
+            
             <header className="kidney-header">
               <img
                 src={nutrition}
@@ -59,21 +59,8 @@ function NutritionBlog() {
               <h1 className="kidney-title">
                 Post-Hospital Recovery: Nutrition, Sleep & Lifestyle Guide
               </h1>
-            </header>
-
-            {/* TOC */}
-            <nav className="toc" aria-label="On this page">
-              <p className="toc__label">On this page</p>
-              <ul>
-                {toc.map((item) => (
-                  <li key={item.id}>
-                    <a href={`#${item.id}`}>{item.label}</a>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-
-            {/* Content */}
+            </header> 
+   
             <section className="kidney-content">
               <h2 id="intro">Introduction: Recovery Doesn&apos;t End at Discharge</h2>
               <p>
@@ -177,7 +164,7 @@ function NutritionBlog() {
                 Healing is not passive. It is an ongoing commitment to nourish and provide your body with what it needs so that it can thrive once again.
               </p>
 
-              {/* CTA */}
+          
               <footer className="cta-section" aria-labelledby="cta-title">
                 <h2 id="cta-title" className="sr-only">Call to Action</h2>
                 <h5 className="CTA">📞 Call us or visit us for a consultation. Your health deserves the best care.</h5>
@@ -189,9 +176,22 @@ function NutritionBlog() {
           </article>
         </main>
 
-        {/* Sidebar */}
+ 
         <aside className="pane pane--sidebar" aria-label="Other blog posts">
           <div className="sidebar-inner">
+
+            <nav className="toc" aria-label="On this page">
+              <p className="toc__label">On this page</p>
+              <ul>
+                {toc.map((item) => (
+                  <li key={item.id}>
+                    <a href={`#${item.id}`}>{item.label}</a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+
+            <br />
             <h2 className="sidebar-title">Other Blogs</h2>
             <div className="sidebar-list" role="list">
               {otherBlogs.map((post, idx) => (

@@ -62,12 +62,12 @@ function Blogs() {
           <img src={Neurology_blog} alt="Cardio" /> <br /> <br />
           <h2><i style={{ color: 'red', }}>Neurology Brain Disorders</i></h2></div>
         </Link>
-        
+
         <Link to='/Robotic_Joint'><div className="imageblog">
           <img src={Robotic_Joint} alt="Cardio" /> <br /> <br />
           <h2><i style={{ color: 'red', }}>Robotic Joint Replacement Surgery</i></h2></div>
         </Link>
-        
+
         <Link to='/Robotic_Surgery'><div className="imageblog">
           <img src={Robotic_Surgery} alt="Cardio" /> <br /> <br />
           <h2><i style={{ color: 'red', }}>Robotic Surgery</i></h2></div>

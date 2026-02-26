@@ -34,12 +34,11 @@ function Cardia_Surgery_Blog() {
                 <meta name="og:description" content="" />
             </Helmet>
 
-            {/* 2-column page: main on the left, sticky sidebar on the right */}
             <div className="kidney-page">
-                {/* Main */}
+
                 <main className="pane pane--main" aria-label="Recovery article">
                     <article className="kidney-article">
-                        {/* Hero */}
+              
                         <header className="kidney-header">
                             <img
                                 src={Cardiac1}
@@ -57,7 +56,7 @@ function Cardia_Surgery_Blog() {
                             </h1>
                         </header>
 
-                        {/* Content */}
+           
                         <section className="kidney-content">
                             <h2 id="Stroke">प्रस्तावना</h2>  
                             <p>
@@ -75,8 +74,7 @@ function Cardia_Surgery_Blog() {
                                     loading="lazy"
                                     decoding="async"
                                 />
-                                {/* Optional: remove this figcaption if you don't want text under the image */}
-                                {/* <figcaption>Simple habits can keep you active and confident with a pacemaker.</figcaption> */}
+                               
                             </figure> <br />
 
                             <p>हे शक्य आहे मिनिमली इन्वैसिव्ह कार्डियाक सर्जरी (mics) च्या माध्यमातून. मग mics म्हणजे काय ? सोप्या भाषेत सांगायचे तर छातीचे हाड न कापता केलेली हृदयशस्त्रक्रिया म्हणजे मिनिमली इन्वैसिव्ह कार्डियाक सर्जरी. मित्रांनो कोणत्याही शस्त्रक्रिया करणे म्हणजे शरिरावर केलेले एकप्रकारचे आक्रमण असते ज्यालाच इन्व्हेजन (Invasion) म्हटले जाते. हे इन्व्हेजन कमी करणे म्हणजेच minimally Invasive Cardiac Surgery. ह्याचे मुख्य कारण छातीचे हाड कापणे व त्यामुळे होणाऱ्या समस्या असल्याने mics मध्ये छातीचे हाड न कापता अगदी छोट्याशा जागेतून शस्त्रक्रिया केली जाते छातीच्या दोन फासळ्या (Ribs) मध्ये असलेल्या जागेतून हृदयापर्यंत पोहचून ही शस्त्रक्रिया केली जाते. यामध्ये हाड कापलेले नसल्याने होणारा रक्तस्त्राव कमी होतो. त्यामुळे कमीत कमी Blood transfusion मध्ये ही शस्त्रक्रिया करता येते. शिवाय हाड कापलेले नसल्यामुळे रुग्णास होणाऱ्या वेदनांचे प्रमाणही अत्यंत कमी होते. त्यामुळे हृदयशस्त्रक्रियेनंतर अवघ्या दोन दिवसात रुग्ण चालू फिरू लागतो. शिवाय छातीचे हाड न कापल्याने शस्त्रक्रियेनंतर होणाऱ्या न्यूमोनिया सारख्या समस्यांचे प्रमाणही अगदीच कमी होते. नेहमीच्या शस्त्रक्रियेनंतर हाड जुळून येण्यास साधारणतः दीड महिन्याचा कालावधी लागतो. परंतु mics मध्ये हाड न कापल्याने रुग्ण अवघ्या आठवडाभरात नेहमीची कामे सुरु करू शकतो.</p>  <br />
@@ -86,7 +84,6 @@ function Cardia_Surgery_Blog() {
                             
                             <br />
 
-                            {/* Doctor card at the end of the content */}
                             <figure className="doctor-card" aria-labelledby="doctor-caption">
                                 <img
                                     src={DoctorPhoto}
@@ -104,7 +101,7 @@ function Cardia_Surgery_Blog() {
                             <br />
 
 
-                            {/* CTA */}
+              
                             <footer className="cta-section" aria-labelledby="cta-title">
                                 <h2 id="cta-title" className="sr-only">Call to Action</h2>
                                 <h5 className="CTA">📞 Call us or visit us for a consultation. Your health deserves the best care.</h5>
@@ -116,7 +113,7 @@ function Cardia_Surgery_Blog() {
                     </article>
                 </main>
 
-                {/* Sidebar */}
+
                 <aside className="pane pane--sidebar" aria-label="Other blog posts">
                     <div className="sidebar-inner">
 

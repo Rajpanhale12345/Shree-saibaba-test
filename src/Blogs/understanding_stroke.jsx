@@ -34,12 +34,12 @@ function NutritionBlog() {
                 <meta name="og:description" content="" />
             </Helmet>
 
-            {/* 2-column page: main on the left, sticky sidebar on the right */}
+   
             <div className="kidney-page">
-                {/* Main */}
+ 
                 <main className="pane pane--main" aria-label="Recovery article">
                     <article className="kidney-article">
-                        {/* Hero */}
+        
                         <header className="kidney-header">
                             <img
                                 src={Understanding_stroke1}
@@ -57,7 +57,7 @@ function NutritionBlog() {
                             </h1>
                         </header> 
 
-                        {/* Content */}
+        
                         <section className="kidney-content">
                             <h2 id="Stroke">What is a Stroke?</h2>
                             <p>
@@ -105,8 +105,7 @@ function NutritionBlog() {
                                     loading="lazy"
                                     decoding="async"
                                 />
-                                {/* Optional: remove this figcaption if you don't want text under the image */}
-                                {/* <figcaption>Simple habits can keep you active and confident with a pacemaker.</figcaption> */}
+                                
                             </figure> <br />
 
                             <h2 id="Golden_Hour">'Golden Hour' for Ischemic Stroke:</h2>
@@ -158,8 +157,7 @@ function NutritionBlog() {
                                     loading="lazy"
                                     decoding="async"
                                 />
-                                {/* Optional: remove this figcaption if you don't want text under the image */}
-                                {/* <figcaption>Simple habits can keep you active and confident with a pacemaker.</figcaption> */}
+                                 
                             </figure> <br />
 
                             <h2 id="Recovery_and_Rehabilitation">Recovery and Rehabilitation</h2>
@@ -175,11 +173,7 @@ function NutritionBlog() {
                             <p>A stroke can happen any time to anybody. Immediate medical attention is important to minimize the damaging of the brain and to increase the
                                 chances for a good recovery. If either you or someone around you starts to show stroke symptoms, please call emergency services immediately.</p>
                             <br />
-
-
-
-
-                            {/* CTA */}
+ 
                             <footer className="cta-section" aria-labelledby="cta-title">
                                 <h2 id="cta-title" className="sr-only">Call to Action</h2>
                                 <h5 className="CTA">📞 Call us or visit us for a consultation. Your health deserves the best care.</h5>
@@ -190,12 +184,12 @@ function NutritionBlog() {
                         </section>
                     </article>
                 </main>
-
-                {/* Sidebar */}
+ 
+  
                 <aside className="pane pane--sidebar" aria-label="Other blog posts">
                     <div className="sidebar-inner">
 
-                        {/* TOC */}
+               
                         <nav className="toc" aria-label="On this page">
                             <p className="toc__label"><span style={{color : "Red"}}>On this page</span></p>
                             <ul>

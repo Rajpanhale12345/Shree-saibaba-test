@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from "react";
-import "./TieUps.css"; // <-- use the isolated stylesheet
+import "./TieUps.css";  
 import { Helmet } from "react-helmet-async";
 
 const DATA = [
@@ -109,7 +109,7 @@ export default function TieUps() {
   const [q, setQ] = useState("");
   const [activeKeys, setActiveKeys] = useState(() => new Set(DATA.map(d => d.key)));
 
-  // Build search index
+ 
   const flatIndex = useMemo(() => {
     return DATA.map(section => ({
       ...section,
@@ -147,7 +147,7 @@ export default function TieUps() {
 
   const clearSearch = () => setQ("");
 
-  // NOTE: scoped wrapper + an id="top" for back-to-top
+  
   return (
 <>
     <Helmet>
@@ -156,7 +156,7 @@ export default function TieUps() {
           </Helmet>
     <div id="top" className="partners-scope">
       <div className="partners-wrap">
-        {/* Sticky Top Bar */}
+ 
         <header className="topbar" role="banner">
           <div className="brand">
           
@@ -175,7 +175,7 @@ export default function TieUps() {
           </nav>
         </header>
 
-        {/* Search Panel */}
+ 
         <section className="search-panel">
           <div className="search-box" role="search">
             <input
@@ -204,7 +204,7 @@ export default function TieUps() {
           
         </section>
 
-        {/* Sections */}
+     
         <main className="sections" role="main">
           {(q ? filtered : DATA).map((section) => {
             const isOpen = activeKeys.has(section.key);
@@ -236,7 +236,7 @@ export default function TieUps() {
                           <h3 className="card-title">{name}</h3>
                         </div>
                         <div className="badges">
-                          {/* Auto badges */}
+                        
                           {/\b(IPD)\b/i.test(name) && <span className="badge">IPD</span>}
                           {/\b(OPD)\b/i.test(name) && <span className="badge">OPD</span>}
                           {/CGHS|ECHS|ESIC|PMJAY|MJPJAY|MSRTC|Police|Government/i.test(name) && (
@@ -258,7 +258,7 @@ export default function TieUps() {
         <footer className="footer">
           <div className="cta">
             <h4>Need help with approvals?</h4>
-            <p>Our insurance helpdesk can verify eligibility and guide you through pre-authorization within minutes.</p>
+            <p>Our insurance helpdesk can verify eligibility and guide you through pre-authorization within minutes.</p>
            <br /> <a className="btn" href="/contact">Contact Helpdesk</a>
           </div>
             <a

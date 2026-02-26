@@ -35,11 +35,11 @@ function Kidney_Blog() {
 
 
       <div className="kidney-page">
-        {/* LEFT: Main article (normal page scroll) */}
+       
         <main className="pane pane--main" aria-label="Kidney article">
           <article className="kidney-article">
 
-            {/* Hero */}
+     
             <header className="kidney-header">
               <img style={{objectFit : "contain"}} src={kidneymid} alt="Renal Calculi" className="kidney-image" />
               <div className="kidney-meta">
@@ -47,19 +47,8 @@ function Kidney_Blog() {
                 <span className="kidney-date">🕗 11 August 2025</span>
               </div>
               <h1 className="kidney-title">Kidney Stones: Symptoms, Causes & Prevention</h1>
-            </header>
-
-            {/* TOC */}
-            <nav className="toc" aria-label="On this page">
-              <p className="toc__label">On this page</p>
-              <ul>
-                {toc.map((item) => (
-                  <li key={item.id}><a href={`#${item.id}`}>{item.label}</a></li>
-                ))}
-              </ul>
-            </nav>
-
-            {/* Content */}
+            </header> 
+       
             <section className="kidney-content">
               <h2 id="what">What is a Kidney Stone?</h2>
               <p>
@@ -132,7 +121,7 @@ function Kidney_Blog() {
               </ul>
             </section>
 
-            {/* CTA */}
+ 
             <footer className="cta-section" aria-labelledby="cta-title">
               <h2 id="cta-title" className="sr-only">Call to Action</h2>
               <h5 className="CTA">
@@ -147,9 +136,20 @@ function Kidney_Blog() {
           </article>
         </main>
 
-        {/* RIGHT: Sticky, independently scrolling sidebar */}
+        
         <aside className="pane pane--sidebar" aria-label="Other blog posts">
           <div className="sidebar-inner">
+            <nav className="toc" aria-label="On this page">
+              <p className="toc__label">On this page</p>
+              <ul>
+                {toc.map((item) => (
+                  <li key={item.id}><a href={`#${item.id}`}>{item.label}</a></li>
+                ))}
+              </ul>
+            </nav>
+
+            <br />  
+
             <h2 className="sidebar-title">Other Blogs</h2>
             <div className="sidebar-list" role="list">
               {otherBlogs.map((post, idx) => (

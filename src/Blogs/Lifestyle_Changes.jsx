@@ -36,12 +36,12 @@ function Lifestyle_Blog() {
                 <meta name="og:description" content="" />
             </Helmet>
 
-            {/* 2-column page: main on the left, sticky sidebar on the right */}
+             
             <div className="kidney-page">
-                {/* Main */}
+          
                 <main className="pane pane--main" aria-label="Recovery article">
                     <article className="kidney-article">
-                        {/* Hero */}
+                
                         <header className="kidney-header">
                             <img style={{ objectFit: "fill" }}
                                 src={CABG}
@@ -59,7 +59,7 @@ function Lifestyle_Blog() {
                             </h1>
                         </header>
 
-                        {/* Content */}
+                       
                         <section className="kidney-content">
                             <h2 id="Introduction">Introduction</h2>
                             <p>After a coronary artery bypass grafting (CABG) surgery, it is critical for patients to enact lifestyle changes and adhere to prescribed medications for optimal recovery and future heart health. These interventions include: - Dietary Adjustments: A heart-healthy diet low in saturated fats, cholesterol, and sodium is vital, often with an emphasis on fruits, vegetables, and whole grains.</p>
@@ -79,8 +79,7 @@ function Lifestyle_Blog() {
                                     loading="lazy"
                                     decoding="async"
                                 />
-                                {/* Optional: remove this figcaption if you don't want text under the image */}
-                                {/* <figcaption>Simple habits can keep you active and confident with a pacemaker.</figcaption> */}
+                                
                             </figure>
 
                             <br />
@@ -178,9 +177,7 @@ function Lifestyle_Blog() {
                             </ol>
 
                             <br />
-
-
-                            {/* CTA */}
+ 
                             <footer className="cta-section" aria-labelledby="cta-title">
                                 <h2 id="cta-title" className="sr-only">Call to Action</h2>
                                 <h5 className="CTA">📞 Call us or visit us for a consultation. Your health deserves the best care.</h5>
@@ -192,11 +189,11 @@ function Lifestyle_Blog() {
                     </article>
                 </main>
 
-                {/* Sidebar */}
+          
                 <aside className="pane pane--sidebar" aria-label="Other blog posts">
                     <div className="sidebar-inner">
 
-                        {/* TOC */}
+                  
                         <nav className="toc" aria-label="On this page">
                             <p className="toc__label"><span style={{ color: "Red" }}>On this page</span></p>
                             <ul>

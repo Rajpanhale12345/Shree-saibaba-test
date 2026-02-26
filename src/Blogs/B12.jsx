@@ -29,12 +29,10 @@ function B12_Blog() {
                 <meta name="og:description" content="" />
             </Helmet>
 
-            {/* 2-column page: main on the left, sticky sidebar on the right */}
             <div className="kidney-page">
-                {/* Main */}
                 <main className="pane pane--main" aria-label="Recovery article">
                     <article className="kidney-article">
-                        {/* Hero */}
+          
                         <header className="kidney-header">
                             <img style={{objectFit : "fill"}}
                                 src={Vitamin}
@@ -52,7 +50,6 @@ function B12_Blog() {
                             </h1>
                         </header>
 
-                        {/* Content */}
                         <section className="kidney-content">
                             <h2 id="Introduction">Introduction</h2>
                             <p>Vitamins and minerals are key factors in maintaining overall health and well-being. Vitamin B12 and Calcium rank among two commonly deliberated nutrients concerning health. Both nutrients are crucial in different body functions, and the deficiency of either leads to serious health problems. The current article deals with the importance, sources, and benefits of Vitamin B12 and Calcium.</p>
@@ -77,8 +74,7 @@ function B12_Blog() {
                                     loading="lazy"
                                     decoding="async"
                                 />
-                                {/* Optional: remove this figcaption if you don't want text under the image */}
-                                {/* <figcaption>Simple habits can keep you active and confident with a pacemaker.</figcaption> */}
+                              
                             </figure> <br />
 
                             <p>2. Sources of Vitamin B12</p>
@@ -115,8 +111,7 @@ function B12_Blog() {
                                     loading="lazy"
                                     decoding="async"
                                 />
-                                {/* Optional: remove this figcaption if you don't want text under the image */}
-                                {/* <figcaption>Simple habits can keep you active and confident with a pacemaker.</figcaption> */}
+                              
                             </figure> <br />
 
                             <p>2. Sources of Calcium</p>
@@ -142,7 +137,6 @@ function B12_Blog() {
 
                             <br />
 
-                            {/* CTA */}
                             <footer className="cta-section" aria-labelledby="cta-title">
                                 <h2 id="cta-title" className="sr-only">Call to Action</h2>
                                 <h5 className="CTA">📞 Call us or visit us for a consultation. Your health deserves the best care.</h5>
@@ -154,11 +148,9 @@ function B12_Blog() {
                     </article>
                 </main>
 
-                {/* Sidebar */}
                 <aside className="pane pane--sidebar" aria-label="Other blog posts">
                     <div className="sidebar-inner">
 
-                        {/* TOC */}
                         <nav className="toc" aria-label="On this page">
                             <p className="toc__label"><span style={{color : "Red"}}>On this page</span></p>
                             <ul>

@@ -15,7 +15,6 @@ const styles = {
     color: "#0f172a",
   },
 
-  // ✅ HERO: grid on desktop, stacks on mobile via CSS class + media query below
   hero: {
     display: "grid",
     gridTemplateColumns: "minmax(280px, 420px) 1fr",
@@ -35,13 +34,12 @@ const styles = {
     border: "1px solid rgba(148,163,184,0.4)",
     background: "#0f172a",
 
-    // ✅ responsive height for the image card
     height: "clamp(220px, 32vw, 420px)",
   },
   heroImage: {
     width: "100%",
     height: "100%",
-    objectFit: "cover", // ✅ prevents stretching
+    objectFit: "cover",
     objectPosition: "center",
     display: "block",
     opacity: 0.95,
@@ -124,7 +122,6 @@ const styles = {
     marginRight: "6px",
   },
 
-  // Section styles
   section: {
     borderRadius: "18px",
     padding: "22px 22px 20px",
@@ -190,14 +187,45 @@ const styles = {
     border: "1px solid rgba(191,219,254,1)",
     marginBottom: "6px",
   },
+
+  faqList: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+    gap: '12px',
+  },
+  faqItem: {
+    borderRadius: '14px',
+    padding: '14px 14px 12px',
+    background: '#ffffffff',
+    color: '#000000ff',
+    boxShadow: '0 16px 30px rgba(15,23,42,0.4)',
+    borderLeft: '4px solid #38bdf8',
+  },
+  faqQuestion: {
+    fontSize: '14px',
+    fontWeight: 600,
+    marginBottom: '6px',
+  },
+  faqAnswer: {
+    fontSize: '13px',
+    lineHeight: 1.6,
+    color: '#000000ff',
+    textAlign: 'left',
+  },
 };
+
+const SITE_NAME = "Shree Saibaba Multispeciality Hospital";
+const PAGE_TITLE = "Cardiovascular Thoracic Surgery  | Best Cardiovascular Hospital in Nashik";
+const PAGE_DESCRIPTION = "Cardiovascular & Thoracic Surgery Department in Nashik — CABG (bypass), valve repair/replacement, minimally invasive cardiac surgery (MICAS), ICU care and rehabilitation at Shree Saibaba Multispeciality Hospital.";
+const CANONICAL_URL = "https://shreesaibabamultispecialityhospital.com/cardiovascular";
+const OG_IMAGE_URL = "https://shreesaibabamultispecialityhospital.com/assets/thoracicdep-Dt7W-j3u.jpg"; 
 
 
 function CardioVascular() {
   return (
     <>
       <Helmet>
-        <title>Cardiovascular Thoracic Surgery | Shree Saibaba Multispeciality Hospital</title>
+        <title>Cardiovascular Thoracic Surgery  | Best Cardiovascular Hospital in Nashik</title>
         <meta
           name="description"
           content="Cardiovascular Thoracic Surgery Department at Shree Saibaba Multispeciality Hospital offers advanced heart and thoracic surgeries including CABG, valve surgery, MICAS and post-surgical ICU and rehabilitation care."
@@ -214,7 +242,7 @@ function CardioVascular() {
 
       <div style={styles.page}>
         <div style={styles.container}>
-          {/* Hero */}
+     
           <div style={styles.hero}>
             <div style={styles.heroImageWrapper}>
               <div style={styles.heroImageCard}>
@@ -326,9 +354,9 @@ function CardioVascular() {
                   advanced technology and modern facilities; therefore, we are committed to providing access to
                   globally recognized quality thoracic and heart care at a reasonable price for all Americans.</p>
                 <p style={styles.heroParagraph}>
-                  We at Shree Saibaba Multi-Speciality Hospital provide a complete range of medical services for the 
-                  treatment of diseases of the heart and lungs. We believe that there should be no limit to how quickly 
-                  a patient recovers from surgery. Shree Saibaba Multi-Speciality Hospital will be here to help you 
+                  We at Shree Saibaba Multi-Speciality Hospital provide a complete range of medical services for the
+                  treatment of diseases of the heart and lungs. We believe that there should be no limit to how quickly
+                  a patient recovers from surgery. Shree Saibaba Multi-Speciality Hospital will be here to help you
                   stay on the path to a healthy heart and strong heart for a lifetime. Every heartbeat counts!
                 </p>
                 <br />
@@ -340,8 +368,7 @@ function CardioVascular() {
               </div>
             </div>
           </div>
-
-          {/* Advanced Services */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -350,7 +377,7 @@ function CardioVascular() {
               </div>
             </div>
 
-            {/* Cardiac Surgeries */}
+  
             <ul style={styles.list}>
               <li style={styles.listItem}>
                 <strong>Cardiac Surgeries:</strong>
@@ -364,7 +391,7 @@ function CardioVascular() {
                 </ul>
               </li>
 
-              {/* MICAS */}
+  
               <li style={styles.listItem}>
                 <strong>Minimally Invasive Coronary Artery Surgery (MICAS):</strong>
                 <ul style={styles.list}>
@@ -377,7 +404,7 @@ function CardioVascular() {
                 </ul>
               </li>
 
-              {/* Post-Surgical Care */}
+     
               <li style={styles.listItem}>
                 <strong>Post-Surgical Care:</strong>
                 <ul style={styles.list}>
@@ -392,7 +419,7 @@ function CardioVascular() {
             </ul>
           </section>
 
-          {/* Advanced Facilities & Equipment */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -410,7 +437,7 @@ function CardioVascular() {
             </ul>
           </section>
 
-          {/* Achievements & Highlights */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -435,7 +462,7 @@ function CardioVascular() {
             </ul>
           </section>
 
-          {/* Team Members / Department Timings */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -473,7 +500,7 @@ function CardioVascular() {
             </div>
           </section>
 
-          {/* Patient Guidelines */}
+     
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -500,6 +527,85 @@ function CardioVascular() {
               </li>
             </ul>
           </section>
+
+  
+          <section style={styles.section}>
+            <div style={styles.sectionHeaderRow}>
+              <div style={styles.sectionTitle}>
+                <span style={styles.sectionAccentBar} />
+                FAQs
+              </div>
+            </div>
+
+            <div style={styles.faqList}>
+              <div style={styles.faqItem}>
+                <div style={styles.faqQuestion}>
+                  Q: When should I consult a cardiovascular thoracic surgeon?
+                </div>
+                <div style={styles.faqAnswer}>
+                  You may be referred when tests suggest coronary artery disease needing surgery (like CABG), valve disease
+                  requiring repair or replacement, certain congenital heart defects, or chest/lung conditions that need surgical
+                  treatment. Referral is typically done after evaluation by a cardiologist or physician.
+                </div>
+              </div>
+
+              <div style={styles.faqItem}>
+                <div style={styles.faqQuestion}>
+                  Q: What is CABG (bypass surgery) and when is it advised?
+                </div>
+                <div style={styles.faqAnswer}>
+                  CABG (Coronary Artery Bypass Grafting) improves blood flow to the heart by bypassing blocked coronary arteries
+                  using grafts. It may be advised when blockages are significant, symptoms are severe, or when angiography shows
+                  disease patterns better treated with bypass than stenting.
+                </div>
+              </div>
+
+              <div style={styles.faqItem}>
+                <div style={styles.faqQuestion}>
+                  Q: What heart valve surgeries are done in CT surgery?
+                </div>
+                <div style={styles.faqAnswer}>
+                  Valve repair or replacement may be performed for valve narrowing (stenosis) or leakage (regurgitation).
+                  The best option depends on echocardiography findings, symptoms, and overall health—your surgeon will explain
+                  the recommended approach.
+                </div>
+              </div>
+
+              <div style={styles.faqItem}>
+                <div style={styles.faqQuestion}>
+                  Q: What is minimally invasive cardiac surgery (MICAS)?
+                </div>
+                <div style={styles.faqAnswer}>
+                  MICAS uses smaller incisions than traditional open-heart surgery in suitable cases. It may reduce pain and
+                  support faster recovery. Eligibility depends on the condition and the surgeon’s assessment.
+                </div>
+              </div>
+
+              <div style={styles.faqItem}>
+                <div style={styles.faqQuestion}>
+                  Q: What care is provided after heart surgery?
+                </div>
+                <div style={styles.faqAnswer}>
+                  After surgery, patients are monitored in a dedicated ICU with continuous monitoring and life-support systems
+                  when needed. Once stable, the team guides step-down recovery, rehabilitation, medications, and follow-up plans
+                  to support long-term heart health.
+                </div>
+              </div>
+
+              <div style={styles.faqItem}>
+                <div style={styles.faqQuestion}>
+                  Q: What should I bring for a cardiac/thoracic surgery consultation?
+                </div>
+                <div style={styles.faqAnswer}>
+                  Bring your current medication list, allergy history, and any previous reports such as ECG, ECHO, angiography,
+                  CT/MRI or blood tests (if done), plus details of diabetes/BP and prior surgeries. Follow any pre-test or fasting
+                  instructions given by your doctor.
+                </div>
+              </div>
+            </div>
+          </section>
+
+
         </div>
       </div>
     </>

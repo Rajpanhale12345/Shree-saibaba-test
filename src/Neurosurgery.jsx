@@ -1,212 +1,371 @@
 import React from 'react';
-import img from './Images/Neurosurgerydep.jpg'; // replace with neurosurgery-specific image if available
+import img from './Images/Neurosurgerydep.jpg';
 import { Helmet } from "react-helmet-async";
 
 const styles = {
   page: {
-    background: 'linear-gradient(135deg, #f4f7fb, #e5edf9)',
-    padding: '40px 16px',
+    background: "linear-gradient(135deg, #f4f7fb, #e5edf9)",
+    padding: "40px 16px",
   },
   container: {
-    maxWidth: '1200px',
-    margin: '0 auto',
-    fontFamily: '"Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif',
-    color: '#0f172a',
+    maxWidth: "1200px",
+    margin: "0 auto",
+    fontFamily:
+      '"Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif',
+    color: "#0f172a",
   },
+
   hero: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    gap: '24px',
-    alignItems: 'stretch',
-    marginBottom: '32px',
+    display: "grid",
+    gridTemplateColumns: "minmax(280px, 420px) 1fr",
+    gap: "24px",
+    alignItems: "start",
+    marginBottom: "32px",
   },
+
   heroImageWrapper: {
-    flex: '1 1 320px',
-    minWidth: '280px',
+    minWidth: "280px",
   },
   heroImageCard: {
-    height: '100%',
-    borderRadius: '20px',
-    overflow: 'hidden',
-    boxShadow: '0 18px 45px rgba(15,23,42,0.16)',
-    border: '1px solid rgba(148,163,184,0.4)',
-    background: '#0f172a',
+    width: "100%",
+    borderRadius: "20px",
+    overflow: "hidden",
+    boxShadow: "0 18px 45px rgba(15,23,42,0.16)",
+    border: "1px solid rgba(148,163,184,0.4)",
+    background: "#0f172a",
+
+    height: "clamp(220px, 32vw, 420px)",
   },
   heroImage: {
-    width: '100%',
-    height: '100%',
-    objectFit: 'fill',
-    display: 'block',
+    width: "100%",
+    height: "100%",
+    objectFit: "cover",
+    objectPosition: "center",
+    display: "block",
     opacity: 0.95,
   },
+
   heroTextWrapper: {
-    flex: '2 1 420px',
-    minWidth: '280px',
+    minWidth: "280px",
   },
   heroTextCard: {
-    height: '100%',
-    borderRadius: '20px',
-    padding: '28px 28px 24px',
-    background: 'rgba(255,255,255,0.92)',
-    backdropFilter: 'blur(10px)',
-    boxShadow: '0 18px 45px rgba(15,23,42,0.08)',
-    border: '1px solid rgba(148,163,184,0.4)',
+    borderRadius: "20px",
+    padding: "28px 28px 24px",
+    background: "rgba(255,255,255,0.92)",
+    backdropFilter: "blur(10px)",
+    boxShadow: "0 18px 45px rgba(15,23,42,0.08)",
+    border: "1px solid rgba(148,163,184,0.4)",
   },
+
   pill: {
-    display: 'inline-flex',
-    alignItems: 'center',
-    gap: '8px',
-    padding: '4px 12px',
-    borderRadius: '999px',
-    fontSize: '12px',
+    display: "inline-flex",
+    alignItems: "center",
+    gap: "8px",
+    padding: "4px 12px",
+    borderRadius: "999px",
+    fontSize: "12px",
     fontWeight: 600,
-    letterSpacing: '0.06em',
-    textTransform: 'uppercase',
-    background: 'rgba(37,99,235,0.08)',
-    color: '#1d4ed8',
-    marginBottom: '10px',
+    letterSpacing: "0.06em",
+    textTransform: "uppercase",
+    background: "rgba(37,99,235,0.08)",
+    color: "#1d4ed8",
+    marginBottom: "10px",
   },
   pillDot: {
-    width: '8px',
-    height: '8px',
-    borderRadius: '50%',
-    background: '#22c55e',
+    width: "8px",
+    height: "8px",
+    borderRadius: "50%",
+    background: "#22c55e",
   },
-  heroTitle: {
-    fontSize: '30px',
-    fontWeight: 700,
-    margin: '4px 0 4px',
-    color: '#0f172a',
-  },
+
   heroSubtitle: {
-    fontSize: '16px',
+    fontSize: "16px",
     fontWeight: 500,
-    color: '#64748b',
-    marginBottom: '6px',
+    color: "#64748b",
+    marginBottom: "18px",
   },
-  heroTagline: {
-    fontSize: '14px',
-    fontWeight: 500,
-    color: '#0f766e',
-    marginBottom: '14px',
-  },
+
   heroParagraph: {
-    fontSize: '14px',
+    fontSize: "14px",
     lineHeight: 1.7,
-    color: '#1e293b',
-    marginBottom: '10px',
+    color: "#1e293b",
+    marginBottom: "10px",
+    textAlign: "left",
   },
+  heroParagraph1: {
+    fontSize: "24px",
+    lineHeight: 1.7,
+    color: "#1e293b",
+    marginBottom: "10px",
+    textAlign: "left",
+  },
+  heroParagraph2: {
+    fontSize: "30px",
+    lineHeight: 1.2,
+    color: "#1e293b",
+    marginBottom: "10px",
+  },
+
   highlightStrip: {
-    marginTop: '16px',
-    padding: '10px 14px',
-    borderRadius: '12px',
-    background: 'linear-gradient(90deg, rgba(37,99,235,0.08), rgba(56,189,248,0.10))',
-    fontSize: '13px',
-    color: '#0f172a',
-    border: '1px solid rgba(129,140,248,0.4)',
+    marginTop: "16px",
+    padding: "10px 14px",
+    borderRadius: "12px",
+    background:
+      "linear-gradient(90deg, rgba(37,99,235,0.08), rgba(56,189,248,0.10))",
+    fontSize: "13px",
+    color: "#0f172a",
+    border: "1px solid rgba(129,140,248,0.4)",
   },
   highlightLabel: {
     fontWeight: 600,
-    marginRight: '6px',
+    marginRight: "6px",
   },
 
-  // Section styles
   section: {
-    borderRadius: '18px',
-    padding: '22px 22px 20px',
-    marginBottom: '20px',
-    background: 'rgba(255,255,255,0.96)',
-    backdropFilter: 'blur(8px)',
-    boxShadow: '0 14px 35px rgba(15,23,42,0.06)',
-    border: '1px solid rgba(203,213,225,0.8)',
+    borderRadius: "18px",
+    padding: "22px 22px 20px",
+    marginBottom: "20px",
+    background: "rgba(255,255,255,0.96)",
+    backdropFilter: "blur(8px)",
+    boxShadow: "0 14px 35px rgba(15,23,42,0.06)",
+    border: "1px solid rgba(203,213,225,0.8)",
   },
   sectionHeaderRow: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'baseline',
-    gap: '10px',
-    marginBottom: '12px',
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "baseline",
+    gap: "10px",
+    marginBottom: "12px",
   },
   sectionTitle: {
-    fontSize: '18px',
+    fontSize: "18px",
     fontWeight: 700,
-    color: '#0f172a',
-    display: 'flex',
-    alignItems: 'center',
-    gap: '8px',
+    color: "#0f172a",
+    display: "flex",
+    alignItems: "center",
+    gap: "8px",
   },
   sectionAccentBar: {
-    width: '3px',
-    height: '18px',
-    borderRadius: '999px',
-    background: 'linear-gradient(180deg, #2563eb, #22c55e)',
+    width: "3px",
+    height: "18px",
+    borderRadius: "999px",
+    background: "linear-gradient(180deg, #2563eb, #22c55e)",
   },
+
   list: {
-    paddingLeft: '18px',
+    paddingLeft: "18px",
     margin: 0,
-    textAlign : "center"
+    textAlign: "left",
   },
   listItem: {
-    fontSize: '14px',
+    fontSize: "14px",
     lineHeight: 1.7,
-    color: '#1e293b',
-    marginBottom: '6px',
+    color: "#1e293b",
+    marginBottom: "6px",
   },
 
-  // Grid / layout helpers
   twoColumnGrid: {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
-    gap: '12px 32px',
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+    gap: "12px 32px",
   },
 
-  // Doctors / tags
   doctorList: {
-    listStyle: 'none',
+    listStyle: "none",
     paddingLeft: 0,
     margin: 0,
   },
+
   tagListItem: {
-    fontSize: '14px',
+    fontSize: "14px",
     lineHeight: 1.7,
-    color: '#0f172a',
-    padding: '6px 10px',
-    borderRadius: '10px',
-    background: 'rgba(239,246,255,0.9)',
-    border: '1px solid rgba(191,219,254,1)',
+    color: "#0f172a",
+    padding: "6px 10px",
+    borderRadius: "10px",
+    background: "rgba(239,246,255,0.9)",
+    border: "1px solid rgba(191,219,254,1)",
+    marginBottom: "6px",
+  },
+
+  faqList: {
+    display: "grid",
+    gap: "12px",
+  },
+  faqItem: {
+    borderRadius: "14px",
+    padding: "14px 14px 12px",
+    background: "rgba(255,255,255,0.95)",
+    border: "1px solid rgba(226,232,240,1)",
+    boxShadow: "0 10px 24px rgba(15,23,42,0.05)",
+    textAlign: "left",
+  },
+  faqQuestion: {
+    fontWeight: 800,
+    color: "#0f172a",
+    marginBottom: "6px",
+    fontSize: "14px",
+  },
+  faqAnswer: {
+    color: "#334155",
+    fontSize: "14px",
+    lineHeight: 1.7,
+  },
+  seoBlock: {
+    marginTop: "20px",
+    padding: "18px",
+    borderRadius: "16px",
+    background: "linear-gradient(135deg, #ffffff, #f8fafc)",
+    border: "1px solid rgba(203,213,225,0.9)",
+  },
+  seoHeading: {
+    fontSize: "16px",
+    fontWeight: 800,
+    color: "#0f172a",
+    marginBottom: "8px",
+  },
+  seoText: {
+    fontSize: "14px",
+    lineHeight: 1.7,
+    color: "#334155",
+    marginBottom: "8px",
+  },
+  seoList: {
+    paddingLeft: "18px",
+    margin: "6px 0",
+  },
+  seoListItem: {
+    fontSize: "14px",
+    lineHeight: 1.6,
+    color: "#1e293b",
+  },
+
+  faqList: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+    gap: '12px',
+  },
+  faqItem: {
+    borderRadius: '14px',
+    padding: '14px 14px 12px',
+    background: '#ffffffff',
+    color: '#000000ff',
+    boxShadow: '0 16px 30px rgba(15,23,42,0.4)',
+    borderLeft: '4px solid #38bdf8',
+  },
+  faqQuestion: {
+    fontSize: '14px',
+    fontWeight: 600,
     marginBottom: '6px',
   },
+  faqAnswer: {
+    fontSize: '13px',
+    lineHeight: 1.6,
+    color: '#000000ff',
+    textAlign: 'left',
+  },
 };
+
+
+const SITE_NAME = "Shree Saibaba Multispeciality Hospital";
+const SITE_URL = "https://shreesaibabamultispecialityhospital.com";
+const CANONICAL_URL = `${SITE_URL}/neurosurgery`;
+const OG_IMAGE_URL = `${SITE_URL}/assets/Neurosurgerydep-C9i4VfaT.jpg`;
+
+
+const pageTitle = "Neuro & Spine Surgery in Nashik | Brain Tumor, Spine Surgery & Neurocritical Care";
+const pageDescription = "Shree Saibaba Multispeciality Hospital, Nashik offers advanced neurosurgery and spine surgery including brain tumor surgery, minimally invasive spine surgery, neurotrauma and neurocritical care with 24×7 emergency support.";
+
+const jsonLdDepartment = {
+  "@context": "https://schema.org",
+  "@type": "MedicalClinic",
+  name: SITE_NAME,
+  url: CANONICAL_URL,
+  department: {
+    "@type": "MedicalBusiness",
+    name: "Neuro & Spine Surgery Department",
+    medicalSpecialty: ["Neurosurgery", "Orthopedic", "Neurology"],
+    areaServed: { "@type": "City", name: "Nashik" },
+    description:
+      "Neurosurgery and spine surgery services including brain tumor surgery, neurotrauma care, minimally invasive spine surgery, spinal fusion, deformity correction, neuroendoscopy and neurocritical care."
+  }
+};
+
+const faqItems = [
+  {
+    q: "What conditions are treated in the Neuro & Spine Surgery Department?",
+    a: "We treat brain, spine and nerve disorders including brain tumors, head injuries and brain hemorrhage, slipped/herniated disc, sciatica, spinal cord compression, spinal tumors, scoliosis/kyphosis, and congenital neurological/spinal conditions."
+  },
+  {
+    q: "Do you offer minimally invasive spine surgery in Nashik?",
+    a: "Yes. Whenever suitable, we use minimally invasive spine surgery techniques for conditions such as slipped disc, sciatica and nerve compression to reduce pain, blood loss and recovery time."
+  },
+  {
+    q: "What neurosurgical procedures are available here?",
+    a: "Services include brain tumor surgery, cerebrovascular procedures (such as aneurysm clipping/coiling), neuroendoscopic procedures, neurotrauma surgery, pediatric neurosurgery and surgery for spinal/intradural tumors based on specialist evaluation."
+  },
+  {
+    q: "Do you provide neurocritical care after surgery or for emergencies?",
+    a: "Yes. We provide specialized neurocritical care with advanced monitoring and ventilatory support for post-operative, trauma and emergency neurological cases."
+  },
+  {
+    q: "When should I consult a neurosurgeon or spine surgeon?",
+    a: "Consult urgently for severe headache with vomiting, seizures, sudden weakness/numbness, loss of consciousness, head injury, loss of bladder/bowel control, or rapidly worsening back/neck pain with radiating pain, numbness or weakness. For persistent back/neck pain or sciatica, evaluation helps plan the right treatment."
+  },
+  {
+    q: "What are the OPD timings and emergency availability?",
+    a: "OPD timings are Monday to Saturday, 3:00 PM - 5:00 PM. Emergency services are available 24×7."
+  }
+];
+
+const jsonLdFaq = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a }
+  }))
+};
+
 
 function Neurosurgery() {
   return (
     <>
       <Helmet>
-        <title>Neurosurgery & Spine Surgery | Shree Saibaba Multispeciality Hospital</title>
-        <meta
-          name="description"
-          content="Neurosurgery & Spine Surgery Department at Shree Saibaba Multispeciality Hospital, Nashik offers advanced brain and spine surgeries with state-of-the-art technology and a multidisciplinary team."
-        />
-        <meta
-          name="keywords"
-          content="neurosurgery Nashik, spine surgery Nashik, brain tumor surgery Nashik, minimally invasive spine surgery Nashik"
-        />
-        <meta
-          name="og:description"
-          content="Comprehensive neurosurgery and spine surgery services including brain tumor surgery, aneurysm procedures, spinal fusion, minimally invasive spine surgery and neurocritical care."
-        />
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
+        <meta name="keywords" content="neurosurgery Nashik, spine surgery Nashik, brain tumor surgery Nashik, best neurosurgeon in Nashik, minimally invasive spine surgery Nashik, neurocritical care Nashik" />
+
+        <link rel="canonical" href={CANONICAL_URL} />
+        <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content={SITE_NAME} />
+        <meta property="og:title" content={`${SITE_NAME} | Neuro & Spine Surgery Department`} />
+        <meta property="og:description" content={pageDescription} />
+        <meta property="og:url" content={CANONICAL_URL} />
+        <meta property="og:image" content={OG_IMAGE_URL} />
+        <meta property="og:image:alt" content="Neuro & Spine Surgery Department - Shree Saibaba Multispeciality Hospital, Nashik" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${SITE_NAME} | Neuro & Spine Surgery Department`} />
+        <meta name="twitter:description" content={pageDescription} />
+        <meta name="twitter:image" content={OG_IMAGE_URL} />
+
+        <script type="application/ld+json">{JSON.stringify(jsonLdDepartment)}</script>
+        <script type="application/ld+json">{JSON.stringify(jsonLdFaq)}</script>
       </Helmet>
+
 
       <div style={styles.page}>
         <div style={styles.container}>
-          {/* Hero */}
+       
           <div style={styles.hero}>
             <div style={styles.heroImageWrapper}>
               <div style={styles.heroImageCard}>
                 <img
-                  src={img} // replace with neurosurgery/spine-specific image if available
+                  src={img}
                   alt="Neurosurgery and Spine Surgery Department"
                   style={styles.heroImage}
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -215,193 +374,283 @@ function Neurosurgery() {
               <div style={styles.heroTextCard}>
                 <div style={styles.pill}>
                   <span style={styles.pillDot} />
-                  <span>Neurosurgery &amp; Spine Surgery</span>
-                </div>
-                <h1 style={styles.heroTitle}>Best Neurosurgery &amp; Spine Surgery Hospital</h1>
-                <div style={styles.heroSubtitle}>Nashik, Maharashtra</div>
-                <div style={styles.heroTagline}>
-                  Advanced brain and spine surgery with precision, safety and compassionate care.
+                  <span>Comprehensive Medical Care</span>
                 </div>
 
+                <h1 style={styles.heroParagraph2}>Neuro & Spine Surgery Department</h1>
+                <div style={styles.heroSubtitle}>Nashik, Maharashtra</div>
+                <br />
+
                 <p style={styles.heroParagraph}>
-                  Neurosurgery is a highly specialized branch of medicine that deals with the
-                  diagnosis and surgical treatment of disorders affecting the brain, spine,
-                  and peripheral nerves. Among its key focus areas, spine surgery plays a
-                  critical role in treating degenerative, traumatic, congenital, and
-                  tumor-related spinal conditions that impact mobility, sensation, and quality
-                  of life.
+                  The function of our whole body revolves around the functions of our nervous system.
+                  The ability to take breaths, the ability to think, the ability to interact with others,
+                  and all the things that we can do are possible because of the function of our nervous
+                  system. When a disruption occurs in the brain, spine or nerves, an individual may need
+                  to seek specialised medical care and surgical treatment for the disorder. The Department
+                  of Neurosurgery and Spine Care at Shree Saibaba Multispeciality Hospital provides multiple
+                  state-of-the-art options for individuals who have complex neurological disorders in a safe
+                  and caring environment.
                 </p>
                 <p style={styles.heroParagraph}>
-                  Shree Saibaba Multispeciality Hospital is a premier destination for
-                  Neurosurgery and Spine Surgery in Nashik, offering advanced surgical
-                  techniques delivered by an expert team of neurosurgeons, spine surgeons,
-                  neuroanesthetists, and rehabilitation specialists. Our department is built
-                  on the foundation of surgical precision, clinical excellence, and
-                  compassionate care.
+                  The neurosurgery centre in Nashik focuses on the combination of expertise and advanced
+                  technologies for the treatment of head, spine, and nervous system conditions. Whether
+                  you have a condition of the brain, a herniated disc, a spinal cord injury, a compressed
+                  nerve, or have a tumour, our neurosurgeons and clinical staff provide you with all your
+                  treatment options at one location.
+                </p>
+                <br />
+
+                <h2 style={styles.heroParagraph1}>Comprehensive Treatment for All Types of Neurological
+                  Conditions</h2>
+
+                <p style={styles.heroParagraph}>
+                  Our multi-disciplinary team consists of neurologists, surgeons, neuro-anesthesiologists,
+                  and rehabilitation professionals who come together to create the best possible treatment
+                  plans for each patient. Neurological disorders can be treated with medications or may
+                  require surgery. Every patient is evaluated by our specialists to determine the safest
+                  course of action based on their needs.
                 </p>
                 <p style={styles.heroParagraph}>
-                  Equipped with state-of-the-art operation theaters, high-resolution
-                  neuro-navigation systems, intraoperative imaging, and advanced
-                  neuro-monitoring technologies, we perform a full range of complex brain and
-                  spine procedures with enhanced safety and faster recovery.
+                  Patients looking for a neurologist often come to us from their communities for conditions
+                  related to brain tumours, head trauma, stroke complications, epilepsy requiring surgery,
+                  nerve disorders or congenital malformations of the brain.
+                </p>
+                <p style={styles.heroParagraph}>Not only do we treat the condition at hand, but focus on recovery,
+                  patient's comfort and quality of life after receiving treatment.</p>
+                <br />
+
+                <h2 style={styles.heroParagraph1}>Specialised Spine Treatment</h2>
+                <p style={styles.heroParagraph}>
+                  Affected performance in daily activities due to pain from an injury or condition, resulting in
+                  pain in the back or neck. We provide state-of-the-art surgical options for treatment of any
+                  patient with these conditions: slipped or herniated disc(s); sciatica; fracture(s) of vertebrae;
+                  degenerative change(s) throughout the entire spine; spinal tumour(s); scoliosis.
                 </p>
                 <p style={styles.heroParagraph}>
-                  From life-saving brain surgeries to minimally invasive spinal procedures,
-                  our team adopts a patient-centric approach, ensuring personalized care,
-                  multidisciplinary planning, and long-term rehabilitation support.
+                  Our approach to surgery is minimally invasive whenever possible, removing a portion of the brain
+                  without disturbing the surrounding structures. By utilizing this surgical approach, our surgical
+                  team has significantly reduced the amount of time spent recovering from surgery, reducing the total
+                  hours spent recovering, the amount of pain and blood loss, as well as hospital length-of-stay. The
+                  combination of faster recovery time means that our patients return to their normal activity levels
+                  sooner than expected. In addition to providing hospital-based and outpatient neurological surgeries,
+                  we treat the entire neurological system and spine at the same time to obtain the best results.
                 </p>
+                <br />
+
+                <h2 style={styles.heroParagraph1}>Modern Technology, Safer Procedures</h2>
+                <p style={styles.heroParagraph}>
+                  As a leading neurosurgery hospital in the region, we use advanced medical equipment to improve accuracy
+                  and safety during operations. Our facilities include:
+                </p>
+                <ul style={styles.heroParagraph}>
+                  <li>High-tech modular operating theatres</li>
+                  <li>Neuro-navigation systems for precise surgery</li>
+                  <li>Intraoperative imaging</li>
+                  <li>Advanced neuro-monitoring technology</li>
+                </ul>
+                <p style={styles.heroParagraph}>
+                  These tools help surgeons operate with greater precision while protecting important nerves and brain
+                  structures.
+                </p>
+                <br />
+
+                <h2 style={styles.heroParagraph1}>Patient-Focused Approach</h2>
+                <p style={styles.heroParagraph}>
+                  Every patient is different. Our doctors spend time explaining the condition, treatment options, and
+                  expected recovery process in simple language. From diagnosis to surgery and rehabilitation, we provide
+                  continuous guidance and support.
+                </p>
+                <p style={styles.heroParagraph}>
+                  Post-surgery rehabilitation is an important part of recovery. Our physiotherapy and neuro-rehabilitation
+                  services help patients regain strength, balance, and independence after procedures involving the brain
+                  or spine.
+                </p>
+                <br />
+
+                <h2 style={styles.heroParagraph1}>Reasons to select Shree Saibaba Multispeciality Hospital:</h2>
+                <ul style={styles.heroParagraph}>
+                  <li>Expert neurosurgeons and/or physicians (medical/surgical) with many years of experience.</li>
+                  <li>Advanced state-of-the-art infrastructure and technology.</li>
+                  <li>Extensive comprehensive care for patients with brain or spinal injuries.</li>
+                  <li>Renewed emphasis is placed on patient safety, comfort, and expeditious recovery.</li>
+                  <li>Individual personalised development plan for patients.</li>
+                </ul>
+
+                <p style={styles.heroParagraph}>
+                  Timely and appropriate intervention can have very positive effects on your life and the lives of those
+                  in your support system when living with a neurological and/or spinal disorder. At Shree Saibaba
+                  Multispeciality Hospital, we strive to provide quality care with love, accuracy, and honesty.
+                </p>
+                <br />
 
                 <div style={styles.highlightStrip}>
                   <span style={styles.highlightLabel}>Quick Facts:</span>
-                  Complex brain &amp; spine surgeries • Neuro-navigation &amp; neuromonitoring • Dedicated neurocritical care
+                  Advanced brain &amp; spine surgeries • Minimally invasive techniques •
+                  Neuro-navigation &amp; intraoperative neuromonitoring •
+                  Dedicated neurocritical care • 24×7 emergency services
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Services Offered – Neurosurgical Procedures */}
-          <section style={styles.section}>
+          <section style={styles.section} aria-labelledby="neurosurgical-procedures">
             <div style={styles.sectionHeaderRow}>
-              <div style={styles.sectionTitle}>
+              <div style={styles.sectionTitle} id="neurosurgical-procedures">
                 <span style={styles.sectionAccentBar} />
                 Neurosurgical Procedures
               </div>
             </div>
             <ul style={styles.list}>
-              <li style={styles.listItem}>Brain tumor surgery.</li>
               <li style={styles.listItem}>
-                Aneurysm clipping and coiling and vascular neurosurgery.
+                Surgical management of brain tumors (benign and malignant).
               </li>
-              <li style={styles.listItem}>Spinal tumor surgery.</li>
-              <li style={styles.listItem}>Neuroendoscopic procedures.</li>
-              <li style={styles.listItem}>Neurotrauma (brain and skull injury).</li>
-              <li style={styles.listItem}>Pediatric neurosurgical procedures.</li>
+              <li style={styles.listItem}>
+                Cerebrovascular surgeries including aneurysm clipping, coiling, and vascular
+                neurosurgery.
+              </li>
+              <li style={styles.listItem}>
+                Surgery for spinal and intradural tumors.
+              </li>
+              <li style={styles.listItem}>
+                Neuroendoscopic procedures for minimally invasive brain and ventricular conditions.
+              </li>
+              <li style={styles.listItem}>
+                Neurotrauma care for head injuries, skull fractures, and brain hemorrhage.
+              </li>
+              <li style={styles.listItem}>
+                Pediatric neurosurgical procedures for congenital and acquired neurological disorders.
+              </li>
             </ul>
           </section>
-
-          {/* Services Offered – Spine Surgeries */}
-          <section style={styles.section}>
+ 
+          <section style={styles.section} aria-labelledby="spine-surgeries">
             <div style={styles.sectionHeaderRow}>
-              <div style={styles.sectionTitle}>
+              <div style={styles.sectionTitle} id="spine-surgeries">
                 <span style={styles.sectionAccentBar} />
                 Spine Surgeries
               </div>
             </div>
             <ul style={styles.list}>
-              <li style={styles.listItem}>Spinal fusion and stabilization.</li>
-              <li style={styles.listItem}>Surgical management of spinal trauma.</li>
-              <li style={styles.listItem}>Artificial disc replacement.</li>
-              <li style={styles.listItem}>Minimally invasive spine surgery.</li>
-              <li style={styles.listItem}>Spinal deformity correction.</li>
-              <li style={styles.listItem}>Treatment of congenital spinal problems.</li>
+              <li style={styles.listItem}>
+                Spinal fusion and stabilization for degenerative and traumatic spine conditions.
+              </li>
+              <li style={styles.listItem}>
+                Surgical treatment of spinal trauma, fractures, and spinal cord injuries.
+              </li>
+              <li style={styles.listItem}>
+                Artificial disc replacement and motion-preserving spine procedures.
+              </li>
+              <li style={styles.listItem}>
+                Minimally invasive spine surgery for slipped disc, sciatica, and nerve compression.
+              </li>
+              <li style={styles.listItem}>
+                Spinal deformity correction including scoliosis and kyphosis.
+              </li>
+              <li style={styles.listItem}>
+                Treatment of congenital spinal disorders and developmental spine conditions.
+              </li>
             </ul>
           </section>
-
-          {/* Neurocritical Care */}
-          <section style={styles.section}>
+ 
+          <section style={styles.section} aria-labelledby="neurocritical-care">
             <div style={styles.sectionHeaderRow}>
-              <div style={styles.sectionTitle}>
+              <div style={styles.sectionTitle} id="neurocritical-care">
                 <span style={styles.sectionAccentBar} />
                 Neurocritical Care
               </div>
             </div>
             <ul style={styles.list}>
               <li style={styles.listItem}>
-                Intensive care for critically ill neurological and neurosurgical patients.
+                Specialized intensive care for critically ill neurological and neurosurgical patients.
               </li>
               <li style={styles.listItem}>
-                Advanced monitoring and life support systems for post-operative and emergency cases.
+                Advanced monitoring, ventilatory support, and life-support systems for post-operative,
+                trauma, and emergency neurological cases.
               </li>
             </ul>
           </section>
-
-          {/* Achievements & Highlights */}
-          <section style={styles.section}>
+ 
+          <section style={styles.section} aria-labelledby="achievements-highlights">
             <div style={styles.sectionHeaderRow}>
-              <div style={styles.sectionTitle}>
+              <div style={styles.sectionTitle} id="achievements-highlights">
                 <span style={styles.sectionAccentBar} />
                 Achievements &amp; Highlights
               </div>
             </div>
             <ul style={styles.list}>
               <li style={styles.tagListItem}>
-                Our department has successfully performed numerous complex neurosurgical and
-                spinal procedures, including high-risk brain and spine surgeries.
+                Successfully managing a wide range of complex and high-risk brain and spine surgeries
+                with a focus on patient safety and clinical excellence.
               </li>
               <li style={styles.tagListItem}>
-                We prioritize patient safety, early mobilization and improved functional
-                outcomes through evidence-based protocols and multidisciplinary care.
+                Multidisciplinary, evidence-based approach aimed at early mobilization, faster recovery,
+                and improved functional outcomes.
               </li>
             </ul>
           </section>
-
-          {/* Facilities & Equipment */}
-          <section style={styles.section}>
+ 
+          <section style={styles.section} aria-labelledby="facilities-equipment">
             <div style={styles.sectionHeaderRow}>
-              <div style={styles.sectionTitle}>
+              <div style={styles.sectionTitle} id="facilities-equipment">
                 <span style={styles.sectionAccentBar} />
                 Facilities &amp; Equipment
               </div>
             </div>
-            <p style={styles.listItem}>
-              Our Neurosurgery and Spine Surgery department is equipped with advanced
-              infrastructure and technology to support complex brain and spine procedures:
-            </p>
             <ul style={styles.list}>
               <li style={styles.listItem}>
-                State-of-the-art operation theaters.
+                High-tech modular operation theatres designed for neurosurgical procedures.
               </li>
               <li style={styles.listItem}>
-                Advanced neuroimaging systems (MRI, CT scans, etc.).
+                Advanced neuroimaging facilities including MRI and CT scanning.
               </li>
               <li style={styles.listItem}>
-                Modern neurocritical care facilities.
+                Dedicated neurocritical care units with continuous patient monitoring.
               </li>
               <li style={styles.listItem}>
-                Intraoperative neuromonitoring systems.
+                Intraoperative neuromonitoring and precision-guided surgical systems.
               </li>
             </ul>
           </section>
-
-          {/* Patient Guidelines */}
-          <section style={styles.section}>
+ 
+          <section style={styles.section} aria-labelledby="patient-guidelines">
             <div style={styles.sectionHeaderRow}>
-              <div style={styles.sectionTitle}>
+              <div style={styles.sectionTitle} id="patient-guidelines">
                 <span style={styles.sectionAccentBar} />
                 Patient Guidelines
               </div>
             </div>
             <ul style={styles.list}>
               <li style={styles.listItem}>
-                Please arrive at least 10 minutes before your scheduled appointment.
+                Patients are advised to arrive at least 10 minutes before their scheduled appointment.
               </li>
               <li style={styles.listItem}>
-                Inform your doctor about any medications, allergies, or previous surgeries.
+                Please inform the doctor about current medications, allergies, and any previous
+                surgeries or medical conditions.
               </li>
               <li style={styles.listItem}>
-                Follow pre-operative instructions carefully, including fasting guidelines
-                and medication adjustments as advised.
+                Follow all pre-operative and post-operative instructions carefully, including fasting,
+                medications, and rehabilitation advice.
               </li>
             </ul>
           </section>
-
-          {/* Team Members & Department Timings */}
-          <section style={styles.section}>
+ 
+          <section style={styles.section} aria-labelledby="team-timings">
             <div style={styles.sectionHeaderRow}>
-              <div style={styles.sectionTitle}>
+              <div style={styles.sectionTitle} id="team-timings">
                 <span style={styles.sectionAccentBar} />
                 Team Members &amp; Department Timings
               </div>
             </div>
 
             <p style={styles.listItem}>
-              Meet our experienced Neurosurgeons and Spine Surgeons:
+              Our department is led by experienced neurosurgeons and spine surgeons providing
+              comprehensive neurological care in Nashik.
             </p>
 
             <div style={styles.twoColumnGrid}>
               <ul style={styles.doctorList}>
                 <li style={styles.tagListItem}>
-                  <strong>Neurosurgeons:</strong>
+                  <strong>Neurosurgeons</strong>
                   <br />
                   Dr. Sumit Hire
                   <br />
@@ -410,23 +659,101 @@ function Neurosurgery() {
               </ul>
               <ul style={styles.doctorList}>
                 <li style={styles.tagListItem}>
-                  <strong>Spine Surgeons:</strong>
+                  <strong>Spine Surgeons</strong>
                   <br />
                   Dr. Gaurav Kulshrestha
                   <br />
                   Dr. Gaurav Gujrathi
                 </li>
                 <li style={styles.tagListItem}>
-                  <strong>OPD Timings:</strong>
+                  <strong>OPD Timings</strong>
                   <br />
-                  Monday to Saturday, 3:00 PM – 5:00 PM
+                  Monday to Saturday, 3:00 PM - 5:00 PM
                 </li>
                 <li style={styles.tagListItem}>
-                  <strong>Emergency Services:</strong> 24 x 7
+                  <strong>Emergency Services</strong>
+                  <br />
+                  Available 24 x 7
                 </li>
               </ul>
             </div>
           </section>
+ 
+          <section style={styles.section}>
+            <div style={styles.sectionHeaderRow}>
+              <div style={styles.sectionTitle}>
+                <span style={styles.sectionAccentBar} />
+                FAQs
+              </div>
+            </div>
+
+            <div style={styles.faqList}>
+              <div style={styles.faqItem}>
+                <div style={styles.faqQuestion}>
+                  Q: What conditions are treated in the Neuro &amp; Spine Surgery Department?
+                </div>
+                <div style={styles.faqAnswer}>
+                  We treat brain, spine and nerve disorders including brain tumors, head injuries and brain
+                  hemorrhage, slipped/herniated disc, sciatica, spinal cord compression, spinal tumors,
+                  scoliosis/kyphosis, and congenital neurological/spinal conditions.
+                </div>
+              </div>
+
+              <div style={styles.faqItem}>
+                <div style={styles.faqQuestion}>
+                  Q: When should I consult a neurosurgeon or spine surgeon?
+                </div>
+                <div style={styles.faqAnswer}>
+                  Consult urgently for severe headache with vomiting, seizures, sudden weakness/numbness,
+                  loss of consciousness, head injury, loss of bladder/bowel control, or rapidly worsening
+                  back/neck pain with radiating pain, numbness or weakness. For persistent back/neck pain
+                  or sciatica, evaluation helps plan the right treatment.
+                </div>
+              </div>
+
+              <div style={styles.faqItem}>
+                <div style={styles.faqQuestion}>
+                  Q: Do you offer minimally invasive spine surgery?
+                </div>
+                <div style={styles.faqAnswer}>
+                  Yes. Whenever suitable, we use minimally invasive techniques for slipped disc, sciatica
+                  and nerve compression to reduce pain, blood loss and recovery time.
+                </div>
+              </div>
+
+              <div style={styles.faqItem}>
+                <div style={styles.faqQuestion}>
+                  Q: What neurosurgical procedures are available at your hospital?
+                </div>
+                <div style={styles.faqAnswer}>
+                  Services include brain tumor surgery, neurotrauma care, neuroendoscopic procedures,
+                  cerebrovascular procedures (such as aneurysm clipping/coiling), and surgery for spinal
+                  and intradural tumors based on specialist evaluation.
+                </div>
+              </div>
+
+              <div style={styles.faqItem}>
+                <div style={styles.faqQuestion}>
+                  Q: Do you provide neurocritical care after surgery or for emergencies?
+                </div>
+                <div style={styles.faqAnswer}>
+                  Yes. We provide specialized neurocritical care with advanced monitoring and ventilatory
+                  support for post-operative, trauma and emergency neurological cases.
+                </div>
+              </div>
+
+              <div style={styles.faqItem}>
+                <div style={styles.faqQuestion}>
+                  Q: What are the OPD timings and emergency availability?
+                </div>
+                <div style={styles.faqAnswer}>
+                  OPD timings are Monday to Saturday, 3:00 PM - 5:00 PM. Emergency services are available 24x7.
+                </div>
+              </div>
+            </div>
+          </section>
+
+
         </div>
       </div>
     </>

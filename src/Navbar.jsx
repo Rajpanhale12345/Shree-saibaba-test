@@ -13,8 +13,7 @@ const Navbar = () => {
       <NavLink to="/" className="navbar__logo" onClick={closeMenu}>
         <img src={logo} alt="Shree Saibaba Hospital" />
       </NavLink>
-
-      {/* Desktop links */}
+ 
       <ul className="navbar__links navbar__links--desktop">
         <li><NavLink to="/" end>Home</NavLink></li>
         <li><NavLink to="/about">About</NavLink></li>
@@ -22,12 +21,11 @@ const Navbar = () => {
         <li><NavLink to="/departments">Departments</NavLink></li>
         <li><NavLink to="/packages">Packages</NavLink></li>
         <li><NavLink to="/testimonials">Testimonials</NavLink></li>
-        {/* <li><NavLink to="/facilities">Facilities</NavLink></li> */}
+         
         <li><NavLink to="/tieups">Tie-ups</NavLink></li>
         <li><NavLink to="/contact">Contact</NavLink></li>
       </ul>
-
-      {/* Hamburger */}
+ 
       <button
         type="button"
         className="navbar__toggle"
@@ -39,8 +37,7 @@ const Navbar = () => {
         <span className={isOpen ? 'bar open' : 'bar'} />
         <span className={isOpen ? 'bar open' : 'bar'} />
       </button>
-
-      {/* Mobile slide-out */}
+ 
       <ul
         id="mobile-nav"
         className={`navbar__links navbar__links--mobile ${isOpen ? 'open' : ''}`}
@@ -53,7 +50,7 @@ const Navbar = () => {
         <li><NavLink to="/medical">Packages</NavLink></li>
         <li><NavLink to="/testimonials">Testimonials</NavLink></li>
         <li><NavLink to="/blogs">Blogs</NavLink></li>
-         {/* <li><NavLink to="/blogs">Facilities</NavLink></li> */}
+        
           <li><NavLink to="/tieups">Tie-ups</NavLink></li>
         <li><NavLink to="/contact">Contact</NavLink></li>
       </ul>

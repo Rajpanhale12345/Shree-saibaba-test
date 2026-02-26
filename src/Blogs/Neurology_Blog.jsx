@@ -216,12 +216,8 @@ function Stress_Blog() {
                                 tools of technology behind him can lead to significant improvement in your long-term recovery from
                                 neurological disease, particularly for complicated or chronic conditions.</p>
 
-                            <br />
-
-
-
-
-                            {/* Image Carousel (directly under the heading) */}
+                            <br /> 
+                            
                             <div className="blog-carousel" aria-label="Neurology image carousel">
                                 <div className="blog-carousel__viewport">
                                     <button
@@ -299,7 +295,7 @@ function Stress_Blog() {
                                 area.</p>
                             <br />
 
-                            {/* CTA */}
+                             
                             <footer className="cta-section" aria-labelledby="cta-title">
                                 <h2 id="cta-title" className="sr-only">Call to Action</h2>
                                 <h5 className="CTA">📞 Call us or visit us for a consultation. Your health deserves the best care.</h5>
@@ -311,11 +307,11 @@ function Stress_Blog() {
                     </article>
                 </main>
 
-                {/* Sidebar */}
+        
                 <aside className="pane pane--sidebar" aria-label="Other blog posts">
                     <div className="sidebar-inner">
 
-                        {/* TOC */}
+              
                         <nav className="toc" aria-label="On this page">
                             <p className="toc__label"><span style={{ color: "Red" }}>On this page</span></p>
                             <ul>

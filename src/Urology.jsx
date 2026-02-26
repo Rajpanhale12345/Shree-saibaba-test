@@ -1,101 +1,96 @@
 import React from 'react';
-import img from './Images/urologydep.jpg'; // replace with urology-specific image if available
+import img from './Images/urologydep.jpg';
 import { Helmet } from "react-helmet-async";
 
 const styles = {
   page: {
-    background: 'linear-gradient(135deg, #f4f7fb, #e5edf9)',
-    padding: '40px 16px',
+    background: "linear-gradient(135deg, #f4f7fb, #e5edf9)",
+    padding: "40px 16px",
   },
   container: {
-    maxWidth: '1200px',
-    margin: '0 auto',
-    fontFamily: '"Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif',
-    color: '#0f172a',
+    maxWidth: "1200px",
+    margin: "0 auto",
+    fontFamily:
+      '"Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif',
+    color: "#0f172a",
   },
+
   hero: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    gap: '24px',
-    alignItems: 'stretch',
-    marginBottom: '32px',
+    display: "grid",
+    gridTemplateColumns: "minmax(280px, 420px) 1fr",
+    gap: "24px",
+    alignItems: "start",
+    marginBottom: "32px",
   },
+
   heroImageWrapper: {
-    flex: '1 1 320px',
-    minWidth: '280px',
+    minWidth: "280px",
   },
   heroImageCard: {
-    height: '100%',
-    borderRadius: '20px',
-    overflow: 'hidden',
-    boxShadow: '0 18px 45px rgba(15,23,42,0.16)',
-    border: '1px solid rgba(148,163,184,0.4)',
-    background: '#0f172a',
+    width: "100%",
+    borderRadius: "20px",
+    overflow: "hidden",
+    boxShadow: "0 18px 45px rgba(15,23,42,0.16)",
+    border: "1px solid rgba(148,163,184,0.4)",
+    background: "#0f172a",
+
+    height: "clamp(220px, 32vw, 420px)",
   },
   heroImage: {
-    width: '100%',
-    height: '100%',
-    objectFit: 'fill',
-    display: 'block',
+    width: "100%",
+    height: "100%",
+    objectFit: "cover",
+    objectPosition: "center",
+    display: "block",
     opacity: 0.95,
   },
+
   heroTextWrapper: {
-    flex: '2 1 420px',
-    minWidth: '280px',
+    minWidth: "280px",
   },
   heroTextCard: {
-    height: '100%',
-    borderRadius: '20px',
-    padding: '28px 28px 24px',
-    background: 'rgba(255,255,255,0.92)',
-    backdropFilter: 'blur(10px)',
-    boxShadow: '0 18px 45px rgba(15,23,42,0.08)',
-    border: '1px solid rgba(148,163,184,0.4)',
+    borderRadius: "20px",
+    padding: "28px 28px 24px",
+    background: "rgba(255,255,255,0.92)",
+    backdropFilter: "blur(10px)",
+    boxShadow: "0 18px 45px rgba(15,23,42,0.08)",
+    border: "1px solid rgba(148,163,184,0.4)",
   },
+
   pill: {
-    display: 'inline-flex',
-    alignItems: 'center',
-    gap: '8px',
-    padding: '4px 12px',
-    borderRadius: '999px',
-    fontSize: '12px',
+    display: "inline-flex",
+    alignItems: "center",
+    gap: "8px",
+    padding: "4px 12px",
+    borderRadius: "999px",
+    fontSize: "12px",
     fontWeight: 600,
-    letterSpacing: '0.06em',
-    textTransform: 'uppercase',
-    background: 'rgba(37,99,235,0.08)',
-    color: '#1d4ed8',
-    marginBottom: '10px',
+    letterSpacing: "0.06em",
+    textTransform: "uppercase",
+    background: "rgba(37,99,235,0.08)",
+    color: "#1d4ed8",
+    marginBottom: "10px",
   },
   pillDot: {
-    width: '8px',
-    height: '8px',
-    borderRadius: '50%',
-    background: '#22c55e',
+    width: "8px",
+    height: "8px",
+    borderRadius: "50%",
+    background: "#22c55e",
   },
-  heroTitle: {
-    fontSize: '30px',
-    fontWeight: 700,
-    margin: '4px 0 4px',
-    color: '#0f172a',
-  },
+
   heroSubtitle: {
-    fontSize: '16px',
+    fontSize: "16px",
     fontWeight: 500,
-    color: '#64748b',
-    marginBottom: '6px',
+    color: "#64748b",
+    marginBottom: "18px",
   },
-  heroTagline: {
-    fontSize: '14px',
-    fontWeight: 500,
-    color: '#0f766e',
-    marginBottom: '14px',
-  },
+
   heroParagraph: {
-    fontSize: '14px',
+    fontSize: "14px",
     lineHeight: 1.7,
-    color: '#1e293b',
-    marginBottom: '10px',
-    textAlign: "left"
+    color: "#1e293b",
+    marginBottom: "10px",
+    textAlign: "left",
   },
   heroParagraph1: {
     fontSize: "24px",
@@ -105,105 +100,93 @@ const styles = {
     textAlign: "left",
   },
   heroParagraph2: {
-    fontSize: "40px",
+    fontSize: "30px",
     lineHeight: 1.2,
     color: "#1e293b",
     marginBottom: "10px",
-    textAlign: "left",
   },
+
   highlightStrip: {
-    marginTop: '16px',
-    padding: '10px 14px',
-    borderRadius: '12px',
-    background: 'linear-gradient(90deg, rgba(37,99,235,0.08), rgba(56,189,248,0.10))',
-    fontSize: '13px',
-    color: '#0f172a',
-    border: '1px solid rgba(129,140,248,0.4)',
+    marginTop: "16px",
+    padding: "10px 14px",
+    borderRadius: "12px",
+    background:
+      "linear-gradient(90deg, rgba(37,99,235,0.08), rgba(56,189,248,0.10))",
+    fontSize: "13px",
+    color: "#0f172a",
+    border: "1px solid rgba(129,140,248,0.4)",
   },
   highlightLabel: {
     fontWeight: 600,
-    marginRight: '6px',
+    marginRight: "6px",
   },
 
-  // Section styles
   section: {
-    borderRadius: '18px',
-    padding: '22px 22px 20px',
-    marginBottom: '20px',
-    background: 'rgba(255,255,255,0.96)',
-    backdropFilter: 'blur(8px)',
-    boxShadow: '0 14px 35px rgba(15,23,42,0.06)',
-    border: '1px solid rgba(203,213,225,0.8)',
+    borderRadius: "18px",
+    padding: "22px 22px 20px",
+    marginBottom: "20px",
+    background: "rgba(255,255,255,0.96)",
+    backdropFilter: "blur(8px)",
+    boxShadow: "0 14px 35px rgba(15,23,42,0.06)",
+    border: "1px solid rgba(203,213,225,0.8)",
   },
   sectionHeaderRow: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'baseline',
-    gap: '10px',
-    marginBottom: '12px',
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "baseline",
+    gap: "10px",
+    marginBottom: "12px",
   },
   sectionTitle: {
-    fontSize: '18px',
+    fontSize: "18px",
     fontWeight: 700,
-    color: '#0f172a',
-    display: 'flex',
-    alignItems: 'center',
-    gap: '8px',
+    color: "#0f172a",
+    display: "flex",
+    alignItems: "center",
+    gap: "8px",
   },
   sectionAccentBar: {
-    width: '3px',
-    height: '18px',
-    borderRadius: '999px',
-    background: 'linear-gradient(180deg, #2563eb, #22c55e)',
+    width: "3px",
+    height: "18px",
+    borderRadius: "999px",
+    background: "linear-gradient(180deg, #2563eb, #22c55e)",
   },
+
   list: {
-    paddingLeft: '18px',
+    paddingLeft: "18px",
     margin: 0,
-    textAlign: "left"
+    textAlign: "left",
   },
   listItem: {
-    fontSize: '14px',
+    fontSize: "14px",
     lineHeight: 1.7,
-    color: '#1e293b',
-    marginBottom: '6px',
+    color: "#1e293b",
+    marginBottom: "6px",
   },
 
-  // Grid / layout helpers
   twoColumnGrid: {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
-    gap: '12px 32px',
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+    gap: "12px 32px",
   },
 
-  // Doctors / tags
   doctorList: {
-    listStyle: 'none',
+    listStyle: "none",
     paddingLeft: 0,
     margin: 0,
   },
-  doctorItem: {
-    fontSize: '14px',
-    color: '#0f172a',
-    padding: '6px 10px',
-    borderRadius: '999px',
-    border: '1px solid rgba(148,163,184,0.5)',
-    background: 'rgba(248,250,252,0.9)',
-    display: 'inline-block',
-    marginBottom: '6px',
-  },
 
   tagListItem: {
-    fontSize: '14px',
+    fontSize: "14px",
     lineHeight: 1.7,
-    color: '#0f172a',
-    padding: '6px 10px',
-    borderRadius: '10px',
-    background: 'rgba(239,246,255,0.9)',
-    border: '1px solid rgba(191,219,254,1)',
-    marginBottom: '6px',
+    color: "#0f172a",
+    padding: "6px 10px",
+    borderRadius: "10px",
+    background: "rgba(239,246,255,0.9)",
+    border: "1px solid rgba(191,219,254,1)",
+    marginBottom: "6px",
   },
 
-  // FAQs
   faqList: {
     display: 'grid',
     gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
@@ -226,38 +209,112 @@ const styles = {
     fontSize: '13px',
     lineHeight: 1.6,
     color: '#000000ff',
+    textAlign: 'left',
   },
 };
+
+
+
+const SITE_URL = "https://shreesaibabamultispecialityhospital.com";
+const PAGE_URL = `${SITE_URL}/urology`;
+const ogImage = img?.startsWith("http") ? img : `${SITE_URL}${img}`;  
+
+const jsonLdClinic = {
+  "@context": "https://schema.org",
+  "@type": "MedicalClinic",
+  name: "Shree Saibaba Multispeciality Hospital",
+  url: PAGE_URL,
+  image: ogImage,
+  medicalSpecialty: "Urology",
+  description:
+    "Comprehensive urology care in Nashik for kidney stones, prostate disorders, urinary infections, and minimally invasive urology procedures.",
+  areaServed: ["Nashik", "Maharashtra"],
+  department: {
+    "@type": "MedicalClinic",
+    name: "Urology Department",
+    medicalSpecialty: "Urology",
+    url: PAGE_URL,
+  },
+};
+
+const jsonLdFaq = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What are the symptoms of kidney stones?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text:
+          "Common symptoms include severe flank pain, pain radiating to the groin, nausea/vomiting, burning while urinating, blood in urine, and frequent urge to pass urine.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How are kidney stones treated?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text:
+          "Treatment depends on size and location and may include hydration and medicines, shock wave lithotripsy, ureteroscopy, or minimally invasive surgery for larger or complex stones.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What are common symptoms of prostate enlargement (BPH)?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text:
+          "Symptoms may include frequent urination (especially at night), weak urine stream, straining, urgency, and a feeling of incomplete bladder emptying.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "When should I see a urologist urgently?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text:
+          "Seek urgent care for inability to pass urine, severe pain with fever/chills, blood in urine with clots, severe scrotal pain/swelling, or worsening symptoms with vomiting or low urine output.",
+      },
+    },
+  ],
+};
+
+
+
 
 function Urology() {
   return (
     <>
       <Helmet>
-        <title>Urology | Shree Saibaba Multispeciality Hospital</title>
-        <meta
-          name="description"
-          content="Urology Department at Shree Saibaba Multispeciality Hospital provides comprehensive care for kidney stones, prostate problems, urinary infections and other urological conditions with advanced surgeries and minimally invasive procedures."
-        />
-        <meta
-          name="keywords"
-          content="urology hospital Nashik, kidney stone surgery Nashik, prostate surgery Nashik, TURP, laser prostatectomy"
-        />
-        <meta
-          name="og:description"
-          content="Advanced urology care including kidney and ureteric stone removal, prostate surgery, laparoscopic and endoscopic procedures at Shree Saibaba Multispeciality Hospital."
-        />
+        <title>Urology | Best Urology Hospital in Nashik</title>
+        <meta name="description" content="Urology Department at Shree Saibaba Multispeciality Hospital provides comprehensive care for kidney stones, prostate problems, urinary infections and other urological conditions with advanced surgeries and minimally invasive procedures." />
+        <meta name="keywords" content="urology hospital Nashik, kidney stone surgery Nashik, prostate surgery Nashik, TURP Nashik, laser prostatectomy Nashik, ureteroscopy Nashik, cystoscopy Nashik" />
+        <link rel="canonical" href={PAGE_URL} />
+        <meta property="og:title" content="Urology | Best Urology Hospital in Nashik" />
+        <meta property="og:description" content="Advanced urology care including kidney and ureteric stone removal, prostate surgery, laparoscopic and endoscopic procedures at Shree Saibaba Multispeciality Hospital." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={PAGE_URL} />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:image:alt" content="Urology Department - Shree Saibaba Multispeciality Hospital" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Urology | Best Urology Hospital in Nashik" />
+        <meta name="twitter:description" content="Kidney stone and prostate care with minimally invasive urology procedures in Nashik." />
+        <meta name="twitter:image" content={ogImage} />
+        <meta name="twitter:image:alt" content="Urology Department - Shree Saibaba Multispeciality Hospital" />
       </Helmet>
 
       <div style={styles.page}>
         <div style={styles.container}>
-          {/* Hero */}
+       
           <div style={styles.hero}>
             <div style={styles.heroImageWrapper}>
               <div style={styles.heroImageCard}>
                 <img
-                  src={img} // replace with urology-specific image if available
+                  src={img} 
                   alt="Urology Department"
                   style={styles.heroImage}
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -268,13 +325,13 @@ function Urology() {
                   <span style={styles.pillDot} />
                   <span>Comprehensive Urology Care</span>
                 </div>
-                <h1 style={styles.heroTitle}>Urology Department - Best Urology Hospital in Nashik</h1>
+                <h1 style={styles.heroParagraph2}>Urology : Best Urology Hospital in Nashik</h1>
                 <br />
 
                 <p style={styles.heroParagraph}>
                   The Center for Urology at Shree Saibaba Multispeciality Hospital provides patients with
                   the highest level of advanced and compassionate care available for all types of urological
-                  diseases. recognized as one of the top hospitals for Urology in Nashik, we offer complete
+                  diseases. Recognized as one of the top hospitals for Urology in Nashik, we offer complete
                   diagnostic services, treatment options and surgical procedures for both men and women
                   suffering from urological conditions.
                 </p>
@@ -303,9 +360,8 @@ function Urology() {
                   is here to provide safe, effective, long-lasting Solutions for our patients' urological health issues.
                 </p>
                 <p style={styles.heroParagraph}>
-                  If you are looking for Urology Consultants you can trust, advanced Urology surgery, or highly-skilled 
-                  Urosurgeons in Nashik, Shree Saibaba Multispeciality Hospital is your one-stop-shop for complete 
-                  Urology Care.
+                  If you are looking for trusted urology consultation, advanced urology surgery, or experienced 
+                  urosurgeons in Nashik, Shree Saibaba Multispeciality Hospital provides complete urology care under one roof.
                 </p>
                 <br />
 
@@ -315,9 +371,8 @@ function Urology() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> 
 
-          {/* Services Offered */}
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -326,8 +381,7 @@ function Urology() {
               </div>
             </div>
 
-            <ul style={styles.list}>
-              {/* Urological Surgeries */}
+            <ul style={styles.list}> 
               <li style={styles.listItem}>
                 <strong>Urological Surgeries:</strong>
                 <ul style={styles.list}>
@@ -340,8 +394,7 @@ function Urology() {
                   </li>
                 </ul>
               </li>
-
-              {/* Minimally Invasive Procedures */}
+ 
               <li style={styles.listItem}>
                 <strong>Minimally Invasive Procedures:</strong>
                 <ul style={styles.list}>
@@ -353,8 +406,7 @@ function Urology() {
                   </li>
                 </ul>
               </li>
-
-              {/* Diagnostic Services */}
+ 
               <li style={styles.listItem}>
                 <strong>Diagnostic Services:</strong>
                 <ul style={styles.list}>
@@ -365,8 +417,7 @@ function Urology() {
               </li>
             </ul>
           </section>
-
-          {/* Facilities & Equipment */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -383,8 +434,7 @@ function Urology() {
               <li style={styles.listItem}>Advanced endoscopic equipment.</li>
             </ul>
           </section>
-
-          {/* Patient Guidelines */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -405,8 +455,7 @@ function Urology() {
               </li>
             </ul>
           </section>
-
-          {/* Team Members & Department Timings */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -422,15 +471,15 @@ function Urology() {
                 <li style={styles.tagListItem}>
                   <strong>Dr. Amey Patil</strong>
                   <br />
-                  12:30 pm to 1:30 pm
+                  OPD: 12:30 PM - 1:30 PM
                 </li>
                 <li style={styles.tagListItem}>
                   <strong>Dr. Amit Singal</strong>
                   <br />
-                  1:30 pm to 2:30 pm
+                  OPD: 1:30 pm - 2:30 pm
                 </li>
               </ul>
-              <ul style={styles.doctorList}>                
+              <ul style={styles.doctorList}>
                 <li style={styles.tagListItem}>
                   <strong>Dr. Pranav Chhajed</strong>
                   <br />
@@ -442,8 +491,7 @@ function Urology() {
               </ul>
             </div>
           </section>
-
-          {/* FAQs */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -454,7 +502,7 @@ function Urology() {
             <div style={styles.faqList}>
               <div style={styles.faqItem}>
                 <div style={styles.faqQuestion}>
-                  Q1: What is a kidney stone removal surgery?
+                  Q: What is a kidney stone removal surgery?
                 </div>
                 <div style={styles.faqAnswer}>
                   Kidney stone removal surgery involves removing a stone from the kidney or
@@ -466,7 +514,7 @@ function Urology() {
 
               <div style={styles.faqItem}>
                 <div style={styles.faqQuestion}>
-                  Q2: What are the symptoms of prostate issues?
+                  Q: What are the symptoms of prostate issues?
                 </div>
                 <div style={styles.faqAnswer}>
                   Common symptoms include difficulty urinating, frequent urination (especially
@@ -477,7 +525,7 @@ function Urology() {
 
               <div style={styles.faqItem}>
                 <div style={styles.faqQuestion}>
-                  Q3: What causes kidney stones?
+                  Q: What causes kidney stones?
                 </div>
                 <div style={styles.faqAnswer}>
                   Dehydration, high salt or protein intake, certain dietary factors,
@@ -488,7 +536,7 @@ function Urology() {
 
               <div style={styles.faqItem}>
                 <div style={styles.faqQuestion}>
-                  Q4: How are kidney stones treated?
+                  Q: How are kidney stones treated?
                 </div>
                 <div style={styles.faqAnswer}>
                   Treatment depends on the size, location and symptoms, and may include:
@@ -502,7 +550,7 @@ function Urology() {
 
               <div style={styles.faqItem}>
                 <div style={styles.faqQuestion}>
-                  Q5: What are the symptoms of bladder issues?
+                  Q: What are the symptoms of bladder issues?
                 </div>
                 <div style={styles.faqAnswer}>
                   Symptoms may include pain or burning during urination, blood in the urine,

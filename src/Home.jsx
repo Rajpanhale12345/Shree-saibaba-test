@@ -2,7 +2,7 @@ import React from "react";
 import "./Home.css";
 import Button from "@mui/material/Button";
 import { Link, useLocation } from "react-router-dom";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import carousel1 from "./Images/carousel3.webp";
 import carousel2 from "./Images/carousel4.webp";
 import carousel1m from "./Images/neuromob1.webp";
@@ -34,9 +34,12 @@ import spe19 from "./Images/spe19.webp";
 
 function Home() {
   const { pathname } = useLocation();
-  const canonical = `https://shreesaibabamultispecialityhospital.com${pathname}`;
+  const SITE_NAME = "Shree Saibaba Multispeciality Hospital";
+  const SITE_URL = "https://shreesaibabahospital.com"; 
+  const OG_IMAGE_URL = `${SITE_URL}/static/og/home.jpg`; 
+  const canonical = `${SITE_URL}${pathname}`;
 
-  // ✅ Hero carousel slides (desktop + mobile)
+
   const heroSlides = [
     {
       src: carousel1,
@@ -56,7 +59,6 @@ function Home() {
     },
   ];
 
-  // ✅ Specialities (same as before)
   const specialties = [
     { src: spe2, className: "cardiology", path: "/cardiology", label: "Cardiology" },
     { src: spe13, className: "cvts", path: "/cardiovascular", label: "CVTS" },
@@ -90,7 +92,7 @@ function Home() {
                   className={`specialty-img ${item.className}`}
                   loading="lazy"
                 />
-               
+
               </figure>
               <div className="specialty-caption" aria-hidden="true">
                 {item.label}
@@ -106,22 +108,71 @@ function Home() {
   return (
     <>
       <Helmet>
-        <title>Shree Saibaba | Best Multispecialty Hospital in Nashik</title>
+        <title>Best Multispeciality Hospital in Nashik | Shree Saibaba Hospital</title>
         <meta
           name="description"
-          content="Trusted multispeciality hospital in Nashik for cardiology, neurology, nephrology, orthopaedics, radiology, spine care, general medicine and more. Book an appointment online."
+          content="Shree Saibaba Multispeciality Hospital in Nashik offers advanced care in cardiology, neurology, nephrology, orthopaedics, radiology, spine care, general medicine and more. Book an appointment online."
         />
         <link rel="canonical" href={canonical} />
+        <meta
+          name="robots"
+          content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"
+        />
+ 
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content={SITE_NAME} />
         <meta property="og:title" content="Shree Saibaba Multispeciality Hospital, Nashik" />
-        <meta property="og:description" content="Comprehensive specialty care and advanced diagnostics." />
+        <meta
+          property="og:description"
+          content="Comprehensive specialty care, advanced diagnostics and 24x7 emergency services in Nashik."
+        />
         <meta property="og:url" content={canonical} />
+        <meta property="og:image" content={OG_IMAGE_URL} />
+        <meta property="og:image:alt" content="Shree Saibaba Multispeciality Hospital in Nashik" />
+ 
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Shree Saibaba Multispeciality Hospital, Nashik" />
+        <meta
+          name="twitter:description"
+          content="Advanced specialty care, diagnostics and emergency services in Nashik. Book an appointment online."
+        />
+        <meta name="twitter:image" content={OG_IMAGE_URL} />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Hospital",
+            name: SITE_NAME,
+            url: SITE_URL,
+            image: OG_IMAGE_URL,
+            areaServed: { "@type": "City", name: "Nashik" },
+            telephone: "+91-02533508000",
+            address: { "@type": "PostalAddress", streetAddress: "Mumbai-Agra Highway, Opp. Pillar No. 125-127, Bhaba Nagar, Dwarka", addressLocality: "Nashik", addressRegion: "MH", postalCode: "422001", addressCountry: "IN" },
+            geo: { "@type": "GeoCoordinates", latitude: 19.990762462001626, longitude: 73.79159702351707 },
+          })}
+        </script>
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            name: "Hospital Specialities",
+            itemListOrder: "https://schema.org/ItemListUnordered",
+            numberOfItems: specialties.length,
+            itemListElement: specialties.map((s, index) => ({
+              "@type": "ListItem",
+              position: index + 1,
+              name: s.label,
+              url: `${SITE_URL}${s.path}`
+            }))
+          })}
+        </script>
       </Helmet>
+
 
       <br />
 
       <div>
-        {/* ✅ Hero Carousel (desktop + mobile images) */}
         <div className="hero-carousel-wrap">
           <Swiper
             modules={[Navigation, Pagination, Autoplay, A11y]}
@@ -134,8 +185,7 @@ function Home() {
           >
             {heroSlides.map((slide, idx) => (
               <SwiperSlide key={`hero-${idx}`}>
-                <div className="hero-slide">
-                  {/* ✅ picture tag switches image based on screen width */}
+                <div className="hero-slide"> 
                   <picture>
                     <source media="(max-width: 768px)" srcSet={slide.mobileSrc} />
                     <img
@@ -146,8 +196,8 @@ function Home() {
                     />
                   </picture>
 
-               
-                  
+
+
                 </div>
               </SwiperSlide>
             ))}
@@ -158,8 +208,7 @@ function Home() {
         <div className="title"></div>
         <br /><br /><br />
         <br /><br />
-
-        {/* ✅ Specialities stays as before */}
+ 
         <p className="our" style={{ color: "blue", fontSize: "25px", fontWeight: 500 }}>
           Our Specialities
         </p>

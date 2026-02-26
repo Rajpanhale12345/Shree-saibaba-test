@@ -5,101 +5,96 @@ import { Helmet } from "react-helmet-async";
 
 const styles = {
   page: {
-    background: 'linear-gradient(135deg, #f4f7fb, #e5edf9)',
-    padding: '40px 16px',
+    background: "linear-gradient(135deg, #f4f7fb, #e5edf9)",
+    padding: "40px 16px",
   },
   container: {
-    maxWidth: '1200px',
-    margin: '0 auto',
-    fontFamily: '"Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif',
-    color: '#ffffffff',
+    maxWidth: "1200px",
+    margin: "0 auto",
+    fontFamily:
+      '"Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif',
+    color: "#0f172a",
   },
+
   hero: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    gap: '24px',
-    alignItems: 'stretch',
-    marginBottom: '32px',
+    display: "grid",
+    gridTemplateColumns: "minmax(280px, 420px) 1fr",
+    gap: "24px",
+    alignItems: "start",
+    marginBottom: "32px",
   },
+
   heroImageWrapper: {
-    flex: '1 1 320px',
-    minWidth: '280px',
+    minWidth: "280px",
   },
   heroImageCard: {
-    height: '100%',
-    borderRadius: '20px',
-    overflow: 'hidden',
-    boxShadow: '0 18px 45px rgba(15,23,42,0.16)',
-    border: '1px solid rgba(148,163,184,0.4)',
-    background: '#ffffffff',
+    width: "100%",
+    borderRadius: "20px",
+    overflow: "hidden",
+    boxShadow: "0 18px 45px rgba(15,23,42,0.16)",
+    border: "1px solid rgba(148,163,184,0.4)",
+    background: "white",
+
+    height: "clamp(220px, 32vw, 420px)",
   },
   heroImage: {
-    width: '100%',
-    height: '100%',
-    objectFit: 'fill',
-    display: 'block',
+    width: "100%",
+    height: "100%",
+    objectFit: "cover",
+    objectPosition: "center",
+    display: "block",
     opacity: 0.95,
   },
+
   heroTextWrapper: {
-    flex: '2 1 420px',
-    minWidth: '280px',
+    minWidth: "280px",
   },
   heroTextCard: {
-    height: '100%',
-    borderRadius: '20px',
-    padding: '28px 28px 24px',
-    background: 'rgba(255,255,255,0.92)',
-    backdropFilter: 'blur(10px)',
-    boxShadow: '0 18px 45px rgba(15,23,42,0.08)',
-    border: '1px solid rgba(148,163,184,0.4)',
+    borderRadius: "20px",
+    padding: "28px 28px 24px",
+    background: "rgba(255,255,255,0.92)",
+    backdropFilter: "blur(10px)",
+    boxShadow: "0 18px 45px rgba(15,23,42,0.08)",
+    border: "1px solid rgba(148,163,184,0.4)",
   },
+
   pill: {
-    display: 'inline-flex',
-    alignItems: 'center',
-    gap: '8px',
-    padding: '4px 12px',
-    borderRadius: '999px',
-    fontSize: '12px',
+    display: "inline-flex",
+    alignItems: "center",
+    gap: "8px",
+    padding: "4px 12px",
+    borderRadius: "999px",
+    fontSize: "12px",
     fontWeight: 600,
-    letterSpacing: '0.06em',
-    textTransform: 'uppercase',
-    background: 'rgba(37,99,235,0.08)',
-    color: '#1d4ed8',
-    marginBottom: '10px',
+    letterSpacing: "0.06em",
+    textTransform: "uppercase",
+    background: "rgba(37,99,235,0.08)",
+    color: "#1d4ed8",
+    marginBottom: "10px",
   },
   pillDot: {
-    width: '8px',
-    height: '8px',
-    borderRadius: '50%',
-    background: '#22c55e',
+    width: "8px",
+    height: "8px",
+    borderRadius: "50%",
+    background: "#22c55e",
   },
-  heroTitle: {
-    fontSize: '30px',
-    fontWeight: 700,
-    margin: '4px 0 4px',
-    color: '#0f172a',
-  },
+
   heroSubtitle: {
-    fontSize: '16px',
+    fontSize: "16px",
     fontWeight: 500,
-    color: '#64748b',
-    marginBottom: '18px',
+    color: "#64748b",
+    marginBottom: "18px",
   },
-  heroTagline: {
-    fontSize: '14px',
-    fontWeight: 500,
-    color: '#0f766e',
-    marginBottom: '14px',
-  },
+
   heroParagraph: {
-    fontSize: '16px',
+    fontSize: "14px",
     lineHeight: 1.7,
-    color: '#1e293b',
-    marginBottom: '10px',
-    textAlign: "left"
+    color: "#1e293b",
+    marginBottom: "10px",
+    textAlign: "left",
   },
   heroParagraph1: {
-    fontSize: "28px",
+    fontSize: "24px",
     lineHeight: 1.7,
     color: "#1e293b",
     marginBottom: "10px",
@@ -110,96 +105,88 @@ const styles = {
     lineHeight: 1.2,
     color: "#1e293b",
     marginBottom: "10px",
-    textAlign: "left",
+    textAlign: "center",
   },
+
   highlightStrip: {
-    marginTop: '16px',
-    padding: '10px 14px',
-    borderRadius: '12px',
-    background: 'linear-gradient(90deg, rgba(37,99,235,0.08), rgba(56,189,248,0.10))',
-    fontSize: '13px',
-    color: '#0f172a',
-    border: '1px solid rgba(129,140,248,0.4)',
+    marginTop: "16px",
+    padding: "10px 14px",
+    borderRadius: "12px",
+    background:
+      "linear-gradient(90deg, rgba(37,99,235,0.08), rgba(56,189,248,0.10))",
+    fontSize: "13px",
+    color: "#0f172a",
+    border: "1px solid rgba(129,140,248,0.4)",
   },
   highlightLabel: {
     fontWeight: 600,
-    marginRight: '6px',
+    marginRight: "6px",
   },
 
   section: {
-    borderRadius: '18px',
-    padding: '22px 22px 20px',
-    marginBottom: '20px',
-    background: 'rgba(255,255,255,0.96)',
-    backdropFilter: 'blur(8px)',
-    boxShadow: '0 14px 35px rgba(15,23,42,0.06)',
-    border: '1px solid rgba(203,213,225,0.8)',
+    borderRadius: "18px",
+    padding: "22px 22px 20px",
+    marginBottom: "20px",
+    background: "rgba(255,255,255,0.96)",
+    backdropFilter: "blur(8px)",
+    boxShadow: "0 14px 35px rgba(15,23,42,0.06)",
+    border: "1px solid rgba(203,213,225,0.8)",
   },
   sectionHeaderRow: {
-    display: 'flex',
-    justifyContent: 'flex-start',
-    alignItems: 'flex-start',
-    gap: '10px',
-    marginBottom: '12px',
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "baseline",
+    gap: "10px",
+    marginBottom: "12px",
   },
   sectionTitle: {
-    fontSize: '18px',
+    fontSize: "18px",
     fontWeight: 700,
-    color: '#0f172a',
-    display: 'flex',
-    alignItems: 'left',
-    gap: '8px',
+    color: "#0f172a",
+    display: "flex",
+    alignItems: "center",
+    gap: "8px",
   },
   sectionAccentBar: {
-    width: '3px',
-    height: '18px',
-    borderRadius: '999px',
-    background: 'linear-gradient(180deg, #2563eb, #22c55e)',
+    width: "3px",
+    height: "18px",
+    borderRadius: "999px",
+    background: "linear-gradient(180deg, #2563eb, #22c55e)",
   },
+
   list: {
-    paddingLeft: '18px',
+    paddingLeft: "18px",
     margin: 0,
-    textAlign: 'left',
+    textAlign: "left",
   },
   listItem: {
-    fontSize: '14px',
+    fontSize: "14px",
     lineHeight: 1.7,
-    color: '#1e293b',
-    marginBottom: '6px',
-    textAlign: 'left',
+    color: "#1e293b",
+    marginBottom: "6px",
   },
 
   twoColumnGrid: {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
-    gap: '12px 32px',
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+    gap: "12px 32px",
   },
 
   doctorList: {
-    listStyle: 'none',
+    listStyle: "none",
     paddingLeft: 0,
     margin: 0,
   },
-  doctorItem: {
-    fontSize: '14px',
-    color: '#0f172a',
-    padding: '6px 10px',
-    borderRadius: '999px',
-    border: '1px solid rgba(148,163,184,0.5)',
-    background: 'rgba(248,250,252,0.9)',
-    display: 'inline-block',
-    marginBottom: '6px',
-  },
 
   tagListItem: {
-    fontSize: '14px',
+    fontSize: "14px",
     lineHeight: 1.7,
-    color: '#0f172a',
-    padding: '6px 10px',
-    borderRadius: '10px',
-    background: 'rgba(239,246,255,0.9)',
-    border: '1px solid rgba(191,219,254,1)',
-    marginBottom: '6px',
+    color: "#0f172a",
+    padding: "6px 10px",
+    borderRadius: "10px",
+    background: "rgba(239,246,255,0.9)",
+    border: "1px solid rgba(191,219,254,1)",
+    marginBottom: "6px",
   },
 
   faqList: {
@@ -224,31 +211,110 @@ const styles = {
     fontSize: '13px',
     lineHeight: 1.6,
     color: '#000000ff',
+    textAlign: 'left',
   },
 };
+
+const SITE_NAME = "Shree Saibaba Multispeciality Hospital";
+const SITE_URL = "https://shreesaibabamultispecialityhospital.com";
+const CANONICAL_URL = `${SITE_URL}/generalmedicine`;
+const OG_IMAGE_URL = `${SITE_URL}/assets/generalmedicinedep-DwsdZENh.webp`;
+
 
 function GeneralMedicine() {
   return (
     <>
       <Helmet>
-        <title>General Medicine | Shree Saibaba Multispeciality Hospital</title>
-        <meta
-          name="description"
-          content="Shree Saibaba Multispeciality Hospital offers comprehensive General Medicine care including diagnosis, treatment, and long-term management of diabetes, hypertension, infections, respiratory disorders, and preventive health check-ups."
-        />
-        <meta
-          name="keywords"
-          content="general medicine hospital Nashik, general physician Nashik, diabetes care Nashik, hypertension clinic Nashik, preventive health checkup Nashik, Shree Saibaba Multispeciality Hospital general medicine"
-        />
-        <meta
-          name="og:description"
-          content="Holistic General Medicine services with experienced physicians, advanced diagnostics, ICU support, preventive screenings, and 24x7 emergency care at Shree Saibaba Multispeciality Hospital."
-        />
+        <title>General Medicine | Best General Medicine Hospital in Nashik</title>
+        <meta name="description" content="General Medicine care in Nashik at Shree Saibaba Multispeciality Hospital: diagnosis and long-term management of diabetes, hypertension, infections, respiratory disorders, preventive health check-ups, ICU support and 24x7 emergency services." />
+        <link rel="canonical" href={CANONICAL_URL} />
+        <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content={SITE_NAME} />
+        <meta property="og:title" content="General Medicine Department | Shree Saibaba Multispeciality Hospital, Nashik" />
+        <meta property="og:description" content="Comprehensive general medicine services in Nashik: diabetes and hypertension clinics, infection and respiratory care, preventive check-ups, ICU support and 24x7 emergency services." />
+        <meta property="og:url" content={CANONICAL_URL} />
+        <meta property="og:image" content={OG_IMAGE_URL} />
+        <meta property="og:image:alt" content="General Medicine Department - Shree Saibaba Multispeciality Hospital, Nashik" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="General Medicine Department | Shree Saibaba Multispeciality Hospital, Nashik" />
+        <meta name="twitter:description" content="Physicians and general medicine care in Nashik: diabetes, hypertension, infections, respiratory disorders, preventive check-ups, ICU support and emergency services." />
+        <meta name="twitter:image" content={OG_IMAGE_URL} />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "MedicalClinic",
+            name: SITE_NAME,
+            url: CANONICAL_URL,
+            department: {
+              "@type": "MedicalBusiness",
+              name: "General Medicine Department",
+              medicalSpecialty: "InternalMedicine",
+              description:
+                "Diagnosis, treatment and long-term management of chronic and acute medical conditions including diabetes, hypertension, infections and respiratory disorders, with preventive check-ups and emergency support.",
+              areaServed: { "@type": "City", name: "Nashik" }
+            }
+          })}
+        </script>
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "When should I visit a General Physician?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text:
+                    "Visit if you have fever, cough, fatigue, body pain, blood pressure issues, diabetes concerns, digestive problems, or any persistent symptoms."
+                }
+              },
+              {
+                "@type": "Question",
+                name: "Can the General Medicine department manage chronic diseases?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text:
+                    "Yes. Conditions like diabetes, hypertension, thyroid disorders, and asthma are routinely managed with regular follow-up and personalised treatment plans."
+                }
+              },
+              {
+                "@type": "Question",
+                name: "Do I need an appointment beforehand?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text:
+                    "Walk-ins are accepted, but a prior appointment helps reduce waiting time."
+                }
+              },
+              {
+                "@type": "Question",
+                name: "Are routine blood tests available in the hospital?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text:
+                    "Yes, major blood investigations and screening tests are available in our laboratory."
+                }
+              },
+              {
+                "@type": "Question",
+                name: "Will the doctor guide me on lifestyle and diet changes?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text:
+                    "Yes. Physicians provide lifestyle, dietary, and medication counselling for long-term disease control."
+                }
+              }
+            ]
+          })}
+        </script>
       </Helmet>
 
       <div style={styles.page}>
         <div style={styles.container}>
-          {/* Hero */}
           <div style={styles.hero}>
             <div style={styles.heroImageWrapper}>
               <div style={styles.heroImageCard}>
@@ -256,6 +322,7 @@ function GeneralMedicine() {
                   src={generalmedicine}
                   alt="General Medicine Department"
                   style={styles.heroImage}
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -267,7 +334,7 @@ function GeneralMedicine() {
                   <span>Comprehensive Medical Care</span>
                 </div>
 
-                <h1 style={styles.heroTitle}>General Medicine Department</h1>
+                <h1 style={styles.heroParagraph2}>General Medicine Department</h1>
                 <div style={styles.heroSubtitle}>Nashik, Maharashtra</div>
                 <br />
 
@@ -326,7 +393,7 @@ function GeneralMedicine() {
             </div>
           </div>
 
-          {/* Services Offered */}
+         
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -335,7 +402,7 @@ function GeneralMedicine() {
               </div>
             </div>
 
-            {/* Diagnostic Services */}
+          
             <div style={{ marginBottom: '12px' }}>
               <div style={styles.tagListItem}><strong>Diagnostic Services</strong></div>
               <ul style={styles.list}>
@@ -346,7 +413,7 @@ function GeneralMedicine() {
               </ul>
             </div>
 
-            {/* Treatment Services */}
+     
             <div style={{ marginBottom: '12px' }}>
               <div style={styles.tagListItem}><strong>Treatment Services</strong></div>
               <ul style={styles.list}>
@@ -357,7 +424,7 @@ function GeneralMedicine() {
               </ul>
             </div>
 
-            {/* Specialized Services */}
+    
             <div>
               <div style={styles.tagListItem}><strong>Specialized Services</strong></div>
               <ul style={styles.list}>
@@ -370,7 +437,7 @@ function GeneralMedicine() {
             </div>
           </section>
 
-          {/* Facilities & Equipment */}
+       
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -388,7 +455,7 @@ function GeneralMedicine() {
             </ul>
           </section>
 
-          {/* Team Members */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -416,12 +483,12 @@ function GeneralMedicine() {
                 <li style={styles.tagListItem}>
                   <strong>Dr. Bharat Patil</strong>
                   <br />
-                 	10:00 am to 5:00 pm
+                  10:00 am to 5:00 pm
                 </li>
                 <li style={styles.tagListItem}>
                   <strong>Dr. Rahul Barhate</strong>
                   <br />
-                 		9:00 am to 2:00 pm
+                  9:00 am to 2:00 pm
                 </li>
                 <li style={styles.tagListItem}>
                   <strong>Emergency Services:</strong> 24 x 7
@@ -430,7 +497,7 @@ function GeneralMedicine() {
             </div>
           </section>
 
-          {/* Department Timings */}
+      
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -445,7 +512,7 @@ function GeneralMedicine() {
             </ul>
           </section>
 
-          {/* Achievements & Highlights */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -461,7 +528,7 @@ function GeneralMedicine() {
             </ul>
           </section>
 
-          {/* Patient Guidelines */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -477,7 +544,7 @@ function GeneralMedicine() {
             </ul>
           </section>
 
-          {/* FAQs */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -488,7 +555,7 @@ function GeneralMedicine() {
 
             <div style={styles.faqList}>
               <div style={styles.faqItem}>
-                <div style={styles.faqQuestion}>1. When should I visit a General Physician?</div>
+                <div style={styles.faqQuestion}>Q. When should I visit a General Physician?</div>
                 <div style={styles.faqAnswer}>
                   You should visit if you have fever, cough, fatigue, body pain, blood pressure issues, diabetes concerns,
                   digestive problems, or any persistent symptoms.
@@ -496,7 +563,7 @@ function GeneralMedicine() {
               </div>
 
               <div style={styles.faqItem}>
-                <div style={styles.faqQuestion}>2. Can the General Medicine department manage chronic diseases?</div>
+                <div style={styles.faqQuestion}>Q. Can the General Medicine department manage chronic diseases?</div>
                 <div style={styles.faqAnswer}>
                   Yes. Conditions like diabetes, hypertension, thyroid disorders, and asthma are routinely managed with
                   regular follow-up and personalised treatment plans.
@@ -504,21 +571,21 @@ function GeneralMedicine() {
               </div>
 
               <div style={styles.faqItem}>
-                <div style={styles.faqQuestion}>3. Do I need an appointment beforehand?</div>
+                <div style={styles.faqQuestion}>Q. Do I need an appointment beforehand?</div>
                 <div style={styles.faqAnswer}>
                   Walk-ins are accepted, but a prior appointment helps reduce waiting time.
                 </div>
               </div>
 
               <div style={styles.faqItem}>
-                <div style={styles.faqQuestion}>4. Are routine blood tests available in the hospital?</div>
+                <div style={styles.faqQuestion}>Q. Are routine blood tests available in the hospital?</div>
                 <div style={styles.faqAnswer}>
                   Yes, all major blood investigations and screening tests are available in our laboratory.
                 </div>
               </div>
 
               <div style={styles.faqItem}>
-                <div style={styles.faqQuestion}>5. Will the doctor guide me on lifestyle and diet changes?</div>
+                <div style={styles.faqQuestion}>Q. Will the doctor guide me on lifestyle and diet changes?</div>
                 <div style={styles.faqAnswer}>
                   Absolutely. Our physicians provide complete lifestyle, dietary, and medication counselling for long-term
                   disease control.

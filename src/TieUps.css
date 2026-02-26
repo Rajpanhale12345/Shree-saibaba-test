@@ -1,6 +1,6 @@
-/* Scope everything to .partners-scope so nothing leaks out */
+ 
 .partners-scope {
-  /* Theme tokens live ONLY inside this scope */
+ 
   --blue-900:#0f2757;
   --blue-700:#164a9b;
   --blue-600:#1f66d1;
@@ -17,10 +17,10 @@
   --radius:14px;
 }
 
-/* Reset only inside scope */
+ 
 .partners-scope * { box-sizing: border-box; }
 
-/* Avoid global html/body rules; scope base styles */
+ 
 .partners-scope .partners-wrap{
   display:flex;
   flex-direction:column;
@@ -34,7 +34,7 @@
 .partners-scope a{ color:var(--blue-600); text-decoration:none }
 .partners-scope a:hover{ text-decoration:underline }
 
-/* Topbar */
+ 
 .partners-scope .topbar{
   position:sticky;
   top:0;
@@ -67,7 +67,7 @@
 }
 .partners-scope .jump-link:hover{ background:var(--blue-100); text-decoration:none }
 
-/* Search panel */
+ 
 .partners-scope .search-panel{
   padding: 8px clamp(16px, 4vw, 36px) 0;
   display:flex; flex-direction:column; gap:12px;
@@ -94,7 +94,7 @@
   padding:6px 10px; border-radius:999px; font-size:12px; font-weight:600;
 }
 
-/* Sections */
+ 
 .partners-scope .sections{ display:flex; flex-direction:column; gap:18px; padding:0 clamp(16px, 4vw, 36px) 36px; }
 
 .partners-scope .section-card{
@@ -118,7 +118,7 @@
 .partners-scope .chevron{ margin-left:auto; transition:transform .25s ease }
 .partners-scope .chevron.open{ transform:rotate(180deg) }
 
-/* Section body */
+ 
 .partners-scope .section-body{ max-height:0; overflow:hidden; transition:max-height .35s ease }
 .partners-scope .section-body.open{ max-height:1200px }
 .partners-scope .grid{
@@ -140,7 +140,7 @@
 }
 .partners-scope .badge.muted{ background:#f2f6ff; color:#3b5fb8; border-color:#e1e9ff }
 
-/* Footer */
+ 
 .partners-scope .footer{
   padding: 0 clamp(16px, 4vw, 36px) 48px;
   display:flex; flex-direction:column; gap:12px; align-items:flex-start;
@@ -160,7 +160,7 @@
 .partners-scope .small{ color:var(--ink-500); font-size:12px; margin:8px 0 0 }
 .partners-scope .back-to-top{ margin-top:6px; font-size:12px; }
 
-/* Responsive tweaks - still scoped */
+ 
 @media (max-width: 640px){
   .partners-scope .topbar{ grid-template-columns:1fr; }
   .partners-scope .jump-links{ overflow:auto; -webkit-overflow-scrolling:touch; }

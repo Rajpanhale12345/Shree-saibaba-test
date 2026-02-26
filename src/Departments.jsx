@@ -27,7 +27,7 @@ import { Helmet } from "react-helmet-async";
 
 function Departments() {
   const { pathname } = useLocation();
-  const canonical = `https://www.your-domain.com${pathname}`;
+  const canonical = `https://shreesaibabamultispecialityhospital.com/${pathname}`;
 
   const departments = [
     { to: "/cardiology", label: "Cardiology", src: cardio },
@@ -49,19 +49,69 @@ function Departments() {
     { to: "/dentistry", label: "Dentistry", src: dentistryImg },
   ];
 
+  const SITE_NAME = "Shree Saibaba Multispeciality Hospital";
+  const SITE_URL = "https://shreesaibabamultispecialityhospital.com";
+  const OG_IMAGE_URL = `https://shreesaibabamultispecialityhospital.com/assets/Shreesaibabalogo-D9LTGZox.png`;
+
+
   return (
     <>
 
       <Helmet>
-        <title>Departments | Shree Saibaba Multispeciality Hospital</title>
-        <meta name="description" content="Explore departments: Cardiology, Neurology, Cardiothoracic Surgery, Nephrology, Radiology, Spine Care, General Medicine, Dentistry and more."/>
-        <meta name='keywords' content='' />
-        <link rel="canonical" href={canonical} />
-        <meta property="og:title" content="Departments | Shree Saibaba Hospital" />
-        <meta property="og:description" content="Explore our specialties and expert teams." />
-        <meta property="og:url" content={canonical} />
+        <title>Departments | Best Healthcare Services in Nashik</title>
+        <meta name="description" content="Explore our hospital departments in Nashik: Cardiology, Cardiovascular & Thoracic Surgery, Neurology, Spine Care, Orthopaedics, Nephrology, Urology, General Medicine, General Surgery, Gastroenterology, Gynaecology, Radiology, Interventional Radiology, Neurosurgery, Pulmonology, Dentistry and more." />
+        <link rel="canonical" href={`${SITE_URL}${pathname}`} />
+        <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content={SITE_NAME} />
+        <meta property="og:title" content="Departments | Shree Saibaba Multispeciality Hospital, Nashik" />
+        <meta property="og:description" content="Browse specialties and super-specialities with expert doctors and modern facilities." />
+        <meta property="og:url" content={`${SITE_URL}${pathname}`} />
+        <meta property="og:image" content={OG_IMAGE_URL} />
+        <meta property="og:image:alt" content="Hospital departments at Shree Saibaba Multispeciality Hospital, Nashik" />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Departments | Shree Saibaba Multispeciality Hospital, Nashik" />
+        <meta name="twitter:description" content="Explore specialties and super-specialities including cardiology, neurology, orthopaedics, nephrology, radiology, and more." />
+        <meta name="twitter:image" content={OG_IMAGE_URL} />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            name: "Hospital Departments",
+            itemListOrder: "https://schema.org/ItemListUnordered",
+            numberOfItems: departments.length,
+            itemListElement: departments.map((d, index) => ({
+              "@type": "ListItem",
+              position: index + 1,
+              name: d.label,
+              url: `${SITE_URL}${d.to}`
+            }))
+          })}
+        </script>
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: SITE_URL
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Departments",
+                item: `${SITE_URL}${pathname}`
+              }
+            ]
+          })}
+        </script>
       </Helmet>
+
 
 
       <Upper text="Departments" />

@@ -48,7 +48,7 @@
     display: block;
 }
 
-/* Custom rotations */
+ 
 .activity:nth-child(1) .img {
     --imgRotate: 4deg;
 }

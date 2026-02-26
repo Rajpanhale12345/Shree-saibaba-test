@@ -1,5 +1,5 @@
 import React from 'react';
-import Neurologyimg from './Images/Neurologydep.jpg'; // change to neurology image if you have one
+import Neurologyimg from './Images/Neurologydep.jpg';
 import { Helmet } from "react-helmet-async";
 
 const styles = {
@@ -21,22 +21,23 @@ const styles = {
     marginBottom: '32px',
   },
   heroImageWrapper: {
-    flex: '1 1 320px',
-    minWidth: '280px',
+    minWidth: "280px",
   },
   heroImageCard: {
-    height: '100%',
-    borderRadius: '20px',
-    overflow: 'hidden',
-    boxShadow: '0 18px 45px rgba(15,23,42,0.16)',
-    border: '1px solid rgba(148,163,184,0.4)',
-    background: '#0f172a',
+    width: "100%",
+    borderRadius: "20px",
+    overflow: "hidden",
+    boxShadow: "0 18px 45px rgba(15,23,42,0.16)",
+    border: "1px solid rgba(148,163,184,0.4)",
+    background: "#0f172a",
+    height: "clamp(220px, 32vw, 420px)",
   },
   heroImage: {
-    width: '100%',
-    height: '100%',
-    objectFit: 'fill',
-    display: 'block',
+    width: "100%",
+    height: "100%",
+    objectFit: "cover",
+    objectPosition: "center",
+    display: "block",
     opacity: 0.95,
   },
   heroTextWrapper: {
@@ -111,7 +112,6 @@ const styles = {
     marginRight: '6px',
   },
 
-  // Section styles
   section: {
     borderRadius: '18px',
     padding: '22px 22px 20px',
@@ -158,14 +158,12 @@ const styles = {
     marginBottom: '6px',
   },
 
-  // Grid / layout helpers
   twoColumnGrid: {
     display: 'grid',
     gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
     gap: '12px 32px',
   },
 
-  // Doctors
   doctorList: {
     listStyle: 'none',
     paddingLeft: 0,
@@ -182,7 +180,6 @@ const styles = {
     marginBottom: '6px',
   },
 
-  // Achievements / Timings
   tagListItem: {
     fontSize: '14px',
     lineHeight: 1.7,
@@ -194,7 +191,6 @@ const styles = {
     marginBottom: '6px',
   },
 
-  // FAQs (kept for consistency if you add later)
   faqList: {
     display: 'grid',
     gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
@@ -217,38 +213,117 @@ const styles = {
     fontSize: '13px',
     lineHeight: 1.6,
     color: '#000000ff',
+    textAlign: 'left',
   },
 };
+
+
+const SITE_NAME = "Shree Saibaba Multispeciality Hospital";
+const SITE_URL = "https://shreesaibabamultispecialityhospital.com";
+const CANONICAL_URL = `${SITE_URL}/neurology`;
+const OG_IMAGE_URL = `${SITE_URL}/assets/Neurologydep-Cup-dRly.jpg`;
+
+
+const pageTitle = "Neurology | Best Neurology Hospital in Nashik";
+const pageDescription =
+  "Neurology Department at Shree Saibaba Multispeciality Hospital, Nashik offers expert care for brain, spine, nerve and muscle disorders with advanced diagnostics and 24x7 stroke emergency support.";
+
+const jsonLdDepartment = {
+  "@context": "https://schema.org",
+  "@type": "MedicalClinic",
+  name: SITE_NAME,
+  url: CANONICAL_URL,
+  department: {
+    "@type": "MedicalBusiness",
+    name: "Neurology Department",
+    medicalSpecialty: "Neurology",
+    description:
+      "Neurology care including stroke, epilepsy, movement disorders, neuropathy, headaches, EEG/EMG/NCS testing and neuroimaging support.",
+    areaServed: { "@type": "City", name: "Nashik" }
+  }
+};
+
+const faqs = [
+  {
+    q: "When should I see a neurologist?",
+    a: "See a neurologist for persistent headaches or migraines, seizures/fainting episodes, dizziness, numbness or tingling, weakness, tremors, memory problems, sleep-related neurological issues, or back/neck pain with nerve symptoms."
+  },
+  {
+    q: "What are the warning signs of stroke?",
+    a: "Sudden face drooping, arm weakness, speech difficulty, sudden vision loss, severe dizziness, loss of balance, or sudden severe headache can be stroke warning signs. Seek emergency care immediately—early treatment can be life-saving."
+  },
+  {
+    q: "What tests are done in neurology (EEG/EMG/NCS)?",
+    a: "EEG helps evaluate seizures and certain brain conditions. EMG and nerve conduction studies (NCS) help assess nerve and muscle problems such as neuropathy, muscle weakness, and nerve compression. MRI/CT imaging may be advised based on symptoms."
+  },
+  {
+    q: "Do you provide 24×7 stroke care?",
+    a: "Yes. The hospital provides 24×7 emergency support for suspected stroke and neurological emergencies, with rapid assessment and treatment planning, including thrombolysis when clinically indicated."
+  },
+  {
+    q: "Can epilepsy (seizures) be treated and controlled?",
+    a: "Yes. Many patients achieve good control with the right medicines and regular follow-ups. Your neurologist will guide diagnosis, triggers, safety precautions, and long-term management."
+  },
+  {
+    q: "Do you treat children with neurological problems?",
+    a: "Yes. We evaluate and manage pediatric neurological conditions such as seizure disorders, developmental delays, cerebral palsy, and infections like meningitis, with a child-friendly approach and family guidance."
+  }
+];
+
+const jsonLdFaq = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a }
+  }))
+};
+
 
 function Neurology() {
   return (
     <>
       <Helmet>
-        <title>Neurology | Shree Saibaba Multispeciality Hospital</title>
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
+        <link rel="canonical" href={CANONICAL_URL} />
         <meta
-          name="description"
-          content="Neurology Department at Shree Saibaba Multispeciality Hospital, Nashik offers expert care for brain, spine, nerve and muscle disorders with advanced diagnostics and 24x7 stroke care."
+          name="robots"
+          content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"
         />
+ 
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content={SITE_NAME} />
+        <meta property="og:title" content={`${SITE_NAME} | Neurology Department, Nashik`} />
+        <meta property="og:description" content={pageDescription} />
+        <meta property="og:url" content={CANONICAL_URL} />
+        <meta property="og:image" content={OG_IMAGE_URL} />
         <meta
-          name="keywords"
-          content="neurology hospital Nashik, best neurology hospital Nashik, stroke care Nashik, EEG EMG Nashik"
-        />
-        <meta
-          name="og:description"
-          content="Comprehensive neurology services including stroke, epilepsy, movement disorders and neurodiagnostic facilities at Shree Saibaba Multispeciality Hospital, Nashik."
-        />
+          property="og:image:alt"
+          content="Neurology Department - Shree Saibaba Multispeciality Hospital, Nashik"
+        /> 
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${SITE_NAME} | Neurology Department, Nashik`} />
+        <meta name="twitter:description" content={pageDescription} />
+        <meta name="twitter:image" content={OG_IMAGE_URL} />
+ 
+        <script type="application/ld+json">{JSON.stringify(jsonLdDepartment)}</script>
+        <script type="application/ld+json">{JSON.stringify(jsonLdFaq)}</script>
       </Helmet>
+
 
       <div style={styles.page}>
         <div style={styles.container}>
-          {/* Hero */}
+       
           <div style={styles.hero}>
             <div style={styles.heroImageWrapper}>
               <div style={styles.heroImageCard}>
                 <img
-                  src={Neurologyimg} // replace with neurology-specific image if available
+                  src={Neurologyimg}
                   alt="Neurology Department"
                   style={styles.heroImage}
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -306,11 +381,11 @@ function Neurology() {
                   journey.
                 </p>
                 <p style={styles.heroParagraph}>
-                  We pride ourselves on using a collaborative model of care where our 
-                  neurologists and neurosurgeons, along with our physiotherapists, 
-                  psychologists, and critical care specialists, work closely together 
-                  as a cohesive team. Our patients receive individualised, focused, early 
-                  intervention so that they may recover quickly, live a healthy and productive 
+                  We pride ourselves on using a collaborative model of care where our
+                  neurologists and neurosurgeons, along with our physiotherapists,
+                  psychologists, and critical care specialists, work closely together
+                  as a cohesive team. Our patients receive individualised, focused, early
+                  intervention so that they may recover quickly, live a healthy and productive
                   life, and achieve their full potential.
                 </p>
 
@@ -321,8 +396,7 @@ function Neurology() {
               </div>
             </div>
           </div>
-
-          {/* Services Offered */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -366,8 +440,7 @@ function Neurology() {
               </li>
             </ul>
           </section>
-
-          {/* Facilities & Equipment */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -391,8 +464,7 @@ function Neurology() {
               </li>
             </ul>
           </section>
-
-          {/* Achievements & Highlights */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -410,9 +482,8 @@ function Neurology() {
                 clinical outcomes.
               </li>
             </ul>
-          </section>
+          </section> 
 
-          {/* Patient Guidelines */}
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -434,8 +505,7 @@ function Neurology() {
               </li>
             </ul>
           </section>
-
-          {/* Team Members & Department Timings */}
+ 
           <section style={styles.section}>
             <div style={styles.sectionHeaderRow}>
               <div style={styles.sectionTitle}>
@@ -460,6 +530,83 @@ function Neurology() {
               </ul>
             </div>
           </section>
+ 
+          <section style={styles.section}>
+            <div style={styles.sectionHeaderRow}>
+              <div style={styles.sectionTitle}>
+                <span style={styles.sectionAccentBar} />
+                FAQs
+              </div>
+            </div>
+
+            <div style={styles.faqList}>
+              <div style={styles.faqItem}>
+                <div style={styles.faqQuestion}>
+                  Q: When should I see a neurologist?
+                </div>
+                <div style={styles.faqAnswer}>
+                  See a neurologist for persistent headaches or migraines, seizures/fainting episodes, dizziness,
+                  numbness or tingling, weakness, tremors, memory problems, sleep-related neurological issues,
+                  or back/neck pain with nerve symptoms.
+                </div>
+              </div>
+
+              <div style={styles.faqItem}>
+                <div style={styles.faqQuestion}>
+                  Q: What are the warning signs of stroke?
+                </div>
+                <div style={styles.faqAnswer}>
+                  Sudden face drooping, arm weakness, speech difficulty, sudden vision loss, severe dizziness,
+                  loss of balance, or sudden severe headache can be stroke warning signs. Seek emergency care
+                  immediately—early treatment can be life-saving.
+                </div>
+              </div>
+
+              <div style={styles.faqItem}>
+                <div style={styles.faqQuestion}>
+                  Q: What tests are done in neurology (EEG/EMG/NCS)?
+                </div>
+                <div style={styles.faqAnswer}>
+                  EEG helps evaluate seizures and certain brain conditions. EMG and nerve conduction studies (NCS)
+                  help assess nerve and muscle problems such as neuropathy, muscle weakness, and nerve compression.
+                  MRI/CT imaging may be advised based on symptoms.
+                </div>
+              </div>
+
+              <div style={styles.faqItem}>
+                <div style={styles.faqQuestion}>
+                  Q: Do you provide 24×7 stroke care?
+                </div>
+                <div style={styles.faqAnswer}>
+                  Yes. The hospital provides 24×7 emergency support for suspected stroke and neurological emergencies,
+                  with rapid assessment and treatment planning, including thrombolysis when clinically indicated.
+                </div>
+              </div>
+
+              <div style={styles.faqItem}>
+                <div style={styles.faqQuestion}>
+                  Q: Can epilepsy (seizures) be treated and controlled?
+                </div>
+                <div style={styles.faqAnswer}>
+                  Yes. Many patients achieve good control with the right medicines and regular follow-ups.
+                  Your neurologist will guide diagnosis, triggers, safety precautions, and long-term management.
+                </div>
+              </div>
+
+              <div style={styles.faqItem}>
+                <div style={styles.faqQuestion}>
+                  Q: Do you treat children with neurological problems?
+                </div>
+                <div style={styles.faqAnswer}>
+                  Yes. We evaluate and manage pediatric neurological conditions such as seizure disorders,
+                  developmental delays, cerebral palsy, and infections like meningitis, with a child-friendly
+                  approach and family guidance.
+                </div>
+              </div>
+            </div>
+          </section>
+
+
         </div>
       </div>
     </>

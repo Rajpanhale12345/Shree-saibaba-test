@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 import Button from "@mui/material/Button";
 import { Helmet } from "react-helmet-async";
 
-function Angiographies_Blog() { 
+function Angiographies_Blog() {
     const otherBlogs = [
         { to: "/spine", title: "Spine Health and Sitting", date: "11 Aug 2025", category: "🏥 Neurosurgery" },
         { to: "/kidney", title: "Kidney Stones", date: "11 Aug 2025", category: "🏥 Urology" },
@@ -34,12 +34,11 @@ function Angiographies_Blog() {
                 <meta name="og:description" content="" />
             </Helmet>
 
-            {/* 2-column page: main on the left, sticky sidebar on the right */}
             <div className="kidney-page">
-                {/* Main */}
+              
                 <main className="pane pane--main" aria-label="Recovery article">
                     <article className="kidney-article">
-                        {/* Hero */}
+                      
                         <header className="kidney-header">
                             <img style={{ objectFit: "fill" }}
                                 src={Kidneyy}
@@ -57,7 +56,6 @@ function Angiographies_Blog() {
                             </h1>
                         </header>
 
-                        {/* Content */}
                         <section className="kidney-content">
                             <h2 id="Introduction">Introduction</h2>
 
@@ -77,8 +75,7 @@ function Angiographies_Blog() {
                                     loading="lazy"
                                     decoding="async"
                                 />
-                                {/* Optional: remove this figcaption if you don't want text under the image */}
-                                {/* <figcaption>Simple habits can keep you active and confident with a pacemaker.</figcaption> */}
+                                
                             </figure> <br />
 
 
@@ -86,15 +83,13 @@ function Angiographies_Blog() {
 
                             <p>This type of Angiography is used to examine the blood vessels in the brain. A Catheter is inserted into an Artery in the groin or wrist and guided up to the Blood vessels in the Brain, where a contrast dye is injected to create detailed images.</p>
 
-                             <figure className="inline-illustration">
+                            <figure className="inline-illustration">
                                 <img style={{ objectFit: 'fill' }}
                                     src={Angiographies2}
                                     alt="Cerebral Angiography"
                                     loading="lazy"
                                     decoding="async"
                                 />
-                                {/* Optional: remove this figcaption if you don't want text under the image */}
-                                {/* <figcaption>Simple habits can keep you active and confident with a pacemaker.</figcaption> */}
                             </figure> <br />
 
                             <h2 id="Pulmonary">3. Pulmonary Angiography:</h2>
@@ -108,8 +103,6 @@ function Angiographies_Blog() {
                                     loading="lazy"
                                     decoding="async"
                                 />
-                                {/* Optional: remove this figcaption if you don't want text under the image */}
-                                {/* <figcaption>Simple habits can keep you active and confident with a pacemaker.</figcaption> */}
                             </figure> <br />
 
 
@@ -124,9 +117,8 @@ function Angiographies_Blog() {
                                     loading="lazy"
                                     decoding="async"
                                 />
-                                {/* Optional: remove this figcaption if you don't want text under the image */}
-                                {/* <figcaption>Simple habits can keep you active and confident with a pacemaker.</figcaption> */}
-                            </figure> 
+                               
+                            </figure>
 
                             <br />
 
@@ -142,13 +134,11 @@ function Angiographies_Blog() {
                                     loading="lazy"
                                     decoding="async"
                                 />
-                                {/* Optional: remove this figcaption if you don't want text under the image */}
-                                {/* <figcaption>Simple habits can keep you active and confident with a pacemaker.</figcaption> */}
-                            </figure> 
+                                
+                            </figure>
 
                             <br />
 
-                            {/* CTA */}
                             <footer className="cta-section" aria-labelledby="cta-title">
                                 <h2 id="cta-title" className="sr-only">Call to Action</h2>
                                 <h5 className="CTA">📞 Call us or visit us for a consultation. Your health deserves the best care.</h5>
@@ -160,11 +150,9 @@ function Angiographies_Blog() {
                     </article>
                 </main>
 
-                {/* Sidebar */}
                 <aside className="pane pane--sidebar" aria-label="Other blog posts">
                     <div className="sidebar-inner">
 
-                        {/* TOC */}
                         <nav className="toc" aria-label="On this page">
                             <p className="toc__label"><span style={{ color: "Red" }}>On this page</span></p>
                             <ul>

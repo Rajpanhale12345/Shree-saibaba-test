@@ -29,12 +29,11 @@ function NutritionBlog() {
                 <meta name="og:description" content="" />
             </Helmet>
 
-            {/* 2-column page: main on the left, sticky sidebar on the right */}
             <div className="kidney-page">
-                {/* Main */}
+
                 <main className="pane pane--main" aria-label="Recovery article">
                     <article className="kidney-article">
-                        {/* Hero */}
+        
                         <header className="kidney-header">
                             <img style={{objectFit : "fill"}}
                                 src={Understanding_CABG}
@@ -52,7 +51,7 @@ function NutritionBlog() {
                             </h1>
                         </header>
 
-                        {/* Content */}
+     
                         <section className="kidney-content">
                             <h2 id="Introduction">Introduction</h2>
                             <p>
@@ -87,8 +86,7 @@ function NutritionBlog() {
                                     loading="lazy"
                                     decoding="async"
                                 />
-                                {/* Optional: remove this figcaption if you don't want text under the image */}
-                                {/* <figcapption>Simple habits can keep you active and confident with a pacemaker.</figcaption> */}
+                               
                             </figure> <br />
 
                             <p>In Coronary Artery Bypass Grafting (CABG), surgeons use various types of grafts to bypass blocked coronary arteries. The choice of graft depends on the patient's condition, the number of bypasses needed, and the specific coronary arteries involved.</p>
@@ -138,8 +136,7 @@ function NutritionBlog() {
                                     loading="lazy"
                                     decoding="async"
                                 />
-                                {/* Optional: remove this figcaption if you don't want text under the image */}
-                                {/* <figcapption>Simple habits can keep you active and confident with a pacemaker.</figcaption> */}
+                               
                             </figure> <br />
 
                             <p>Recent developments in minimally invasive coronary artery bypass grafting (CABG) have significantly improved patient outcomes.</p>
@@ -191,7 +188,7 @@ function NutritionBlog() {
                             <br />
 
 
-                            {/* CTA */}
+                            
                             <footer className="cta-section" aria-labelledby="cta-title">
                                 <h2 id="cta-title" className="sr-only">Call to Action</h2>
                                 <h5 className="CTA">📞 Call us or visit us for a consultation. Your health deserves the best care.</h5>
@@ -203,11 +200,10 @@ function NutritionBlog() {
                     </article>
                 </main>
 
-                {/* Sidebar */}
                 <aside className="pane pane--sidebar" aria-label="Other blog posts">
                     <div className="sidebar-inner">
 
-                        {/* TOC */}
+                     
                         <nav className="toc" aria-label="On this page">
                             <p className="toc__label"><span style={{ color: "Red" }}>On this page</span></p>
                             <ul>
