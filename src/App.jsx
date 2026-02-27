@@ -72,9 +72,9 @@ import Asthma from "./Blogs/Asthma";
 function App() {
   return (
     <Router>
-     
+
       <header>
-  
+
         <Header />
         <Navbar />
       </header>
@@ -116,35 +116,35 @@ function App() {
           <Route path="/spinecare" element={<SpineCare />} />
           <Route path="/gynaecology" element={<Gynecology />} />
           <Route path="/generalmedicine" element={<GeneralMedicine />} />
-          <Route path="/pulmonology" element={<Pulmonology />} />      
+          <Route path="/pulmonology" element={<Pulmonology />} />
           <Route path="/tieups" element={<TieUps />} />
-          <Route path="/nutrition" element={< Nutrition_Sleep/>} />
-          <Route path="/understanding" element={< Understanding/>} />
-          <Route path="/Cardiac_Surgery" element={< Cardiac_Surgery/>} />
-          <Route path="/Dengue" element={< Dengue/>} />
-          <Route path="/Vitamin_B12" element={< Vitamin_B12/>} />
-          <Route path="/Heart_Attack" element={< Heart_Attack/>} />
-          <Route path="/Heart_Disease" element={< Heart_Disease/>} />
-          <Route path="/Interventional_Radiology" element={< Interventional_R/>} />
-          <Route path="/Pneumonia" element={< Pneumonia/>} />
-          <Route path="/Lifestyle" element={< Lifestyle/>} />
-          <Route path="/Understanding_CABG" element={< Understanding_CABG/>} />
-          <Route path="/Kidney_Health" element={< Kidney_Health/>} />
-          <Route path="/Holter" element={< Holter/>} />
-          <Route path="/Spine_Joint" element={< Spine_Joint/>} />
-          <Route path="/Varicose" element={< Varicose/>} />
-          <Route path="/Angiographies" element={< Angioplasty/>} />
-          <Route path="/Angiography" element={< Angiography/>} />
-          <Route path="/Angiographiess" element={< Angiographies/>} />
-          <Route path="/Heart_Healthy" element={< Heart_Healthy/>} />
-          <Route path="/Stress_Anxiety" element={< Stress_Anxiety/>} />
-          <Route path="/Robotic_Surgery" element={< Robotic_Surgery/>} />
-          <Route path="/Robotic_Joint" element={< Robotic_Joint/>} />
-          <Route path="/Neurology_Blog" element={< Neurology_Blog/>} />
-            <Route path="/Asthma" element={< Asthma/>} />
-     
+          <Route path="/nutrition" element={< Nutrition_Sleep />} />
+          <Route path="/understanding" element={< Understanding />} />
+          <Route path="/Cardiac_Surgery" element={< Cardiac_Surgery />} />
+          <Route path="/Dengue" element={< Dengue />} />
+          <Route path="/Vitamin_B12" element={< Vitamin_B12 />} />
+          <Route path="/Heart_Attack" element={< Heart_Attack />} />
+          <Route path="/Heart_Disease" element={< Heart_Disease />} />
+          <Route path="/Interventional_Radiology" element={< Interventional_R />} />
+          <Route path="/Pneumonia" element={< Pneumonia />} />
+          <Route path="/Lifestyle" element={< Lifestyle />} />
+          <Route path="/Understanding_CABG" element={< Understanding_CABG />} />
+          <Route path="/Kidney_Health" element={< Kidney_Health />} />
+          <Route path="/Holter" element={< Holter />} />
+          <Route path="/Spine_Joint" element={< Spine_Joint />} />
+          <Route path="/Varicose" element={< Varicose />} />
+          <Route path="/Angiographies" element={< Angioplasty />} />
+          <Route path="/Angiography" element={< Angiography />} />
+          <Route path="/Angiographiess" element={< Angiographies />} />
+          <Route path="/Heart_Healthy" element={< Heart_Healthy />} />
+          <Route path="/Stress_Anxiety" element={< Stress_Anxiety />} />
+          <Route path="/Robotic_Surgery" element={< Robotic_Surgery />} />
+          <Route path="/Robotic_Joint" element={< Robotic_Joint />} />
+          <Route path="/Neurology_Blog" element={< Neurology_Blog />} />
+          <Route path="/Asthma" element={< Asthma />} />
+
         </Routes>
-        <GTranslate/>
+        <GTranslate />
         <ScrollToTop />
       </main>
       <footer>

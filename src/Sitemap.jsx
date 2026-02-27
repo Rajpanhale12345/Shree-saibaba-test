@@ -176,6 +176,7 @@ function Sitemap() {
           <section style={styles.col}>
             <h2 style={styles.h2}>Blogs</h2>
             <ul style={styles.ul}>
+              <ListItemLink to="/Asthma">Childhood Asthma</ListItemLink>
               <ListItemLink to="/Multidisciplinary">Multidisciplinary Care</ListItemLink>
               <ListItemLink to="/Urology_Blog">Kidney Stones & Prostate Care</ListItemLink>
               <ListItemLink to="/Neurology_Blog">Neurology Brain Disorders</ListItemLink>

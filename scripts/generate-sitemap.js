@@ -67,6 +67,7 @@ const routes = [
   "/Neurology_Blog",
   "/Urology_Blog",
   "/Multidisciplinary",
+  "/Asthma",
 ];
 
 async function generateSitemap() {
