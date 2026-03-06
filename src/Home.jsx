@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Home.css";
 import Button from "@mui/material/Button";
 import { Link, useLocation } from "react-router-dom";
@@ -31,6 +31,8 @@ import spe16 from "./Images/spe15.webp";
 import spe17 from "./Images/spe17.webp";
 import spe18 from "./Images/spe18.webp";
 import spe19 from "./Images/spe19.webp";
+import { useState } from "react";
+import invitation from "./Images/invitation.webp";
 
 function Home() {
   const { pathname } = useLocation();
@@ -105,8 +107,42 @@ function Home() {
     </div>
   );
 
+
+  const [show, setShow] = useState(true);
+useEffect(()=>{
+  const timer = setTimeout(()=>{
+    setShow(false);
+  }, 5000)
+
+  return () =>{clearTimeout(timer)}
+})
+
   return (
     <>
+     {show && (
+        <div
+          style={{
+            position: "fixed",
+            inset: 0,
+            background: "rgba(0,0,0,0.5)",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            zIndex: 9999
+          }}
+        >
+          <img
+            src={invitation}
+            alt="popup"
+            style={{
+              maxWidth: "80%",
+              maxHeight: "80%",
+              borderRadius: "10px"
+            }}
+          />
+        </div>
+      )}
+
       <Helmet>
         <title>Best Multispeciality Hospital in Nashik | Shree Saibaba Hospital</title>
         <meta
@@ -171,6 +207,10 @@ function Home() {
 
 
       <br />
+
+
+
+
 
       <div>
         <div className="hero-carousel-wrap">
