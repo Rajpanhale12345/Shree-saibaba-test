@@ -291,54 +291,33 @@ function About() {
               <div style={infoInnerStyle}>
                 <p style={infoParagraphStyle}>
                   <h1 style={{ color: "white" }}>About us</h1> <br />
-                  Saibaba Heart Institute & Multispecialty Hospital is the best multispecialty
-                  hospital in Nashik and also the best hospital in Northern Maharashtra. Families
-                  have trusted Saibaba & their staff for compassionate, ethical, and cutting-edge
-                  medical care since they opened their doors. Every time a person comes to Saibaba
-                  Heart Institute & Multispecialty Hospital, we treat every patient like a member
-                  of our family by providing clear and honest guidance, advice, and treatment at
-                  the appropriate time.
+                  Saibaba Heart Institute & Multispecialty Hospital is one of the leading multispecialty
+                  hospitals in Nashik. Families in Nashik and North Maharashtra rely on us for high-quality,
+                  ethical, and compassionate medical care. Our multispecialty hospital in Nashik offers
+                  the best cardiology, orthopedic, spine, and emergency care services using the latest
+                  technology and expertise of experienced medical professionals.
                 </p>
 
                 <p style={infoParagraphStyle}>
-                  Saibaba Heart Institute & Multispecialty Hospital is a leading cardiac hospital
-                  in Nashik and a leading orthopaedic and spine care hospital in North Maharashtra.
-                  Our goal is to ensure that our patients receive world-class treatment at affordable
-                  prices. Our patients don't have to go too far to receive world-class treatment. We
-                  have modern equipment and a caring environment to ensure healing for both body and mind.
+                  Being a multispecialty cardiac hospital in Nashik, Saibaba Heart Institute offers expert
+                  medical care for various heart and cardiac issues. We provide the best cardiology services
+                  in Nashik, including the prevention of heart and cardiac issues. We have expertise in
+                  providing the best orthopedic and spine services in Nashik. Our multispecialty hospital
+                  in Nashik offers the best orthopedic and spine services using the latest technology and
+                  expertise of experienced medical professionals.
                 </p>
 
                 <p style={infoParagraphStyle}>
-                  At our hospital, our patients receive a full gamut of medical services under one
-                  roof. We are a top heart hospital in Nashik, and our expertise in the field of
-                  heart diseases, preventive cardiology, and cardiac procedures is unparalleled.
-                  Along with this, our orthopaedic department provides specialised care for injuries,
-                  joint problems, spine conditions, robotic joint replacement in Nashik, minimally
-                  invasive orthopaedic procedures, and rehabilitation.
-                </p>
-
-                <p style={infoParagraphStyle}>
-                  Saibaba Hospital in Nashik is a 24-hour emergency hospital with extremely accurate
-                  diagnostic imaging, state-of-the-art surgical facilities, and a team of doctors
-                  available round the clock. We are a multispecialty hospital located near your home
-                  in Nashik. We provide all our services under one roof with no waiting time for our
-                  patients. We provide cardiology, orthopaedics, diagnostics, emergency services, and
-                  speciality vision.
-                </p>
-
-                <p style={infoParagraphStyle}>
-                  What truly sets us apart from other multispecialty hospitals in Nashik is our people.
-                  Our doctors, nurses, and staff at Saibaba Heart Institute & Multispeciality Hospital
-                  believe that healing starts with kindness, listening, and respect. That is why Saibaba
-                  Hospital in Nashik has always been recognised as one of the top multispecialty
-                  hospitals in Nashik for cardiac and orthopaedic care. We are recognised for our
-                  compassion.
+                  Being a multispecialty emergency hospital in Nashik, we provide the best emergency services
+                  in Nashik. Our multispecialty emergency hospital in Nashik is equipped with the latest diagnostic
+                  imaging equipment and has experienced medical professionals available round the clock. Our
+                  multispecialty hospital in Nashik offers the best healthcare services in Nashik.
                 </p>
 
                 <p style={infoParagraphStyle}>
                   <b>Our Promise:</b> <br />
-                  We commit to offering contemporary, low-budget, patient-centred health care services to 
-                  our customers. We will evolve into a Centre of Excellence in Nashik, building a reputation 
+                  We commit to offering contemporary, low-budget, patient-centred health care services to
+                  our customers. We will evolve into a Centre of Excellence in Nashik, building a reputation
                   for providing exemplary health care in the area.
                 </p>
               </div>
