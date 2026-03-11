@@ -54,7 +54,7 @@ function B12_Blog() {
                             <h2 id="Introduction">Introduction</h2>
                             <p>Vitamins and minerals are key factors in maintaining overall health and well-being. Vitamin B12 and Calcium rank among two commonly deliberated nutrients concerning health. Both nutrients are crucial in different body functions, and the deficiency of either leads to serious health problems. The current article deals with the importance, sources, and benefits of Vitamin B12 and Calcium.</p>
 
-                            <br />
+                            <br /> 
 
                             <h2 id="Vitamin B12">Vitamin B12: The Energy Vitamin</h2>
                             

@@ -32,6 +32,7 @@ import Neurology_blog from "./Images/Neurology_Blog.jpg"
 import Asthma from "./Images/Asthma.webp";
 import { Link } from 'react-router-dom';
 import { Helmet } from "react-helmet-async";
+import Microsurgery from "./Images/microsurgery.webp";
 
 
 
@@ -51,7 +52,14 @@ function Blogs() {
         text="Blogs" />
       <br /><br />
       <div className="imageblog1">
-        
+
+
+       <Link to='/Microsurgery'><div className="imageblog">
+          <img src={Microsurgery} alt="Microsurgery" /> <br /> <br />
+          <h2><i style={{ color: 'red', }}>Microsurgery</i></h2></div>
+        </Link>
+
+
 
 <Link to='/Asthma'><div className="imageblog">
           <img src={Asthma} alt="Asthma" /> <br /> <br />
