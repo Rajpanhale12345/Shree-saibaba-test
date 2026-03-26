@@ -166,7 +166,7 @@ function Blogs() {
           <h2><i style={{ color: 'red', }}>Varicose Veins</i></h2></div>
         </Link>
 
-        <Link to='/Angiographies'><div className="imageblog">
+        <Link to='/Angioplasty'><div className="imageblog">
           <img src={Angiographiess} alt="Cardiac Surgery" /><br /> <br />
           <h2><i style={{ color: 'red', }}>Angioplasty</i></h2></div>
         </Link>

@@ -119,30 +119,7 @@ useEffect(()=>{
 
   return (
     <>
-     {show && (
-        <div
-          style={{
-            position: "fixed",
-            inset: 0,
-            background: "rgba(0,0,0,0.5)",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            zIndex: 9999
-          }}
-        >
-          <img
-            src={invitation}
-            alt="popup"
-            style={{
-              maxWidth: "80%",
-              maxHeight: "80%",
-              borderRadius: "10px"
-            }}
-          />
-        </div>
-      )}
-
+  
       <Helmet>
         <title>Best Multispeciality Hospital in Nashik | Shree Saibaba Hospital</title>
         <meta

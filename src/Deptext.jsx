@@ -52,7 +52,7 @@ function Deptext({ image, title, subtitle, description, description1, descriptio
 
         </ul><br /><i>
 
-          <h1 style={{ textAlign: "left" }}>{ipd} </h1><br />
+          <h1 style={{ textAlign: "left" }}>{ipd}</h1><br />
           {/* <i>
             <ul className='border2' style={{ textAlign: 'left' }}>
               <lil style={{ color: 'red' }} className='list'>{detail1}</lil><br />
