@@ -263,7 +263,7 @@ useEffect(()=>{
 
           <br />
 
-          <Link to="/medical">
+          <Link to="/contact">
             <Button variant="contained" style={{ fontFamily: "poppins" }}>
               Book an Appointment
             </Button>
